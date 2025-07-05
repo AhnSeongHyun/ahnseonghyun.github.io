@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>SyntaxHighlighter 에서 gist 까지, 그리고 워드프레스에서의 사용법</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">SyntaxHighlighter 에서 gist 까지, 그리고 워드프레스에서의 사용법</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><span style="font-size: 11pt; ">예전에 블로그에 소스코드를 처음에 넣을때에는 주로 박스 안에 코드를 넣는 작업을 했었다. 그런데 이 작업의 가장 큰 단점은 언어별 syntax 하이라이팅을 보여주지 않는 다는 점이다. 말 그대로 텍스트니까. 그리고 나온것이 <a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a> 인데 자바스크립트를 이용해서 <pre> 태그 속성에</span><span style="font-size: 11pt; "> class 이름에 java, cpp 처럼 프로그래밍 언어를 입력하고 <pre> 태그 안에 코드를 입력하면 해당 언어의 문법에 맞게 보여주는 방식이었다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile8.uf.203CF04B50306E6A0748F4.jpg" /></p>
+<p><span style="font-size: 11pt; "><a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a> 는 혁신적이었지만, 버전이 올라가면서 여러가지 버그아닌 버그들이 있었다.(크롬에서 이상하던데) 그리고 결정적으로 블로그가 날아가면 코드역시 날아간다는 점이 좀 아쉬운 부분이라고 하겠다. </span></p>
+<p><span style="font-size: 11pt; ">그래서 필자가 최근에 사용하는 것은 <a href="https://github.com/">github</a> 의 <a href="https://gist.github.com/">gist</a> 이다. github 야 이제 명실상부 오픈소스 저장소</span><span style="font-size: 11pt; ">의 탑3 진입을 목전에 두고 있는 탄탄한 회사인데, <span style="color: rgb(204, 61, 61); ">gist 라는건 github 에서 제공하는 소스 코드 게시판 같은것이다.</span> 사용하는 것은 간단하다. github 에 가입되어 있다면 gist 에 들어가서 코드를 입력하고, 프로그래밍 언어를 선택하면 저장이 된다. 저장시에 private, public 을 선택 할 수 있는데 public 을 선택하면 블로그로 옮길수 있는 스크립트를 받을수 있다. </span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile3.uf.11157C3850306F0D305A74.png)<figcaption class="wp-caption-text">심플함 그 자체다. </figcaption></figure>
+
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">티스토리에서는 이 스크립트를 포스팅 작성시 우측 상단의 html 체크박스를 눌러준후 해당 위치에 입력해주면 된다. 한가지 유의할 점은 해당 코드는 포스팅 미리보기 시점에서는 나오지 않는 다는 점이다. 저장을 하면 그제서야 보인다. </span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; "></span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile1.uf.11397B465030710C1C9DA9.jpg" /></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><strong>문제는 워드프레스(word press). 최근에 코드 기반의 영어로 포스팅을 하는 블로그를 워드프레스에서 열었는데 문제는 티스토리와 같은 방식으로는 gist의 저장이 안된다는 것이다.</strong><span style="font-size: 11pt; line-height: 2; "> 워드프레스는 인터네셔널한데 안될리가 없다고 생각하고 있어서 구글링을 했는데 다음과 같은 링크를 찾았다. </span></p>
+<p><span style="font-size: 11pt; "><a href="http://en.forums.wordpress.com/topic/github-gist-shortcode?replies=50">워드프레스에서 gist 사용하기 </a></span></p>
+<p><span style="font-size: 11pt; ">즉, 워드프레스 닷컴에서는 입력창 자체가 html 과 혼재해서 쓸수 있는 형태인데 티스토리에서 처럼 스크립트 코드를 붙이는 것이 아니라, 다음과 같이 gist 고유번호를 쓰면 된다는 것이다. gist 고유 번호는 코드를 하나 저장할때 마다 부여되는 고유의 ID와 같은 것이라고 보면 된다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; "><span style="font-size: 11pt; line-height: 2; ">[wpgist 3202549]</span>
+
+<span style="font-size: 11pt; "> or </span>
+
+<span style="font-size: 11pt; ">[wpgist https://gist.github.com/</span><span style="font-size: 11pt; ">3202549]</span>
+
+</div>
+<p><span style="font-size: 11pt; ">위와 같이 입력하면 워드프레스에서도 gist 에 입력한 코드화면을 볼 수가 있다. 워드프레스를 사용하시는 분이라면 위의 방법을 숙지하셔야 한다. 필자 역시 아직 숙지가 되지 않아서 이렇게 정리하는.. ㅎㅎ</span></p>
+<figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile30.uf.2073813750306FD213DBF0.png)<figcaption class="wp-caption-text">워드프레스에서의 입력화면</figcaption></figure>
+
+<p><span style="font-size: 11pt; "><strong>gist 에 대해서 살펴보았는데, gist 역시 만능은 아니다.</strong> SyntaxHighlighter 의 가장 큰 장점이라면 코드를 블로그에 이쁘게 보여주면서도 동시에 블로그에 들어와서 보고 있는 사용자가 언제든지 클릭 한번으로 코드를 복사해 갈수 있다는 장점이 있다. </span></p>
+<p><span style="font-size: 11pt; ">그에 비해서<strong> gist 는 원클릭 복사 기능을 제공하고 있지는 않다. </strong>그 부분이 좀 아쉽긴 하지만 gist 의 가장 큰 장점이라면 단연 github 의 본인 계정에 저장/관리가 된다는 점이라고 할 수 있다. 코드라는게 늘 그렇듯 언젠가 꼭 필요한 시점이 있기 때</span><span style="font-size: 11pt; ">문에 잘 관리 할수 있다면 괜찮은것 같다. </span></p>
+<p><span style="font-size: 11pt; ">각자 본인에게 맞는것으로 사용하면 좋을것 같다. ^^ </span></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'gist'">#'gist'</a>&nbsp;
+        
+            <a href="/tag/'gisthub'">#'gisthub'</a>&nbsp;
+        
+            <a href="/tag/'syntaxhighlighter'">#'syntaxhighlighter'</a>&nbsp;
+        
+            <a href="/tag/'블로그에 코드입력하기'">#'블로그에 코드입력하기'</a>&nbsp;
+        
+            <a href="/tag/'워드프레스'">#'워드프레스'</a>&nbsp;
+        
+            <a href="/tag/'워드프레스 gist'">#'워드프레스 gist'</a>&nbsp;
+        
+            <a href="/tag/'코드입력']">#'코드입력']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -4,3 +4,5 @@ blog:
   title: Ash84
   description: test
   author: Ash84
+publication:
+  path: ./docs

@@ -16,7 +16,7 @@ clean: install
 
 dev: install
 	zv build
-	python -m http.server 8000  --directory ./public 
+	python -m http.server 8000  --directory ./docs 
 
 format: 
 	ruff format .

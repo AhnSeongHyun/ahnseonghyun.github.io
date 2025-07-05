@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[JAVA] Comparable 인터페이스 구현</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[JAVA] Comparable 인터페이스 구현</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">필자는 Comparable 인터페이스를 이용해서 compareTo 함수를 구현하는 것 보다는 사실 Comparator 를 이용해서 정렬에 활용하는 케이스를 자주 사용했었다. (물론 그 안에서 이미 구현되어 있는 기본 클래스의 compareTo()를 사용한다.) 여기서는,<strong> Effective Java</strong> 항목12번에 Comparable 인터페이스의 구현을 고려하자 라는 부분에 대해서 요약해서 정리하고, Watch 클래스를 통해서 시계를 비교하는 compareTo() 함수를 구현해 보겠다. </span></p>
+<p><span style="font-size: 11pt;">compareTo()는 비교하는 함수이긴 하지만 equals() 와는 다르고, 자연율(<a href="http://stackoverflow.com/questions/5167928/what-is-natural-ordering-when-we-talk-about-sorting">natural ordering</a>, 상식적인 순서)을 고려한다. equals() 함수와 다른점은 동일한지 비교하고, 순서가 같은지도 비교하고, 제네릭 타입을 지원한다는 점이다. </span></p>
+<p><span style="font-size: 11pt;"><strong>compareTo() 메소드 구현의 보편적 계약</strong></span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">A.compareTo(B) 일때, </span>
+
+<span style="font-size: 11pt;">A < B, return 음수(-)</span>
+
+<span style="font-size: 11pt;">A > B, return 양수(+)</span>
+
+<span style="font-size: 11pt;">A == B, return 0</span>
+
+<span style="font-size: 11pt;">A와 B가 다른 타입이면 ClassCastException</span>
+
+</div>
+<p><span style="font-size: 11pt;">그 외에도 몇가지 계약이 더 있는데, 필자가 중요하다고 생각하는 것 중 하나는 </span></p>
+<p><span style="font-size: 11pt;"><strong>(A.compareTo(B) ==0) == (A.equals(B))</strong> 가 되어야 한다는 점이다. 이 부분이 중요한 이유는 compareTo() 를 구현해서 만든 클래스가 객체로 생성되어 Collections 를 구현하는 일반적인 리스트, 집합, 테이블 같은 클래스들에 넣었을 경우, 다르게 동작하기 때문이라고 한다. </span></p>
+<p><span style="font-size: 11pt;">예를들어, BigDecimal(“1.0”), BigDecimal(“1.0.0”) 을 HashSet과 TreeSet에 각각 넣었을 경우, 어느 쪽에서는 하나의 객체만 들어가고 어느쪽에서는 두개의 객체가 들어갈수 있다고 한다. 이것은 HashSet 과 TreeSet에서 어떤 함수를 기반으로 같은지를 판별하는지에 달려있다고 한다. (</span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/TreeSet.html"><span style="font-size: 11pt;">일반적으로 Set 인터페이스 구현에서 eauals() 를 사용하는데 TreeSet 만 compareTo() 를 사용한다는.</span></a><span style="font-size: 11pt;">)</span></p>
+<p><span style="font-size: 11pt;">또한 Comparable<T> 즉, 제네릭을 지원하기 때문에 컴파일 시점에 이미 타입이 결정되고 내부에서 형변환을 할 필요가 없다고한다. 구현시에는 일반적인 숫자형(int, long)은 &lt;,&gt; 로 비교하되, double, float 는 부동소수점 연산시 &gt;,&lt; 로 비교를 하면 compareTo() 함수의 조건을 만족하지 못하기 때문에<strong> Double.compare, Float.compare를 이용하기를 권장</strong>한다고 한다. </span></p>
+<p><span style="font-size: 11pt;">비교하는 필드가 여러개인 경우, 비교하는 순서가 중요한데, 이 부분은 전적으로 개인이 만든 클래스기 때문에 가장 우선시 되는 필드 부터 비교하고, 같으면 좀 덜 우선시되는 필드를 비교하는 방식으로 진행하면 된다고 한다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<script src="https://gist.github.com/4129777.js"></script>
+
+<p><span style="font-size: 11pt;">Watch 클래스에는 다양한 필드가 있다.(접근 지정자는 신경안썼음.) 일단 필자가 생각한 비교의 기준 순서는 <strong>오토매틱의 여부&gt;무브먼트타입&gt;서브 판의 개수&gt;잡다한 기능의 수</strong> 순이다. 다음은 Watch 클래스를 객체화 하고 비교하는 코드이다. </span></p>
+<script src="https://gist.github.com/4129789.js"></script>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['Comparable'">#['Comparable'</a>&nbsp;
+        
+            <a href="/tag/'CompareTo()'">#'CompareTo()'</a>&nbsp;
+        
+            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+        
+            <a href="/tag/'Effective Java'">#'Effective Java'</a>&nbsp;
+        
+            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+        
+            <a href="/tag/'이펙티브 자바'">#'이펙티브 자바'</a>&nbsp;
+        
+            <a href="/tag/'자바']">#'자바']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

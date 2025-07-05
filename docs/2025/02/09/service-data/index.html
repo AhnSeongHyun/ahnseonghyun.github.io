@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>서비스와 데이터</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">서비스와 데이터</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2025-02-09</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+        <img src="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/service-data/saas.png" alt="">
+    
+
+    <div class="blog-post">
+        <p>세상의 모든 것이 SaaS(Software as a Service) 형태로 변화하고 있다. 문서 작성, 디자인, 개발, 데이터 저장, 심지어는 개인 블로그와 글쓰기 툴들까지도 SaaS 기반 서비스들이 대세를 이루고 있다. SaaS의 장점은 분명하다. 설치할 필요 없이 즉시 사용할 수 있고, 유지보수를 신경 쓸 필요 없이 최신 기능을 누릴 수 있다. 하지만 이와 동시에 우리가 만든 데이터와 서비스의 소유권이 우리 손을 떠나는 문제도 존재한다.</p>
+<h1>편리함 하지만 불안함</h1>
+<p>블로그를 예로 들어보자. 나는 처음에는 테터툴즈에서 시작해서, 네이버 블로그, 티스토리, 워드프레스, 고스트 같은 서비스를 썼었다. 그런데 서비스가 종료되거나, 유지보수가 어렵게 되면 그때부터 써왔던 글, 데이터들이 문제가 된다. 여러가지 이유로 우리가 작성한 수많은 글과 데이터는 사라질 위기에 놓인다. SaaS 기반의 플랫폼은 본질적으로 그 생명이 서비스 제공자의 운영 여부에 달려 있기 때문이다.</p>
+<p>설령 백업이 되더라도 그 형태는 그 서비스에서 만든 형태이고, 그런것들이 다른 플랫폼으로의 이전이 쉽지는 않다. 결국 누군가를 importer를 만들어주기 전까지는 그저 텍스트 파일일뿐이다. (알아볼수 있는 형태면 다행일지도 모른다.)</p>
+<p><strong>SaaS의 또 다른 문제는 통제권의 부족이다.</strong> 플랫폼에서 제공하는 기능 외에 추가적인 기능을 원한다면 제한이 많다. 커스터마이징이 불가능하거나, API를 제공하지 않으면 데이터 이동조차 쉽지 않다. 사용자의 데이터가 특정 업체의 정책과 서버에 종속되는 "락인(Lock-in)" 문제가 발생하는 것이다.</p>
+<p>과거에 블로그를 여러 서비스에서 전전하면서 이런 생각이 들었고, 최근 몇 년 사이에는 노션을 쓰면서 이 자료들은 노션이 서비스를 종료하면 어떻게 하지? 라는 물음이 들었다. 그러다보니 자연스럽게 서비스가 아니라 데이터 자체, 파일에 대해서 관심을 가지게 되었고 그래서 현재는 옵시디언을  잘 쓰고 있다.</p>
+<p>그래서 몇가지 고민해본 것들은 </p>
+<h2>1. 데이터를 직접 소유하고 백업하기</h2>
+<p>클라우드 기반의 SaaS를 이용하더라도 데이터는 주기적으로 백업하는 것을 하면 좋다. 가능하면 오픈 포맷으로 데이터를 저장하고, 다른 서비스로 이전할 수 있도록 준비해야 한다. 블로그라면 마크다운(md) 형식으로 저장하거나, JSON이나 CSV로 내보내기를 지원하는 플랫폼을 선택하는 것이 좋다.</p>
+<h2>2. 직접 서비스 구축하기</h2>
+<p>SaaS의 편리함을 포기하고 자가 호스팅(self-hosting) 방식을 선택하는 것도 하나의 방법이다. 나 역시 여러 블로그 서비스를 전전하다가 결국 Flask를 이용해 직접 블로그를 구축했다. 내 서버에서 돌아가니 데이터가 사라질 걱정도 없고, 원하는 기능을 자유롭게 추가할 수도 있다. 운영의 부담이 약간 있지만, 장기적으로 보면 가장 자유로운 방식이다. 데이터를 내가 원하는 방법으로, 익숙한 방법으로 소유하고 있기 때문에 언제든지 백엔드나 프론트엔드를 수정할 수 있다. </p>
+<h1>하지만, 결국 다 없어지는게 아닌가?</h1>
+<p>자체 구축을 하더라도 결국 나라는 사람이 죽게 되면 서버는 내려가게 되고 글들은 안보이고 데이터를 지워질것인데 이런 노력이 필요할까? 하는 염세주의적 생각을 하게 되기도 한다. 돌이켜보면 세상의 모든것들이 그런것 같지만서도, 우리가 보는 책이나 글이나 그런것들이 꽤 오래 된것도 있고, 오래된 비석이나 돌에 새겨놓은것들은 몇천년이 지난 우리가 보고 있는것도 현실이다. 반대로 생각하면 그만큼 없어진것이 더 많은것도 사실이고. </p>
+<p>그렇지만 어딘가에 이런 글들, 자료가 유지되면 좋겠다는 생각이 든다. 사진, 책, 비석 같은것들이 어떻게 보면 영속성 장치였던것이고, 인터넷 시대에는 그런 시도들이 어떻게 이어질지 궁금하다. 아니면 이건 그냥 인간의 욕심일수도 있고.</p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['essay'">#['essay'</a>&nbsp;
+        
+            <a href="/tag/'service'">#'service'</a>&nbsp;
+        
+            <a href="/tag/'data']">#'data']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

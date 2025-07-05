@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(vert.x) 설치하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(vert.x) 설치하기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-09-24</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <div style="line-height: 2;"><span style="font-size: 11pt;">![](http://ash84.net/wp-content/uploads/1/cfile6.uf.2670863A5190979F07179B.PNG)
+
+</span></div>
+<div style="line-height: 2; text-align: center;"><span style="font-size: 11pt;">vert.x 홈페이지 : </span>[<span style="font-size: 11pt;">http://vertx.io</span>](http://vertx.io/)</div>
+<div style="line-height: 2;"></div>
+<p><span style="font-size: 11pt;"><strong><br />
+</strong></span></p>
+<p><span style="font-size: 11pt;"><strong><br />
+</strong></span></p>
+<p><span style="font-size: 11pt;"><strong>사전 요구사항(pre-requisites)</strong></span></p>
+<p><span style="font-size: 11pt;">– 운영체제 : 리눅스 계열, OSX, Windows</span></p>
+<p><span style="font-size: 11pt;">– JDK1.7 이상 </span></p>
+<p><span style="font-size: 11pt;">* Ruby 사용시, <code>JRUBY</code> 가 설치되어 있어야 하며 <code>JRUBY_HOME</code> 에 설치되고, 환경변수가 설정되어 있어야 한다. </span></p>
+<p><span style="font-size: 11pt;">* 파이썬 사용시,<code>JYTHON</code> 이 설치되어 있어야 하녹 <code>JYTHON_HOME</code> 환경변수가 설정되어 있어야 한다. </span></p>
+<p><span style="font-size: 11pt;"><strong>설치하기 </strong></span></p>
+<p><span style="font-size: 15px; line-height: 29px;"><strong>[<a href="http://vert-x.github.io/vertx-downloads/downloads/vert.x-1.3.1.final.zip.html">vert.x 1.3.1 final.zip</a>]</strong></span></p>
+<p><span style="font-size: 11pt;">1. 압축을 풀고, 배포판을 원하는 곳에 위치시킨다. </span></p>
+<p><span style="font-size: 11pt;">2. vert.x bin 디렉토리를 <code>PATH</code> 에 추가한다. </span></p>
+<p><span style="font-size: 11pt;"><strong>설치 확인하기 </strong></span></p>
+<p><span style="font-size: 11pt;">: 콘솔창에 아래와 같이 입력한다. 제대로  <code>PATH</code>가 설정되어 있다면, 버전정보를 볼 수 있다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">**> vertx version**</span>
+
+</div>
+<p><span style="font-size: 11pt;"><strong>* 오류사항</strong></span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; line-height: 2;"><div><span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">C:\Users\AhnSeongHyun>vertx version</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">Exception in thread “main” java.lang.UnsupportedClassVersionError: org/vertx/java/deploy/impl/cli/Starter : Unsupported major.minor version 51.0</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.lang.ClassLoader.defineClass1(Native Method)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.lang.ClassLoader.defineClass(ClassLoader.java:615)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:141)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.net.URLClassLoader.defineClass(URLClassLoader.java:283)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.net.URLClassLoader.access$000(URLClassLoader.java:58)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.net.URLClassLoader$1.run(URLClassLoader.java:197)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.security.AccessController.doPrivileged(Native Method)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.net.URLClassLoader.findClass(URLClassLoader.java:190)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.lang.ClassLoader.loadClass(ClassLoader.java:306)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)</span>  
+<span style="color: rgb(0, 0, 0); font-family: Tahoma; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2; font-size: 11pt;">        at java.lang.ClassLoader.loadClass(ClassLoader.java:247)</span>  
+</div><span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 11pt; line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2;">Could not find the main class: org.vertx.java.deploy.impl.cli.Starter.  Program will exit.</span>
+
+</div>
+<p><span style="font-size: 11pt;">해결 방안 =&gt;  java 설치후, PATH 추가 뿐만 아니라 JAVA_HOME 부분도 수정을 해야한다. <code>JAVA_HOME</code> 이 이전에 사용하던 <code>JDK 1.5</code> 혹은 1.6으로 나오는 경우 설치한 1.7 디렉토리로 설정해 준후 다시 설치를 확인한다. </span></p>
+<p><span style="font-size: 15px; line-height: 29px;"><br />
+</span></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['vert.x'">#['vert.x'</a>&nbsp;
+        
+            <a href="/tag/'vert.x 설치'">#'vert.x 설치'</a>&nbsp;
+        
+            <a href="/tag/'vertx'">#'vertx'</a>&nbsp;
+        
+            <a href="/tag/'vertx install']">#'vertx install']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

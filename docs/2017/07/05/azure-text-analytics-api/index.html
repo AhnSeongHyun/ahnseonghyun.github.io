@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Azure Text Analytics 연동하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Azure Text Analytics 연동하기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2017-07-05</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTCoP89IrLxbeI_UcIeXK8kYFXf0aWLOmDs-_MWt2qn8JpnY9nsg" alt="">
+    
+
+    <div class="blog-post">
+        <p><a href="https://ash84.net/2017/07/02/using-chatfuel-make-chatbot/">지난 글</a>에서 chatfuel을 이용해서 챗봇을 간단하게 만들어봤는데 MS Azure 에서 제공하는 Text Analytics API 를 연동해서 감정분석까지는 아니고 단순하게 텍스트에 대한 긍정부정을 알려주는 챗봇을 구성해 보기로 했다. </p>
+<p>https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/</p>
+<p>총 4가지 API를 제공하는데 <strong>DetectLanguage</strong> 랑 <strong>Sentiment</strong> API 를 이용하기로 했다. Detect Language 는 입력된 텍스트에 대한 언어를 감지해서 결과를 돌려준다. 2가지 항목을 주는데 하나는 일반 언어에 대한 이름 <code>name</code> 이고 또 하나는 언어코드 <code>iso6391Name</code> 를 주고 있다. Sentiment 는 언어코드<br />
+<code>iso6391Name</code> 와 함께 텍스트를 주면 <code>score</code> 값으로 0~1사이로 부정 혹은 긍정의 정도를 판별해서 돌려준다. 아쉬운 부분은 아직은 한국어나 일본어는 지원하지 않는다. </p>
+<p>자세한 부분은 API 사이트에서 <a href="https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/operations/56f30ceeeda5650db055a3c7">테스트</a> 를 할 수 있다. </p>
+<p>그래서 일단 사용자가 메시지를 입력하면 API 에서 해당 데이터를 받아서 DetectLanguage 를 호출해서 메시지에 대한 언어감지를 하고, Sentiment 가 가능한 API의 경우 Sentiment 를 호출하고 아닐 경우 가능한 언어를 보여주도록 만들었다. Sentiment 의 <code>score</code> 결과에 따라서 5개의 등급으로 분류를 하고 각각 다르게 메시지를 보내주도록 하였다. 위의 API들을 사용하려면 API 사용 신청을 해야하고 그에 따른 키를 발급해 준다. 해당 키는 <code>Ocp-Apim-Subscription-Key</code> 라는 항목으로 HTTP REQUEST Header 에 추가해준면 된다. </p>
+<p><img alt="챗봇-chatbot" src="https://farm5.staticflickr.com/4213/35566479142_5b343cc15d_z.jpg" /><br />
+한국어는 아직 만들지 못했는데, konlp 나 다른 자료들을 찾아 보면서 만들어야 할것 같다. 오픈한글 사이트에서 감정분석 API를 제공했던것 같은데 지금은 동작하지 않는것 같다. </p>
+<p>github : https://github.com/AhnSeongHyun/chatbot-emotion</p>
+<pre><code class="language-python">
+@app.route('/chat', methods=['POST'])
+def get_text():
+    try:
+        user_msg = request.form.get('user_msg', None)
+        message = Message()
+        print(user_msg)
+        if user_msg:
+
+            lang_detect = LanguageDetection(**conf)
+            request_id = datetime.now().strftime('%Y%m%d%H%M%S')
+            lang_detect_result = lang_detect.detect_language(id=request_id, text=user_msg)
+            message.append({'text': &quot;%s 로 말씀하셨습니다. &quot; % lang_detect_result.name})
+
+            if lang_detect_result.lang_code in conf['approval_lang_code']:
+                sentiment = Sentiment(**conf)
+                sentiment_score = sentiment.detect_sentiment(id=request_id,
+                                                             text=user_msg,
+                                                             language=lang_detect_result.lang_code)
+                message.append({'text': sentiment_score.get_sentiment_text()})
+            else:
+                message.append({'text': '해당언어로는 제가 기분을 알 수 없습니다.'})
+                message.append({'text': '%s 언어로 이야기 해주세요.' % (conf['approval_lang_code'].values())})
+        return jsonify(message.to_dict()), 200
+    except Exception:
+        import traceback
+        print(traceback.format_exc())
+        d = {
+            &quot;messages&quot;: [
+                {&quot;text&quot;: &quot;알아들을수가 없습니다. 다른애기를 해주세요.&quot;}
+            ]
+        }
+        return jsonify(d), 200
+</code></pre>
+<pre><code class="language-python">
+class SentimentScore(object):
+    def __init__(self, score):
+        self.score = score
+
+    def get_sentiment_text(self):
+        if 0.0 &lt;= self.score &lt;= 0.2:
+            return &quot;기분이 나쁘시군요.&quot;
+        elif 0.2 &lt;= self.score &lt;= 0.4:
+            return &quot;기분이 별로시네요.&quot;
+        elif 0.4 &lt;= self.score &lt;= 0.6:
+            return &quot;기분이 그저 그렇군요&quot;
+        elif 0.6 &lt;= self.score &lt;= 0.8:
+            return &quot;기분이 좋아보이네요 &quot;
+        else:
+            return &quot;기분이 매우 좋아보이네요&quot;
+</code></pre>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'azure'">#'azure'</a>&nbsp;
+        
+            <a href="/tag/'text-analytics'">#'text-analytics'</a>&nbsp;
+        
+            <a href="/tag/'ML'">#'ML'</a>&nbsp;
+        
+            <a href="/tag/'chatbot']">#'chatbot']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

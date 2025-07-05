@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>블로그 고도화 Overview</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">블로그 고도화 Overview</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2019-04-04</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>블로그에 대한 집착을 버릴려고 현재 운영 중인 블로그를 Flask 를 이용해서 개발을 했고 운영을 해오고 있다. 그렇지만 고도화를 하고 싶다는 생각을 떨쳐 버릴 수가 없었다. 개인적으로 불편한 부분도 있었고, 개인 프로젝트를 마땅히 찾지 못하다가 계속 마음에만 두는 블로그 고도화를 개인 프로젝트로 올해 한번 해보면 어떨까 하는 생각을 가지게 되었다. 원하는 기술 스택으로 다시 변경을 하고 그 과정들을 이 블로그에 쓰면 1석 2조가 되지 않을까? 하는 생각이 들었다.(사실 블로그 재료가 떨어진 것도 솔직한 마음) </p>
+<p>먼저 불편하다고 느꼈던 것들을 나열해 보자. </p>
+<ul>
+<li>
+<p>에디터 : 가장 큰 문제로 <code>vue.js</code> 로 markdown 에디터를 주워다 만들었고, 에러도 많다. 그러다보니 자연스럽게 쓰지 않게 되었고 다른 곳에서 쓰고 거의 복붙하는 용도로만 쓰게 되었다. 이 글을 쓰는 지금도 나는 Notion 에서 글을 쓰고 있다.</p>
+</li>
+<li>
+<p>비용 : 모놀리틱으로 구성된 서버는 스마일서브에서 제일 싼 호스팅에 11,000원 한달 비용을 지불하면서 사용을 하고 있다.(도메인 비용 별도) 비용이 비싸지는 않지만, AWS, AZURE 에서 제공하는 서버리스나 여러가지 managed service 를 이용해서도 비용최적화를 할 수 있지 않을까 싶었다.</p>
+</li>
+</ul>
+<p><img alt="" src="https://live.staticflickr.com/7836/32586802857_10a9636cfa_b.jpg" /></p>
+<ul>
+<li>구조 : 모놀리틱 구조에서 서버리스 형태로 만들어보고 싶다는 생각을 하게 되었다. 그리고 개발 및 배포도 사실상 ssh 들어가서 git 으로 하고 있는데 뭔가 더 자동화를 할 수 있지 않을까 하는 생각을 하게 되었다.</li>
+</ul>
+<p>개선 안에 대해서 생각해 보았다. </p>
+<ul>
+<li>
+<p>서버리스화 : 대략적으로 post 서비스, tag 서비스, 유저서비스 정도로 나누어 질 수 있을것 같다. 각각을 서버리스 환경에 띄우려고 한다. DB 에 붙는 부분은 원래는 개별DB 가 있는 게 맞긴 한데 그 부분은 좀 더 고민을 해봐야 할 것 같다.</p>
+</li>
+<li>
+<p>에디터 및 관리기 이슈 : 결국 나에게 에디터는 Notion 이 될 것 같다. 내가 Notion 보다 좋은 글쓰기 플랫폼을 만드는 것은 불가능하다는 결론에 이르렀다. 어떻게 Notion 의 markdown 데이터를 import 할 수 있을지 그리고 현재 관리기는 어떻게 할지는 좀더 고민해 봐야 할 것 같다. 관리기를 최소한의 기능으로 유지를 하는 방향으로 할 것 같고, 이 관리기가 굳이 웹서버에 떠 있어야 하는가에 대한 고민이 있다.</p>
+</li>
+<li>
+<p>프론트엔드 서빙 : 지금은 모놀리틱 구조에서 Flask 서버에서 같이 서빙이 되는데, 굳이 이럴 필요가 있을까? 서버리스 방향으로 가게 되면, 프론트엔드 서빙은 어디서 해야할까? 그리고 지금은 Flask 의 jinja rendering 을 사용하는데 API 화 하게 되면 이 부분은 걷어내야 할 것 같아. 개인적으로는 개인 <a href="http://github.io">github.io</a> 에 올리고 이것을 개인 도메인과 연결하는 식으로 가려고 한다. (과연 프론트를 할 수 있을까?)</p>
+</li>
+</ul>
+<p>다음 글에서는 좀 더 구체적인 방안을 찾아보려고 한다. 기술적인 부분이나 실제 어떤 것을 어떻게 사용할지. 등등</p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['Blog'">#['Blog'</a>&nbsp;
+        
+            <a href="/tag/'blog-upgrade']">#'blog-upgrade']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

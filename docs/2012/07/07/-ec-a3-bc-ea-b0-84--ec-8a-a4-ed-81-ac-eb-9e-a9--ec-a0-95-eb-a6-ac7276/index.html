@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>주간 스크랩 정리(7/2~7/6)</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">주간 스크랩 정리(7/2~7/6)</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2012-07-07</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><strong><span style="font-size: 11pt; color: rgb(0, 0, 0); ">리눅스 실행시간 측정 명령어 time</span></strong></p>
+<p><span style="font-size: 11pt; color: rgb(0, 0, 0); ">time 실행명령어 </span></p>
+<p><span style="font-size: 11pt; color: rgb(0, 0, 0); ">이렇게 입력하면 실제 해당 프로그램에 대한 실행 시간을 커널 레벨과 유저 레벨로 확인 할 수 있습니다. 장점이라면 단연 코드안에 time_t 와 같은 시간 측정을 위한 코드를 쓸 필요가 없다는 것이겠죠?</span></p>
+<p><strong><span style="font-size: 11pt; color: rgb(0, 0, 0); ">C/C++ 배열의 초기화 속도 </span></strong></p>
+<p><span style="font-size: 11pt; "><span style="color: rgb(0, 0, 0); ">최적화 관련된 작업을 수행 중에 찾은 자료입니다. 간단히 말해서 for 문으로 배열을 초기화 하는 것 보다는 memset 을이용하는 것이 더 빠르다고 하네요. 링크 공유 합니다. </span><a href="http://ummae.tistory.com/168"><span style="color: rgb(0, 0, 0); ">http://ummae.tistory.com/168</span></a></span></p>
+<p><strong><span style="font-size: 11pt; color: rgb(0, 0, 0); ">프로그래밍 성능 향상을 위한 C/C++ 튜닝</span></strong></p>
+<p><span style="font-size: 11pt; color: rgb(0, 0, 0); ">성능관련 자료를 찾다가, </span><span style="font-size: 11pt; color: rgb(0, 0, 0); ">삼성 SDS 멀티캠퍼스 </span><span style="color: rgb(0, 0, 0); font-family: Dotum; letter-spacing: -1px; line-height: 19px; font-size: 11pt; "> </span><span style="color: rgb(0, 0, 0); font-family: Dotum; letter-spacing: -1px; line-height: 19px; font-size: 11pt; ">“프로그래밍 성능 향상을 위한 C/C++ 튜닝” 교육을 요약한 자료라는 것을 찾았습니다. 성능 튜닝을 위해서라면 한번쯤 읽어보는 것도 좋을 것 같네요. </span><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2; font-size: 11pt; color: rgb(0, 0, 0); ">http://seolis.tistory.com/99</span></font></p>
+<p><span style="color: rgb(99, 99, 99); font-family: Dotum; letter-spacing: -1px; line-height: 2; "><br />
+</span></p>
+<p><span style="color: rgb(99, 99, 99); font-family: Dotum; letter-spacing: -1px; line-height: 2; "><br />
+</span></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2;"><strong><span style="font-size: 11pt; color: rgb(0, 0, 0); ">SQLITE3 명령어 </span></strong></span></font></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2;"><br />
+</span></font></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2;"><span style="font-size: 11pt; color: rgb(0, 0, 0); ">SQLITE3 파일 데이터베이스 인데, 주로 파일로 생성해서 바로 사옹했었는데, 명령어가 있다는 사실은 처음 알았네요. 간단하게 안에 내용 확인할 때, 굳이 viewer 설치 하는 것 보다 유용할 것 같네요. </span><span style="font-size: 11pt; "><a href="http://atticroom.tistory.com/15"><span style="color: rgb(0, 0, 0); ">http://atticroom.tistory.com/15</span></a></span></span></font></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 19px;"><br />
+</span></font></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2;"><br />
+</span></font></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2;"><strong><span style="font-size: 11pt; color: rgb(0, 0, 0); ">DevOps(디봅스)</span></strong></span></font></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2;"><br />
+</span></font></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2; font-size: 11pt; color: rgb(0, 0, 0); ">이번주에 유의깊게 읽은 DevOps 에 대한 링크입니다. KTH 쪽 링크가 대부분인데 최근에는 팀원을 모집하더군요. 서비스 운영과 개발을 병행하는 팀에 속하신 분이라면 꼭 읽어보세요. </span></font></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2;"><br />
+</span></font></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; "><div style="color: rgb(0, 0, 0); font-family: dotum; ">**<span style="font-size: 11pt; color: rgb(0, 0, 0); ">DevOps,  개발과 운영의 새로운 문화 </span>**</div><div style="color: rgb(0, 0, 0); font-family: dotum; ">[<span style="font-size: 11pt; color: rgb(0, 0, 0); ">http://dev.paran.com/2012/06/20/devops-new-trend-in-developement-and-operations/</span>](http://dev.paran.com/2012/06/20/devops-new-trend-in-developement-and-operations/)</div><div style="color: rgb(0, 0, 0); font-family: dotum; "></div><div style="color: rgb(0, 0, 0); font-family: dotum; ">**<span style="font-size: 11pt; color: rgb(0, 0, 0); ">DevOpsDays Mountain View 2012 Report #1 by KTH</span>**</div><div style="color: rgb(0, 0, 0); font-family: dotum; ">[<span style="font-size: 11pt; color: rgb(0, 0, 0); ">http://dev.paran.com/2012/07/02/devopsdays-mountain-view-2012-report-1-by-kth/</span>](http://dev.paran.com/2012/07/02/devopsdays-mountain-view-2012-report-1-by-kth/)</div><div style="color: rgb(0, 0, 0); font-family: dotum; "></div><div style="color: rgb(0, 0, 0); font-family: dotum; ">**<span style="font-size: 11pt; color: rgb(0, 0, 0); ">DevOpsDays Mountain View 2012 Report #2 by KTH</span>**</div><div style="color: rgb(0, 0, 0); font-family: dotum; ">[<span style="font-size: 11pt; color: rgb(0, 0, 0); ">http://dev.paran.com/2012/07/03/devopsdays-mountain-view-2012-report-2-by-kth/</span>](http://dev.paran.com/2012/07/03/devopsdays-mountain-view-2012-report-2-by-kth/)</div></div>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2;"><br />
+</span></font></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2;"><br />
+</span></font></p>
+<p><font color="#636363" face="Dotum"><span style="letter-spacing: -1px; line-height: 2;"><br />
+</span></font></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['C/C++'">#['C/C++'</a>&nbsp;
+        
+            <a href="/tag/'DevOps'">#'DevOps'</a>&nbsp;
+        
+            <a href="/tag/'KTH'">#'KTH'</a>&nbsp;
+        
+            <a href="/tag/'memset'">#'memset'</a>&nbsp;
+        
+            <a href="/tag/'sqlite3'">#'sqlite3'</a>&nbsp;
+        
+            <a href="/tag/'SQLITE3 명령어'">#'SQLITE3 명령어'</a>&nbsp;
+        
+            <a href="/tag/'Time'">#'Time'</a>&nbsp;
+        
+            <a href="/tag/'배열 초기화'">#'배열 초기화'</a>&nbsp;
+        
+            <a href="/tag/'성능튜닝'">#'성능튜닝'</a>&nbsp;
+        
+            <a href="/tag/'실행시간 측정']">#'실행시간 측정']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

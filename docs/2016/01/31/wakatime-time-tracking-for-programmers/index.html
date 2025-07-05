@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>wakatime, Time tracking for programmers</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">wakatime, Time tracking for programmers</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2016-01-31</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+        <img src="https://farm2.staticflickr.com/1441/24363188219_ae5cef0dcb_o.png" alt="">
+    
+
+    <div class="blog-post">
+        <p>트위터에서 다른 개발자분이 <a href="https://wakatime.com">wakatime</a> 을 적용해서 얼마나 코딩을 했는지에 대해서 측정하고 있다는 애기를 들어서 <a href="https://wakatime.com">wakatime</a>을 가입하고 적용을 해봤다. 일단 가입을 하고 나면 내가 사용하는 개발자툴, IDE에 해당 플러그인이나 세팅을 해야한다. 주로 내가 사용하는 툴들이 대부분 있었다. 적용한 툴들은 <strong>Pycharm</strong>, <strong>Notepad++</strong> 이었고 두 개의 툴에 모두 세팅을 했다. Pycharm 으로 파이썬 웹 개발을 주로 개발을 하기 때문에 설치했고, Notepad++은 다른 프로젝트의 인코딩을 보거나 할때 혹은 PHP개발을 할때, 주로 사용하기 때문에 2개에 세팅을 하게 되었다. 회사 뿐만 아니라 집에서 사용하는 개발자 툴에도 적용을 했다. JetBrain 에서 제공하는 툴들은 거의 다 제공을 하고 있다. </p>
+<p>자세한 IDE 별 지원 사항은 여기를 확인하면 볼 수가 있다. </p>
+<p>https://wakatime.com/editors</p>
+<p>약 2주 정도 적용해서 사용한것 같은데, 결과는 아래과 같다.(결과를 Dashboard 에 들어가서 볼 수가 있고, 쉽게 퍼갈 수 있게 제공하고 있다.)</p>
+<figure><embed src="https://wakatime.com/@03ef9929-9e0f-4e46-ba61-c6602dc5090f/bf8c4101-604a-4262-ac0f-3bb7782e6966.svg"></embed></figure>
+
+<p>직업 자체가 파이썬 웹 개발이기 때문에 파이썬을 제일 많이 사용하고 나머지는 HTML, JS 등등 인것 같다. </p>
+<figure><embed src="https://wakatime.com/@03ef9929-9e0f-4e46-ba61-c6602dc5090f/562ec83e-2da6-4173-86db-8b5f975510e4.svg"></embed></figure>
+
+<p>에디터는 압도적으로 Pycharm을 사용하고 있다. 사실 이건 나는 개발 뿐만 아니라, 데이터베이스 접근이나 ssh 접근, sftp 로 파일을 서버로 옮기는 모드 작업들을 pycharm으로 하기 때문에 이런 결과가 나오지 않을까 싶다. </p>
+<figure><embed src="https://wakatime.com/@03ef9929-9e0f-4e46-ba61-c6602dc5090f/25c285da-6599-4a21-a3c4-7e2a7fbca22d.svg"></embed></figure>
+
+<p>재밌는 결과인데, 목요일이 코딩 시간이 쳐지는 이유는 회사에서 목요일은 거의 회의가 많은 날이기 때문이다. 오전에는 회의 준비하느라 코딩을 할 시간이 많지 않고, 오후에 회의를 하니 ㅎㅎ 재밌는건 토요일이 은근히 높다는. 이건 아마 어제인것 같은데.. 집에 있어서 그럴거다. </p>
+<figure><embed src="https://wakatime.com/@03ef9929-9e0f-4e46-ba61-c6602dc5090f/e4660b5a-d0bf-45c2-ba6d-77dce8f5d2ac.svg"></embed></figure>
+
+<p>아무래도 집에서 보다는 회사에서 하는 시간이 많아서 당연한 결과라는 생각이 들었다. </p>
+<center>
+ <img src="https://farm2.staticflickr.com/1636/24362900359_143e472141_o.png"/>
+</center>
+
+<p>이건 Dashboard 에서 볼 수 있는 항목으로 내가 어떤 프로젝트에 주로 시간을 할애하고 있는 지를 그래프로 볼 수가 있다. 위의 다른 그래프들 과는 다르게 아직은 외부로 퍼갈 수는 없게 되어 있어서 스크린샷을 붙였다. 별도의 프로젝트 설정을 할 필요는 없고, wakatime 플러그인이나 관련 설정으로 프로젝트를 자동으로 인식이 되는것 같다. </p>
+<p>대략적으로 내가 이런일을 하고 있다는 것은 당연히 누구나 알겠지만, 정확하게 어느정도의 시간을 할애하고 있는지를 볼 수 있는 좋은 지표가 되는것 같다. 설치도 쉬우니 회사일 외에도 개인 프로젝트를 하거나 하는 경우에는 세팅해서 보는것도 재밌을 듯. </p>
+<p>PS1) 개인적인 사용에 대해서만 설명을 했는데, 팀이나 기업에서 사용하는 서비스도 제공하고 있는것 같다.<br />
+PS2) WAKA는 스와힐리어(Swahili)로 시간이라는 뜻을 가지고 있다고 한다. </p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'wakatime'">#'wakatime'</a>&nbsp;
+        
+            <a href="/tag/'programmer']">#'programmer']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

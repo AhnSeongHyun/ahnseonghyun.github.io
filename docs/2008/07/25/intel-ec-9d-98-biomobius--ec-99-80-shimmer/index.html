@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Intel의 BIOMOBIUS 와 SHIMMER</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Intel의 BIOMOBIUS 와 SHIMMER</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2008-07-25</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><span style="font-size: 11pt; "></span></p>
+<p><font color="#112a75"><span style="font-size: 11pt; ">다수의 많은 IT 기업들이 헬스케어 산업에 뛰어 들고 있다는 것은 자명한 사실이다. 기존의 거대한 의료기기 업체인 GE, 지멘스, 필립스 등의 업체는 기존의 기기를 바탕으로 헬스케어분야를 공략하려고 하고 있고, 마이크로소프트의 경우에는 개인을 대상으로 HealthVault 서비스를 발표함으로써, PHR 분야에서의 공략을 시작해 나가고 있다. 또한 구글이나 다른 인터넷 업체들 역시 인터넷에서의 의료정보에 초점을 맞추어 서비스를 하고 있다. </span></font></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">이번에 살펴볼 Intel의 경우는 연구 영역과 그리고 상용화 영역을 나누어서 공략을 시도 하고 있다. 그중에서 연구 분야를 보면, 단연히 Biomobius와 SHIMMER가 돋보인다. </span></p>
+<p><span style="font-size: 11pt; "></span></p>
+<p><strong><font color="#57048c"><span style="font-size: 11pt; ">BIOMOBIUS</span></font></strong></p>
+<p><strong><font color="#57048c"><img alt="" src="http://ash84.net/wp-content/uploads/1/48897a107dd6060.jpg" /></font></strong></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><font color="#5c7fb0"><span style="font-size: 11pt; ">BIOMOBIUS는 인텔의 헬스케어 센터인 TRIL CENTRE에서 제공하는 Biomedical Engineering 분야의 연구 플랫폼이라고 할수 있다. 기존의 랩뷰가 전자공학을 지원하는 연구형 플랫폼이었는데, 랩뷰보다 조금더 분야를 의공학 분야로 포커싱 해서 만든것이 바로 BIOMOBIUS이다. </span></font></p>
+<p><span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+</span></p>
+<figure class="wp-caption aligncenter" style="width: 520px">![](http://ash84.net/wp-content/uploads/1/48897a10821476S.gif)<figcaption class="wp-caption-text">BIOMOBIUS GUI Designer</figcaption></figure>
+
+<p><span style="font-size: 11pt; "></span></p>
+<p><span style="font-size: 11pt; ">이 플랫폼의 가장 큰 장점은 바로, 분석에 대한 부분이다. 기존의 ECG의 QRS파형 분석이나, 푸리엔 변환 같은 부분에 대해서는 직접 코딩을 하던지, 랩뷰에서도 많은 블록다이어그램을 통해서 만들어야 했던 부분을 이 플랫폼에서는 통합된 하나의 블록 다이어 그램으로 제공함으로써, 연구자들이 연구에만 매진할수 있도록 도와주고 있다. </span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">다음과 같은 성능을 제공한다.</span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><font color="#318561"><span style="font-size: 11pt; ">  – 빠른 개발(블록다이어그램을 이용한 개발 환경)</span></font></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><font color="#318561"><span style="font-size: 11pt; ">  – 실시간 생체신호 프로세싱 어플리케이션</span></font></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><font color="#318561"><span style="font-size: 11pt; ">  – 모바일 하드웨어와 임상학적 센서 지원</span></font></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><font color="#318561"><span style="font-size: 11pt; ">  – GUI 디자이너 제공</span></font></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><font color="#318561"><span style="font-size: 11pt; ">  –  개발의 중복성 제거 </span></font></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">또한 뒤에서 설명할 SHIMMER를 지원하는 연구 플랫폼으로서 누구나 등록만 하면 다운을 받아서 사용할수 있다는 장점이 있다. 또한 설명서가 </span><a href="http://biomobius.trilcentre.org/"><span style="font-size: 11pt; ">http://biomobius.trilcentre.org/</span></a><span style="font-size: 11pt; ">  에 가면 볼수 있기 때문에 크게 어렵지 않게 연구 플랫폼을 사용 할 수가 있다. </span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">하드웨어에 대한 지원은 다양한 하드웨어를  지원하는데, 유선과 무선 인터페이스를 지원한다. BIOMOBIUS 의 블록다이어그램들은 일반적인 하드웨어 디바이스, 예를 들면, TCP/IP, SERIAL, WDM 카메라 장비등을 지원하다. 또한 SHIMMER 의 무선센서와 TACTEX 사의 센서들을 지원한다. </span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">하드웨어 디바이스와의 연결은 간단하게 인터페이스 블록의 드래깅을 통해서 연결 할 수 있다. 추가적인하드웨어의 인터페이스 블록은 점점더 추가되고, 배포될 예정있으며, 연구원들은 어떤 새로운 하드웨어라도  자유롭게 인터페이스 블록을 만들수 있다.  </span></p>
+<p><span style="font-size: 11pt; "></span></p>
+<p><font color="#e31600"><span style="font-size: 11pt; ">SHIMMER(Sensing Health with Intelligence, Modularity, Mobility, and Experimental Reusability)</span></font></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">SHIMMER 는 작은 무선센서 플랫폼으로 Wearable Application 을 지원하기 위해서 고안되었다. SHIMMER는 실시간 운동학적 움직임과 임상학적 센싱을 위한 확장이 가능한 플랫폼을 제공하며,  특징은 큰 저장공간과 입는 벗고 또는 무선 센싱의 연결과 비연결모드를 통한 저전력 소모라고 할수 있다. 또한 SHIMMER는 헬스케어와 관련된 다른기술 과의 Ecosystem 을 구축하는데 도움을 준다. 왜냐하면 SHIMMER는 높은 이동적인 능력을 제공하는데 이것은 다른 지원하는 인프라와 통합될 수 있기 때문이다.  </span></p>
+<p><span style="font-size: 11pt; "></span></p>
+<div class="imageblock dual" style="text-align: center; line-height: 2; "><table border="0" cellpadding="0" cellspacing="5" style="margin: 0 auto;"><tbody><tr><td>![](http://ash84.net/wp-content/uploads/1/48897ca84a66f68.jpg)</td><td>![](http://ash84.net/wp-content/uploads/1/48897ca84be2f62.gif)</td></tr></tbody></table></div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div class="txc-textbox" style="border: 1px dashed rgb(243, 197, 52); padding: 10px; background-color: rgb(254, 254, 184); line-height: 2; "><span style="font-size: 11pt; ">  
+</span>**<span style="font-size: 11pt; "> Spec </span>**
+
+<span style="font-size: 11pt; ">  
+</span>
+
+- <span style="font-size: 11pt; ">Compact Form Factor, Light & Wearable (Weight: 15 Grams, Volume: 50mm x 25mm x 12.5mm) </span>
+- <span style="font-size: 11pt; ">Support for Bluetooth and 802.15.4 wireless communications (WML-C46A, CC2420) </span>
+- <span style="font-size: 11pt; ">Offline Data Capture – Micro SD Card Storage – 2 Gigabytes </span>
+- <span style="font-size: 11pt; ">Open Platform, driven by TinyOS </span>
+- <span style="font-size: 11pt; ">Internal and external connectors for expansion </span>
+- <span style="font-size: 11pt; ">Includes simple serial command interface for Bluetooth </span>
+- <span style="font-size: 11pt; ">Integrated TCP/IP stack for 802.15.4 </span>
+- <span style="font-size: 11pt; ">Integrated 3-axis MEMs accelerometer with selectable range </span>
+- <span style="font-size: 11pt; ">Integrated Li-ion battery mgmt. </span>
+- <span style="font-size: 11pt; ">Supported by </span>[<font color="#800080" goog_docs_charindex="2640" id="sfsl13"><span style="font-size: 11pt; ">BioMOBIUS</span></font>](http://www.biomobius.org/ "http://www.biomobius.org/")<span style="font-size: 11pt; "> graphical software platform </span>
+
+</div>
+<p><span style="font-size: 11pt; "></span></p>
+<p><span style="font-size: 11pt; ">작은 센서형 기기 안에도 TinyOS라고 하는 작은형태의 운영체제가 들어감을 알수 있다. 또한 이 운영체제는 오픈 플랫폼으로 문서화가 되어 있어서 편하게 이용할수 있다. 마이크로 SD카드를 이용할수 있게 되어 있어서 외부로 전송하지 않을때는 자체적으로 저장이 가능하다.  </span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">SHIMMER 에서 가장 중요한 기능은 바로 확장성 일 것이다. Internal/External 확장을 통해서 블루투스 라던지, 자이로스코프 센서 등을 붙일수 있고, 또한 따로 제작한 부분에 대해서 SHIMMER와 연결해서 사용할 수 있다. 또한 악세사리를 통한 확장을 제공해 준다. </span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; "> </span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><font color="#c84205"><u><strong><span style="font-size: 11pt; ">Available as add-on extension boards and accessories</span></strong><span style="font-size: 11pt; "> (확장을 통해서 가능한 것들)</span></u></font></p>
+<p><span style="font-size: 11pt; "></span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/48897ef253f8f7F.gif" /></p>
+<p><span style="font-size: 11pt; "></span></p>
+<ul>
+<li><span style="font-size: 11pt; ">Kinematics sensing (3 axis Gyroscope) </span></li>
+<li><span style="font-size: 11pt; ">Advanced Kinematics sensing (3 axis Gyroscope + 3 axis magnetic sensing) </span></li>
+<li><span style="font-size: 11pt; ">3 Lead Micro-power electrocardiograph (ECG) </span></li>
+<li><span style="font-size: 11pt; ">Breakout board to thru-holes for rapid prototyping </span></li>
+<li><span style="font-size: 11pt; ">USB programming/charging dock </span></li>
+<li><span style="font-size: 11pt; ">6-SHIMMER Charger </span></li>
+</ul>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">USB를 통한 충전이나, 악세사리를 이용한 ECG 신호의 검출, 자이로스코프 센서를 확장함으로써, 운동학적인 센싱의 신뢰도를 향상 시킬수가 있다. 다양한 센서와 기존의 운동학적인 부분과의 결합을 통해서 사용자의 건강상태의 파악과 더불어서, 그러한 정보를 다른 곳과 통신 할수 있다는 점이 가장 큰 강점으로 보인다. </span></p>
+<p><span style="font-size: 11pt; "></span></p>
+<h2><span class="mw-headline" goog_docs_charindex="3074"><span style="FONT-SIZE: 9pt"><font color="#193da9"><u><span style="font-size: 11pt; ">Applications </span></u></font></span></span></h2>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">The SHIMMER platform is being utilized for a variety of applications. These include: </span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<ul>
+<li><span style="font-size: 11pt; ">Limb motion analysis of Parkinson’s Disease and stroke patients – see </span><a href="http://www.eecs.harvard.edu/~mdw/proj/codeblue" title="http://www.eecs.harvard.edu/~mdw/proj/codeblue"><font color="#800080" goog_docs_charindex="3250" id="br9j26"><span style="font-size: 11pt; ">CodeBlue</span></font></a><span style="font-size: 11pt; "> for details </span></li>
+<li><span style="font-size: 11pt; ">Gait Analysis </span></li>
+<li><span style="font-size: 11pt; ">Sleep Studies </span></li>
+<li><span style="font-size: 11pt; ">Cognitive Awareness </span></li>
+<li><span style="font-size: 11pt; ">Activities of Daily Living Studies </span></li>
+<li><span style="font-size: 11pt; ">Vital Signs Monitoring </span></li>
+<li><span style="font-size: 11pt; ">Chronic Disease Management </span></li>
+</ul>
+<p><span style="font-size: 11pt; "></span></p>
+<p><span style="font-size: 11pt; ">Reference</span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">– TINYOS와 SHIMMER에 대한 위키 : </span><a href="http://docs.tinyos.net/index.php/Intel_SHIMMER"><span style="font-size: 11pt; ">http://docs.tinyos.net/index.php/Intel_SHIMMER</span></a></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">– BIOMOBIUS : </span><a href="http://biomobius.trilcentre.org/"><span style="font-size: 11pt; ">http://biomobius.trilcentre.org/</span></a></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">– TRIL CENTRE : </span><a href="http://www.trilcentre.org/"><span style="font-size: 11pt; ">http://www.trilcentre.org/</span></a></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['BIOMOBIUS'">#['BIOMOBIUS'</a>&nbsp;
+        
+            <a href="/tag/'intel'">#'intel'</a>&nbsp;
+        
+            <a href="/tag/'SHIMMER'">#'SHIMMER'</a>&nbsp;
+        
+            <a href="/tag/'TRIL CENTRE']">#'TRIL CENTRE']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>travis-ci 환경변수 </title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">travis-ci 환경변수 </h1>
+    <div class="blog-post-meta">
+        
+            <small>  2018-05-29</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>테스팅을 구성하고 travis-ci 를 연결을 해서 테스트 하던중 의문이 생겼다. 로컬 컴퓨터에서 테스트 할 때에는 db 정보를 설정에 두거나 하드코딩된 채로 사용했었는데, travis-ci 에 올리기 위해서는 그런 정보들을 어디엔가 두어야 한다. 물론 저장소에 둘 수도 있지만, 그리 좋은 방법은 아니다. </p>
+<h3>travis-ci 환경변수 설정</h3>
+<p><img alt="travis-ci" src="https://farm2.staticflickr.com/1741/41695627814_5f6bd0655f_b.jpg" /></p>
+<p>travis-ci 에서 로그인하고, 본인의 테스트 대상 저장소에가면 more option 이라는 부분에 들어가면 위와 같이 환경변수를 설정 할 수가 있다. </p>
+<p>설정할 때 주의할 점이 해당 내용이 travis-ci 에서 테스트 수행시의 로그에 보여질 것인지에 대한 옵션을 선택 할 수가 있다. 필자의 경우, db 관련 설정이기 때문에 숨김 처리를 하도록 했다. </p>
+<p>그리고 해당 환경변수를 설정하게 되면 별도로 저 내용 자체를 <strong>export 를 해 줄 필요는 없다.</strong> 아래의 로그는 실제 테스트 할 때의 로그인데, export 를 해주고 있고, 위에서 내용 표시를 안하도록 설정한 것과 같이 secure 라고 표시되고 내용은 보여지지 않는다. </p>
+<pre><code class="language-shell">Setting environment variables from repository settings
+$ export db_user=[secure]
+$ export db_password=[secure]
+$ export db_host=[secure]
+</code></pre>
+<h3>사용하기</h3>
+<p>사용할 때에는 우리가 지정한 환경변수의 키(key)를 통해서 읽어와야 한다. 아래와 같이 python 에서 <code>os.getenv</code> 를 이용해서 값을 가져오면 사용할 수 있다. </p>
+<pre><code class="language-python">import os
+db_host = os.getenv('db_host', None)
+db_user = os.getenv('db_user', None)
+db_password = os.getenv('db_password', None)
+</code></pre>
+<p><strong>Reference</strong><br />
+- <a href="https://docs.travis-ci.com/user/environment-variables/">https://docs.travis-ci.com/user/environment-variables/</a></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'testing'">#'testing'</a>&nbsp;
+        
+            <a href="/tag/'travis-ci'">#'travis-ci'</a>&nbsp;
+        
+            <a href="/tag/'env'">#'env'</a>&nbsp;
+        
+            <a href="/tag/'env variables']">#'env variables']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

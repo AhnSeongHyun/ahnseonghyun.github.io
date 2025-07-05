@@ -1,0 +1,149 @@
+---
+title: '[Java] SortedSet에 대해서.'
+author: 'ash84'
+pub_date: '2017-04-27'
+description: ''
+featured_image: ''
+tags: ['collection', 'dev', 'SortedSet', 'TreeSet', '자바']
+---
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+Set 인터페이스를 상속받는 인터페이스인 SortedSet 에 대해서 알아보자. Set은 부가적으로(중복제거외에) element 에 대한 전체 ordering을 제공하고 있다. element 들은 natural ordering에 의해서 순서가 매겨지거나 또는 SortedSet의 생성시 제공된 Comparator 에 의해서 순서가 매겨진다. 
+ 
+
+SortedSet은 comparator 를 내부적으로 가지고 있다. 이 SortedSet의 Iterator 는 ascending element order로 보여준다. 몇몇 추가적인 함수들은 ordering의 이점을 제공한다. 
+
+ 
+
+SortedSet에 삽입된 모든 엘리먼트들은 Comparable 인터페이스를 구현해야 하며, (혹은 특정 comparator를 사용가능하거나)모든 엘리먼트들은 상호간에 비교가능해야 한다.
+
+ 
+그게 안된다면, ClassCastException 이 발생된다. 다음의 코드를 보자.  
+
+<script src="https://gist.github.com/4527233.js"></script>
+
+```
+Exception in thread “main” java.lang.ClassCastException: com.konantech.test.TestData cannot be cast to java.lang.Comparable
+     at java.util.TreeMap.put(Unknown Source)
+     at java.util.TreeSet.add(Unknown Source)
+     at com.konantech.test.test.main(test.java:129)
+```
+
+ 
+
+**왜 이런 예외가 발생할까?**
+
+비교를 하려면 Comparable 인터페이스를 구현한 클래스여야 한다는 것이다. 이것이 없다면 SortedSet 에서는 어떻게 비교할지를 모르는 것이다. 즉,  우리는 비교할 방법을 알려주어야 한다. 
+
+비교할 방법을 알려주도록 하자. **Comparable 인터페이스를 내가 만든 TestData 라는 클래스에 implements 하려면 compareTo 함수를 구현해야 한다.** 다음과 같이 size()를 비교하는 compareTo() 함수를 구현해 보았다.
+ 
+다시 다음과 같이 데이터를 넣어서 테스트해보자. 들어간 순서는 제각각이지만, iterator를 통해서 나온 값을 보면 다음과 같다. ascending 되어서 나오는 것을 확인할 수 있다. 
+
+<script src="https://gist.github.com/4527257.js"></script>
+
+ 
+
+ 사실 개인적으로 Iterator를 선호하지는 않는 편이라서 List를 SortedSet처럼 쓰려면 List 안에 객체를 넣은 상태에서Comparator로 List안에 객체의 특정 변수를 기반으로 정렬하는 방법을 많이 사용하곤 한다. 잘 생각해 보면 차이점은 정렬을 해준다는 것이 아니라, 어느 시점에 정렬을 하느냐라고 생각이 된다.  
+
+예를 들어, 데이터를 담고 있는 과정에서 실시간 정렬된 데이터를 보려고 한다면 SortedSet을 쓰는 것이 편할것이라고 생각된다. 왜냐하면 List를 쓰면 Comparator를 사용해야 하는데 계속 담고 있는 과정에서 그러기엔 부담이기 때문이다.  
+
+또 다르게 생각하면 데이터가 다 담겨진 후에, List의 들어가 객체내 어떤 변수, size, age 등을 대상으로 자주 sorting을 해서 뭔가를 찾아내는 작업을 해야 한다면 List-Comparator 조합이 나을것 같다는 생각이 든다.
+ 
+
+이 부분은 개인적인 의견이기 때문에 사람마다 다를 수 있다고 생각되어 진다.  
+
+
+**compareTo() == equals() 를 하라.**
+
+
+무슨 애기냐 하면 equals() 함수를 통해서도 객체를 비교할수 있고, compareTo()를 통해서도 비교할수 있는데, 우리가 커스텀 클래스를 만들어서 SortedSet 인터페이스를 구현하는 클래스의 객체에 넣을때는 해당 구현 클래스가 비교/정렬을 어떤 함수를 대상으로 할지는 그 구현 클래스에 달려있는 것이다. 즉, equals() 와 compareTo() 메소드의 구현 및 동작결과가 다르다면 몇몇 Collection 에서는 다르게 정렬되거나 할 여지가 있다는 것이다.  
+
+**SortedSet 인터페이스 구현체 클래스에서 제공해야 하는 4가지 생성자**
+
+
+모든 일반적인 목적의 SortedSet 구현 클래스들은 4개가지 표준(standard) 생성자들은 제공해야 한다.
+
+
+<table align="justify" border="0" cellpadding="0" cellspacing="0" class="txc-table" style="border: none; border-collapse: collapse; font-family: 돋움; font-size: 12px; width: 656px;" width="656"><tbody><tr><td style="width: 227px; height: 26px; border: 1px solid rgb(204, 204, 204);"><span style="font-size: 11pt;">생성자 형태</span></td><td style="width: 428px; height: 26px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204);"><span style="font-size: 11pt;">설명</span></td></tr><tr><td style="width: 227px; height: 37px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> void (no arg) 생성자</span>
+
+</td><td style="width: 428px; height: 37px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> 빈 sortedSet 을 생성. natural ordering에 따라서 정렬된 엘리먼트</span>
+
+</td></tr><tr><td style="width: 227px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> Comparator 를 인자로 받는 생성자</span>
+
+</td><td style="width: 428px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> 빈 생성자를 만드는데 인자로 받은 Comparator 적용</span>
+
+</td></tr><tr><td style="width: 227px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> Collection을 인자로 받는 생성자</span>
+
+</td><td style="width: 428px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> 새로운 SortedSet을 생성. </span>
+
+<span style="font-size: 10pt;"> Collection을 natural ordering을 해서 SortedSet을 만든다. </span>
+
+</td></tr><tr><td style="width: 227px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> SortedSet을 인자로 받는 생성자</span>
+
+</td><td style="width: 428px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> 새로운  SortedSet을 생성.</span>
+
+<span style="font-size: 10pt;"> 인자로 받은 SortedSet과 같은 ordering으로 정렬된다. </span>
+
+</td></tr></tbody></table><span style="font-size: 9pt; line-height: 1.5;">  
+</span>
+
+<span style="font-size: 11pt; line-height: 1.5;">실제로 SortedSet을 간접적으로 구현하는 TreeSet의 생성자를 보면 다음과 같다. </span>
+
+
+<script src="https://gist.github.com/4527267.js"></script>  
+
+정확하게 위에서 권장한 4가지 생성자를 만든것을 볼 수 있다. 
+
+**SortedSet 전용함수들의 이상한 행동들.**
+
+
+예를 들어, subsets() 함수의 경우를 살펴보자. 이 함수의 역할은 전체 element 에서 특정 범위의 element 들을 뽑아서 보여주는 역할을 한다. subset 같은 경우가 그런데 함수 정의를 보면 파라미터로 element를 받고 있다.
+
+> fromElement – low endpoint (inclusive) of the returned set
+
+> toElement – high endpoint (exclusive) of the returned set
+ 
+
+fromElement는 포함, toElement는 제외라고 되어 있다. TreeSet으로 간단하게 테스트를 해보았다.  
+ 
+<script src="https://gist.github.com/4527281.js"></script>  
+ 
+6을 포함하려면 어떻게 해야할까? 자바 문서에서는 다음과 같이 제안하고 있다. </span>
+   
+<script src="https://gist.github.com/4527282.js"></script>  
+
+
+6이 나오는 것을 확인 할 수가 있다. 그렇다면 아래와 같이 실행 한다면 어떤 결과가 나올까? 
+ 
+<script src="https://gist.github.com/4527285.js"></script></span>
+
+6은 원래 제외였고 “\0″을 fromElement 인자에 붙이게 되면 exclusive 성질로 바뀌어서 1이 보여지지 않는다. subSet 을 보면 List의 subList() 함수가 생각나기 마련인데, 다른 점은 Set과 List의 차이처럼 인덱스가 아닌 element 자체를 받는다는 것이다. 
+
+
+SortedSet을 기본적으로 ordering 을 하기 때문에 subSet 자체도 입력한 순서가 아니라, ordering 된 상태에서 subSet()을 한다. 이점을 주의하자. 여타의 다른 sortedSet 인터페이스에서 제공하는 함수를 보자.  
+ 
+
+<table align="justify" border="0" cellpadding="0" cellspacing="0" class="txc-table" style="border: none; border-collapse: collapse; font-family: 돋움; font-size: 12px; width: 651px;" width="651"><tbody><tr><td style="width: 161px; height: 24px; border: 1px solid rgb(204, 204, 204);"><span style="font-size: 11pt;">SortedSet 함수들</span>
+
+</td><td style="width: 489px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204);"><span style="font-size: 11pt;">설명</span></td></tr><tr><td style="width: 161px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> first() </span></td><td style="width: 489px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> 가장 앞 엘리먼트, 삭제 안됨</span></td></tr><tr><td style="width: 161px; height: 23px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> last() </span></td><td style="width: 489px; height: 23px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> 가장 뒤 엘리먼트, 삭제 안됨.</span></td></tr><tr><td style="width: 161px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> headSet(toElement)</span></td><td style="width: 489px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> 특정 엘리먼트 보다 작은 엘리먼트들 , 특정 엘리먼트 불포함</span></td></tr><tr><td style="width: 161px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><span style="font-size: 10pt;"> tailSet(fromElement)</span></td><td style="width: 489px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"><span style="font-size:10pt;"> 특정 엘리먼트 보다 큰 엘리먼트 들 , 특정엘리먼트 포함, </span></td></tr></tbody></table> 
+
+
+예제로 headSet(), tailSet()을 알아보자.
+
+<script src="https://gist.github.com/4527292.js"></script>  
+
+<script src="https://gist.github.com/4527293.js"></script>  
+
+하지만, +”\0″를 하면 성질이 바뀐다. inclusive <=> exclusive
+
+이렇게 정리하면 된다.fromElement는 포함, toElement는 무조건 불포함이 기본이라고 생각하고 “\0″이 붙게 되면 성질이 변한다고 생각하면 된다. 정말 특이한 방식이 아닐수가 없다.
+  

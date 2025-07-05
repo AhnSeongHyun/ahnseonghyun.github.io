@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[JAVA] FilenameFilter 를 이용한 특정 확장자 파일리스트 가져오기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[JAVA] FilenameFilter 를 이용한 특정 확장자 파일리스트 가져오기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><span style="font-size: 11pt; ">파일처리 관련 부분에서 자주 사용되는 부분이 바로 디렉토리에서 파일리스트를 읽어오는 부분이다. 그런데 간혹 원치 않는 파일을 읽어오고 해당 파일에 접근하거나 파싱하는 과정에서 문제가 생길 수가 있다. 때문에 정해진 확장자만 읽어오는 부분이 필요한데, JAVA 에서는 이를 위해서 FilenameFilter 라는 것을 제공한다. </span></p>
+<script src="https://gist.github.com/3394292.js"></script>
+
+<p><span style="font-size: 11pt; ">위의 코드는 java.io 에 있는 File 클래스를 이용해서 디렉토리에 접근하고 listFiles() 라는 함수를 이용해서 해당 디렉토리내 파일의 리스트를 가져올수 있는 코드이다. 일반적으로 디렉토리에서 파일에 관한 정보를 가져오는 코드로 해당 디렉토리내 모든 파일을 가져오는 코드라고 보면된다. </span></p>
+<script src="https://gist.github.com/3394340.js"></script>
+
+<p><span style="font-size: 11pt; ">위의 코드는 listFiles()의 또 다른 형제(오버로드 함수)를 사용하는 방식을 보여준다. 위의 코드에서는 FilenameFilter 클래스를 재정의한 </span><span style="font-size: 11pt; ">XmlFileFilter의 객체를 인자로 받고 있다. 즉, listFiles(FilenameFilter) 이런 형식이 되는 것인데, 이렇게 지정하면 XmlFileFilter 클래스의 </span><span style="font-size: 11pt; ">재정의(오버라이드)한 함수 accept() 의 결과에 따라서 File[] 형식으로 반환할지가 결정된다. </span></p>
+<script src="https://gist.github.com/3394344.js"></script>
+
+<p><span style="font-size: 11pt; ">필자는 xml 파일만 걸러내기 위해서 위와 같이 코드를 구성했다. (좀더 간단히도 가능할듯;) 즉, accept() 함수에서 인자로 받고 있는 File dir, String name 을 원하는 대로 검사해서 boolean 형식으로 반환해주면 된다. </span></p>
+<p><span style="font-size: 11pt; ">딱 정해진 확장자에 대한 정의가 있다면, FilenameFilter 를 재정의해서 사용하는 편이 훨씬 간단할 것으로 예상된다. 예전같았으면, for 문을 돌면서 하나씩 체크를 했어야 했는데 그 부분이 없어지는 것이니까 해당된다면 활용해 보시길</span></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'FilenameFilter'">#'FilenameFilter'</a>&nbsp;
+        
+            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+        
+            <a href="/tag/'파일 목록가져오기'">#'파일 목록가져오기'</a>&nbsp;
+        
+            <a href="/tag/'파일리스트'">#'파일리스트'</a>&nbsp;
+        
+            <a href="/tag/'확장자']">#'확장자']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

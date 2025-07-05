@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Python: Tips, Tricks and Idioms</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Python: Tips, Tricks and Idioms</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2017-04-27</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>원문 : <a href="https://codefisher.org/catch/blog/2015/01/27/python-tips-tricks-and-idioms/?utm_source=Python+Weekly+Newsletter&amp;utm_campaign=8416b188e6-Python_Weekly_Issue_176_January_29_2015&amp;utm_medium=email&amp;utm_term=0_9e26887fc5-8416b188e6-312692397" title="Python: Tips, Tricks and Idioms">Python: Tips, Tricks and Idioms</a></p>
+<p>번역 까지는 아니고(번역할 내용도 별로 없기에.) 눈에 띄는 몇가지만 주관적인 의견을 붙여서 적어본다.</p>
+<p><strong>enumerate</strong><br />
+ – index 와 같이 출력하기 위해서 i 등의 변수를 ++ 하는 형태로 for문을 돌리지말고 enumerate 를 사용하면 간단하게 해결이 된다.</p>
+<div>
+<script src="https://gist.github.com/AhnSeongHyun/1b16530fa80dddea4b02.js"></script>
+</div>
+
+<p><strong>set</strong> </p>
+<p>– <code>set</code> 은 사실 잘 사용하지 않는데, 해당 요소가 unique 해야 한다는 제약이 있다. 아래의 소스를 보면 단순히 list 내 요소에서 포함된것(교집합, intersection)과 포함되지 않은것(차집합, difference) 을 <code>set</code> 을 이용해서 가져오는 것을 볼 수 있다. 기존의 list 에서 for 루프를 통해서 걸러냈었다면 <code>set</code>을 사용하는 코드로 바꾸는게 좋을것 같다.<script src="https://gist.github.com/AhnSeongHyun/11af75aaf00a1f4e20e2.js"></script></p>
+<p><strong>for … else</strong><br />
+ – 신기한 구문이다. <code>if else</code> 가 아닌 <code>for else</code> 라니. 되는것이 신기한데 아래의 코드를 보면서 설명을 하면, <code>break</code>문이 도달하지 않고 for 루프를 탈출하게 되면 else: 하위의 구문이 실행된다. 그렇지만, <code>break</code>문에 도달해서 탈출하게 되면 else: 하위의 구문은 실행되지 않는다.</p>
+<div>
+<script src="https://gist.github.com/AhnSeongHyun/771232f2669d8e193fcd.js"></script>
+</div>
+<p><strong>Generator expressions</strong></p>
+<p>– <code>yield</code> 를 이용한 generator 를 만드는 방법은 워낙 잘 알려져 있는데 여기에서는 괄호() 를 이용해서 generator 를 만들고 있다. 만약 아래의 코드에서 괄호() 대신에 [] 를 쓰게 되면 generator 가 아닌 list로 만들어지니 주의하자. generator 를 사용해야 하는 이유에 대해서 원 저자는 List Comprehension 의 문제점은 메모리에 바로 적재된다는 점이고, 이 부분은 매우 큰 데이터의 경우 문제가 될수 있다고 한다. generator 를 사용하면 객체가 늦게 생성된다고 하고 실제 값을 요청하기 전까지 어떤 연산도 없다고 설명하고 있다.(<em>you can use a generator expression, which uses very similar syntax, but creates a lazy object, that computes nothing until you ask for a value.</em>)<script src="https://gist.github.com/AhnSeongHyun/03a02a2eb98e70d4646b.js"></script></p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p><strong>Dictionary Comprehension</strong><br />
+ – List Comprehension 은 많이 봤어도 Dictionary에 대한것은 처음봐서 적어둔다. 아래의 코드를 보면 전에 봤던 generator expression 에 <code>dict()</code> 을 함으로써 생성할수도 있고 [] 대신에 {} 를 사용해서 Dictionary를 만들어 내고 있다.</p>
+<script src="https://gist.github.com/AhnSeongHyun/7eb98d3c05e4bd5f2a78.js"></script>
+
+<p>기타 <code>defaultdict</code>, <code>Counter</code>에 대한 소개도 원문링크를 보면 나와있다. 이미 알고 있는부분이라서 소개하진 않았지만, 한번 훑어보는것도 좋을것 같다.</p>
+<blockquote>
+<p><a href="https://ash84.net/2015/03/04/-eb-b2-88-ec-97-ad-6-python-performance-tips/">[번역] 6 Python Performance Tips</a></p>
+</blockquote>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'performances'">#'performances'</a>&nbsp;
+        
+            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+        
+            <a href="/tag/'tips'">#'tips'</a>&nbsp;
+        
+            <a href="/tag/'tricks']">#'tricks']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

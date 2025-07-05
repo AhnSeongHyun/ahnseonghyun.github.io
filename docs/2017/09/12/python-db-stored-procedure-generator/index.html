@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>python - db stored procedure 호출에 generator 활용하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">python - db stored procedure 호출에 generator 활용하기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2017-09-12</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>프로시저 호출은 몇 가지 제약을 가진다. 일단 프로시저명을 전달해야 하고 파라미터를 순서대로 전달해야 한다. 그리고 결과를 주는 방식이 하나의 결과를 줄 수도 있고 여러 결과를 줄 수도 있다. 프로시저당 하나의 호출 함수를 만들면 너무 많은 프로시저 호출 함수가 생기는 문제가 있다. 그래서 프로시저 이름을 받는 파라미터와 전달할 프로시저 파라미터, 그리고 insert, update, delete 의 경우 commit 을 해야하기 때문에 commit 여부를 위한 파라미터, 그리고 여러 결과를 반환하는 여부에 대한 파라미터를 추가한 호출하는 함수 1개를 만들었다. </p>
+<pre><code class="language-python">def call_procedure(self, procedure_name, params, with_commit=False, with_next_set=False):
+        try:
+            self.open() 
+            self.cursor.callproc(procedure_name, params)
+
+            result1 = [row for row in self.cursor]
+
+            if with_next_set:
+                result2 = [row for row in self.cursor] 
+                if with_commit: 
+                    self.conn.commit() 
+                self.close()
+                return result1, result2
+            else:
+                if with_commit: 
+                    self.conn.commit() 
+                self.close()
+                return result1
+        except Exception as e:
+            self.close()
+            logger.exception(format_exc())
+            return []
+</code></pre>
+<p><strong>위의 코드에서 몇가지 문제점이 있다.</strong> 일단 <code>with_commit</code> 부분에 대한 중복이 있다. 그리고 DB가 반환하는 결과셋(result set)가 <strong>2번이라는 가정을 기본적으로 가지고 있는 함수</strong>이다. 만약 하나의 결과셋이 추가될 경우 대응이 어렵다. (가장 간단한 대응은 <code>procedure_name</code> 을 가지고 분기를 치는것이다.) </p>
+<p>아래의 코드는 python 의 <code>generator</code> 를 이용해서 개선한 버전이다. 일단 함수에서는 <code>yield</code> 를 통해서 generator 를 반환하고 프로시저를 호출하는 함수에서는 <code>generator.next()</code> 를 이용해서 결과셋을 몇번을 더 가져올 것인지를 결정할 수 있다. 즉, 호출을 대리하는 함수가 결정하는 것이 아니라, 호출을 하는 주체가 결정하게 된다. 그렇게 됨으로써 <code>call_procedure</code> 함수내에 있던 프로시저의 결과셋에 대한 종속성은 제거된다. 기존에 사용하던 <code>with_next_set</code> 파라미터 역시 더 이상 필요없기 때문에 제거했다. </p>
+<p>결과셋을 가져오는 것은 while 문 안에서 일어나게 되는데 while 문을 벗어나는 방법은 <code>GeneratorExit</code> 예외를 통해서 벗어나도록 되어있다. <code>GeneratorExit</code> 예외는 호출을 하는 주체가 <code>generator.close()</code> 를 호출하는 시점에 함수 내부에서 발생하게 되고 while 문이 종료되게 된다. 이 부분 역시 함수외부에서 함수내부를 제어하고 있는 부분이다. </p>
+<pre><code class="language-python">def call_procedure(self, procedure_name, params, with_commit=False):
+        try:
+            self.open()
+            self.cursor.callproc(procedure_name, params)
+            while True:
+                result = [row for row in self.cursor]
+                try:
+                    yield result
+                except GeneratorExit:
+                    break
+            if with_commit: 
+                self.conn.commit() 
+            self.close()
+        except Exception as e: 
+            logger.exception(format_exc())
+            self.close()
+            raise e
+
+# 호출하는 부분 
+
+
+generator = self.call_procedure(procedure_name=PROCEDURES.PURCHASE_SELECT,
+                                        params=param_instance.to_params())
+result_list = generator.next() # 결과 하나 가져오기 
+generator.close()
+
+...
+generator = self.call_procedure(procedure_name=PROCEDURES.PURCHASE_WITH_SUM_SELECT,
+                                        params=param_instance.to_params())            
+
+#결과 2개 가져오기 
+sum_result = generator.next()            
+result_list = generator.next()
+
+generator.close() 
+</code></pre>
+<p>프로시저 당 하나의 함수를 만들어야 했던 문제도 해결 되었고, 각 프로시저마다 가지고있는 기능들을 호출하는 쪽에서 담당하게 되니 더 간결해진 것 같다. 제너레이터가 좋은 점은 많이 사용해 보진 않았지만, <strong>호출하는 함수 내의 동작을 외부에서 제어할 수 있다는 점인 것 같다.</strong> 어떻게 보면 이상하게 보일 수도 있지만, 좀 더 효율적으로 호출하는 방식이 될 수도 있다는 생각이 든다. </p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+        
+            <a href="/tag/'generator'">#'generator'</a>&nbsp;
+        
+            <a href="/tag/'제너레이터'">#'제너레이터'</a>&nbsp;
+        
+            <a href="/tag/'저장프로시저']">#'저장프로시저']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

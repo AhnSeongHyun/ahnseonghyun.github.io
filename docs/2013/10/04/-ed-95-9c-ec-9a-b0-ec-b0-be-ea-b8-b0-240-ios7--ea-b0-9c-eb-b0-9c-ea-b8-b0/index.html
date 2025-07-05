@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>한우찾기 2.4.0 iOS7 개발기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">한우찾기 2.4.0 iOS7 개발기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2013-10-04</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">아이폰5가 나오면서 5인치에 대한 지원 그리고 파싱 부분에 대한 에러가 있어서 할까 말까 하고 있었는데 iOS7 이 되면서 기본적인 UI 컴포넌트가 Flat 스타일로 변경이 되고 해서 한우찾기 역시 2.4.0 버전으로 업그레이드 하게 되었다. 몇가지 특징점을 설명하고자 한다. </span></p>
+<p><span style="font-size: 11pt;"><strong>1. Simple, Simple</strong></span></p>
+<table align="center" border="0" cellpadding="0" cellspacing="5"><tbody><tr><td>![](http://ash84.net/wp-content/uploads/1/cfile21.uf.25166934524E94731CD541.PNG)</td><td>![](http://ash84.net/wp-content/uploads/1/cfile28.uf.263C3934524E9478041489.PNG)</td></tr></tbody></table>
+<p><span style="font-size: 11pt;">– 기존의 많은 실험적 디자인이 있었던 부분을 엄청나리 만큼 간소화를 했다. 예를 들면 바코드 인식하는 부분에 대해서는 기본의 페이지 컨트롤을 통해서 사용자가 한번 이상의 swipe 를 통해서 보고 선택을 하는 방식이었다면 이번에는 그냥 한 화면에 크게 두개의 버튼을 다른 색깔로 둠으로써 보다 빠르게 선택할수 있도록 구성했다. </span></p>
+<p><span style="font-size: 11pt;">또 다른 예는 조회결과에 대한 사후 처리이다. 이전에는 저장, 메일전송, 복사 이렇게 세가지 작업을 조회 결과에 대해서 수행할 수가 있었는데 이것들을 하려면 사용자가 모든 결과를 2번 이상의 스크롤링을 통해서 하단의 3가지의 버튼을 통해서 가능했었다. 그런데 이번 버전에서는 UIActivity를 커스텀해서 저장과 메일, 복사 뿐만 아니라 카카오톡, 라인 메신저로 다른 사람에게 공유할수 있도록 구성하였으며, 상단에 위치 하기 때문에 스크롤링을 하지 않아도 결과 페이지의 어떤 위치에서도 선택을 해서 원하는 작업을 수행할 수 가 있다. </span></p>
+<p><span style="font-size: 11pt;"><strong>2. 다음(Daum) 맵 도입</strong></span></p>
+<p><span style="font-size: 11pt;"><strong><br />
+</strong></span></p>
+<p><span style="background-color: transparent; font-size: 9pt; line-height: 1.5;"><br />
+</span></p>
+<p><span style="background-color: transparent; font-size: 11pt; line-height: 2;">– 처음에 한우찾기에서 사용했던 것은 iOS에서 제공하는 기본 맵이었는데, 기본적으로 구글맵이 보여지다가 구글과 애플이 틀어지면서 애플앱이 보여졌다. 다들 알다시피 애플앱은 국내 지도에는 취약한데 보통 한우찾기에서는 소의 이동동 경로를 보여주다 보니, 주로 지방인 경우가 많고 제대로 표시 되지 않는 경우가 많았다. </span></p>
+<p><span style="background-color: transparent; font-size: 11pt; line-height: 2;"><br />
+</span></p>
+<p><span style="background-color: transparent; font-size: 11pt; line-height: 2;"></span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile6.uf.232A4933524E93EA03042C.PNG" /></p>
+<p><span style="background-color: transparent; font-size: 11pt; line-height: 2;"><br />
+</span></p>
+<p><span style="background-color: transparent; font-size: 9pt; line-height: 1.5;"><br />
+</span></p>
+<p><span style="background-color: transparent; font-size: 9pt; line-height: 2;"><span style="font-size: 11pt;">비록 정확한 경로는 아니지만 그래도 국내 지역이 제대로 표시된 지도를 보여줘야 한다는 생각이 있었고, 다음(Daum) 맵을 </span><span style="font-size: 11pt;">사용하게 되었다. 다음맵 사용에 대한 부분은 좀더 정리해서 블로깅을 할 생각인데, 지금으로서는 꽤 만족스러운 편이다. 한가지 아쉬운건 사용자가 선택하지 않으면 말풍선이 핀에 보이지 않는다는 것 뿐. </span></span></p>
+<p><span style="background-color: transparent; font-size: 9pt; line-height: 1.5;"><br />
+</span></p>
+<p><span style="background-color: transparent; font-size: 9pt; line-height: 1.5;"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><strong>3. 네이버 광고의 도입</strong></span></p>
+<p><span style="font-size: 11pt;">– 광고에 대한 부분은 많이 생각한 부분인데, 무료앱인 상황이고 취지 자체가 축산업을 하시는 분들께 도움을 드리고자 시작한 것이긴 하지만 1년에 애플 계정 유지비가 10만원이 들기 때문에 광고를 통해서 유지해야 한다는 생각이 들었다. 개인적으로는 네이버 광고의 방식을 모르겠지만 가능하다면 조금이나마 연관된 광고가 나올수 있었으면 하는 바램이 있다. 수익을 올리는 것도 중요하지만 광고를 통해서 축산업에 도움이 되는 제품을 인터넷으로 싼 가격에 구매할수 있었으면 하는 바램이다. </span></p>
+<p><span style="font-size: 11pt;">기술적으로 크게 변한건 없지만 사실 가수가 예전 음반을 리마스터링 하는것 같이 새롭게 프로젝트를 생성하고 코드를 정리하고 필요한 코드를 새로 작성하였다. 아이폰 3gs에서 작업을 하던 시절에서 아이폰5s 가 나오는 시대로 변경이 되면서 기존의 느린 네트워크, 느린 cpu 때문에 필요로 했던 로딩창이 실제로 거의 필요없게 되면서 코드를 빼는 행복한 작업을 하기도 하였다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 15px; line-height: 29px;">점차 수요에 맞춰서 좀 더 많고 필요한 기능을 추가했으면 하는 바램이다. </span></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['네이버 애드포스트'">#['네이버 애드포스트'</a>&nbsp;
+        
+            <a href="/tag/'다음맵'">#'다음맵'</a>&nbsp;
+        
+            <a href="/tag/'한우'">#'한우'</a>&nbsp;
+        
+            <a href="/tag/'한우찾기'">#'한우찾기'</a>&nbsp;
+        
+            <a href="/tag/'한우찾기 2.4.0']">#'한우찾기 2.4.0']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

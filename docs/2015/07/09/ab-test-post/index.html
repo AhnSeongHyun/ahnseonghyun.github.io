@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>A/B Test Post 요청하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">A/B Test Post 요청하기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-09</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>ab 는 <a href="http://httpd.apache.org/docs/2.2/ko/programs/ab.html">apache bechmark testing</a> 이라는 일종의 툴 인데, apache httpd를 설치하면 ./bin 디렉토리 내에 존재한다. 대략적인 사용법은 다음과 같다.</p>
+<script src="https://gist.github.com/AhnSeongHyun/0bccc2e3351c4db6a6b3.js"></script>
+
+<p>특히 가장 많이 사용하는 것이 <code>-c(concurrency)</code> 와 <code>-n(requests)</code> 옵션인데, 쉽게 애기하면 <storng>동시에 몇명이 총 몇개의 요청을 보낼것인가?를 정의하면 된다.</storng></p>
+<p><strong>./ab -c 50 -n 500 http://daum.net</strong></p>
+<p>이런식으로 웹사이트, 웹페이지, 웹 API 등을 테스트 할 수 있다. 그런데 POST 의 경우에는 조금 불편한다. post 옵션은 특이하게 직접 명령어를 쓰는게 아니라 <code>-P</code> 옵션을 통해서 파일로 지정을 해야 한다. 그런데 주의할 점이 <code>-T(content-type)</code> 옵션으로 <code>application/x-www-form-urlencoded</code> 를 지정해 주어야 하고, <code>-P</code> 지정 파일에는 URL Encoding 된 데이터를 넣어줘야 한다.</p>
+<p><strong>./ab  -T application/x-www-form-urlencoded -n 100 -c 100 -p post.text https://127.0.0.1/test</strong></p>
+<p>ab 는 apache 서버를 설치하면 보통 bin 디렉토리에 들어있게 되는데 간단하게 테스트할 때는 좋은 것 같지만 여러군데 웹 사이트에서 찾아본 결과 ab 보다는 jmeter 가 더 낫다고 한다. 실제로 필자의 경우, 같은 조건으로 테스트를 하는데 jmeter 에서는 conenction refused 가 떨어지는것을 확인했지만, ab 에서는 별다른 문제가 없는 경우를 확인했다.</p>
+<p><a href="http://stackoverflow.com/questions/10260526/which-gets-the-measurements-right-jmeter-or-apache-ab">http://stackoverflow.com/questions/10260526/which-gets-the-measurements-right-jmeter-or-apache-ab</a></p>
+<p>위의 글을 보면 좀더 자세한 이야기를 볼 수가 있는데, jmeter는 좀더 범용적으로 테스트 할 수 있어서 사람들이 많이 선호하는것으로 확인된다. 사실 위의 post 요청만해도 매우 불편하기 짝이 없다. 간단한 게 아닌 이상 그냥 jmeter 로 테스트 하시는게 좋을듯. 윈도우 아닌 환경에서 간단히 테스트하긴 굳.</p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['ab'">#['ab'</a>&nbsp;
+        
+            <a href="/tag/'ab request post'">#'ab request post'</a>&nbsp;
+        
+            <a href="/tag/'apache']">#'apache']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

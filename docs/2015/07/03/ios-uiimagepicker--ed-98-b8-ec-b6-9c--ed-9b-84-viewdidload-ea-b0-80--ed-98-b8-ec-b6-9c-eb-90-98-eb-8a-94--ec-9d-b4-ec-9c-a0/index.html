@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[iOS] UIImagePicker 호출 후, ViewDidLoad가 호출되는 이유.</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[iOS] UIImagePicker 호출 후, ViewDidLoad가 호출되는 이유.</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <div style="line-height: 2;"></div>
+<div style="line-height: 2; "><div style="line-height: 2; text-align: justify; "><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">최근 개발하고 있는 프로젝트에 겪었던 기 현상을 먼저 이야기 하자면 이렇다. </span></span></div><span style="font-size: 11pt; ">  
+</span>
+
+<div style="text-align: justify;"><span style="font-size: 11pt; ">  
+</span><span style="line-height: 2;">  
+<span style="font-size: 11pt; ">  
+</span></span></div><span style="font-size: 11pt; ">  
+</span>
+
+<div style="text-align: justify;"><span style="font-size: 11pt; ">  
+</span><span style="line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">ViewController 에서 UIImagePicker 를 호출해서 카메라 혹은 사진 앨범을 띄워서  선택을 하고 나서 ViewDidLoad 함수가 호출되는 현상을 목격했습니다.  </span></span></span></div><span style="font-size: 11pt; ">  
+</span>
+
+<div style="text-align: justify;"><span style="font-size: 11pt; ">  
+</span>  
+<span style="font-size: 11pt; ">  
+</span></div><span style="font-size: 11pt; ">  
+</span><span style="line-height: 2;"><div style="text-align: justify;"><span style="font-size: 11pt; ">  
+</span><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">맥부기에 물어본 결과. </span></span></div></span>
+
+<div style="text-align: justify;"></div><div style="text-align: justify;"><span style="line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "> </span></span></span></div><div class="tit-box" style="color: rgb(0, 0, 0); line-height: 2; text-align: justify; font-family: dotum; font-size: 12px; list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; clear: both; width: 743px; overflow-x: hidden; overflow-y: hidden; "><div class="fl reply_write" style="font-family: dotum; font-size: 12px; list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 1px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; width: 570px !important; float: left; "></div></div><div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div class="tit-box" style="color: rgb(0, 0, 0); line-height: 2; font-family: dotum; font-size: 12px; list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; clear: both; width: 743px; overflow-x: hidden; overflow-y: hidden; "><div class="fl reply_write" style="font-family: dotum; font-size: 12px; list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 1px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; width: 570px !important; float: left; "><table border="0" cellpadding="0" cellspacing="0" style="text-align: justify;"><tbody><tr><td class="m-tcol-c b" style="font-family: dotum; font-size: 12px; font-weight: bold; padding-right: 5px; line-height: 2; word-break: break-all; color: rgb(0, 0, 0); "><table cellspacing="0" summary="퍼스나콘/아이디 영역"><tbody><tr><td class="p-nick" style="font-family: dotum; font-size: 12px; padding-right: 5px; line-height: 2; word-break: break-all; ">[<span style="font-size: 10pt; "><span style="font-family: Dotum; ">윤찬파파(azone)</span></span>](http://cafe.naver.com/ArticleRead.nhn?articleid=136606&clubid=16914752#)</td></tr></tbody></table></td><td class="m-tcol-c step" style="font-family: dotum; font-size: 12px; padding-right: 5px; line-height: 1.5; word-break: break-all; color: rgb(0, 0, 0); "><span class="filter-50" style="opacity: 0.5; zoom: 1; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">정회원</span></span></span><span style="font-size: 10pt; "><span style="font-family: Dotum; "> </span></span><span><span style="font-size: 10pt; "><span style="font-family: Dotum; ">![](http://cafeimgs.naver.com/levelicon/1/2_110.gif)</span></span></span></td></tr></tbody></table></div><div class="fr select_c" style="font-family: dotum; font-size: 12px; list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 6px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; position: relative; top: -4px; float: right; "><table border="0" cellpadding="0" cellspacing="0" style="text-align: justify;"><tbody><tr><td align="right" class="m-tcol-c date" style="font-family: dotum; font-size: 11px; opacity: 0.5; padding-right: 5px; line-height: 2; color: rgb(0, 0, 0); "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">2011.06.01 13:56</span></span></td></tr></tbody></table></div></div><div class="h-5" style="color: rgb(0, 0, 0); line-height: 2; text-align: justify; font-family: dotum; font-size: 0px; list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; clear: both; height: 5px; overflow-x: hidden; overflow-y: hidden; "></div><div class="board-box-line-dashed reply_write" style="color: rgb(0, 0, 0); line-height: 2; text-align: justify; font-family: dotum; font-size: 0px; list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; height: 3px; width: 743px; border-bottom-style: dashed; border-bottom-width: 1px; opacity: 0.3; border-top-color: rgb(102, 102, 102); border-right-color: rgb(102, 102, 102); border-bottom-color: rgb(102, 102, 102); border-left-color: rgb(102, 102, 102); "></div><div class="h-0" style="color: rgb(0, 0, 0); line-height: 2; font-family: dotum; font-size: 12px; list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "></div><div class="tbody m-tcol-c" id="tbody" style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 20px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; clear: both; width: 743px; position: relative; overflow-y: hidden; overflow-x: auto !important; "><div style="color: rgb(0, 0, 0); font-family: dotum; font-size: 12px; line-height: 2; text-align: justify; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">uiimagepickercontroller 를 사용하시면 (modal 로 띄우겠죠?) 대부분 memory warning 이 발생합니다. </span></span></div><div style="color: rgb(0, 0, 0); font-family: dotum; font-size: 12px; line-height: 2; text-align: justify; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">memory warning 이 생기면 여러가지 떠 있는 viewcontroller 들 중에 보이지 않는 controller 들의 viewDidUnload 를 호출합니다.</span></span></div><div style="color: rgb(0, 0, 0); font-family: dotum; font-size: 12px; line-height: 2; text-align: justify; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">그리고 카메라를 다 사용하고 나면 (dismiss 시키게되면) .. 원래 controller 의   viewDidLoad 를 호출합니다.</span></span></div><div style="text-align: justify;"><font color="#000000" face="dotum"><span style="line-height: 2;">  
+</span></font></div><font color="#000000" face="dotum"><div style="text-align: justify;"><span style="line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">그래서 viewDidLoad 가 호출되는 것처럼 보일 수 있습니다.</span></span></span></div></font>
+
+<div style="text-align: justify;"></div><font color="#000000" face="dotum"><div style="text-align: justify;"><span style="line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">UIImagePickerController 를 띄우는 Controller 에서 viewDidUnload  에서 적절한 처리를 해 주시면 됩니다.   
+  </span></span></span></div></font>
+
+</div></div></div>
+<div style="line-height: 2; "><div class="tbody m-tcol-c" id="tbody" style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 20px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; clear: both; width: 743px; position: relative; overflow-y: hidden; overflow-x: auto !important; "><font color="#000000" face="dotum"><div style="text-align: justify; line-height: 2; "><span style="line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">이렇다고 하</span></span><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">네요, 결과적으로는 카메라 호출로 인해서 생기는 “메모리 경고”로 인한 ViewDidLoad의 문제 였습니다. 확인해 본 결과 실제로 카메라 혹은 포토라이브러리 호출로 인한 </span></span><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">메모리 경고시에는 해당 뷰가 ViewUnload가 호출되고 dismissModal 후 ViewLoad가 다시 호출되는 것을 확인하였습니다. </span></span></span><span style="font-family: Dotum; font-size: 11pt; line-height: 2; ">때문에 한번만 호출된다는 개념을 가지고 접근해서 코드를 ViewDidLoad 에 작성해서는 안될것 같습니다. 그리고 이런 호출이 있는 경우를 잘 체크해서 코드를 작성해야 할것 같습니다.  </span></div></font></div></div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+        
+            <a href="/tag/'UIImagePicker'">#'UIImagePicker'</a>&nbsp;
+        
+            <a href="/tag/'ViewDidLoad'">#'ViewDidLoad'</a>&nbsp;
+        
+            <a href="/tag/'ViewDidUnload'">#'ViewDidUnload'</a>&nbsp;
+        
+            <a href="/tag/'메모리경고']">#'메모리경고']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

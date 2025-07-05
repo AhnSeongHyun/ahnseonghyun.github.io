@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[JAVA] Gson 라이브러리로 JSon 이용하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[JAVA] Gson 라이브러리로 JSon 이용하기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2017-04-30</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>최근에 회사에서 프로젝트를 하면서 쓴 것은 아니고 프로토타입핑을 하는 도중에쓴것이 있어서 소개하려고한다. 목적은그랬다. 데이터양이엄청많았는데서버에서가져오기벅차니까결과를캐쉬하자는목적이었다. 그런데메모리에올려져있는캐쉬를사용하자니서버에부담도되고, 그 사용량 역시 만만치 않다는 결론에이르렀다. </p>
+<p>그래서 생각한것이 파일에저장하는것 이었다. 문제는 딱 2가지였다. </p>
+<pre><code>1. 각각의쿼리에대해서어떻게저장되어있는파일을고유하게구별할것인가?
+2. 효율적인파일구조는무엇일까? 
+</code></pre>
+<p>1번에대한답은MD5 키변환을통해서해결하고자했다. </p>
+<p>즉, 어떤사용자가 어떤데이터를 요청할때, (데이터는사용자에종속된다.) 서버에 특정쿼리를 전달하면 그때의시간 혹은 테이블명 사용자ID 등의 고유한 문자열을 MD5키로 뽑아서 파일로만들고, 나중에 사용자가 쿼리를 전달할때 서버가 아닌 파일에서 찾게 만들게 하는 설계였다. </p>
+<p>2번에 대한 답은 여러가지가 있을 수가있었다. 자체적인 구조를 만들수도있고, 아니면 전형적인 XML의형태를가지고갈수도있었다. 하지만 개인적으로 XML의경우태그명이 명확한이름 짓기로인해서 길어질경우, 지나치게 데이터의양을 차지할것 같고, 무거운느낌이 들었다. </p>
+<p>그래서 생각해낸것이 바로 JSON이었다. </p>
+<p>원래 웹서비스의 전송포맷으로 많이사용하는데 이번에는 서버에데이터 저장용으로 써보는것은 어떨까? 하는생각을하게되었다. 물론 추후에 그 데이터를 외부 혹은 내부의 다른서비스에 네트워크를 통해서 전달해야한다면 바로 그 파일을 쓸 수도있지않을까 하는막연한기대감도있었다. </p>
+<p>자바에서어떻게하면쉽게클래스에저장한데이터를 MD5이름을가진 JSon형식의파일로저장할수있을까? 그리고저장된파일에서어떻게하면쉽게클래스로옮겨올수있을까? 하는생각이들었다. 다들아시다시피프로토타입핑은간결해야하고, 프로젝트기간중에우리에게 JSon 파서를만들도록나둘프로젝트매니저나팀장은적어도대한민국엔존재하지않는다. <br />
+때문에 오픈소스 JSon 관련파서를찾기시작했고(자바용), 그래두역시구글님이만들어놓으신 Gson 이라는라이브러리를찾을 수 가있었다. Gson에서는다양한기능을제공하지만위에서정의한요구사항에부합하는기능을쓰는것은매우간단하다. 아래의코드를보자. </p>
+<script src="https://gist.github.com/AhnSeongHyun/3262791.js"></script>
+
+<p>먼저데이터를 넣고뺴고 할때담을 그릇, 클래스를만들자. Person 이라는예제클래스를만들었다. 다음과같이간단하게사람의 여러가지 특징에 대해서 설명할 수 있는 변수들을 지정했다. 그리고 나서 JSon 파일을읽어오는 readJsonFile() 함수와 Person 객체에서 JSon파일로 데이터를 넣을수 있는 writeJsonFile을 작성하였다. </p>
+<script src="https://gist.github.com/AhnSeongHyun/3262797.js"></script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p><code>readTextInFile()</code> 함수는단순히지정한파일에서텍스트를읽어오는 역할을한다. 위의코드를보라. 미칠듯이간단하다. <code>readJsonFile(</code>) 함수에서는 텍스트파일에서 읽어온 텍스트내용을 Gson 객체의 <code>fromJson()</code> 함수에어떤클래스의형식으로받을것인지를함께전달해주면된다. 그리고리턴값으로 Person 객체를 이용해서받으면된다. <code>writeJsonFile()</code> 함수를보면, 더간단하다. <code>gson.toJson</code> 에 Person객체를전달해주고 FileWriter의 <code>write</code> 함수에 전달해주기만 하면된다. </p>
+<p>이제 main에서호출해준다. </p>
+<script src="https://gist.github.com/AhnSeongHyun/3262798.js"></script>
+
+<p>사용후기를 말씀드리면, Gson 라이브러리가 제공하는 기능으로인해서 JSon 에대해서 쉽게 접근 할 수있어서좋은 것 같다. 그리고위에서소개한기능은 Gson 라이브러리의 기능 중 극히 일부분이기때문에네트워크와 맞물렸을 경우, 사용하기 편한 여러가지기능을 Gson에서제공하고있을 것같다. 필요하면해당사이트에가서찾아서쓰면좋을것같다. 가장마음에 드는 것은 JSon 구조자체가 깔끔하다는 것이다. XML처럼  특정태그명과포함관계를지정하기위해서애쓸필요가없다. 내가 정한 클래스의 구조 그대로 들어가기 때문에 좀 더 클래스 디자인에만 집중 할 수 있게 하는것도 하나의 장점이라는 생각이든다. </p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'GSON'">#'GSON'</a>&nbsp;
+        
+            <a href="/tag/'JSON'">#'JSON'</a>&nbsp;
+        
+            <a href="/tag/'MD5'">#'MD5'</a>&nbsp;
+        
+            <a href="/tag/'read from file json'">#'read from file json'</a>&nbsp;
+        
+            <a href="/tag/'write to file json'">#'write to file json'</a>&nbsp;
+        
+            <a href="/tag/'자바']">#'자바']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

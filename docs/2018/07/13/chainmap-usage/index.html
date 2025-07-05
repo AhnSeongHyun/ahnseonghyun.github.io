@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title> ChainMap 사용법 정리</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title"> ChainMap 사용법 정리</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2018-07-13</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>Python3.3 에서 처음 나온  ChainMap 은 익히 잘 알고 있는 collections 모듈에 위치해 있다. 3.3 에 나왔지만, 생각보다 많이 알려지지 않은 이유는 기존의 다른 방식의 코딩으로 대체가능한 영역이라서 인것 같다. ChainMap의 기본적인 역할은 quickly linking a number of mappings 이라고 소개하고 있다. </p>
+<p>즉, 맵핑 형식을 이어주는 역할로 보면 될 것 같다. 그리고 dict 를 새로 생성하거나 여러번 <code>update()</code> 함수를 호출하는것 보다 빠르다고 설명하고 있다. 간단히 설명하면 ChainMap 은 기존의 list 안에 dict 을 넣고 for 문을 돌려서 무엇인가를 찾거나 update 하거나 했던 일들을 쉽게 해준다.</p>
+<pre><code class="language-python">&gt;&gt;&gt; from collections import ChainMap
+&gt;&gt;&gt; ChainMap()
+ChainMap({})
+&gt;&gt;&gt; ChainMap() # 아무것도 넣지 않으면 빈 채로 반환 
+
+&gt;&gt;&gt; default = {'db':'127.0.0.1', 'port':3306}
+&gt;&gt;&gt; custom = {'db':'ash84.net', 'port':3306, 'lib':'pymysql'}
+&gt;&gt;&gt; ChainMap(default, custom)
+ChainMap({'db': '127.0.0.1', 'port': 3306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'})
+
+&gt;&gt;&gt; chain_map.maps # 전달된 mappings 들은 list 에 저장되고 maps 를 통해서 접근가능
+[{'db': '127.0.0.1', 'port': 3306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'}]
+
+# 조회는 키가 발견될때 까지 연속적으로 찾는다. 
+# 반대로 쓰기, 업데이트, 삭제는 오직 첫번째 mappings 에서만 이루어진다. 
+
+&gt;&gt;&gt; for k, v in chain_map.items():
+...   print(k, v)
+... 
+port 3306
+db 127.0.0.1
+lib pymysql
+
+&gt;&gt;&gt; chain_map['port']=33306
+&gt;&gt;&gt; chain_map
+ChainMap({'db': '127.0.0.1', 'port': 33306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'})
+
+# new_child 사용법 
+
+&gt;&gt;&gt; chain_map.new_child(m=1)
+ChainMap(1, {'db': '127.0.0.1', 'port': 33306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'})
+&gt;&gt;&gt; chain_map.new_child(m=&quot;test&quot;)
+ChainMap('test', {'db': '127.0.0.1', 'port': 33306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'})
+&gt;&gt;&gt; chain_map.new_child(m=&quot;test&quot;).maps
+['test', {'db': '127.0.0.1', 'port': 33306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'}]
+
+# new_child(m) 함수는 m 값을 주지 않을 경우 {} 를 .maps 내 첫번째에 위치시키고 
+# 기존의 가지고 있던 다른 mappings 들을 복사한다. 
+# m 을 주어지면 해당 값을 maps 에 첫번째에 넣고 나머지 복사 
+
+# parents 사용법 
+# 제일 첫번째것을 제외한 나머지 것들을 새로운 ChainMap 으로 만들어서 반환 
+&gt;&gt;&gt; chain_map
+ChainMap({'db': '127.0.0.1', 'port': 33306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'})
+&gt;&gt;&gt; chain_map.parents
+ChainMap({'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'})
+
+# 검색단계에서 첫번째 mappings 를 제외할때 편함 
+
+# 예 https://www.blog.pythonlibrary.org/2016/03/29/python-201-what-is-a-chainmap/
+
+&gt;&gt;&gt; from collections import ChainMap
+&gt;&gt;&gt; car_parts = {'hood': 500, 'engine': 5000, 'front_door': 750}
+&gt;&gt;&gt; car_options = {'A/C': 1000, 'Turbo': 2500, 'rollbar': 300}
+&gt;&gt;&gt; car_accessories = {'cover': 100, 'hood_ornament': 150, 'seat_cover': 99}
+&gt;&gt;&gt; car_pricing = ChainMap(car_accessories, car_options, car_parts)
+&gt;&gt;&gt; car_pricing['hood']
+500
+</code></pre>
+<p>특이한 점이 몇가지가 있는데, 업데이트는 첫번째 mapping 을 대상으로만 이루어진다는 점이다. 그런데 조회를 할때, 해당 키가 첫번째에 없으면 다음번 mapping 대상에서 찾아서 보여준다는 점이다. <code>new_child</code> 함수는 특이하게 ChainMap 이라서 mapping 형식만 인자를 통해서 받을 수 있을것처럼 보이지만 아무 값이나 넣어서 첫번째에 위치 시켜버린다. <code>parents</code> 는 뭔가 부모 mapping 객체를 찾을 것 처럼 보이지만 사실은 maps 리스트의 첫번째 것을 제외한 나머지를 새로운 ChainMap 으로 만든다. </p>
+<p>어디에 써 먹을지는 잘 모르겠지만, 제일 마지막에 있는 예제를 보면 키가 겹치지 않는다는 가정의 dict 들에서 통합해서 찾고 싶으면 기존의 <code>update</code> 를 통해서 합치고 찾았던 거에 비해서,  ChainMap 으로 연결하고 한번에 원하는 키를 통해서 찾을 수 있는건 편할 것 같다. </p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['Python'">#['Python'</a>&nbsp;
+        
+            <a href="/tag/'chainmap']">#'chainmap']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

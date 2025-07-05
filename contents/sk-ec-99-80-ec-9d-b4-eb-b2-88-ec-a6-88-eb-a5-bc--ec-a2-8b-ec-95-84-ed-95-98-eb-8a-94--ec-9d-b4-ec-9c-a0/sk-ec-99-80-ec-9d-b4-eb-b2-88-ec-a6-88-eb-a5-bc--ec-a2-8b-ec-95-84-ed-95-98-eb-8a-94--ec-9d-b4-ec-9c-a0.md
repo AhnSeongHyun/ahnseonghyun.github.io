@@ -1,0 +1,16 @@
+---
+title: 'SK와이번즈를 좋아하는 이유.'
+author: 'ash84'
+pub_date: '2009-09-25'
+description: ''
+featured_image: ''
+tags: ['SK와이번즈', '김성근', '프로야구']
+---
+
+
+<div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">야구를 좋아하기 시작한지 얼마 되지 않았지만, </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">나는 SK 와이번즈를 좋아한다. </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ 신생구단이고, 생긴지도 얼마 되지 않았고</span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">다른 사람들은 SK와이번즈의 플레이가 더럽고, 치사하다고 하지만, </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">다른 어떤팀 보다도 이기고 싶은 마음이 더 간절하기 때문이라고 생각한다. </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ 잡을수 있는 공을 놓치거나 하는 등의 실책이 바로 </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">실점으로 이어지는 야구에서 SK는 무결점에 도전하는 야구정신으로 </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">야구를 하는것 같아서 마음에 든다. 솔직히 말하자면, 공 놓치고 실실웃는</span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">선수들을 보면 이해가 되지 않는다. 내가 구단주라면 바로 잘랐을것.ㅡㅡ</span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ 내 비록, 서울에 살고 서울에서 자랐지만, </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">SK 와이번즈를 좋아할수 밖에 없는 이유는</span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">그들의 플레이가 너무 멋지기 때문이다. </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ 비록 3년연속 패넌트레이스 1위를 하지는 못한 상황이지만, </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">그래두 연승행진을 이어가고 있는 상황이고 </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">KIA가 비록 강하긴 하지만 </span></span></div><div style="line-height: 2; "></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">SK 특유의 정신으로 한국시리즈에서 3년 연속</span></span></div><div style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">우승할 것이라고 믿어 의심치 않는다. </span></span></div><div></div><div></div>
+

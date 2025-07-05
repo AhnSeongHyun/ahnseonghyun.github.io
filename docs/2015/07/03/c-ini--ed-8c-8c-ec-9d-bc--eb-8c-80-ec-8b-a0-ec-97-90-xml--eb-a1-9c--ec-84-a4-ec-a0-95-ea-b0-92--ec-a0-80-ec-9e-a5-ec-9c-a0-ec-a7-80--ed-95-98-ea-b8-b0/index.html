@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <div style="line-height: 2; ">  
+<span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가 많기 때문에, COM Port에 대한 설정값 저장이 늘 골치거리 였다. </span></span>  
+<span class="Apple-style-span" style="font-family: Dotum; font-size: 15px; line-height: 29px; ">  
+</span></div>
+<div style="line-height: 2; "><span class="Apple-style-span" style="font-family: Dotum; font-size: 15px; line-height: 29px; ">XML과 Hashtable에 대한 함수.  <div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font></span></span></span></span></div></div></span></div>
+<div></div>
+<div><div>  </div><div></div><div class="txc-textbox" style="BORDER-RIGHT: rgb(121,165,228) 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: rgb(121,165,228) 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: rgb(121,165,228) 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: rgb(121,165,228) 1px solid; BACKGROUND-COLOR: rgb(219,232,251)"><div></div><div>         /// <summary></div><div>         ///해쉬테이블을 읽어서 xml파일에 저장한다.</div><div>         /// </summary></div><div>         /// <param name=”ht”></param></div><div>         /// <returns></returns></div><div></div><div>         public int WriteXml(Hashtable ht)</div><div>         {</div><div>             IDictionaryEnumerator htEnum = ht.GetEnumerator();</div><div></div><div>             XmlTextWriter tw = tw = new XmlTextWriter(Application.StartupPath + @”\ini.xml”, Encoding.UTF8);</div><div></div><div>             tw.Formatting = Formatting.Indented;</div><div></div><div>             tw.WriteStartDocument();</div><div></div><div>             tw.WriteStartElement(“Configuration”);</div><div></div><div>             while (htEnum.MoveNext())</div><div>             {</div><div>                 tw.WriteElementString(htEnum.Key.ToString(), htEnum.Value.ToString());</div><div>             }</div><div></div><div>             tw.WriteEndElement();</div><div>             tw.WriteEndDocument();</div><div></div><div>             tw.Flush();</div><div>             tw.Close();</div><div>             return 0;</div><div></div><div>         }</div></div><div></div><div></div><div></div><div></div><div></div><div class="txc-textbox" style="BORDER-RIGHT: rgb(121,165,228) 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: rgb(121,165,228) 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: rgb(121,165,228) 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: rgb(121,165,228) 1px solid; BACKGROUND-COLOR: rgb(219,232,251)"><div></div><div>         /// <summary></div><div>         /// xml파일을 읽어서 해쉬테이블에 저장한다.</div><div>         /// </summary></div><div>         /// <returns></returns></div><div></div><div>         public Hashtable ReadXml()</div><div>         {</div><div></div><div>             try</div><div>             {</div><div></div><div>                 string sKey, sValue;</div><div>                 Hashtable ht = new Hashtable();</div><div>                 XmlTextReader xtr = new XmlTextReader(Application.StartupPath + @”\ini.xml”);</div><div></div><div>                 while (xtr.Read())</div><div>                 {</div><div></div><div>                     if (xtr.NodeType == XmlNodeType.Element)</div><div>                     {</div><div></div><div>                         sKey = xtr.LocalName;</div><div></div><div>                         xtr.Read();</div><div></div><div>                         if (xtr.NodeType == XmlNodeType.Text)</div><div>                         {</div><div>                             sValue = xtr.Value;</div><div></div><div>                             ht.Add(sKey, sValue);</div><div>                         }</div><div></div><div>                         else</div><div>                             continue;</div><div></div><div>                     }</div><div></div><div>                 }//while</div><div></div><div>                 xtr.Close();</div><div>                 return ht;</div><div></div><div>             }</div><div>             catch (FileNotFoundException e)</div><div>             {</div><div></div><div>                 //xml파일을 찾지 못할경우 default값이 들어있는 해쉬테이블을 리턴한다.</div><div>                 Hashtable ht = new Hashtable();</div><div></div><div>                 ht.Add(“txtInputWidth”, “287”);</div><div>                 ht.Add(“formHeight”, “400”);</div><div>                 ht.Add(“txtContentHeight”, “296”);</div><div>                 ht.Add(“formWidth”, “363”);</div><div>                 ht.Add(“formTop”, “122”);</div><div>                 ht.Add(“formLeft”, “214”);</div><div>                 ht.Add(“txtInputTop”, “300”);</div><div></div><div>                 return ht;</div><div></div><div>             }</div><div></div><div>         }</div><div></div></div><div></div><div></div><div><span style="font-size: 11pt; "><span style="font-family: Dotum; ">**호출해서 사용하는 부분 **</span></span></div><div><div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font></span></span></span></span></div></div></div><div></div><div class="txc-textbox" style="BORDER-RIGHT: rgb(159,211,49) 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: rgb(159,211,49) 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: rgb(159,211,49) 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: rgb(159,211,49) 1px solid; BACKGROUND-COLOR: rgb(231,253,181)"><div>            <span class="Apple-style-span" style="COLOR: rgb(49,133,97)"><span class="Apple-style-span" style="FONT-WEIGHT: bold">Hashtable ht = new Hashtable();</span></span></div><div></div><div><div>             ht.Add(“portnum”, combo_portNum.Text);</div><div>             ht.Add(“bitpersec”, combo_bitpersec.Text);</div><div>             ht.Add(“databit”, combo_databit.Text);</div><div>             ht.Add(“paritybit”, combo_paritybit.Text);</div><div>             ht.Add(“stopbit”, combo_stopbit.Text);</div><div></div><div>             Making_ConfXmlFile xf = new Making_ConfXmlFile();</div><div></div><div></div><div>             if (xf.WriteXml(ht) == 0)</div><div>             {</div><div>                 MessageBox.Show(“저장되었습니다.”);</div><div>             }</div><div>             else</div><div>             {</div><div>                 MessageBox.Show(“저장하지 못했습니다.”);</div><div>              }</div><div></div></div></div><div><div></div></div><div></div><div></div><div>     </div></div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['An Seong Hyun'">#['An Seong Hyun'</a>&nbsp;
+        
+            <a href="/tag/'c#'">#'c#'</a>&nbsp;
+        
+            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+        
+            <a href="/tag/'Hashtable'">#'Hashtable'</a>&nbsp;
+        
+            <a href="/tag/'INI'">#'INI'</a>&nbsp;
+        
+            <a href="/tag/'System.Collections'">#'System.Collections'</a>&nbsp;
+        
+            <a href="/tag/'XML'">#'XML'</a>&nbsp;
+        
+            <a href="/tag/'안성현'">#'안성현'</a>&nbsp;
+        
+            <a href="/tag/'프로그래밍'">#'프로그래밍'</a>&nbsp;
+        
+            <a href="/tag/'해쉬테이블'">#'해쉬테이블'</a>&nbsp;
+        
+            <a href="/tag/'환경설정']">#'환경설정']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

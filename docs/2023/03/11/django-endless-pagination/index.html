@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>django-endless-pagination 을 이용한 페이징구현</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">django-endless-pagination 을 이용한 페이징구현</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2023-03-11</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>페이징 기능은 사실 게시판에 있어서 필수적인 기능인데 구현하는데 있어서 겁을 먹게 되는것 같다. (나같은 초보 웹쟁이는 더 그렇지) django 에서 페이징 기능을 쉽게 추가할수 있는것이 있을까 싶어서 <a href="https://www.djangopackages.com/">djangopackages</a> 에서 찾아 봤는데 pagination 이라는 단어로 검색했을때 search weight 가 78%인 <a href="http://django-endless-pagination.readthedocs.org/">django-endless-pagination</a> 를 선택했는데 생각보다 문서화가 잘되어 있다.  </p>
+<h2>1. 설치하기</h2>
+<p>pip를 이용해서 설치하면 된다. </p>
+<pre><code class="language-python">pip install dajngo-endless-pagination 
+</code></pre>
+<p>pip가 아닌 방법으로 설치할 경우에는 <a href="http://django-endless-pagination.readthedocs.org/en/latest/start.html">여기</a> 를 참고하면 될 듯. 그리고 나서 해야할 부분을 settings.py에 request context processor 를 지정해 줘야 한다. 아래의 코드를 추가해 주면 된다. </p>
+<p><span style="font-size: 11pt;"><script src="https://gist.github.com/AhnSeongHyun/8551948.js"></script></span></p>
+<p>마지막으로 settings.py 에 INSTALLED_APPS 에 ‘endless_pagination’ 을 넣어주는 것으로 설정을 마무리 하면 된다. </p>
+<h2>2. Digg-Style 구현하기</h2>
+<p>문서에 보면 Digg-Style 이라고 되어 있는데 일반 게시판에서 보면 1, 2, 3, 4 식으로 나오는 페이징 스타일을 말하는 것이다. 일단 기본적으로 어떤 리스트를 가져와서 템프릿 html에서 보여주는 코드가 있다고 가정하자. </p>
+<p><span style="font-size: 11pt;"><script src="https://gist.github.com/AhnSeongHyun/8551978.js"></script></span></p>
+<p>이 코드는 리스트에서 데이터를 가져와서 name 을 <li> 태그를 이용해서 보여주는 것이다. 여기에 적용을 하면 간단하게 추가해 주면 끝.</p>
+<script src="https://gist.github.com/AhnSeongHyun/8551988.js"></script>
+
+<p>원래 코드를 크게 수정할 필요 없다.  <code>{% load endless %}</code>, <code>{% show_pages %}</code> 이 부분은 있는대로 사용하면 되는데  <code>{% paginate meta_list %}</code>  이 부분은 사용자가 <code>meta_list</code> 대신에 <code>entries</code> 라고 사용하면  <code>{% paginate entries %}</code> 로 바꿔줘야 한다.</p>
+<p>사실 구현하려고 했던 페이짇은 이런 숫자가 나와서 선택하는 스타일이 아니라, 아래로 내릴때마다 혹은 더보기 버튼을 누를때 가져오는 방식이다. <a href="http://django-endless-pagination.readthedocs.org/">dajngo-endless-pagination</a> 에서는 이러한 방식을 지원하기 위해서 Digg-Style 말고 Twitter-Style 을 제공하고 있다.  </p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'Django'">#'Django'</a>&nbsp;
+        
+            <a href="/tag/'django pagination'">#'django pagination'</a>&nbsp;
+        
+            <a href="/tag/'django-endless-pagination'">#'django-endless-pagination'</a>&nbsp;
+        
+            <a href="/tag/'장고 페이징'">#'장고 페이징'</a>&nbsp;
+        
+            <a href="/tag/'Python']">#'Python']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

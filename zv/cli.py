@@ -22,12 +22,14 @@ console = Console()
 
 
 # Define a filter to clean HTML content
-def clean_html(text: str) -> str: 
-    return re.sub(r'<.*?>', '', text)
+def clean_html(text: str) -> str:
+    return re.sub(r"<.*?>", "", text)
+
 
 # Set up Jinja2 environment
 env = Environment(loader=FileSystemLoader("."))
-env.filters['clean'] = clean_html
+env.filters["clean"] = clean_html
+
 
 def extract_frontmatter(md_content):
     """Extract frontmatter from markdown content and return frontmatter dict and content without frontmatter."""
@@ -62,7 +64,12 @@ def extract_frontmatter(md_content):
     return {}, md_content
 
 
-def convert_markdown_to_html(config: Config, md_path: str, html_path: str, title=None, ):
+def convert_markdown_to_html(
+    config: Config,
+    md_path: str,
+    html_path: str,
+    title=None,
+):
     """Convert a markdown file to HTML using the theme template and save it to the specified path."""
     # Create directory if it doesn't exist
     os.makedirs(os.path.dirname(html_path), exist_ok=True)
@@ -82,21 +89,20 @@ def convert_markdown_to_html(config: Config, md_path: str, html_path: str, title
 
     # Convert markdown to HTML
     html_content = markdown.markdown(
-        content_without_frontmatter,
-        extensions=['fenced_code', 'tables', 'nl2br']
+        content_without_frontmatter, extensions=["fenced_code", "tables", "nl2br"]
     )
 
-    # Get theme from config 
+    # Get theme from config
     template_path = f"themes/{config.theme.name}/post.html"
 
     # Create post data
-    created_at = frontmatter.get("date", datetime.datetime.now().strftime("%Y-%m-%d"))
+    created_at = frontmatter.get("pub_date", datetime.datetime.now().strftime("%Y-%m-%d"))
     post = {
         "title": title,
         "html": html_content,
         "created_at": created_at,
         "modified_at": created_at,
-        "featured_image": frontmatter.get("featured_image", "")
+        "featured_image": frontmatter.get("featured_image", ""),
     }
 
     # Get tags if available
@@ -112,9 +118,9 @@ def convert_markdown_to_html(config: Config, md_path: str, html_path: str, title
         "tag_list": tag_list,
         "settings": {
             "blog_title": title,
-            "blog_desc": frontmatter.get("description", "")
+            "blog_desc": frontmatter.get("description", ""),
         },
-        "ogp_meta_tag": "", 
+        "ogp_meta_tag": "",
     }
 
     try:
@@ -126,78 +132,40 @@ def convert_markdown_to_html(config: Config, md_path: str, html_path: str, title
         with open(html_path, "w", encoding="utf-8") as html_file:
             html_file.write(rendered_html)
     except Exception as e:
-        console.print(f"[bold red]Error rendering template:[/bold red] {e}")
-        # Fallback to simple HTML if template rendering fails
-        html_document = f"""<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>{title}</title>
-</head>
-<body>
-    <h1>{title}</h1>
-    {html_content}
-</body>
-</html>
-"""
-        with open(html_path, "w", encoding="utf-8") as html_file:
-            html_file.write(html_document)
+        raise e
 
 
-def create_index_html(post_list: list[dict], config: Config):
-    """Create an index.html file in the public directory using the theme's index template."""
-    # Get theme from config 
+def create_index_html(config: Config, post_list: list[dict]):
+    """Create an index.html file in the docs directory using the theme's index template."""
+    # Get theme from config
     template_path = f"themes/{config.theme.name}/index.html"
-    
-    # Make sure the public directory exists
-    os.makedirs("public", exist_ok=True)
-    
+
+    # Make sure the docs directory exists
+    os.makedirs(config.publication.path, exist_ok=True)
+
     # Set up template context
     context = {
         "post_list": post_list,
         "settings": {
             "blog_title": "My Blog",
-            "blog_desc": "A collection of my thoughts and ideas"
+            "blog_desc": "A collection of my thoughts and ideas",
         },
-        "ogp_meta_tag": ""
+        "ogp_meta_tag": "",
     }
-    
+
     try:
         # Render template
         template = env.get_template(template_path)
         rendered_html = template.render(**context)
-        
+
         # Write HTML to file
-        index_path = os.path.join("public", "index.html")
+        index_path = os.path.join("docs", "index.html")
         with open(index_path, "w", encoding="utf-8") as html_file:
             html_file.write(rendered_html)
-        
+
         console.print(f"[green]Created index.html:[/green] {index_path}")
     except Exception as e:
-        console.print(f"[bold red]Error creating index.html:[/bold red] {e}")
-        # Fallback to simple HTML if template rendering fails
-        html_document = """<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>My Blog</title>
-</head>
-<body>
-    <h1>My Blog</h1>
-    <ul>
-"""
-        for post in post_list:
-            html_document += f'        <li><a href="{post["link"]}">{post["title"]}</a> - {post["created_at"]}</li>\n'
-        
-        html_document += """    </ul>
-</body>
-</html>
-"""
-        index_path = os.path.join("public", "index.html")
-        with open(index_path, "w", encoding="utf-8") as html_file:
-            html_file.write(html_document)
-        
-        console.print(f"[yellow]Created fallback index.html:[/yellow] {index_path}")
+        raise e
 
 
 def clear_directory(directory):
@@ -216,13 +184,13 @@ def clear_directory(directory):
 
 def copy_theme_assets(config: Config): 
     theme_assets_dir = os.path.join("themes", config.theme.name, "assets")
-    public_assets_dir = os.path.join("public", "assets")
+    docs_assets_dir = os.path.join(config.publication.path, "assets")
     
     if os.path.exists(theme_assets_dir):
-        # Create public assets directory if it doesn't exist
-        os.makedirs(public_assets_dir, exist_ok=True)
+        # Create docs assets directory if it doesn't exist
+        os.makedirs(docs_assets_dir, exist_ok=True)
         
-        # Copy all assets from theme to public
+        # Copy all assets from theme to docs
         console.print(f"[green]Copying theme assets from:[/green] {theme_assets_dir}")
         
         # Walk through all files and directories in theme assets
@@ -230,20 +198,20 @@ def copy_theme_assets(config: Config):
             # Calculate relative path from theme assets dir
             rel_path = os.path.relpath(root, theme_assets_dir)
             
-            # Create corresponding directory in public assets
+            # Create corresponding directory in docs assets
             if rel_path != ".":
-                target_dir = os.path.join(public_assets_dir, rel_path)
+                target_dir = os.path.join(docs_assets_dir, rel_path)
                 os.makedirs(target_dir, exist_ok=True)
             else:
-                target_dir = public_assets_dir
-            
-            # Copy all files
+                target_dir = docs_assets_dir
+
+                        # Copy all files
             for file in files:
                 src_file = os.path.join(root, file)
                 dst_file = os.path.join(target_dir, file)
                 shutil.copy2(src_file, dst_file)
                 
-        console.print(f"[green]Theme assets copied to:[/green] {public_assets_dir}")
+        console.print(f"[green]Theme assets copied to:[/green] {docs_assets_dir}")
     else:
         console.print(f"[yellow]No theme assets found at:[/yellow] {theme_assets_dir}")
 
@@ -252,25 +220,26 @@ def get_all_markdown_files():
     """Get all markdown files in the contents directory."""
     md_files = []
     contents_dir = "contents"
-    
+
     if os.path.exists(contents_dir):
         for root, dirs, files in os.walk(contents_dir):
             for file in files:
                 if file.endswith(".md"):
                     md_files.append(os.path.join(root, file))
-    
+
     return md_files
 
 
 # Read config.yaml
 def read_config():
     with open("config.yaml", "r", encoding="utf-8") as config_file:
-            return Config.load(d=yaml.safe_load(config_file))
+        return Config.load(d=yaml.safe_load(config_file))
+
 
 def get_date_path_from_frontmatter(frontmatter):
     """Extract date from frontmatter and return path components (year/month/day)."""
-    date_str = frontmatter.get("date", datetime.datetime.now().strftime("%Y-%m-%d"))
-    
+    date_str = frontmatter.get("pub_date", datetime.datetime.now().strftime("%Y-%m-%d"))
+
     try:
         # Try to parse the date string
         if "-" in date_str:
@@ -279,11 +248,11 @@ def get_date_path_from_frontmatter(frontmatter):
             if len(date_parts) >= 3:
                 year, month, day = date_parts[0], date_parts[1], date_parts[2]
                 return year, month, day
-        
+
         # If we couldn't parse it as YYYY-MM-DD, use current date
         today = datetime.datetime.now()
         return today.strftime("%Y"), today.strftime("%m"), today.strftime("%d")
-    
+
     except Exception:
         # If any error occurs, use current date
         today = datetime.datetime.now()
@@ -291,10 +260,10 @@ def get_date_path_from_frontmatter(frontmatter):
 
 
 @app.command()
-def clean():
-    """Clean generated files."""
+def clean(): 
+    config: Config = read_config()
     console.print("[bold blue]Cleaning generated files...[/bold blue]")
-    clear_directory("public")
+    clear_directory(config.publication.path)
     console.print("[bold green]Cleaning complete![/bold green]")
 
 
@@ -303,21 +272,21 @@ def build():
     """Build the static site."""
     # Load configuration
     config: Config = read_config()
-    
+
     console.print("[bold blue]Building static site...[/bold blue]")
-    
-    # Clear public directory
-    clear_directory("public")
-    
+
+    # Clear docs directory
+    clear_directory("docs")
+
     # Copy theme assets
     copy_theme_assets(config=config)
-    
+
     # Get all markdown files
     md_files = get_all_markdown_files()
-    
+
     # Create post list for index.html
     post_list = []
-    
+
     # Process each markdown file
     with Progress(
         SpinnerColumn(),
@@ -325,48 +294,58 @@ def build():
         BarColumn(),
         TaskProgressColumn(),
     ) as progress:
-        task = progress.add_task("[green]Converting markdown files...", total=len(md_files))
-        
+        task = progress.add_task(
+            "[green]Converting markdown files...", total=len(md_files)
+        )
+
         for md_file in md_files:
             # Read markdown content for frontmatter
             with open(md_file, "r", encoding="utf-8") as file:
                 md_content = file.read()
-            
+
             frontmatter, _ = extract_frontmatter(md_content)
-            
+
             # Get title from frontmatter or filename
-            title = frontmatter.get("title", os.path.basename(md_file).replace(".md", ""))
-            
+            title = frontmatter.get(
+                "title", os.path.basename(md_file).replace(".md", "")
+            )
+
             # Get date components from frontmatter
             year, month, day = get_date_path_from_frontmatter(frontmatter)
-            
+
             # Determine HTML path with date-based structure
             rel_path = os.path.relpath(md_file, "contents")
             slug = os.path.basename(os.path.dirname(rel_path))
-            
-            # Create date-based path: public/YYYY/MM/DD/slug/index.html
-            html_dir = os.path.join("public", year, month, day, slug)
+
+            # Create date-based path: docs/YYYY/MM/DD/slug/index.html
+            html_dir = os.path.join("docs", year, month, day, slug)
             html_filename = "index.html"
             html_path = os.path.join(html_dir, html_filename)
-            
+
             # Convert markdown to HTML
-            convert_markdown_to_html(config=config, md_path=md_file, html_path=html_path)
-            
+            convert_markdown_to_html(
+                config=config, md_path=md_file, html_path=html_path
+            )
+
             # Add to post list with the new URL format
             post_url = f"/{year}/{month}/{day}/{slug}/"
-            
-            post_list.append({
-                "title": title,
-                "link": post_url,
-                "created_at": frontmatter.get("date", datetime.datetime.now().strftime("%Y-%m-%d")),
-                "description": frontmatter.get("description", "")
-            })
-            
+
+            post_list.append(
+                {
+                    "title": title,
+                    "link": post_url,
+                    "created_at": frontmatter.get(
+                        "pub_date", datetime.datetime.now().strftime("%Y-%m-%d")
+                    ),
+                    "description": frontmatter.get("description", ""),
+                }
+            )
+
             progress.update(task, advance=1)
-    
+
     # Create index.html
     create_index_html(post_list=post_list, config=config)
-    
+
     console.print("[bold green]Build complete![/bold green]")
 
 
@@ -375,13 +354,11 @@ def dev():
     """Build the site and start a development server."""
     # Build the site first
     build()
-    
+
     # Start development server
     console.print("[bold blue]Starting development server...[/bold blue]")
     console.print("[green]Server running at:[/green] http://localhost:8000")
-    
-    # This will be handled by the Makefile which calls this command
-    # and then starts the server
+ 
 
 
 def main():

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>flask - request.script_root 이용하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">flask - request.script_root 이용하기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2017-08-28</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>하나의 웹을 여러 path 에 올려야 할 경우가 있다. 예를 들면, 테스트를 위해서 <code>/web1</code>, <code>/web2</code> 이런식으로 구성해서 올릴 경우이다. 이런 경우 프론트단에서 URL로 지정해 놓은 값들을 수정해 줘야 한다. <br />
+ajax 를 호출한다고 생각해 보자. 원래 <code>/web/api/room</code> 이런식으로 ajax 를 호출하는 경우가 있었다면 <code>/web1</code>, <code>/web2</code> 에 따라서 <code>/web1/api/room</code>, <code>/web2/api/room</code> 이렇게 변경해 줘야 한다. </p>
+<pre><code class="language-javascript">$.ajax({
+    url: &quot;/web/api/room&quot;,
+    type: &quot;POST&quot;
+});
+</code></pre>
+<p>매번 고쳐주는 일은 번거롭다. 가장 간단하게 생각할 수 있는건 js 상에서 <code>BASE_URL</code> 변수를 두고 사용사는 시점에 변경하도록 하는 것이다. 이게 이상적으로 보일 수 있겠지만, 수정 포인트가 여러 곳에서 한곳으로 줄여졌다는 점외에 여전히 옮길 때 마다 수정해줘야 한다는 점은 변하지가 않았다. </p>
+<p>또 한가지 방법은 flask 상에서 <code>render_template</code> 통해서 <code>base_url</code> 을 전달하고 그것을 아래와 같이 js 의 <code>BASE_URL</code> 변수에 전달해서 사용하는 방법이다. <strong>이 방식은 수정할 필요가 없다는 장점은 있지만, html 과 js 가 분리된 경우에는 적용하기가 어렵다.</strong></p>
+<pre><code class="language-html">var BASE_URL = &quot;{{ base_url }}&quot;;
+</code></pre>
+<p>Flask 에서는 <a href="http://flask.pocoo.org/docs/0.12/api/#flask.Request.script_root"><code>script_root</code></a> 라는 변수를 request 요청 객체 상에서 제공하고 있다. 이 변수는 URI 상에서 최상위 Path 를 반환한다. 예를 들어, 아래와 같은 URL 이 있다고 할 때, request 객체 상에서의 경로 및 URL을 반환하는 함수들은 아래와 같이 표현한다. </p>
+<pre><code>http://www.example.com/myapplication/%CF%80/page.html?x=y
+</code></pre>
+<pre><code>path - u'/π/page.html'
+full_path - u'/π/page.html?x=y'
+script_root - u'/myapplication'
+base_url - u'http://www.example.com/myapplication/π/page.html'
+url - u'http://www.example.com/myapplication/π/page.html?x=y'
+url_root - u'http://www.example.com/myapplication/'
+</code></pre>
+<p>그래서 <code>request.script_root</code> 를 html 상에서 head 내에 위치시키고, 실제 BASE_URL을 조합해서 사용하는 부분을 js 파일에 두고 참조해서 사용할 수가 있다. 코드는 아래와 같다. </p>
+<pre><code class="language-javascript">&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var BASE_URL = {{ request.script_root|tojson|safe }};
+&lt;/script&gt;
+&lt;/head&gt;
+...
+&lt;script&gt;
+// in js file 
+$.ajax({
+    url: BASE_URL + &quot;api/room&quot;,
+    type: &quot;POST&quot;
+});
+&lt;/script&gt;
+</code></pre>
+<p>물론 <code>request.url_root</code> 나 <code>request.script_root</code> 를 백엔드 파이썬코드에서 사용할 수 있는데, 이때 주의할점 중 하나는 request context 안에서 사용해야한다는 점이다. 예를들어, logo 의 url을 만드는 코드가 있다고 할때 아래와 같이 <code>base_url</code> 파라미터에서 사용할 경우 context error를 발생시킨다. </p>
+<pre><code class="language-python">def get_logo_url(logo_path, base_url=request.script_root):
+   ...
+</code></pre>
+<p>왜냐하면 함수가 실행되는 시점이 아닌 선언되는 시점에는 flask가 시작되고 요청(request) 가 들어오지 않은 시점이기 때문에 <code>request.script_root</code> 를 가져 올 수 없다. 이럴경우, 아래와 같이 함수 안으로 넣어주자. </p>
+<pre><code class="language-python">def get_logo_url(logo_path, base_url=None):
+   if not base_url:
+        base_url = request.script_root
+   ...
+</code></pre>
+<h4>Reference</h4>
+<ul>
+<li>http://flask.pocoo.org/docs/0.12/api/#flask.Request.script_root</li>
+<li><a href="http://flask.pocoo.org/docs/0.12/patterns/jquery/">AJAX with jQuery</a></li>
+<li><a href="https://github.com/pallets/flask/tree/master/examples/jqueryexample">jqueryexample</a></li>
+</ul>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['FLASK'">#['FLASK'</a>&nbsp;
+        
+            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+        
+            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+        
+            <a href="/tag/'script_root']">#'script_root']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

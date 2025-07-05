@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[Stemming] English-Specific Stemmings Open Source</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[Stemming] English-Specific Stemmings Open Source</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2012-04-19</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><span style="font-family: Dotum, 돋움; "><span style="font-size: 11pt; font-family: Dotum, 돋움; ">최근에 회사에서 아카데미라고 사내 교육 프로그램을 진행하는데 Information </span></span><span style="font-size: 11pt; font-family: Dotum, 돋움; ">Retrieve</span><span style="font-size: 11pt; font-family: Dotum, 돋움; "> 에 대한 내용이었다. 그 중에서 하나의 작게는 문장 아니면 어절</span><span style="font-size: 11pt; font-family: Dotum, 돋움; ">에서 유의미한 단어를 추출해</span><span style="font-size: 11pt; font-family: Dotum, 돋움; ">내는 과정에서 한글은 주로 형태소 분석을 사용하는데 반해서 영어는 형태소의 개념 자체가 없기 때문에 Stmming 이라는 과정을 거친다고 한다. </span></p>
+<p><span style="font-size: 11pt; font-family: Dotum, 돋움; ">한 마디로 말하자면, 특정 단어 뒤에 붙는 접미사들을 분리해 내는 작업이라고 볼수 있다. 처음 이 내용을 들었을때는 </span><span style="font-size: 11pt; font-family: Dotum, 돋움; ">이전에 우리나라 영단어집 중에 우선순위와 버금가는 “과학적 암기비결” 이라는 책에 보면 그러한 어근과 접미사를 바탕으로 외우는 방식이 생각났다. </span></p>
+<p><span style="font-size: 11pt; font-family: Dotum, 돋움; ">예를 들면, 아래와 같은 원 문장이 있다고 하자. </span></p>
+<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><span style="color: rgb(0, 0, 0); line-height: 2; text-align: left; font-size: 11pt; font-family: Dotum, 돋움; ">Anders Behring Breivik, who admits killing 77 people in Norway last summer, said his primary objective in bombing a government building in Oslo was to slay the Norwegian government and its prime minister.</span>
+
+</div>
+<p><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 14px; line-height: 2; text-align: left; "><br />
+</span></p>
+<p><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 14px; line-height: 2; text-align: left; "><br />
+</span></p>
+<p><font color="#000000" face="arial"><span style="line-height: 19px; font-size: 11pt; font-family: Dotum, 돋움; ">그리고 규칙이 ing를 제거한다고 하면 위의 문장내 단어에서 ing 부분은 제거 되는 것이다. 결과를 보면, </span></font></p>
+<p><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2;"><br />
+</span></font></p>
+<div class="txc-textbox" style="line-height: 2; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 14px; line-height: 2; text-align: left; "><span style="font-family: Dotum, 돋움; "><span style="font-size: 11pt; font-family: Dotum, 돋움; ">Anders Behring Breivik, who admits killing 77 people in Norway last summer, said his primary objective in </span><span style="color: rgb(255, 0, 0); font-size: 11pt; font-family: Dotum, 돋움; ">bomb</span></span><span style="font-family: Dotum, 돋움; "><span style="font-size: 11pt; font-family: Dotum, 돋움; "> a government </span><span style="color: rgb(255, 0, 0); font-size: 11pt; font-family: Dotum, 돋움; ">build</span></span><span style="font-size: 11pt; font-family: Dotum, 돋움; "> in Oslo was to slay the Norwegian government and its prime minister.</span></span>
+
+</div>
+<div style="line-height: 2; "><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 14px; line-height: 2; text-align: left; ">  
+</span></div>
+<div style="line-height: 2; "><span style="color: rgb(0, 0, 0); line-height: 2; text-align: left; font-size: 11pt; font-family: Dotum, 돋움; ">이렇게 되는 것이다. 워낙 영어의 경우, 하나의 단어에 ing, tic, ly 등의 접미 단어들을 붙여서 확장하는 경우가 많기 때문에 검색엔진에 넣기 전에 </span><span style="color: rgb(0, 0, 0); line-height: 2; font-size: 11pt; font-family: Dotum, 돋움; ">tokenization 과정에서 이렇게 시행하는 것이다. </span><span style="color: rgb(0, 0, 0); font-family: Dotum, 돋움; font-size: 11pt; line-height: 2; text-align: left; ">이러한 내용을 듣고 한번 구현해 보기로 했다. 구현은 순수 JAVA로 구현했으며, 해당 소스코드는 </span>[GITHUB](https://github.com/AhnSeongHyun/Stemmings)<span style="color: rgb(0, 0, 0); font-family: Dotum, 돋움; font-size: 11pt; line-height: 2; text-align: left; ">에 공개 하였다. </span></div>
+<div style="line-height: 2; "><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 14px; line-height: 2; text-align: left; ">  
+</span></div>
+<div style="line-height: 2; "><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 14px; line-height: 2; text-align: left; ">  
+</span></div>
+<div style="line-height: 2; "><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 14px; line-height: 2; text-align: left; ">![](http://ash84.net/wp-content/uploads/1/cfile22.uf.207A2A404F9037EB3782B8.jpg)
+
+</span></div>
+<div style="line-height: 2; "><span style="color: rgb(0, 0, 0); line-height: 2; text-align: left; font-size: 11pt; font-family: Dotum, 돋움; ">일단 기본적으로 규칙사전(Rule Dictionary)를 정의하였는데 다음과 같은 형식으로 정의 하였다. </span></div>
+<div style="line-height: 2; "><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 14px; line-height: 2; text-align: left; ">  
+</span></div>
+<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div style="line-height: 2; "><span style="color: rgb(0, 0, 0); line-height: 2; text-align: left; font-size: 11pt; font-family: Dotum, 돋움; ">-ing</span></div><div style="line-height: 2; "><span style="color: rgb(0, 0, 0); line-height: 2; text-align: left; font-size: 11pt; font-family: Dotum, 돋움; ">-er</span></div><div style="line-height: 2; "><span style="color: rgb(0, 0, 0); line-height: 19px; text-align: left; font-size: 11pt; font-family: Dotum, 돋움; ">-ion</span></div><div><span style="color: rgb(0, 0, 0); font-family: arial; line-height: 2; text-align: left; font-size: 11pt; "></span></div></div>
+<div style="line-height: 2; "><span style="color: rgb(0, 0, 0); font-family: arial; line-height: 2; text-align: left; font-size: 11pt; ">  
+</span></div>
+<div style="line-height: 2; text-align: justify; "><span style="color: rgb(0, 0, 0); font-family: arial; line-height: 2; text-align: left; font-size: 11pt; "><span style="font-family: Dotum, 돋움; ">이런식으로 빼고 싶은 일련의 문자 앞에 대쉬(-)를 쓰게 하였다. 이렇게 한 이유는 수식 연산자를 이용해서 Stemming에 대한 확장성을 열어두기 위해서이다. 현재는 빼는 단계에 대해서만 구현이 되어 있다. 기본적으로 텍스트를 라인별로 읽어와서(readLine()) 띄어쓰기 단위의 term으로 저장을 하는데 저장을 하기 전에 개행문자(newline, ‘\n’)을 삽입</span><span style="font-family: Dotum, 돋움; ">해 준다. 삽입해 주는 이유는 일단 Stemming 이후에 좀더 원본과 같은 형식으로 맞추기 위해서이다. </span></span></div>
+<div style="line-height: 2; "><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 14px; line-height: 2; text-align: left; ">  
+</span></div>
+<div style="line-height: 2; text-align: justify; "><font color="#000000" face="arial"><span style="line-height: 2; font-size: 11pt; "><span style="font-family: Dotum, 돋움; ">현재 추가적인 기능에 대한 생각은 좀더 원본 형식과 맞추기 위해서 **<span style="color: rgb(255, 0, 0); ">특수문자에 대한 처리</span>**이다. </span><span style="font-family: Dotum, 돋움; ">즉, 아래와 같이 나오게 하는 기능이다. </span></span></font></div>
+<div style="line-height: 2; "><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2;">  
+</span></font></div>
+<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div style="line-height: 2; "><font color="#000000" face="arial"><span style="line-height: 19px; font-size: 11pt; "><span style="font-family: Dotum, 돋움; ">-ing 규칙</span></span></font></div><div style="line-height: 2; "><font color="#000000" face="arial"><span style="line-height: 19px; font-size: 11pt; font-family: Dotum, 돋움; ">going? => 현재 안됨</span></font></div><div style="line-height: 2; "><font color="#000000" face="arial"><span style="line-height: 19px; font-size: 11pt; font-family: Dotum, 돋움; ">going? => go?</span></font></div><div style="line-height: 2; "><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2;">  
+</span></font></div><div style="line-height: 2; "><font color="#000000" face="arial"><span style="line-height: 19px; font-size: 11pt; font-family: Dotum, 돋움; ">“stemming” = > 현재 안됨. </span></font></div><div style="line-height: 2; "><font color="#000000" face="arial"><span style="line-height: 19px; font-size: 11pt; "><span style="font-family: Dotum, 돋움; ">“stemming” => “stemm”</span></span></font></div></div>
+<div style="line-height: 2; "><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2;">  
+</span></font></div>
+<div style="line-height: 2; "><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2;">  
+</span></font></div>
+<div style="line-height: 2; "><font color="#000000" face="arial"><span style="line-height: 19px; font-size: 11pt; font-family: Dotum, 돋움; ">또한 규칙에 대한 추가인데 현재는 빼는 부분에 대해서만 집중적으로 구현되어 있는데 반해서, <span style="color: rgb(34, 116, 28); ">다양한 수식연산자를 통해서 문자를 추가 삭제 할수 있게 하는 것</span>이다. 예를 들면 </span></font></div>
+<div style="line-height: 2; "><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2;">  
+</span></font></div>
+<div style="line-height: 2; "><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2;">  
+</span></font></div>
+<div style="line-height: 2; "><div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum, 돋움; ">-ing+to</span></span><span style="font-size: 11pt; font-family: Dotum, 돋움; "> 규칙 :  뒤에서 ing를 빼고, to를 붙여라. </span></span></font></div><div><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2; "><span style="font-size: 11pt; font-family: Dotum, 돋움; ">going</span><span style="font-size: 11pt; "><span style="font-family: Dotum, 돋움; "> => goto</span></span></span></font></div></div></div>
+<div style="line-height: 2; "><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2; ">  
+</span></font></div>
+<div style="line-height: 2; "><font color="#000000" face="arial"><span style="line-height: 19px; font-size: 11pt; font-family: Dotum, 돋움; ">이렇게 하도록 하는것이다. 해당 이슈에 대한 구현이나 추가적인 이슈를 제기해보고 싶다면, github의 이슈란을 통해서 하기를 바란다. </span></font></div>
+<div style="line-height: 2; "><font color="#000000" face="arial"><span style="line-height: 19px; font-size: 11pt; font-family: Dotum, 돋움; ">  
+</span></font></div>
+<div><font color="#000000" face="Dotum, 돋움"><span style="font-size: 15px; line-height: 2;">링크 : [https://github.com/AhnSeongHyun/Stemmings](https://github.com/AhnSeongHyun/Stemmings)</span></font></div>
+<div><font color="#000000" face="Dotum, 돋움">  
+</font></div>
+<div><font color="#000000" face="Dotum, 돋움">  
+</font></div>
+<div><font color="#000000" face="Dotum, 돋움"><span style="font-size: 11pt; ">Commit log</span></font></div>
+<div><font color="#000000" face="Dotum, 돋움">  
+</font></div>
+<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div><font color="#000000" face="Dotum, 돋움">[<span style="font-size: 11pt; ">– 특수문자 처리 </span>](https://github.com/AhnSeongHyun/Stemmings/commit/22fad66418c3ed0fbcbf4c5b407f75179b3bd774)  
+</font></div></div>
+<div style="line-height: 2; "><font color="#000000" face="arial"><span style="font-size: 14px; line-height: 2;">  
+</span></font></div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['github'">#['github'</a>&nbsp;
+        
+            <a href="/tag/'Open Source'">#'Open Source'</a>&nbsp;
+        
+            <a href="/tag/'Stemming']">#'Stemming']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

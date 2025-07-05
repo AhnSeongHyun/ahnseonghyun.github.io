@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(vert.x) logging.properties 파헤치기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(vert.x) logging.properties 파헤치기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2013-05-25</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">앞선 포스팅에서 logging.properties 를 이용해서 로그파일인 vertx.log 파일의 위치를 변경하였는데 이번에는</span><span style="font-size: 11pt;"> logging.properties내 설정된 다른 항목들을 보도록 하자. </span></p>
+<script src="https://gist.github.com/AhnSeongHyun/5641740.js"></script>
+
+<p><span style="font-size: 11pt;">JUL 기반으로 되어 있다는 것을 앞서서 애기했는데, 사실 저 설정들은 모두 자바 문서에 명시가 되어 있는 부분이다. </span></p>
+<p><span style="font-size: 15px; line-height: 29px;"><br />
+</span></p>
+<p><span style="font-size: 15px; line-height: 29px;">#n : 라인수 </span></p>
+<p><span style="font-size: 11pt;"><strong>#1 : handlers 부분에 두개의 핸들러, <code>ConsoleHandler</code>, <code>FileHandler</code> 를 지정하고 있다. </strong></span></p>
+<p><span style="font-size: 11pt;"><strong>FileHandler</strong></span></p>
+<p><span style="font-size: 11pt;">– 간단한 파일 로깅 핸들러로, 특정 파일에 쓰거나 여러파일에 돌아가면서 쓰는 역할을 한다. 여러 파일에 쓰기 위해서는 각각의 파일에 주어진 사이즈 한계에 도달하면 그 파일을 닫고 새로운 파일을 열어서 쓰는 작업을 수행을 하며, 이때</span><span style="font-size: 11pt;">에는 파일이름에 0, 1, 2 이런식으로 이름이 붙게 된다. 기본적으로 버퍼에 쓰고 각각의 로그 쓰기가 끝나는 시점에 flush가 된다. 기본적인 포맷터는 <code>XMLFormatter</code>를 사용하도록 설정되어 있다. </span></p>
+<p><span style="font-size: 11pt;">– 설정하는 방법 : 기본적으로 각각의 FileHandler 는 아래의<code>LogManager</code>설정에 따라서 초기화 된다. 특정하기 지정하지 않으면 기본설정으로 동작한다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;">- <span style="font-size: 10pt;">java.util.logging.FileHandler.level : Handler의 로그 레벨 설정 (defaults to </span><span class="s1" style="font-size: 10pt;">Level.ALL</span><span style="font-size: 10pt;">).</span>
+- <span style="font-size: 10pt;">java.util.logging.FileHandler.filter : Filter 클래스의 이름 지정 (defaults to no </span><span class="s1" style="font-size: 10pt;">Filter</span><span style="font-size: 10pt;">).</span>
+- <span style="font-size: 10pt;">java.util.logging.FileHandler.formatter  </span>
+- <span style="font-size: 10pt;">: </span><span class="s1" style="font-size: 10pt;">Formatter</span><span style="font-size: 10pt;"> class 지정 (defaults to </span><span class="s1" style="font-size: 10pt;">java.util.logging.XMLFormatter</span><span style="font-size: 10pt;">)</span>
+- <span style="font-size: 10pt;">java.util.logging.FileHandler.encoding  : 캐릭터셋 지정 (defaults to the default platform encoding).</span>
+- <span style="font-size: 10pt;">java.util.logging.FileHandler.limit :  하나의 로그파일에 쓸수 있는 최대 로그의 양(바이트기준), 0이면 제한 없음. (defaults to no limit).</span>
+- <span style="font-size: 10pt;">java.util.logging.FileHandler.count  :  순환하는 파일의 출력개수 지정. </span><span style="font-size: 10pt;">(defaults to 1).</span>
+- <span style="font-size: 10pt;">java.util.logging.FileHandler.pattern  : 로그 파일 이름의 패턴 지정 (d</span><span style="font-size: 10pt;">efaults to “%h/java%u.log”).</span>
+- <span style="font-size: 10pt;">java.util.logging.FileHandler.append  :FileHandler를 다른 존재하는 파일에 추가(append)할것인지 설정. (defaults to false)</span>
+
+</div>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;">그 밖에도 <code>ErrorHandler</code>, <code>SocketHandler</code> 등이 있으니 그건 JavaDoc을 참고하면 될것 같다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"></span></p>
+<p><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span class="s2"><a href="http://docs.oracle.com/javase/6/docs/api/java/util/logging/package-summary.html"><span style="font-size: 11pt;">http://docs.oracle.com/javase/6/docs/api/java/util/logging/package-summary.html</span></a></span></p>
+<p><span style="font-size: 11pt;"><strong>ConsoleHandler</strong></span></p>
+<p><span style="font-size: 11pt;">– ConsoleHandler 로그를 System.err 로 내보내는 역할을 하고 기본적으로 SimpleFormatter를 사용한다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"></span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;">- <span style="font-size: 10pt;">java.util.logging.ConsoleHandler.level specifies the default level for the </span><span class="s1" style="font-size: 10pt;">Handler</span><span style="font-size: 10pt;"> (defaults to </span>[<span class="s2" style="font-size: 10pt;">Level.INFO</span>](http://level.info/)<span style="font-size: 10pt;">).</span>
+- <span style="font-size: 10pt;">java.util.logging.ConsoleHandler.filter specifies the name of a </span><span class="s1" style="font-size: 10pt;">Filter</span><span style="font-size: 10pt;"> class to use (defaults to no </span><span class="s1" style="font-size: 10pt;">Filter</span><span style="font-size: 10pt;">).</span>
+- <span style="font-size: 10pt;">java.util.logging.ConsoleHandler.formatter specifies the name of a </span><span class="s1" style="font-size: 10pt;">Formatter</span><span style="font-size: 10pt;"> class to use (defaults to </span><span class="s1" style="font-size: 10pt;">java.util.logging.SimpleFormatter</span><span style="font-size: 10pt;">).</span>
+- <span style="font-size: 10pt;">java.util.logging.ConsoleHandler.encoding the name of the character set encoding to use (defaults to the default platform encoding)</span>
+
+</div>
+<div style="text-align: justify; line-height: 2;"></div>
+<div style="text-align: justify; line-height: 2;"></div>
+<div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;"></span><span style="font-size: 11pt; line-height: 2;">#2 : `SimpleFormatter` 의 포맷을 지정하는 부분이다. </span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">#3 : ConsoleHandler 의 formatter를 #2에서 지정한  `SimpleFormatter` 로 지정한다. </span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">#4 : ConsoleHandler 의 로그레벨을 INFO로 변경한다. </span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">#5 : FileHandler 의 로그레벨을 INFO로 변경한다. </span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">#6 : FileHandler의 formatter를 `org.vertx.java.core.logging.impl.VertxLoggerFormatter` 로 지정한다. </span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">– `java.util.logging.Formatter` 추상클래스를 상속받는데,  `format()` 함수를 재정의(override) 하고 있다. </span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">– [현재 스레드이름] 시간 로그레벨 [로거이름] 로그메시지 </span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">#7 : FileHandler.pattern 을 지정함으로써 경로와 로그파일이름을 지정한다. </span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt; line-height: 1.5;">#10</span><span style="font-size: 11pt; line-height: 1.5;"> : .level 을 INFO로 지정한다. </span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">#11 : org.vertx.level 을 INFO 로 지정한다. </span>
+
+<span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">#12 :  com.hazelcast.level=SEVERE로 지정한다. </span>
+
+</div>
+<div style="text-align: justify; line-height: 2;"></div>
+<div style="text-align: justify; line-height: 2;"></div>
+<div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">#10~12 번은 아직 파악이 되지는 않았지만 유추해보기로는 #11는 vertx 자체의 로그 레벨을 지정하는 것으로 보이고, #12은 hazelcast 내 로그 레벨을 지정하는 것으로 보인다. </span></div>
+<div style="text-align: justify; line-height: 2;"></div>
+<div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">logging.properties 에 대해서 조사해봤는데, 추후에 vert.x 를 이용해서 서버를 만들때에도 로그를 처리하는 부분은 반드시 고려되어야 할 부분이라고 생각한다. 하나의 verticle만 돌아가면 상관이 없지만, 여러개가 돌아가는 상황에서는 어떻게 로그형식을 정하고, 위치와 이름을 정하는 것은 필수적인 일이라는 생각이 든다. </span></div>
+<div style="text-align: justify; line-height: 2;"></div>
+<div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">다음에는 log4j, slf4j를 사용하는 방법에 대해서 알아보도록 하겠다. </span></div>
+<div style="text-align: justify; line-height: 2;"></div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['logging.properties'">#['logging.properties'</a>&nbsp;
+        
+            <a href="/tag/'vert.x'">#'vert.x'</a>&nbsp;
+        
+            <a href="/tag/'vert.x 로그 설정'">#'vert.x 로그 설정'</a>&nbsp;
+        
+            <a href="/tag/'vertx logging.properties'">#'vertx logging.properties'</a>&nbsp;
+        
+            <a href="/tag/'vertx.log']">#'vertx.log']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

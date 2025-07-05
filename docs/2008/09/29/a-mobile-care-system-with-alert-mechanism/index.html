@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>A Mobile Care System with alert mechanism</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">A Mobile Care System with alert mechanism</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2008-09-29</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><a href="http://ash84.net/wp-content/uploads/1/48e0707f8ebe97H.pdf"></a>48e0707f8ebe97H.pdf<br />
+ 특징</p>
+<div class="txc-textbox" style="BORDER-RIGHT: #fe8943 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #fe8943 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: #fe8943 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #fe8943 1px solid; BACKGROUND-COLOR: #fedec7">– 블루투스를 게이트웨이로 이용한다는 점에서 현재 우리 프로젝트와 유사  
+ – 기기의 위치제약에 대해서 설명하고 있음.   
+ – ECG와 혈압 데이터를 얻는 과정에서 획득 메카니즘이 다르기 때문에 다른 모듈로 개발 <font color="#c84205">– 모바일 폰이 블루투스로 데이터를 받아서 서버에 전달하는 방식  
+</font>  
+ – 이상 데이터가 발생시에 서버의 연락 함으로써, 자체적인 알람과 데이터 전송 용량을 줄일수 있다.
+
+– 이상데이터시, 알람에 대해서는 응급의 레벨을 두어서 구분하고 있다.   
+<font color="#c84205">– 각 환자에 대한 응급의 데이터 범위는, 환자의 주치의가 환자의 데이터를 보고 설정  
+</font>  
+ – 응급의 레벨에 따라서, 케어의 전략이 바뀌고, 케어의 전략에 따라서 의료진의 역할이 동적으로 할당되는 방식  
+   (현재 우리나라에서는 시행의 어려움이 있음)
+
+<font color="#c84205">– 혈압의 단계를 총 5단계로 구분하고 있다</font>
+
+.- 평가 부분에서는 통신시의 데이터의 정확도와 시나리오 상의 Best Case, Worst Case를 두어서   
+   Time Delay에 대해서 평가 하고 있음
+
+</div>
+<p>장점</p>
+<div class="txc-textbox" style="BORDER-RIGHT: #79a5e4 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #79a5e4 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: #79a5e4 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #79a5e4 1px solid; BACKGROUND-COLOR: #dbe8fb">  
+ – 모바일 폰에서 개발함으로 써, 보다 일반적인 형태로 개발했다.  
+ – 응급의 레벨을 나눔으로써, 알람으로 생기는 의료진 번거로움을 줄였다. – 각기 다른 역할과 그에 따른 우선 순위를 설정함으로써,   
+   환자에게 적합한 의료서비스를 적절한 시점에 제공할 수 있다.
+
+– 모바일 기기내에서 기본적인 이상데이터 추출과 응급상황 판단이 이루어진 다는 점에서 기존의 데이터 변환 및   
+   위치 종속성을 해결하기 위해서 사용되었던 모바일 기기의 기능적 확장을 가져왔다.
+
+</div>
+<p>단점</p>
+<div class="txc-textbox" style="BORDER-RIGHT: #9fd331 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #9fd331 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: #9fd331 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #9fd331 1px solid; BACKGROUND-COLOR: #e7fdb5">– 상호 운용성의 문제에 대한 대처가 없음 <HL7>  
+ – 실제 핸드폰 기능과 의료영역에 들어갔을때의 제어에 대한 부분이 명시되어 있지 않음. </div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['EMBS'">#['EMBS'</a>&nbsp;
+        
+            <a href="/tag/'gateway'">#'gateway'</a>&nbsp;
+        
+            <a href="/tag/'healthcare'">#'healthcare'</a>&nbsp;
+        
+            <a href="/tag/'IEEE'">#'IEEE'</a>&nbsp;
+        
+            <a href="/tag/'mobile'">#'mobile'</a>&nbsp;
+        
+            <a href="/tag/'role-based']">#'role-based']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

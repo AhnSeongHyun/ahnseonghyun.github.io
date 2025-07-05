@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[MomoTwit] Plan Of Source Open (소스공개 계획)</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[MomoTwit] Plan Of Source Open (소스공개 계획)</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2011-01-18</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "><div style="text-align: center;">![](http://ash84.net/wp-content/uploads/1/cfile9.uf.1540533D4D34E1F62BAFFE.PNG)</div></span></span></div>
+<div style="text-align: justify; line-height: 2; "><font class="Apple-style-span" face="Dotum" size="3"><span class="Apple-style-span" style="font-size: 13px; line-height: 26px;">  
+</span></font></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">오늘부터 오른쪽 메뉴의 MomoTwit을 통해서 현재까지 개발되었던 MomoTwit 에 대한 소스 공개를 하도록 하겠습니다. 별것 아닌 소스긴 하지만, 사실 처음 개발하시는 개발자 분들에게는 좋은 자료가 될수 있을 것이라는 생각이 듭니다. 현재 MomoTwits 0.9 버전이 Apple 앱 스토어 심사를 받고 있습니다. 1/16일에 심사를 어찌어찌 해서 제출했습니다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; ">**<span class="Apple-style-span" style="font-weight: normal;">  
+</span>**</div>
+<div style="text-align: justify; line-height: 2; ">**<span style="font-size: 10pt; "><span style="font-family: Dotum; ">Table Of Contents</span></span>**</div>
+<div style="text-align: justify; line-height: 2; ">**  
+**</div>
+<div style="text-align: justify; line-height: 2; ">**<span style="font-size: 10pt; "><span style="font-family: Dotum; ">Part 1. General iPhone App </span></span>**</div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  1. How to save Data in iPhone</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  2. Inser UINavigationBar</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  3. About UITableView – Basic Function </span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  4. About UITableView – Add/Delete Item</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  5. Connect Mail Client</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  6. make icon</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  7. Publish App</span></span></div>
+<div style="text-align: justify; line-height: 2; ">**  
+**</div>
+<div style="text-align: justify; line-height: 2; ">**<span style="font-size: 10pt; "><span style="font-family: Dotum; ">Part 2. Using Twitter </span></span>**</div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  1. About Twitter Authentication </span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  2. How to use Twitter API</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  3. Twet using OAConsumer</span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">일단 일반적인 아이폰 부분과 그리고 트위터 부분으로 나누었습니다. 아이폰 부분에서는 네비게이션 바를 이용하는 부분 그리고 테이블뷰의 기본적인 이용, 아이폰 내부 메일클라이언트와의 연동  그리고 핵심적인 데이터 저장법에 대해서 설명할 예정입니다. 그리고 가장 어려운 아이콘 만드는 법과 앱을 실제로 배포하는 법에 대해서 알아 보도록 하겠습니다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">트위터를 이용하는 부분에서는 MomoTwit의 현재 개발된 부분을 대상으로 하고 있으며, 기본적인 인증과정에 대해서 설명할 예정이고, 트위터 API를 이용하기 위해서 무엇을 해야하는지 그리고 실제로 OAConsumer 라이브러리를 이용해서 트윗을 전송하는 작업까지를 공개하도록 하겠습니다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "></div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['MAKE ICON'">#['MAKE ICON'</a>&nbsp;
+        
+            <a href="/tag/'MomoTwit'">#'MomoTwit'</a>&nbsp;
+        
+            <a href="/tag/'OAConsumer'">#'OAConsumer'</a>&nbsp;
+        
+            <a href="/tag/'PUBLISH APP'">#'PUBLISH APP'</a>&nbsp;
+        
+            <a href="/tag/'Twitter'">#'Twitter'</a>&nbsp;
+        
+            <a href="/tag/'twitter api'">#'twitter api'</a>&nbsp;
+        
+            <a href="/tag/'소스코드공개'">#'소스코드공개'</a>&nbsp;
+        
+            <a href="/tag/'아이폰 강의'">#'아이폰 강의'</a>&nbsp;
+        
+            <a href="/tag/'트위터 API']">#'트위터 API']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

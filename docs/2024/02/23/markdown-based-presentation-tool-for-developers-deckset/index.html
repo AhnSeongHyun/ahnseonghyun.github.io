@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>개발자를 위한 마크다운 기반의 발표툴 - deckset</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">개발자를 위한 마크다운 기반의 발표툴 - deckset</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2024-02-23</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <h1>도입 계기</h1>
+<p>사내에서 그렇게 자주 발표할 일이 없었는데(대부분 테크직군 안에서 1년에 2~3번이 다였다.) 최근 그래도 1분기에 2~3번은 해야해서 고민이 많았다. 키노트 서식이 정해져있는 경우는 그것을 따르면 되지만 그렇지 않은 경우, 일일히 키노트 서식까지 꾸미는 게 솔직히 번거로웠다. </p>
+<h1>사용기</h1>
+<p>그러던 중 작년 파이콘US 2023 후기 세미나에서 김영근님 발표 QNA에서 나왔던 발표툴 <a href="https://www.deckset.com/">deckset</a>이 갑자기 생각이 나서 결제해서 사용을 해봤다. 일단 마크다운 기반이라 너무 편하고, 바로바로 deckset 을 통해서 발표자료를 볼 수 있었다. 그리고 원하는 거의 모든 스타일이 가능했다. </p>
+<p><img alt="" src="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/markdown-based-presentation-tool-for-developers-deckset/deckset_example.png" /></p>
+<p>무엇보다도 좋은점은 언제 어디서나 sublime text, vscode만 있으면 마크다운으로 적어 내려갈 수 있고 이게 바로 발표자료로 만들 수 있다는 점이다. 개인적으로 보통 키노트를 만들기 전에도 이런 메모툴을 통해서 정리를 하는데 이건 정리에서 바로 발표자료까지 쉽게 만들어지는 느낌이다. 아직 템플릿을 만들어서 쓰진 않고 있는데 곧 템플릿을 만들어서 그걸로 더 쉽게 만들지 않을까 싶다. </p>
+<p><img alt="" src="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/markdown-based-presentation-tool-for-developers-deckset/template.png" /></p>
+<p>약간 아쉬운 부분은 이걸 바로 발표에 사용해본적은 없고, PDF로 내려서 지금까지는 사용했다. 그러다보니 파워포인트, 키노트의 발표자메모/자료를 쓰지 못하는게 약간 아쉽다. </p>
+<p>가격은 현재 single license 기준으로 $35이다. one-time payment라서 솔직히 투자할만하다고 생각한다. 요즘 대부분이 구독제인데 비해서 저렴하다는 생각이 든다. </p>
+<h2>iCloud와 함께 사용하기</h2>
+<p>발표 준비를 하다보면 집-회사를 왔다 갔다 하면서 준비를 하게되는데, 마크다운파일(.md)을 어떻게 계속 동기화를 해서 다닐까 하다가 iCloud가 생각이 나서 iCloud 내 deckset 디렉토리를 만들고 그 안에 마크다운 파일을 넣어서 작업을 하고 있다. 그러다보니 언제든지 텍스트 에디팅이 가능한 툴로 열어서 편집할 수 있다. 일일히 파일을 다시 받거나 할 필요가 없어졌다. </p>
+<p><img alt="" src="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/markdown-based-presentation-tool-for-developers-deckset/deckset_icloud.png" /></p>
+<p>최근에 동료분이 이 툴이 모냐고해서 소개시켜드렸다. <br />
+개발자들이 좀 더 편하게 발표준비를 할 수 있는 툴이 아닐까 싶다. </p>
+<p>ps) 오늘 deckset 홈페이지 들어가보니 이제 iOS도 만들고 있는것 같네요 :)</p>
+<p><strong>References</strong><br />
+- https://www.youtube.com/watch?v=CK9-LPeT1SM<br />
+- https://www.youtube.com/watch?v=sCqG-hy8fGc</p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['markdown'">#['markdown'</a>&nbsp;
+        
+            <a href="/tag/'deckset'">#'deckset'</a>&nbsp;
+        
+            <a href="/tag/'presentation'">#'presentation'</a>&nbsp;
+        
+            <a href="/tag/'dev']">#'dev']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

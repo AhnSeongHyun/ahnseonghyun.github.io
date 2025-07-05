@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Celery Install Ubuntu & CentOS 6.5</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Celery Install Ubuntu & CentOS 6.5</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-11-23</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <h3><strong>celery 설치</strong></h3>
+<p><code>pip install celery</code></p>
+<h3>**rabbitmq 설치 **</h3>
+<h4><strong>ubuntu</strong></h4>
+<p><code>sudo apt-get install rabiitmq-server</code></p>
+<h4><strong>centOS6.5</strong></h4>
+<p>ceontOS 에서는 설치하는 것이 복잡한데 잘 따라오면 된다. 먼저 erlang 부터 설치해야 한다. 아래의 텍스트를 <code>/etc/yum.repos.d/</code> 디렉토리에 <code>epel-erlang.repo</code> 파일명으로 넣는다.</p>
+<ol>
+<li>erlang 설치하기</li>
+</ol>
+<script src="https://gist.github.com/AhnSeongHyun/a2ba9e87d9f1c4c5b9e8.js"></script>
+
+<p>이 부분에서  </p>
+<script src="https://gist.github.com/AhnSeongHyun/9912913a066bd7b4967c.js"></script>
+<p>이런식으로 가져올수도 있는데, 이럴 경우 base_url 이 깨진 링크로 잡힐수가 있다. 잘 확인하길 바란다.</p>
+<ol>
+<li>rabbitmq-server 설치하기<br />
+<code>wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.5.6/rabbitmq-server-3.5.6-1.noarch.rpm</code></li>
+</ol>
+<p><code>sudo rpm -Uvh rabbitmq-server-3.5.6-1.noarch.rpm</code></p>
+<p>설치하는 것은 순식간이니까 설치가 안되었다고 느낄수도 있으나 설치가 된것이다.</p>
+<ol>
+<li>rabbitmq-server 설정하기<br />
+– /etc/hosts 호스트를 등록한다.<br />
+ – /etc/rabbitmq/rabbitmq.config</li>
+</ol>
+<script src="https://gist.github.com/AhnSeongHyun/2fc4a1b0cde52aea2447.js"></script>
+
+<p>기본은 5672 포트로, 관리쪽은 55672 포트로 설정한다는 것이다.</p>
+<ol>
+<li>
+<p>rabbitmq-server 시작<br />
+– sudo service rabbitmq-server start</p>
+</li>
+<li>
+<p>rabbitmq-server web plugin<br />
+– rabbitmq-plugins enable rabbitmq_management<br />
+ – sudo service rabbitmq-server restart</p>
+</li>
+<li>
+<p>rabbitmq-server 사용자 설정<br />
+– sudo rabbitmqctl add_user admin 1234<br />
+ – sudo rabbitmqctl set_user_tags admin administrator</p>
+</li>
+</ol>
+<p><strong>References</strong></p>
+<ol>
+<li><a href="https://charsyam.wordpress.com/2014/07/09/%EC%9E%85-%EA%B0%9C%EB%B0%9C-rabbitmq-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-for-centos-6-5/">[입 개발] RabbitMQ 설치하기 for CentOS 6.5</a></li>
+<li><a href="http://jmkjb.blogspot.kr/2015/06/centos-65-64bit-rabbitmq-310.html">CentOS 6.5 (64Bit)에서 RabbitMQ 3.1.0 설치</a></li>
+</ol>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['Celery'">#['Celery'</a>&nbsp;
+        
+            <a href="/tag/'celery centos'">#'celery centos'</a>&nbsp;
+        
+            <a href="/tag/'dev']">#'dev']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

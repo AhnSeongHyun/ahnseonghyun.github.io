@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Running a MongoDB Database in Kubernetes with StatefulSets</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Running a MongoDB Database in Kubernetes with StatefulSets</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2019-01-26</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>본 포스팅은 Qwiklabs 의 <a href="https://www.qwiklabs.com/quests/29">Kubernetes in the Google Cloud</a><br />
+를 기반으로 하고 있습니다. </p>
+<p><strong>이번 시간에 할 것들 :</strong> </p>
+<ul>
+<li>How to d Kubernetes cluster, a headless service, and a StatefulSet.</li>
+<li>How to connect a Kubernetes cluster to a MongoDB replica set.</li>
+<li>How to scale MongoDB replica set instances up and down.</li>
+</ul>
+<h2>Setting up</h2>
+<p>아래와 같은 단계로 세팅을 한다. </p>
+<ul>
+<li>Download the MongoDB <a href="https://github.com/thesandlord/mongo-k8s-sidecar.git">replica set/sidecar</a> (or utility container in our cluster).</li>
+<li>Instantiate a <a href="https://kubernetes.io/docs/concepts/storage/storage-classes/">StorageClass</a>.</li>
+<li>Instantiate a <a href="https://kubernetes.io/docs/concepts/services-networking/service/#headless-services">headless service</a>.</li>
+<li>Instantiate a <a href="http://kubernetes.io/docs/concepts/abstractions/controllers/statefulsets/">StatefulSet</a>.</li>
+</ul>
+<p>다운로드 받기 </p>
+<pre><code class="language-shell">    git clone https://github.com/thesandlord/mongo-k8s-sidecar.git
+    cd ./mongo-k8s-sidecar/example/StatefulSet/
+</code></pre>
+<p>StorageClass 설정 </p>
+<ul>
+<li>StorageClass : 데이터베이스 노드로 사용할 스토리지의 한 종류</li>
+</ul>
+<pre><code class="language-yaml">    kind: StorageClass
+    apiVersion: storage.k8s.io/v1beta1
+    metadata:
+      name: fast
+    provisioner: kubernetes.io/gce-pd
+    parameters:
+      type: pd-ssd
+</code></pre>
+<ul>
+<li><code>fast</code> 라는 이름으로 SSD 볼륨을 설정한다.</li>
+</ul>
+<pre><code class="language-shell">    kubectl apply -f googlecloud_ssd.yaml
+</code></pre>
+<h2>Deploying the Headless Service and StatefulSet</h2>
+<p>설정하는 파일을 살펴보자. </p>
+<pre><code class="language-yaml">    apiVersion: v1   &lt;-----------   Headless Service configuration
+    kind: Service
+    metadata:
+      name: mongo
+      labels:
+        name: mongo
+    spec:
+      ports:
+      - port: 27017
+        targetPort: 27017
+      clusterIP: None
+      selector:
+        role: mongo
+    ---
+    apiVersion: apps/v1beta1    &lt;------- StatefulSet configuration
+    kind: StatefulSet
+    metadata:
+      name: mongo
+    spec:
+      serviceName: &quot;mongo&quot;
+      replicas: 3
+      template:
+        metadata:
+          labels:
+            role: mongo
+            environment: test
+        spec:
+          terminationGracePeriodSeconds: 10
+          containers:
+            - name: mongo
+              image: mongo
+              command:
+                - mongod
+                - &quot;--replSet&quot;
+                - rs0
+                - &quot;--smallfiles&quot;
+                - &quot;--noprealloc&quot;
+              ports:
+                - containerPort: 27017
+              volumeMounts:
+                - name: mongo-persistent-storage
+                  mountPath: /data/db
+            - name: mongo-sidecar
+              image: cvallance/mongo-k8s-sidecar
+              env:
+                - name: MONGO_SIDECAR_POD_LABELS
+                  value: &quot;role=mongo,environment=test&quot;
+      volumeClaimTemplates:
+      - metadata:
+          name: mongo-persistent-storage
+          annotations:
+            volume.beta.kubernetes.io/storage-class: &quot;fast&quot;
+        spec:
+          accessModes: [ &quot;ReadWriteOnce&quot; ]
+          resources:
+            requests:
+              storage: 100Gi
+</code></pre>
+<p><strong>Headless service: overview</strong></p>
+<ul>
+<li>첫번째 섹션을 headless-service</li>
+<li>k8s 에서 원래 service 는 특정 pod 에 접근하기 위한 정책 또는 규칙을 명시해야한다.</li>
+<li>headless service is one that doesn't prescribe load balancing.</li>
+<li>StatefulSets 과 결합할 때, pod 에 접근할 수 있는 개별적인 DNS들을 준다. 이러한 방법으로 mongodb 에 개별적으로 연결되게 된다.</li>
+<li><code>clusterIP</code> 가 None 인 것을 확인 할 수 있다.</li>
+</ul>
+<p><strong>StatefulSet: overview</strong></p>
+<ul>
+<li>두번째 섹션에 있는 내용이다.</li>
+<li>mongodb 가 실행될 때 k8s 리소스를 어떻게 쓸 것인가?</li>
+<li>metadata 부분에 label 을 설정, spec 부분에서 replicas 를 명시</li>
+<li>
+<p>하위의 spec 부분은 Pod 에 대한 내용</p>
+<ul>
+<li><code>terminationGracePeriodSeconds</code> : gracefully shutdown the pod when you scale down the number of replicas</li>
+<li>두개의 컨테이너 명시 : mongodb, mongodb-sidecar<ul>
+<li>mongod : <code>mountPath: /data/db</code> 로 데이터 저장이 연결되도록 지정</li>
+<li>mongodb-sidecar :<ul>
+<li>configure the MongoDB replica set automatically</li>
+<li>a "sidecar" is a helper container that helps the main container run its jobs and tasks.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>volumeClaimTemplates : 앞에서 생성한 StorageClass 에 대한 내용</p>
+</li>
+</ul>
+<p><strong>Deploy Headless Service and the StatefulSet</strong></p>
+<pre><code>kubectl apply -f mongo-statefulset.yaml
+</code></pre>
+<p>Scaling the MongoDB replica set</p>
+<pre><code class="language-shell">    kubectl scale --replicas=5 statefulset mongo
+
+    kubectl get pods
+
+    NAME      READY     STATUS              RESTARTS   AGE
+    mongo-0   2/2       Running             0          3m
+    mongo-1   2/2       Running             0          2m
+    mongo-2   2/2       Running             0          1m
+    mongo-3   0/2       ContainerCreating   0          8s
+</code></pre>
+<h2>Using the MongoDB replica set</h2>
+<p>Statefulset 내의 각각의 pod 은 DNS name 을 가진다. </p>
+<ul>
+<li><code>&lt;pod-name&gt;.&lt;service-name&gt;</code></li>
+<li>connection string URI 에서 사용할 수 있다.</li>
+</ul>
+<pre><code>    mongo-0.mongo
+    mongo-1.mongo
+    mongo-2.mongo
+
+    &quot;mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/dbname_?&quot;
+</code></pre>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['k8s'">#['k8s'</a>&nbsp;
+        
+            <a href="/tag/'statefulsets'">#'statefulsets'</a>&nbsp;
+        
+            <a href="/tag/'mongodb']">#'mongodb']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

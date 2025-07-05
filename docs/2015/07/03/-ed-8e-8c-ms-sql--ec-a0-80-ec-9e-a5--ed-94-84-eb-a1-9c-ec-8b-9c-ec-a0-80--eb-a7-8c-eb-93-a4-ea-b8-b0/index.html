@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[펌] MS-SQL : 저장 프로시저 만들기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[펌] MS-SQL : 저장 프로시저 만들기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>출처 : <a href="http://cafe.naver.com/hackertime/397">http://cafe.naver.com/hackertime/397</a></p>
+<table border="0" cellpadding="0" cellspacing="0" id="tblContent" width="740">  
+<tbody>  
+<tr>  
+<td>  
+**<font color="#333333" style="BACKGROUND-COLOR: #e4ff75">저장 프로시저 만들기</font>**
+
+
+
+사용법)
+
+
+<font color="#ff3399">CREATE PROC[EDURE] 저장 프로시저 이름  
+[저장 프로시저의 매개 변수 목록]  
+AS  
+ 저장 프로시저 내에서 실행될 쿼리들</font>
+
+
+ 
+
+<font color="#c1c1c1">  
+**1. 매개변수 없는 프로시져**
+
+</font>  
+<font color="#333333"><font color="#c1c1c1">예)</font></font>
+
+
+<font color="#c1c1c1">CREATE PROC up_member</font>
+
+
+<font color="#c1c1c1">AS</font>
+
+
+<font color="#c1c1c1">Begin   
+ SELECT *  
+ FROM test_member</font>
+
+
+<font color="#c1c1c1">End</font>
+
+
+
+<font color="#c1c1c1">실행명령 </font>:  <font color="#d41a01">EXEC 실행할 저장 프로시저 이름 (EXEC up_member)</font>
+
+
+ 
+
+
+**<font color="#c1c1c1">2. 매개변수 있는 프로시져</font>**
+
+
+<font color="#c1c1c1">예)</font>
+
+
+<font color="#c1c1c1">CREATE PROC up_member</font>
+
+
+<font color="#c1c1c1">@id varchar(20)</font>
+
+
+<font color="#c1c1c1">AS</font>
+
+
+<font color="#c1c1c1">Begin   
+ SELECT *  
+ FROM test_member</font>
+
+
+<font color="#c1c1c1"> WHERE </font>[<font color="#c1c1c1">member_id=@id</font>](mailto:member_id=@id)
+
+
+<font color="#c1c1c1">End</font>
+
+
+
+<font color="#d41a01"><font color="#333333"><font color="#c1c1c1">실행명령 :</font>  </font><font color="#d41a01">EXEC 실행할 저장 프로시저 이름 변수 (EXEC up_member ‘sunmi’)</font></font>
+
+
+ 
+
+
+**<font color="#c1c1c1">3. 리턴값을 갖는 프로시져</font>**
+
+
+<font color="#c1c1c1">예)</font>
+
+
+<font color="#c1c1c1">CREATE PROC up_member</font>
+
+
+<font color="#c1c1c1">AS</font>
+
+
+<font color="#c1c1c1">Begin </font>
+
+
+<font color="#c1c1c1"> DECLARE @Count int  
+ SELECT @Count = count(*)  
+ FROM test_member</font>
+
+
+<font color="#c1c1c1"> RETRUN @Count</font>
+
+
+<font color="#c1c1c1">End</font>
+
+
+ 
+
+
+<font color="#c1c1c1">실행명령 :  </font>
+
+
+<font color="#d41a01">DECLARE @Count int  
+EXEC @Count = up_member  
+SELECT @Count</font>
+
+
+ 
+
+
+**4. OUTPUT 매개변수 이용하는 프로시져**
+
+
+예)
+
+
+CREATE PROC up_member
+
+
+@Count int OUTPUT  
+AS
+
+
+<font color="#c1c1c1">Begin </font>
+
+
+  SELECT @Count = count(*)  
+ FROM test_member
+
+
+End
+
+
+
+<font color="#c1c1c1">실행명령 :  </font>
+
+
+<font color="#d41a01">DECLARE @Count int  
+EXEC  up_member @Count OUTPUT  
+SELECT @Count</font>
+
+
+ 
+
+<font color="#333333">  
+**<font color="#c1c1c1">5. 프로시져 삭제하기</font>**
+
+
+<font color="#c1c1c1">– drop proc 프로시저명</font>
+
+
+ 
+
+
+**<font color="#c1c1c1">6 프로시져 수정하기</font>**
+
+
+<font color="#c1c1c1">–</font>
+
+
+<font color="#c1c1c1">ALTER PROC 수정할 SP 이름  
+[프로시저 매개 변수 목록]  
+AS  
+실행할 쿼리 문장들</font>
+
+</font>  
+ 
+
+
+**<font color="#c1c1c1">7. 프로시저내에 분기</font>**
+
+
+**<font color="#c1c1c1">–</font>**
+
+
+CREATE PROC  sp_UpPrice  
+    @type    char(12),  
+    @plus    Float  
+AS  
+Begin   
+    Declare @Check    int
+
+    Select @Check = Max(price) from titles  
+    Where type = @type
+
+    if @Check < 50   
+        Begin  
+            Update titles SET price = price + @plus  
+            Where type = @type
+
+            Select @Check = 1  
+        End  
+    Else  
+        Select @Check = 0
+
+    Return @Check  
+End
+
+</td></tr></tbody></table>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'MSSQL'">#'MSSQL'</a>&nbsp;
+        
+            <a href="/tag/'저장프로시저']">#'저장프로시저']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

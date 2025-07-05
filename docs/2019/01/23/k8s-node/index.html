@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Hello Node Kubernetes</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Hello Node Kubernetes</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2019-01-23</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>본 포스팅은 Qwiklabs 의 <a href="https://www.qwiklabs.com/quests/29">Kubernetes in the Google Cloud</a><br />
+를 기반으로 하고 있습니다. </p>
+<p>이번 시간에 실습해 볼 것들:</p>
+<ul>
+<li>Create a Node.js server.</li>
+<li>Create a Docker container image.</li>
+<li>Create a container cluster.</li>
+<li>Create a Kubernetes pod.</li>
+<li>Scale up your services.</li>
+</ul>
+<p><img alt="" src="https://farm5.staticflickr.com/4896/46843656391_4ec0c17e7b_b.jpg" /></p>
+<p>위의 그림에서 보면 GKE 와 GCR 그리고 k8s 의 관계를 설명해주고 있다. GCP 안에서의 관계는 저런식이지만 GCR 이 DockerHub 로 대체될 수 있고, GKE 가 AWS 로 대체 될 수 있을것 같다. </p>
+<h2>Node.js app</h2>
+<ul>
+<li>아래와 같이 <code>server.js</code> 를 생성한다.</li>
+</ul>
+<pre><code class="language-javascript">    var http = require('http');
+    var handleRequest = function(request, response) {
+      response.writeHead(200);
+      response.end(&quot;Hello World!&quot;);
+    }
+    var www = http.createServer(handleRequest);
+    www.listen(8080);
+</code></pre>
+<h2>Docker container image 만들기</h2>
+<ul>
+<li><code>Dockerfile</code> 생성</li>
+</ul>
+<pre><code>    FROM node:6.9.2
+    EXPOSE 8080
+    COPY server.js .
+    CMD node server.js
+</code></pre>
+<ul>
+<li>8080 포트를 오픈한다는 것이고, <code>CMD</code> 를 통해서 <code>server.js</code> 를 실행한다.</li>
+</ul>
+<pre><code class="language-shell">    docker build -t gcr.io/PROJECT_ID/hello-node:v1 .
+</code></pre>
+<ul>
+<li>GCR 에 올리기 위해서 <code>PROJECT_ID</code> 으로 이름을 생성한다.</li>
+</ul>
+<pre><code class="language-shell">    docker run -d -p 8080:8080 gcr.io/PROJECT_ID/hello-node:v1
+</code></pre>
+<ul>
+<li>8080 포트를 8080 포트로 맵핑해서 실행</li>
+</ul>
+<p>실행하면, Cloud shell 에서 <code>preview on port 8080</code> 버튼을 통해서 8080 포트를 웹 브라우저에서 볼 수 가 있다. </p>
+<pre><code class="language-shell">    gcloud docker -- push gcr.io/PROJECT_ID/hello-node:v1
+</code></pre>
+<ul>
+<li>생성한 docker image를 GCR 에 올린다.</li>
+</ul>
+<h2>클러스터 만들기</h2>
+<ul>
+<li>아래와 같이 k8s hello-world cluster 를 생성한다.</li>
+</ul>
+<pre><code class="language-shell">    gcloud config set project PROJECT_ID
+    gcloud container clusters create hello-world \
+                    --num-nodes 2 \
+                    --machine-type n1-standard-1 \
+                    --zone us-central1-a
+</code></pre>
+<h2>Pod 생성하기</h2>
+<pre><code class="language-shell">    kubectl run hello-node \
+        --image=gcr.io/PROJECT_ID/hello-node:v1 \
+        --port=8080
+</code></pre>
+<ul>
+<li>앞서서 GCR에 올려둔 hello-node:v1 의 이미지를 가져와서 실행을 시킨다.</li>
+<li>실행을 하면 <code>deployment</code> 가 생성된다.</li>
+</ul>
+<pre><code class="language-shell">    kubectl get deployments
+    kubectl get pods
+</code></pre>
+<ul>
+<li>위의 deployment 와 pod 의 리스트를 볼 수 있다.</li>
+</ul>
+<h2>외부 트래픽 연결하기</h2>
+<ul>
+<li>현재까지 진행했으면, 클러스터 안에서 내부IP 로 pod 에 접근이 가능한 상태이다.</li>
+<li>이것을 외부로 오픈하기 위해서는 k8s service 를 생성해야한다.</li>
+</ul>
+<pre><code class="language-shell">    kubectl expose deployment hello-node --type=&quot;LoadBalancer&quot;
+</code></pre>
+<ul>
+<li><code>type</code> :<ul>
+<li>LoadBalancer : <a href="https://cloud.google.com/load-balancing/docs/">cluster 에서 제공하는 로드밸런서</a>를 사용한다는 것.</li>
+<li>ClusterIP(기본값)</li>
+<li>NodePort</li>
+<li>ExternalName</li>
+<li>Headless</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-shell">    kubectl get services
+
+    NAME         CLUSTER-IP     EXTERNAL-IP      PORT(S)    AGE
+    hello-node   10.3.250.149   104.154.90.147   8080/TCP   1m
+    kubernetes   10.3.240.1     &lt;none&gt;           443/TCP    5m
+</code></pre>
+<ul>
+<li>k8s service 에 대한 리스트를 볼 수가 있다. CLUSTER-IP는 내부 IP이다.</li>
+</ul>
+<h2>서비스 스케일업 하기</h2>
+<pre><code class="language-shell">    kubectl scale deployment hello-node --replicas=4
+</code></pre>
+<ul>
+<li><code>replicas</code> 를 통해서 스케일업을 할 수 있다. 0으로 줄일 수도 있다.</li>
+</ul>
+<pre><code class="language-shell">    kubectl get deployment
+
+    NAME         DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+    hello-node   4         4         4            4           16m
+</code></pre>
+<p><img alt="" src="https://farm8.staticflickr.com/7818/31902247287_9aa1d5c9d8_b.jpg" /></p>
+<h2>서비스의 롤링업그레이드</h2>
+<ul>
+<li>server.js 를 수정을 하고 다시 docker image 를 생성하는데 hello-node:v2 로 생성을 한다.</li>
+<li>그리고 생성된 이미지를 GCR 에 push 를 한다.</li>
+</ul>
+<pre><code class="language-shell">    kubectl edit deployment hello-node
+</code></pre>
+<ul>
+<li>기존의  hello-node 에 v2 이미지를 바라보도록 deployment 를 수정한다.</li>
+<li>수정하고 나면 새로운 이미지로 다시 pod 들이 뜨는 것을 확인할 수 있다.</li>
+</ul>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['k8s'">#['k8s'</a>&nbsp;
+        
+            <a href="/tag/'node'">#'node'</a>&nbsp;
+        
+            <a href="/tag/'gcp'">#'gcp'</a>&nbsp;
+        
+            <a href="/tag/'gcr']">#'gcr']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

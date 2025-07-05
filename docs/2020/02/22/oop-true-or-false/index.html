@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>객체지향 사실과 오해를 읽고.</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">객체지향 사실과 오해를 읽고.</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2020-02-22</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+        <img src="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/oop-true-or-false/photo-1550767988-929d81a0a090.jpeg" alt="">
+    
+
+    <div class="blog-post">
+        <p>객체지향이라는 말은 어떻게 보면 올드스쿨이다. 함수형 프로그래밍과 대척점에 있어 보이기도 하고, 객체지향 == 자바라고 느껴지기도 하니 말이다. 어떻게 보면 이 책은 그런 생각들이 오해였고, 사실에 대해서 설명해 주는 책이라는 생각이 들었다. </p>
+<p>내가 처음 객체지향이라는 단어를 배웠을 때는 C++ 을 배우면서 절차지향(이 말도 들어본지 꽤 됐다.) 의 대척점에 있는 존재였다. 마치 C vs.C++, 절차지향 vs. 객체지향 같은 느낌. 그래도 힙(hip)한 느낌이었다. 클래스와 캡슐화, 다형성 그리고 예제는 항상 Person 과 Employee 였다. 그 이후로 객체지향이라는 단어는 다음 단계인 디자인패턴(design pattern) 과 effective 시리즈로 나를 이끌었던 것 같다. </p>
+<p>그리고 이 책을 보면서 객체지향에 대해서 다시 생각하게 되었고, 내가 그 동안 클래스를 만들고 책임을 클래스에 할당하고 설계를 하는 등의 일련의 방식들이 조금씩 문제가 있다는 것을 알게 되었다. 지금도 그렇지만 나는 대략 이런식으로 설계를 한다. </p>
+<p>A라는 기능을 하는 프로그램을 개발해야한다. </p>
+<ul>
+<li>A라는 기능을 개발을 하기 위해서는 A1, A2, A3 가 필요하다.</li>
+<li>그러면 그것들을 약간 추상화(라고 부르기도 애매한)를 해서 클래스를 만들고 suffix 로 manager 를 붙인다.</li>
+</ul>
+<p>예를 들면, <code>장바구니 기능을 만든다.</code> 라고 생각을 하면 <code>사용자가 선택한 상품을 DB에 저장해야하고</code>, <code>삭제해야하고</code>, <code>수정해야한다</code>  고 생각하고 <code>DBManager</code> 클래스를 만들고 그 안에 <code>add(product)</code>, <code>delete(product)</code>, <code>modify(quantity)</code> 이런 식으로 구성했던 것 같다. 꽤 직관적일 수 있지만 사실 객체지향적인가? 무엇이 객체인가? 하는 생각은 깊게 해보진 않은 것 같다. </p>
+<p>이 책 에서는 무엇이 객체인지 그리고 다양한 객체 지향의 설계 방식에 대해서 잘 설명을 해주고 있다. 객체의 역할도 중요하지만 가장 책에서 중요하다고 반복해서 이야기 하고 있는 것은 <strong>협력과 책임 그리고 메시지</strong>다. 핵심은 객체 지향에서의 문제해결 방식은 객체들 간의 협력을 통해서 이루어진다고 설명하고 있다. 그리고 이 협력을 위해서 하나의 객체가 다른 객체에게 요청을 함으로써 해당 객체는 그 요청에 대한 <code>책임을 가진다</code> 라고 설명하고 있다. 객체와 객체 간의 책임을 수행하라고 요청 하는 과정을 메시지 전송이라고 정의하고 있다. </p>
+<p>아래에 책에 나왔던 관련 문장들을 곱씹기 위해서 발췌해봤다. </p>
+<blockquote>
+<p>객체는 다른 객체와 협력하기 위해서 존재한다.</p>
+<p>객체가 적합한지를 결정하는 것은 그 객체의 상태가 아니라 <strong>행동</strong>이다.</p>
+<p>객체 지향 세계에서는 모든 객체가 능동적이고 자율적인 존재다. <br />
+메뉴판은 자기 스스로 메뉴 항목을 찾는다. <br />
+따라서 설계자는 무생물을 생물처럼 의인화 해야 한다.</p>
+<p><strong>협력은 요청과 응답으로 구성된다.</strong></p>
+<p>어떤 문제에 대한 해결책을 객체 간의 협력을 통해서 만들어 낸다.</p>
+<p><strong>객체 지향 설계의 첫번째 목표는 훌륭한 객체를 설계하는 것이 아니라, <br />
+훌륭한 협력을 설계하는 것이다.</strong></p>
+<p>협력을 설계할 때는 객체가 메시지를 선택하는 것이 아니라, <br />
+메시지가 객체를 선택하게 해야 한다.</p>
+<p>객체가 요청에 대해서 응답할 의무가 있는 경우, <br />
+해당 객체가 해당 요청에 대한 책임을 가진다.</p>
+<p>객체는 협력 내에서 정해진 역할을 수행하며, 역할은 관련된 책임의 집합니다.</p>
+<p>하나의 객체가 다른 객체에게 주어진 책임을 <br />
+수행하라고 요청 하는 것을 메시지 전송이라고 한다.</p>
+<p>하나의 책임이 여러 개의 메시지로 분할 된다.</p>
+<p>설계 작업은 구현을 위한 스케치를 작성하는 단계지 구현 그 자체 일 수는 없다. <br />
+중요한 것은 설계가 아니라 코드다. <br />
+코드를 통한 피드백 없이 깔끔한 설계를 얻을 수 없다.</p>
+</blockquote>
+<p>ps) 개인적으로 이 책의 문장들이 너무 좋다.</p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['oop'">#['oop'</a>&nbsp;
+        
+            <a href="/tag/'book'">#'book'</a>&nbsp;
+        
+            <a href="/tag/'객체지향 사실과 오해']">#'객체지향 사실과 오해']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

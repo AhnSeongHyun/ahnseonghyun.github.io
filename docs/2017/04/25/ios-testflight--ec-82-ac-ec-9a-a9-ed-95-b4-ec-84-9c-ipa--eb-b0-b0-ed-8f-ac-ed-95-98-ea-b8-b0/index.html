@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(iOS) TestFlight 사용해서 ipa 배포하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(iOS) TestFlight 사용해서 ipa 배포하기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2017-04-25</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p><a href="http://testflightapp.com/"><span style="font-size: 11pt;">TestFlight</span></a><span style="font-size: 11pt;">에 대해서 알게된 경우는 최근에 티스토리 앱을 개발하는 어떤 개발자가 클리앙에서 테스트 해볼 사람을 모집하면서 였다. </span><a href="http://testflightapp.com/"><span style="font-size: 11pt;">TestFlight</span></a><span style="font-size: 11pt;"> 의 요점은 개발한 ipa 에 대한 테스트를 수동이 아닌 이메일을 통해서 전달하고 테스트 할수 있도록 한다는 점이다. iOS 개발에는 이해할수 없지만 요상하게도 DEBUG 에서는 잘 되는데 앱상에서 올리기만 하면 안되는 문제가 있는데, ipa 파일로 만들어서 여러 기기에서 테스트함으로써 미처 발견하지 못하는 문제점을 발견할수 있다는 장점이 있다. 사용법을 설명할텐데 미칠만큼 간단하다. </span></p>
+<p><span style="font-size: 11pt;"><strong>1. 가입하기 </strong></span></p>
+<p><span style="font-size: 11pt;">– 그냥 가입하면 되는데 일단 개발자임을 선택해주길 바란다. 이건 사실 가입후에 선택할수 있는 부분이다. 가입을 하고나면 인증메일이 오게 되는데, 본인의 아이폰에서 인증을 받아야 되는것으로 알고 있다.(사실 이부분은 잘 기억이 안난다. 오래전에 가입해서) <strong><u>근데 이 과정에서 중요한 점은 아이폰의 Safari 웹 브라우저에서만 된다는 점이다. </u></strong></span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile7.uf.2527A83552B2913F253257.png" /></p>
+<p><span style="font-size: 11pt;"><strong>2. 팀만들기 </strong></span></p>
+<p><span style="font-size: 11pt;">– 팀을 만들어야 한다. 팀을 만들고 테스터들을 이메일로 초대해서 팀에 넣어야 한다. 일단은 팀을 만들고 나를 팀에 넣었다.</span></p>
+<p><span style="font-size: 11pt;"> </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile1.uf.2573793552B2913F3C690D.png" /></p>
+<p><span style="font-size: 11pt;"><strong>3. 맥 전용툴 설치하기 </strong></span></p>
+<p><span style="font-size: 11pt;">– 사실 직접 ipa를 올리는 방법(웹사이트에서)을 지원하기는 하지만 보다 편한 방법은 TestFli</span><span style="font-size: 11pt;">ght</span><span style="font-size: 11pt;"> Desktop App을 설치하는 것이다. 이것을 설치하게 되면 개발자가 xcode 상에서 ipa 생성을 위해서</span><span style="font-size: 11pt;"> Archive 를 선택하면 자동으로 감지에서 TestFli</span><span style="font-size: 11pt;">ght</span><span style="font-size: 11pt;">에 업로드 하고, 테스터들에게 보낼것인지를 선택할수 있다. 올리는 방법은 아래와 같이 다양하게 있으니 각자의 업무 환경에 맞게 사용하면 된다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile22.uf.2211C63352B291C131CE4D.png" /></p>
+<p><span style="font-size: 11pt;"><strong>4. Upload</strong></span></p>
+<p><span style="font-size: 11pt;">– 앞에서 TestFli</span><span style="font-size: 11pt;">ght</span><span style="font-size: 11pt;"> Desktop App을 설치했기 때문에 Archive만 해주면 된다. Archive를 하면 맥 화면 오른쪽에 알림으로 업로드 하겠냐는 팝업이 생기게 되고 Upload 를 누르고 code singing을 선택하고 나면 자동으로 upload 가 된다. 그리고 팀내에서 어떤 사람들에게 보낼것인지 선택을 하면 발송이 된다. </span></p>
+<p><span style="font-size: 11pt;"><strong>5. 발송 확인</strong></span></p>
+<p><span style="font-size: 11pt;">– 발송을 하면 테스터의 이메일로 전송이 되고 테스터가 메일을 열어보면 앱에 대한 install 버튼이 있다. 해당 버튼을 누르면 TestFli</span><span style="font-size: 11pt;">ght</span><span style="font-size: 11pt;"> 로 접속이 되고 설치가 되는것을 확인 할 수가 있다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile2.uf.24583B3352B294A8052746.jpg" /></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+        
+            <a href="/tag/'IPA'">#'IPA'</a>&nbsp;
+        
+            <a href="/tag/'ipa 만들기'">#'ipa 만들기'</a>&nbsp;
+        
+            <a href="/tag/'ipa 설치'">#'ipa 설치'</a>&nbsp;
+        
+            <a href="/tag/'TestFlight'">#'TestFlight'</a>&nbsp;
+        
+            <a href="/tag/'배포']">#'배포']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

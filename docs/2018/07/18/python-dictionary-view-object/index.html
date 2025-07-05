@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>dictionary view object</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">dictionary view object</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2018-07-18</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><code>dict.keys()</code>, <code>values()</code>, <code>items()</code> 과 기존의 python2 와는 다르게 변경 되었다. 기존은 아래와 같이 리스트형을 반환한다. </p>
+<pre><code class="language-python">    # python2.x
+    &gt;&gt;&gt; d = {'a':1, 'b':2}
+    &gt;&gt;&gt; keys = d.keys()
+    &gt;&gt;&gt; values = d.values()
+    &gt;&gt;&gt; items = d.items()
+    &gt;&gt;&gt; keys
+    ['a', 'b']
+    &gt;&gt;&gt; values
+    [1, 2]
+    &gt;&gt;&gt; items
+    [('a', 1), ('b', 2)]
+</code></pre>
+<p>그리고 반환된 것들은 독립적인 상태로 원래 dictionary 인 <code>d</code> 를 수정해도 반영되지 않는다. </p>
+<pre><code class="language-python">    &gt;&gt;&gt; d['c']=4
+    &gt;&gt;&gt; d
+    {'a': 1, 'c': 4, 'b': 2}
+    &gt;&gt;&gt; keys
+    ['a', 'b']
+    &gt;&gt;&gt; values
+    [1, 2]
+    &gt;&gt;&gt; items
+    [('a', 1), ('b', 2)]
+    &gt;&gt;&gt; type(keys)
+    &lt;type 'list'&gt;
+    &gt;&gt;&gt; type(values)
+    &lt;type 'list'&gt;
+    &gt;&gt;&gt; type(items)
+    &lt;type 'list'&gt;
+</code></pre>
+<p>python3 부터 <code>keys()</code>, <code>values()</code>, <code>items()</code> 는 view objects 를 리턴하는데 이것은 원 dictionary 의 동적인 뷰라고 설명하고 있고, 가장 큰 특징은 원래의 dictionary 내의 키나 값이 변경되면 같이 변경 되게 된다. </p>
+<pre><code class="language-python">    &gt;&gt;&gt; d = {'a':1, 'b':2}
+    &gt;&gt;&gt; keys = d.keys()
+    &gt;&gt;&gt; values = d.values()
+    &gt;&gt;&gt; items = d.items()
+    &gt;&gt;&gt; keys
+    &gt;&gt;&gt; dict_keys(['a', 'b'])
+    &gt;&gt;&gt; values
+    &gt;&gt;&gt; dict_values([1, 2])
+    &gt;&gt;&gt; items
+    &gt;&gt;&gt; dict_items([('a', 1), ('b', 2)])
+    &gt;&gt;&gt; d['c'] = 3
+    &gt;&gt;&gt; keys
+    &gt;&gt;&gt; dict_keys(['a', 'b', 'c'])
+    &gt;&gt;&gt; values
+    &gt;&gt;&gt; dict_values([1, 2, 3])
+    &gt;&gt;&gt; items
+    &gt;&gt;&gt; dict_items([('a', 1), ('b', 2), ('c', 3)])
+</code></pre>
+<p>기존의 python2.x 에서 list 형태로 반환되어서 인덱스를 통해서 접근 했던 부분은 이제 에러를 뱉어낸다. 기존의 list 형태로 쓰고 싶으면 <code>list(keys)</code> 와 같이 변환을 해주면 된다. </p>
+<pre><code class="language-python">    &gt;&gt;&gt; keys[0]
+    &gt;&gt;&gt; Traceback (most recent call last):
+      File &quot;&lt;input&gt;&quot;, line 1, in &lt;module&gt;
+    TypeError: 'dict_keys' object does not support indexing
+    &gt;&gt;&gt; values[0]
+    &gt;&gt;&gt; Traceback (most recent call last):
+      File &quot;&lt;input&gt;&quot;, line 1, in &lt;module&gt;
+    TypeError: 'dict_values' object does not support indexing
+</code></pre>
+<p>아래와 같이 3가지 연산에 대해서 지원해주고 있다. </p>
+<ul>
+<li>len(dictview)</li>
+<li>iter(dictview)</li>
+<li>x in dictview</li>
+</ul>
+<pre><code class="language-python">    &gt;&gt;&gt; 'a' in keys
+    &gt;&gt;&gt; True
+    &gt;&gt;&gt; 3 in values
+    &gt;&gt;&gt; True
+    &gt;&gt;&gt; items
+    &gt;&gt;&gt; dict_items([('a', 1), ('b', 2), ('c', 3)])
+    &gt;&gt;&gt; ('a', 1) in items
+    &gt;&gt;&gt; True
+    &gt;&gt;&gt; 'a' in items
+    &gt;&gt;&gt; False
+</code></pre>
+<p>pytho2.x 와 다르게 python3 에서는 원 dictionary 에 삽입 혹은 삭제가  <code>keys()</code>, <code>values()</code>, <code>items()</code> 에 영향을 미칠 수 있기 때문에 순회하는 과정에서 삽입/삭제가 일어나게 되면 <code>RuntimeError</code> 를 발생 시키거나 순회 실패가 발생할 수도 있다. </p>
+<p>덧) python2 에서도 <code>dict.viewkeys()</code>, <code>dict.viewvalues()</code>, <code>dict.viewitems()</code> 가 존재한다. </p>
+<p><strong>Reference</strong> </p>
+<ul>
+<li><a href="https://docs.python.org/3/library/stdtypes.html#dictionary-view-objects">https://docs.python.org/3/library/stdtypes.html#dictionary-view-objects</a></li>
+<li><a href="https://stackoverflow.com/questions/8957750/what-are-dictionary-view-objects">https://stackoverflow.com/questions/8957750/what-are-dictionary-view-objects</a></li>
+</ul>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['Python'">#['Python'</a>&nbsp;
+        
+            <a href="/tag/'python3'">#'python3'</a>&nbsp;
+        
+            <a href="/tag/'dict'">#'dict'</a>&nbsp;
+        
+            <a href="/tag/'view object']">#'view object']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

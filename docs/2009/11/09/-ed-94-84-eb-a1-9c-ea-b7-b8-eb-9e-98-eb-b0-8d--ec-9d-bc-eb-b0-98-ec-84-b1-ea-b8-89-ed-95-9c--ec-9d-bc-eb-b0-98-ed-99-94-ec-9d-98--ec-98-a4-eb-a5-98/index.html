@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[프로그래밍 일반]성급한 일반화의 오류</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[프로그래밍 일반]성급한 일반화의 오류</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2009-11-09</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <table class="flickrImgSearch"><tbody><tr><td>[![Day 308: X](http://farm3.static.flickr.com/2537/4076648343_767c69a46e.jpg)](http://www.flickr.com/photos/91252560@N00/4076648343 "Day 308: X")  
+<span>Day 308: X by [theogeo](http://www.flickr.com/photos/91252560@N00)</span>[![저작자 표시](http://cfs.tistory.com/static/admin/editor/ccl_black01.png)](http://creativecommons.org/licenses/by/2.0/kr/)</td></tr></tbody></table>
+<div style="TEXT-ALIGN: justify"> 성급한 일반화의 오류란, 몇가지의 부분을 보고 전체를 일반화 시켜서 판단하는 오류를 말한다.   
+ 예를 들면,   
+    
+<font color="#c8056a">  A라는 한국인이 개고기를 먹는다.   
+   B라는 한국인이 개고기를 먹는다.   
+   그러므로, 모든 한국인은 개고기를 먹는다.   
+</font>  
+ 이러한 성급한 일반화의 오류를 필자도 저번주에 펌웨어 보정 필터를 개발 하면서 겪었기에 이렇게 글을 쓰게 되었다. 특정 수치를 넘는 데이터에 대해서만 평균값을 취해서 버퍼의 한 포인트를 삽입하는 형식으로 보정 필터를 개발하는데, 특정 수치를 설정하는 과정에서 필자가 성급한 일반화의 오류를 범했다. ![](http://ash84.net/wp-content/uploads/1/cfile9.uf.123456224AF768E23E5DEB.png)
+
+센서에서 가까운 A라는 점에서 획득한 데이터와 센서에서 가장 먼 B라는 점에서 획득한 데이터만을 분석해서 특정 수치를 기준점을 잡는 작업을 했는데 가운데 있는 점이라던지, 사각지대에 있는 포인트의 경우 데이터가 다르게 나온다는 것을 인지 하지 못하는 문제가 발생하였다.
+
+실제로 굉장히 많은 포인트를 검사하고 분석해서 필터의 조건과 기준 점을 정해야 함에도 불구하고 귀찮은 관계로 몇몇의 점을 가지고 설정한 결과 보정 필터의 부작용이 나타나는 부분도 있었고, 조건과 기준점을 피해가는 점도 있었다.
+
+프로그래밍을 하면서 굉장히 많이 이런 오류가 발생하는 것을 보았다. 본래, 시간과 비용이 정해진 회사에서의 프로그래밍의 경우 사실 정답이 아님에도 불구하고 결과만을 위해서 편법을 쓰거나 과학적이지, 논리적이지 못한 방법이 동원되는것 같다. 결과적으로 결과가 좋으면 다행일지도 모르지만, 제품화되어서 사용자가 사용하는 순간이 우리에게는 진정한 결과가 보여지는 순간이라고 생각되어 진다.
+
+어쩌면, 나는 A와 B 포인트를 분석하면서 직감적으로 성급한 일반화의 오류가 발생될 여지를 알고 있었을 지도 모르겠다. 그러면서도 빨리 끝내고 싶은 마음에 그런 오류를 발생하지 않을것이라고 기대하고 넘어갔는지도 모르겠다.
+
+</div>
+<div style="TEXT-ALIGN: justify">  
+
+</div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['데이터'">#['데이터'</a>&nbsp;
+        
+            <a href="/tag/'보정필터'">#'보정필터'</a>&nbsp;
+        
+            <a href="/tag/'성급한 일반화의 오류'">#'성급한 일반화의 오류'</a>&nbsp;
+        
+            <a href="/tag/'펌웨어'">#'펌웨어'</a>&nbsp;
+        
+            <a href="/tag/'프로그래밍']">#'프로그래밍']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

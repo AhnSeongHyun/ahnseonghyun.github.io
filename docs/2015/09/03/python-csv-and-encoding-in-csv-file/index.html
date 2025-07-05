@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>python csv and encoding in csv file.</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">python csv and encoding in csv file.</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-09-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <script src="https://gist.github.com/AhnSeongHyun/6a9470d71b68ab474f49.js"></script>
+
+<p>파이썬의 csv 모듈을 이용해서 MS Excel2010 에서 만든 csv 형식을 가져오는 코드이다. 별것 없는 코드를 올리는 이유는 단연 인코딩 때문인데 csv 모듈은 파이썬2.7 에서 다음과 같은 내용이 있다.</p>
+<blockquote>
+<p><strong>Note This version of the csv module doesn’t support Unicode input. Also, there are currently some issues regarding ASCII NUL characters. Accordingly, all input should be UTF-8 or printable ASCII to be safe; see the examples in section Examples.</strong></p>
+</blockquote>
+<p>CSV 내 영어가 아닌 한국어나 중국어, 일본어 등이 있을때 읽어올때 깨지는 문제가 발생되는데 위의 주의사항과는 결론적으로 말하자면 상관이 없다. 읽어올때 제대로 읽어오기 위해서는 CSV 자체가 만들어진 환경과 연관이 있는것 같다는것이 내 생각이다. 현재는 윈도우 한글버전내 EXCEL2010에서 CSV를 생성해서 euckr로 인코딩이 되는것 같다. 처음에는 위의 문구에 현혹되어서, 그리고 당연히 UTF-8(요즘이 어떤 시대임)로 CSV가 저장될줄 알았는데 그렇지 않았고, 일본어가 있어서 일본어 관련 인코딩도 넣어보고, CP1250, ISO5589-1 도 넣어봤는데 소용이 없었다.</p>
+<p>사용자가 절대 CSV 를 메모장에서 만들거나 혹은 EXCEL에서 만들때 인코딩을 지정해서 저장할 일이 없기 때문에 처리해줘야 하는 부분이다. 궁금한것중 하나는 일본사람이나 중국사람이 해당 윈도우내 EXCEL에서 CSV를 만들면 어떻게 처리해야 할지 궁금해진다.</p>
+<p>python 3.4.3 CSV Module : <a href="https://docs.python.org/3.4/library/csv.html">https://docs.python.org/3.4/library/csv.html</a></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['csv'">#['csv'</a>&nbsp;
+        
+            <a href="/tag/'encoding'">#'encoding'</a>&nbsp;
+        
+            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+        
+            <a href="/tag/'python2.7'">#'python2.7'</a>&nbsp;
+        
+            <a href="/tag/'파이썬']">#'파이썬']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

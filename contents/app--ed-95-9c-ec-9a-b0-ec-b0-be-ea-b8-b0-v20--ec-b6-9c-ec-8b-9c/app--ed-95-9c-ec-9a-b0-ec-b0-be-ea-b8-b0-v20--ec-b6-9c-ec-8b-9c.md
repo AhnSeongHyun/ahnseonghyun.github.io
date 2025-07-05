@@ -1,0 +1,62 @@
+---
+title: '[App] 한우찾기 v2.0 출시'
+author: 'ash84'
+pub_date: '2011-05-03'
+description: ''
+featured_image: ''
+tags: ['devMomo', '쇠고기 이력추척조회', '안성현', '이력추적', '축산물 등급 판정소', '한우', '한우찾기']
+---
+
+
+<div style="background-color: transparent; "><div style="text-align: justify;line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">장장 1개월의 개발기간. 그리고 약 일주일간의 심사과정을 지나서 지난 일요일(5/1)에 하국 앱스토어에 한우찾기 v2.0 이 정식 업데이트 되었습니다. </span></span>**<span style="font-size: 10pt; "><span style="font-family: Dotum; ">자, 그럼 무엇이 업데이트 되었는지 볼까요?</span></span>**</div><div style="text-align: justify;"></div><div style="text-align: justify;"></div></div><span style="font-size: 10pt; "><span style="font-family: Dotum; "><figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile25.uf.181AB24E4DBF80F921E165.PNG)<figcaption class="wp-caption-text">첫화면</figcaption></figure></span></span>
+
+<div><div style="text-align: justify;"><span class="Apple-style-span" style="line-height: 24px;">  
+</span></div><div style="text-align: justify;"></div>**<div style="text-align: justify;"><span class="Apple-style-span" style="line-height: 18px; font-weight: normal; ">**<span style="font-size: 10pt; "><span style="font-family: Dotum; "><span style="font-size: 11pt; background-color: rgb(255, 255, 255); "><font class="Apple-style-span" color="#000000">1. 새로운 기능 </font></span></span></span>**</span></div>**
+
+<div style="text-align: justify;"></div><span style="line-height: 2; background-color: transparent; font-size: 10pt; "><div style="text-align: justify;"><span class="Apple-style-span" style="font-family: Dotum; ">총 3가지 새로운 기능이 추가되었습니다. </span></div></span>
+
+<div style="text-align: justify;"></div><span style="line-height: 2; color: rgb(92, 127, 176); background-color: transparent; font-size: 10pt; "><div style="text-align: justify;"><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-size: 12px; line-height: 18px; "><span style="line-height: 2; color: rgb(92, 127, 176); background-color: transparent; font-size: 10pt; "><span style="font-family: Dotum; ">첫번째 새로운 기능은 </span></span>**<span style="font-size: 10pt; "><span style="font-family: Dotum; background-color: rgb(108, 168, 199); "><font class="Apple-style-span" color="#ffffff">축사물 등급판정소 조회 기능</font></span></span>**<span style="line-height: 2; color: rgb(92, 127, 176); background-color: transparent; font-size: 10pt; "><span style="font-family: Dotum; ">을 추가함으로써 기존의 한우를 키우시던 분들은 도축 후의 육질등급 뿐만 아니라 도체중과 육질등급을 알 수가 있으며, 그것을 통해서 도축한 소의 대략적인 가격을 알수 있게 되었습니다. </span></span></span></div></span>
+
+<div style="text-align: justify;"></div><span style="font-size: 10pt; "><span style="font-family: Dotum; "><figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile26.uf.1421DC4C4DBF81422CEADD.PNG)<figcaption class="wp-caption-text">축산물 품질 평가원 데이터</figcaption></figure></span></span>
+
+<div style="text-align: justify;"></div><div style="text-align: justify;"></div><div style="text-align: justify;"></div><div style="text-align: justify;"></div><span style="line-height: 2; color: rgb(140, 4, 75); background-color: transparent; font-size: 10pt; "><div style="text-align: justify;"><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-size: 12px; line-height: 18px; "><span style="line-height: 2; color: rgb(140, 4, 75); background-color: transparent; font-size: 10pt; "><span style="font-family: Dotum; ">두번째 새로운 기능은 </span></span>**<span style="font-size: 10pt; "><span style="font-family: Dotum; background-color: rgb(140, 4, 75); "><font class="Apple-style-span" color="#ffffff">자동 개월수 계산 기능</font></span></span>**<span style="line-height: 2; color: rgb(140, 4, 75); background-color: transparent; font-size: 10pt; "><span style="font-family: Dotum; ">입니다. 이게 왜 필요해? 라고 반문하시는 분들이 많으실것 같은데 실제 소를 사러 가서는 해당 한우가 생후 몇개월이 됐는지 중요하다고 하더군요. 그리고 그런 부분에 대한 확인을 서류나 혹은 소의 이빨 성장을 보고 판단한다고 합니다. 서류로 확인할 경우, 머리아프게 개월수 계산하는 것이 불편하기때문에 신속성을 위해서 제공한 기능입니다. </span></span></span></div></span>
+
+<div style="text-align: justify;"></div><span style="font-size: 10pt; "><span style="font-family: Dotum; "><figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile10.uf.13450E4D4DBF817721339B.PNG)<figcaption class="wp-caption-text">자동 개월수 계산</figcaption></figure></span></span>
+
+<div style="text-align: justify;"></div><div style="text-align: justify;"></div><span style="line-height: 2; color: rgb(6, 134, 168); background-color: transparent; font-size: 10pt; "><div style="text-align: justify;"><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-size: 12px; line-height: 18px; "><span style="line-height: 2; color: rgb(6, 134, 168); background-color: transparent; font-size: 10pt; "><span style="font-family: Dotum; ">세번째 새로운 기능은 </span></span>**<span style="font-size: 10pt; "><span style="font-family: Dotum; background-color: rgb(92, 127, 176); "><font class="Apple-style-span" color="#ffffff">소 이동 정보와 구글맵 연동 기능</font></span></span>**<span style="line-height: 2; background-color: transparent; font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#0686a8">입니다. 원래 한우는 이동할때마다(주인이 바뀐다 라는 의미), 전산등록을 해주는 것이 필수 입니다. 그리고 그러한 정보는 쇠고기 이력조회 홈페이지를 통해서 확인할 수가 있습니다. 그래서 이동정보의 주소지와 구글맵을 연동시켜 전산등록, 도축출하 등이 이루어진 장소를 대략적으로 보여주고 있습니다</font>. </span></span></span></div></span>
+
+<div style="text-align: justify;"></div><span style="font-size: 10pt; "><span style="font-family: Dotum; "><figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile27.uf.111E43474DBF818632FB68.PNG)<figcaption class="wp-caption-text">대략적인 위치정보 제공</figcaption></figure></span></span>
+
+<div style="text-align: justify;"></div><div style="text-align: justify;"></div><div style="text-align: justify;"></div>**<div style="text-align: justify;"><span class="Apple-style-span" style="line-height: 18px; font-weight: normal; ">**<span style="font-size: 10pt; "><span style="font-family: Dotum; "><span style="font-size: 11pt; ">2. 새로운 디자인 </span></span></span>**</span></div>**
+
+<div style="text-align: justify;"></div><span style="line-height: 2; background-color: transparent; font-size: 10pt; "><div style="text-align: justify;"><span class="Apple-style-span" style="font-family: Dotum; ">아, 디자인으로 욕 많이 먹었습니다. 여자친구의 ‘디자인좀 이쁘게 하지’ 라는 말이 비수를 꽂았고, 존경하는 프로그래머 형님에 디자이너를 꼭 구하라는 트위터의 말씀을 듣고 버전 2.0 들어가면서 디자이너를 섭외 했으나, 무보수로는 쉽지가 않더군요. 아무튼, 그래도 몇 가지 부분에서 새로운 디자인을 도입 했습니다. </span></div></span>
+
+<div style="text-align: justify;"></div><div style="text-align: justify;"></div><span style="line-height: 2; font-size: 10pt; "><div style="text-align: justify; "><span class="Apple-style-span" style="font-family: Dotum; background-color: rgb(255, 255, 190);">**<font class="Apple-style-span" color="#c84205"> 깔끔한 아이콘 </font>**</span></div></span><span style="line-height: 2; background-color: transparent; font-size: 10pt; "><div style="text-align: justify;"><span class="Apple-style-span" style="font-family: Dotum; ">일단 아이콘을 기존의 아이콘이 너무 성의 없어 보인다고 해서, 조금 변화를 준 형태로 바꾸었고, Shine 기능을 빼서 좀더 깔끔한 맛을 더했습니다. 처음으로 포토샵 작업을 해봤습니다.^^ ([기존아이콘 보기](http://ash84.tistory.com/682 "[http://ash84.tistory.com/682]로 이동합니다."))<figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile8.uf.16220B4B4DBFC02701AD90.PNG)<figcaption class="wp-caption-text">new Icon</figcaption></figure>
+
+ 
+
+</span></div></span>
+
+<div style="text-align: justify;"></div><div style="text-align: justify;"></div><span style="line-height: 2; font-size: 10pt; "><div style="text-align: justify; "><span class="Apple-style-span" style="font-family: Dotum; background-color: rgb(230, 236, 254);">**<font class="Apple-style-span" color="#112a75">첫 화면의 변화 </font>**</span></div></span><span style="line-height: 2; background-color: transparent; font-size: 10pt; "><div style="text-align: justify;"><span class="Apple-style-span" style="font-family: Dotum; ">첫 화면이 가장 중요하다고 하는데, 사실 저의 무리한 디자인이 한우 찾기 1.0 디자인 패악의 원인이더군요. 그래서 좀더 다양한 앱을 찾아 본 결과 진입후 화면의 모습 안에 로고를 삽입하는것이 좋다는 결론을 내어 아래와 같이 첫 화면을 바꿨습니다. <div style="text-align: center;"><figure class="wp-caption align" style="width: 315px">![](http://ash84.net/wp-content/uploads/1/cfile8.uf.193564334DBF83A112B276.PNG)<figcaption class="wp-caption-text">v2.0</figcaption></figure></div></span></div></span><span style="line-height: 2; font-size: 10pt; "><div style="text-align: justify; "><span class="Apple-style-span" style="font-family: Dotum; background-color: rgb(224, 240, 233);">**<font class="Apple-style-span" color="#105738">통일성 있는 바코드모드 아이콘</font>**</span></div></span><span style="line-height: 2; background-color: transparent; font-size: 10pt; "><div style="text-align: justify;"><span class="Apple-style-span" style="font-family: Dotum; ">바코드 모드의 아이콘 역시 지난 버전에서는 제가 직접 제작했으나, 솔직히 맘에 들지 않더군요. 가장큰 문제는 통일성이 없다는 거였습니다. 그래서 통일성 있게 바꾸었습니다. 그리고 UIPageView을 활용해서 좀더 사용자의 Interaction 적인 부분을 추가했습니다. 이 부분은 네이버 앱에서 영감을 받았습니다. <figure class="wp-caption align" style="width: 315px">![](http://ash84.net/wp-content/uploads/1/cfile23.uf.165809524DBFB2D51BA285.PNG)<figcaption class="wp-caption-text">카메라모드</figcaption></figure>  
+<font class="Apple-style-span" color="#8e8e8e"> </font>
+
+</span></div></span>
+
+<div style="text-align: justify;"></div><div style="text-align: justify;"></div><span style="line-height: 2; font-size: 10pt; "><div style="text-align: justify; "><span class="Apple-style-span" style="font-family: Dotum; background-color: rgb(255, 234, 248);">**<font class="Apple-style-span" color="#e31600">매직넘버 Five</font>**</span></div></span><span style="line-height: 2; background-color: transparent; font-size: 10pt; "><div style="text-align: justify;"><span class="Apple-style-span" style="font-family: Dotum; ">탭바 역시 Magic Number 5. 즉, 사람이 가장 편안하고, 안정감 있게 느낀다는 5단 탭으로 변경했습니다. 그리고 아이콘의 변화도 주었구요, 더불어서 용어 탭을 두어 좀더 다양한 정보 제공을 주었습니다. <figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile25.uf.172DF8544DBFB3571CDFF1.PNG)<figcaption class="wp-caption-text">대세는 Magic Number 5</figcaption></figure>
+
+</span></div></span>**<div style="text-align: justify;"><span class="Apple-style-span" style="line-height: 18px; font-weight: normal; ">**<span style="font-size: 10pt; "><span style="font-family: Dotum; ">3. 그리고.. Episode</span></span>**</span></div>**
+
+<div style="text-align: justify;"></div></div><div style="line-height: 2; "><div style="text-align: justify;"> 많은 분들이 성원해 주셔서 감사합니다. 사실 목장을 하시는 분들, 축산업에 종사하시는 분들을 위해서 앱을 만들고자 했던 취지 자체가 그래두 성공적이었던것 같아요. 매일매일 많은 분들은 아니지만 지속적으로 다운을 받으신다는게 아무래도 널리 쓰고 있다는 것이겠지요.제가 어느 자소서에도 썻듯이, 프로그램은 사용자가 써야 제맛입니다. 즉, 본연의 가치가  쓰임 자체에 있는 것이죠. 쓰여지지 않는 프로그램을 한 대학원까지 해서 5년 정도 만들었던것 같아요. 슬펐고, 짜증났고. 그래서 쓰는 프로그램을 만들자는 취지에서 앱 개발을 시작했는데, 본업보다 더 짜릿하네요. 
+
+[![](http://ash84.net/wp-content/uploads/1/cfile21.uf.182CEE4F4DBFC8291A13FE.png)](http://itunes.apple.com/kr/app/id427300296?mt=8 "[http://itunes.apple.com/kr/app/id427300296?mt=8]로 이동합니다.")
+
+  
+
+</div><div style="text-align: justify;"> SNS를 통해서 피드백을 받곤 하는데, 이 어플의 필요성에 대해서 의문을 가지시는 분도 있는 반면에 어떤 분은 새로운 앱을 제시하기도 하면서 유료로 만들면 사겠다고 하시는 분도 있었습니다. 의외로 오프라인 마케팅의 위력도 실감했습니다. 거래하시는 사료업체에 한번 소개를 했더니 갑자기 그 날 다운로드 횟수가 폭발적으로 증가하더군요. v2.0 이 나오면서 키노트로 영상을 제작하고, 프리미어로 음악과 합치는 작업도 해보고 정말 어렵지만 행복했던 작업이었던것 같습니다. 
+
+한우찾기 어플에 성능향상 작업은 사실 좀더 할 예정이긴 합니다만, 메이저 급의 기능 추가와 함께 릴리즈 할까 생각합니다. 그 외의 버그나 혹은 문제에 대해서는 수시로 메일링 체크를 하고 있으니 알려주시면 감사하겠습니다. ^^
+
+<font class="Apple-style-span" color="#57048c">*ps) 기술적인 질문 사항이 있으시면 언제든지 댓글 달아 주세요(소셜댓글) *</font>
+
+</div></div>
+

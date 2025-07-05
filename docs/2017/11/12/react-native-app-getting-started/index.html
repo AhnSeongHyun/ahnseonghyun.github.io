@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>React Native App 시작하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">React Native App 시작하기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2017-11-12</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>이 글은  <a href="https://facebook.github.io/react-native/docs/getting-started.html">React Native Getting Started</a> 에 대한 삽질기입니다. </p>
+<h3><strong>node.js &amp; npm 설치</strong></h3>
+<p>https://nodejs.org/en/download/</p>
+<h3><strong>설치 진행</strong></h3>
+<pre><code>$ npm install -g create-react-native-app
+$ create-react-native-app toystory_app
+</code></pre>
+<p>npm5 에 문제가 있다고 아직 지원을 못한다는 에러 발견 </p>
+<ul>
+<li>https://github.com/npm/npm/issues/16991</li>
+</ul>
+<p>아래와 같이 npm 버전을 돌리는.. (몬지 몰겠음?)</p>
+<pre><code class="language-shell">$ sudo npm i npm@4 -g
+Password:
+/usr/local/bin/npm -&gt; /usr/local/lib/node_modules/npm/bin/npm-cli.js
++ npm@4.6.1
+added 32 packages, removed 193 packages and updated 267 packages in 10.019s
+$ create-react-native-app toystory_app
+The directory `toystory_app` contains file(s) that could conflict. Aborting.
+$ ls
+README.md            config.py            toystory_app
+__pycache__          crawling_coordinator
+app                  db
+$ rm -rf toystory_app
+$ create-react-native-app toystory_app
+</code></pre>
+<h3><strong>실행</strong></h3>
+<p>toystory_app 이 생겼고 이제 실행을 해보자. </p>
+<p>또 에러 발생.. 암 걸릴듯 </p>
+<pre><code>$ cd torystory_app
+$ npm start
+...
+
+21 error code ELIFECYCLE
+22 error errno 1
+23 error toystory_app@0.1.0 start: `react-native-scripts start`
+23 error Exit status 1
+24 error Failed at the toystory_app@0.1.0 start script.
+24 error This is probably not a problem with npm. There is likely additional logging output above.
+25 verbose exit [ 1, true ]
+</code></pre>
+<p><strong>watchman 설치</strong></p>
+<pre><code>brew install watchman
+</code></pre>
+<p>watchman 을 설치하고 다시 실행하게 되면 아래와 같은 화면이 출력된다. </p>
+<p><img alt="https://farm5.staticflickr.com/4580/38332773422_5627419164_b.jpg" src="https://farm5.staticflickr.com/4580/38332773422_5627419164_b.jpg" /></p>
+<p>expo 라는 앱을 아이폰에 다운을 받고 개발환경와 동일한 wifi 를 연결한 후에 expo 를 실행해서 위의 QR코드를 찍으면 아래와 같은 화면으로 연결된다. 별 다른 화면이 없는데, 실제 App.js 에 있는 내용이 출력된 것이다. </p>
+<pre><code class="language-js">export default class App extends React.Component {
+  render() {
+    return (
+      &lt;View style={styles.container}&gt;
+        &lt;Text&gt;Open up App.js to start working on your app!&lt;/Text&gt;
+        &lt;Text&gt;Changes you make will automatically reload.&lt;/Text&gt;
+        &lt;Text&gt;Shake your phone to open the developer menu.&lt;/Text&gt;
+      &lt;/View&gt;
+    );
+  }
+}
+</code></pre>
+<p><img alt="https://farm5.staticflickr.com/4576/37649918844_1095ea4b3b_b.jpg" src="https://farm5.staticflickr.com/4576/37649918844_1095ea4b3b_b.jpg" /></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'react'">#'react'</a>&nbsp;
+        
+            <a href="/tag/'react native'">#'react native'</a>&nbsp;
+        
+            <a href="/tag/'watchman']">#'watchman']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

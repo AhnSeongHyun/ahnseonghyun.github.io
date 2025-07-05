@@ -1,0 +1,22 @@
+---
+title: 'Console.log() Browser Support'
+author: 'ash84'
+pub_date: '2015-12-23'
+description: ''
+featured_image: ''
+tags: ['browser support', 'console.log', 'dev', 'web']
+---
+
+
+부끄러운 자기고백이다. 만든 결제창이 IE9 에서 문제가 있다는 연락을 받았다. 현상은 버튼을 누르면 다음 단계로 진행되지 않는 이슈였는데, 여느 IE9 에서 재현을 시작했다. 쉽게 재현되었다. 결제버튼을 누른후 다음 단계로 넘어가지 못하는 문제를 발견 하였다. 그리고 뭐가 문제인지 보기 위해서 F12 개발자 도구를 열어서 다시 처음부터 진행을 했다. 그런데 이번에는 제대로 다음 단계로 넘어가는것이다. 개발자도구 콘솔창에는 어떤 에러도 나오지 않았다. 자바스크립트 코드를 찬찬히 보기 시작했다. `console.log()` 함수가 몇군데 박혀있는것을 확인했다. IE 하위버전에서 `console.log()` 함수를 인식하지 못하는 것은 알고 있었지만, IE9 이라고 생각하지는 않았다. IE7, 6 즘이겠지라고 생각했다. 다시 개발자 도구를 끈 상태로 테스트를 해보면 똑같이 다음단계로 넘어가지 못하는것을 발견했다. 혹시나 하는 마음에 `console.log()`를 지웠더니 개발자 도구 끈 상태에서 잘 되었다. 그렇다면, IE9 상에서 `console.log()` 가 개발자 도구와 뭔가 관계가 있을까 하는 마음에 브라우저 지원 부분을 찾아 봤다.
+
+[http://caniuse.com/#feat=console-basic](http://caniuse.com/#feat=console-basic)
+
+위의 링크에 들어가 보시면, IE8, 9는 색깔이 다르고 마우스를 올려보면, Partial Support 라고 뜬다. 그리고 각주로 1번이 붙어 있는데 1번의 내용은 아래와 같다.
+
+> Only supports console functions when developer tools are open, otherwise the console object is undefined and any calls will throw errors.
+
+**해석을 하자면, console 기능은 개발자 툴에서만 열리고, 다른경우에는 console 객체가 undefined 로 지정되고, 호출하게 되면 에러를 발생시킨다는 이야기다. **모든것이 이해가 되었다. 결론적으로 말하자면 IE8, 9는 부분적으로 지원하는데, 개발자 도구에 한하며 IE6,7은 지원하지 않는다. console.log() 사건을 뒤로하면서 뭔가 빌드툴 같은것을 써야겠다는 생각이 들었다. 조심이야 하겠지만, 나를 믿을수가 없으니.
+
+
+

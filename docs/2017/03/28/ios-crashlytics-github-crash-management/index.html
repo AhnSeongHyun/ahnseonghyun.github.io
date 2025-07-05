@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(iOS) crashlytics 을 이용한 crash 관리 및 github 연동</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(iOS) crashlytics 을 이용한 crash 관리 및 github 연동</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2017-03-28</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">vingle 에 갔을 때, 앱 개발 관련 소개를 들으면서 crashlytics 라는 서비스가 있다고 해서 메모해 두었는데, 실제 업무에 적용해 보았다.(</span><a href="http://besuccess.com/2013/01/28496/">crashlytics 는 트위터에 인수되었다고 한다.</a>) <span style="background-color: transparent; font-size: 11pt;">일단 crashlytics 는 간단히 말해서 앱에서 crash 가 나게되면 해당 정보를 서버로 전송해주고 개발자는 해당 사이트의 웹을 통해서 확인하는 방식인데, 좋은 점은 crash 가 떨어졌을때 아이폰을 가지고 crash 로그를 확인하면 메모리 주소가 나와서 진짜 문제가 있는 부분을 찾기 어려운 경우가 많은데, </span><span style="background-color: transparent; font-size: 14.44444465637207px; line-height: 32.22222137451172px;">crashlytics은 비교적 정확히 문제를 찾아 준다는 점이다. </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;"> </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;"> 일단 개별적으로 구축할 수도 있겠지만 몇 개 안되는 앱을 개발하는 과정에서 사실 큰 공수가 아닐 수 없기 때문에 사용하게 되었다. </span></p>
+<p><span style="font-size: 11pt;"><strong>가입 방법</strong></span></p>
+<p><span style="font-size: 11pt;">그냥 가입하면 되는게 아니라 crashlytics 홈페이지에 가서 가입 신청을 누르고 이메일 주소를 입력하고 나서 기다리면 만 하루정도 후에 가입 관련 이메일이 오고 가입되게 된다. </span></p>
+<p><span style="font-size: 11pt;"><strong>설치 방법 </strong></span></p>
+<p><span style="font-size: 11pt;">iOS 냐 Andriod 냐에 따라 다른데, 일단 iOS 기준으로 설명하자면, crashlytics 에서 맥에 설치할수 있는 플러그인 같은 프로그램을 제공하고 해당 프로그램을 설치하면 아래와 같이 맥상단의 메뉴에 작은 아이콘으로 표시될것이다. 그리고 나서 해당 플러그인에서 하라는 데로 하면 된다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile24.uf.243DAB475270B066133246.png" /></p>
+<p><span style="font-size: 11pt;">crashlytics framework 를 xcode 안에 넣고, apple script를 본인의 xcode project 의 build phase 에 넣고 build 를 하고 마지막으로 발급된 key를 appDelegate.m 파일내  </span><span style="background-color: transparent; font-size: 11pt; line-height: 1.5;">didFinishLaunchingWithOptions: 함수내 제일 상단에 다음의 코드처럼 적어주면 된다. </span></p>
+<p><span style="background-color: transparent; font-size: 9pt; line-height: 1.5;"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"></span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size:10pt;">[</span><span class="s2" style="font-size: 10pt;">Crashlytics</span><span class="s1" style="font-size: 10pt;"></span><span class="s3" style="font-size: 10pt;">startWithAPIKey</span><span class="s1" style="font-size: 10pt;">:</span><span style="font-size: 10pt;">@”349123401928340283</span><span style="font-size: 10pt;">“</span><span style="font-size:10pt;">];</span>
+
+</div>
+<p><span class="s1"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><strong>관리 </strong></span></p>
+<p><span style="font-size: 11pt;">crash 가 오게 되면 맥의 플러그인에 보여지게 되고, 웹에서도 볼수 있다. 맥의 플러그인에서 누르면 사실 웹으로 이동하고 각각의 crash 된 것을 볼수가 있다. 같은 부분에서 발생한것은 취합해서 보여주고 몇명의 유저가 crash 를 겪었는지를 보여준다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile1.uf.2434154B5270B0A426A810.png" /></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile8.uf.2136AD4A5270B0C91ED357.png" /></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><strong>github와 연동 </strong></span></p>
+<p><span style="font-size: 11pt;">웹상의 관리자에서 settings =&gt; app 에 들어가게 되면 Integration 이라는 메뉴가 있는데 해당 메뉴에 가면 현재는 10개의 서비스와 연동되는 것을 볼수가 있다. 그중에 github와 연동을 활성화하면 자동으로 활성화가 되고 crash가 발생하면 issue로 등록할 repository 를 지정해 주면 끝난다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile27.uf.214AAB3A5270B0DC27FD0A.png" /></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;">그래서 crash 가 발생이 되면 </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;">Crashlytics 서비스에서 볼수가 있게 되고, 자동으로 지금 사용하는 git<span style="font-size: 11pt;">hub repository 로 들어가게 된다. 아래와 같이 말이다. 그러나 github 에 올라간 이슈의 처리에 대해서는 </span></span><span style="font-size: 12px; line-height: 18px; background-color: transparent;"><span style="font-size: 11pt;">Crashlytics 에 반영되지는 않는다.</span> </span></p>
+<p><span style="background-color: transparent; font-size: 11pt; line-height: 1.5;"><br />
+</span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile8.uf.275421345270B1293585A9.png" /></p>
+<p><span style="background-color: transparent; font-size: 11pt; line-height: 1.5;"><br />
+</span></p>
+<p><span style="background-color: transparent; font-size: 9pt; line-height: 1.5;"><br />
+</span></p>
+<p><span style="background-color: transparent; font-size: 11pt; line-height: 2;"><strong>안드로이드는?</strong></span></p>
+<p><span style="font-size: 11pt;">당연히 된다. <a href="http://www.sjava.net/342">http://www.sjava.net/342</a> 를 참고하면 된다. </span></p>
+<p><span class="s1"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"></span></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['Crashlytics'">#['Crashlytics'</a>&nbsp;
+        
+            <a href="/tag/'Crashlytics logger'">#'Crashlytics logger'</a>&nbsp;
+        
+            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+        
+            <a href="/tag/'github'">#'github'</a>&nbsp;
+        
+            <a href="/tag/'IOS']">#'IOS']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

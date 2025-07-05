@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>rotatelogs 사용법</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">rotatelogs 사용법</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-11-05</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>링크 : <a href="https://httpd.apache.org/docs/2.2/ko/programs/rotatelogs.html">https://httpd.apache.org/docs/2.2/ko/programs/rotatelogs.html</a></p>
+<ul>
+<li>Apache와 함께 자동 설치</li>
+<li>/usr/local/apache/bin/rotatelogs</li>
+</ul>
+<h4><strong>사용법</strong></h4>
+<p>rotatelogs [ -l ] logfile [ rotationtime [ offset ]] | [ filesizeM ]</p>
+<h4><strong>실행 옵션</strong></h4>
+<table class="confluenceTable tablesorter tablesorter-default stickyTableHeaders"><thead class="tableFloatingHeaderOriginal"><tr class="tablesorter-headerRow"><th class="confluenceTh sortableHeader" data-column="0" tabindex="0"><div class="tablesorter-header-inner">옵션</div></th><th class="confluenceTh sortableHeader" data-column="1" tabindex="0"><div class="tablesorter-header-inner">내용</div></th></tr></thead><tbody><tr><td class="confluenceTd">-l</td><td class="confluenceTd">GMT 대신 지역시간을 사용한다. (BST or DST)</td></tr><tr><td class="confluenceTd">logfile</td><td class="confluenceTd">로그파일의 경로, ‘%’ 가 있으면 strftime(3)의 형식 문자열로 처리, 없으면,초단위 시간 .nnnnnnnnnn을 자동으로 붙인다.</td></tr><tr><td class="confluenceTd">rotationtime</td><td class="confluenceTd">로그파일을 순환할 초단위 시간. 24시간=86400</td></tr><tr><td class="confluenceTd">offset</td><td class="confluenceTd">UTC에서 분단위 시간차이. 생략하면 0으로 가정하여 UTC를 사용한다.  UTC -5 => -300</td></tr><tr><td class="confluenceTd">filesizeM</td><td class="confluenceTd">시간이 아닌 크기를 지정, 최대 파일크기 뒤에 `M`을 붙인다. rotationtime과 offset 대신 이 파라미터를 사용한다.</td></tr></tbody></table>
+<ul>
+<li>파이프를 이용해서 아파치의 access, error 로그를 아파치가 직접 쓰지 않고 rotatelogs 가 수행한다.</li>
+<li>Apache 는 서버가 시작할때 파이프로 연결된 rotatelogs 를 실행하고, 죽으면 다시 시작시킨다.</li>
+<li>파이프로 연결된 로그 프로세스(rotatelogs) 는 Apache httpd 부모 프로세스에서 실행하기 때문에 보통 root로 실행되고 해당 프로세스의 PPID 가 Apache httpd 부모 프로세스의 PID 이다.</li>
+</ul>
+<h4><strong>사용의 예</strong></h4>
+<p>ErrorLog "|/usr/local/apache/bin/rotatelogs /usr/local/apache/logs/error-%Y-%m-%d.log 86400 +540" TransferLog "|/usr/local/apache/bin/rotatelogs /usr/local/apache/logs/app/access-%Y-%m-%d.log 86400 +540"</p>
+<ul>
+<li>864000 = 24 시간에 대한 rotationtime(초단위)</li>
+<li>+540 은 UTC에서의 시간차이(UTC+9 =&gt; 9 * 60= 540)</li>
+</ul>
+<h4><strong>지시어</strong></h4>
+<div class="table-wrap"><table class="confluenceTable tablesorter tablesorter-default stickyTableHeaders"><thead class="tableFloatingHeader"><tr class="tablesorter-headerRow"><th class="confluenceTh sortableHeader" data-column="0" tabindex="0"><div class="tablesorter-header-inner">지시어</div></th><th class="confluenceTh sortableHeader" data-column="1" tabindex="0"><div class="tablesorter-header-inner">내용</div></th></tr></thead><tbody><tr><td class="confluenceTd">%w</td><td class="confluenceTd">1-자리 요일수(주의 첫번째 날은 일요일)</td></tr><tr><td class="confluenceTd">%m</td><td class="confluenceTd">2-자리 달</td></tr><tr><td class="confluenceTd">%M</td><td class="confluenceTd">2-자리 분</td></tr><tr><td class="confluenceTd">%I(대문자 i)</td><td class="confluenceTd">2-자리 시간(12시간 시계)</td></tr><tr><td class="confluenceTd">%H “</td><td class="confluenceTd">2-자리 시간(24시간 시계)</td></tr><tr><td class="confluenceTd">%y</td><td class="confluenceTd">2-자리 연도</td></tr><tr><td class="confluenceTd">%d</td><td class="confluenceTd">2-자리 일</td></tr><tr><td class="confluenceTd">%W</td><td class="confluenceTd">2-자리 주일수(주의 첫번째 날은 월요일)</td></tr><tr><td class="confluenceTd">%U</td><td class="confluenceTd">2-자리 주일수(주의 첫번째 날은 일요일)</td></tr><tr><td class="confluenceTd">%S</td><td class="confluenceTd">2-자리 초</td></tr><tr><td class="confluenceTd">%j</td><td class="confluenceTd">3-자리 날짜수</td></tr><tr><td class="confluenceTd">%Y</td><td class="confluenceTd">4-자리 연도</td></tr><tr><td class="confluenceTd">%b</td><td class="confluenceTd">(지역화된) 3-문자 달 이름</td></tr><tr><td class="confluenceTd">%a</td><td class="confluenceTd">(지역화된) 3-문자 요일 이름</td></tr><tr><td class="confluenceTd">%p</td><td class="confluenceTd">(지역화된) 12시간 시계의 am/pm</td></tr><tr><td class="confluenceTd">%x</td><td class="confluenceTd">(지역화된) 날짜</td></tr><tr><td class="confluenceTd">%c</td><td class="confluenceTd">(지역화된) 날짜와 시간</td></tr><tr><td class="confluenceTd">%X</td><td class="confluenceTd">(지역화된) 시간</td></tr><tr><td class="confluenceTd">%B</td><td class="confluenceTd">(지역화된) 완전한 달 이름</td></tr><tr><td class="confluenceTd">%A</td><td class="confluenceTd">(지역화된) 완전한 요일 이름</td></tr><tr><td class="confluenceTd">%%</td><td class="confluenceTd">문자그대로 `%’</td></tr><tr><td class="confluenceTd">%Z</td><td class="confluenceTd">시간대 이름</td></tr></tbody></table></div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['apache logs'">#['apache logs'</a>&nbsp;
+        
+            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+        
+            <a href="/tag/'logrorate'">#'logrorate'</a>&nbsp;
+        
+            <a href="/tag/'roratelogs']">#'roratelogs']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

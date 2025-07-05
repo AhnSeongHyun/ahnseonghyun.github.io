@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>MVP의 늪</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">MVP의 늪</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2023-09-24</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>두번째 스타트업을 다니면서 그리고 초창기부터 시리즈C까지 경험하면서 제품을 만드는 과정에서 느낀 부분이 있다. 아직까지 답을 찾지는 못한 부분이지만 개인적으로 안타까움에 글을 써 내려가본다. </p>
+<p>처음에 정한 아이템과 그에따른 제품/서비스라인이 있겠지만 항상 그걸로 고객이 만족하는 것은 아니다. 결국 고객은 뭔가를 더 해달라고 하거나 혹은 기업 이익의 관점에서 보면 더 수익을 내기 위해서는 연관 혹은 다른 제품을 만들게 된다. </p>
+<p>이 과정에서 뭐가 잘 될지를 모르니 하나의 팀을 가지고 계속 다른 mvp 아이템들을 만들어나가기 시작한다. PMF를 찾는것은 당연하고 계속 mvp를 만들다보면 PMF에도 맞고 충분한 이익을 가져올수 있는 것을 찾으면 너무 좋다. </p>
+<p>그러나 그렇지 못했을 때에는 계속 mvp를 만들고 문제가 생기기 시작한다. </p>
+<p>첫번째 문제는 운영의 문제다. A mvp를 만들고 세상에 내놓고 B mvp를 만들러 떠난다. 그러나 고객은 A를 쓰고 있고 그에 따른 운영이슈가 발생을 한다. 백오피스나 리툴같은 운영툴을 만들면 좋지만 잘 되지 않는 제품에 고도화란 없고 다음 mvp가 우릴 기다리고 있다. </p>
+<p>A를 버리면 좋지만 그럴수는 없다. 왜냐하면 거기에서 생겨나는 고객들이 있기 때문이다. 이 경우 자금 사정이 있는 팀이라면 운영팀을 만들겠지만 그렇지 않은 경우 개발팀이 이를 대신한다. </p>
+<p>두번째 문제는 리소스의 문제다. 첫번째 운영이슈와도 결부가 되는데 결국 1명의 사람이 하루에 쓸 수 있는 시간은 한정이 되어있다. 운영이슈가 발생하면 심각도에 따라서 보겠지만 어쨋든 시간을 써야한다. 그 개발팀의 시간을 아끼기 위해서 CX나 혹은 앞단에 여러가지 버퍼를 두기 시작한다. 추가적인 리소스가 들어가고 그에따른 비용이 소모된다. </p>
+<p>mvp를 계속 만들다보면 운영이슈가 아니더라도 A mvp에 대한 유지보수나 고도화를 해야할 경우가 생긴다. 그럴경우 B mvp는 또 stop을 하게된다. 그러면 결국 개발자를 더 채용하게 된다. 왜냐하면 기업을 더 빨리 가고 싶고, 제품/서비스를 빨리 만들려면 결국 병렬로 가야하고 추가채용을 해야하고 비용을 쓸 수 밖에 없게 된다. </p>
+<p>세번째 문제는 동기부여의 문제다. 사람들이 가장 간과하는 부분이다. 개발팀이 A -&gt; B -&gt; C를 지난다고 했을때 그 안에 있는 사람들은 어떤 생각을 가질까? </p>
+<p>사람을 리소스로 바라보면 무슨문제가 있을까 싶지만 사실 저 안에서 사람들은 다양한 생각들을 가지게 된다. </p>
+<p>어떤 사람은 자신이 담당한 A mvp에 대해서 더 디벨롭을 시키고 싶다. 잘 안되고 B를 해야한다고 해서 이해는 하고 지나가지만 마음속 한켠에는 A에 대한 미련이 계속 남아있게 된다. </p>
+<p>어떤 사람을 지속되는 이전 mvp에 대한 유지보수와 새로운 mvp 사이에서의 일에 대한 인지부하를 겪게되고 동기부여가 되지 않는다. </p>
+<p>어떤 사람은 어차피  다음 mvp로 갈거 왜 공을 들여서 만들필요가 있는가에 대해서 반문을 하게 된다. </p>
+<p>나는 실제로 이 3가지 케이스를 모두 보았고, 이런 이유로 퇴사를 결심하시는 분들을 많이 봤다.  개발자로써 실력이 없거나 열심히 하지 않았던 혹은 어떤 다른 심각한 문제가 있었던 경우인데도 퇴사를 결심하고 애기를 해보면 저런 케이스들 중 하나였다. </p>
+<hr />
+<p>가장 안좋은 시나리오는 애매하게 유지가 되는 케이스다. 아예 망하면 A mvp를 버리고 홀가분하게 B를 시작하면 되는데 애매하게 수익이 나고 고객이 진입하는 경우에 기업은 놓지를 못한다. 특히 스타트업은 더 목마르기 때문에 놓지를 못한다. </p>
+<p>가장 좋은 시나리오는 당연히 하는것마다 많은 수익을 내고 그것만 개발/운영하면서 서비스와 기업이 잘 되는 경우겠지만 이건 너무 희망사항이다. </p>
+<p>그나마 절충할 수 있는 케이스는 적당한 케이스에서 전담팀/스쿼드를 만들어서 분리하는 것인데, <code>적당한</code>의 기준을 잡기가 애매한것도 사실이다. 요즘처럼 스타트업이 어려운 시기에는 투자받기도 사실 어려워서 예전처럼 사람을 채용할 수 없다. </p>
+<p>무료서비스로 고객을 모으고 유료화하는 전략의 경우 이 mvp의 늪에 더 빠지기 쉬운것 같다. 차라리 유료서비스로 시작하는것도 지금 같은 시기엔 더 낫다는 생각이 든다. </p>
+<p>기업의 확장에는 정말 조심을 해야한다는 것을 더 느끼고, 어떤 제품을 만든다는 것은 그에따른 기능과 기능에 따른 운영이 따라온다는 것을 기억해야한다. </p>
+<p>이 글을 읽는 분들이 mvp의 늪에 빠지진 않았나 하는 스스로의 점검을 해보면 좋을것 같다.</p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['mvp'">#['mvp'</a>&nbsp;
+        
+            <a href="/tag/'startup'">#'startup'</a>&nbsp;
+        
+            <a href="/tag/'essay']">#'essay']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

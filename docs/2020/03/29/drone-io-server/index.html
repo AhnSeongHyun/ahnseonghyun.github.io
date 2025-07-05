@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>drone.io - server 설치하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">drone.io - server 설치하기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2020-03-29</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>최근에 drone.io 를 사용할 일이 있었는데, 생각보다 자료가 없어서 이번에는 server 구성에 대해서 다루고 다음 글에서는 agent 에 대해서 다룰 예정이다. </p>
+<h3>개요</h3>
+<ul>
+<li>사이트 : <a href="https://drone.io/">https://drone.io/</a></li>
+<li>jenkins, travis-ci, github actions 처럼 CI 및 CD 까지 할 수 있는 툴</li>
+</ul>
+<h3>특징</h3>
+<ul>
+<li>yaml 문법으로 정의 할 수 있다,.(젠킨스에 비해서 편하다)</li>
+<li><a href="http://plugins.drone.io/">다양한 plugins 를 기반으로 하고 있다.</a></li>
+<li><code>golang</code> 로 되어 있다.</li>
+</ul>
+<h3>구성</h3>
+<ul>
+<li>server : drone.io 사이트에 대한 서버 역할</li>
+<li>agent : 개별 repository 에서 실행하는 pipeline 을 수행하는 역할, runner 라고 표현한다. <ul>
+<li>Docker Runner, Exec Runner, SSH Runner </li>
+</ul>
+</li>
+</ul>
+<h2>server 설치하기</h2>
+<ul>
+<li>다양한 VCS 를 제공하지만 여기서는 github 와 연결하는 것을 기반으로 설명한다.</li>
+<li><a href="https://docs.drone.io/installation/providers/github">https://docs.drone.io/installation/providers/github</a></li>
+</ul>
+<h3>1) github OAuth app 만들기</h3>
+<ul>
+<li><code>github &gt; Settings &gt; Developer Settings &gt; OAuth Apps</code> 에서 OAuth app 을 만든다. </li>
+<li>callback url 을 지정하려면 public url 이 있어야 하는데 테스트 시에는 <code>ngrok</code> 을 이용해서 public url 을 가져올 수 있다. (<a href="https://medium.com/@jccguimaraes/run-a-drone-ci-pipeline-locally-f4bfb4741c53">https://medium.com/@jccguimaraes/run-a-drone-ci-pipeline-locally-f4bfb4741c53</a>)</li>
+<li>public url 을 가지고 github oAuth apps 의 callback url 에 해당 값을 넣고 app 을 만든다.</li>
+</ul>
+<p><img alt="" src="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/drone-io-server/github-oauth-app.png" /></p>
+<h3>2) drone server 설치하기</h3>
+<ul>
+<li>server 와 agent(runner) 사이의 인증을 위해서 shared secret 을 만든다</li>
+</ul>
+<pre><code>$ openssl rand -hex 16
+&gt; adc394d69c6ef00a933c32be5144ca18
+</code></pre>
+<ul>
+<li>download</li>
+</ul>
+<pre><code class="language-shell">$ docker pull drone/drone:1.6.0
+</code></pre>
+<ul>
+<li>configurations &amp; run</li>
+</ul>
+<pre><code class="language-shell">$ docker run \
+      --volume=/var/lib/drone:/data \
+      --env=DRONE_AGENTS_ENABLED=true \
+      --env=DRONE_GITHUB_SERVER=https://github.com \
+      --env=DRONE_GITHUB_CLIENT_ID=${DRONE_GITHUB_CLIENT_ID} \
+      --env=DRONE_GITHUB_CLIENT_SECRET=${DRONE_GITHUB_CLIENT_SECRET} \
+      --env=DRONE_RPC_SECRET=${DRONE_RPC_SECRET} \
+      --env=DRONE_SERVER_HOST=${DRONE_SERVER_HOST} \
+      --env=DRONE_SERVER_PROTO=${DRONE_SERVER_PROTO} \
+      --publish=80:80 \
+      --publish=443:443 \
+      --restart=always \
+      --detach=true \
+      --name=drone \
+      drone/drone:1.6.0
+</code></pre>
+<ul>
+<li><code>DRONE_RPC_SECRET</code> : 앞에서 설정한 shared secret 값을 넣어준다. server 와 agent(runner) 가 통신할때 사용한다.</li>
+<li><code>DRONE_GITHUB_CLIENT_ID, DRONE_GITHUB_CLIENT_SECRET</code> : 앞 단계에서 github oAuth app 을 만들었는데, 그 상세정보에 있는 <code>client_id</code>,  <code>client_secret</code> 를 넣어준다. </li>
+<li><code>DRONE_SERVER_HOST, DRONE_SERVER_PROTO</code> : DRONE_SERVER_HOST, DRONER_SERVER_PROTO 는 drone 에서 github repo 를 Activate 할때  webhook 지정 시 사용된다. 예를 들어 DRONER_SERVER_PROTO=http, DRONE_SERVER_HOST=127.0.0.1 로 지정하게 되면 <a href="http://127.0.0.1">http://127.0.0.1</a> 로 repo 내 webhook 설정에 http://127.0.0.1 로 설정된다.</li>
+</ul>
+<p><img alt="" src="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/drone-io-server/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2020-03-29+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+6.31.58.png" /></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['server'">#['server'</a>&nbsp;
+        
+            <a href="/tag/'ci'">#'ci'</a>&nbsp;
+        
+            <a href="/tag/'drone.io'">#'drone.io'</a>&nbsp;
+        
+            <a href="/tag/'drone']">#'drone']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

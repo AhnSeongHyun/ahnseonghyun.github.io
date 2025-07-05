@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Rust 기본 문법</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Rust 기본 문법</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2018-10-04</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <h2>변수</h2>
+<ul>
+<li>변수는 불변성</li>
+<li>가변성 변수는 <code>mut</code> 를 추가</li>
+</ul>
+<pre><code class="language-rust">        let mut x = 5;
+</code></pre>
+<ul>
+<li>상수<ul>
+<li>상수는 mut 을  쓸수 없음. 불변성 그 자체</li>
+<li>const</li>
+<li>유형(데이터 타입)을 선언해야한다.</li>
+<li>상수표현식으로만 설정, 실행시간에 설정될 수 없다.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-rust">        const MAX_POINTS: u32 = 100_000;
+</code></pre>
+<ul>
+<li>Shadowing<ul>
+<li>같은 변수 이름을 써서 가리는 것</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-rust">        let x = 1; 
+        let x = x+1; 
+</code></pre>
+<ul>
+<li><code>mut</code> 사용과의 차이점</li>
+<li>변경이후 변수가 불변성을 가지느냐</li>
+<li>유형(데이터 타입)을 변경 할 수 있으면서, 같은 변수명을 유지</li>
+<li>mut 을 이용더라도 유형 변경을 해서 값을 대입 시킬 수는 없다.</li>
+</ul>
+<h2>데이터 타입</h2>
+<ul>
+<li>러스트는 타입이 <strong>고정된 언어</strong></li>
+<li>스칼라 타입 : 하나의 값으로 표현되는 타입<ul>
+<li>정수형<ul>
+<li>8비트 : <code>i8(가장좋은 선택, 가장 빠르다)</code>, <code>u8</code></li>
+<li>16비트 : <code>i16</code>, <code>u16</code></li>
+<li>32비트 : <code>i32</code>, <code>u32</code></li>
+<li>64비트 : <code>i64</code>, <code>u64</code></li>
+<li>arch :  isize, usize (컴퓨터의 아키텍처에 따라 결정)</li>
+<li>정수형 리터럴<ul>
+<li>Decimal : 98_222</li>
+<li>HEX : 0xff</li>
+<li>Octal : 0o88</li>
+<li>Binary : 0b1111_0000</li>
+<li>Byte(u8 only) : b'A'</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>부동소수점 숫자<ul>
+<li>f32 : 1배수 정밀도</li>
+<li>f64 : 2배수 정밀도</li>
+</ul>
+</li>
+<li>boolean : <code>true</code> <code>false</code></li>
+<li>문자 : <code>char</code> , 단일 문자 표현<ul>
+<li>작은따옴표로 표현</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-rust">            let c = 'z'; 
+</code></pre>
+<ul>
+<li>복합타입<ul>
+<li>튜플 : 소괄호로 표현, 타입을 명시해도 되고 안해도 된다.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-rust">        let tup: (i32, f64, u8) = (500, 6.4, 1);
+        let (x, y, z) = tup;
+        // 직접접근 
+        tup.0, tup.1, tup.2
+</code></pre>
+<pre><code>- 배열 : 모든요소가 같은 타입. [index] 를 통한 접근
+</code></pre>
+<h2>함수</h2>
+<ul>
+<li>fn test(x: i32, y: i32)</li>
+<li>반환 : <code>x+1</code> 세미콜론 없이<ul>
+<li><code>return</code> 키워드 사용 가능</li>
+</ul>
+</li>
+<li>함수포인터</li>
+</ul>
+<pre><code class="language-rust">    // 타입 추론 없이
+    // without type inference
+    let f: fn(i32) -&gt; i32 = plus_one;
+
+    // with type inference
+    // 타입 추론 사용
+    let f = plus_one;
+</code></pre>
+<h2>주석</h2>
+<ul>
+<li><code>//</code> : 한줄주석</li>
+<li><code>///</code> :  문서주석</li>
+<li>내용은 마크다운 표기지원</li>
+<li>rustdoc 을 이용한 문서화 가능</li>
+</ul>
+<h2>제어문</h2>
+<ul>
+<li><code>if-else if-else 구조</code></li>
+</ul>
+<pre><code class="language-rust">    if number % 4 == 0 {
+        println!(&quot;number is divisible by 4&quot;);
+    } else if number % 3 == 0 {
+        println!(&quot;number is divisible by 3&quot;);
+    } else if number % 2 == 0 {
+        println!(&quot;number is divisible by 2&quot;);
+    } else {
+        println!(&quot;number is not divisible by 4, 3, or 2&quot;);
+    }
+</code></pre>
+<ul>
+<li>if 문 결과를 변수에 할당</li>
+</ul>
+<pre><code class="language-rust">    let number = if condition {
+       5
+    } else {
+       6
+    };
+</code></pre>
+<h2>반복문</h2>
+<ul>
+<li><code>loop</code> 무한루프<ul>
+<li>무한루프일때 쓸것</li>
+</ul>
+</li>
+<li><code>for</code></li>
+</ul>
+<pre><code class="language-rust">    for number in (0..10){
+    //
+    }
+
+    let a = [10, 20, 30, 40, 50]
+    for element in a.iter() {
+    //
+    }
+</code></pre>
+<ul>
+<li><code>while</code></li>
+</ul>
+<pre><code class="language-rust">    while number != 0 {
+        println!(&quot;{}!&quot;, number);
+        number = number - 1;
+    }
+</code></pre>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+        
+            <a href="/tag/'rust'">#'rust'</a>&nbsp;
+        
+            <a href="/tag/'syntax']">#'syntax']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+---
+title: '(JSP) 간단 OpenAPI 만들기'
+author: 'ash84'
+pub_date: '2017-04-03'
+description: ''
+featured_image: ''
+tags: ['dev', 'jsp', 'Java', 'API']
+---
+
+
+<span style="font-size: 11pt;">앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다. </span>
+
+<span style="font-size: 11pt;">**내가 원하는건 단 한가지였다. HTTP GET 방식으로 어떤 데이터를 전달하면 그에 따른 응답을 JSON 형식으로 넘겨주는 작업.** 그것만 되면 된다. CSS, 이미지 이런것들은 웹 사이트 만드는 개발자들에게 필요한거고 간단하게 데이터처리를 해줄 서버가 필요하고, 그것을 받을수 있는 OpenAPI를 만드는 것이 필요했다. </span>
+
+<span style="font-size: 11pt;">필자는 톰캣을 설치해본적도, JSP 문법을 알지도 못한다. 그냥 **STEP BY STEP** 으로 해보겠다. </span>
+
+**1. 톰캣 설치**
+
+<span style="font-size: 11pt;">– 이건 알고 있었다. JSP를 올릴려면 톰캣이라는 웹서버가 필요하다는 것을. 그래서 톰캣을 받아서 설치 했다. 이건 별도의 설명을 하지 않겠다. 네이버에 톰캣 설치라고 치면 나온다. </span>
+
+**<span style="font-size: 11pt;">2. Dynamic W</span><span style="font-size: 11pt;">eb project</span>**
+
+<span style="font-size: 11pt;">– 톰캣을 설치하고 나서 어떻게 JSP 코딩을 시작해야하는지 막막했다. 일단 이클립스를 열어서 new 프로젝트를 열어서 보니 web 부분에 모가 많다. 섣불리 누르기가 무서웠다. 무서울땐 네이버 검색이다. Dynamic Web Project를 하라고 한다. 사실 난 아직도 Static Web Project 와의 차이점을 모르겠다. 내가 하고 싶은건 그냥 빨리 띄워보는 거다. </span>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<span style="font-size: 11pt;">OpenAPI 라는 프로젝트명을 입력하고 Target</span><span style="font-size: 11pt;"> RunTime 에서 Apache Tomcat7.0을 선택해 준다. 앞 단계에서 설치한 Tomcat의 경로를 인식하게 해야한다. 그 이유는 이클립스에서 다음 단계에서 실행할때, 톰캣을 인식해서 구동한 후 만든 웹 페이지를 보여주기 때문이다. </span>
+
+<span style="font-size: 11pt;">**3. JSP 파일 만들기**</span>
+
+<span style="font-size: 11pt;">– JSP 파일이 있어야 한다는건 알고 있다. 근데 문제는 어디에 만드냐는 것이다. 어렵다. 또 네이버 검색질.. 대부분의 사람들이 말이 WebContent 밑에 만들라고 한다. test.jsp 파일을 만들었더니 아래와 같은 화면이 생겼고 html 코드가 들어간 부분이 나왔다. </span>
+
+
+<span style="font-size: 11pt;">간단하게 실행해 보고자 했다.  태그 안에 hello world 를 찍어 넣고 실행을 눌렀다. 아래와 같은 화면이 나와서 그냥 next, finish. 내용을 간단히 요약하자면 실행하는 톰캣을 선택하고 그 안에 무엇을 넣을 것인지를 선택하는 것인데 OpenAPI로 적었으니까 OpenAPI 가 들어가서(?) 실행되는것 같다. 아래와 같이 hello world 가 출력되는 것을 볼 수가 있다. </span>
+
+<span style="font-size: 11pt;">**4. Get 방식은 어떻게?**</span>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<span style="font-size: 11pt;">– 자, 이제 Get 방식으로 사용자 혹은 내가 만드는 앱/서비스에서 URL에 데이터를 실어서 보내기만 하면 된다. </span><span style="font-size: 11pt;">Get 방식과 Post방식에 대한 개념은 가지고 있었다. Get 방식을 어떻게 받아와야할까? 이 물음이 가장 큰 문제 였는데 역시 또 네이버/구글 검색을 이용했다. </span>
+
+<script src="https://gist.github.com/AhnSeongHyun/5083039.js"></script>
+
+ 
+
+<span style="font-size: 11pt;">검색하는 과정에서 JSP 의 대략적인 문법에 대해서 알게 되었는데 그냥  <% %>를 쓰면 된다고 한다. 아무튼 Get 방식으로 넘어온 데이터를 가져올때는 위의 코드처럼 reqeust.getParameter(“url 인자명”) 함수를 이용하면 된다. q 라는 인자에 123을 넘겨 보았고, 아래와 같이 화면이 출력되는 것을 볼 수 있다. </span>
+
+ 
+
+<span style="font-size: 11pt;">**5. 자바 코드 연결**</span>
+
+<span style="font-size: 11pt;">– JSP 안에서 처리해도 되지만, 먼가 그런 코드는 싫었다. JSP는 보여주는 부분이기 때문에 실제 처리는 사실 자바 클래스 파일에서 하는게 맞다고 생각했다. 간단하게 JSON으로 변환하는 것을 자바 파일에서 해주는데 Gson이 그 역할을 담당하기로 했다. </span>
+
+ 
+
+ 
+
+<span style="font-size: 11pt;">JsonMaker 라는 파일을 Java Resources 라는 부분에 자바 파일로 만들었다. 그리고 ```toJson(String query, String category</span><span style="font-size: 11pt;">)``` 함수를 만들었다. gson 라이브러리를 다운 받은후, ```WebContent/WEB-INF/lib``` 에 두고 Java Build Path 설정시, 해당 디렉토리안에 있는 gson을 참조하게 하였다. </span>
+
+ 
+
+<span style="font-size: 11pt;">toJson()함수에서는 get 방식으로 받은 내용을 그냥 전달 받아서 Gson 으로 JSON String을 만들어서 리턴하는 아주 간단한 함수이다. 이렇게 해서 자바 파일을 완성하였고, 만든 자바 클래스를 JSP와 연동 하여야 한다. 그래야 객체를 만들고 함수를 불러서 쓸수가 있을테니까 말이다. </span>
+<br/><br/>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<span style="font-size: 11pt;">자바 코드 연결을 위해서는**<% page import=”패키지.클래스명”%>** 명을 상단에 써주어야 한다. 그렇게 하고 나서 아래의 코드 처럼 JsonMaker 객체를 만들어서 함수를 호출하고 결과를 다시 보여주는 식으로 구성하였다. </span>
+
+ 
+
+<script src="https://gist.github.com/AhnSeongHyun/5083063.js"></script>
+
+ 
+
+<script src="https://gist.github.com/AhnSeongHyun/5083057.js"></script>
+
+<span style="font-size: 11pt;">화면을 확인해 보자. 다음과 같이 json이 나오는 것을 확인 할수가 있다. 그러나 실제로 앱에서 HTTP Request 를 해서 데이터를 가져오면 Html 자체가 나오는 것을 볼수 있을것이다. 실제 위의 실행 화면에서 우클릭 페이지 소스보기를 누르면 html 코드가 나오는것을 확인할 수가 있다. </span>
+
+<span style="font-size: 11pt;"> </span>
+
+<span style="font-size: 11pt;"> </span>
+
+<span style="font-size: 11pt; line-height: 2;">내가 원하는 것은 순수 JSON String  이기 때문에 아래와 같이 html 코드가 제거된 내용으로 바꾸면 순서 JSON String을 가져올 수가 있다. 개인적으로 작업했을때에는 JSON 을 받는 쪽에서 받아온 후, 다시 trim을 해주는게 좋은것 같다.</span>
+
+<span style="font-size: 11pt;">원하는 수준의 작업은 여기까지 였다. 여기서는 사실 쉽게 설명을 했지만 찾고 다시 해보고 찾고 다시해보고 하는 식의 반복이었다. 단일 웹페이지 하나 띄우는 작업으로 해보면 별거 아니지만 웹 프로그래밍 자체는 처음이었기 때문에 재밌었지만 이해가 안되는 부분도 많았다. 간단한 것은 쉽지만 실제로 필자가 다음의 트위터 분석 페이지를 파싱해서 API화 할때에는 encoding 에 대한 부분 역시 하나의 걸림돌로 작용하기도 하였다. </span>
+
+<span style="font-size: 11pt;">배포를 설명하지 않았는데, 사실 그리 어렵지 않다. 이클립스에서 만든 프로젝트에 마우스를 우클릭하면 Export>WAR 가 있는데 그것을 누르면 프로젝트이름.WAR 파일이 만들어 진다. 실제 배보할 서버의 톰캣/WebApps에 만들 파일을 둔채 다시 톰캣을 재기동 하면 WAR 가 풀리면서 프로젝트 이름의 디렉토리가 생기고 URL로 접근할 수 있다. </span>
+
+<span style="font-size: 11pt;">필자가 더 모르거나 잘못된 부분으로 전달하고 있는 부분도 있을것이라고 생각한다. 왜냐하면 거듭 말하지만 웹 작업을 처음해본것이기에. 잘못된것 혹은 추가적으로 알아야 하는 부분이 있다면 댓글을 통해서 반드시 알려주시길. </span>
+
+
+

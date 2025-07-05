@@ -1,0 +1,96 @@
+---
+title: '[Python] 장고(Django) 설치 및 이클립스(eclipse) 세팅'
+author: 'ash84'
+pub_date: '2016-06-22'
+description: ''
+featured_image: ''
+tags: ['dev', 'Django', 'Eclipse', 'pydev', 'Python', '이클립스', '장고', '파이썬']
+---
+
+
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">일단 장고(Django) 의 개념이나 필요성에 대해서는 필자도 아직 초급자이므로 애기하지 않고 차후에 본 블로그를 통해서 해당 부분에 대해서 자세히 소개 하도록 하겠습니다. 그래두 일단 장고(Django) 를 설치해 보고, 유난히 파이썬(python) 관련된 쪽이 개발환경(IDE)가 잘 마련되어 있지 않은데, 장고(Django) 설치와 함께 이클립스에서 관련 프로젝트 세팅하는 법까지 설명드리겠습니다. 그리고 </span></span><font color="#5c7fb0">**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">윈도우 개발 환경 위주</span></span>**</font><span style="font-size: 11pt; "><span style="font-family: Dotum; ">로 설명하도록 하겠습니다. </span></span></div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; ">**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">1. 일단 파이썬 설치 </span></span>**</div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ – 파이썬은 유난히 여러가지 버전이 있지만, 필자의 생각으로는  2.6 혹은 2.7을 쓰는게 좋습니다. 3.2 까지 나온것으로 알고 있지만, 사실 파이루씬(pylucene)이나 그런 것들은 주로 3.x 버전을 아직은 지원하지 않는 부분이 있어서 너무 최상위 버전을 쓰지 않는것이 좋습니다. </span></span><span style="font-size: 11pt; "><span style="font-family: Dotum; "> </span></span>
+
+<span style="font-size: 11pt; "></span>
+
+<figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile25.uf.145A873A4EF40A7A338756.png)<figcaption class="wp-caption-text">http://python.org</figcaption></figure>
+
+</div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+  </span></span></div><div style="text-align: justify; line-height: 2; ">  
+<span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ 윈도우 버전은 기본적으로 .msi 바이너리 형태로 제공하기 때문에 쉽게 받아서 설치하면 됩니다.  그리고 파이썬(Python)의 경로(Path)를 잡습니다. 그리고 커맨드(cmd) 창에서 파이썬(python) 이라고 쳐 보면 이런 문구가 나와야 제대로 설치가 된것이구요.</span></span><span style="font-size: 11pt; "></span>
+
+<figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile23.uf.195D23344EF40AF40C8688.png)<figcaption class="wp-caption-text">파이썬 실행화면</figcaption></figure>
+
+<span style="font-size: 11pt; "><span style="font-family: Dotum; "> </span></span>
+
+</div><div style="text-align: justify; line-height: 2; ">**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">2. 이클립스 환경 구성</span></span>**</div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "></span>
+
+<figure class="wp-caption aligncenter" style="width: 580px">![](http://ash84.net/wp-content/uploads/1/cfile7.uf.1762F33A4EF40B322CFB63.jpg)<figcaption class="wp-caption-text">QT 는 UI를 이용할때 쓰자. </figcaption></figure>
+
+</div><div style="text-align: justify; line-height: 2; ">  
+<span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ – 장고(Django) 보다 먼저 설치해야 할 것이 이클립스 설치이며 환경을 구성하는 것 입니다. 이클립스 설치는 기본적으로 되어 있다는 가정하에. 파이데브(Pydev)를 설치합니다. 파이데브(Pydev)의 설치는 아래의 링크를 참조하시면 간단하게 하실수 있습니다.</span></span></div><div style="text-align: justify; line-height: 2; ">  
+<span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ [관련 링크] : </span></span>[<span style="font-size: 11pt; "><span style="font-family: Dotum; ">Pydev + 이클립스를 통한 파이썬 개발 환경 구축하기 </span></span>](http://parksk.tistory.com/111 "[http://parksk.tistory.com/111]로 이동합니다.")</div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; ">**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">3. 장고(Django) 설치</span></span>**</div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ – 드디어 장고(Django)를 설치할때다.  </span></span>[<span style="font-size: 11pt; "><span style="font-family: Dotum; ">이곳</span></span>](https://www.djangoproject.com/ "[https://www.djangoproject.com/]로 이동합니다.")<span style="font-size: 11pt; "><span style="font-family: Dotum; "> 에 들어가면 </span></span>**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">[다운로드]</span></span>**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">탭에서</span></span>**<span style="font-size: 11pt; "><span style="font-family: Dotum; "></span></span>[<span style="font-size: 11pt; "><span style="font-family: Dotum; ">Django-1.3.1.tar.gz</span></span>](http://www.djangoproject.com/download/1.3.1/tarball "[http://www.djangoproject.com/download/1.3.1/tarball]로 이동합니다.")**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">를 다운받는다. 일단 C 드라이브에, 다운을 받고 압축을 풀자. </span></span><span style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">압출을 풀고 나면,  Django-1.3.1폴더가 생긴다. 일단 파이썬이 설치되어 있다는 전제하에 진행하겠다. 장고(Django)는 파이썬 기반의 웹 개발 프레임워크이기 때문에 파이썬으로 설치한다고 보면 된다. </span></span>  
+<span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+  </span></span></span></div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">커맨드(cmd) 창을 열어서 해당 폴더로 이동하자. (cd Django-1.3.1)</span></span><span style="font-size: 11pt; "><span style="font-family: Dotum; "> </span></span>
+
+<span style="font-size: 11pt; "></span>
+
+<figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile10.uf.18103C3F4EF40C5420FC12.png)<figcaption class="wp-caption-text">python setup.py install </figcaption></figure>
+
+</div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">이동하고 나면, </span></span>**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">python setup.py install</span></span>**<span style="font-size: 11pt; "><span style="font-family: Dotum; "> 이라고 입력하자. 조금 지나면 자연스럽게  설치가 된다. 설치된 것을 확인하려면 현재 있는  Django-1.3.1 하위 폴더에 django\bin에 가시면, django-admin.py 라는 것을 보실수가 있다. 이 파일을 복사해서 바로 상위의 디렉토리(django) 에 복사하자. </span></span><span style="font-size: 11pt; "></span>
+
+<figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile26.uf.152079454EF40C8038CD59.png)<figcaption class="wp-caption-text">설치 완료 화면 </figcaption></figure>
+
+<span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+  </span></span>
+
+</div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "></span>
+
+<figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile2.uf.170470404EF40C9905359F.png)<figcaption class="wp-caption-text">설치후 확인 화면</figcaption></figure>
+
+</div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ 그리고 나서 django 폴더를 잘라내기를 해서 c:\에 붙여넣자. 그리고 이제 장고(Django)를 실제 프로젝트를 생성해 보자. </span></span><span style="line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">기본 프로젝트를 생성하면 일단 커맨드(cmd) 창에서 </span></span></span></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "></span>
+
+<figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile10.uf.150F49464EF40D93080C57.png)<figcaption class="wp-caption-text">sample1 프로젝트 생성</figcaption></figure>
+
+</div><div style="text-align: justify; line-height: 2; ">**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">python django-admin.py startproject sample1</span></span>**<span style="font-size: 11pt; "><span style="font-family: Dotum; "> 라고 입력하면 django 폴더 안에 sample1 이라는 폴더가 생긴것을 볼수가 있다. sample1 폴더 안으로 들어가서, </span></span>![](http://ash84.net/wp-content/uploads/1/cfile25.uf.200AB4464EF40D640E42F7.png)
+
+**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">python manage.py runserver</span></span>**<span style="font-size: 11pt; "><span style="font-family: Dotum; "> 라고 입력하자. 그러면 장고 내장 서버가 실행된다. 그리고 나서 웹 브라우저를 열어서 127.0.0.1:8000을 치면 It’s Work 라는 화면이 나오는 것을 볼수가 있다. </span></span>
+
+</div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "></span>
+
+<figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile29.uf.110AB4464EF40D640F5258.png)<figcaption class="wp-caption-text">와우!!</figcaption></figure>
+
+</div><div style="text-align: justify; line-height: 2; ">**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">4. 이제 이클립스와 연동하자. </span></span>**</div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; ">**<font color="#e31600"><span style="font-size: 11pt; "><span style="font-family: Dotum; ">사실 앞에서 이클립스에서 설치한 파이데브(pydev)에서 이미 장고(Django) 프로젝트가 포함되어 있다.</span></span></font>**<span style="line-height: 2; font-size: 11pt; "><span style="font-family: Dotum; "> 때문에 프로젝트 생성시 바로 pydev project를 생성하는 것이 아니라, 일반 프로젝트를 생성을 눌러서 pydev 밑에 </span></span>**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">pydev django 프로젝트</span></span>**<span style="line-height: 2; font-size: 11pt; "><span style="font-family: Dotum; ">가 있다. 해당 프로젝트를 누르고 생성하면 된다. 중간에 참조 프로젝트를 이전에 이클립스에 있는 것중에 지정할 수 있는 단계가 나오는데, 지금은 일단 생략(Skip) 하자. </span></span><span style="font-size: 11pt; "></span>
+
+<figure class="wp-caption aligncenter" style="width: 525px">![](http://ash84.net/wp-content/uploads/1/cfile24.uf.1970D8474EF410201CC3A3.png)<figcaption class="wp-caption-text">프로젝트 선택</figcaption></figure>
+
+<span style="line-height: 2; font-size: 11pt; "><span style="font-family: Dotum; ">  
+  </span></span>
+
+<font face="Dotum"><span style="font-size: 15px; line-height: 29px;">  
+</span></font>
+
+<span style="line-height: 2; font-size: 11pt; "><span style="font-family: Dotum; ">  </span></span>
+
+<span style="line-height: 2; font-size: 11pt; "><span style="font-family: Dotum; "><figure class="wp-caption aligncenter" style="width: 525px">![](http://ash84.net/wp-content/uploads/1/cfile22.uf.1669374B4EF410360C02BF.png)<figcaption class="wp-caption-text">장고 세팅. </figcaption></figure>
+
+</span></span>
+
+</div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ 그리고 나서 바로 그냥 이전의 다른 파이썬 프로젝트 처럼 파이썬(python)으로 구동 시키는 것이 아니라, 프로젝트 부분에서 오른쪽 마우스를 누르면 </span></span>**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">Run AS 에서 Pydev : Django </span></span>**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">를 누르면 아래와 같은 메시지가 뜨면서 앞에서와 같은 페이지를 볼수가 있다. </span></span></div><div style="text-align: justify; ">  
+<font face="Dotum"></font>
+
+<font face="Dotum"><figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile10.uf.1969374B4EF410370E8C74.png)<figcaption class="wp-caption-text">와우!!</figcaption></figure></font>
+
+<font face="Dotum">  
+</font>
+
+</div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">다른 점이라하면, 3번에서 Django 프로젝트를 만들었을때에는 해당 django 가 설치된 경로(C:\django)의 하위 디렉토리에 설정이 되지만, 이클립스를 통해서 만들었을때에는 당연히 이클립스에서 지정한 곳에 생긴다. </span></span></div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
+ 쉽게 설치 한다고 했지만, 여전히 통합개발환경(IDE)적인 환경이 한번의 클릭으로 설치되지 않는것이 아쉬움이지마, 그렇기 때문에 더 가벼운 것이 아닌가 하는 생각이 들었다. 이제 파이썬을 이용한 웹 개발을 시작해보자. </span></span></div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; "><span style="line-height: 24px;"><span style="font-size: 11pt; ">실행관련 참조 링크 : </span><span style="font-size: 11pt; ">[http://dev.claztec.net/86](http://dev.claztec.net/86)</span></span></div><div style="text-align: justify; "><span style="line-height: 24px;">  
+</span></div>
+

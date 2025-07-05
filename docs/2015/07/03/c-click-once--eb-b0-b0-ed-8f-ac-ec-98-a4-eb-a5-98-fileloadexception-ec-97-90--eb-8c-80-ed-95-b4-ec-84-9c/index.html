@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[C#] Click Once 배포오류 fileloadException에 대해서.</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[C#] Click Once 배포오류 fileloadException에 대해서.</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">요즘 계속 배포작업을 하고 있습니다. 처음 배포 한 msi 파일이 배포오류가 생겼었는데, 그 오류를 자세히 들여가 보면 fileloadException 에 의해서 발생된 오류였다. 처음에는 기본적으로 ini 파일이나, 폰트파일 혹은 외부 dll 파일을 못 읽어서 문제가 생겼나 해서 예외처리를 한 상태에서 해 봤더니, 걸리지 않았다. 그래서 혹시나 해서 devpia에 찾아볼 결과 다음과 같은 결과가 나왔다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  
+  </span></span></div>
+<div style="line-height: 2; "></div>
+<div style="line-height: 2; "><div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(193, 193, 193); border-right-color: rgb(193, 193, 193); border-bottom-color: rgb(193, 193, 193); border-left-color: rgb(193, 193, 193); background-color: rgb(238, 238, 238); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">C++/CLI는 C#과는 달리 런타임 라이브러리를 사용하곤 합니다. (msvcm80.dll)</span></span>
+
+<span style="font-size: 10pt; "><span style="font-family: Dotum; ">이 라이브러리는 닷넷 프레임워크와 함께 설치됩니다.</span></span>
+
+<span style="font-size: 10pt; "><span style="font-family: Dotum; ">하지만 개발시에 Debug 빌드와 함게 사용되는 라이브러리는 Visual Studio 내에만 포함되어 있습니다.  
+ (msvcm80d.dll)</span></span>
+
+<span style="font-size: 10pt; "><span style="font-family: Dotum; ">따라서 Debug 빌드로 작성된 exe를 사용하면 이들 디버그용 라이브러리를 찾으려고 할 것이고</span></span>
+
+<span style="font-size: 10pt; "><span style="font-family: Dotum; ">이 라이브러리는 달랑 닷넷 프레임워크만 설치된 곳에는 존재하지 않기 때문에</span></span>
+
+<span style="font-size: 10pt; "><span style="font-family: Dotum; ">오류가 발생합니다.</span></span>
+
+<span style="font-size: 10pt; "><span style="font-family: Dotum; "> </span></span>
+
+**<span style="font-size: 10pt; "><span style="font-family: Dotum; ">배포에 사용하시려면 </span></span>**
+
+**<span style="font-size: 10pt; "><span style="font-family: Dotum; ">Release 빌드를 배포하시거나 Debug용 런타임 라이브러리를 배포하셔야 합니다.</span></span>**
+
+<span style="font-size: 10pt; "><span style="font-family: Dotum; "> </span></span>
+
+<span style="font-size: 10pt; "><span style="font-family: Dotum; ">도움이 되셨기를…</span></span>
+
+</div></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">즉, 원 C# 으로 만든 프로젝트에 MixString 이라는 C++ 외부 라이브러리를 붙였는데, 빌드 형태의 Debug로 해서 빌드를 한후에 Click Once 프로젝트에서 해당 .exe 파일을 대상으로 빌드를 하고, 다른 컴퓨터에서 실행 시켰을 경우, 위와 같은 이유로 에러가 난다는 것이다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">실제로 Release 로 빌드 형태를 바꾸어서 빌드하고, 배포프로젝트에 넣어서 빌드하니 다른 컴퓨터에서도 잘 되었다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; ">  
+</span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">[http://search.devpia.com/MAEULResult.aspx?KeyW=fileloadexception%20%uBC30%uD3EC%uC624%uB958%20&keyr=title&boardID=17&MAEULNo=8](http://search.devpia.com/MAEULResult.aspx?KeyW=fileloadexception%20%uBC30%uD3EC%uC624%uB958%20&keyr=title&boardID=17&MAEULNo=8)</span></span></div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['Ahn Seong Hyun'">#['Ahn Seong Hyun'</a>&nbsp;
+        
+            <a href="/tag/'c#'">#'c#'</a>&nbsp;
+        
+            <a href="/tag/'Click Once'">#'Click Once'</a>&nbsp;
+        
+            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+        
+            <a href="/tag/'fileloadexception'">#'fileloadexception'</a>&nbsp;
+        
+            <a href="/tag/'배포오류'">#'배포오류'</a>&nbsp;
+        
+            <a href="/tag/'클릭원스']">#'클릭원스']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

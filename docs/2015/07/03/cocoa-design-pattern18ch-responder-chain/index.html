@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[Cocoa Design Pattern]18ch. Responder Chain</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[Cocoa Design Pattern]18ch. Responder Chain</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <div style="text-align: justify; line-height: 2; ">**<span style="font-size: 11pt; ">코코아 디자인 패턴 18장. 리소폰더 체인</span>**</div>
+<p><span style="font-size: 11pt; "><br />
+</span>**<div style="text-align: justify;"></div><div style="text-align: justify;"><span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; "><br />
+</span><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile7.uf.117C973D4E1A5978320787.jpg" /><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 9pt; "><br />
+</span><a href="http://ash84.tistory.com/711"><span style="font-size: 9pt; ">2011/06/11 – [Technique/iOS Dev] – [Cocoa Design Pattern] 17ch. Outlet, Target, Action</span></a><br />
+<span style="font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<p></div>**</p>
+<p><span style="font-size: 11pt; "><br />
+</span><strong><span style="font-size: 11pt; ">리스폰더 체인이란? </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 코코아 그래픽 애플리케이션의 핵심적이고 중요한 요소</span><br />
+<span style="font-size: 11pt; "><br />
+  – 책임사슬 패턴(Chain of Responsibility)</span><br />
+<span style="font-size: 11pt; "><br />
+</span><strong><br />
+<span style="font-size: 11pt; "><br />
+ 패턴이 만들어진 동기 </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 사용자 이벤트의 정확한 전달</span><br />
+<span style="font-size: 11pt; "><br />
+ – 현재 활성화 되어 있는 인터페이스 객체는 무엇이고, 어떻게 액션 메시지를 전달할 것인가. </span><br />
+<span style="font-size: 11pt; "><br />
+</span><strong><br />
+<span style="font-size: 11pt; "><br />
+ 패턴으로 문제 해결</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+ – </span></strong><span style="font-size: 11pt; ">책임사슬패턴은 메시지의 전송자와 수신자 객체 관계를 최대한 분리시키는 것이 목적 </span><br />
+<span style="font-size: 11pt; "><br />
+ – 수신객체들이 연결 리스트로 구성되어 있고, 각 객체들이 메시지를 무시 혹은 수신하는 순차적인 시스템 </span><br />
+<span style="font-size: 11pt; "><br />
+</span><strong><br />
+<span style="font-size: 11pt; "><br />
+ 용어 </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><strong><span style="font-size: 11pt; ">NSResponder</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 사용자 입력을 다룰수 있는 개체들은 모두 NSResponder의 서브클래스</span><br />
+<span style="font-size: 11pt; "><br />
+  – 키보드, 마우스, 터치등의 상자 입력에 대응하는 역할</span><br />
+<span style="font-size: 11pt; "><br />
+  – NSWindow, NSView, NSViewController, NSDrawer 등이 모두 NSResponder의 서브 클래스</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  * 사용자의 초점이 어디에 맞춰져 있는지 자동적으로 코코아 프레임워크에서 기억.</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span><strong><span style="font-size: 11pt; ">Key</span></strong><span style="font-size: 11pt; "></span><strong><span style="font-size: 11pt; ">Window</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 입력을 받는 윈도우를 키 윈도우</span><br />
+<span style="font-size: 11pt; "><br />
+</span><strong><br />
+<span style="font-size: 11pt; "><br />
+ Main Window</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 현재 초점이 맞춰져 있는 문서 창을 메인 윈도우</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+ * 키윈도우와 메인 윈도우가 하나의 인터페이스 인 경우도 있지만, 서로 다른 인터페이스인 경우 있음. </span><br />
+<span style="font-size: 11pt; "><br />
+</span><strong><br />
+<span style="font-size: 11pt; "><br />
+ NSApplication 의 역할 </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 애플리케이션 객체는 키 윈도우와 메인 윈도우를 항상 기억하도록 되어 있음.</span><br />
+<span style="font-size: 11pt; "><br />
+  – keyWindow, mainWindow 를 통해서 해당 개개체에 대한 레퍼런스를 얻을수 있음. </span><br />
+<span style="font-size: 11pt; "><br />
+</span><strong><br />
+<span style="font-size: 11pt; "><br />
+ FirstResponder</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 현재 초점이 맞춰져 있는 뷰를 지칭함</span><br />
+<span style="font-size: 11pt; "><br />
+  – 리스폰더 체인의 첫번째 객체</span><br />
+<span style="font-size: 11pt; "><br />
+  – -firstResponder : 첫번째 리스폰더에 대한 레퍼런스 </span><strong><span style="font-size: 11pt; ">리스폰더 체인</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 다수의 수신 객체가 엮여져 있는 형태로 액션 메시지의 대해서 각 노드가 ignore 또는 accept 를 하는 구조</span><br />
+<span style="font-size: 11pt; "><br />
+  – nextResponder : 주어진 수신객체의 다음 수신객체를 반환</span><br />
+<span style="font-size: 11pt; "><br />
+  – setNextResponder : 다음 객체를 재설정하고 싶을때 사용</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  – 일반적으로 주어진 뷰의 다음 수신객체는 슈퍼뷰(super view)</span><br />
+<span style="font-size: 11pt; "><br />
+  – 윈도우 내 콘텐츠 뷰의 다음 수신객체는 윈도우. </span><br />
+<span style="font-size: 11pt; "><br />
+  – 윈도우의 다음 수신 객체는 nil. </span><br />
+<span style="font-size: 11pt; "><br />
+  – 리스폰더 체인의 마지막 노드가 윈도우 창이다. </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  예외) NSWindowContorller에 의해서 제어되고 있는 윈도우 창은 컨트롤러가 최종 수신 객체임 </span><br />
+<span style="font-size: 11pt; "><br />
+  예제) 304p</span><br />
+<span style="font-size: 11pt; "><br />
+  </span><br />
+<span style="font-size: 11pt; "><br />
+  – 모든 리스폰더 체인은 nil로 끊어지기 때문에, 무한 루프의 위험성이 없다.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 윈도우가 여러개인 환경에서는 모든 각각의 윈도우가 리스폰더 체인을 가짐.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 윈도우 내 사용자의 선택이 바뀔때 마다 리스폰더체인이 업데이트 됨.</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  – acceptResponder : 새로운 수신객체가 될 객체에게 전달</span><br />
+<span style="font-size: 11pt; "><br />
+  – resignFirstResponder : 현재 리스폰더에게 FirstResponder를 반환하라는 메시지를 전달</span><br />
+<span style="font-size: 11pt; "><br />
+ – becomeFirstResponder : 새로운 첫번째 리스폰더가 될 객체에게 전달 – 키보드가 마우스 입력의 경우,</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+ NSApplcation 객체가 입력을 NSEvent 객체로 변환한 다음. 리스폰더 객체를 찾는다.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 리스폰더 체인은 계층구조를 이용해서 FirstResponder를 찾아냄. </span><br />
+<span style="font-size: 11pt; "><br />
+</span><strong><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+ 확장된 리스폰더 체인</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 키 윈도우와 메인 윈도우의 리스폰더 체인을 아우르고, 또한 공용의 NSApplication 인스턴스와 </span><br />
+<span style="font-size: 11pt; "><br />
+    NSDocumentController 인스턴스를 포함한 확장 리스폰더 체인.</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  – nil을 target을 갖는 메시지를 담당.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 메뉴 항목의 경우 다양한 종류의 메시지 구현이 쉽지 않다.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 키 윈도우와 메인 윈도우의 리스폰더 체인 만으로는 이벤트 핸들링이 불충분한 경우.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 확장된 리스폰더 체인의 순서</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  1. 키 윈도우의 리스폰더 체인의 첫번째 리스폰더를 처음 시도. </span><br />
+<span style="font-size: 11pt; "><br />
+  2. 뷰 계층 구조의 리스폰더 체인을 따라 메시지 전달.</span><br />
+<span style="font-size: 11pt; "><br />
+  3. 윈도우 객체를 시도</span><br />
+<span style="font-size: 11pt; "><br />
+  4. 윈도우의 델리게이트를 시도(주로 NSDocument의 인스턴스)</span><br />
+<span style="font-size: 11pt; "><br />
+  5. 만약, NSWindowController가 있다면 시도.  </span><br />
+<span style="font-size: 11pt; "><br />
+  6. 1-5의 순서를 메인 윈도우에 적용 </span><br />
+<span style="font-size: 11pt; "><br />
+  7. NSApplication 객체와 그의 델리게이트를 시도</span><br />
+<span style="font-size: 11pt; "><br />
+  8. NSDocumentController 가 있다면 시도. </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+ 예제) 306P – 307P</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+ – 키 윈도우 == 메인윈도우의 경우, 확장된 리스폰더 체임의 검색 길이는 짧아 짐. </span><br />
+<span style="font-size: 11pt; "><br />
+ – 인터페이스 빌더 이용시, 컨트롤을 첫번째 리스폰더에 연결하면, 실제로는 해당 액션에 대한 target를 nil로 지정.</span><br />
+<span style="font-size: 11pt; "><br />
+ – 어떤 컨트롤의 액션메시지를 확장된 리스폰더 체인에 전달하고 싶다면 action의 target을 nil로 지정하면 됨. </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+ [mycontrol setAction:@selector(terminate)];</span><br />
+<span style="font-size: 11pt; "><br />
+ [mycontrol setTarget : nil];</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+ NSApplication의 -sendAction:to:from: 메소드에서 확장된 리스폰더 체인으로 보내는 방법 </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+    [NSApp sendAction:@selector(terminate) to:nil from:self];</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+ 메시지를 보내지 않으면서 어떤 객체가 대응하도록 되어 있는지 알고 싶다면, </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+      id myTarget = [NSApp  targetAction:@selector(terminate) to:nil from:self];</span><br />
+<span style="font-size: 11pt; "><br />
+</span><strong><br />
+<span style="font-size: 11pt; "><br />
+ 확장된 리스폰더 체인 탐색하기</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; "> – 리스폰더 체인의 정보를 출력해서 볼수가 있음 : 308p 예제 </span><br />
+<span style="font-size: 11pt; "><br />
+</span><strong><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+ 리스폰더 체인에 객체 삽입하기 </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 수동으로 객체 삽입 가능 : NSResponder 의 서브클래스면 가능함.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 뷰와 뷰의 superView 사이에 뷰 컨트롤러를 삽입해야 하는 경우</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  NSResponder * theNextResponder  = [myview nextResponder];</span><br />
+<span style="font-size: 11pt; "><br />
+ [myview setNextResponder : myViewController];</span><br />
+<span style="font-size: 11pt; "><br />
+ [myviewController setNextResponder:theNextResponder];</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  – 뷰 컨트롤러가 뷰 다음에 위치하게 되면, 그 뷰가 활성화될 경우에만 작동하게 됨. </span><br />
+<span style="font-size: 11pt; "><br />
+   (주어진 윈도우가 하나 이상의 뷰/뷰 컨트롤러 짝을 가지고 있는 경우를 위해서임)</span><br />
+<span style="font-size: 11pt; "><br />
+  </span><br />
+<span style="font-size: 11pt; "><br />
+  – 리스폰더 체임의 어느위치에 객체를 삽입하느냐에 따라 컨트롤러가 언제 어느 식으로 사용자 입력에 대응하도록 할 것인지를 조정 할 수 있음</span><strong><span style="font-size: 11pt; ">. </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><strong><span style="font-size: 11pt; ">리스폰더 체인 활용하기 </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><span style="font-size: 11pt; ">– 이미 존재하고 있는 리스폰더 체인을 사용하는 것이 가장 편함. </span><br />
+<span style="font-size: 11pt; "><br />
+ – 자동검열 기능, 텍스트의 선택여부에 따른 액션 지정 등은 컨텍스트에 민감한 행동 기능을 리스폰더 체인을 통해서 단순화 시킬수가 있다. </span><br />
+<span style="font-size: 11pt; "><br />
+</span><strong><br />
+<span style="font-size: 11pt; "><br />
+ 코코아 사용예제 </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span></strong><strong><span style="font-size: 11pt; ">– </span></strong><span style="font-size: 11pt; ">코코아에서 리스폰더 체인은 핵심임. </span><br />
+<span style="font-size: 11pt; "><br />
+  – 사용자 입력은 NSApplication 객체가 책임을 지고 적합한 리스폰더 체인에게 전달됨.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 키 윈도우와 메인 윈도우의 리스폰더 체인을 아우르고, 또한 공용의 NSApplication 인스턴스와 </span><br />
+<span style="font-size: 11pt; "><br />
+     NSDocumentController 인스턴스를 포함한 확장 리스폰더 체인.</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  – nil을 target을 갖는 메시지를 담당.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 애플리케이션의 상태에 따라 목표물이 동적으로 좌우되는 액션을 구현해야 한다면, target을 nil로 지정.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 복사하기/붙여넣기, 눈금자 조절기능, undo/redo 등의 기능이 확장 리스폰더 체인의 대상</span><br />
+<span style="font-size: 11pt; "><br />
+  – 컨텍스트 인식 메뉴들도 리스폰더 체인을 많이 활용  </span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  </span><strong><span style="font-size: 11pt; ">패턴 사용 결과 </span></strong><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+<span style="font-size: 11pt; "><br />
+  – 다양한 사용자 입력을 처리 할수 있는 유연성을 제공함.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 다양한 액션 기능을 최소한의 코드로 구현 가능함.</span><br />
+<span style="font-size: 11pt; "><br />
+  – 리스폰더 체인을 활용해서 애플리케이션에 특화된 컨텍스트 인식기능의 구현 가능.  </span></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['cocoa design pattern'">#['cocoa design pattern'</a>&nbsp;
+        
+            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+        
+            <a href="/tag/'iPhone dev'">#'iPhone dev'</a>&nbsp;
+        
+            <a href="/tag/'ResponderChain'">#'ResponderChain'</a>&nbsp;
+        
+            <a href="/tag/'리스폰더 체인'">#'리스폰더 체인'</a>&nbsp;
+        
+            <a href="/tag/'코코아 디자인 패턴']">#'코코아 디자인 패턴']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

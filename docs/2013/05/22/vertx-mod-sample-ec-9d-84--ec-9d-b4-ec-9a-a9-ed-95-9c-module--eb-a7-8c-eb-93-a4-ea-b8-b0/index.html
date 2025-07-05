@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(vert.x) mod-sample을 이용한 module 만들기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(vert.x) mod-sample을 이용한 module 만들기</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2013-05-22</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><span style="color: rgb(51, 51, 51); font-size: 11pt;"><a href="http://ash84.tistory.com/969">지난 포스팅</a>에서 vert.x module을 mod-sample 이라는 잘 만들어진 어떤 것을 이용해서 간단하게 나마 테스트 해보는 시간을 가졌었다. 여러가지 설정을 해야하는데 gradle(나중에 따로 다뤄야 할듯)</span><span style="color: rgb(51, 51, 51); font-size: 11pt;"> 등등 그런 작업들을 쉽게 할수 있도록 구성 된것으로 이번에는 실제로 간단한 모듈을 만드는 작업을 해보았다. </span></p>
+<p><span style="color: rgb(51, 51, 51); font-size: 11pt;">테스트로 몰 만들면 좋을까 생각을 하다가, <strong><span style="color: rgb(152, 0, 0);">uri를 파싱해서 json 형태로 반환해주는 것</span></strong>이 어떨까 하는 생각을 가졌다. 예를 들어, 아래와 같은 결과를 보여주는 것이다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="color: rgb(51, 51, 51); font-size: 11pt;">http://localhost:9090/request?query=vertx&</span><span style="color: rgb(51, 51, 51); font-size: 11pt;">count=10</span>
+
+</div>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 10pt; font-family: Dotum, 돋움;"><span style="font-size: 11pt;">{ "count" : "10", "query" : "vertx" }</span></span>
+
+</div>
+<p><span style="font-size: 11pt;">일단 기존의 mod-sample 내에 <code>indf.json</code> 이라는 패키지를 만들었고, <code>Verticle</code> 클래스를 상속 받는 <code>JsonVertxModule</code> 클래스는 만들었다. <code>Verticle</code> 클래스는 아래와 같이 추상클래스로 되어 있고 추상 메소드인 <code>start()</code>함수를 재정의 하도록 되어 있다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<script src="https://gist.github.com/AhnSeongHyun/5624812.js"></script>
+
+<p><span style="font-size: 11pt; line-height: 2;">JsonVertxModule 클래스는 재정의 하는 </span><code>start()</code><span style="font-size: 11pt; line-height: 2;"> 함수를 가지고 있다. 이 함수에서는 제일 처음 </span><code>HttpServer</code><span style="font-size: 11pt; line-height: 2;"> 객체를 </span><code>vertx.createHttpServer()</code><span style="font-size: 11pt; line-height: 2;"> 함수로 만든다. 그리고 나서 핸들러를 만들어야 한다. </span><code>server.requestHandler()</code><span style="font-size: 11pt; line-height: 2;">함수를 통해서 만든 핸들러를 넣어주면 되는데, 이때 익명 클래스로 만들어도 되고, 본 예제처럼 따로 클래스를 빼서 만들어도 된다. 간단한 것이라면 익명 클래스를 만드는 것을 추천한다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<script src="https://gist.github.com/AhnSeongHyun/5624814.js"></script>
+
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;">Http의 요청을 받는데 사용되는 <code>HttpServerRequest</code> 클래스의 <code>Handler</code> 클래스인 <code>UriToJsonHandler</code> 클래스를 만들고 내부적으로 해당 클래스는 Handler Interface 를 구현해야 하는데 <code>handle()</code> 함수를 작성하면 된다. <code>HttpServerRequest</code> 를 제네릭 인자로 설정했기 때문에 <code>handle()</code> 함수의 인자로 <code>HttpServerRequest</code> 객체를 받을수가 있다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<script src="https://gist.github.com/AhnSeongHyun/5624819.js"></script>
+
+<p>handle(HttpServerRequest request)함수에서는 말 그대로 uri를 파싱해서 json 문자열로 변환하는 작업을 수행한다. 파싱하는 부분은 크게 어렵지 않기 때문에 생략하기로 하는데 json을 만들때에는 jackson 라이브러리를 사용하였다. jsonStr 을 만들고 나면 이제 클라이언트에게 보내주어야 한다. <code>request.response</code> 객체는 <code>HttpServerResponse</code> 클래스의 객체인데 <code>end(String chunk)</code> 함수를 이용해서 json 문자열을 보내는 작업을 하고 있다.</p>
+<p><span style="font-size: 11pt;">그렇게 핸들을 설정하고나서 <code>server.listen(port)</code> 함수를 이용해서 서버를 시작해 주면 된다.</span></p>
+<p><span style="font-size: 11pt;">코드자체는 몇줄 없어서 크게 어렵지 않다. mod.json 이 mod-sample 내<code>/src/main/conf</code>에 위치하고 있고 이 안에는 json 의 형태로 main을 설정해 주도록 되어 있을것이다. 모듈이 변경 되었기 때문에 새로운 모듈로 변경해 주자. <strong>패키지명.클래스명</strong>을 적어주면 된다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">{</span>
+
+<span class="Apple-tab-span" style="font-size: 11pt;"></span><span style="font-size: 11pt;">“main”: “indf.json.JsonVertxModule”</span>
+
+<span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;"></span>
+
+<span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">}</span>
+
+</div>
+<p><span style="font-size: 11pt;">그리고 나서 해야하는 작업은 <code>gradle.properties</code> 를 수정하는 작업이다. 일종의 빌드를 위한 세팅이라고 보면 되는데, 아래와 같이 세팅을 하였다. modulename + version 의 이름로 빌드후,<code>build/mod/</code> 아래에 디렉토리가 생성된다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><u>**<span class="s1" style="font-size: 11pt;">modulename=</span><span style="font-size: 11pt;">indf.json.mod-sample</span>**</u>
+
+<span style="font-size: 11pt;">version=</span><span class="s2" style="font-size: 11pt;">0.1</span>
+
+<span style="font-size: 11pt;">gradleVersion=</span><span class="s2" style="font-size: 11pt;">1.1</span>
+
+<span class="s1" style="font-size: 11pt;">vertxVersion=</span><span style="font-size: 11pt;">1.2.0-SNAPSHOT</span>
+
+<span style="font-size: 11pt;">junitVersion=</span><span class="s2" style="font-size: 11pt;">4.10</span>
+
+<span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;"></span>
+
+<span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span><span style="font-size: 11pt;">  
+</span>
+
+<span style="font-size: 11pt;">rhinoVersion=</span><span class="s2"><span style="font-size: 11pt;">1.7R4</span>  
+</span>
+
+</div>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;">빌드는 mod-sample내 <code>mk</code>를 이용하면 되는데 <code>mk clean dist</code>명령을 통해서 진행하면 된다. 관련사항은 <a href="http://whiteship.me/?p=13619">여기를</a> 참고하시면 된다. 빌드를 하게 되면 <code>build/mod/indf.json.mod-sample-v0.1</code> 이렇게 디렉토리가 생성되는 것을 볼 수가 있다. 일단 이렇게 하면 빌드가 끝난것인데, vertx 가 path가 잡혀있다는 가정하에, 테스트 하길 원하는 디렉토리에 mods 라는 디렉토리를 만들고 그 안에 </span><span style="font-size: 11pt; line-height: 1.5;"> </span><span style="font-size: 11pt; line-height: 1.5;"><code>build/mod/indf.json.mod-sample-v0.1</code> 디렉토리를 복사해 넣으면 된다. </span></p>
+<p><span style="font-size: 9pt; line-height: 1.5;"><br />
+</span></p>
+<p><span style="font-size: 11pt; line-height: 1.5;">그리고 나서 서버 실행은 아래와 같이 하면 된다. </span></p>
+<p><span style="font-size: 11pt; line-height: 1.5;"><br />
+</span></p>
+<p><span style="font-size: 9pt; line-height: 1.5;"><br />
+</span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">> vertx runmod indf.json.mod-sample-v0.1</span>
+
+</div>
+<p><span style="font-size: 11pt;">생각보다 어렵진 않다. mod-sample 덕분이라고 말하고 싶다. 권장하는 부분은 mk clean dist 와 디렉토리 복사하는 부분을 스크립트로 만들어서 사용하는 편이 개발하거나 테스트할때 편하다는 생각이 든다. 물론 이클립스랑 연동이 쉭쉭 되면 좋겠지만. </span></p>
+<p><span style="font-size: 11pt;">서버를 실행하면 서버 실행 메시지가 뜨게 될것이다. 그리고 나서 웹 브라우저 창에 위의 예제 url을 한번 입력해 보면 json 문자열 형태로 변환이 되어서 나오는 것을 확인할 수가 있다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span class="s2"><br />
+</span></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['modulle 만들기'">#['modulle 만들기'</a>&nbsp;
+        
+            <a href="/tag/'runmod'">#'runmod'</a>&nbsp;
+        
+            <a href="/tag/'vert.x'">#'vert.x'</a>&nbsp;
+        
+            <a href="/tag/'vert.x mod']">#'vert.x mod']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

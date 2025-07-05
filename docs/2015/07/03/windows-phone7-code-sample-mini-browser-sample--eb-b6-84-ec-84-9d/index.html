@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[Windows Phone7]  mini Browser Sample 분석</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[Windows Phone7]  mini Browser Sample 분석</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <div style="text-align: justify; line-height: 2; ">  </div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">Windows Phone 7 코드 샘플 4가지를 분석해 보는 시간을 갖도록 하겠습니다. 총 4가지의 샘플을 분석하는 이유는 보통 C#에서 쓰던 클래스 라이브러리가 있지만, Windows Phone7으로 오면서 달라진 점도 있을수 있고, 또 위치 정보 서비스 또는 가속도 같은 경우에는 에뮬레이터 설정을 바꿔줘야 하는 경우가 있기 때문에 분석의 필요성을 느꼈습니다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; ">**<span style="font-size: 10pt; "><span style="font-family: Dotum; "><span style="font-size: 11pt; ">mini Browser </span></span></span>**</div>
+<div style="text-align: justify; line-height: 2; ">**<span style="font-size: 10pt; "><span style="font-family: Dotum; "><span style="font-size: 11pt; "><div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font></span></span></span></span></div></div></span></span></span>**</div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">먼저 </span></span>[<span style="font-size: 10pt; "><span style="font-family: Dotum; ">미니 브라우저에 대한 샘플 코드</span></span>](http://msdn.microsoft.com/en-us/library/ff431744(VS.92).aspx "[http://msdn.microsoft.com/en-us/library/ff431744(VS.92).aspx]로 이동합니다.")<span style="font-size: 10pt; "><span style="font-family: Dotum; ">를 다운 받으시고, 압축을 푸세요. 물론, 지금 이 글을 보시는 분들은 </span></span>[<span style="font-size: 10pt; "><span style="font-family: Dotum; ">Windows Phone 7 개발 환경이 구축</span></span>](http://ash84.tistory.com/entry/윈도우-폰의-반격-윈도우-폰-앱-개발환경-공개 "[http://ash84.tistory.com/entry/윈도우-폰의-반격-윈도우-폰-앱-개발환경-공개]로 이동합니다.")<span style="font-size: 10pt; "><span style="font-family: Dotum; ">되어 있어야 합니다. sln파일을 더블클릭 하시면, 다음과 같은 화면이 나올것입니다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  
+</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">일단 어떻게 동작하는지 먼저 구경을 해보자구요. 금강산도 식후경이라는 말이 있듯이 분석을 하기전에 동작하는 모습을 봐야 감이 잡히겠죠^^</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  
+</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">![](http://ash84.net/wp-content/uploads/1/cfile2.uf.12040B0E4BA2CE4D14E5E8.png)  
+</span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">동작 시켜보면 알겠지만, 그냥 브라우저 입니다. 위의 창에 웹 사이트 주소를 입력하고 GO 버튼을 누르면 해당웹사이트로 이동하는 프로그램입니다. 사실 별거 없죠. <font class="Apple-style-span" color="#E31600">그럼 파헤쳐 볼까요?</font></span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; ">**<span style="font-size: 10pt; ">User Interface</span>**</div>
+<div style="text-align: justify; line-height: 2; ">**<span style="font-size: 10pt; "><div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿  </font></span></span></span></span></div></div></span>**</div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">그럼 먼저 UI를 파헤쳐 보겠습니다. 솔루션 탐색기에서 <font class="Apple-style-span" color="#193DA9">MainPage.xaml</font> 을 누르시면 위와 같은 UI가 나오게 됩니다. 기존의 Winform 어플리케이션과 달리 Windows Phone 7에서는 xaml로 UI를 개발하죠(물론 드래그앤 드롭으로 컨트롤을 배치할 수 있습니다.) <font class="Apple-style-span" color="#193DA9">App.xaml</font>은 아니니까 누르지마시구요. </span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  
+</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  
+</span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">![](http://ash84.net/wp-content/uploads/1/cfile25.uf.1512940B4BA2CEAF2DD3D7.png)  
+</span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">창를 보게되면 왼쪽에는 UI가, 오른쪽에는 xaml 코드를 보실수가 있는데, UI와 xaml 코드가 서로 호환이 된다고 보시면 됩니다. 즉, UI의 어떤 속성을 바꾸면 xaml 코드에서서 어떤 부분이 바뀌게 되는것이지요. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">UI를 뜯어보면 크게 5가지가 보입니다. 작은 타이틀, 큰 타이틀, 주소창, GO 버튼 그리고 실제 웹페이지가 표시되는 부분입니다. 비주얼 스튜디오의 오른쪽을 보시면, **Document Outline** 이라는 메뉴가 보일것입니다. **Document Outline**을 누르면 현재 UI의 전체적인 구조를 보실수가 있습니다. 크게 하나의 Grid 컨트롤(LayoutRoot)안에 두개의 Grid, TitleGrid 와 ContentGrid 가 있습니다. TitleGrid 안에는 두개의 TextBlock이 있습니다. 이 두개의 TextBlock 을 이용해서 “My First Application” 이라는 것과 “Mini Browser”라는 것을 표시해 주고 있는것이지요.<font class="Apple-style-span" color="#E31600"><u>그럼 ContentGrid 안에는 무엇이 있는지 볼까요?</u></font></span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#E31600">  
+</font></span></span></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#E31600">![](http://ash84.net/wp-content/uploads/1/cfile22.uf.136F760F4BA2CF5A16711B.png)  
+</font></span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">ContentGrid 안에는 TextBox 와 Button 그리고 WebBrowser 컨트롤이 있습니다. 즉, 우리가 UI 화면만으로 봤을때는 그냥 다 하나의 바탕안에 있는것 처럼 보이지만 실제로는 Grid로 나누어서 관리를 하고 있고 이러한 것을 지원해 주기 위해서 Document Outline 이라는것이 존재하는 것 입니다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">기존의 윈모바일의 윈폼 Application을 개발할때에는 사실 이런 부분이 많이 부족했었습니다. 하나의 Panel안에 여러 컨트롤들을 넣고 페이지 별로 관리를해도 사실 시각적으로 포함관계를 알수 없으면 개발할때 답답할 경우가 많았는데 이제는 그럴 염려는 없을것 같네요. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">ContentGrid를  살펴보면 3가지 컨트롤로 이루어져 있는데, <font class="Apple-style-span" color="#E31600"><u>왜 TextBox와 Button이 존재하는 것일까요?</u></font></span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#57048C">사실 .NET 에서 제공하는 Web Browser 컨트롤은 웹 페이지를 보여주는 역할만 하기 실제 우리가 익스플로러나 기타의 웹 브라우저 처럼 URL을 입력하는 창은 없습니다. 때문에 TextBox에 URL을 입력하고 Button을 누르면 해당 TextBox에 입력한 주소의 웹페이지를 WebBrowser 컨트롤에 보여주게 되는것이지요. </font></span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#E31600">그럼 코드를 살펴 볼까요?</font></span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; ">**<span style="font-size: 10pt; ">Code </span>**</div>
+<div style="text-align: justify; line-height: 2; ">**<div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font><font><font class="Apple-style-span" face="굴림" size="3"><span class="Apple-style-span" style="font-size: 12px; line-height: 20px;"> </span></font></font></span></span></span></span></div></div>**</div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">UI 를 <font class="Apple-style-span" color="#193DA9">MainPage.xaml </font>을 보았기 때문에 코드도 <font class="Apple-style-span" color="#193DA9">MainPage.xaml.cs</font> 를 보시면 됩니다. 보시면 다음과 같이 되어 있습니다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "></span></span></div><div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#193DA9"> public </font>MainPage()</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "> {</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">    InitializeComponent();</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">    SupportedOrientations =<font class="Apple-style-span" color="#3058D2"> SupportedPageOrientatio</font>n.Portrait | <font class="Apple-style-span" color="#3058D2">SupportedPageOrientation</font>.Landscape;</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "> }</span></span></div></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "></span></span></div><div style="text-align: justify;"></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "> </span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">우선 위의 코드가 생성자를 나타낸 다는 것은 다 아실테고, InitializeComponent() 함수는 윈폼 Application을 만들때 부터 자동으로 생기는 함수로 UI에 대한 초기화 작업이 되어 있는 부분입니다. 지금 보실 필요는 없고.</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  
+</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "><figure class="wp-caption aligncenter" style="width: 400px">![](http://ash84.net/wp-content/uploads/1/cfile24.uf.145EE4264BA2D186640618.png)<figcaption class="wp-caption-text"></figcaption></figure><div style="text-align: center;"><span class="Apple-style-span" style="line-height: 20px; font-size: 11px; "> SupportedPageOrientation.Portrait | SupportedPageOrientation.Landscape</span></div></span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  
+</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "><figure class="wp-caption aligncenter" style="width: 400px">![](http://ash84.net/wp-content/uploads/1/cfile23.uf.19307E244BA2D1A455BB70.png)<figcaption class="wp-caption-text"></figcaption></figure><span class="Apple-style-span" style="line-height: 20px; font-size: 11px; "><div style="text-align: center;">  SupportedPageOrientation.Portrait</div></span></span></span></div><div style="text-align: justify;"></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#105738">다음 코드를 보시면, </font></span></span><span style="font-size: 10pt; "><span style="font-family: Dotum; ">**<font class="Apple-style-span" color="#105738">SupportedOrientations </font>**<font class="Apple-style-span" color="#105738">이라는 enum 형식의 것이 있는데, 이것은 현재 개발하는 어플에서 제공하는 Orientations (방향)을 지정할 수가 있습니다. 즉, 위의 코드에서는 </font></span></span><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#105738">Portrait (세로) 와 Landscape(가로) 모드를 다 지원한다는 것입니다. 실제로 에뮬레이터에 올려보시면, 세로에서 가로로 돌렸을때 “Mini Browser”라는 글씨가 제대로 보이지만, Landscape 를 빼게되면 돌려도 글자가 누운 상태로 보이게 됩니다. 개발하는 어플리케이션에 따라서 그런 부분을 고려해주어야 겠지요.</font></span></span></div><div style="text-align: justify;"></div><div style="text-align: justify;"></div><div style="text-align: justify;"></div><div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div style="text-align: justify;"><span class="Apple-style-span" style="font-family: Dotum; line-height: 20px; font-size: 13px; "><font class="Apple-style-span" color="#193DA9">private void</font> button1_Click(<font class="Apple-style-span" color="#193DA9">object</font> sender, <font class="Apple-style-span" color="#3058D2">RoutedEventArgs</font> e)</span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">{</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">            string site;</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">            site = textBox1.Text;</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">            webBrowser1.Navigate(<font class="Apple-style-span" color="#193DA9">new</font><font class="Apple-style-span" color="#3058D2">Uri</font>(site, <font class="Apple-style-span" color="#3058D2">UriKind</font>.Absolute));</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">}</span></span></div></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "></span></span></div></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">다음은 버튼 처리에 관한 코드입니다. 보시는것 처럼 아주 간단한데요 TextBox 에서 Text 를 받아와서 웹페이지를 보여주는 부분입니다. WebBrowser 객체에서 해당 주소의 웹페이지를 호출하는 함수는 Navigate 입니다. Navigate 함수는 파라미터로 Uri 를 받고 있기 때문에 다음과 같이 넣어 준것입니다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">Uri의 생성자를 보면 다양한 형식으로 오버로드 되어 있는것을 볼수 있는데요. 그 중에서 여기서는</span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">**<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "> Uri(String, UriKind)</div>**</span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">라는 것을 사용합니다. String 에는 웹 페이지 주소가 들어가게 되는데,<u><font class="Apple-style-span" color="#E31600">UriKind 는 무엇일까요?</font></u></span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#C8056A">UriKind 라고 하는 것은 Uri의 종류를 정의한다고 나와있습니다. (</font></span></span><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#C8056A">Defines the kinds of </font></span></span><span>[<span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#C8056A">Uri</font></span></span>](http://msdn.microsoft.com/en-us/library/system.uri.aspx)</span><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#C8056A">s) 즉, 현재 쓰려고하는 Uri 가 절대 주소(example: http://www.contoso.com/index.html)인지 상대주소(example: /index.html) 인지를 나타내는것입니다. UriKind 는 enum 형식이고 3가지의 값을 가지고 있습니다. </font></span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">****</span></span></div><div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">**–  RelativeOrAbsolute  **</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">**–  Absolute  **</span></span></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">**–  Relative **</span></span></div></div><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">****</span></span></div></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">RelativeOrAbsolute 는 절대 주소인지 상대주소인지 애매할때 설정해 두는 것이라고 합니다. 사용자가 어떤 주소를 쓸지 모를때에 설정해 두면 좋을것 같네요</span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">**정리** </span></span></div>
+<div style="text-align: justify; line-height: 2; "><div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font></span></span></span></span></div></div></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">첫번째 샘플 코드 분석이었는데, 미니 브라우저는 생각보다 쉽게 구현할 수 있게 되어 있었습니다. 사실 기존의 .Net Compact Framework 나 윈 모바일에서도 이 부분은 webBrowser 컨트롤을 통해서 쉽게 구현이 가능한 부분이었습니다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">하지만, Document Outline 이라던지, </span></span><span style="font-size: 10pt; "><span style="font-family: Dotum; ">SupportedOrientations 같은 부분을 보면서, 기존의 윈 모바일보다 좀더 쉽게 구현할 수 있게 제공하는것 같습니다. MS는 개발자에게는 친절하다는 생각이 들었습니다. </span></span></div>
+<div style="text-align: justify; line-height: 2; "></div>
+<div style="text-align: justify; line-height: 2; "></div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['An Seong Hyun'">#['An Seong Hyun'</a>&nbsp;
+        
+            <a href="/tag/'c#'">#'c#'</a>&nbsp;
+        
+            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+        
+            <a href="/tag/'mini browser code sample'">#'mini browser code sample'</a>&nbsp;
+        
+            <a href="/tag/'Windows Phone 7'">#'Windows Phone 7'</a>&nbsp;
+        
+            <a href="/tag/'미니브라우저 코드샘플 분석'">#'미니브라우저 코드샘플 분석'</a>&nbsp;
+        
+            <a href="/tag/'안성현'">#'안성현'</a>&nbsp;
+        
+            <a href="/tag/'윈도우 폰7 개발'">#'윈도우 폰7 개발'</a>&nbsp;
+        
+            <a href="/tag/'윈도우폰']">#'윈도우폰']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

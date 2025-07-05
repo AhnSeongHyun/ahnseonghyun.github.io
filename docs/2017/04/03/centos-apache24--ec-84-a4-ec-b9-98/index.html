@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>CentOS Apache2.4 설치</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">CentOS Apache2.4 설치</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2017-04-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <h4>Apache 2.4 설치</h4>
+<p><br/></p>
+<script src="https://gist.github.com/AhnSeongHyun/9652aa49959d3bb52f4c.js"></script>
+
+<p>위와같이 wget을 통해서 일단 다운로드를 받고 압축을 푼다. 아래의 apr, apr-util, pcre 를 설치하는 것은 사실상 Apache 서버를 설치하기 위함인데 실제로 현재 단계에서 ./configure 를 해 보게 되면 아래의 3가지 설치해야 하는 것들이 없다고 나오는 것을 확인할수 있다. </p>
+<h4>apr 설치</h4>
+<p><br/><br />
+<a href="https://apr.apache.org/">https://apr.apache.org</a> 에 들어가면 apr과 apr-util 을 받을 수가 있는데 일단 apr 부터 설치해보자. </p>
+<script src="https://gist.github.com/AhnSeongHyun/ff9022e24e063bac5928.js"></script>
+
+<h4>apr-util 설치</h4>
+<p><br/></p>
+<script src="https://gist.github.com/AhnSeongHyun/18eb481e29b93fa10f73.js"></script>
+
+<h4>pcre 설치(<a href="http://www.pcre.org/">http://www.pcre.org/</a>)</h4>
+<p><br/></p>
+<script src="https://gist.github.com/AhnSeongHyun/1bd46919cc9d369583d5.js"></script>
+
+<p>설치에 필요한 것들을 모두 설치했기 때문에 이제 아파치 서버를 설치하면 된다. 다음과 같이 해준다.  이 과정에서 pcre 와 apr 보두 <code>/usr/local/</code> 에 설치되어 있어야 한다. </p>
+<p>일단 아파치 서버가 제대로 설치 되었으면 <code>./httpd -l</code> 을 입력했을때 <code>mod_ssl.c</code> 이나 <code>mod_so.c</code> 가 출력되는 것을 볼 수가 있다. SSL 관련해서 키나 파일을 만드는 방법은 생략하고 public, private 키 파일이 있다는 가정하에 아파치 설정 부분에 대해서 설명하도록 하겠다.</p>
+<p><br/></p>
+<h4>httpd.conf 수정하기</h4>
+<p><br/></p>
+<p>기존과 다르게 ssl 이나 가상호스트 설정이 <code>/conf/extra</code> 하위로 빠져 있기 때문에 일단 ssl 관련 모듈을 열어주고  ssl 관련 설정 주석처리를 해제한다. </p>
+<pre><code>LoadModule ssl_module modules /mod_ssl.so
+
+# Secure (SSL/TLS) connections
+Include conf``/extra/httpd-ssl.conf
+</code></pre>
+<p><br/></p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<h4>httpd-ssl.conf 수정하기</h4>
+<p>public, private 키를 각각 SSLCertificateFile,SSLCertificateKeyFile 에 등록해주면 된다. </p>
+<pre><code>#   Server Certificate:
+#   Point SSLCertificateFile at a PEM encoded certificate.  If
+#   the certificate is encrypted, then you will be prompted for a
+#   pass phrase.  Note that a kill -HUP will prompt again.  Keep
+#   in mind that if you have both an RSA and a DSA certificate you
+#   can configure both in parallel (to also allow the use of DSA
+#   ciphers, etc.)
+#   Some ECC cipher suites (http://www.ietf.org/rfc/rfc4492.txt)
+#   require an ECC certificate which can also be configured in
+#   parallel.
+SSLCertificateFile  &quot;/usr/local/apache/conf/xxx.Public.crt&quot;
+#SSLCertificateFile &quot;/usr/local/apache/conf/server-dsa.crt&quot;
+#SSLCertificateFile &quot;/usr/local/apache/conf/server-ecc.crt&quot;
+
+
+#   Server Private Key:
+#   If the key is not combined with the certificate, use this
+#   directive to point at the key file.  Keep in mind that if
+#   you've both a RSA and a DSA private key you can configure
+#   both in parallel (to also allow the use of DSA ciphers, etc.)
+#   ECC keys, when in use, can also be configured in parallel
+SSLCertificateKeyFile  &quot;/usr/local/apache/conf/xxx.Private.key&quot;
+#SSLCertificateKeyFile &quot;/usr/local/apache/conf/server-dsa.key&quot;
+#SSLCertificateKeyFile &quot;/usr/local/apache/conf/server-ecc.key&quot;
+</code></pre>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['apache'">#['apache'</a>&nbsp;
+        
+            <a href="/tag/'centos'">#'centos'</a>&nbsp;
+        
+            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+        
+            <a href="/tag/'SSL'">#'SSL'</a>&nbsp;
+        
+            <a href="/tag/'아파치'">#'아파치'</a>&nbsp;
+        
+            <a href="/tag/'아파치 소스 설치']">#'아파치 소스 설치']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

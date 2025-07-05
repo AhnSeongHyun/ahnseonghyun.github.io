@@ -1,0 +1,12 @@
+---
+title: '# 포스팅할 시간이 없이 바쁜 나날들.'
+author: 'ash84'
+pub_date: '2010-03-10'
+description: ''
+featured_image: ''
+tags: ['An Seong Hyun', '안성현', '포스팅', '포스팅하고파']
+---
+
+
+<div style="text-align: justify;line-height: 2; "></div><div style="text-align: justify;line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">포스팅 할 시간이 없이 바쁜 나날들입니다. ㅠ 아이폰 Todo를 통해서 생각날때마다 포스팅 제목을 써 놓고 메모를 해두지만, 정작 언제 포스팅할지에 대한 Due Date는 정할수가 없군요. 에휴. </span></span></div><div style="text-align: justify;line-height: 2; "></div><div style="line-height: 2; "><figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile8.uf.155384254B975BC10BD722.PNG)<figcaption class="wp-caption-text">대체 언제다쓰니. </figcaption></figure><div style="text-align: justify;"></div></div><div style="text-align: justify;line-height: 2; "></div><div style="text-align: justify;line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">바쁜이유는 여러가지가 있겠지만, 가장 큰건 역시 회사일이 너무 바빠졌습니다. 갑자기 프로젝트 기한이 앞당겨져서 게다가 원래 일정상에 같이 하기로한 프로그래머 분들이 다른일로 바쁘시거나 혹은 퇴사하셔서 제가 혼자하고 있는 입장입니다. </span></span></div><div style="text-align: justify;line-height: 2; "></div><div style="text-align: justify;line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">많은 분들이 있었을때는 참 좋았던것 같아요. 같이 브레인 스토밍하는 것도 좋았지만, UI는 UI기획자가, 설계는 다른 분들과 함께 하는 등의 업무 분담으로 인해서 제가 맡은 일에 집중력을 높일수 있었는데, 지금은 UI 디자인도 제가 하고 설계도 제가하고 코딩도 제가하려니 아주 죽겠습니다요. </span></span></div><div style="text-align: justify;line-height: 2; "></div><div style="text-align: justify;line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">힘들때 일수록, 힘을 더 내야하는데 말이 쉽지 아주 죽겠네요. 하루하루가 정말 피가 마릅니다. 쩝. 이럴때는 정말 왜 사람들이 우리나라를 떠나서 유럽이나 미주쪽에서 프로그래머 일을 하려고 하는지 느껴지네요. 수명이 짧을수 밖에 없는거 같기도 하고요. </span></span></div><div style="text-align: justify;line-height: 2; "></div><div style="text-align: justify;line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">역시 행복한 프로그래머가 되기엔 저는 아직 많이 부족한것 같습니다. 어머니 말씀대로 쉽게 스트레스 받지 않으려고 노력하지만 사회초년생이다 보니 그게 쉽지가 않네요. </span></span></div><div style="text-align: justify;line-height: 2; "></div><div style="text-align: justify;line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">아무튼, 얼른 프로젝트 마무리짓고 다시 신들린 포스팅으로 돌아오겠습니다. 그때까지는 주로 Daily에 일상에 대해서 좀 많이 쓸거 같네요. 그래야 좀 스트레스가 풀리는 것 같아서요^^</span></span></div><div style="text-align: justify;line-height: 2; "></div><div style="text-align: justify;line-height: 2; "></div>
+

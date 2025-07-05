@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>WPF example - CONTOSO Healthcare System</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">WPF example - CONTOSO Healthcare System</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-07-03</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><img alt="사용자 삽입 이미지" src="http://ash84.net/wp-content/uploads/1/gl138.png" /></p>
+<p><span style="font-size: 11pt;"><br />
+ 강성재님의 MS 세미나에서 보았던 예제중 하나다. 조금은 내게 아이디어를 주었던 자료. </span><br />
+<span style="font-size: 11pt;"><br />
+ 이전 랩미팅때 About .NET Framework3.0 라는 주제로 발표할건데, WPF(Windows Presentation Foundation) 부분에 대한 예제로 첨가할 예정이다. </span><br />
+<span style="font-size: 11pt;"><br />
+ (WPF에 대해서는 About .NET Framework 3.0 완성후 , 올리겠습니다.)</span><br />
+<span style="font-size: 11pt;"><br />
+</span><br />
+<span style="font-size: 11pt;">WPF에 대한 서적은 거의 없는 실정이다. 하나정도 두껍게 해서 출판 되었다고 했는데 </span><br />
+<span style="font-size: 11pt;"><br />
+ 아직 보지 못해서 모르겠지만, 그래도 네이버 블로그나 다수의 블로거들, 즉 블로그를 운영</span><br />
+<span style="font-size: 11pt;"><br />
+ 하시는 개발자 분들이 WPF 에대한 스터디 자료들을 많이들 올려놔 주셨다. </span><br />
+<span style="font-size: 11pt;"><br />
+</span><br />
+<span style="font-size: 11pt;">이 예제는 그냥 돌려 보거나 혹은 시간이 된다면, 안에 소스파일을 훑어 보는것도 좋은일일것</span><br />
+<span style="font-size: 11pt;"><br />
+ 같다. 한가지 주의할점은, 노트북이나 혹은 사양이 낮은 컴퓨터에서는 버벅거린다는점이다. </span><br />
+<span style="font-size: 11pt;"><br />
+ 원래는 OTTO 의 쇼핑몰 예제를 보여드릴려구 햇는데, 그건정말 심하게 버벅거리고 설치가 어렵다. </span><br />
+<span style="font-size: 11pt;"><br />
+</span><br />
+<span style="font-size: 11pt;"><br />
+</span></p>
+<div style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; BACKGROUND-COLOR: #ffdaed"><span style="font-size: 11pt;">프로토 타입이긴 하지만, 이 CONTOSO HealthCare System의 장점 </span>  
+<span style="font-size: 11pt;">  
+</span>  
+<span style="font-size: 11pt;">– 기술적인 장점 : WPF는 기본적으로 Standalone형태의 윈도우 어플리케이션과 XBAP(웹에서 실행되는) 지원 하기때문에 이 시스템이 사용자에게 두가지 측면에서 접근이 가능하다. 즉, 의사나 병원 관계자에게는 일반 윈도우 어플리케이션이 편하겠지만, 변형시켜서 환자나 관계자 대상이라면, 어디서나 접속이 가능한, 웹쪽이 편할것으로 예상되어 진다. </span>  
+<span style="font-size: 11pt;">  
+</span>  
+<span style="font-size: 11pt;">또한 </span>**<span style="font-size: 11pt;">“가젯형태”</span>**<span style="font-size: 11pt;"> 로 인스톨이 가능하기 때문에 프로토타입이긴 하지만, 새로운 패러다임을 불러 올수 있을것으로 예상되어 진다. </span>  
+<span style="font-size: 11pt;">  
+</span></div>
+<p><span style="font-size: 11pt;"></span></p>
+<div style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; BACKGROUND-COLOR: #faffa9"><font color="#003366">**<span style="font-size: 11pt;">– 의료정보공학적 관점</span>**  
+<span style="font-size: 11pt;">  
+</span>  
+<span style="font-size: 11pt;">: 사실상 user에 대한 고려에 대한 부분은 빼놓을수 없을 정도로 중요하다. 인터페이스의 고착성이라는 관점에서 보면, 기존의 병원정보시스템(HIS) 혹은 EMR 시스템의 인터페이스는 고정적(fixed)이고, 사용자가 익히는데 어느정도의 시간을 필요로 한다. </span>  
+<span style="font-size: 11pt;">  
+</span>  
+<span style="font-size: 11pt;">하지만, 위에서 프로토타입으로 제시한 인터페이스는 매우 쉽다. 무엇보다도 저런 형태라면, </span>  
+<span style="font-size: 11pt;">  
+ 환자별로 customized 된 인터페이스를 제공할수 있다고 생각하고 그것이 웹이나 window application 이 아닌, 가젯이나 혹은 PDA, SMARTPHONE의 단말기의 인터페이스의 형태로 들어가게 된다면, 그에 대한 효과는 엄청날 것으로 보인다. </span>  
+<span style="font-size: 11pt;">  
+</span>  
+<span style="font-size: 11pt;">단점도 있다. 환자에겐 좋을수도 있지만, 정확한 데이터를 요구하는, 혹은 의료영상과 같은 </span>  
+<span style="font-size: 11pt;">  
+ 해상도가 큰 영상을 판독해야 하는 의사에게 저런 시스템은 버벅거리기만 하는 별볼일 없는 시스템이 될수도 있다. 물론, 이것은 개발상의 타겟팅의 문제라고 생각한다. </span>  
+<span style="font-size: 11pt;">  
+</span></font></div>
+<p><span style="font-size: 11pt;"><br />
+</span><strong><font color="#d41a01"><u><span style="font-size: 11pt;">LINK : </span><a href="http://wpf.netfx3.com/files/folders/applications/entry6608.aspx"><strong><font color="#d41a01"><u><span style="font-size: 11pt;">CONTOSO Healthcare System prototype</span></u></font></strong></a></u></font></strong></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['.Net Framework 3.0'">#['.Net Framework 3.0'</a>&nbsp;
+        
+            <a href="/tag/'contoso'">#'contoso'</a>&nbsp;
+        
+            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+        
+            <a href="/tag/'healthcare system'">#'healthcare system'</a>&nbsp;
+        
+            <a href="/tag/'Prototype'">#'Prototype'</a>&nbsp;
+        
+            <a href="/tag/'WPF']">#'WPF']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

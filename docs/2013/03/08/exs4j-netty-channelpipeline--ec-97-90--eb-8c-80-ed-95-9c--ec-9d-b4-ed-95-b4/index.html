@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(exs4j) Netty ChannelPipeline 에 대한 이해.</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(exs4j) Netty ChannelPipeline 에 대한 이해.</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2013-03-08</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">현재 개발하고 있는 <a href="https://github.com/AhnSeongHyun/exs4j">exs4j</a> 에서는 네트워크 파트는 전적으로 <a href="http://netty.io">Netty</a>가 담당하고 있다. 이유는 여러가지가 있겠지만 쉽게  서버를 구성할 수 있고 pipeline을 변경함에 따라 HTTP 통신 방식도 지원할 수 있기 때문이다.(v1.6 지원예정) <a href="http://netty.io">Netty </a>에서 여러가지 예제를 제공하고 있기 때문에 쉽게 따라 할수 있는데 필자 역시 따라 하면서 배우고 적용하고 있는 중이다. </span></p>
+<script src="https://gist.github.com/AhnSeongHyun/5114409.js"></script>
+
+<p><span style="font-size: 11pt;">위의 코드는 <a href="https://github.com/AhnSeongHyun/exs4j">exs4j</a> 서비스 부분의 JsonPipelineFactory 에 있는 코드인데, Json 디코딩과 엔코딩을 위한 decoder와 encoder 그리고 framer, handler 를 ChannelPipeline 에 설정하고 있다. 다음의 코드를 보자</span></p>
+<script src="https://gist.github.com/AhnSeongHyun/5114413.js"></script>
+
+<p><span style="font-size: 11pt;">이 코드는 Netty의 HttpSnopServer 라는 예제를 이용해서 Http 통신을 지원하기 위한 pipeline 을 구성하는 코드이다. 보시면 decoder, encoder, deflater, handler를 지정하고 있다. </span></p>
+<p><span style="font-size: 11pt;">그냥 쓰면 되는것을<strong> 한가지 의문</strong>이 들었는데, <strong>Netty 내부에서는 저 decoder, encoder 들이 통신상의 read(), write()시 동작을 해야할텐데 도데체 어떻게 동작을 하는 것일까? 하는 생각이 들었다. decoder, encoder라는 이름이 혹시 어떤 키값이 되어서 read()를 하면 decoder 라는 이름으로 저장된 객체를 읽어와서 수행하는것인가? 그렇다면 handler, framer, deflater는 또 모지?</strong></span></p>
+<p><span style="font-size: 11pt;">여러 의문을 풀고자<a href="http://netty.io/3.6/api/"> Netty 3.6 API</a> 문서를 살펴보았다. 정리하자면 이렇다. <strong>(의역, 오역이 있을수 있음을 인정한다.)</strong></span></p>
+<p><span style="font-size: 11pt;"><strong><br />
+</strong></span></p>
+<p><span style="font-size: 11pt;"><strong>ChannelPipeline</strong></span></p>
+<p><span style="font-size: 11pt;">정의 : ChannelHandler 의 리스트. </span></p>
+<p><span style="font-size: 11pt;">역할 : 네트워크 상의 흐름을 가로채거나 해서 처리한다. </span></p>
+<p><span style="font-size: 11pt;"><strong>특징 </strong></span></p>
+<p><span style="font-size: 11pt;">– Intercepting Filter Pattern 에 의해서 구현되어 있다. </span></p>
+<p><span style="font-size: 11pt;">– 이것을 이용해서 전체를 제어할수 있다. </span></p>
+<p><span style="font-size: 11pt;"><strong>사용법</strong></span></p>
+<p><span style="font-size: 11pt;">– Channel에 ChannelPipeline을 붙여야 한다. </span></p>
+<p><span style="font-size: 11pt;">– 일단 한번 붙이면 Channel과 pipeline 이 영구적으로 결합된다. </span></p>
+<div style="line-height: 2;"><span style="font-size: 11pt;">– Channel은 현재 붙은 ChannelPipeline을 떼어내지 않으면 다른것을 붙일수 없다.</span></div>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;"></span>
+
+서버가 데이터를 받을때 : UpStream : receive, socket.read(), inBoundData 
+
+<div><span style="font-size: 11pt;">서버가 데이터를 보낼때 : DownStream : send, socker.write(), outBoundData </span></div></div>
+<div></div>
+<div><script src="https://gist.github.com/AhnSeongHyun/5114437.js"></script></div>
+<div><span style="font-size: 15px; line-height: 22px;">  
+</span></div>
+<div></div>
+<div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">데이터를 받는다고 하면 1, 2, 5 가 호출된다. 그리고 데이터를 보낸다고 하면 4, 3이 호출이 된다. ChannelPipeline 에 등록해 놓은 것에 대한 구분은 해당 클래스가 UpStreamHandler 를 구현했는지, DownStreamHandler를 구현했는 지에 의해서 결정된다. 그런데 만약 5번 핸들러에서UpStreamHandler , DownStreamHandler 를 모두 구현하였다면, 125, 543 순으로 호출된다. </span></div>
+<div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">  
+</span></div>
+<div></div>
+<div style="text-align: justify;"><span style="font-size: 11pt;">실제로 Netty의 예제에서 많이 나오는 SimpleChannelHandler 는 둘 다를 구현하고 있다. </span></div>
+<div></div>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><div><span style="font-size: 10pt;">public class SimpleChannelHandler implements ChannelUpstreamHandler, ChannelDownstreamHandler {…}</span></div></div>
+<div></div>
+<div></div>
+<p><span style="font-size: 11pt;">****</span></p>
+<p>Building a Pipeline</p>
+<div></div>
+<div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">Request, Receive I/O Event 를 처리 할 때 여러가지 핸들러를 쓰게 된다. 전형적인 서버는 아래와 같은 핸들러들을 가지고 있을 것이다. (물론, 프로토콜이나 비지니스 로직에 따라 약간씩 다를듯) </span></div>
+<div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">  
+</span></div>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><div></div><div><span style="font-size: 11pt;">Protocol Decoder – 받은 바이너리 데이터(ChannelBuffer)를 해석해서 자바 오브젝트로 변경</span></div><div></div><div><span style="font-size: 11pt;">Protocol Encoder – 보낼 Java 오브젝트를 프로토콜 데이터(ChannelBuffer) 로 변경</span></div><div></div><div><span style="font-size: 11pt;">ExecutionHandler – applies a thread model</span></div><div></div><div><span style="font-size: 11pt;">Business Logic Handler – </span><span style="font-size: 11pt; line-height: 2;">실제 비지니스 로직을 수행할 핸들러 </span></div></div>
+<div><span style="font-size: 9pt; line-height: 2;">  
+</span></div>
+<div><span style="font-size: 9pt; line-height: 2;">  
+</span></div>
+<div><span style="font-size: 9pt; line-height: 2;">  
+</span></div>
+<div><span style="font-size: 11pt; line-height: 1.5;">**Thread Safety**</span></div>
+<div style="line-height: 2;"><span style="font-size: 9pt; line-height: 2;">  
+</span></div>
+<div style="line-height: 2; text-align: justify;"><span style="font-size: 11pt; line-height: 2;">ChannelHandler 는 언제든지 추가와 삭제가 가능하다. 왜냐하면 ChannelPipeline은 스레드에 안전하기 때문이다. 한예로, 중요한 정보의 교환시 SslHandler 를 추가할수 있고 교환후에 삭제 할 수도 있다.</span></div>
+<p><span style="font-size: 11pt;"><a href="http://netty.io/3.6/api/">Netty 3.6 API</a> 문서에 있는 ChannelPipeline 에 대한 내용을 위에 적었는데 이것 외에도 pitfall 이라고 해서 ‘위험’적인 부분에 대해서 설명해 놓은 부분도 있으니 참고해서 보면 좋을것 같다.(필자는 잘 이해가 안되었음)</span></p>
+<p><span style="font-size: 11pt;">문서를 통해서 품고 있었던 ChannelPipeline 에 대한 의문점을 풀게 되었다. 정리를 하자면 아래와 같다. </span></p>
+<p><span style="font-size: 11pt;"> </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">**ChannelPipeline addLast() 함수를 통해서 추가될때 붙여지는 이름과 데이터 송수신 사이에서의 관계는 없으며 그 관계는 addLast() 함수를 통해서 ChannelHandler 객체가 UpStreamHandler 를 구현했느냐 DownSteramHandler 를 구현 했느냐에 따라서 결정된다. **</span>
+
+</div>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;">**<span style="font-size: 11pt;">handler, framer, deflater 로 설정한 ChannelHandler 역시 </span><span style="font-size: 11pt; line-height: 2;">UpStreamHandler, </span><span style="font-size: 11pt; line-height: 2;">DownSteramHandler</span>**<span style="font-size: 11pt; line-height: 2;">** 둘중 하나 혹은 둘다를 구현하고 있는 경우이다. 둘다를 구현하는 경우, 송수신시 모두 추가한 순서에 포함되어 수행되어 진다. **</span>
+
+</div>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['ChannelPipeline'">#['ChannelPipeline'</a>&nbsp;
+        
+            <a href="/tag/'ChannelPipelineFactory'">#'ChannelPipelineFactory'</a>&nbsp;
+        
+            <a href="/tag/'espressoOtr'">#'espressoOtr'</a>&nbsp;
+        
+            <a href="/tag/'exs4j'">#'exs4j'</a>&nbsp;
+        
+            <a href="/tag/'github'">#'github'</a>&nbsp;
+        
+            <a href="/tag/'Netty']">#'Netty']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

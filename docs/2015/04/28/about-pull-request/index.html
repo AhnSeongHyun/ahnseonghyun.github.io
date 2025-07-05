@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>주워먹기 Pull Request 에 대해서</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">주워먹기 Pull Request 에 대해서</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2015-04-28</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <center><div class="jetpack-video-wrapper">> [@krazyeom](https://twitter.com/krazyeom) 그게 말처럼 주워먹기 힘든 프로젝트였습니다 ㅠㅜㅜ [http://t.co/RkgntLz2uT](http://t.co/RkgntLz2uT) @dalinaum
+> 
+> — 용균 (@haruair) [April 1, 2015](https://twitter.com/haruair/status/583402323977773056)
+
+<script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+
+</div></center>
+<p>언제부터인가 모르겠지만 <strong>주워먹기</strong>를 가끔하고 있다. 먹는게 아니라 오픈소스의 일부를 기여하는 것인데 버그를 수정하거나 그런 아주 큰 기여가 아닌 소소한 기여를 의미하는 것으로 <strong>‘주워먹기’</strong> 라는 말을 다른 사람들이 쓰는것을 보고 내가 하는것이 주워먹기라는 것을 알게 되었다.</p>
+<div class="jetpack-video-wrapper">[![sdf](https://farm9.staticflickr.com/8811/17291119125_20a0a0e589_z.jpg)](https://flic.kr/p/skXvix)</div>
+<p>특별히 주워먹기를 하기 위해서 소스를 찾는것은 아니지만, 주로 했던것들을 보면 진행했던 프로젝트나 관심이 있었던 라이브러리, 툴 등을 설치 혹은 사용하면서 문제가 있었던 부분에 대한 소소한 PR 이었던것 같다. 혹자들은 이게 어떤 의미가 있나? 라고 반문할 수도 있겠지만, 내 개인적인 생각에서는 몇가지 선효과가 있다고 생각이 든다.</p>
+<p>제일 먼저 드는 효과는 오픈소스에 대한 <strong>막연한 두려움? 거리감에 대한 해소인것 같다</strong>. 나도 그렇지만, 멋지게 자신만의 오픈소스 프로젝트를 하고 GITHUB에서 star, fork 수가 높은 사람들을 보면 부럽고, 동경의 대상이기도 했다. 그래서 한동안은 뭔가 개인적으로 필요한것을 만들고 오픈소스화 하면서 재미를 보긴했지만, 여전히 혼자 하기는 마찬가지였던것 같다. 주워먹기라는 행위는 PR(Pull Request)를 보내면서 약간이나마 해당 오픈소스에 대한 기여의 느낌(느낌적인 느낌)을 받을수 있고, 자신감을 상승시키는 효과가 있는것 같다.</p>
+<p>그 다음으로는 <strong>해당 오픈소스에 대한 흥미를 유발하고 더 나아가서는 소스자체를 이해하려고 노력하게 된다는 사실이다.</strong> 나같은 경우, 처음에는 세미콜론(;)을 체크해서 없으면 PR을 보내고 그 다음에는 예제코드를 돌려보면서 문제가 있으면 수정 혹은 개선할 포인트를 보내기거나 번역작업을 하고 PR을 보내기도 했다. 이처럼 점점 하면 할수록 좀더 큰, 좀더 의미있는 PR을 하게 되는것 같다.</p>
+<p>GITHUB, STACK OVERFLOW의 계정을 이력서에 쓰는 시대가 되었지만, 의미없고, 재미없는 오픈소스를 찾아서 억지로 하는것보다 내가 지금 쓰고 있는 것에서부터 잘 살펴보는게 더 빠른 길이 아닐까? 하는 생각도 든다.(물론 더 빠른길이 있을수도 있지만, 필자와 같이 느린사람들을 위해서..) PR을 하면서 혼자 만드는 것이 아닌 다른 사람들이 다 같이 만들어가는구나 라는 생각이 들었고, PR 에 대한 피드백도 별것도 아니지만 받으면서 재미를 느끼게 된것 같다.</p>
+<p>기타 : <a href="http://dalinaum.github.io/react/ios/2015/04/02/horror-story-of-react-native.html">React Native 머지 잔혹사</a></p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['Git'">#['Git'</a>&nbsp;
+        
+            <a href="/tag/'github'">#'github'</a>&nbsp;
+        
+            <a href="/tag/'Opensource'">#'Opensource'</a>&nbsp;
+        
+            <a href="/tag/'pull request'">#'pull request'</a>&nbsp;
+        
+            <a href="/tag/'오픈소스']">#'오픈소스']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

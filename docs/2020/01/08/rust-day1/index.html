@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Rust-DAY1</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Rust-DAY1</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2020-01-08</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p><img alt="sun" src="https://live.staticflickr.com/65535/49351849271_1a8164bbd0_z.jpg" /></p>
+<p><a href="https://github.com/AhnSeongHyun/sun">sun</a><br />
+- 간단한 프로그램을 배우면서 Rust 를 배워서 남주자!<br />
+- multiple host  에  shell 명령어를 보내고 그것을 보여주는 단순한 CLI 프로그램(사실 python ansible 조합이면 금방 될것 같지만...)<br />
+- github action 에 CI 관련 스트립트 정의하고 시작! </p>
+<pre><code class="language-yaml">    name: CI
+
+    on: [push]
+
+    jobs:
+      build:
+
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v1
+        - name: Build
+          run: cargo build --verbose
+        - name: Run tests
+          run: cargo test --verbose
+        - name: Check Lint
+          run: cargo fmt --all -- --check --verbose
+</code></pre>
+<ul>
+<li>언제든 PR 리뷰 및 피드백은 환영 입니다.</li>
+</ul>
+<hr />
+<p><strong>개발 환경 구성하기</strong> </p>
+<ul>
+<li>Jetbrains Intellij + Rust plugin 으로 세팅완료</li>
+<li>vscode 에 플러그인은 Rust 와 Rust(rls) 만 설치해서 쓸 수 있지만 같은 사용자(나)의 경험으로 개발하고 싶어서 jetbrains 계열 선택</li>
+<li>
+<h2>생각보다 자동완성이 나쁘지 않아서 사용중</h2>
+</li>
+</ul>
+<p><strong>clap</strong></p>
+<ul>
+<li>CLI 프로그램에서 help 나 arg 들을 받는 것을 구성하기 위해서 clap 라는 crate 를 <code>Cargo.toml</code> 에 추가했다.</li>
+</ul>
+<pre><code class="language-toml">    [dependencies]
+    clap = &quot;~2.33.0&quot;
+</code></pre>
+<hr />
+<p><strong>Custom Type 정의하기</strong> </p>
+<ul>
+<li>clap 으로 command line argument 를 가져왔는데 host 를 정의한 host.yaml 의 경로와 입력한 shell command 를 분리하기 위해서 <code>parse_arg</code> 함수를 구현</li>
+<li>Tuple 형태로 <code>(String, String)</code> 이렇게 리턴하면 덜 명시적이어서 CustomType 을 정의해본다.</li>
+</ul>
+<pre><code class="language-rust">    type HostFilePath = String;
+    type Input = String;
+</code></pre>
+<p><strong>Reference</strong> </p>
+<ul>
+<li><a href="https://doc.rust-lang.org/stable/rust-by-example/primitives/tuples.html">https://doc.rust-lang.org/stable/rust-by-example/primitives/tuples.html</a></li>
+</ul>
+<p>** 아직 모르는것 :** </p>
+<ul>
+<li>Custom Error 를 만들고 그것을 throw 하는 방법?</li>
+<li>intellij 에서 rust debug mode 연결 하는 법?</li>
+</ul>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['rust'">#['rust'</a>&nbsp;
+        
+            <a href="/tag/'100DaysOfRust']">#'100DaysOfRust']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

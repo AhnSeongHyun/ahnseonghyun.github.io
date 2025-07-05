@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title># 프로그램 구조가 프로젝트에 미치는 영향</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title"># 프로그램 구조가 프로젝트에 미치는 영향</h1>
+    <div class="blog-post-meta">
+        
+            <small>  2010-06-07</small>
+        
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+
+    <div class="blog-post">
+        <p>**<span style="mso-no-proof: yes"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><br />
+<span class="Apple-style-span" style="LINE-HEIGHT: 26px; FONT-FAMILY: Dotum; FONT-SIZE: 13px"> <img alt="" src="http://ash84.net/wp-content/uploads/1/cfile25.uf.203F711F4C0BB556461904.png" /></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p></span></span></span></span><strong><em>*<span style="mso-no-proof: yes"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><br />
+<span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">한</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> 8 </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">개월간의 프로젝트가 끝이 났습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">단순히 소프트웨어를 개발하는 작업은</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> 8</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">개월 정도 소요됐지만 하드웨어를설계하고</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> OS</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">를 올리고 하는 등의 응용 소프트웨어를 올리기 위한 작업은 더 시간이 소요됐습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. 8</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">개월 동안 생각해 보면 여러가지 문제가 있겠지만</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로젝트 일정을늘어지게했던 원인 중에서 </span></span></em>*<span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로그램 구조가 미치는 영향</span></span></strong><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">에 대해서 생각해보았습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span><?xml:namespace prefix = o /?><br />
+</span></p>
+<p></span></span></span></span>****<span style="mso-no-proof: yes"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><br />
+<span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><br />
+</span></span></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><strong><span style="mso-no-proof: yes"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">보이지 않는 문제를 품고 있는 프로그램 구조</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">.</span></span></span></span></strong></p>
+<p><strong><em>*</span></em></strong><em></span></em><strong><em></span></em></strong><em></span></em>***  </p>
+<div>  
+<div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div></div>
+<p>****<span style="mso-no-proof: yes"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">  </p>
+<div></div>
+<p></span></span></span></span><strong>**<span style="mso-no-proof: yes"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"></span></span></span></span></strong></p>
+<div>****  
+<div style="TEXT-ALIGN: justify; LINE-HEIGHT: 1.7">**<span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font></span></span></span></span>**<span style="mso-no-proof: yes"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로그램 구조는 처음 프로그램을 설계할 때 생각하고 결정하게됩니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">제가 이번 프로그램을 개발하면서 가장 주안점을 주었던 부분은 폼</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">(Form) </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">상의</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> UI</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">의 변화를 어떻게 쉽게 관리할 수 있을까 하는부분이었습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">그래서 처음에는 하나의 폼에서 몇개의 패널</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">(Panel)</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">을두고 그 안에서 컨트롤</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">(Control)</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">을 보여주고 숨기고 하면서 뷰를 전환하는 방식을 생각했습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">어차피 데이터 부분은 따로 관리하기 때문에 크게 생각할 필요가 없었고</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">작은</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> 4.3</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">인치의 화면에서 여러 화면을 보여줘야 하기 때문에 화면전환 방식을 위와 같이 설계한 것이었습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">.</span></span></span></span></div></div>
+<p><span style="mso-no-proof: yes"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><br />
+</span></span></span></span></p>
+<p><span style="mso-no-proof: yes"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><figure class="wp-caption aligncenter" style="width: 423px"><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile27.uf.207B08224C0BB7D963846E.png" /><figcaption class="wp-caption-text">처음 계획했던 화면 전환 구조</figcaption></figure><br />
+</span></span></span></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">그런데 실제 코딩에 들어가서는 많은 문제가 생겼습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">그 중에 가장큰 문제는 다음 메뉴를 클릭해서 다른 화면으로 넘어가기 위해서는 더 많은 패널</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">(Panel)</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">이 필요했고</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">한 패널내에서 동적으로 컨트롤을 추가하고 삭제하다보니 화면전환에서 많은 문제가 생겼습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">.</span></span></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">사실 프로그램을 개발하다 보면</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">코딩을 실제로 하는 개발자는 프로그램구조가 잘못되었다는 사실을 어느 순간 본능적으로 느낄때가 있습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">개발해야 하는 부분은 많이 남았는데점점 더 복잡해지는 것을 느낄때 보통 그러는데</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">저 역시 개발하면서 계속 화면전환에 대한 문제가 걸리다보니 본능적으로 </span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">‘</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">이건 아니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">.’ </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">혹은 </span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">‘</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">이러다 큰일나겠다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">.’ </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">이런 생각이 들었습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> </span></span></p>
+<p></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><strong><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">개발 완료</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> 1</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">주일전</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span></strong></p>
+<p>**  </p>
+<div>  
+<div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div>  
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿<span class="Apple-style-span" style="LINE-HEIGHT: 24px; FONT-FAMILY: 굴림; COLOR: rgb(51,51,51); FONT-SIZE: 12px; FONT-WEIGHT: normal"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">사실상 다음주가 시연임에도 불구하고 대부분의 개발이 끝난 상태에서도 계속 화면전환 부분이 문제가 생겼습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">그래서</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> 1</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">주일전에 과감히 프로그램 상의 핵심적인 부분인 화면전환구조를 바꾸기로 마음을 먹었습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">사실 다들 알다시피 프로그래머는 어느정도 개발이 진행된 상태에서는프로그램 구조를 바꾸기를 싫어합니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">왜냐하면 자칫 잘못하면 일정을 못 맞출수도 있고 더 큰 버그를양산할 수 있기 때문입니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">.</span></span></span></span></font></span></span></span></span></div></div>
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><font color="#474747"><span class="Apple-style-span" style="LINE-HEIGHT: 24px; FONT-FAMILY: 굴림; COLOR: rgb(51,51,51); FONT-SIZE: 12px; FONT-WEIGHT: normal"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">  
+</span></span></span></span></font></span></span></span></span></div>
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><font color="#474747"><span class="Apple-style-span" style="LINE-HEIGHT: 24px; FONT-FAMILY: 굴림; COLOR: rgb(51,51,51); FONT-SIZE: 12px; FONT-WEIGHT: normal"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><figure class="wp-caption aligncenter" style="width: 444px">![](http://ash84.net/wp-content/uploads/1/cfile7.uf.153BA4264C0BB984887129.png)<figcaption class="wp-caption-text">User Control 전환식으로 프로그램 구조 변경</figcaption></figure>  
+</span></span></span></span></font></span></span></span></span></div>
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><font color="#474747"><span class="Apple-style-span" style="LINE-HEIGHT: 24px; FONT-FAMILY: 굴림; COLOR: rgb(51,51,51); FONT-SIZE: 12px; FONT-WEIGHT: normal"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">  
+</span></span></span></span></font></span></span></span></span></div>
+<p>**  </p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">기존의 하나의 폼 안에서 여러개의 패널을 두던 구조보다는 모든 페이지 마다의</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">UserControl </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">을 만들어서 각각 호출하는 방법이 좀더 화면 전환 시의</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> UI </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">컨트롤관리가 쉬울 것이라는 생각이 들었습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">물론 단점도 있었습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">.User Control </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">로 모든 페이지를 만든다는 것 자체도 부담이긴 하지만</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">각각의</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> UserControl </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">클래스가 생기기 때문에 클래스간의 데이터 전달부분을 다 만들어야 하는 부담도 있었습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">결과적으로 보면 후자의 구조가 애초부터 제가 수행한 프로젝트에는 더 적합했던 프로그램 구조였습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">화면전환상의 더이상의 문제점은 생기지 않았이며</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">데이터 전달 역시문제가 생기지 않았습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> </span></span></p>
+<p></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><strong><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">개발자</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">,</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">당신은 이미 알고 있다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span></strong></p>
+<p>**  </p>
+<div>  
+<div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div>  
+<div style="TEXT-ALIGN: justify; LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿<span class="Apple-style-span" style="LINE-HEIGHT: 24px; FONT-FAMILY: 굴림; COLOR: rgb(51,51,51); FONT-SIZE: 12px; FONT-WEIGHT: normal"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로그램 구조는 사실상 코딩을 하기 전에 정하게 됩니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">상의를 해서정하는 경우도 있고 선임 개발자분들이 정하는 경우도 있는데</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">코딩 단계에 들어가서 바뀔수 있는 경우가종종 있는것 같습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">개발자가 본능적으로 무엇인가 이상하다는 생각이 들때가 있습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">제 생각엔 그때가 프로그램 구조를 바꾸거나 고쳐야 하는 최적의 타이밍이라고 생각합니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">제가 수행한 프로젝트는 프로그램의 크기가 크지 않아서 다행이었지만</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">사실개발완료</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> 1 </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">주일 전에 프로그램 구조를 바꾸는 것은 왠만한 용자가 아니면 하기 쉽지 않습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">때문에 개발자 본인이 프로그램 구조가 문제가 있다고 느낄때 바로바로 요청을 해서 어디가 어떻게 문제가 될것이라고말하는 용기가 필요합니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로그램의 복잡성이 높아질수록</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로그램구조를 바꿀수 있는 기회는 더 없어집니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">.</span></span></span></span></font></span></span></span></span></div></div>
+<p>**  </p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> </span></span></p>
+<p></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로그램 구조가 프로젝트에 미치는 영향은 이루 말할수 없습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로젝트라는말의 정의 처럼 일정이 가장 중요하기 때문에 잘못된 프로그램 구조를 계속 가져가면 분명히 버그가 생기고 그로 인해서 프로젝트가 늘어지게 됩니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">당연히 잔업과 야근이 생기게 되겠구요</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">그래서 프로그램 구조를 처음만들때도 제대로 만들어야 하지만</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">개발할 때에도 반드시 문제가 있다고 하면 구조변경을 고려해 봐야 합니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">초기 단계에서 구조변경은 가능하고 그 여파가 크지 않지만</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">말기단계에서 구조변경은 상당히 위험하고 프로젝트 일정에도 크게 영향을 미칠수 있습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">.</span></span></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> </span></span></p>
+<p></span></p>
+<div style="LINE-HEIGHT: 2"></div>
+<p><strong><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">개발자</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">,</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">이젠 당신이 용자가 되어야 할 때</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span></strong></p>
+<p>**  </p>
+<div>  
+<div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div>  
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">  
+</font></span></div>  
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">![](http://ash84.net/wp-content/uploads/1/cfile29.uf.147E9E224C0BBB5353AFA2.jpg)  
+</font></span></div>  
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">  
+</font></span></div></div>
+<hr />
+<div></div>
+<hr />
+<div>  
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿<span class="Apple-style-span" style="LINE-HEIGHT: 24px; FONT-FAMILY: 굴림; COLOR: rgb(51,51,51); FONT-SIZE: 12px; FONT-WEIGHT: normal"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로그래머들은 때때로 자신의 권한 영역 밖의 일에 대해서 언급하는 것을 극도로 싫어합니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">그건 당신이 할일이니까</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">그건 당신이 개발해야할 모듈이니까</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">나는 내 부분만 제대로 작동하면 돼 라는 생각을 가질 수도 있습니다</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">. </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">어떻게보면 맞는 말이지만</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">, </span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로그램 구조에 대한 부분은 그런 마인드를 조금은 버리고 옆에 있는 동료와 한번소통</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">(Communication)</span></span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">의 장을 열어 보심이 어떨가 싶네요</span></span><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">.   
+</span></span></span></span></font></span></span></span></span></div></div>
+<hr />
+<div>  
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><font color="#474747"><span class="Apple-style-span" style="LINE-HEIGHT: 24px; FONT-FAMILY: 굴림; COLOR: rgb(51,51,51); FONT-SIZE: 12px; FONT-WEIGHT: normal"><span lang="EN-US"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"></span></span></span></span></font></span></span></span></span></div></div>
+<p>**  </p>
+    </div>
+
+    <hr/>
+    <div>
+        
+            <a href="/tag/['program Structure'">#['program Structure'</a>&nbsp;
+        
+            <a href="/tag/'뷰전환'">#'뷰전환'</a>&nbsp;
+        
+            <a href="/tag/'프로그램 구조'">#'프로그램 구조'</a>&nbsp;
+        
+            <a href="/tag/'프로그램 구조가 프로젝트에 미치는 영향']">#'프로그램 구조가 프로젝트에 미치는 영향']</a>&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>
