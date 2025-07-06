@@ -2,7 +2,7 @@
 title: '[C#] Bi-Direction TextBox'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '최근에 하는 프로젝트 때문에 Bi-Direction 이라는 것에 대해서 알게 되었다. Bi-Direction 이라는 것은 글씨를 쓰는 방향이 원래 서양 혹은 우리나라와 같은 왼쪽에서 오른쪽으로 향하는 방향이 아닌 반대 방향을 의미하는 것이다. 왜 이게 필요한가? 라는 의문을 던지기 전에 사실, Bi-'
 featured_image: ''
 tags: ['Bi-Direction TextBox', 'c#', 'dev', 'RightToLeft 속성', '아랍어', '히브리어']
 ---

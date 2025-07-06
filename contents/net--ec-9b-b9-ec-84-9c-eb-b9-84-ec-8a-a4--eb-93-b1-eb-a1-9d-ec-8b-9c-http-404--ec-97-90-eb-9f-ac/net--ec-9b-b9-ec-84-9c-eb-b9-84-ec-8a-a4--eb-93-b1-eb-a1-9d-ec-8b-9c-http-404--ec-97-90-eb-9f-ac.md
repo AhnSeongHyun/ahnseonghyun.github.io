@@ -2,7 +2,13 @@
 title: '[.NET] 웹서비스 등록시 HTTP 404 에러'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: 'C# 으로 만든 웹서비스를 서버에 등록해서 테스트 해야 하는 경우가 많은데
+
+
+그러한 경우, 간혹, 윈도우 서버 2003 을 쓰다보면, 
+
+  
+**H'
 featured_image: ''
 tags: ['Active Server Pages', 'dev', 'http404 에러', 'IIS', '웹서비스', '웹서비스 등록', '윈도우 서버 2003']
 ---

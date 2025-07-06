@@ -2,7 +2,9 @@
 title: 'Getty Center'
 author: 'ash84'
 pub_date: '2011-07-08'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile7.uf.121E98354E17553316A016.JPG)
+
+LA의 Getty center. 다양한 창조물들. 틀에 박혀있지도 않은.'
 featured_image: ''
 tags: ['']
 ---

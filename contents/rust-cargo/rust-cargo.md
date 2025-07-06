@@ -2,7 +2,29 @@
 title: 'Rust  Cargo'
 author: 'ash84'
 pub_date: '2018-10-02'
-description: ''
+description: '## cargo 명령어 정리 
+
+### 프로젝트 생성 
+
+`cargo new —bin `
+
+```
+├── Cargo.lock
+├── Cargo.toml
+└── src
+    └── main.rs
+
+1 directory, 3 files
+```
+
+### 빌드 및 실행 
+
+- `cargo build`: 컴파일 
+- `cargo run` : 바로 실행 
+- `cargo check` : 문법체크 
+- `cargo clean` : 컴파일 정리 
+- `cargo new` : 프로젝트 생성 
+- `cargo init` : 프로젝트 생성('
 featured_image: ''
 tags: ['dev', 'rust', 'cargo']
 ---

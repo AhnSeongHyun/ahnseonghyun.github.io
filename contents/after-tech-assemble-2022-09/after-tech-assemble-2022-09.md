@@ -2,7 +2,9 @@
 title: 'TechAssemble를 마치고'
 author: 'ash84'
 pub_date: '2022-09-03'
-description: ''
+description: '다리가 풀리고 무릎이 너무 아파왔다. 2시간 동안 사내 백엔드/프론트 개발자, 보안, 데이터 엔지니어링분들과 이야기를 하는 시간을 가졌는데 계속 이야기를 하고 이야기를 끌어 낸다는 것이 얼마나 힘든 일인지에 대해서 알  게 되었다. 
+
+회사가 만들어지고 개발팀이 꾸려진 상태에서 작년에 TechAssemble이라는 것을 분기? 정도의 단위로 해왔다. 테크 조직이 가야할 방향 그리고 우리가 무엇이 부족하고, 우리가 무엇을 해왔는지 애기하는 시간을 가졌었다. 그런데 올해는 이번이 처음이었다. 사람도 많아졌고, 어느정도 알아서 잘 되겠지?'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/after-tech-assemble-2022-09/Untitled.png'
 tags: ['essay', 'dev', 'tech-assemble']
 ---

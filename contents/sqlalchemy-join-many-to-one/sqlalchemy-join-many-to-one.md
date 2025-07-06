@@ -2,7 +2,16 @@
 title: 'SQLAlchemy Join #2 Many To One'
 author: 'ash84'
 pub_date: '2018-08-31'
-description: ''
+description: '**Many To One** 
+
+다대일 관계에서 child 를 참조하는 외래키는 parent 클래스에 위치해있다. `relationship()`  함수
+는 parent 클래스에 위치해있으며, scalar-holding  속성이 생성될것이다.
+
+```python
+    class Parent(Base):
+        __tablename__ = 'parent'
+        id = Column(Integer, primary_key=True)
+        child_id = Column(Integer, ForeignKey('chi'
 featured_image: ''
 tags: ['sqlalchemy', 'dev', 'join', 'Python']
 ---

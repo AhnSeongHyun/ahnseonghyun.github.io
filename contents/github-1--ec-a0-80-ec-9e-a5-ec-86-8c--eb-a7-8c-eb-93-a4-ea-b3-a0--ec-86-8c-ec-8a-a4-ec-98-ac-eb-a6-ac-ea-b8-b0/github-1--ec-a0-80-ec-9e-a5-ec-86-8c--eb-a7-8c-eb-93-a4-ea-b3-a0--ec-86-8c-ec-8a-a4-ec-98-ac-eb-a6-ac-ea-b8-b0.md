@@ -2,7 +2,9 @@
 title: '(GitHub) 1. 저장소 만들고 소스올리기.'
 author: 'ash84'
 pub_date: '2012-11-25'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile23.uf.1614B13450B2B45A2F0F75.PNG)
+
+일단 github에 가입을 하고 [github for mac](http://mac.github.com/) 을 설치했다는 가정하에 시작을 하겠다.'
 featured_image: ''
 tags: ['github', 'github 소스 올리기', 'github 연동', 'github 저장소 만들기']
 ---

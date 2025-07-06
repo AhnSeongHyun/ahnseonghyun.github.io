@@ -2,7 +2,7 @@
 title: 'now working..'
 author: 'ash84'
 pub_date: '2011-05-21'
-description: ''
+description: '우리집 한우.'
 featured_image: ''
 tags: ['']
 ---

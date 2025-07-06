@@ -2,7 +2,14 @@
 title: '[JAVA] 서브클래싱을 막는 방법'
 author: 'ash84'
 pub_date: '2016-06-22'
-description: ''
+description: '서브클래싱(subclassing)을 막는 두가지 방법
+
+**1. class에 final 키워드로 두기**
+
+– 다음과 같이 public final class 로 두게 되면, extends가 되지 않는다. 
+
+
+**2. 모든 생성자를 private 로 두고 publi'
 featured_image: ''
 tags: ['dev', 'Final', 'Java', '상속', '서브클래스', '서브클래싱']
 ---

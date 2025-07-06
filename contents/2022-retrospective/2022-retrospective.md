@@ -2,7 +2,10 @@
 title: '2022 회고 : 39→40'
 author: 'ash84'
 pub_date: '2022-12-22'
-description: ''
+description: '거창하게 1년 회고를 하자니 쉽지가 않다. 개인적으로 39살이라는 점에서 더 감회가 새롭고 이 글을 써 내려가기가 두려운것 같다. 어쨌든 그것도 내가 1년을 지내온 시간의 무게이기에 써 내려가본다. 
+
+- **사람**
+    - 1년 동안 많은 사람들을 만났다. 커피챗, 면접, 새로운 업체의 관계자 분들 그리고 무엇보다도 믿고 의지할 수 있는 동료들. 그리고 좋아하는 사람들까지. 나는 인맥관리? 친구관리 같은 액션을 딱히 하지 않는다. 20대를 지나면서 깨달은 한 가지는 나는 그런걸 할 수 없는 사람이라는거였고, 특별히 누구에게 안'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/2022-retrospective/21C79D01-184A-4CBB-AA2A-F7081B5569B9.JPG'
 tags: ['retrospective', 'ash84', 'cto', 'essay']
 ---

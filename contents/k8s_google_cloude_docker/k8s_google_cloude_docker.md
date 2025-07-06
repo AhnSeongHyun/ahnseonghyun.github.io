@@ -2,7 +2,17 @@
 title: 'Introduction to Docker'
 author: 'ash84'
 pub_date: '2019-01-13'
-description: ''
+description: '본 포스팅은 Qwiklabs 의 [Kubernetes in the Google Cloud](https://www.qwiklabs.com/quests/29)
+를 기반으로 하고 있습니다. 
+
+## Docker Image & Build, Run
+
+기본적으로 도커이미지 형태로 올리는 것이 기반이 되어야 한다. 일단 도커 이미지를 생성하기 위해서는 `Dockerfile` 을 생성해야 한다. 
+
+    # Use an official Node runtime as the parent image
+    FROM node:6
+    
+    # S'
 featured_image: ''
 tags: ['k8s', 'docker']
 ---

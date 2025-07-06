@@ -2,7 +2,9 @@
 title: '[DB] mysql 덤프 및 복구'
 author: 'ash84'
 pub_date: '2016-08-13'
-description: ''
+description: '테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다.  
+
+나 같은 경우는 매월 데이터를 가져와야 하기 때문에 dump시 쿼리 비슷하게 필요한 데이터만 가져올수 있었으면 했는데, 다행히'
 featured_image: ''
 tags: ['dev', 'MySQL', 'mysqldump', 'mysqldump option', 'mysqldump query']
 ---

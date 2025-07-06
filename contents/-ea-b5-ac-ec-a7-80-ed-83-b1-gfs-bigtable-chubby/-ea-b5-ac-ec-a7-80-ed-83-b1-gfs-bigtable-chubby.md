@@ -2,7 +2,7 @@
 title: '[구지탱] GFS, Bigtable, Chubby'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**GFS(Google File System)**–'
 featured_image: ''
 tags: ['bigtable', 'Chubby', 'dev', 'GFS', '구글을 지탱하는 기술']
 ---

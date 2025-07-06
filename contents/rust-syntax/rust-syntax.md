@@ -2,7 +2,30 @@
 title: 'Rust 기본 문법'
 author: 'ash84'
 pub_date: '2018-10-04'
-description: ''
+description: '## 변수
+
+- 변수는 불변성
+- 가변성 변수는 `mut` 를 추가
+
+```rust
+        let mut x = 5;
+```
+
+- 상수
+    - 상수는 mut 을  쓸수 없음. 불변성 그 자체
+    - const
+    - 유형(데이터 타입)을 선언해야한다.
+    - 상수표현식으로만 설정, 실행시간에 설정될 수 없다.
+
+```rust
+        const MAX_POINTS: u32 = 100_000;
+```
+
+- Shadowing
+    - 같은 변수 이름을 써서 가리는 것
+
+```rust
+        let x'
 featured_image: ''
 tags: ['dev', 'rust', 'syntax']
 ---

@@ -2,7 +2,25 @@
 title: 'uwsgi 기본 사용법 정리'
 author: 'ash84'
 pub_date: '2016-08-13'
-description: ''
+description: '### 개요
+
+- WAS 서버의 일종, 현재 파이썬 서버 중 가장 좋은 성능으로 알려져 있다. 
+
+- 어플리케이션 컨테이너로 파이썬으로 만든 앱을 실행해 주는 역할, WSGI 을 지원한다. 
+
+
+
+#### 설치
+
+```bash 
+$ pip install uwsgi 
+```
+
+#### flask 와 연동 
+
+```bash
+uwsgi –http 127.0.0.1:3031 –wsgi-file ./myflaskapp.py –callable app –processes 4 –threads 2 –stats 127.0.0.1:9191
+````'
 featured_image: ''
 tags: ['dev', 'FLASK', 'INI', 'uWSGI', 'uwsgi usage', 'uwsgi 사용법']
 ---

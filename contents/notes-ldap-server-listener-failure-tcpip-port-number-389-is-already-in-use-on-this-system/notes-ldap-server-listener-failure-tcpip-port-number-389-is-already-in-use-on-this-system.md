@@ -2,7 +2,7 @@
 title: '(Notes) LDAP Server: Listener failure, TCP/IP port number [389] is already in use on this system'
 author: 'ash84'
 pub_date: '2012-12-27'
-description: ''
+description: 'Domino/Notes 서버를 윈도우 2008 서버에 설치한 이후 가동시켰을때, 아래와 같은 에러가 발생한다. 에러인 즉, 이미 서버에서 389번 포트를 사용하고 있어서 Domino의 LDAP 서버에서 389번 포트를 사용 할 수 없다는 애기다.'
 featured_image: ''
 tags: ['LDAP', 'notes']
 ---

@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) UITextField와 키보드 액션"/>
+    <meta property="og:description" content="UITextField 를 누르게 되면 바로 키보드가 올라온다. 당연한 것인데 이유는 텍스트 입력을 위해서는 키보드가 필요하기 때문이다. 그런데 사용자가 입력하기 전에 뷰가 보여졌을때 바로 UITextField 에 커서가 옮겨지고 키보드가 올려지게 하려면 어떻게 해야할까? 아래의 코드처럼 FirstResponder 를 UITextField에 주면 된다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/ios-uitextfield-ec-99-80--ed-82-a4-eb-b3-b4-eb-93-9c--ec-95-a1-ec-85-98"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) UITextField와 키보드 액션</title>
-    <meta name="description" content="" />
+    <meta name="description" content="UITextField 를 누르게 되면 바로 키보드가 올라온다. 당연한 것인데 이유는 텍스트 입력을 위해서는 키보드가 필요하기 때문이다. 그런데 사용자가 입력하기 전에 뷰가 보여졌을때 바로 UITextField 에 커서가 옮겨지고 키보드가 올려지게 하려면 어떻게 해야할까? 아래의 코드처럼 FirstResponder 를 UITextField에 주면 된다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,37 +63,32 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) UITextField와 키보드 액션</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">UITextField 를 누르게 되면 바로 키보드가 올라온다. 당연한 것인데 이유는 텍스트 입력을 위해서는 키보드가 필요하기 때문이다. 그런데 사용자가 입력하기 전에 뷰가 보여졌을때 바로 UITextField 에 커서가 옮겨지고 키보드가 올려지게 하려면 어떻게 해야할까? 아래의 코드처럼 FirstResponder 를 UITextField에 주면 된다. </span></p>
 <p><span style="font-size: 11pt; line-height: 1.5;"><script src="https://gist.github.com/4655828.js"></script></span></p>
 <p><span style="font-size: 11pt;">그렇다면 키보드를 내릴려면 어떻게 해야 할까? 단순하다. UITextField 에서 FirstResponder를 가져오면 돤다. 다음의 코드처럼 말이다. </span></p>
 <p><span style="font-size: 11pt;"><script src="https://gist.github.com/4655868.js"></script></span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'Keyboard'">#'Keyboard'</a>&nbsp;
+            #Keyboard&nbsp;
         
-            <a href="/tag/'UITextField Keyboard'">#'UITextField Keyboard'</a>&nbsp;
+            #UITextField Keyboard&nbsp;
         
-            <a href="/tag/'키보드'">#'키보드'</a>&nbsp;
+            #키보드&nbsp;
         
-            <a href="/tag/'키보드 액션']">#'키보드 액션']</a>&nbsp;
+            #키보드 액션&nbsp;
         
     </div> 
     <footer>

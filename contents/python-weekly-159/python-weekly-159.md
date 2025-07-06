@@ -2,7 +2,11 @@
 title: 'Python Weekly 159'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '파이썬 위클리에서 개인적으로 관심있는것들만 정리하였음. 
+
+[**memory_util**](https://github.com/jtushman/memory_utils)
+
+– [https://github.com/jtushman/memory_utils](https://'
 featured_image: ''
 tags: ['Celery', 'dev', 'memory_util', 'Python']
 ---

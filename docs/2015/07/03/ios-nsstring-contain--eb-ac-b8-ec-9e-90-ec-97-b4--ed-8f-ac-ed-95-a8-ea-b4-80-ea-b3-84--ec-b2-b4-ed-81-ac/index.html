@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) NSString contain, 문자열 포함관계 체크"/>
+    <meta property="og:description" content="은근히 하나의 문자열 안에 또다른 문자열이 포함되어 있는지를 체크해야 하는 경우가 많다. 예를 들어 어떤 url 에 acces_token=sflkjpsojfs 이러식으로 담겨서 온다고 가정해 보자. 해당 URL 문자열에 access_token 이라는 문자열이 포함되어 있는지 확인을 한뒤 split 으로 처리하는 것이 순서일 것이다. 문자열의"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/ios-nsstring-contain--eb-ac-b8-ec-9e-90-ec-97-b4--ed-8f-ac-ed-95-a8-ea-b4-80-ea-b3-84--ec-b2-b4-ed-81-ac"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) NSString contain, 문자열 포함관계 체크</title>
-    <meta name="description" content="" />
+    <meta name="description" content="은근히 하나의 문자열 안에 또다른 문자열이 포함되어 있는지를 체크해야 하는 경우가 많다. 예를 들어 어떤 url 에 acces_token=sflkjpsojfs 이러식으로 담겨서 온다고 가정해 보자. 해당 URL 문자열에 access_token 이라는 문자열이 포함되어 있는지 확인을 한뒤 split 으로 처리하는 것이 순서일 것이다. 문자열의" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,31 +63,26 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) NSString contain, 문자열 포함관계 체크</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">은근히 하나의 문자열 안에 또다른 문자열이 포함되어 있는지를 체크해야 하는 경우가 많다. 예를 들어 어떤 url 에 acces_token=sflkjpsojfs 이러식으로 담겨서 온다고 가정해 보자. 해당 URL 문자열에 access_token 이라는 문자열이 포함되어 있는지 확인을 한뒤 split 으로 처리하는 것이 순서일 것이다. 문자열의 포함여부를 체크하는 코드는 아래와 같다. 아래의 코드에서는 rangeOfString: 으로 체크하고 있다. </span></p>
 <script src="https://gist.github.com/4639461.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'NSString Contain'">#'NSString Contain'</a>&nbsp;
+            #NSString Contain&nbsp;
         
-            <a href="/tag/'String contain']">#'String contain']</a>&nbsp;
+            #String contain&nbsp;
         
     </div> 
     <footer>

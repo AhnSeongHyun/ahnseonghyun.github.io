@@ -2,7 +2,11 @@
 title: 'Deview2014 Review'
 author: 'ash84'
 pub_date: '2017-04-27'
-description: ''
+description: '9/29일(월) 9:00 ~ 18:00 
+
+**1. 행복한 프로그래머를 위한 철학 : 유석문**
+
+- 외부요건들은 어쩔수가 없다. 결국 내부 ‘나’에 집중해라.'
 featured_image: ''
 tags: ['2014', 'ansible', 'dev', 'deview', 'Python', 'Realm', 'conference']
 ---

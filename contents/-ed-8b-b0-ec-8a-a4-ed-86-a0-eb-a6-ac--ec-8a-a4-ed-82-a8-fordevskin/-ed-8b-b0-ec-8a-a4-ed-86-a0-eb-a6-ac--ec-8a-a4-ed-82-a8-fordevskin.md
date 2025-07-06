@@ -2,7 +2,9 @@
 title: '(티스토리 스킨) forDevSkin'
 author: 'ash84'
 pub_date: '2012-10-27'
-description: ''
+description: '티스토리를 시작한지 어언 5년차가 되어 가는데 그동안 많은 스킨들이 있었지만, 딱 마음에 드는것은 몇개 있지 않았다. 기존의 테터툴즈, 텍스트큐브에서는 플러그인, 스킨 개발자 분들이 많이 계셨는데 요즘은 진짜 많이 뜸한것 같아서 많이 아쉽다. 그럼에도 불구하고 나는 계속 스킨을 만져왔는데, 기존의 여러 스킨들을 합치고 만지면서 나온 결과물이 [forDevSkin](https://github.com/AhnSeongHyun/forDevSkin) 이다. 
+
+![](h'
 featured_image: ''
 tags: ['forDevSkin', '스킨', '스킨 작업', '티스토리 스킨', '플러그인']
 ---

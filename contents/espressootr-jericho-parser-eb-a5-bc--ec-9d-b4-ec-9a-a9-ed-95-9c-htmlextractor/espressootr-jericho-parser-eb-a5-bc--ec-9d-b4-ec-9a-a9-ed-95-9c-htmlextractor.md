@@ -2,7 +2,7 @@
 title: '(espressoOtr) jericho parser를 이용한 HTMLExtractor'
 author: 'ash84'
 pub_date: '2013-03-05'
-description: ''
+description: 'HTML 파싱은 이제 어떤 서비스와 연동할때 필수적인 부분이 되었다. 그래서 쉽게 쓸수 있게 클래스화 해두면 좋은것 같아서 개인적으로 만들고 있는 [espressoOtr](https://github.com/AhnSeongHyun/espressoOtr) 이라는 자바 라이브버리에 jericho parser 를 이용해서 HTMLExtractor 클래스를 만들었다. jericho 파서는 자바기반 html parser 인데 쉽게 쓸수 있도록 되어 있다. [espressoOtr](htt'
 featured_image: ''
 tags: ['espressoOtr', 'HTML Parsing', 'HTML 파싱', 'Java', 'Jericho', '자바 라이브러리', '태그를 입력해 주세요.']
 ---

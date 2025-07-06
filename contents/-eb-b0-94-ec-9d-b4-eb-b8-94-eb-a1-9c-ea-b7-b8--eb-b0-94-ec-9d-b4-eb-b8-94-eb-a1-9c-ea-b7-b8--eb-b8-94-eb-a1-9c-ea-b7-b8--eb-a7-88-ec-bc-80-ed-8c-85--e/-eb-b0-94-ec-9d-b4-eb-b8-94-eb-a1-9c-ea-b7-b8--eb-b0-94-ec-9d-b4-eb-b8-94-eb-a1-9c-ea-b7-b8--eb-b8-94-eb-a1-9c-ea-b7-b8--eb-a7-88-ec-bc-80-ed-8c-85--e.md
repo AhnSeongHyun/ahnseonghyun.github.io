@@ -2,7 +2,7 @@
 title: '바이블로그? 바이블로그! 블로그 마케팅 + 바이럴 마케팅'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**'
 featured_image: ''
 tags: ['dev', '바이럴 마케팅', '바이블로그', '블로그 마케팅', '온라인 마케팅']
 ---

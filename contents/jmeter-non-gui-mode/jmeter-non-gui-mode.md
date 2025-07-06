@@ -2,7 +2,7 @@
 title: 'jmeter non GUI mode'
 author: 'ash84'
 pub_date: '2015-07-07'
-description: ''
+description: '[apache jmeter](http://jmeter.apache.org/) 라고 서버 Load Testing 툴인데, [사용법](http://codeigniter-kr.org/lecture/view/289/page/1)은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이'
 featured_image: ''
 tags: ['jmeter', 'jmeter non gui mode']
 ---

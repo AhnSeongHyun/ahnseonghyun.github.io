@@ -2,7 +2,7 @@
 title: '# 포스팅할 시간이 없이 바쁜 나날들.'
 author: 'ash84'
 pub_date: '2010-03-10'
-description: ''
+description: '포스팅 할 시간이 없이 바쁜 나날들입니다. ㅠ 아이폰 Todo를 통해서 생각날때마다 포스팅 제목을 써 놓고 메모를 해두지만, 정작 언제 포스팅할지에 대한 Due Date는 정할수가 없군요. 에휴. </'
 featured_image: ''
 tags: ['An Seong Hyun', '안성현', '포스팅', '포스팅하고파']
 ---

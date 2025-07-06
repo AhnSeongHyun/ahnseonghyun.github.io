@@ -2,7 +2,27 @@
 title: 'pypi 올리기 정리'
 author: 'ash84'
 pub_date: '2023-03-19'
-description: ''
+description: '올릴때 마다 고생하는데 간단 정리 
+
+****
+
+**1. pypi.python.org 에 로그인**
+
+**2. setup.py가 준비된 상태**
+
+```shell
+python setup.py register 
+```
+
+**3. 올리기** 
+
+```shell
+python setup.py sdist upload
+```
+
+
+
+** 주의'
 featured_image: ''
 tags: ['dev', 'pypi 올리기', 'Python', 'upload pypi', '파이썬']
 ---

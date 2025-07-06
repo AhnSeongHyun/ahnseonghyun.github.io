@@ -2,7 +2,7 @@
 title: '[Microsoft.Ink] ISF(Ink Serialization Format)에 관한 자료'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '﻿[](http://ash84.net/wp-content/uploads/1/cfile28.uf.18411F124B9EE055055250.pdf)cfile28.uf.18411F124B9EE055055250.pdf'
 featured_image: ''
 tags: ['An Seong Hyun', 'c#', 'dev', 'ISF', 'Microsoft.Ink', '안성현']
 ---

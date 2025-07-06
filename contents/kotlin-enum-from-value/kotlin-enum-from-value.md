@@ -2,7 +2,11 @@
 title: 'Kotlin Enum from Value'
 author: 'ash84'
 pub_date: '2019-11-24'
-description: ''
+description: '**Enum 은 소중하다. 왜냐하면 문자열 데이터에 대한 유효성 검증을 해주기도 하고 enum 의 이름 자체로 의미를 부여하기 때문이다.** 최근에 kotlin 으로 서버를 개발하던 중에 kotlin  xnum 관련해서 불편한 부분을 겪었다. 아래의 코드 같은 부분인데:
+
+enum 값에서 enum 형식으로 변환이 어렵다. 이게 왜 필요하냐 하면 비지니스 로직을 담는 서비스 레이어에서는1,2,3 같은 값으로 뭔가를 하기 보다는 Status.Ing, Status.Fail 같이 처리하는 게 가독성 측면에서 매우 좋다.
+
+```kotlin'
 featured_image: ''
 tags: ['kotlin', 'enum']
 ---

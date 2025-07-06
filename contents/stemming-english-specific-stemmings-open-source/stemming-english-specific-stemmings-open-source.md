@@ -2,7 +2,7 @@
 title: '[Stemming] English-Specific Stemmings Open Source'
 author: 'ash84'
 pub_date: '2012-04-19'
-description: ''
+description: '최근에 회사에서 아카데미라고 사내 교육 프로그램을 진행하는데 Information Retrieve 에 대한 내용이었다. 그 중에'
 featured_image: ''
 tags: ['github', 'Open Source', 'Stemming']
 ---

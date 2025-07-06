@@ -2,7 +2,9 @@
 title: '[메디게이트]이지케어텍, MS 솔루션 파트너 '선정''
 author: 'ash84'
 pub_date: '2007-09-01'
-description: ''
+description: '이지케어텍, MS 솔루션 파트너 ‘선정’
+
+****'
 featured_image: ''
 tags: ['MS 솔루션 파트너 '선정'', '메디게이트', '이지케어텍', '이창진기자']
 ---

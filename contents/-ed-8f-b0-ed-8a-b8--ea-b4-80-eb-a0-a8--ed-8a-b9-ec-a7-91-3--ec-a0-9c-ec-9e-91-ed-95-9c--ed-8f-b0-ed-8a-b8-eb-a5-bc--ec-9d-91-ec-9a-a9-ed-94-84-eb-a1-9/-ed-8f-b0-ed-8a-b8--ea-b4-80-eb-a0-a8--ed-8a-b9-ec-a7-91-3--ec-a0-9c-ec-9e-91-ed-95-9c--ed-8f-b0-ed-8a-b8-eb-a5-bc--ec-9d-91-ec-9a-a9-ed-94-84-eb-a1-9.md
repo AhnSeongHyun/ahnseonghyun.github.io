@@ -2,7 +2,7 @@
 title: '[폰트 관련 특집] 3. 제작한 폰트를 응용프로그램에 적용하자.'
 author: 'ash84'
 pub_date: '2010-09-03'
-description: ''
+description: '유니코드와 폰트와의 관계 그리고 폰트 제작에 대해서 이전 포스팅에서 알아 보았습니다.'
 featured_image: ''
 tags: ['c#', 'Font Class', 'FontCollection', 'InstalledFontCollection', 'PrivateFontCollection', '윈도우 폰트', '폰트 개발', '폰트 적용']
 ---

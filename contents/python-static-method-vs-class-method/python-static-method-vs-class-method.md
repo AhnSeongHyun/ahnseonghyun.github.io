@@ -2,7 +2,11 @@
 title: 'python static method vs. class method'
 author: 'ash84'
 pub_date: '2022-08-21'
-description: ''
+description: '사내에서 파이썬 코드를 짜다보면 static method와 class method를 혼용해서 사용하는 경우가 개인별로 있었는데 이 부분에 대해서 개인적으로 조사를 해서 전달할 기회가 있었다. 파이썬 책도 많이 봤고, 공식 레퍼런스도 봤지만 대부분 사용법에 대해서 애기가 대체로 있고, 언제 두개를 구분해서 사용해야하는 지에 대해서는 나와있지 않아서 몇개의 레퍼런스를 정리해봤다. 
+
+### [파이썬 코딩의 기술, 108p](http://www.yes24.com/Product/Goods/94197582)
+
+파이썬에는 클래스별로 생성자를'
 featured_image: ''
 tags: ['Python', 'dev', 'Class', 'static method', 'class method']
 ---

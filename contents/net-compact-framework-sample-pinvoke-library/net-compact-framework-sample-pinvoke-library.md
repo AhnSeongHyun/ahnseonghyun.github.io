@@ -2,7 +2,7 @@
 title: '.NET Compact Framework Sample: P/Invoke Library'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '.NET Compact Framework Sample: P/In'
 featured_image: ''
 tags: ['.NET Compact Framework', 'dev', 'P/Invoke', 'Wince', 'wince 6.0', '녹음', '메모리상태', '오디오출력', '폴더관련']
 ---

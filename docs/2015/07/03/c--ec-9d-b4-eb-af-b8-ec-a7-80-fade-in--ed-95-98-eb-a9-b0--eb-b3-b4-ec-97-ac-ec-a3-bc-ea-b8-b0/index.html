@@ -20,7 +20,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[C#] 이미지 Fade in 하며 보여주기"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/c--ec-9d-b4-eb-af-b8-ec-a7-80-fade-in--ed-95-98-eb-a9-b0--eb-b3-b4-ec-97-ac-ec-a3-bc-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[C#] 이미지 Fade in 하며 보여주기</title>
     <meta name="description" content="" />
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[C#] 이미지 Fade in 하며 보여주기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <div style="text-align: justify; line-height: 2; "><font class="Apple-style-span" face="Dotum" size="3"><span class="Apple-style-span" style="font-size: 13px; line-height: 26px;">  
 </span></font></div>
@@ -83,21 +85,19 @@
 <div><div></div><div></div><div><div>       </div><div>**DrawAlpha() 함수 **</div><div>**<div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font><font><font class="Apple-style-span" face="굴림" size="3"><span class="Apple-style-span" style="font-size: 12px; line-height: 20px;"> </span></font></font></span></span></span></span></div></div>**</div><div></div><div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div>         Graphics gxBuffer;</div><div>         Bitmap offBitmap;</div><div>         Bitmap slideAni;</div><div>          </div><div><div></div><div>         slideAni = new Bitmap(“FadeIn 하려는 이미지 경로”);</div><div>         offBitmap = new Bitmap(this.Width, this.Height);</div><div>         gxBuffer = Graphics.FromImage(offBitmap);</div><div></div><div>          </div><div></div></div><div>         private void DrawAlpha(Graphics gx, Bitmap image, byte transp, int x, int y)</div><div>         {</div><div>             using (Graphics gxSrc = Graphics.FromImage(image))</div><div>             {</div><div>                 IntPtr hdcDst = gx.GetHdc();</div><div>                 IntPtr hdcSrc = gxSrc.GetHdc();</div><div>                 BlendFunction blendFunction = new BlendFunction();</div><div>                 blendFunction.BlendOp = (byte)BlendOperation.AC_SRC_OVER;   </div><div>                 // Only supported blend operation</div><div></div><div>                 blendFunction.BlendFlags = (byte)BlendFlags.Zero;           // Documentation says put 0 here</div><div>                 blendFunction.SourceConstantAlpha = transp;// Constant alpha factor</div><div>                 blendFunction.AlphaFormat = (byte)0;                        // Don’t look for per pixel alpha</div><div>                 PlatformAPIs.AlphaBlend(hdcDst, x, y, image.Width, image.Height, hdcSrc, 0, 0, image.Width, image.Height, blendFunction);</div><div>                 gx.ReleaseHdc(hdcDst);    // Required cleanup to GetHdc()</div><div>                 gxSrc.ReleaseHdc(hdcSrc);       // Required cleanup to GetHdc()</div><div>             }</div><div>         }</div><div></div></div><div></div><div style="text-align: justify;"></div><div style="text-align: justify;">**Timer 를 통해서 호출하기 **</div><div style="text-align: justify;">**<div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font></span></span></span></span></div></div>**</div><div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div><div>         private void timer1_Tick(object sender, EventArgs e)</div><div>         {</div><div>             if (opacity == 252)  //0~255</div><div>             { </div><div>                 timer1.Enabled = false;</div><div>  </div><div>                 this.CreateGraphics().Clear(Color.WhiteSmoke);</div><div>   </div><div>             }</div><div>             else</div><div>             {</div><div></div><div>                 gxBuffer.Clear(this.BackColor);</div><div></div><div>                 DrawAlpha(gxBuffer, slideAni, opacity, 0, 250);</div><div></div><div>                 this.e.DrawImage(offBitmap, 0, 0);</div><div></div><div>                 opacity = (byte)(opacity + 6);</div><div>             }</div><div>         }</div></div><div></div></div><div></div><div></div><div></div></div></div>
 <div><div></div></div>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['c#'">#['c#'</a>&nbsp;
+            #c#&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Image Fade in'">#'Image Fade in'</a>&nbsp;
+            #Image Fade in&nbsp;
         
-            <a href="/tag/'Wince'">#'Wince'</a>&nbsp;
+            #Wince&nbsp;
         
-            <a href="/tag/'윈ce'">#'윈ce'</a>&nbsp;
+            #윈ce&nbsp;
         
-            <a href="/tag/'윈도우 모바일']">#'윈도우 모바일']</a>&nbsp;
+            #윈도우 모바일&nbsp;
         
     </div> 
     <footer>

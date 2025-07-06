@@ -2,7 +2,28 @@
 title: 'iftop 설치, 실시간 트래픽 확인하기'
 author: 'ash84'
 pub_date: '2017-11-16'
-description: ''
+description: '실시간 트래픽을 보고 싶을때가 있는데, 여러가지 툴들이 있겠지만 iftop 을 설치하면 좀 더 간단하게 볼 수 있다. 
+
+![iftop](https://farm5.staticflickr.com/4553/38383480446_08b68be12e_b.jpg)
+### 설치하기 
+
+```
+# centos
+yum install iftop
+```
+```
+# ubuntu
+apt-get install iftop
+```
+
+### 사용하기 
+
+```
+$ iftop
+```
+
+
+좌측에는 서버 IP 우측에는 클라이언트 IP 를 보여준다. 우측에 3컬럼은'
 featured_image: ''
 tags: ['dev', 'iftop', 'traffic', 'network']
 ---

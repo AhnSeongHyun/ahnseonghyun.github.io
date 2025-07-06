@@ -2,7 +2,7 @@
 title: '[Java] LinkedHashSet, 이건 멀까?'
 author: 'ash84'
 pub_date: '2017-03-24'
-description: ''
+description: 'Set 인터페이스 관련 3번째 포스팅, 지난번 [HashSet](http://ash84.tistory.com/898)에 이어서 LinkedHashSet이다. 기본적으로 Set 인터페이스에서 제공하는 함수를 가지고 있고, **null은 허용**된다.  일단 내부 코드를 보자.'
 featured_image: ''
 tags: ['dev', 'HastSet 정렬', 'LinkedHashSet', 'LinkedHashSet 분석', 'LinkedHashSet 성능', 'set interface']
 ---

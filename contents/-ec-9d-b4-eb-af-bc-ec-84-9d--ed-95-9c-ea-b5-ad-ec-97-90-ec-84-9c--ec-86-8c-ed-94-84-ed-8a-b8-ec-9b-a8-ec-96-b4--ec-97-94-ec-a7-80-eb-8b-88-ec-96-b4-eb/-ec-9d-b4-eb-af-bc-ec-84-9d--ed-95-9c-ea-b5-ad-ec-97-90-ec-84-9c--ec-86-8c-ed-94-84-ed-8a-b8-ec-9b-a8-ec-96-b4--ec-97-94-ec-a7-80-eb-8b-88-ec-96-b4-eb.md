@@ -2,7 +2,7 @@
 title: '이민석 - 한국에서 소프트웨어 엔지니어로 성공하는 법'
 author: 'ash84'
 pub_date: '2023-03-11'
-description: ''
+description: '트위터에 아는 형님이 추천한 동영상'
 featured_image: ''
 tags: ['복기', '소스코드 읽기', '이민석', '한국에서 소프트웨어 엔지니어로 성공하는 법']
 ---

@@ -2,7 +2,7 @@
 title: '[Windows Phone7]  mini Browser Sample 분석'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: 'Windows Phone 7 코드 샘플 4가지를 분석해 보는 시간을 갖도록 하겠습니다. 총 4가지의 샘플을 분석하는'
 featured_image: ''
 tags: ['An Seong Hyun', 'c#', 'dev', 'mini browser code sample', 'Windows Phone 7', '미니브라우저 코드샘플 분석', '안성현', '윈도우 폰7 개발', '윈도우폰']
 ---

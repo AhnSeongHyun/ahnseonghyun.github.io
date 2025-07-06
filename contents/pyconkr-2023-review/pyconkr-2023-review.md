@@ -2,7 +2,13 @@
 title: 'PyconKR 2023 파이콘 후기'
 author: 'ash84'
 pub_date: '2023-09-03'
-description: ''
+description: '## 후원사로의 후기
+
+![](https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/pyconkr2023/IMG_3787.jpg)
+
+작년의 파이콘을 다녀오면서 오프라인 파이콘 다시 코엑스에서 할 때, 후원사로 참가해야겠다는 다짐을 했다. 작년 원티드나, 8percent를 보면서 파이콘에 후원사로 참석하는 것에 대한 부러움도 있었고, 많은 구직자분들이 관심을 가져주는 모습들이 파이썬 개발자를 필요로하는 회사에 필요하다는 생각을 하게되었다.
+
+가장 어려웠던 것은 아무래'
 featured_image: ''
 tags: ['pyconkr', '파이콘']
 ---

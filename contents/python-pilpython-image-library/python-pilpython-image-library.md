@@ -2,7 +2,9 @@
 title: 'PIL(Python Image Library) 설치하기'
 author: 'ash84'
 pub_date: '2016-06-22'
-description: ''
+description: '간단하게 썸네일을 만들어야 하는 작업이 있어서 python image  관련 라이브러리를 찾던중에 [PIL](https://pypi.python.org/pypi/PIL) 이라는 것을 발견했는데 설치 해야하는 부분에 문제가 생겨서 코멘트를 남긴다. 
+
+**기본 설치**'
 featured_image: ''
 tags: ['decoder jpeg not available', 'dev', 'pil', 'PIL jpeg', 'PIL 설치', '파이썬 이미지 라이브러리']
 ---

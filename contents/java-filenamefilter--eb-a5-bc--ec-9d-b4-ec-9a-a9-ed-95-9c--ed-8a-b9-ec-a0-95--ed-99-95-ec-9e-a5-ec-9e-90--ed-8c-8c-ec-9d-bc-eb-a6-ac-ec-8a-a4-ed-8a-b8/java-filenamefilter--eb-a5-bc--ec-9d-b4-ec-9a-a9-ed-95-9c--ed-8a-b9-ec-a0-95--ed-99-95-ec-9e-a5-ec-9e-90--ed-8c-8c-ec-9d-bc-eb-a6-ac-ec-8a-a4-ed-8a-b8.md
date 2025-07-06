@@ -2,7 +2,7 @@
 title: '[JAVA] FilenameFilter 를 이용한 특정 확장자 파일리스트 가져오기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '파일처리 관련 부분에서 자주 사용되는 부분이 바로 디렉토리에서 파일리스트를 읽어오는 부분이다. 그런데 간혹 원치 않는 파일을 읽어오고 해당 파일에 접근하거나 파싱하는 과정에서 문제가 생길 수가 있다. 때문에 정해진 확장자만 읽어오는 부분이 필요한데, JAVA 에서는 이를 위해서 FilenameFilter 라는 것을 제공한다.'
 featured_image: ''
 tags: ['dev', 'FilenameFilter', 'Java', '파일 목록가져오기', '파일리스트', '확장자']
 ---

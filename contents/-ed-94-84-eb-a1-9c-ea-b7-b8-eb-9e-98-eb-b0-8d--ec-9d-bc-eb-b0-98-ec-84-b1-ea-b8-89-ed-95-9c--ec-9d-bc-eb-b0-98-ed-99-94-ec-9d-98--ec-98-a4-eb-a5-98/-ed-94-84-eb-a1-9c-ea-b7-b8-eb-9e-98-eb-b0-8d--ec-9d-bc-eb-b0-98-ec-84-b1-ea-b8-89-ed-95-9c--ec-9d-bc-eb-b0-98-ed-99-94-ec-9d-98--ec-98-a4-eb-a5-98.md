@@ -2,7 +2,8 @@
 title: '[프로그래밍 일반]성급한 일반화의 오류'
 author: 'ash84'
 pub_date: '2009-11-09'
-description: ''
+description: '[![Day 308: X](http://farm3.static.flickr.com/2537/4076648343_767c69a46e.jpg)](http://www.flickr.com/photos/91252560@N00/4076648343 "Day 308: X")  
+Day 308: X by [theogeo](http://www.flickr.com/photos/91252560@N00)[![저작자 표시](http://cfs.tist'
 featured_image: ''
 tags: ['데이터', '보정필터', '성급한 일반화의 오류', '펌웨어', '프로그래밍']
 ---

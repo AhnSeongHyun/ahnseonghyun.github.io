@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="maven에서 단위테스트가 안될때, Junit4를 추가하자."/>
+    <meta property="og:description" content="maven 빌드 환경을 세팅하고 기존의 Junit 단위테스트 클래스를 maven 의 test (src/test/java)에 넣어서 빌드를 하니 빌드시(package), 이상하게 Junit 에서는 정상적으로 작동하는 maven 빌드에서만 이상하게 fail 이 발생하는 것을 볼수 있었다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/maven-ec-97-90-ec-84-9c--eb-8b-a8-ec-9c-84-ed-85-8c-ec-8a-a4-ed-8a-b8-ea-b0-80--ec-95-88-eb-90-a0-eb-95-8c-junit4-eb-a5-bc--ec-b6-94-ea-b0-80-ed-95-98"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>maven에서 단위테스트가 안될때, Junit4를 추가하자.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="maven 빌드 환경을 세팅하고 기존의 Junit 단위테스트 클래스를 maven 의 test (src/test/java)에 넣어서 빌드를 하니 빌드시(package), 이상하게 Junit 에서는 정상적으로 작동하는 maven 빌드에서만 이상하게 fail 이 발생하는 것을 볼수 있었다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,31 +63,26 @@
     
 <div class="content">
     <h1 class="blog-post-title">maven에서 단위테스트가 안될때, Junit4를 추가하자.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">maven 빌드 환경을 세팅하고 기존의 Junit 단위테스트 클래스를 maven 의 test (src/test/java)에 넣어서 빌드를 하니 빌드시(package), 이상하게 Junit 에서는 정상적으로 작동하는 maven 빌드에서만 이상하게 fail 이 발생하는 것을 볼수 있었다. </span></p>
 <p><span style="font-size: 11pt;">간단하게, Junit4를 maven dependency에서 찾아서 연동을 하자. 귀찮으면 아래의 dependency를 붙이면 된다. </span></p>
 <p><span style="font-size: 11pt;"></span></p>
 <script src="https://gist.github.com/4393655.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'junit4'">#'junit4'</a>&nbsp;
+            #junit4&nbsp;
         
-            <a href="/tag/'maven']">#'maven']</a>&nbsp;
+            #maven&nbsp;
         
     </div> 
     <footer>

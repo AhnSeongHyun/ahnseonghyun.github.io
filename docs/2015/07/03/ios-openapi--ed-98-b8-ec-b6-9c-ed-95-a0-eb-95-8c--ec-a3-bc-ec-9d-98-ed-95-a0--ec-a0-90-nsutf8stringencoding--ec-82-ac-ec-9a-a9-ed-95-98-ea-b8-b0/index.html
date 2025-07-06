@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) OpenAPI 호출할때 주의할 점. NSUTF8StringEncoding 사용하기"/>
+    <meta property="og:description" content="올해 한우찾기 v2.3.5 버전을 개발하면서 새로 넣은 기능이 바로 뉴스검색 기능이었다. 간단히 네이버 OpenAPI 검색 기능을 이용해서 한우관련 뉴스를 사용자가 직접 검색할 수 있도록 제공하는 기능이었는데 만드는 과정에서 특별한 문제가 있어서 이렇게 디버그 포스팅을 한다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/ios-openapi--ed-98-b8-ec-b6-9c-ed-95-a0-eb-95-8c--ec-a3-bc-ec-9d-98-ed-95-a0--ec-a0-90-nsutf8stringencoding--ec-82-ac-ec-9a-a9-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) OpenAPI 호출할때 주의할 점. NSUTF8StringEncoding 사용하기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="올해 한우찾기 v2.3.5 버전을 개발하면서 새로 넣은 기능이 바로 뉴스검색 기능이었다. 간단히 네이버 OpenAPI 검색 기능을 이용해서 한우관련 뉴스를 사용자가 직접 검색할 수 있도록 제공하는 기능이었는데 만드는 과정에서 특별한 문제가 있어서 이렇게 디버그 포스팅을 한다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) OpenAPI 호출할때 주의할 점. NSUTF8StringEncoding 사용하기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">올해 한우찾기 v2.3.5 버전을 개발하면서 새로 넣은 기능이 바로 뉴스검색 기능이었다. 간단히 네이버 OpenAPI 검색 기능을 이용해서 한우관련 뉴스를 사용자가 직접 검색할 수 있도록 제공하는 기능이었는데 만드는 과정에서 특별한 문제가 있어서 이렇게 디버그 포스팅을 한다. </span></p>
 <p><span style="font-size: 11pt;">보통 OpenAPI는 URL을 이용해서 값을 전달하는 방식을 이용한다. 예를들어 아래와 같은 URL과 같은 형식이다. </span></p>
@@ -85,21 +87,19 @@
 <script src="https://gist.github.com/4363270.js"></script>
 <p></span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'Objective-C'">#'Objective-C'</a>&nbsp;
+            #Objective-C&nbsp;
         
-            <a href="/tag/'OpenAPI'">#'OpenAPI'</a>&nbsp;
+            #OpenAPI&nbsp;
         
-            <a href="/tag/'url encoding'">#'url encoding'</a>&nbsp;
+            #url encoding&nbsp;
         
-            <a href="/tag/'네이버 검색 API']">#'네이버 검색 API']</a>&nbsp;
+            #네이버 검색 API&nbsp;
         
     </div> 
     <footer>

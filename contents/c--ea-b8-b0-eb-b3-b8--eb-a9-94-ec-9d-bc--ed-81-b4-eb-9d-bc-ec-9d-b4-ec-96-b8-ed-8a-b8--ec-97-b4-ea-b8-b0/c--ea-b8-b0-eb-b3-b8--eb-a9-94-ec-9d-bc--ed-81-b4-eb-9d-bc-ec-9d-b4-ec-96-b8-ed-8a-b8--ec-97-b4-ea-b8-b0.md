@@ -2,7 +2,7 @@
 title: '[C#] 기본 메일 클라이언트 열기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '<'
 featured_image: ''
 tags: ['basic mail clients', 'c#', 'c# 메일 보내기', 'call basic mail clients', 'dev', 'mapi', 'MAPI Wrapper', 'mapi32', '메일 보내기']
 ---

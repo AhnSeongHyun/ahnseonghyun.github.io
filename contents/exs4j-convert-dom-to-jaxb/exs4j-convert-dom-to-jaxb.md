@@ -2,7 +2,7 @@
 title: '(exs4j) Convert DOM to JAXB'
 author: 'ash84'
 pub_date: '2013-02-14'
-description: ''
+description: '기존의 ExternSearchEngine 이라는 긴 이름을 버리고 exs4j 라는 이름의 **검색 컨텐츠 서버** 오픈소스를 (아직은 저장이 안된다.) 만들게 된 계기 중 하나는 NHN의 오픈API 커뮤니티에 가면서 였다. 그냥 NHN 구경도 하고 OpenAPI가 뭐 별거 있나 하는 생각에 듣게 되었지만, 세미나 중에 DOM 파싱방식 보다는 Apache HttpClient 와 JAXB 를 활용하는 것이 메모리'
 featured_image: ''
 tags: ['exs4j', 'HttpClient', 'JAXB', 'Naver OpenApi', 'OpenAPI']
 ---

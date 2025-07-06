@@ -2,7 +2,17 @@
 title: 'drone.io - server 설치하기'
 author: 'ash84'
 pub_date: '2020-03-29'
-description: ''
+description: '최근에 drone.io 를 사용할 일이 있었는데, 생각보다 자료가 없어서 이번에는 server 구성에 대해서 다루고 다음 글에서는 agent 에 대해서 다룰 예정이다. 
+
+### 개요
+
+- 사이트 : [https://drone.io/](https://drone.io/)
+- jenkins, travis-ci, github actions 처럼 CI 및 CD 까지 할 수 있는 툴
+
+### 특징
+
+- yaml 문법으로 정의 할 수 있다,.(젠킨스에 비해서 편하다)
+- [다양한 plugins 를 기반으로 하고 있다.](http://plugi'
 featured_image: ''
 tags: ['server', 'ci', 'drone.io', 'drone']
 ---

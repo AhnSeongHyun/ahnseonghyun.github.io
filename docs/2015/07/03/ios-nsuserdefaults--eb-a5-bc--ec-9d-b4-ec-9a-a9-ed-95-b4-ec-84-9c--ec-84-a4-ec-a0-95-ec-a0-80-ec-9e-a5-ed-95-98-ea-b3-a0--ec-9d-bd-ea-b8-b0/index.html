@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) NSUserDefaults 를 이용해서 설정저장하고 읽기."/>
+    <meta property="og:description" content="어떤 값들은 파일에 저장하는 것이 맞지만 때로는 앱내에 설정으로 저장하는 편이 훨씬 나을수가 있다. 간단한 설정같은 경우에는 파일에 저장하는 것이 더 불편하고 그러한 부분을 구현하는 것이 번거로울수 있다. 그래서 iOS 에서는 NSUserDefaults 라는 것을 통해서 저장할 수 있도록 한다. 저장은 Key, Value형태로 저장이 된다. 아래의 코드를 보면 쉽게 이해할수 있다. 단, 저장할 경우에는 synchronize 를 해주어야 한다. 저장된 데이터는 앱이 삭제되기전"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/ios-nsuserdefaults--eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-b4-ec-84-9c--ec-84-a4-ec-a0-95-ec-a0-80-ec-9e-a5-ed-95-98-ea-b3-a0--ec-9d-bd-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) NSUserDefaults 를 이용해서 설정저장하고 읽기.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="어떤 값들은 파일에 저장하는 것이 맞지만 때로는 앱내에 설정으로 저장하는 편이 훨씬 나을수가 있다. 간단한 설정같은 경우에는 파일에 저장하는 것이 더 불편하고 그러한 부분을 구현하는 것이 번거로울수 있다. 그래서 iOS 에서는 NSUserDefaults 라는 것을 통해서 저장할 수 있도록 한다. 저장은 Key, Value형태로 저장이 된다. 아래의 코드를 보면 쉽게 이해할수 있다. 단, 저장할 경우에는 synchronize 를 해주어야 한다. 저장된 데이터는 앱이 삭제되기전" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,37 +63,32 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) NSUserDefaults 를 이용해서 설정저장하고 읽기.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">어떤 값들은 파일에 저장하는 것이 맞지만 때로는 앱내에 설정으로 저장하는 편이 훨씬 나을수가 있다. 간단한 설정같은 경우에는 파일에 저장하는 것이 더 불편하고 그러한 부분을 구현하는 것이 번거로울수 있다. 그래서 iOS 에서는 NSUserDefaults 라는 것을 통해서 저장할 수 있도록 한다. 저장은 Key, Value형태로 저장이 된다. 아래의 코드를 보면 쉽게 이해할수 있다. 단, 저장할 경우에는 synchronize 를 해주어야 한다. 저장된 데이터는 앱이 삭제되기전 까지 유효하다. </span></p>
 <script src="https://gist.github.com/4655665.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'IOS set settiings'">#'IOS set settiings'</a>&nbsp;
+            #IOS set settiings&nbsp;
         
-            <a href="/tag/'NSUserDefaults'">#'NSUserDefaults'</a>&nbsp;
+            #NSUserDefaults&nbsp;
         
-            <a href="/tag/'Objective-C'">#'Objective-C'</a>&nbsp;
+            #Objective-C&nbsp;
         
-            <a href="/tag/'설정 저장'">#'설정 저장'</a>&nbsp;
+            #설정 저장&nbsp;
         
-            <a href="/tag/'아이폰 설정']">#'아이폰 설정']</a>&nbsp;
+            #아이폰 설정&nbsp;
         
     </div> 
     <footer>

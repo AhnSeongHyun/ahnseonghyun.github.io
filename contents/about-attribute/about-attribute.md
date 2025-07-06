@@ -2,7 +2,11 @@
 title: 'About Attribute?'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**About Attribute ?**
+
+** **
+
+**![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/gl124.JPG)<'
 featured_image: ''
 tags: ['attribute', 'dev', '어트리뷰트']
 ---

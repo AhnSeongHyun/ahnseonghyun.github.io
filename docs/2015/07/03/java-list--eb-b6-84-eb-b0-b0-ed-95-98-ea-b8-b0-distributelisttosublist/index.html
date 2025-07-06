@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[Java] List 분배하기, distributeListToSubList()"/>
+    <meta property="og:description" content="개인적으로 필요할것 같은데 하는 라이브러리를 만드는 작업을 하고 있는데 이름은 espressoOtr 이라고 지었다. (github에 아직은 미공개상태.) 뭐 이름은 내 마음대로니까 거두절미하고, 짜잘한 라이브러리가 있지만, 최근에 만든것을 하나 공개하려고 한다. 대단한건 절대 아니고, 누군가 이미 만들어 쓰고 있을지도 모르지만."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/java-list--eb-b6-84-eb-b0-b0-ed-95-98-ea-b8-b0-distributelisttosublist"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[Java] List 분배하기, distributeListToSubList()</title>
-    <meta name="description" content="" />
+    <meta name="description" content="개인적으로 필요할것 같은데 하는 라이브러리를 만드는 작업을 하고 있는데 이름은 espressoOtr 이라고 지었다. (github에 아직은 미공개상태.) 뭐 이름은 내 마음대로니까 거두절미하고, 짜잘한 라이브러리가 있지만, 최근에 만든것을 하나 공개하려고 한다. 대단한건 절대 아니고, 누군가 이미 만들어 쓰고 있을지도 모르지만." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[Java] List 분배하기, distributeListToSubList()</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">개인적으로 필요할것 같은데 하는 라이브러리를 만드는 작업을 하고 있는데 이름은 espressoOtr 이라고 지었다. (github에 아직은 미공개상태.) 뭐 이름은 내 마음대로니까 거두절미하고, 짜잘한 라이브러리가 있지만, 최근에 만든것을 하나 공개하려고 한다. 대단한건 절대 아니고, 누군가 이미 만들어 쓰고 있을지도 모르지만. </span></p>
 <p><span style="font-size: 11pt;">하나의 리스트를 n 개의 리스트로 분할하는 함수이다. distributeListToSubList() 함수인데, 한 개의 리스트에 10개의 아이템이 있다고 가정하자. 그러면 나는 이 리스트를 3개의 다른 리스트로 배분하고 싶다. 반드시 3개여야만 한다. 그러면  0번 리스트에는 4개, 1번 리스트에는 4개, 2번 리스트에는 2개가 들어가면 된다. 그런 작업을 해주는 함수이다. </span></p>
@@ -77,21 +79,19 @@
 
 <p><span style="font-size: 11pt;line-height:2;text-align:justify;">인자로는 List와 분배하려는 개수를 받는다. 리턴값은 Hashmap<Integer, List>를 반환하도록 하였다. Hashmap의 size()를 가져와서 키로 각각의 분배된 리스트를 가져올 수 있다. Generic을 쓰지 않은 이유는 모든 List에 대해서 수행가능하도록 만들기 위해서이다. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['ArrayList'">#['ArrayList'</a>&nbsp;
+            #ArrayList&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Distribute list'">#'Distribute list'</a>&nbsp;
+            #Distribute list&nbsp;
         
-            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+            #Java&nbsp;
         
-            <a href="/tag/'리스트 분배'">#'리스트 분배'</a>&nbsp;
+            #리스트 분배&nbsp;
         
-            <a href="/tag/'리스트 분할']">#'리스트 분할']</a>&nbsp;
+            #리스트 분할&nbsp;
         
     </div> 
     <footer>

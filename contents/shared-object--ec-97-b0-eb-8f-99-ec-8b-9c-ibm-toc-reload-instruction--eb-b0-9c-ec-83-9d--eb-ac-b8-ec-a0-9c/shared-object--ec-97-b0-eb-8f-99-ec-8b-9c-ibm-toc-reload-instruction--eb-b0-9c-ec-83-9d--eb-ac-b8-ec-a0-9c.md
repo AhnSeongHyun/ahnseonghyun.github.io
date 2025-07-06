@@ -2,7 +2,7 @@
 title: 'shared object 연동시, IBM TOC-reload instruction 발생 문제'
 author: 'ash84'
 pub_date: '2012-10-02'
-description: ''
+description: '사건의 요지는 이렇다. 나는 고객사로 부터 파수닷컴 DRM 연동을 의뢰 받았고 파수 닷컴 DRM 관련 ANSI C 라이브러리(AIX/xlC로 빌드된)를 전달 받았다. 원래 연동하는 소스에 붙였는데, 이상한 에러들이 나는 문제가 있어서 [어디에서 보니](http://demo.initech.com/index.php?document_srl=12470) .so 파일을 연동이 안될수 있으니 **-Wl,-brtl** 옵션을 사용해야 한다고 나와 있었다.'
 featured_image: ''
 tags: ['aix', 'aix .so 라이브러리 연동', 'IBM', 'no-op cod', 'so 라이브러리 연동', 'TOC-reload instruction', 'xlc', 'xlC -Wl', '컴파일러 버그', '컴파일러 옵션']
 ---

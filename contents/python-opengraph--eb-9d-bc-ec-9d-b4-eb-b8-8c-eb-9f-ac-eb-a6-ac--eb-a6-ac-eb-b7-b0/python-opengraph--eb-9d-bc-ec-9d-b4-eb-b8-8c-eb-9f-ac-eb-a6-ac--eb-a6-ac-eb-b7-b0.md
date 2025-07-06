@@ -2,7 +2,7 @@
 title: '(python) opengraph 라이브러리 리뷰'
 author: 'ash84'
 pub_date: '2015-10-02'
-description: ''
+description: '사실 [오픈그래프](http://ogp.me)라는 것에 대해서 알게 된것은 [전 포스팅](http://ash84.tistory.com/1000)에서 말했지만 우연한 기회였다. 난 그때만 해도 여전히 오픈그래프에 대해서 신기해하고 있던 터라 구글 검색을 해보았는데 파이썬 기반 오픈'
 featured_image: ''
 tags: ['dev', 'ExtendedOpenGraph', 'opengraph', 'pypi', 'Python', '오픈그래프', '파이썬']
 ---

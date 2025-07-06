@@ -2,7 +2,7 @@
 title: 'U-Healthcare 심포지엄'
 author: 'ash84'
 pub_date: '2007-05-19'
-description: ''
+description: 'U-Healthcare 심포지엄'
 featured_image: ''
 tags: ['u-healthcare', '유비쿼터스', '유비쿼터스 공간', '유비쿼터스 도시', '의료정보학']
 ---

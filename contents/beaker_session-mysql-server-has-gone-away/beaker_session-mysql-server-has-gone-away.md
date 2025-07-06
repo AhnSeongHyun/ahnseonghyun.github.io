@@ -2,7 +2,10 @@
 title: 'beaker_session MySQL server has gone away'
 author: 'ash84'
 pub_date: '2017-11-10'
-description: ''
+description: '매일 아침 와서 현재 개발중인 백오피스를 켜면 Internal Server Error 발생. 로그를 보니 아래와 같은 오류 발생 
+
+```
+OperationalError: (pymysql.err.OperationalError) (2006, "MySQL server has gone away (error(32, 'Broken pipe'))") [SQL: u'SELECT beaker_cache.data \\nFROM beaker_cache \\nWHERE beaker_cache.namespace = %(namespace_1)s'] [pa'
 featured_image: ''
 tags: ['dev', 'Python', 'FLASK', 'session', 'beaker', 'MySQL']
 ---

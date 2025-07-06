@@ -2,7 +2,13 @@
 title: 'Python3 adoption for pyimgdown'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '[pyimgdown](https://github.com/AhnSeongHyun/pyimgdown) 이라는 wand 를 이용한 이미지를 다운받고 썸네일을 만드는 라이브러리를 파이썬2 버전으로 pypi에 올린적이 있었는데, 사실 그전에 이미지 땡겨와서 썸네일 할때 만든 라이브러리였다. 올해 목표중에 하나가 Python3 를 사용해 보는것이었고 아직 회사에서는 Python2 를 사용하지만 몇개의 개인프로젝트들을 일단 바꿔 보기로 했다.
+
+ 
+
+**환경 구성**
+
+기존의 2.x 버전의 파이썬이 있지만 서버에 3.4 버전을 설치하고 명시적'
 featured_image: ''
 tags: ['dev', 'image download', 'pyimgdown', 'python3']
 ---

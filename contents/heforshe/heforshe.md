@@ -2,7 +2,7 @@
 title: '#HeForShe'
 author: 'ash84'
 pub_date: '2015-09-26'
-description: ''
+description: '“내가 아니면 누가?, 지금 아니면 언제?” 기억하자.'
 featured_image: ''
 tags: ['heforshe']
 ---

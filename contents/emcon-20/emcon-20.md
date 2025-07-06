@@ -2,7 +2,7 @@
 title: 'EMOCON 2016 S/S'
 author: 'ash84'
 pub_date: '2016-03-23'
-description: ''
+description: '어김없이 이모콘이었다. [2015](http://ash84.net/2015/10/28/about-plate/) 한지가 어제 같은데 [2016 S/S](http://emocon.weirdx.io/2016ss/)라니. 밀라노 패션쇼 같은 느낌이랄까. 슬랙에서 우선적으로 발표자 모집 및 관련 내용들을 공지하기 시작했고 언제 방청 신청을 해야하나 계속 기다리고 있었다. 그러던 중에 [온오프믹스](http://onoffmix.com/event/63231)가 열렸고 신청하면서 이번에는 나름대로 준비하시는 분들을 위해서 결제를 했다. 세미나가'
 featured_image: ''
 tags: ['이상한모임', 'emocon f/w 2015', 'EMOCON', 'EMOCON 2016 S/S']
 ---

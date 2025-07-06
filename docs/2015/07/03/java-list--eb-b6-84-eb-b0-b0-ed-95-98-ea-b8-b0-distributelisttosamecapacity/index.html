@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[Java] List 분배하기, distributeListToSameCapacity()"/>
+    <meta property="og:description" content="앞의 포스트에서는 [하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()](http://ash84.tistory.com/874) 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/java-list--eb-b6-84-eb-b0-b0-ed-95-98-ea-b8-b0-distributelisttosamecapacity"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[Java] List 분배하기, distributeListToSameCapacity()</title>
-    <meta name="description" content="" />
+    <meta name="description" content="앞의 포스트에서는 [하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()](http://ash84.tistory.com/874) 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[Java] List 분배하기, distributeListToSameCapacity()</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">앞의 포스트에서는 <a href="http://ash84.tistory.com/874">하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()</a> 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함수는 통제하는 부분이 각 리스트당 아이템의 개수이다. </span></p>
 <p><span style="font-size: 11pt;">예를 들어, 한 리스트가 10개의 아이템을 가지고 있다고 가정하자. 나는 2개의 아이템을 가지는 리스트들로 분배하고 싶다. 그렇다면 subList는 총 5개가 생길것이다. 만약 3개의 아이템을 가지는 리스트로 분배 한다면 어떻게 될까? 총 4개의 subList가 생기는데, 0, 1, 2번까지의 subList는 3개의 아이템을 가지고 있지만, 마지막 3번의 subList 는 1개의 아이템을 가지고 있을 것이다. </span></p>
@@ -76,19 +78,17 @@
 <p><span style="font-size: 11pt;">한 가지, 기존의 리스트에서</span><span style="font-size: 11pt;"> subList() 함수를 이용해서 아이템을 가져올때 new를 함으로써 새로 생성해서 만들어지는 subList에 넣어주었다. 이유는 잘 생각해보시길. </span></p>
 <p><span style="font-size: 11pt;"></span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'distributeListToSameCapacity'">#'distributeListToSameCapacity'</a>&nbsp;
+            #distributeListToSameCapacity&nbsp;
         
-            <a href="/tag/'distributeListToSubList'">#'distributeListToSubList'</a>&nbsp;
+            #distributeListToSubList&nbsp;
         
-            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+            #Java&nbsp;
         
-            <a href="/tag/'리스트 분배']">#'리스트 분배']</a>&nbsp;
+            #리스트 분배&nbsp;
         
     </div> 
     <footer>

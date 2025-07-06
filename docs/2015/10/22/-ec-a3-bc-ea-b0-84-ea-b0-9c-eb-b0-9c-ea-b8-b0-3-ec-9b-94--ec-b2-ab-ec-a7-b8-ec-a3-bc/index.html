@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="#주간개발기, 3월 첫째주"/>
+    <meta property="og:description" content="**exs4j**"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/10/22/-ec-a3-bc-ea-b0-84-ea-b0-9c-eb-b0-9c-ea-b8-b0-3-ec-9b-94--ec-b2-ab-ec-a7-b8-ec-a3-bc"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>#주간개발기, 3월 첫째주</title>
-    <meta name="description" content="" />
+    <meta name="description" content="**exs4j**" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">#주간개발기, 3월 첫째주</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-10-22</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-10-22</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;"><strong>exs4j</strong></span></p>
 <p><span style="font-size: 11pt;">– DB에 OpenAPI를 이용한 검색 결과를 저장하는 것은 되었고, 저장된 검색 결과의 빠른 검색을 위해서 <a href="https://github.com/AhnSeongHyun/exs4j">exs4j</a> 내에 올려서 유지할 인덱스를 만드는 작업을 하였다. 기존의 <a href="https://github.com/AhnSeongHyun/espressoOtr">espressoOtr</a> 라이브러리 내에 Canister/Shelfer 를 통해서 구현하려고 했는데, 약간 기능이 미흡한 부분이 있어서, Shelfer+Map<String,List> 형태로 인덱스 구조를 잡았다. 그렇게 해서 하나의 검색 결과에 대한 requestCode(유일하게 구분되는 검색 요청 코드)와 검색어를 저장하는 부분까지는 되었다. 해당 부분을 Barista 라고 하는 싱글턴 클래스로 감싸면서 Barista 클래스를 통해서 검색어와 requestCode 를 넣고 빼오는 작업을 할 예정이다.</span></p>
@@ -83,23 +85,21 @@
 <p><span style="font-size: 11pt;">– netty 에 대한 <a href="http://stackoverflow.com/questions/15180150/reading-xml-data-in-netty-3-6-x/15214867#15214867">stack overflow에 질문</a>이 올라와서 영어로 답변을 달았다. 조금 쑥스럽긴 하짐나 내 나름대로 아는 부분에 대해서 설명해 주었다. 질문인즉, XML 메시지 형태로 Netty를 통해서 주고 받고 하려고 하는데 변환 부분(마샬링)을 물어보는것 같아서 exs4j에서 했던 작업을 토대로 decoder, encoder 작성하고 그 안에서 JAXB로 당신이 쓸 자바 클래스로 변환해 주라고 답변을 달았다. 별 다른 답변 채택을 안해주긴 했는데, 종종 달아야 겠다는 생각이 들었다. 실제로 여러가지 이슈를 보면서 netty 에 대해서 새롭게 알게되는 부분이 많아서 좋았다. 특히 beta4.x 를 내놓으면서 많은 분들이 테스트해 주시고 버그나 문의를 stack overflow에 하고 있는것 같았다. </span></p>
 <p><span style="font-size: 11pt;">전반적으로 이번주는 <a href="https://github.com/AhnSeongHyun/espressoOtr">espressoOtr</a> 쪽 작업이 많았는데 그 이유는 단연 <a href="https://github.com/AhnSeongHyun/exs4j">exs4j</a>의 인덱스 작업을 위해서 였다. 아직 반 밖에 완성하진 못했지만 다음주에는 일단 <a href="https://github.com/AhnSeongHyun/exs4j">exs4j</a> 현재 구조에 대해서 상세하게 그려보는 시간을 가질 것 같다. 그리고 나서  인덱스에서 가져와서 DB 에서 검색결과 가져오는 부분을 구현 해봐야 할것 같다. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['espressoOtr'">#['espressoOtr'</a>&nbsp;
+            #espressoOtr&nbsp;
         
-            <a href="/tag/'exs4j'">#'exs4j'</a>&nbsp;
+            #exs4j&nbsp;
         
-            <a href="/tag/'INDF'">#'INDF'</a>&nbsp;
+            #INDF&nbsp;
         
-            <a href="/tag/'개발자'">#'개발자'</a>&nbsp;
+            #개발자&nbsp;
         
-            <a href="/tag/'아이폰 앱'">#'아이폰 앱'</a>&nbsp;
+            #아이폰 앱&nbsp;
         
-            <a href="/tag/'오픈소스'">#'오픈소스'</a>&nbsp;
+            #오픈소스&nbsp;
         
-            <a href="/tag/'주간개발기']">#'주간개발기']</a>&nbsp;
+            #주간개발기&nbsp;
         
     </div> 
     <footer>

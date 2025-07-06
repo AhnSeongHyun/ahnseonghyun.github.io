@@ -2,7 +2,9 @@
 title: '[Cocoa Design Pattern] 24.Bundle'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile1.uf.111CE2494E1D5B1024A668.jpg)
+
+**'
 featured_image: ''
 tags: ['bundle', 'cocoa design pattern', 'dev', 'IOS', 'iPhone dev', '디자인패턴', '번들', '아이폰 개발']
 ---

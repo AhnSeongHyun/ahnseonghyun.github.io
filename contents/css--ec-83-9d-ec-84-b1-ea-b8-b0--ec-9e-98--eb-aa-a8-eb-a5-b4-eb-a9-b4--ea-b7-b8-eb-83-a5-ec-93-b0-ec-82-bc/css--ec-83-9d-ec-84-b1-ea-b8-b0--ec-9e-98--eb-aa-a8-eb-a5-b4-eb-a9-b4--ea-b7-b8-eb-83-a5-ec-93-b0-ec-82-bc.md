@@ -2,7 +2,11 @@
 title: 'CSS 생성기, 잘 모르면 그냥쓰삼.'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: 'Link : [http://www.cssportal.com/css3-rounded-corner/](http://www.cssportal.com/css3-rounded-corner/)
+
+![](http://ash84.net/wp-content/uploads/1/cfile6.uf.133A754F510333B2316ADF.jpg)
+
+CSS에 대해서'
 featured_image: ''
 tags: ['css', 'CSS Round Rect', 'CSS 생성기', 'dev', 'html', '둥근 사각형']
 ---

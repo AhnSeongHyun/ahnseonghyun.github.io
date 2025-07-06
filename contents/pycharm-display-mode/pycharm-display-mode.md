@@ -2,7 +2,15 @@
 title: 'pycharm - 화면 모드'
 author: 'ash84'
 pub_date: '2018-05-17'
-description: ''
+description: 'pycharm 에서는 3가지 화면을 다르게 볼수 있는 것을 제공하고 있다. 그래서 특정 상황에 맞는 화면모드를 사용 할 수가 있다. 
+
+- Full Screen
+- Presentation Mode
+- Distraction Free Mode
+
+![](https://c1.staticflickr.com/3/2874/33976246781_e251d765b8.jpg)
+
+FullScreen 은 말 그대로 전체화면으로 보기다. 이 모드를 선택하면 단순히 현재보는 화면에서 상태표시줄이나 맥의 경우 dockbar 가 없어지고 pycharm이 전체'
 featured_image: 'https://www.fullstackpython.com/img/logos/pycharm.jpg'
 tags: ['pycharm', 'dev', '화면모드', 'fullscreen', 'presentation', 'distraction_free']
 ---

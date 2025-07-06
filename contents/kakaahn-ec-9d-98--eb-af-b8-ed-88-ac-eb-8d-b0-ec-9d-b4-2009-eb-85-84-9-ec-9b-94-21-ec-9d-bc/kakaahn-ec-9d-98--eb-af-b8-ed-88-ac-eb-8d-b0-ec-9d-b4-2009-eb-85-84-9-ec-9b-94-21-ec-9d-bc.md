@@ -2,7 +2,9 @@
 title: 'KakaAhn의 미투데이 - 2009년 9월 21일'
 author: 'ash84'
 pub_date: '2009-09-21'
-description: ''
+description: '- 아우, 조기출근으로 힘듦. ㅠ 오늘은 비가와서 그런지 사무실이 울적하네요^^(자기소개, 출근, 2030, 직장인 회사)[2009-09-21 09:12:43](http://me2day.net/ash84/2009/09/21#09:12:43 "퍼머링크")
+
+이 글은 [KakaAhn](http://me2day.net/ash84)님의 [2009년 9월 21일](http:/'
 featured_image: ''
 tags: ['2030', '자기소개', '직장인', '출근', '회사']
 ---

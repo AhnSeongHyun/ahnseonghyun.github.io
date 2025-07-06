@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) crashlytics 을 이용한 crash 관리 및 github 연동"/>
+    <meta property="og:description" content="vingle 에 갔을 때, 앱 개발 관련 소개를 들으면서 crashlytics 라는 서비스가 있다고 해서 메모해 두었는데, 실제 업무에 적용해 보았다.([crashlytics 는 트위터에 인수되었다고 한다.](http://besuccess.com/2013/01/28496/))"/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/03/28/ios-crashlytics-github-crash-management"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) crashlytics 을 이용한 crash 관리 및 github 연동</title>
-    <meta name="description" content="" />
+    <meta name="description" content="vingle 에 갔을 때, 앱 개발 관련 소개를 들으면서 crashlytics 라는 서비스가 있다고 해서 메모해 두었는데, 실제 업무에 적용해 보았다.([crashlytics 는 트위터에 인수되었다고 한다.](http://besuccess.com/2013/01/28496/))" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) crashlytics 을 이용한 crash 관리 및 github 연동</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-03-28</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-03-28</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">vingle 에 갔을 때, 앱 개발 관련 소개를 들으면서 crashlytics 라는 서비스가 있다고 해서 메모해 두었는데, 실제 업무에 적용해 보았다.(</span><a href="http://besuccess.com/2013/01/28496/">crashlytics 는 트위터에 인수되었다고 한다.</a>) <span style="background-color: transparent; font-size: 11pt;">일단 crashlytics 는 간단히 말해서 앱에서 crash 가 나게되면 해당 정보를 서버로 전송해주고 개발자는 해당 사이트의 웹을 통해서 확인하는 방식인데, 좋은 점은 crash 가 떨어졌을때 아이폰을 가지고 crash 로그를 확인하면 메모리 주소가 나와서 진짜 문제가 있는 부분을 찾기 어려운 경우가 많은데, </span><span style="background-color: transparent; font-size: 14.44444465637207px; line-height: 32.22222137451172px;">crashlytics은 비교적 정확히 문제를 찾아 준다는 점이다. </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;"> </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;"> 일단 개별적으로 구축할 수도 있겠지만 몇 개 안되는 앱을 개발하는 과정에서 사실 큰 공수가 아닐 수 없기 때문에 사용하게 되었다. </span></p>
 <p><span style="font-size: 11pt;"><strong>가입 방법</strong></span></p>
@@ -127,19 +129,17 @@
 </span><span style="font-size: 11pt;"><br />
 </span><span style="font-size: 11pt;"></span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['Crashlytics'">#['Crashlytics'</a>&nbsp;
+            #Crashlytics&nbsp;
         
-            <a href="/tag/'Crashlytics logger'">#'Crashlytics logger'</a>&nbsp;
+            #Crashlytics logger&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'github'">#'github'</a>&nbsp;
+            #github&nbsp;
         
-            <a href="/tag/'IOS']">#'IOS']</a>&nbsp;
+            #IOS&nbsp;
         
     </div> 
     <footer>

@@ -2,7 +2,9 @@
 title: '[메디게이트]GE헬스케어, EMR R&D 센터 설립'
 author: 'ash84'
 pub_date: '2007-09-01'
-description: ''
+description: 'GE헬스케어, EMR R&D 센터 설립
+
+**아시아지역 차세대 의료정보시스템 연구 및 개발 진행**'
 featured_image: ''
 tags: ['EMR R&amp;D 센터 설립', 'GE헬스케어', '메디게이트', '장종원']
 ---

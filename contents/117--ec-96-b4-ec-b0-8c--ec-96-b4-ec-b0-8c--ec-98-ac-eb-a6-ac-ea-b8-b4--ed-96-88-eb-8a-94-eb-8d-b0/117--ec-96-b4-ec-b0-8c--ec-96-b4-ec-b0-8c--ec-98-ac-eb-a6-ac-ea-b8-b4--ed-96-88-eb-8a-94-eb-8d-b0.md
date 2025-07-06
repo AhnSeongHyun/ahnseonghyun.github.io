@@ -2,7 +2,7 @@
 title: '# 1/17 어찌 어찌 올리긴 했는데..'
 author: 'ash84'
 pub_date: '2011-01-16'
-description: ''
+description: '어찌 어찌 올리긴 했는데.. 아, 이래서 사람들이 Apple 앱 스토어 심사가 까다롭다라고 하는가보다.. 이렇게 생각이 들지만, 난 이제 겨우 시작했을 뿐이다. ㅠㅠ 사실 프로비전, 앱 아이디, 그리고 SKU Number 등등이 어떻게 상충하는지 모르겠다. <'
 featured_image: ''
 tags: ['Apple Store', 'MomoTwit', '앱심사']
 ---

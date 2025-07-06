@@ -2,7 +2,7 @@
 title: 'DocumentExtractor 의 기본 구조'
 author: 'ash84'
 pub_date: '2012-09-05'
-description: ''
+description: '국내 유명 업체의 문서추출기가 있겠지만, 굳이 hwp를 사용하지 않는다면 이용할 필요가 없다. 문서추출기(Document Extractor)에 대한 오픈소스가 많이 있지만 여기서 소개할 것은 Apache POI를 이용해서 좀더 쓰기 쉽게 만든 자바(java) 기반의 문서추출기인 [Document](https://github.com/AhnSeongHyun/DocumentExtractor)'
 featured_image: ''
 tags: ['Apache.poi', 'DocumentExtractor', 'github', 'Open Source', '문서 추출기', '오픈소스', '워드에서 문서 내용 추출']
 ---

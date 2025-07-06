@@ -2,7 +2,13 @@
 title: 'flask - jinja2 tojson 필터'
 author: 'ash84'
 pub_date: '2017-04-05'
-description: ''
+description: 'flask 문서를 보다보니 [standard filters](http://flask.pocoo.org/docs/0.12/templating/#standard-filters) 라는 항목이 있는데 `tojson` 이 그 내용이다.(기본적으로 제공하는 필터라는 내용) 간략하게 애기하자면, 어떤 랜더링할 변수에
+`tojson` 이라고 jinja2 템플릿 상에서 `|` 를 이용해서 붙이게 되면 json으로 변환된 값을 랜더링해준다. 
+
+예를들어, user 라는 dict 객체에 데이터를 넣어서 전달한다고 할 때, 
+
+```python 
+@a'
 featured_image: 'http://flask.pocoo.org/docs/0.12/_images/logo-full.png'
 tags: ['dev', 'FLASK', 'Python', 'jinja2', 'tojson']
 ---

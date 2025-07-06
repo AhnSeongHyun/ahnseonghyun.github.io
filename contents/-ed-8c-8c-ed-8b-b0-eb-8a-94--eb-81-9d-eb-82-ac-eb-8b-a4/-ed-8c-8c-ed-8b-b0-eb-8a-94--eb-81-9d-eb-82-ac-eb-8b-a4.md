@@ -2,7 +2,8 @@
 title: '파티는 끝났다.'
 author: 'ash84'
 pub_date: '2009-08-24'
-description: ''
+description: '[![Day One Hundred Twenty Nine](http://farm4.static.flickr.com/3586/3517939540_350c166132.jpg)](http://www.flickr.com/photos/38687875@N00/3517939540 "Day One Hundred Twenty Nine")  
+Day One Hundred Twenty Nine by [Dustin Diaz](http://www.'
 featured_image: ''
 tags: ['생일', '코딩', '파티', '프로그래밍']
 ---

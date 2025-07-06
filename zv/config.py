@@ -21,10 +21,11 @@ class ThemeConfig(BaseModel):
         return ThemeConfig(
             name=d["name"],
         )
-    
+
+
 class PublicationConfig(BaseModel):
     path: str
-    
+
     @classmethod
     def load(cls, d: dict):
         return PublicationConfig(
@@ -41,7 +42,7 @@ class Config(BaseModel):
     def load(cls, d: dict):
         print(d)
         return Config(
-            theme=ThemeConfig.load(d["theme"]), 
+            theme=ThemeConfig.load(d["theme"]),
             blog=BlogConfig.load(d["blog"]),
-            publication=PublicationConfig.load(d["publication"])
+            publication=PublicationConfig.load(d["publication"]),
         )

@@ -2,7 +2,17 @@
 title: '[Cocoa Design Pattern] 22. Flyweight pattern'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile24.uf.122D734C4E1C04261DF168.jpg)
+
+**22. 플라이 웨이트 패턴 **
+
+**플라이웨이트 패턴이란?**  
+ – 객체를 사용할 때 필요한 메모리의 양과 프로세서 오버헤드를 최소화시킨다.   
+ – 인스턴스 공유를 가능하게 하여, 실제 인스턴스의 수를 줄여준다. 
+
+**패턴이 만들어진 동기 **
+
+– 비 – 객체 데이터를 캡슐화하여 객체가 필요한 컨텍'
 featured_image: ''
 tags: ['cocoa design pattern', 'dev', 'Flyweight', 'IOS', 'ios dev', 'pattern', '아이폰 앱 개발']
 ---

@@ -2,7 +2,7 @@
 title: '[iOS] HTML 파싱 - Java Script 와 UIWebView 이용하기'
 author: 'ash84'
 pub_date: '2017-03-24'
-description: ''
+description: 'HTML 파싱에 관한 부분은 한우찾기 1.0 및 2.0 에 걸쳐서 가장 핵심적인 부분이라고 할 수 있다. 총 2'
 featured_image: ''
 tags: ['dev', 'HTML Parsing', 'HTML 파싱', 'IOS', 'Java Script', 'UIWebView', '한우찾기']
 ---

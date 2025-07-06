@@ -2,7 +2,7 @@
 title: '한남동 Take Drawing Out, 하늘과 맞닿아 있는 까페'
 author: 'ash84'
 pub_date: '2011-03-03'
-description: ''
+description: '예전에 성북동 Take Drawing Out 까페에 갔었을때에도 참 공간 디자인에 대해서 새로운 생각을 하게 됐는데, 한남동에도 생겼다는 소식을 접하고 여자친구를 졸라서 가게 되었습니다. Take Drawing Out의 특'
 featured_image: ''
 tags: ['Take Drawing Out', '윤종신', '테이크 드로잉 아웃', '한강진역', '한남동']
 ---

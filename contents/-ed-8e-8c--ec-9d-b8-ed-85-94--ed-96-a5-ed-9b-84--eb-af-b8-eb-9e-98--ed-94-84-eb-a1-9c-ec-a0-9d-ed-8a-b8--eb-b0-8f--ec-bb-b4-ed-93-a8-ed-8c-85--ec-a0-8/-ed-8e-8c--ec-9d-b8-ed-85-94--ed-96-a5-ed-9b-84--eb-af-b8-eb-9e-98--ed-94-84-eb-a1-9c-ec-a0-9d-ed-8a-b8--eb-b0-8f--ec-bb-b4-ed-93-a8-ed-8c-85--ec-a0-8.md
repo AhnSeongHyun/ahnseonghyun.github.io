@@ -2,7 +2,9 @@
 title: '[펌] 인텔, 향후 미래 프로젝트 및 컴퓨팅 전망 발표'
 author: 'ash84'
 pub_date: '2008-07-08'
-description: ''
+description: '**인텔, 향후 미래 프로젝트 및 컴퓨팅 전망 발표**
+
+K모바일  박동민기자'
 featured_image: ''
 tags: ['인텔', '헬스케어']
 ---

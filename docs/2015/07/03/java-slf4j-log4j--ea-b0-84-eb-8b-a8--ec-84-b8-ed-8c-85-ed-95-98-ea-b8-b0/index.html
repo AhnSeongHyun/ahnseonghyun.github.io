@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[JAVA] slf4j-log4j 간단 세팅하기."/>
+    <meta property="og:description" content="개인적으로 log4j 세팅을 그리 좋아하지 않고, logger 라는것 자체가 좀 싫어하는데 많은 사람들이 사용하고 사실상 회사에서 자바 프로젝트를 하려면 안 쓸수가 없다. 때문에 간략하게 나마 정리를 한다. slf4j를 log4j보다 선호하는 이유는 각자 찾아보길 바란다. ([링크](https://www.google.com/search?q=slf4j%EB%A5%BC+%EC%82%AC%EC%9A%A"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/java-slf4j-log4j--ea-b0-84-eb-8b-a8--ec-84-b8-ed-8c-85-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[JAVA] slf4j-log4j 간단 세팅하기.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="개인적으로 log4j 세팅을 그리 좋아하지 않고, logger 라는것 자체가 좀 싫어하는데 많은 사람들이 사용하고 사실상 회사에서 자바 프로젝트를 하려면 안 쓸수가 없다. 때문에 간략하게 나마 정리를 한다. slf4j를 log4j보다 선호하는 이유는 각자 찾아보길 바란다. ([링크](https://www.google.com/search?q=slf4j%EB%A5%BC+%EC%82%AC%EC%9A%A" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[JAVA] slf4j-log4j 간단 세팅하기.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">개인적으로 log4j 세팅을 그리 좋아하지 않고, logger 라는것 자체가 좀 싫어하는데 많은 사람들이 사용하고 사실상 회사에서 자바 프로젝트를 하려면 안 쓸수가 없다. 때문에 간략하게 나마 정리를 한다. slf4j를 log4j보다 선호하는 이유는 각자 찾아보길 바란다. (</span><a href="https://www.google.com/search?q=slf4j%EB%A5%BC+%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC+%ED%95%98%EB%8A%94+%EC%9D%B4%EC%9C%A0&amp;oq=slf4j%EB%A5%BC+%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC+%ED%95%98%EB%8A%94+%EC%9D%B4%EC%9C%A0&amp;aqs=chrome.0.57.10108&amp;sugexp=chrome,mod=9&amp;sourceid=chrome&amp;ie=UTF-8"><span style="font-size: 11pt;">링크</span></a><span style="font-size: 11pt;">) </span></p>
 <p><strong><span style="font-size: 11pt;">1. 일단 slf4j를 다운 받는다. (</span><a href="http://www.slf4j.org/download.html"><span style="font-size: 11pt;">링크</span></a><span style="font-size: 11pt;">)</span></strong></p>
@@ -96,19 +98,17 @@
 
 <p><span style="font-size: 11pt; line-height:2;">log4j의 범위에 대한 부분은 스스로 해보면 알수 있을것이라고 생각된다. 이해하는데는 그리 어렵지 않다. log4j.propertise는 여간 귀찮은 일이 아니지만, 한번쯤 이렇게 정리를 해 두면 편할것이라고 생각되어서 정리해둔다. 추가적으로 위의 3가지 jar에 대한 버전을 제대로 맞춰야 제대로 작동이 된다. 단순히 logger.info(“”)함수로 테스트하는 것 보다 logger.info(“{}”) 함수로 테스트 하길 권장한다. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+            #Java&nbsp;
         
-            <a href="/tag/'Log4J'">#'Log4J'</a>&nbsp;
+            #Log4J&nbsp;
         
-            <a href="/tag/'log4j.propertise'">#'log4j.propertise'</a>&nbsp;
+            #log4j.propertise&nbsp;
         
-            <a href="/tag/'slf4j']">#'slf4j']</a>&nbsp;
+            #slf4j&nbsp;
         
     </div> 
     <footer>

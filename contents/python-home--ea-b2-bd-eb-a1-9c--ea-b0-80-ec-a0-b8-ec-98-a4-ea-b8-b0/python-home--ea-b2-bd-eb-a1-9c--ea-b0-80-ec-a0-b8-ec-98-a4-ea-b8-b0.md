@@ -2,7 +2,7 @@
 title: '[python] home(~) 경로 가져오기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '#### python get user home path'
 featured_image: ''
 tags: ['dev', 'home', 'path', 'Python', 'python get user home path']
 ---

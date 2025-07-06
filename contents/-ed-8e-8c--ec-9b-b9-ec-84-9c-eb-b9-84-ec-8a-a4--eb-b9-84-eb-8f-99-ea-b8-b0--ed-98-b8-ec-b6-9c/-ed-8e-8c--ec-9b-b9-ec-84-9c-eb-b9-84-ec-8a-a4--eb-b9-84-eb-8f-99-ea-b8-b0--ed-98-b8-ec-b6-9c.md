@@ -2,7 +2,7 @@
 title: '[펌] 웹서비스 비동기 호출'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '웹 서비스의 비동기 호출 방법에 대해 정리한 글입니'
 featured_image: ''
 tags: ['dev']
 ---

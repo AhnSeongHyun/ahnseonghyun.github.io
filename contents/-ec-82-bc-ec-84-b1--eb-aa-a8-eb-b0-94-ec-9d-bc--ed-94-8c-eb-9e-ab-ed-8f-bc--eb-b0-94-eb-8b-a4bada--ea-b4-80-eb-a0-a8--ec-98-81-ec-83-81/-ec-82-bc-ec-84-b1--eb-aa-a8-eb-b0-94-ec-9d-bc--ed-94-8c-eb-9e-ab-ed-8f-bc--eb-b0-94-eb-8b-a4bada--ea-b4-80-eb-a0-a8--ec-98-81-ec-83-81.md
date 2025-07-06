@@ -2,7 +2,8 @@
 title: '삼성 모바일 플랫폼 바다(bada) 관련 영상'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**Samsung bada OS Presentation  
+**'
 featured_image: ''
 tags: ['An Seong Hyun', 'bada', 'dev', 'mobile platform', 'samsung', '모바일플랫폼', '바다 모바일플랫폼', '삼성전자', '안성현']
 ---

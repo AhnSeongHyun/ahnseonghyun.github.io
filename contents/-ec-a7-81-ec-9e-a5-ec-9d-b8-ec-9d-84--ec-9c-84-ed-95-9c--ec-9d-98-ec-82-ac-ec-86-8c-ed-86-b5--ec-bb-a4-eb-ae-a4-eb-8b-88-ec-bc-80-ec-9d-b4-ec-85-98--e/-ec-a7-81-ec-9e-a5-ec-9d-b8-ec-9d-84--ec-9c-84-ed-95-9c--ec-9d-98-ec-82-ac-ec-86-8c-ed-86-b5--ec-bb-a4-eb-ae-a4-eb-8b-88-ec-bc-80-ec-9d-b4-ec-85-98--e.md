@@ -2,7 +2,7 @@
 title: '직장인을 위한 의사소통 커뮤니케이션 맨날, 나에게 선물을?'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '어제 집에 왔더니 이상한 봉투하나가 와있더군요. 나에게 편지를 보낼 사람이 없는데? 설마 영장? 나 훈련소다녀왔는데?이런 어이 없는 불안감을 떠 안은채 봉투를 열었더니.. ![](http://ash84.net/wp-content/uploads/1/cfile10.uf.1213CA384D4743A50BBD55.jpg)![](http://ash84.net/wp-content/uploads/1/cfile6.uf.1313CA384D4743A50C21D4.jpg)'
 featured_image: ''
 tags: ['dev', '맨날', '의사소통커뮤니케이션']
 ---

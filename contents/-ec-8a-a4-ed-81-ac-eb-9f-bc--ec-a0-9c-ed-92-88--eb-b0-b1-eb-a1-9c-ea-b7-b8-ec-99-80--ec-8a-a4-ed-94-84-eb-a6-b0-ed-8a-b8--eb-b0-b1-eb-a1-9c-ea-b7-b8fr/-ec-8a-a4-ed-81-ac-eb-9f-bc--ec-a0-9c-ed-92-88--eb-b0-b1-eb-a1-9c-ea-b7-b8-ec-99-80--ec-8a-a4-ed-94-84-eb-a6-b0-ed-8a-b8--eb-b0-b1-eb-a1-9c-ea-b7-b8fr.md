@@ -2,7 +2,9 @@
 title: '[스크럼] 제품 백로그와 스프린트 백로그(from msdn)'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '최근에 SCRUM에 대한 리서치를 스터디에서 도맡아서 하게 되어서 프리젠테이션을 만들던중 발견한 자료로, 제품 백로그와 스프린트 백로그를 비교한 자료이다. 출처는 MSDN 이다. 
+
+!['
 featured_image: ''
 tags: ['dev', 'SCRUM', '스크럼', '스프린트', '스프린트 백로그', '제품백로그']
 ---

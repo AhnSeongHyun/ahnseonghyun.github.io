@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="flask template_filter multi arguments"/>
+    <meta property="og:description" content="![](http://jinja.pocoo.org/docs/dev/_static/jinja-small.png)"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/11/06/flask-template_filter-multi-arguments"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>flask template_filter multi arguments</title>
-    <meta name="description" content="" />
+    <meta name="description" content="![](http://jinja.pocoo.org/docs/dev/_static/jinja-small.png)" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,27 +63,22 @@
     
 <div class="content">
     <h1 class="blog-post-title">flask template_filter multi arguments</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-11-06</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-11-06</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><img alt="" src="http://jinja.pocoo.org/docs/dev/_static/jinja-small.png" /></p>
 <script src="https://gist.github.com/AhnSeongHyun/28d4121932f5cdee0586.js"></script>
 
 <p>종종 flask 에서 <code>template_filter</code> 를 사용하는데 대부분의 예제가 한개의 <code>{{name|short}}</code> 이런식으로 필터링 대상 값만 넘길 경우에 대해서만 있다. 말줄임 기능을 만들었는데, 여러 HTML 화면에서 다르게 보여주기 위해서 길이와 말줄임문자를 추가하려고 보니, <code>template_filter</code> 대상 함수에서는 받는 인자를 추가하고, 사용하는 곳에서는 <code>{{ name | short(5, "...") }}</code> 이런식으로 쓰면 된다.</p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['']">#['']</a>&nbsp;
+            #&nbsp;
         
     </div> 
     <footer>

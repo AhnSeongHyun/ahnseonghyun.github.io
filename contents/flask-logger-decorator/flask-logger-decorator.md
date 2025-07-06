@@ -2,7 +2,14 @@
 title: 'flask logger decorator(데코레이터)와 함께 사용하기'
 author: 'ash84'
 pub_date: '2017-04-03'
-description: ''
+description: '###기본로그 세팅하기###
+
+
+로그에 대한 부분이 늘 걱정이긴 한데, 사실 따로 python logger 클래스를 사용해서 로그는 남기는 클래스를 만들고 만드는 프로젝트 마다 붙여서 사용하는 식으로 했었는데 이번에 flask 에 있는 logger 를 이용해 보기로 했다. 기본적으로 다음과 같은 몇개의 핸들러를 제공하고 있다. 
+
+- FileHandler  – 로그 메시지를 파일에 남긴다. 
+
+- RotatingFileHandler – 로그메시지를 파일에 남기고, 특정수 이상이면 다음파일로 넘겨서 로그를 만드는 핸들러, maxByt'
 featured_image: ''
 tags: ['Decorator', 'dev', 'FLASK', 'Logger', 'Python', 'flask 웹서버']
 ---

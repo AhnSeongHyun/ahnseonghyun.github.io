@@ -2,7 +2,13 @@
 title: 'AWSKRUG 신년 콘퍼런스 - re:Invent 특집'
 author: 'ash84'
 pub_date: '2017-04-03'
-description: ''
+description: '올해 첫 세미나/컨퍼런스로 **[AWSKRUG 신년 콘퍼런스 - re:Invent 특집]** 을 선택했고, 다녀왔다. AWS 를 사실 회사에서나 개인 프로젝트를 할때에도 부담되는 부분이 있어서 사용하진 않고 있지만, 앞으로는(언젠가는) 더 AWS, AZURE 등을 도입하는 방향으로 갈 것이라고 생각했기 때문에 신청하게 되었다. 
+
+![awskrug](https://c1.staticflickr.com/1/681/32610242231_9ac0b9e403_b.jpg)
+
+**AWS RE:INVENT 신규 서비스 정리 (윤석찬)**
+
+- 전'
 featured_image: 'http://cfile1.onoffmix.com/attach/OG7xKkO6I1Rz03MmexAQnsiRQPhm1RJX'
 tags: ['dev', 'aws', 'awskrug', 'aws re:invent', 'conf', '개발자 세미나', 'conference']
 ---

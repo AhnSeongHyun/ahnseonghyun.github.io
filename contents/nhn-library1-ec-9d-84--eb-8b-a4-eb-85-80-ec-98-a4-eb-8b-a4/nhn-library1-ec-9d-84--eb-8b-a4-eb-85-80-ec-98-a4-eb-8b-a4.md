@@ -2,7 +2,7 @@
 title: 'NHN Library1을 다녀오다.'
 author: 'ash84'
 pub_date: '2011-03-02'
-description: ''
+description: 'NHN Library1 을 다녀왔다. 왜 갔냐고 말'
 featured_image: ''
 tags: ['Library1', 'NHN', '그린팩토리', '네이버', '도서관', '정자역']
 ---

@@ -2,7 +2,9 @@
 title: 'ASP.NET 닷넷프레임워크 변경시, 패키지 재설치'
 author: 'ash84'
 pub_date: '2017-04-17'
-description: ''
+description: '> 경고 1 Some NuGet packages were installed using a target framework different from the current target framework and may need to be reinstalled.
+
+특정환경에서 개발해야하는 경우가 많은데 그럴때마다 새로 만든 프로젝트의 닷넷프레임워크를 내려서 개발해야 하는 경우가 있다. 프로젝트 속성에 들어가서 변경하면 되는데 위의 문구처럼 경고가 나는 것을 발견할 수 있다. 그럴때는'
 featured_image: ''
 tags: ['ASP.NET', 'dev', 'NuGet', 'webapi', '닷넷', 'package']
 ---

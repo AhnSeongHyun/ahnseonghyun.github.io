@@ -2,7 +2,16 @@
 title: '사고 싶은 차가 생겼다.!! 다이하쓰 코펜'
 author: 'ash84'
 pub_date: '2009-11-09'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile27.uf.1679BA124AF7C77B02DA19.jpg)
+
+원래 차라는 것을 좋아하지 않는터라 남자 임에도 불구하고 별 관심 없었는데  
+ 다이하쓰 코펜은 정말 사고 싶어진다.
+
+우리나라에만 들어오면 비싸져 버리는 가격도 짜증나고,   
+ 660cc라는 오토바이와 자동차의 중간 성능이지만,   
+ 연비도 좋고, 무엇보다도 뚜껑 열리는 차라는것.
+
+![](http://ash84.net/wp-content/uploads/1/cfile3.uf.132'
 featured_image: ''
 tags: ['다이하쓰', '다이하쓰 쿠펜', '오픈카']
 ---

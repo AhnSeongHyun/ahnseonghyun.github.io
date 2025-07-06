@@ -2,7 +2,19 @@
 title: 'Hello Node Kubernetes'
 author: 'ash84'
 pub_date: '2019-01-23'
-description: ''
+description: '본 포스팅은 Qwiklabs 의 [Kubernetes in the Google Cloud](https://www.qwiklabs.com/quests/29)
+를 기반으로 하고 있습니다. 
+
+이번 시간에 실습해 볼 것들:
+
+- Create a Node.js server.
+- Create a Docker container image.
+- Create a container cluster.
+- Create a Kubernetes pod.
+- Scale up your services.
+
+
+![](https://farm5.staticflickr'
 featured_image: ''
 tags: ['k8s', 'node', 'gcp', 'gcr']
 ---

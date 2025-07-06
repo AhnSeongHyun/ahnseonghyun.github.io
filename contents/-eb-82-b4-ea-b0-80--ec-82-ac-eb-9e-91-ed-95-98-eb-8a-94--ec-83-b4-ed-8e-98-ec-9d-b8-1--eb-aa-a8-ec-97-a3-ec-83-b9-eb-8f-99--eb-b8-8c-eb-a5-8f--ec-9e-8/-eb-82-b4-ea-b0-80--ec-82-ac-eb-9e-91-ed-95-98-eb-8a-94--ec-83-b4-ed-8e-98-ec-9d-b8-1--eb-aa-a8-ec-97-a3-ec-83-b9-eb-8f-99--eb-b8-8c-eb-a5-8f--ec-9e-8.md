@@ -2,7 +2,7 @@
 title: '내가 사랑하는 샴페인 #1 - 모엣샹동 브륏 임페리얼(Moet Chandon Brut Imperial)'
 author: 'ash84'
 pub_date: '2009-11-20'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile29.uf.1339DB0B4B0603DD3287B9.jpg)'
 featured_image: ''
 tags: ['Moet Chandon', 'Moet Chandon Brut Imperial', '나폴레옹', '돔페리뇽', '루이비통', '모엣샹동', '모엣샹동 브륏 임페리얼', '샹파뉴']
 ---

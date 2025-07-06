@@ -2,7 +2,7 @@
 title: 'Inside Paul Smith'
 author: 'ash84'
 pub_date: '2010-11-07'
-description: ''
+description: 'Inside Paul Smith'
 featured_image: ''
 tags: ['inside paul smith', 'Paul Smith', '대림 미술관', '폴 스미스', '폴스미스']
 ---

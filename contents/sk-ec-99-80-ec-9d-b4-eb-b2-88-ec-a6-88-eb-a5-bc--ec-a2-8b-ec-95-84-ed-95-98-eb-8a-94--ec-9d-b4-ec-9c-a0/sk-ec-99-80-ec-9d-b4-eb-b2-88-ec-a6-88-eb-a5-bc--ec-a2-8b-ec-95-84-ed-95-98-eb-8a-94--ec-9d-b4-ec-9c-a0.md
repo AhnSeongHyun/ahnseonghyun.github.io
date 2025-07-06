@@ -2,7 +2,7 @@
 title: 'SK와이번즈를 좋아하는 이유.'
 author: 'ash84'
 pub_date: '2009-09-25'
-description: ''
+description: '야구를 좋아하기 시작한지 얼마 되지 않았지만,'
 featured_image: ''
 tags: ['SK와이번즈', '김성근', '프로야구']
 ---

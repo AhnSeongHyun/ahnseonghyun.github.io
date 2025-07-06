@@ -2,7 +2,10 @@
 title: 'pipreqs - requirements 뽑기'
 author: 'ash84'
 pub_date: '2017-03-07'
-description: ''
+description: '`virtualenv` 를 사용하면 사실 좋긴 한데, 그게 아닌 경우에 대해서 개발 서버에서 작업했을때 **requirements.txt** 를 뽑기가 어렵다. **requirements.txt** 가 필요한 이유는 서버에 세팅시 pip install -r 옵션을 통해서 한번에 라이브러리를 설치할수 있기때문에 필수이다. pipreqs 를 사용하면 특정 프로젝트 하위에서 사용하는 라이브러리 리스트를 추출할 수 있다. `virtualenv` 를 도입하기 힘든 환경에서 사용하면 좋을 듯. 
+
+```shell
+$> pip install p'
 featured_image: ''
 tags: ['Python', 'pip', 'pipreqs', 'virtualenv']
 ---

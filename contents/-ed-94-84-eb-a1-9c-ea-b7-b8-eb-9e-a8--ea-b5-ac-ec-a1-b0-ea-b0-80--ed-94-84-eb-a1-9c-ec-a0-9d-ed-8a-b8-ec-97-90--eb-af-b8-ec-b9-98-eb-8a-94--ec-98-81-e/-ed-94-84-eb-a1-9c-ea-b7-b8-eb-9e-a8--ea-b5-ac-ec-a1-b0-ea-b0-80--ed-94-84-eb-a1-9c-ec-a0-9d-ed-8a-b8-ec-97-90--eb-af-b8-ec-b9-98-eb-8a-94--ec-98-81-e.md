@@ -2,7 +2,8 @@
 title: '# 프로그램 구조가 프로젝트에 미치는 영향'
 author: 'ash84'
 pub_date: '2010-06-07'
-description: ''
+description: '**
+ ![](http://ash84.net/wp-content/uploads/1/cfile25.uf.203F711F4C0BB556461904.png)'
 featured_image: ''
 tags: ['program Structure', '뷰전환', '프로그램 구조', '프로그램 구조가 프로젝트에 미치는 영향']
 ---

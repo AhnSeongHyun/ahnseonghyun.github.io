@@ -2,7 +2,11 @@
 title: 'HL7 Schema List'
 author: 'ash84'
 pub_date: '2008-10-01'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/48e3a0461d08887.png)
+
+
+
+특정 상황에 맞는 HL7 메시지를 만들고 나면, 시스템 상에서 Sender 에서 Receiver 로 전송시에 Validation Check 를 해야 신뢰성 있는 HL7 표준 메시지 구조를 구축했다고 주장할수 있는데, 그때에 꼭 필요한 것이 해당 메시지에 대한 스키마이다.'
 featured_image: ''
 tags: ['HL7', 'Schemas', 'Validation Check', '스키마']
 ---

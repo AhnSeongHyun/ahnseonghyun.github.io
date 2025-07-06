@@ -2,7 +2,7 @@
 title: '# 이제 곧 입사 1년차.'
 author: 'ash84'
 pub_date: '2010-05-20'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile9.uf.126F741F4BF481C7534359.jpg)나는 오늘도 포르'
 featured_image: ''
 tags: ['입사 1년차']
 ---

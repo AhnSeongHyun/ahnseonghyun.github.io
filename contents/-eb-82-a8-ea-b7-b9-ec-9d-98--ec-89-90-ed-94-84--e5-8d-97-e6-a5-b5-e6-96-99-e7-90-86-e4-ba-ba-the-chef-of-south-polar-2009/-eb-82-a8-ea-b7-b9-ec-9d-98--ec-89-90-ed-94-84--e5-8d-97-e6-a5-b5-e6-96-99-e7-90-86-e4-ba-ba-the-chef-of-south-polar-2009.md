@@ -2,7 +2,7 @@
 title: '# 남극의 쉐프 ( The Chef Of South Polar, 2009 )'
 author: 'ash84'
 pub_date: '2010-03-17'
-description: ''
+description: '남극의 쉐프. 말만 들어도 약간 흥미가 가는 영화다. 최근에 광화문쪽에 [라퀴진](http://ash84.tistory.'
 featured_image: ''
 tags: ['나마세 카츠히사', '남극의 쉐프', '스폰지하우스', '안성현', '토요하라 코스케', '화이트데이']
 ---

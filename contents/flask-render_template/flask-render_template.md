@@ -2,7 +2,12 @@
 title: 'flask - render_template 어떻게 사용할까?'
 author: 'ash84'
 pub_date: '2017-07-21'
-description: ''
+description: 'flask 를 사용하다보면 view 코드가 길어지는 경우가 있는데 그 중 하나가 views.py 에 route 함수가 많아져서 길어지는것 그리고 다른 하나는 `render_template()` 함수에 파라미터가 많아져서 길어지는 경우다. 전자의 경우 blueprint 로 분할하거나 resource 단위로 분할하면 해결할수 있다. (이건 다른 포스트에서 자세히 설명하겠다.) 후자의 경우에는 어떻게 해결 할수 있을까? 
+
+뭐 이런식으로 길어지는 경우다. 
+
+```python 
+return render_template('web.html''
 featured_image: 'http://flask.pocoo.org/docs/0.12/_images/logo-full.png'
 tags: ['dev', 'FLASK', 'render_template', 'Python']
 ---

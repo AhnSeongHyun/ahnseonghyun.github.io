@@ -2,7 +2,9 @@
 title: '오잉?!! 한우찾기 162위.'
 author: 'ash84'
 pub_date: '2011-05-21'
-description: ''
+description: '﻿![](http://ash84.net/wp-content/uploads/1/cfile28.uf.1642B0484DD776321121BA.PNG)
+
+원래 순위 찾는 웹사이'
 featured_image: ''
 tags: ['app', '앱 개발', '한우찾기']
 ---

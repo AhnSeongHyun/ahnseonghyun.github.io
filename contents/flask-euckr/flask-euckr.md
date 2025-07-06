@@ -2,7 +2,12 @@
 title: 'euc-kr data in flask'
 author: 'ash84'
 pub_date: '2017-04-03'
-description: ''
+description: '### **파이썬에서의 unicode와 str**
+
+- 유니코드는 평문이고, str은 암호화된 유니코드라고 생각하자.
+- charset 은 str 을 만들기 위한 키이다. 즉, unicode 에서 str 을 만들려면 charset이 필요하고, str에서 unicode 를 만들려면 charset이 필요하다.
+
+[![image2015-6-25 16 29 58](https://farm1.staticflickr.com/353/19544431756_5af01e9694_z.jpg'
 featured_image: ''
 tags: ['dev', 'euc-kr', 'euckr', 'FLASK', 'flask euc-kr', 'Python']
 ---

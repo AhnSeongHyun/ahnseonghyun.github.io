@@ -2,7 +2,7 @@
 title: '[Python] newline과 tab 으로 split 문자열 파싱'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '파이썬 마을에서 조금씩 파이썬에 대해서 질답게시판에서 한번씩 생각해 볼수 있는 것들은 감이 녹슬지 않기 위해서 해결할 예정이다. 기존의 게시판 형태에서 Stack Overflow 의 형태로 변경이 되었다. 사이트 주소는 아래와 같다.'
 featured_image: ''
 tags: ['dev', 'Python', '문자열 파싱', '파이썬', '파이썬 마을']
 ---

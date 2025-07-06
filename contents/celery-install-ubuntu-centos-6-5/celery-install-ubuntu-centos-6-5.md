@@ -2,7 +2,21 @@
 title: 'Celery Install Ubuntu & CentOS 6.5'
 author: 'ash84'
 pub_date: '2015-11-23'
-description: ''
+description: '### **celery 설치**
+
+`pip install celery`
+
+### **rabbitmq 설치 **
+
+#### **ubuntu**
+
+`sudo apt-get install rabiitmq-server`
+
+#### **centOS6.5**
+
+ceontOS 에서는 설치하는 것이 복잡한데 잘 따라오면 된다. 먼저 erlang 부터 설치해야 한다. 아래의 텍스트를 `/etc/yum.repos.d/` 디렉토리에 `epel-erlang.repo` 파일명으로 넣는다.
+
+11. erlang 설치하기'
 featured_image: ''
 tags: ['Celery', 'celery centos', 'dev']
 ---

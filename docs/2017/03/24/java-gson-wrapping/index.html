@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[Java] 간단 gson wrapping 하기"/>
+    <meta property="og:description" content="여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to"/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/03/24/java-gson-wrapping"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[Java] 간단 gson wrapping 하기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,36 +63,31 @@
     
 <div class="content">
     <h1 class="blog-post-title">[Java] 간단 gson wrapping 하기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-03-24</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-03-24</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 <a href="http://ash84.tistory.com/775">gson </a>이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to json String 기능만 필요로 했기 때문이다. 약 10개가 넘는 클래스에서 GSon을 객체를 만드는것 보다는 이렇게 static 으로 만들어두고 필요할때 마다 불러다 쓰는 편이 나을것으로 판단했다. </span></p>
 <p><span style="font-size: 11pt;">클린코드에서 봤는데, 어떤 라이브러리 혹은 오픈소스를 가져다 쓸때, 그대로 가져다 쓰는 것은 아무리 사용법을 잘 알더라고 권장하지는 않는다고 한다. 만들려고 하는 목적에 부합하는 기능만 따로 뽑아서 wra</span><span style="font-size: 11pt;">pper 클래스를 만들어 쓰는 습관을 들여야 겠다. </span></p>
 <script src="https://gist.github.com/4508680.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['clean code'">#['clean code'</a>&nbsp;
+            #clean code&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'GSON'">#'GSON'</a>&nbsp;
+            #GSON&nbsp;
         
-            <a href="/tag/'JSON'">#'JSON'</a>&nbsp;
+            #JSON&nbsp;
         
-            <a href="/tag/'wrapping class'">#'wrapping class'</a>&nbsp;
+            #wrapping class&nbsp;
         
-            <a href="/tag/'클린코드']">#'클린코드']</a>&nbsp;
+            #클린코드&nbsp;
         
     </div> 
     <footer>

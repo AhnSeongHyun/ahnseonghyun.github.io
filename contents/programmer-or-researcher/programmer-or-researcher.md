@@ -2,7 +2,12 @@
 title: 'programmer or researcher'
 author: 'ash84'
 pub_date: '2007-01-29'
-description: ''
+description: '**![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/fk2.jpg)
+
+  
+ programmer와 researcher 사이에서 많은 고민이 된다.
+
+**'
 featured_image: ''
 tags: ['CSIR', '로봇', '연구', '연구원', '젊음', '프로그래머', '프로그래밍']
 ---

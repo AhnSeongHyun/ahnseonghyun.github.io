@@ -2,7 +2,7 @@
 title: '[JAVA] slf4j-log4j 간단 세팅하기.'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '개인적으로 log4j 세팅을 그리 좋아하지 않고, logger 라는것 자체가 좀 싫어하는데 많은 사람들이 사용하고 사실상 회사에서 자바 프로젝트를 하려면 안 쓸수가 없다. 때문에 간략하게 나마 정리를 한다. slf4j를 log4j보다 선호하는 이유는 각자 찾아보길 바란다. ([링크](https://www.google.com/search?q=slf4j%EB%A5%BC+%EC%82%AC%EC%9A%A'
 featured_image: ''
 tags: ['dev', 'Java', 'Log4J', 'log4j.propertise', 'slf4j']
 ---

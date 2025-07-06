@@ -2,7 +2,7 @@
 title: 'python mysqldb DictCursor 이용하기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '아무래도 제일많이 사용하는게 mysql 이고 python 으로 연동하기 위해서 MySQLdb 를 사용하는데 맨날 기존 cursor를 이용해서 데이터를 가져오곤 했다.'
 featured_image: ''
 tags: ['cursor', 'dev', 'dictcursor', 'MySQL', 'mysqldb', 'Python']
 ---

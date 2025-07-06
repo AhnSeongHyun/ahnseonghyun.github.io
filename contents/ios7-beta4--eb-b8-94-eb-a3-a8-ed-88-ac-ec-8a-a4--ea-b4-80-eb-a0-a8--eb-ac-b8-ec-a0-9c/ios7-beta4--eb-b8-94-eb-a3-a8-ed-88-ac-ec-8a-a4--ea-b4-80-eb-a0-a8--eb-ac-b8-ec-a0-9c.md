@@ -2,7 +2,7 @@
 title: 'iOS7 beta4, 블루투스 관련 문제'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을'
 featured_image: ''
 tags: ['CBCentralManager', 'CoreBluetooth', 'dev', 'ios6', '블루투스', '코어 블루투스']
 ---

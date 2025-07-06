@@ -2,7 +2,7 @@
 title: '[findbugs] FileWriter, FileReader DM_DEFAULT_ENCODING 처리하기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: 'findbugs를 통해서 잠재적 위험 검사를 할때, 일반적으로 텍스트 파일을 읽거나 쓰는 코드에서 DM_DEFAULT_ENCODING 경고가 뜬다.'
 featured_image: ''
 tags: ['dev', 'DM_DEFAULT_ENCODING', 'encoding', 'FindBugs', 'Found reliance on default encoding', '정적분석툴']
 ---

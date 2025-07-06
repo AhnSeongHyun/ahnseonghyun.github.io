@@ -2,7 +2,11 @@
 title: '[C#] .NET 어셈블리1'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: 'COM 바이너리의 문제점 
+
+– 배포의 문제   
+    : 시스템 레지스터에 등록해야 하는 번거로움이 존재한다.   
+    : .NET – 배포하고자 하는 어셈블리를 응용프로그램이 있는 위치에 복사하면 된다.'
 featured_image: ''
 tags: ['.net', 'CLR', 'com', 'dev', '매니페스트', '배포', '버전관리', '버전식별자', '어셈블리']
 ---

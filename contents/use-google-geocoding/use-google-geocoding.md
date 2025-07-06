@@ -2,7 +2,16 @@
 title: 'Use google geocoding & reverse geocoding'
 author: 'ash84'
 pub_date: '2015-09-03'
-description: ''
+description: '### **API Key 가져오기**
+
+– 아래의 URL 에서 신청한다.(구글 로그인 전제)  
+ – [https://developers.google.com/maps/documentation/geocoding/get-api-key](https://developers.google.com/maps/documentation/geocoding/get-api-key)
+
+ 
+
+### **기본 API**
+
+– [HTTP GET] https://maps.googleapis.com/maps/api/geocode/json?address=ADDRES'
 featured_image: ''
 tags: ['dev', 'geocoding', 'Google', '위도 경도 변환']
 ---

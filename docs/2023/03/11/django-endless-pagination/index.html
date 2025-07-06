@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="django-endless-pagination 을 이용한 페이징구현"/>
+    <meta property="og:description" content="페이징 기능은 사실 게시판에 있어서 필수적인 기능인데 구현하는데 있어서 겁을 먹게 되는것 같다. (나같은 초보 웹쟁이는 더 그렇지) django 에서 페이징 기능을 쉽게 추가할수 있는것이 있을까 싶어서 [djangopackages](https://www.djangopackages.com/) 에서 찾아 봤는데 pagination 이라는 단어로 검색했을때 search weight 가 78%인 [django-endless-pagination](http://django-endless-pagination.readthedocs.org/) 를"/>
+    <meta property="og:url" content="https://ash84.io/docs/2023/03/11/django-endless-pagination"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>django-endless-pagination 을 이용한 페이징구현</title>
-    <meta name="description" content="" />
+    <meta name="description" content="페이징 기능은 사실 게시판에 있어서 필수적인 기능인데 구현하는데 있어서 겁을 먹게 되는것 같다. (나같은 초보 웹쟁이는 더 그렇지) django 에서 페이징 기능을 쉽게 추가할수 있는것이 있을까 싶어서 [djangopackages](https://www.djangopackages.com/) 에서 찾아 봤는데 pagination 이라는 단어로 검색했을때 search weight 가 78%인 [django-endless-pagination](http://django-endless-pagination.readthedocs.org/) 를" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">django-endless-pagination 을 이용한 페이징구현</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2023-03-11</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2023-03-11</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>페이징 기능은 사실 게시판에 있어서 필수적인 기능인데 구현하는데 있어서 겁을 먹게 되는것 같다. (나같은 초보 웹쟁이는 더 그렇지) django 에서 페이징 기능을 쉽게 추가할수 있는것이 있을까 싶어서 <a href="https://www.djangopackages.com/">djangopackages</a> 에서 찾아 봤는데 pagination 이라는 단어로 검색했을때 search weight 가 78%인 <a href="http://django-endless-pagination.readthedocs.org/">django-endless-pagination</a> 를 선택했는데 생각보다 문서화가 잘되어 있다.  </p>
 <h2>1. 설치하기</h2>
@@ -86,21 +88,19 @@
 <p>원래 코드를 크게 수정할 필요 없다.  <code>{% load endless %}</code>, <code>{% show_pages %}</code> 이 부분은 있는대로 사용하면 되는데  <code>{% paginate meta_list %}</code>  이 부분은 사용자가 <code>meta_list</code> 대신에 <code>entries</code> 라고 사용하면  <code>{% paginate entries %}</code> 로 바꿔줘야 한다.</p>
 <p>사실 구현하려고 했던 페이짇은 이런 숫자가 나와서 선택하는 스타일이 아니라, 아래로 내릴때마다 혹은 더보기 버튼을 누를때 가져오는 방식이다. <a href="http://django-endless-pagination.readthedocs.org/">dajngo-endless-pagination</a> 에서는 이러한 방식을 지원하기 위해서 Digg-Style 말고 Twitter-Style 을 제공하고 있다.  </p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Django'">#'Django'</a>&nbsp;
+            #Django&nbsp;
         
-            <a href="/tag/'django pagination'">#'django pagination'</a>&nbsp;
+            #django pagination&nbsp;
         
-            <a href="/tag/'django-endless-pagination'">#'django-endless-pagination'</a>&nbsp;
+            #django-endless-pagination&nbsp;
         
-            <a href="/tag/'장고 페이징'">#'장고 페이징'</a>&nbsp;
+            #장고 페이징&nbsp;
         
-            <a href="/tag/'Python']">#'Python']</a>&nbsp;
+            #Python&nbsp;
         
     </div> 
     <footer>

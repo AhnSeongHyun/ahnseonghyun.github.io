@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="flask-babel 로 다국어 대응하기"/>
+    <meta property="og:description" content="flask 로 다국어 서비스를 만드는 일을 하고 있는데 일단 생각해 볼 부분이 API 와 WEB 이다. API는 모바일에서 요청이 들어오는 형태인데, 이 경우 모바일의 사용자 언어 설정을 파라미터로 받고 API 레벨에서 DB 내에 다국어 컬럼 혹은 행이 있다는 가정하에 select 를 해서 response 를 내보내면 된다. WEB 의 경우 AcceptLanguage 를 이용할 수도 있고, GET 요청의 파라미터로 언어코드가 전달 된다면 그것을 활용할 수도 있다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/10/27/flask-babel-example"/>
+    <meta property="og:image" content="https://pythonhosted.org/Flask-Babel/_static/flask-babel.png"/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>flask-babel 로 다국어 대응하기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="flask 로 다국어 서비스를 만드는 일을 하고 있는데 일단 생각해 볼 부분이 API 와 WEB 이다. API는 모바일에서 요청이 들어오는 형태인데, 이 경우 모바일의 사용자 언어 설정을 파라미터로 받고 API 레벨에서 DB 내에 다국어 컬럼 혹은 행이 있다는 가정하에 select 를 해서 response 를 내보내면 된다. WEB 의 경우 AcceptLanguage 를 이용할 수도 있고, GET 요청의 파라미터로 언어코드가 전달 된다면 그것을 활용할 수도 있다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,10 +63,8 @@
     
 <div class="content">
     <h1 class="blog-post-title">flask-babel 로 다국어 대응하기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-10-27</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-10-27</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
@@ -69,7 +72,6 @@
     
         <img src="https://pythonhosted.org/Flask-Babel/_static/flask-babel.png" alt="">
     
-
     <div class="blog-post">
         <p>flask 로 다국어 서비스를 만드는 일을 하고 있는데 일단 생각해 볼 부분이 API 와 WEB 이다. API는 모바일에서 요청이 들어오는 형태인데, 이 경우 모바일의 사용자 언어 설정을 파라미터로 받고 API 레벨에서 DB 내에 다국어 컬럼 혹은 행이 있다는 가정하에 select 를 해서 response 를 내보내면 된다. WEB 의 경우 AcceptLanguage 를 이용할 수도 있고, GET 요청의 파라미터로 언어코드가 전달 된다면 그것을 활용할 수도 있다. </p>
 <p>일단 여기서는 WEB 상에서 언어별로 사전을 만들고 jinja 템플릿 안에서 어떻게 언어코드 별로 다른 문자를 보여줄것인지에 대해서 설명한다. </p>
@@ -178,19 +180,17 @@ def get_locale():
 <p><a href="https://pythonhosted.org/Flask-Babel/">flask-babel</a> 에 대해서 간단하게 설명했는데, 더 많은 기능들이 있는것 같다. 아직 다 활용하진 않았는데, 새롭게 사용하는 기능이 있으면 더 올리도록 하겠다. 아래의 URL에 들어가면 위의 내용에 대한 소스를 볼 수가 있다. </p>
 <p>https://github.com/AhnSeongHyun/flask-babel-example</p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'FLASK'">#'FLASK'</a>&nbsp;
+            #FLASK&nbsp;
         
-            <a href="/tag/'다국어'">#'다국어'</a>&nbsp;
+            #다국어&nbsp;
         
-            <a href="/tag/'flask-babel'">#'flask-babel'</a>&nbsp;
+            #flask-babel&nbsp;
         
-            <a href="/tag/'i18n']">#'i18n']</a>&nbsp;
+            #i18n&nbsp;
         
     </div> 
     <footer>

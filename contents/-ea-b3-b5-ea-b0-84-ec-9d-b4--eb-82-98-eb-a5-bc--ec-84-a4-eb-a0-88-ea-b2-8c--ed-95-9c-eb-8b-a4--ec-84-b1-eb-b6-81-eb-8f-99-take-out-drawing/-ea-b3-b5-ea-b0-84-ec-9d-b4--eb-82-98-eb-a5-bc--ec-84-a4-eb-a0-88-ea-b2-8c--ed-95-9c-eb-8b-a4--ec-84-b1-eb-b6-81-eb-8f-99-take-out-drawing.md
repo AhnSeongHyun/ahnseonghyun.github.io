@@ -2,7 +2,9 @@
 title: '공간이 나를 설레게 한다, 성북동 Take Out Drawing'
 author: 'ash84'
 pub_date: '2010-06-08'
-description: ''
+description: '**  
+공간이 사람을 설레게 할 수 있을까?**
+최근들어 부는 바람은 아기자기한 까페나 스타벅스, 탐앤탐스 같은 획일화된 까페 보다는 도시의 한 귀퉁이에서 지역 주민들에게 사랑받는 까페들이 유행인'
 featured_image: ''
 tags: ['take out drawing', '까페', '성북동', '성북동 명소']
 ---

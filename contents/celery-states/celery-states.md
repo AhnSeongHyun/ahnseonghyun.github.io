@@ -2,7 +2,7 @@
 title: 'celery states'
 author: 'ash84'
 pub_date: '2016-01-11'
-description: ''
+description: '아래는 celery 의 state 인데, 보통 celery-flower 조합으로 많이 쓰기 때문에 [flower](https://github.com/mher/flower)를 쓰다보면 조회 조건중에 states 가 있어서 아래와 같이 정리해본다. 즉시 실행하라고 명령하면 STARTED-SUCCESS 또는 FAILURE 로 표시되겠지만, `countdown`을 주어서 실행한 경우에는 즉, 어떤 예약을 거는 경우에는 해당 task가 RECEIVED 로 표시되게 된다. 그리고 [flower](https://github.com/mher/f'
 featured_image: ''
 tags: ['Celery', 'dev', 'Python', 'state']
 ---

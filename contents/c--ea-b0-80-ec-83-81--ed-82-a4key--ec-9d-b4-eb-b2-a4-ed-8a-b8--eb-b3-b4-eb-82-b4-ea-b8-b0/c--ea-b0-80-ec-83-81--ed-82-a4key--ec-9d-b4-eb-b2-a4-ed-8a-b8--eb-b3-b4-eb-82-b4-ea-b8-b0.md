@@ -2,7 +2,8 @@
 title: '[C#] 가상 키(Key) 이벤트 보내기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '[  
+![Apple's Flat Keyboard](http://farm3.static.flickr.com/2543/4153789271_a0a01c21b6.jpg)](http://www.flickr.com/'
 featured_image: ''
 tags: ['.net', 'An Seong Hyun', 'c#', 'dev', 'SendKeys.Send()', '가상 키 입력', '가상키', '안성현', '프로그래밍']
 ---

@@ -20,7 +20,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {{ ogp_meta_tag | safe }}
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="{{ post.title }}"/>
+    <meta property="og:description" content="{{ post.description | clean }}"/>
+    <meta property="og:url" content="https://ash84.io/{{ post.path }}"/>
+    <meta property="og:image" content="{{ post.featured_image }}"/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>{{ settings.blog_title }}</title>
     <meta name="description" content="{{ settings.blog_desc }}" />
@@ -58,12 +63,8 @@
     
 <div class="content">
     <h1 class="blog-post-title">{{ post.title }}</h1>
-    <div class="blog-post-meta">
-        {% if post.created_at == post.modified_at %}
-            <small>  {{ post.created_at }}</small>
-        {% else %}
-            <small>  {{ post.created_at }}/{{ post.modified_at }}</small>
-        {% endif %}
+    <div class="blog-post-meta"> 
+        <small>  {{ post.created_at }}</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
@@ -71,15 +72,12 @@
     {% if post.featured_image %}
         <img src="{{ post.featured_image }}" alt="">
     {% endif %}
-
     <div class="blog-post">
         {{post.html | safe}}
     </div>
-
-    <hr/>
     <div>
         {% for tag in tag_list %}
-            <a href="/tag/{{tag}}">#{{ tag }}</a>&nbsp;
+            #{{ tag }}&nbsp;
         {% endfor %}
     </div> 
     {% include '/themes/solopreneur/footer.html' %}

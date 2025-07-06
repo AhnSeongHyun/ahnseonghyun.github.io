@@ -2,7 +2,7 @@
 title: '# 졸리다. 졸려'
 author: 'ash84'
 pub_date: '2010-11-23'
-description: ''
+description: '졸리다. 졸려.  자자. 성현아.'
 featured_image: ''
 tags: ['']
 ---

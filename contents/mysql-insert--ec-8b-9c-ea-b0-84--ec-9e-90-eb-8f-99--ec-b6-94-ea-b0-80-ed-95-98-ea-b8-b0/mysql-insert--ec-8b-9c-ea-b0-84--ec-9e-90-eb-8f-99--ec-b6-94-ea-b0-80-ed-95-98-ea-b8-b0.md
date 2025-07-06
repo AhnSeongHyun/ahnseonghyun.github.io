@@ -2,7 +2,11 @@
 title: '(mysql) insert 시간 자동 추가하기'
 author: 'ash84'
 pub_date: '2017-02-24'
-description: ''
+description: '데이터베이스 입력 시간이 중요할때가 있다. 예를 들면, 어떤 데이터를 수집한다고 할때, 일별 혹은 시간별 데이터를 뽑기 위해서는 입력시간 컬럼을 넣어주는 것이 필요하다. 프로그램상에서 Date 형으로 넣어 줄수도 있겠지만, SQL 은 짧으면 좋다고, INSERT OR UPDATE 시 자동으로 시간을 추가하는 방법을 사용하면 더 좋은것 같다. 
+
+**1. TIMESTAMP 컬럼 추가. **
+
+<'
 featured_image: ''
 tags: ['dev', 'INSERT 시간 추가', 'MySQL', 'timestamp', 'UPDATE 시간 추가', 'insert', 'update']
 ---

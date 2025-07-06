@@ -2,7 +2,7 @@
 title: '능숙함과 익숙함의 경계에서.'
 author: 'ash84'
 pub_date: '2010-06-16'
-description: ''
+description: '처음 프로그래밍 언어를 접할때가 생각이 난다.'
 featured_image: ''
 tags: ['언어에 종속되면', '유연성', '프로그래밍', '행복한 프로그래머']
 ---

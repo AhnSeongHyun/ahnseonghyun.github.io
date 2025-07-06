@@ -2,7 +2,11 @@
 title: '[Cocoa Design Pattern] 17ch. Outlet, Target, Action'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**![](http://ash84.net/wp-content/uploads/1/cfile1.uf.160435454E1A59C5322140.jpg)
+
+아웃렛 타깃 액션
+
+**'
 featured_image: ''
 tags: ['Action', 'cocoa design pattern', 'dev', 'IOS', 'iPhone dev', 'outlet', 'Target', 'Xcode', '아웃렛', '아이폰 개발', '액션', '타깃']
 ---

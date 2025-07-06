@@ -2,7 +2,13 @@
 title: '테터데스크 첫화면 글자 오류 문제'
 author: 'ash84'
 pub_date: '2009-11-20'
-description: ''
+description: '블로그 첫 화면에 테터데스크 적용했는데, 문제가 생겼습니다.
+
+![](http://ash84.net/wp-content/uploads/1/cfile8.uf.110B140B4B05E9D5B1C9FE.jpg)
+
+제가 11/18일에 올린 포스팅 ” 프로그래머에게 좋은 눈 지압 운동” 이 테터 데스크에는..
+
+“프로그래머에**세'
 featured_image: ''
 tags: ['글자오류', '글자오타', '첫화면', '테터데스크', '티스토리']
 ---

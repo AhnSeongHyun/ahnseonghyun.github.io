@@ -2,7 +2,9 @@
 title: '(vert.x) vertx.log 로그파일 위치 변경하기'
 author: 'ash84'
 pub_date: '2013-05-24'
-description: ''
+description: 'vert.x 로그에 대한 내용은 [여기](http://vertx.io/manual.html#logging)를 참고를 하면 된다. 요약하자면 
+
+> 각각의 verticle 은 자신의 logger를 가지는데, verticle 내부에서 가져와서 사용할 수가 있다. 로그 파일은 기본적으로 vertx.log 파일로 기록이 되고, system temp 디렉'
 featured_image: ''
 tags: ['logging.properties', 'set vert.x log', 'vert.x', 'vert.x 로그 설정', 'vertx', 'vertx.log']
 ---

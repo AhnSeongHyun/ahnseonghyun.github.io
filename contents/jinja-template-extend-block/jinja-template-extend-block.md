@@ -2,7 +2,9 @@
 title: 'jinja template - extend block 이용하기'
 author: 'ash84'
 pub_date: '2018-05-19'
-description: ''
+description: '기존에는 `{%include "head.html" %}` 이런식으로 html 내 특정 부분, 즉 자주 사용하는 부분을 모든 페이지에 붙여서, `include` 지시자를 이용해서 가져오는 방식을 사용해 왔었다. 작은 프로젝트에서는 head.html 을 따로 두고 그 안에서 css 및 기타 `` 부분에 들어가는 코드를 작성해서 재활용 했었다.
+
+그런데 최근에 body 에서 navigation bar 와 footer (상단, 하단)만 두고 가운데의 컨텐츠 부분만 상단 혹은 하단의 링크에 따라서 바꿔서 보여줘야 하는 요구사항이 있었는데 생'
 featured_image: 'http://www.pocoo.org/_images/jinja-logo.png'
 tags: ['dev', 'FLASK', 'jinja', 'template']
 ---

@@ -2,7 +2,7 @@
 title: '오픈소스 도구가 어떻게 민주주의를 발전시킬 수 있을까?'
 author: 'ash84'
 pub_date: '2023-03-08'
-description: ''
+description: '[윤석찬](https://twitter.com/channyun)님의 트'
 featured_image: ''
 tags: ['Clay Shirky', 'github', 'ted', '어떻게 인터넷이 정부를 완전히 바꾸어 놓을것인가?']
 ---

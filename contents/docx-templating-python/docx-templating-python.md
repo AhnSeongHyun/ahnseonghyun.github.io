@@ -2,7 +2,11 @@
 title: 'docxtpl 를 이용한 문서 자동화'
 author: 'ash84'
 pub_date: '2016-08-02'
-description: ''
+description: '엑셀의 경우, 백오피스나 CMS 등에서 import/export 에 사용하기 때문에 기능구현 할 때  [XlsWriter](https://github.com/jmcnamara/XlsxWriter) 를 이용해서 구현했던 적이 있었다. 그에 비해서 워드 문서를 생성해 내는 작업은 별로 없었다. 
+
+###발단은 이렇다. 
+ 
+로그 분석을 해서 통계를 내고, 워드 문서파일의 보고서 형식으로 만들어서 올리는 작업을 매월 하고 있는데, 통계를 내는건 스크립트로 해결을 해왔는데, 그 시간보다 보고서를 작성하는 시간이 더 오래 걸렸다. 물론 사내'
 featured_image: ''
 tags: ['dev', 'Python', '워드문서', 'docx']
 ---

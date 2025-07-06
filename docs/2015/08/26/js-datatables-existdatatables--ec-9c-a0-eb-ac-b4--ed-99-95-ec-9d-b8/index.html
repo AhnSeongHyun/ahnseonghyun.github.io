@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[js] datatables exist?(datatables 유무 확인)"/>
+    <meta property="og:description" content="datatables 라는 자바스크립트 라이브러리를 자주 사용하는데(좋아서가 아님.) 요상하게 .DataTable() 함수를 2번 호출하면 duplication init 관련 오류가 나고 데이터가 한번 그려지고 그 다음에 다시 새로운 데이터로 그릴려고 하면 갱신이 안되는 문제가 있었다. if 문 처럼 datatables 가 있는지 확인하고 있으면, 한번 그려진 이후이기 때문에 그냥"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/08/26/js-datatables-existdatatables--ec-9c-a0-eb-ac-b4--ed-99-95-ec-9d-b8"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[js] datatables exist?(datatables 유무 확인)</title>
-    <meta name="description" content="" />
+    <meta name="description" content="datatables 라는 자바스크립트 라이브러리를 자주 사용하는데(좋아서가 아님.) 요상하게 .DataTable() 함수를 2번 호출하면 duplication init 관련 오류가 나고 데이터가 한번 그려지고 그 다음에 다시 새로운 데이터로 그릴려고 하면 갱신이 안되는 문제가 있었다. if 문 처럼 datatables 가 있는지 확인하고 있으면, 한번 그려진 이후이기 때문에 그냥" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,28 +63,23 @@
     
 <div class="content">
     <h1 class="blog-post-title">[js] datatables exist?(datatables 유무 확인)</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-08-26</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-08-26</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <script src="https://gist.github.com/AhnSeongHyun/9f8f66a7c97da9bec7a1.js"></script>
 
 <p>datatables 라는 자바스크립트 라이브러리를 자주 사용하는데(좋아서가 아님.) 요상하게 .DataTable() 함수를 2번 호출하면 duplication init 관련 오류가 나고 데이터가 한번 그려지고 그 다음에 다시 새로운 데이터로 그릴려고 하면 갱신이 안되는 문제가 있었다. if 문 처럼 datatables 가 있는지 확인하고 있으면, 한번 그려진 이후이기 때문에 그냥 clear() 한후, 데이터 추가하고 그려준다.</p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['datatables'">#['datatables'</a>&nbsp;
+            #datatables&nbsp;
         
-            <a href="/tag/'dev']">#'dev']</a>&nbsp;
+            #dev&nbsp;
         
     </div> 
     <footer>

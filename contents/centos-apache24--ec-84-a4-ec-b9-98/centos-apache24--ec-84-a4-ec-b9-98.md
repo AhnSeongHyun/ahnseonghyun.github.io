@@ -2,7 +2,14 @@
 title: 'CentOS Apache2.4 설치'
 author: 'ash84'
 pub_date: '2017-04-03'
-description: ''
+description: '####Apache 2.4 설치####
+
+
+
+위와같이 wget을 통해서 일단 다운로드를 받고 압축을 푼다. 아래의 apr, apr-util, pcre 를 설치하는 것은 사실상 Apache 서버를 설치하기 위함인데 실제로 현재 단계에서 ./configure 를 해 보게 되면 아래의 3가지 설치해야 하는 것들이 없다고 나오는 것을 확인할수 있다. 
+
+
+####apr 설치####'
 featured_image: ''
 tags: ['apache', 'centos', 'dev', 'SSL', '아파치', '아파치 소스 설치']
 ---

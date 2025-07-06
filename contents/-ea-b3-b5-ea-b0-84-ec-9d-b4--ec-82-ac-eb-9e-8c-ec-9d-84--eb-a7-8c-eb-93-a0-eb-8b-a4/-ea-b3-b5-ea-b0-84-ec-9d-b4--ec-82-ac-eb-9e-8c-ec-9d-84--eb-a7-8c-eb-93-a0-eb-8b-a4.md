@@ -2,7 +2,8 @@
 title: '공간이 사람을 만든다.'
 author: 'ash84'
 pub_date: '2010-07-06'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile4.uf.183BC8234C32E10F5C949A.jpg)  
+공간이 사람을 만든다.<'
 featured_image: ''
 tags: ['Ahn Seong Hyun', '개발자', '공간이 사람을 만든다', '인테리어']
 ---

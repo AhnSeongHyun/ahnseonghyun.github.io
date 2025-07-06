@@ -2,7 +2,7 @@
 title: '김진태 교수님의 clean code 설명'
 author: 'ash84'
 pub_date: '2012-06-10'
-description: ''
+description: '**[Clean code](http://www.slideshare.net/bbongcsu/clean-code-8660308 "Clean code")**'
 featured_image: ''
 tags: ['Cleancode', '김진태', '클린코드']
 ---

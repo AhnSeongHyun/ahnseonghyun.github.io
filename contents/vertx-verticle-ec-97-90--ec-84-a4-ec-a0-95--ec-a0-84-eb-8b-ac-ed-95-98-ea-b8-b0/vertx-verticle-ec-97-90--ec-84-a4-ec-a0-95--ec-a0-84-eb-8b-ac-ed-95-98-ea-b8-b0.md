@@ -2,7 +2,7 @@
 title: '(vert.x) verticle에 설정 전달하기'
 author: 'ash84'
 pub_date: '2013-05-28'
-description: ''
+description: 'Verticle을 상속받는 클래스를 만들어야 mod 의 형태나, 일반 파일의 형태로 전달해서 띄우던지 할수가 있는데, Verticle 클래스에서는 `container`라는 객체가 있다. 이 객체가 하는 일은 말 그대로 어떤 것을 담고 있는 클래스인데, 가장 중요한것이 앞서서 말한 logger 이고, 다른 하나는 conf 이다.'
 featured_image: ''
 tags: ['vert.x', 'vert.x config', 'vert.x settings']
 ---

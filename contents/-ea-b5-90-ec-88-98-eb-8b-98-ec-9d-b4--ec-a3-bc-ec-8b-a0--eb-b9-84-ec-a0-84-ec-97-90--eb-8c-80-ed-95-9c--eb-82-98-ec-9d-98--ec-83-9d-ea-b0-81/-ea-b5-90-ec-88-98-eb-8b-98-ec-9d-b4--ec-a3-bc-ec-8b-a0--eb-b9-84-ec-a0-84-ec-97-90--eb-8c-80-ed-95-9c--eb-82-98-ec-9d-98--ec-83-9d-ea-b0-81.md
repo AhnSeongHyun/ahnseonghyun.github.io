@@ -2,7 +2,15 @@
 title: '교수님이 주신 비전에 대한 나의 생각'
 author: 'ash84'
 pub_date: '2007-04-26'
-description: ''
+description: '저저번주, 첫 랩미팅을 가졌다.
+
+**LOMIIO(Lab of Medical instrumentation & informatics optimization)  
+**의 이름처럼 우리 랩은 의료정보학에 관련된 랩이다. 병원정보시스템의 표준에서 부터  
+병원 웹사이트 까지 각 랩원이 맡은 바를 가지고 프로젝트를 진행하고 있다. 
+  
+> **교수님의 말씀. 요약하면 이렇다. .  
+> **  
+> – 이미'
 featured_image: ''
 tags: ['HL7', 'mobile', 'PDA', '당뇨병', '랩', '랩미팅', '병원정보시스템', '연구실', '의료정보', '핸드폰']
 ---

@@ -2,7 +2,8 @@
 title: '...'
 author: 'ash84'
 pub_date: '2009-09-22'
-description: ''
+description: '[![It's no Joke](http://farm3.static.flickr.com/2424/3927981543_8cc7110be5.jpg)](http://www.flickr.com/photos/92163630@N00/3927981543 "It's no Joke")  
+It’s no Joke by [Dave-F](http://www.flickr.com/photos/92163630@N00)[![저작자 표시](h'
 featured_image: ''
 tags: ['나']
 ---

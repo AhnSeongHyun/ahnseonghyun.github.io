@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="Starting wordpress"/>
+    <meta property="og:description" content="정든 티스토리를 떠나기로 결정한 것은 예전에도 언급한적이 있지만, 티스토리의 답답함에서 비롯된것이었다. 그리고 워드프레스와 Automattic 사, 매트 뮬렌웨그와 바지를 벗고 일해도되나요? 라는 책을 보고 워드프레스로 옮겨가게 되었다. 늘 그렇듯 여러가지 걸림돌이 있어서 이사가기가 힘들었는데 이번에는 진짜 이사를 제대로 가보자고 굳게 마음을 먹었고, 이사과정에서 생긴 이슈들을 아래와 같이 정리해본다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2018/05/31/starting-wordpress"/>
+    <meta property="og:image" content="https://images.unsplash.com/photo-1484544808355-8ec84e534d75?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fc1407c2a550b0ebf3def8b81fa7b4a2&auto=format&fit=crop&w=1366&q=80"/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>Starting wordpress</title>
-    <meta name="description" content="" />
+    <meta name="description" content="정든 티스토리를 떠나기로 결정한 것은 예전에도 언급한적이 있지만, 티스토리의 답답함에서 비롯된것이었다. 그리고 워드프레스와 Automattic 사, 매트 뮬렌웨그와 바지를 벗고 일해도되나요? 라는 책을 보고 워드프레스로 옮겨가게 되었다. 늘 그렇듯 여러가지 걸림돌이 있어서 이사가기가 힘들었는데 이번에는 진짜 이사를 제대로 가보자고 굳게 마음을 먹었고, 이사과정에서 생긴 이슈들을 아래와 같이 정리해본다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,10 +63,8 @@
     
 <div class="content">
     <h1 class="blog-post-title">Starting wordpress</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2018-05-31</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2018-05-31</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
@@ -69,7 +72,6 @@
     
         <img src="https://images.unsplash.com/photo-1484544808355-8ec84e534d75?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fc1407c2a550b0ebf3def8b81fa7b4a2&auto=format&fit=crop&w=1366&q=80" alt="">
     
-
     <div class="blog-post">
         <p>정든 티스토리를 떠나기로 결정한 것은 예전에도 언급한적이 있지만, 티스토리의 답답함에서 비롯된것이었다. 그리고 워드프레스와 Automattic 사, 매트 뮬렌웨그와 바지를 벗고 일해도되나요? 라는 책을 보고 워드프레스로 옮겨가게 되었다. 늘 그렇듯 여러가지 걸림돌이 있어서 이사가기가 힘들었는데 이번에는 진짜 이사를 제대로 가보자고 굳게 마음을 먹었고, 이사과정에서 생긴 이슈들을 아래와 같이 정리해본다.</p>
 <p><strong>1. wordpress.com vs. wordpress.org</strong></p>
@@ -78,17 +80,15 @@
 <p>– 가장 큰 다음 걸림돌은 바로 티스토리의 데이터 문제였는데 <a href="https://wordpress.org/plugins/ttxml-importer/">TTXML</a>이라는것이 있다는것도 알았지만, 몇가지 문제가 있다고 생각이 되어서 겁을 먹고 있었다. <a href="https://wordpress.org/plugins/ttxml-importer/">TTXML</a>을 통해서 데이터를 가져오는 과정에서 멈추거나 하는 경우도 있었고, 나는 성공하고 나서 너무 좋아했고, 그 다음날 바로 티스토리를 지워버렸다. 그리고 나서 예전의 글들을 보니, 이미지의 경우 모두 X박스가 뜬다. ㅠㅠ 이 부분은 진짜 실수인데, 이미지 부분은 따로 링크를 잡아 줘야 하는것 같다. 그리고 이상하게 글의 URL 즉, 퍼머링크를 클릭하면 NOT FOUND 가 뜨는 문제가 있었다. MariaDB(MYSQL 대신에 사용했다.) 에 확인을 해보니 제대로 있는것을 확인했는데, 찾아보니 Apache .htaccess 파일을 만들어 주고 권한을 설정해주고, apache.conf 에서도 권한 설정을 해줘야 하는 부분이 있었다.</p>
 <p>다행히 이제는 제대로 설치가 되어서 잘 사용하고 있다.(내가 모르는 뭔가가 있을지도..) 마음에 드는 테마도 가져와서 쓰고 있고 몇군데 css를 수정해서 쓰고 있다. 워드프레스에 대해서 종종 포스팅을 하긴 하겠지만, 수 많은 테마와 플러그인들이 있어서 좋은것 같다. 지금까지의 단점이라면 티스토리 보다 느린것 같은데 그건 내 호스팅이 느린것 같다. 아쉽게도 원래 사용하려는 테마는 어려워서 사용하지 못했지만, 기회가 된다면, 테마나 플러그인도 수정하면 기여할 수 있는 기회가 생기지 않을까 싶다.</p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'wordpress'">#'wordpress'</a>&nbsp;
+            #wordpress&nbsp;
         
-            <a href="/tag/'wordpress.com vs. wordpress.org'">#'wordpress.com vs. wordpress.org'</a>&nbsp;
+            #wordpress.com vs. wordpress.org&nbsp;
         
-            <a href="/tag/'워드프레스']">#'워드프레스']</a>&nbsp;
+            #워드프레스&nbsp;
         
     </div> 
     <footer>

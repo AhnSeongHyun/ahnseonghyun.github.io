@@ -2,7 +2,7 @@
 title: 'Intel의 BIOMOBIUS 와 SHIMMER'
 author: 'ash84'
 pub_date: '2008-07-25'
-description: ''
+description: '다수의 많은 IT 기업들이 헬스케어 산업에 뛰어 들고 있다는 것은 자명한 사실이다. 기존의 거대한 의료기기 업체인 GE, 지멘스, 필립스 등의 업체는 기존의 기기를 바탕으로 헬스케어분야를 공략하려고 하고 있고, 마이크로소프트의 경우에는 개인을 대상으로 HealthVault 서비스를 발표함으로써, PHR 분야에서의 공략을 시작해 나가고 있다. 또한 구글이나 다른 인'
 featured_image: ''
 tags: ['BIOMOBIUS', 'intel', 'SHIMMER', 'TRIL CENTRE']
 ---

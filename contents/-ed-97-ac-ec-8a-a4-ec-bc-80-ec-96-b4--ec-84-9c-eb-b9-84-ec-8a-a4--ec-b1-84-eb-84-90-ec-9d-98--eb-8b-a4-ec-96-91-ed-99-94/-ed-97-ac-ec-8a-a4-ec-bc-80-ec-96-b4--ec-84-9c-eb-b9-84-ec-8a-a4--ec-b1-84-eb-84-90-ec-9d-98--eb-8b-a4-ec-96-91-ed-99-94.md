@@ -2,7 +2,8 @@
 title: '헬스케어 서비스 채널의 다양화'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '[![What's in my bag](http://farm4.static.flickr.com/3006/3069228203_0c89e6673d.jpg)](http://www.flickr.com/photos/42256496@N00/3069228203 "What's in my bag")  
+What’s in my bag by [schatz](http://www.flickr.com/photos/42256496@N00)'
 featured_image: ''
 tags: ['dev', 'UX', '가젯', '다음 캘린더 서비스', '메일', '서비스 채널', '아웃룩', '위젯', '유저', '헬스케어 서비스']
 ---

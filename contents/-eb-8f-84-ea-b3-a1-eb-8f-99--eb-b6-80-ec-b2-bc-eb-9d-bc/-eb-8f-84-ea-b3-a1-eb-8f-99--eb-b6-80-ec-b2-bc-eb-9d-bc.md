@@ -2,7 +2,14 @@
 title: '[도곡동] 부첼라'
 author: 'ash84'
 pub_date: '2009-07-24'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile5.uf.167F100D4A67C23FB97B74.jpg)  
+ 회사를 다니면서 알게된 “부펠라” 라는 샌드위치 집.
+
+가격대는 그리 비싸지 않으면서도 양질의 샐러드를 먹을수 있다는 점이 정말 좋다^^
+
+가게가 그리 크지 않기 때문에 약간 기다려야 하기도 하지만,
+
+그래두 요즘 내가 자주 가는 집.'
 featured_image: ''
 tags: ['매봉역', '부첼라', '샌드위치', '샐러드']
 ---

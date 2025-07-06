@@ -2,7 +2,10 @@
 title: '모바일 어플리케이션으로 돈 벌고 싶다면?! SKT 모바일 컨텐츠 오픈마켓'
 author: 'ash84'
 pub_date: '2009-05-16'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile4.uf.1128D20E4A0E032E3B07D7.jpg)  
+ 해당 웹사이트 : [http://developer.itopping.co.kr/](http://developer.itopping.co.kr/)
+
+SKT에서 본격적으로 모바일 오픈마켓 사업을 시작하는 듯 하다. 3월에 마감된 SKT-MS 윈도우 모바일 어플리케이션 개발경진대회을 시작으로하여 이번에는 윈도우 모바일 어플리케이션 뿐만 아니라 일반 휴대폰에서 사용되는 WIPI, WNEX  등의'
 featured_image: ''
 tags: ['SKT', 'SKTE 모바일 오픈마켓', '모바일 개발 교육', '모바일 개발자', '오픈마켓']
 ---

@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="git remote branch 혹은 tags 가져오기"/>
+    <meta property="og:description" content="최근에 git pull 혹은 checkout 하는 개인적은 툴을 만들고 있는데, git 의  remote 의  branch 나 tags 를 가져오고 싶을때가 있다. 예를 들어, git-flow 로 작업을 하게 되면 `feature/support-api` 이런식의 branch 로 작업을 하고 remote 로 push 하는 경우가 있는데, 이런 branch 를 가져오고 싶었다. 또 github 의 release 의 경우 tags 에서 따서 하는 경우가 보통인데, tags 를 가져오고 싶었다. 그런데 보통 git repo 안에서 git"/>
+    <meta property="og:url" content="https://ash84.io/docs/2019/09/02/git-remote-branch-tags"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>git remote branch 혹은 tags 가져오기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="최근에 git pull 혹은 checkout 하는 개인적은 툴을 만들고 있는데, git 의  remote 의  branch 나 tags 를 가져오고 싶을때가 있다. 예를 들어, git-flow 로 작업을 하게 되면 `feature/support-api` 이런식의 branch 로 작업을 하고 remote 로 push 하는 경우가 있는데, 이런 branch 를 가져오고 싶었다. 또 github 의 release 의 경우 tags 에서 따서 하는 경우가 보통인데, tags 를 가져오고 싶었다. 그런데 보통 git repo 안에서 git" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">git remote branch 혹은 tags 가져오기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2019-09-02</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2019-09-02</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>최근에 git pull 혹은 checkout 하는 개인적은 툴을 만들고 있는데, git 의  remote 의  branch 나 tags 를 가져오고 싶을때가 있다. 예를 들어, git-flow 로 작업을 하게 되면 <code>feature/support-api</code> 이런식의 branch 로 작업을 하고 remote 로 push 하는 경우가 있는데, 이런 branch 를 가져오고 싶었다. 또 github 의 release 의 경우 tags 에서 따서 하는 경우가 보통인데, tags 를 가져오고 싶었다. 그런데 보통 git repo 안에서 git 명령어로 가져오면 되는데, repo 가 없는 상태에서 그것들만 가져오고 싶어서 찾아보니 이런 방법이 있었다. </p>
 <pre><code>git ls-remote --tags /url/to/upstream/repo
@@ -82,17 +84,15 @@ c45308da08f21539dda6be9fc2e85b2f53ab4ea2    refs/heads/develop
 c209ffa55ce96df091bfef9f6fa977a5bb65cd03    refs/heads/master
 </code></pre>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['Git'">#['Git'</a>&nbsp;
+            #Git&nbsp;
         
-            <a href="/tag/'remote'">#'remote'</a>&nbsp;
+            #remote&nbsp;
         
-            <a href="/tag/'branch'">#'branch'</a>&nbsp;
+            #branch&nbsp;
         
-            <a href="/tag/'tags']">#'tags']</a>&nbsp;
+            #tags&nbsp;
         
     </div> 
     <footer>

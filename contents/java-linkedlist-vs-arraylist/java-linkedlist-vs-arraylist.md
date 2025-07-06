@@ -2,7 +2,7 @@
 title: '[Java] LinkedList, ArrayList와 뭐가 다른가.'
 author: 'ash84'
 pub_date: '2017-03-24'
-description: ''
+description: '클린코드등의 책을 보면서, 인터페이스에 맞춰서 프로그래밍 하라는 이야기를 많이 들었고, C#의 ArrayList가 익숙해서 그런지 주로 자바에서 사용하는 Collection중 하나가 아래와 같은 List 이다.'
 featured_image: ''
 tags: ['ArrayList', 'dev', 'Java', 'LinkedList', '자바']
 ---

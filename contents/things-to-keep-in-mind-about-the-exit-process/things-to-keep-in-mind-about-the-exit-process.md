@@ -2,7 +2,13 @@
 title: '퇴사의 과정에 지켜야 하는 것들'
 author: 'ash84'
 pub_date: '2023-03-17'
-description: ''
+description: '퇴사들을 보면서 나도 많이 퇴사를 해봤기에 여러가지 생각들이 든다. 몇가지 내가 퇴사를 할때의 원칙들을 적어본다. 
+
+### 박수칠 때, 떠날 것 
+
+회사가 망해서, 월급이 밀려서 떠나는 것은 어쩔 수 없지만 개인적으로는 할 게 더 없으면 떠나는게 맞을것 같다. 근데 회피성 이직은 그다지 도움이 되진 않는것 같다. 정말 문제가 있는 회사라면 어쩔 수 없겠지만 같이 있는 팀이나 프로젝트가 잘 안되는 상황에서 떠나는건 떠나는 개인에게 좋은 인상을 주지는 못하는것 같다. 붙잡고 있는것도 안되지만 끝맺음은 하는게 좋은것 같다. 
+
+###'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/things-to-keep-in-mind-about-the-exit-process/20200402152847.png'
 tags: [' ', 'eassy']
 ---

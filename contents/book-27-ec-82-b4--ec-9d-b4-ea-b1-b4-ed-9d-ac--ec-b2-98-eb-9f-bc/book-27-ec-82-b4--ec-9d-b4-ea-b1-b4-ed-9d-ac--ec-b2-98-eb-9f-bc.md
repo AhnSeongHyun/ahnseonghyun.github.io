@@ -2,7 +2,9 @@
 title: '[BOOK] 27살 이건희 처럼.'
 author: 'ash84'
 pub_date: '2010-05-04'
-description: ''
+description: '**27살 이건희처럼.**
+  
+<'
 featured_image: ''
 tags: ['27살 이건희처럼', '삼성', '신경영체제', '이건희', '이지성 작가']
 ---

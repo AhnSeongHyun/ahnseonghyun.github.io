@@ -2,7 +2,8 @@
 title: '꿈을 가져야.'
 author: 'ash84'
 pub_date: '2009-10-08'
-description: ''
+description: '[![[A5 B8] I](http://farm3.static.flickr.com/2401/2274188347_727a20c0b3.jpg)](http://www.flickr.com/photos/74347725@N00/2274188347 "[A5 B8] I")  
+[A5 B8] I by [Xabier.M](http://www.flickr.com/photos/74347725@N00)[![저작자 표시](http://cfs.tistor'
 featured_image: ''
 tags: ['꿈', '미래']
 ---

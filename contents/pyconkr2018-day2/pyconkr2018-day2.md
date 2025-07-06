@@ -2,7 +2,15 @@
 title: 'PyconKR 2018 후기 2일차 '
 author: 'ash84'
 pub_date: '2018-09-02'
-description: ''
+description: '# 2일차 후기
+
+***
+[1일차 후기 보러가기](https://ash84.net/2018/08/21/pyconkr2018-day1/)
+***
+
+**나누고 나누기: 파이썬으로 코드 리팩토링하기 -Niño R. Eclarin-** 
+
+외국분이 하는 세미나는 사실 개인적으로 잘 듣지는 않는데 리팩토링이라는 해묵은 주제를 가지고 왔길래 한번 들어봤다. 생각보다 재밌게 잘 설명을 해주었고 원론적인 이야기 보다는 실제 프로젝트를 하면서 실용적인 리팩토링 위주로 설명을 해주었다. 단순히 중복을 제거하거나, 해쉬화를 하는것도 중요하지만, 뭔가'
 featured_image: 'https://farm2.staticflickr.com/1811/43258544405_dfd2752d6a_b.jpg'
 tags: ['Python', 'dev', 'pyconkr', 'pycon', 'conference']
 ---

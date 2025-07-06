@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="flask - render_template 어떻게 사용할까?"/>
+    <meta property="og:description" content="flask 를 사용하다보면 view 코드가 길어지는 경우가 있는데 그 중 하나가 views.py 에 route 함수가 많아져서 길어지는것 그리고 다른 하나는 `render_template()` 함수에 파라미터가 많아져서 길어지는 경우다. 전자의 경우 blueprint 로 분할하거나 resource 단위로 분할하면 해결할수 있다. (이건 다른 포스트에서 자세히 설명하겠다.) 후자의 경우에는 어떻게 해결 할수 있을까?"/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/07/21/flask-render_template"/>
+    <meta property="og:image" content="http://flask.pocoo.org/docs/0.12/_images/logo-full.png"/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>flask - render_template 어떻게 사용할까?</title>
-    <meta name="description" content="" />
+    <meta name="description" content="flask 를 사용하다보면 view 코드가 길어지는 경우가 있는데 그 중 하나가 views.py 에 route 함수가 많아져서 길어지는것 그리고 다른 하나는 `render_template()` 함수에 파라미터가 많아져서 길어지는 경우다. 전자의 경우 blueprint 로 분할하거나 resource 단위로 분할하면 해결할수 있다. (이건 다른 포스트에서 자세히 설명하겠다.) 후자의 경우에는 어떻게 해결 할수 있을까?" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,10 +63,8 @@
     
 <div class="content">
     <h1 class="blog-post-title">flask - render_template 어떻게 사용할까?</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-07-21</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-07-21</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
@@ -69,7 +72,6 @@
     
         <img src="http://flask.pocoo.org/docs/0.12/_images/logo-full.png" alt="">
     
-
     <div class="blog-post">
         <p>flask 를 사용하다보면 view 코드가 길어지는 경우가 있는데 그 중 하나가 views.py 에 route 함수가 많아져서 길어지는것 그리고 다른 하나는 <code>render_template()</code> 함수에 파라미터가 많아져서 길어지는 경우다. 전자의 경우 blueprint 로 분할하거나 resource 단위로 분할하면 해결할수 있다. (이건 다른 포스트에서 자세히 설명하겠다.) 후자의 경우에는 어떻게 해결 할수 있을까? </p>
 <p>뭐 이런식으로 길어지는 경우다. </p>
@@ -124,17 +126,15 @@ return render_template('web.html', title=title, **render_params)
 <p>공통적으로 받아야 하는 인자들은 상위클래스에서 정의하고(title, color 등등) 이런것들은 적당한 이름을 지어서 생성자 인자에서 받도록 강제하였다. 그리고 랜더링 대상의 html 파일은 클래스내로 넣어서 좀더 보여지지 않도록 구성하였다. </p>
 <p><strong>사실 어떻게 사용하는지에 대한 정답은 없다.</strong> 상황에 맞게, 프로젝트 크기에 맞게 사용하는 것이 베스트라고 생각한다. 한 두개 정도의 인자를 보여줘야 하는 상황이면 <code>render_template</code> 를 쓰는게 나을것이다. 이런 경우 별도의 클래스를 만드는 수고까지 할 필요는 없다. 필자 역시, 기존에는 <code>render_template</code> 를 쓰다가 다른 요구사항이 와서 바꾸게 되었다. </p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'FLASK'">#'FLASK'</a>&nbsp;
+            #FLASK&nbsp;
         
-            <a href="/tag/'render_template'">#'render_template'</a>&nbsp;
+            #render_template&nbsp;
         
-            <a href="/tag/'Python']">#'Python']</a>&nbsp;
+            #Python&nbsp;
         
     </div> 
     <footer>

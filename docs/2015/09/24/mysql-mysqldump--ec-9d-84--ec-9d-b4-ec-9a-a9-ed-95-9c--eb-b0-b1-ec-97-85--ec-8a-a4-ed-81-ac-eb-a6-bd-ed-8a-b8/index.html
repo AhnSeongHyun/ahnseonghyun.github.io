@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(mysql) mysqldump 을 이용한 백업 스크립트"/>
+    <meta property="og:description" content="mysql 에 데이터가 쌓이다 보면 확실히 정해야 하는것중 하나가 백업 정책인것 같다. 특히 스타트업이나 개인 프로젝트에서 서버를 임대해서 사용하는 경우, 서버용량에 제한이 있다보니 어느정도 데이터가 쌓이다 보면 백업에 대해서 고려하지 않을수가 없다. 내가 세운 백업정책은 1일 1백업, 즉 일일백업인데, 사실 아직은 데이터가 많지 않은 상황에서 할수 있는 무식한 방법이다. 아래는 mysqldump를 사용한 백업 스크립트인데, 매일 오전 12시30분에 실행이 되도록 cronta"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/09/24/mysql-mysqldump--ec-9d-84--ec-9d-b4-ec-9a-a9-ed-95-9c--eb-b0-b1-ec-97-85--ec-8a-a4-ed-81-ac-eb-a6-bd-ed-8a-b8"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(mysql) mysqldump 을 이용한 백업 스크립트</title>
-    <meta name="description" content="" />
+    <meta name="description" content="mysql 에 데이터가 쌓이다 보면 확실히 정해야 하는것중 하나가 백업 정책인것 같다. 특히 스타트업이나 개인 프로젝트에서 서버를 임대해서 사용하는 경우, 서버용량에 제한이 있다보니 어느정도 데이터가 쌓이다 보면 백업에 대해서 고려하지 않을수가 없다. 내가 세운 백업정책은 1일 1백업, 즉 일일백업인데, 사실 아직은 데이터가 많지 않은 상황에서 할수 있는 무식한 방법이다. 아래는 mysqldump를 사용한 백업 스크립트인데, 매일 오전 12시30분에 실행이 되도록 cronta" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(mysql) mysqldump 을 이용한 백업 스크립트</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-09-24</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-09-24</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">mysql 에 데이터가 쌓이다 보면 확실히 정해야 하는것중 하나가 백업 정책인것 같다. 특히 스타트업이나 개인 프로젝트에서 서버를 임대해서 사용하는 경우, 서버용량에 제한이 있다보니 어느정도 데이터가 쌓이다 보면 백업에 대해서 고려하지 않을수가 없다. 내가 세운 백업정책은 1일 1백업, 즉 일일백업인데, 사실 아직은 데이터가 많지 않은 상황에서 할수 있는 무식한 방법이다. 아래는 mysqldump를 사용한 백업 스크립트인데, 매일 오전 12시30분에 실행이 되도록 crontab 에 스케쥴을 걸어놓은 상태이다.</span></p>
 <p><span style="font-size: 11pt;"> </span></p>
@@ -107,19 +109,17 @@
 <p><span style="font-size: 11pt;">– </span><a href="http://stackoverflow.com/questions/9293042/mysqldump-without-the-password-prompt"><span style="font-size: 11pt;">http://stackoverflow.com/questions/9293042/mysqldump-without-the-password-prompt</span></a></p>
 <p><span style="font-size: 11pt;"> </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'MySQL'">#'MySQL'</a>&nbsp;
+            #MySQL&nbsp;
         
-            <a href="/tag/'mysql 백업'">#'mysql 백업'</a>&nbsp;
+            #mysql 백업&nbsp;
         
-            <a href="/tag/'mysqldump'">#'mysqldump'</a>&nbsp;
+            #mysqldump&nbsp;
         
-            <a href="/tag/'패스워드 없이']">#'패스워드 없이']</a>&nbsp;
+            #패스워드 없이&nbsp;
         
     </div> 
     <footer>

@@ -2,7 +2,7 @@
 title: '(flask) http get url 처리'
 author: 'ash84'
 pub_date: '2017-03-30'
-description: ''
+description: '당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. `@app.route()`함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 `request.args.get()` 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다.'
 featured_image: ''
 tags: ['dev', 'FLASK', 'flask get method', 'flask get 처리', 'Python']
 ---

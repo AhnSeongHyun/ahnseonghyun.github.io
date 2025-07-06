@@ -2,7 +2,11 @@
 title: 'A/B Test Post 요청하기'
 author: 'ash84'
 pub_date: '2015-07-09'
-description: ''
+description: 'ab 는 [apache bechmark testing](http://httpd.apache.org/docs/2.2/ko/programs/ab.html) 이라는 일종의 툴 인데, apache httpd를 설치하면 ./bin 디렉토리 내에 존재한다. 대략적인 사용법은 다음과 같다.
+
+
+
+특히 가장 많이 사용하는 것이 `-c(concurrency)` 와 `-n(requests)` 옵션인데'
 featured_image: ''
 tags: ['ab', 'ab request post', 'apache']
 ---

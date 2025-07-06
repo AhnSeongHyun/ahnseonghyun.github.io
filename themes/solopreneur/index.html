@@ -20,7 +20,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {{ ogp_meta_tag | safe }}
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 Blog"/>
+    <meta property="og:description" content="Sotware Engineering, Product Management, and Leadership, LifeStyle, and more"/>
+    <meta property="og:url" content="https://ash84.io"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="website"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>{{ settings.blog_title }}</title>
     <meta name="description" content="{{ settings.blog_desc }}" />
@@ -79,7 +85,7 @@
 
             {% for post in post_list %}
                 <li class="blog-list-item">
-                    <div class="blog-date">{{ post.created_at }}</div>
+                    <div class="blog-date">{{ post.pub_date }}</div>
                     <a href="{{ post.link }}" class="blog-title-item">{{ post.title }}</a>
                     <div class="blog-summary">{{ post.description | clean }}</div>
                 </li>

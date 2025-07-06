@@ -2,7 +2,10 @@
 title: '2008 EHR 핵심공통기술 심포지움'
 author: 'ash84'
 pub_date: '2008-12-04'
-description: ''
+description: '**2008 EHR 핵심공통기술 심포지움  
+**
+  
+ 안녕하십니까?어느덧 2008년도 두 달여 남짓 남겨두고'
 featured_image: ''
 tags: ['2008 EHR 핵심공통기술 심포지엄', 'EHR 사업단']
 ---

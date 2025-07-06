@@ -2,7 +2,7 @@
 title: 'PyCurl 사용하기'
 author: 'ash84'
 pub_date: '2017-11-15'
-description: ''
+description: '페이스북 코리아에 [requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글](https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance)이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다.'
 featured_image: ''
 tags: ['dev', 'Python', 'pycurl', 'requests']
 ---

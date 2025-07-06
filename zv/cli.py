@@ -72,7 +72,8 @@ def convert_markdown_to_html(
 ):
     """Convert a markdown file to HTML using the theme template and save it to the specified path."""
     # Create directory if it doesn't exist
-    os.makedirs(os.path.dirname(html_path), exist_ok=True)
+    dir_path = os.path.dirname(html_path)
+    os.makedirs(dir_path, exist_ok=True)
 
     # Read markdown content
     with open(md_path, "r", encoding="utf-8") as md_file:
@@ -96,13 +97,17 @@ def convert_markdown_to_html(
     template_path = f"themes/{config.theme.name}/post.html"
 
     # Create post data
-    created_at = frontmatter.get("pub_date", datetime.datetime.now().strftime("%Y-%m-%d"))
+    created_at = frontmatter.get(
+        "pub_date", datetime.datetime.now().strftime("%Y-%m-%d")
+    )
+    url_path = dir_path
     post = {
         "title": title,
         "html": html_content,
-        "created_at": created_at,
-        "modified_at": created_at,
+        "created_at": created_at, 
         "featured_image": frontmatter.get("featured_image", ""),
+        "path": url_path, 
+        "description": frontmatter.get("description", ""),
     }
 
     # Get tags if available
@@ -110,8 +115,10 @@ def convert_markdown_to_html(
     if "tags" in frontmatter:
         tags = frontmatter["tags"]
         if tags:
-            tag_list = [tag.strip() for tag in tags.split(",")]
-
+            # Remove extra quotes and brackets from the string representation
+            cleaned_tags = tags.strip("[]'\"")
+            tag_list = [tag.strip().strip("'\"") for tag in cleaned_tags.split(",")]
+ 
     # Set up template context
     context = {
         "post": post,
@@ -119,8 +126,7 @@ def convert_markdown_to_html(
         "settings": {
             "blog_title": title,
             "blog_desc": frontmatter.get("description", ""),
-        },
-        "ogp_meta_tag": "",
+        }, 
     }
 
     try:
@@ -150,7 +156,6 @@ def create_index_html(config: Config, post_list: list[dict]):
             "blog_title": "My Blog",
             "blog_desc": "A collection of my thoughts and ideas",
         },
-        "ogp_meta_tag": "",
     }
 
     try:
@@ -182,22 +187,22 @@ def clear_directory(directory):
         console.print(f"[green]Created directory:[/green] {directory}")
 
 
-def copy_theme_assets(config: Config): 
+def copy_theme_assets(config: Config):
     theme_assets_dir = os.path.join("themes", config.theme.name, "assets")
     docs_assets_dir = os.path.join(config.publication.path, "assets")
-    
+
     if os.path.exists(theme_assets_dir):
         # Create docs assets directory if it doesn't exist
         os.makedirs(docs_assets_dir, exist_ok=True)
-        
+
         # Copy all assets from theme to docs
         console.print(f"[green]Copying theme assets from:[/green] {theme_assets_dir}")
-        
+
         # Walk through all files and directories in theme assets
         for root, dirs, files in os.walk(theme_assets_dir):
             # Calculate relative path from theme assets dir
             rel_path = os.path.relpath(root, theme_assets_dir)
-            
+
             # Create corresponding directory in docs assets
             if rel_path != ".":
                 target_dir = os.path.join(docs_assets_dir, rel_path)
@@ -205,12 +210,12 @@ def copy_theme_assets(config: Config):
             else:
                 target_dir = docs_assets_dir
 
-                        # Copy all files
+                # Copy all files
             for file in files:
                 src_file = os.path.join(root, file)
                 dst_file = os.path.join(target_dir, file)
                 shutil.copy2(src_file, dst_file)
-                
+
         console.print(f"[green]Theme assets copied to:[/green] {docs_assets_dir}")
     else:
         console.print(f"[yellow]No theme assets found at:[/yellow] {theme_assets_dir}")
@@ -260,7 +265,7 @@ def get_date_path_from_frontmatter(frontmatter):
 
 
 @app.command()
-def clean(): 
+def clean():
     config: Config = read_config()
     console.print("[bold blue]Cleaning generated files...[/bold blue]")
     clear_directory(config.publication.path)
@@ -334,7 +339,7 @@ def build():
                 {
                     "title": title,
                     "link": post_url,
-                    "created_at": frontmatter.get(
+                    "pub_date": frontmatter.get(
                         "pub_date", datetime.datetime.now().strftime("%Y-%m-%d")
                     ),
                     "description": frontmatter.get("description", ""),
@@ -342,7 +347,8 @@ def build():
             )
 
             progress.update(task, advance=1)
-
+    # Sort post_list by pub_date in descending order (newest first)
+    post_list.sort(key=lambda x: x["pub_date"], reverse=True)
     # Create index.html
     create_index_html(post_list=post_list, config=config)
 
@@ -358,7 +364,6 @@ def dev():
     # Start development server
     console.print("[bold blue]Starting development server...[/bold blue]")
     console.print("[green]Server running at:[/green] http://localhost:8000")
- 
 
 
 def main():

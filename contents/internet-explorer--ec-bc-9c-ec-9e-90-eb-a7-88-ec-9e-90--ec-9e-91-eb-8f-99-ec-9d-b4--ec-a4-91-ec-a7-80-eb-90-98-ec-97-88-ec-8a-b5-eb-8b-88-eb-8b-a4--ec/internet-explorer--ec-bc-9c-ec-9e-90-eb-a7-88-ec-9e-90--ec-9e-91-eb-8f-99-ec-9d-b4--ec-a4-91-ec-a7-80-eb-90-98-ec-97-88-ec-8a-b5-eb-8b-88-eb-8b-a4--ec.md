@@ -2,7 +2,8 @@
 title: 'Internet Explorer 켜자마자, 작동이 중지되었습니다. 오류 해결 방법'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '한동안 인터넷 익스플로러가 회사 컴퓨터에서 키자마자 작동이 중지 되었습니다. 라는 팝업과 함께 꺼지는 경우가 많았는데 이번 연말정산을 하기 위해서 마음 먹고 지울 각오하고, 컴퓨터 밀 각오하고 고쳐보기로 했다. 
+여러가지 검색 결과가 있었지만, 필자가 확인해서 테스트 한 결과중 좋은것은 네이버 지식인에 있는글이었다. 요지는 무엇이냐 하면,'
 featured_image: ''
 tags: ['2013 연말정산', 'dev', 'Internet Explorer 8', 'Internet explorer 에러', 'Internet explorer 작동이 중지되었습니다.']
 ---

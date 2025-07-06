@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(python) opengraph 라이브러리 리뷰"/>
+    <meta property="og:description" content="사실 [오픈그래프](http://ogp.me)라는 것에 대해서 알게 된것은 [전 포스팅](http://ash84.tistory.com/1000)에서 말했지만 우연한 기회였다. 난 그때만 해도 여전히 오픈그래프에 대해서 신기해하고 있던 터라 구글 검색을 해보았는데 파이썬 기반 오픈"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/10/02/python-opengraph--eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac--eb-a6-ac-eb-b7-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(python) opengraph 라이브러리 리뷰</title>
-    <meta name="description" content="" />
+    <meta name="description" content="사실 [오픈그래프](http://ogp.me)라는 것에 대해서 알게 된것은 [전 포스팅](http://ash84.tistory.com/1000)에서 말했지만 우연한 기회였다. 난 그때만 해도 여전히 오픈그래프에 대해서 신기해하고 있던 터라 구글 검색을 해보았는데 파이썬 기반 오픈" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(python) opengraph 라이브러리 리뷰</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-10-02</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-10-02</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="text-align: justify; font-size: 11pt; line-height: 2;">사실 <a href="http://ogp.me">오픈그래프</a>라는 것에 대해서 알게 된것은 </span><a href="http://ash84.tistory.com/1000">전 포스팅</a><span style="text-align: justify; font-size: 11pt; line-height: 2;">에서 말했지만 우연한 기회였다. 난 그때만 해도 여전히 오픈그래프에 대해서 신기해하고 있던 터라 구글 검색을 해보았는데 파이썬 기반 오픈그래프 파싱 라이브러리가 있었고 분석했던 내용을 소개하고자 한다. </span></p>
 <p><span style="font-size: 11pt;">인스톨은 아래와 같이 하면 되고 </span></p>
@@ -87,23 +89,21 @@
 <p><span style="font-size: 15px; line-height: 29px;"> </span><span style="font-size: 15px; line-height: 29px;"><code>parser()</code></span><span style="font-size: 11pt;"> 함수를 보면 정규표현식을 이용해서 property 속성에서 og 가 있는 것들을 추리고 그 안에서 og:title 이라고 하면 title 값을 가져와서 키값으로 사용하고 content 속성의 값을 해당 키에 대한 값으로 활용하고 있다. 그리고 그 키값들이 오픈그래프 프로토콜의 basic metadata 를 모두 포함하고 있는지를 확인함으로써 <code>is_valid()</code>를 판별하고 있다. </span></p>
 <p><span style="font-size: 11pt;">하나의 파이썬 파일로 되어 있어서 보기엔 그리 어렵지 않고, 쓰기에도 적당한것 같다. pypi 에 가서 opengraph 를 쳐보면 실제로 가장 많은 weight를 가지고 있다.(약간 이름빨도 있는듯, 선점효과랄까) 웹페이지의 요약정보를 파싱하실 일이 있으면 사용하기 좋은 라이브러리다. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'ExtendedOpenGraph'">#'ExtendedOpenGraph'</a>&nbsp;
+            #ExtendedOpenGraph&nbsp;
         
-            <a href="/tag/'opengraph'">#'opengraph'</a>&nbsp;
+            #opengraph&nbsp;
         
-            <a href="/tag/'pypi'">#'pypi'</a>&nbsp;
+            #pypi&nbsp;
         
-            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+            #Python&nbsp;
         
-            <a href="/tag/'오픈그래프'">#'오픈그래프'</a>&nbsp;
+            #오픈그래프&nbsp;
         
-            <a href="/tag/'파이썬']">#'파이썬']</a>&nbsp;
+            #파이썬&nbsp;
         
     </div> 
     <footer>

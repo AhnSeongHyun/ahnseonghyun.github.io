@@ -2,7 +2,7 @@
 title: '(iOS) Register gesture'
 author: 'ash84'
 pub_date: '2015-09-24'
-description: ''
+description: '요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자.'
 featured_image: ''
 tags: ['dev', 'gesture', 'IOS', 'objective c gesture recognizer', 'Swipe', 'tap', 'UIGesture', 'uilabel tap', 'uilabel touchupinside', '제스처']
 ---

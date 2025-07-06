@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="이슈관리 시스템에 대한 고찰"/>
+    <meta property="og:description" content="벤처회사에서 일하다가, 솔루션을 파는 현재의 회사로 이직한지도 1년. 가장 신기했던 건 복지포인트도, 산행도 아닌 이슈관리시스템(Issue Tracking System)이었다. 올해 스터디그룹에서 보았던 코드 크래프트(Code Craft)라는 책에서도 이슈관리 시스템은 버그를 추적하고 좀 더 나은 다음 버전의 소프트웨어를 만드는 데 중요한 역할을 한다고 나와 있다. 참고로, 필자가 사용하는 이슈관리 시스템은 Atlassian 사의 JIRA를 사용하고 있다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2025/02/01/-ec-9d-b4-ec-8a-88-ea-b4-80-eb-a6-ac--ec-8b-9c-ec-8a-a4-ed-85-9c-ec-97-90--eb-8c-80-ed-95-9c--ea-b3-a0-ec-b0-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>이슈관리 시스템에 대한 고찰</title>
-    <meta name="description" content="" />
+    <meta name="description" content="벤처회사에서 일하다가, 솔루션을 파는 현재의 회사로 이직한지도 1년. 가장 신기했던 건 복지포인트도, 산행도 아닌 이슈관리시스템(Issue Tracking System)이었다. 올해 스터디그룹에서 보았던 코드 크래프트(Code Craft)라는 책에서도 이슈관리 시스템은 버그를 추적하고 좀 더 나은 다음 버전의 소프트웨어를 만드는 데 중요한 역할을 한다고 나와 있다. 참고로, 필자가 사용하는 이슈관리 시스템은 Atlassian 사의 JIRA를 사용하고 있다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">이슈관리 시스템에 대한 고찰</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2025-02-01</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2025-02-01</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>벤처회사에서 일하다가, 솔루션을 파는 현재의 회사로 이직한지도 1년. 가장 신기했던 건 복지포인트도, 산행도 아닌 이슈관리시스템(Issue Tracking System)이었다. 올해 스터디그룹에서 보았던 코드 크래프트(Code Craft)라는 책에서도 이슈관리 시스템은 버그를 추적하고 좀 더 나은 다음 버전의 소프트웨어를 만드는 데 중요한 역할을 한다고 나와 있다. 참고로, 필자가 사용하는 이슈관리 시스템은 Atlassian 사의 JIRA를 사용하고 있다.</p>
 <p>약 1년간 JIRA를 이용하면서, 그리고 그 안에서 보고자(Reporter)가 아닌 담당자(Assigner)로 주로 활동하면서 느꼈던 바를 두서없이 적어 내려가려고 한다.</p>
@@ -87,19 +89,17 @@
 <p>보고자(Reporter) 분들도 의견이 많겠지만 필자가 주로 담당자(Assigner)라서 담당자에 편향된 의견을 쓴 것에 대해서는 어쩔 수 없다. (가재는 게 편, 나는 아이유 편..) 여러 가지 논쟁이 있을 수 있겠지만 개인적인 바람은 좀 더 ‘인간적인’ 이슈관리 시스템이 되었으면 한다.</p>
 <p>아침에 출근해서 퇴근할 때까지 회사의 JIRA 화면만 F5 키를 누르면서 보고 있는 나를 돌아보면, 이슈관리 시스템은 이슈 처리를 위한 공장자동화 같은 느낌이 들고, 나는 컨베이어 벨트 앞에서 이슈를 기다리고 있는 노동자처럼 느껴지기까지 한다. 다른 회사에서는 어떻게 이슈관리 시스템을 활용하고 프로세스가 어떻게 흘러가는지도 참고해 보는 것도 좋을 것 같다.</p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'JIRA'">#'JIRA'</a>&nbsp;
+            #JIRA&nbsp;
         
-            <a href="/tag/'이슈'">#'이슈'</a>&nbsp;
+            #이슈&nbsp;
         
-            <a href="/tag/'이슈관리시스템'">#'이슈관리시스템'</a>&nbsp;
+            #이슈관리시스템&nbsp;
         
-            <a href="/tag/'이슈처리']">#'이슈처리']</a>&nbsp;
+            #이슈처리&nbsp;
         
     </div> 
     <footer>

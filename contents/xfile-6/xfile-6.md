@@ -2,7 +2,7 @@
 title: '....'
 author: 'ash84'
 pub_date: '2011-12-18'
-description: ''
+description: '진짜 무서운건.. 내가 뭔가'
 featured_image: ''
 tags: ['']
 ---

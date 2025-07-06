@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="maven, UTF-8 인코딩 소스일경우, 경고 문구 해결법"/>
+    <meta property="og:description" content="maven빌드를 하고 나면 이상하게 아래와 같은 문구가 나온다. 말인즉, UTF-8 인코딩으로 작성되어 있어서 특정 플랫폼에서 종속적(dependent)라는 애기인데, `"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/maven-utf-8--ec-9d-b8-ec-bd-94-eb-94-a9--ec-86-8c-ec-8a-a4-ec-9d-bc-ea-b2-bd-ec-9a-b0--ea-b2-bd-ea-b3-a0--eb-ac-b8-ea-b5-ac--ed-95-b4-ea-b2-b0-eb-b2-9"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>maven, UTF-8 인코딩 소스일경우, 경고 문구 해결법</title>
-    <meta name="description" content="" />
+    <meta name="description" content="maven빌드를 하고 나면 이상하게 아래와 같은 문구가 나온다. 말인즉, UTF-8 인코딩으로 작성되어 있어서 특정 플랫폼에서 종속적(dependent)라는 애기인데, `" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">maven, UTF-8 인코딩 소스일경우, 경고 문구 해결법</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">maven빌드를 하고 나면 이상하게 아래와 같은 문구가 나온다. 말인즉, UTF-8 인코딩으로 작성되어 있어서 특정 플랫폼에서 종속적(dependent)라는 애기인데, </span></div>
 <div style="text-align: justify; line-height: 2;"></div>
@@ -77,23 +79,21 @@
 <p><span style="font-size: 11pt;">아래와 같이 빌드에 대한 encoding을 UTF-8로 하겠다고 지정하면 된다. </span></p>
 <script src="https://gist.github.com/4393471.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'File encoding has not been set'">#'File encoding has not been set'</a>&nbsp;
+            #File encoding has not been set&nbsp;
         
-            <a href="/tag/'i.e. build is platform dependent!'">#'i.e. build is platform dependent!'</a>&nbsp;
+            #i.e. build is platform dependent!&nbsp;
         
-            <a href="/tag/'maven'">#'maven'</a>&nbsp;
+            #maven&nbsp;
         
-            <a href="/tag/'using platform encoding UTF-8'">#'using platform encoding UTF-8'</a>&nbsp;
+            #using platform encoding UTF-8&nbsp;
         
-            <a href="/tag/'UTF-8 인코딩'">#'UTF-8 인코딩'</a>&nbsp;
+            #UTF-8 인코딩&nbsp;
         
-            <a href="/tag/'메이븐']">#'메이븐']</a>&nbsp;
+            #메이븐&nbsp;
         
     </div> 
     <footer>

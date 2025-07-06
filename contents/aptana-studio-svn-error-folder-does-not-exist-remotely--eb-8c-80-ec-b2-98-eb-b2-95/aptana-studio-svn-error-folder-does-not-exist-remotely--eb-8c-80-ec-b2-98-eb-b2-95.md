@@ -2,7 +2,7 @@
 title: 'Aptana Studio SVN error folder '' does not exist remotely 대처법'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '몇개의 서버를 사용하고 있고 각각의 서버에 SVN이 설치되어 있는데 Aptana Studio 에서 SVN 플러그인을 다운받아서 설치해서 잘 쓰고 있었다. 그런데 새로운 서버의 SVN 에 연결하려고 하니 연결은 되는데 소스 디렉토리를 클릭하니까 아래와 같은 에러가 발생하는 것을 확인 하였다.'
 featured_image: ''
 tags: ['Aptana Studio', 'dev', 'SVN', 'SVN error folder '' does not exist remotely', '이클립스']
 ---

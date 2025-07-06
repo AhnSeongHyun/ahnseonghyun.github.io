@@ -2,7 +2,8 @@
 title: '바야흐로, 원 컨텐츠 멀티 어플 시대(One Contents, Multi-App), 미친듯이 기획하라!!'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '﻿
+바야흐로 다양한 플'
 featured_image: ''
 tags: ['An Seong Hyun', 'dev', 'Developer', 'ONE SOURCE MULTI APP', 'ONE SOURCE MULTI APPLICATION', '개발자', '안성현', '어플', '원컨텐츠 멀티 앱', '컨텐츠', '컨텐츠 기획', '컨텐츠비스니스', '플랫폼']
 ---

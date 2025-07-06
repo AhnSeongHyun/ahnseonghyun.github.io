@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[JAVA] correctDirectoryPath(), 디렉토리 경로 한번더 검사하기."/>
+    <meta property="og:description" content="간혹 디렉토리 안에 여러가지 파일에 대해서 접근해야 할때, 디렉토리 경로를 받을때가 있다. 그런데 이 경로를 가지고 뭔가 작업을 할때 머리속에 늘 남는것 중 하나가 바로 사용자의 입력 행태이다. 즉, 사용자는 디렉토리 경로를 다음과 같이 입력할수 있다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/java-correctdirectorypath--eb-94-94-eb-a0-89-ed-86-a0-eb-a6-ac--ea-b2-bd-eb-a1-9c--ed-95-9c-eb-b2-88-eb-8d-94--ea-b2-80-ec-82-ac-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[JAVA] correctDirectoryPath(), 디렉토리 경로 한번더 검사하기.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="간혹 디렉토리 안에 여러가지 파일에 대해서 접근해야 할때, 디렉토리 경로를 받을때가 있다. 그런데 이 경로를 가지고 뭔가 작업을 할때 머리속에 늘 남는것 중 하나가 바로 사용자의 입력 행태이다. 즉, 사용자는 디렉토리 경로를 다음과 같이 입력할수 있다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[JAVA] correctDirectoryPath(), 디렉토리 경로 한번더 검사하기.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt; ">간혹 디렉토리 안에 여러가지 파일에 대해서 접근해야 할때, 디렉토리 경로를 받을때가 있다. 그런데 이 경로를 가지고 뭔가 작업을 할때 머리속에 늘 남는것 중 하나가 바로 사용자의 입력 행태이다. 즉, 사용자는 디렉토리 경로를 다음과 같이 입력할수 있다. </span></p>
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; "><span style="font-size: 11pt; ">./dumpfiles/</span>
@@ -82,19 +84,17 @@
 </span></p>
 <p><span style="font-size: 11pt; ">아쉽게도 자바에서는 File 클래스가 디렉토리와 파일 모두를 관장한다. 뭔가 디렉토리만을 위한 클래스를 하나 만드는 것도 괜찮은 방법인듯. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'File'">#'File'</a>&nbsp;
+            #File&nbsp;
         
-            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+            #Java&nbsp;
         
-            <a href="/tag/'디렉토리 경로 검사'">#'디렉토리 경로 검사'</a>&nbsp;
+            #디렉토리 경로 검사&nbsp;
         
-            <a href="/tag/'자바 디렉토리 추출']">#'자바 디렉토리 추출']</a>&nbsp;
+            #자바 디렉토리 추출&nbsp;
         
     </div> 
     <footer>

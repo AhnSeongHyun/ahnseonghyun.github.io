@@ -2,7 +2,7 @@
 title: 'python response data for flask'
 author: 'ash84'
 pub_date: '2017-04-03'
-description: ''
+description: 'flask 로 작업하는 경우가 두가지인데, view 를 만들거나 아니면 json 형태로 api 결과를 리턴하는 경우를 만들거나. 그런데 첫번쨰는 머 `render_template` 사용하는 거고, 두번째 api 결과의 경우 보통 공통적인 api 결과 형식/포맷을 만들어서 반환하기 마련이다. 여러가지 방식이 있겠지만, 선호하는 방식은 meta 와 data 로 나누는 것인데 meta 에는 code 가 들어가는데 http status code 혹은 확장할 경우 확장코드가 들어가고 message 는 보통 에러의 경우 상세 에러메시지가 들어'
 featured_image: ''
 tags: ['dev', 'FLASK', 'Python']
 ---

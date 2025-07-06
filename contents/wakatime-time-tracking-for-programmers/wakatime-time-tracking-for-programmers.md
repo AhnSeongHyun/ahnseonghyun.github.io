@@ -2,7 +2,7 @@
 title: 'wakatime, Time tracking for programmers'
 author: 'ash84'
 pub_date: '2016-01-31'
-description: ''
+description: '트위터에서 다른 개발자분이 [wakatime](https://wakatime.com) 을 적용해서 얼마나 코딩을 했는지에 대해서 측정하고 있다는 애기를 들어서 [wakatime](https://wakatime.com)을 가입하고 적용을 해봤다. 일단 가입을 하고 나면 내가 사용하는 개발자툴, IDE에 해당 플러그인이나 세팅을 해야한다. 주로 내가 사용하는 툴들이 대부분 있었다. 적용한 툴들은 **Pycharm**, **Notepad++** 이었고 두 개의 툴에 모두 세팅을 했다. Pycharm 으로 파이썬 웹 개발을 주로 개발을 하'
 featured_image: 'https://farm2.staticflickr.com/1441/24363188219_ae5cef0dcb_o.png'
 tags: ['dev', 'wakatime', 'programmer']
 ---

@@ -2,7 +2,14 @@
 title: '[삼청동] 일본 라면집??'
 author: 'ash84'
 pub_date: '2009-09-06'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile4.uf.1504BE0B4AA1C9AE3708BC.JPG)  
+ 삼청동 골목에 있는 일본 라면집. 솔직히 이름은 잘 모르겠다능. 그래두 한국인 2분과 일본인 한분이 같이 운영하시는데
+
+영선이와 데이트중 거의 마지막 시간에 갔다.
+
+
+  
+![](http://ash84.net/wp-content/uploads/1/cfile23.uf.1904BE0B4AA1C9B33808C'
 featured_image: ''
 tags: ['덮밥', '라면', '삼청동', '짬뽕']
 ---

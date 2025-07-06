@@ -2,7 +2,7 @@
 title: '(iOS) crashlytics 을 이용한 crash 관리 및 github 연동'
 author: 'ash84'
 pub_date: '2017-03-28'
-description: ''
+description: 'vingle 에 갔을 때, 앱 개발 관련 소개를 들으면서 crashlytics 라는 서비스가 있다고 해서 메모해 두었는데, 실제 업무에 적용해 보았다.([crashlytics 는 트위터에 인수되었다고 한다.](http://besuccess.com/2013/01/28496/))'
 featured_image: ''
 tags: ['Crashlytics', 'Crashlytics logger', 'dev', 'github', 'IOS']
 ---

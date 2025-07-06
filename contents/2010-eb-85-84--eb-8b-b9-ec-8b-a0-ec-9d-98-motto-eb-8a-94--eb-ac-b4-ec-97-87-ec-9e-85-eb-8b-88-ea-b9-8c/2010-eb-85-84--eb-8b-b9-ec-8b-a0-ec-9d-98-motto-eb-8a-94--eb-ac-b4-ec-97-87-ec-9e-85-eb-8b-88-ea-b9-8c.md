@@ -2,7 +2,8 @@
 title: '2010년 당신의 Motto는 무엇입니까?'
 author: 'ash84'
 pub_date: '2009-11-25'
-description: ''
+description: '**
+****Motto?**'
 featured_image: ''
 tags: ['2010 모토', '2010년', 'An Seong Hyun', 'Keep going', 'Motto', '결심', '그래도 계속 가라', '모토', '안성현', '좌우명']
 ---

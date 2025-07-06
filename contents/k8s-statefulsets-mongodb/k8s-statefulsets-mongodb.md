@@ -2,7 +2,14 @@
 title: 'Running a MongoDB Database in Kubernetes with StatefulSets'
 author: 'ash84'
 pub_date: '2019-01-26'
-description: ''
+description: '본 포스팅은 Qwiklabs 의 [Kubernetes in the Google Cloud](https://www.qwiklabs.com/quests/29)
+를 기반으로 하고 있습니다. 
+
+**이번 시간에 할 것들 :** 
+
+- How to d Kubernetes cluster, a headless service, and a StatefulSet.
+- How to connect a Kubernetes cluster to a MongoDB replica set.
+- How to scale MongoDB replica set instan'
 featured_image: ''
 tags: ['k8s', 'statefulsets', 'mongodb']
 ---

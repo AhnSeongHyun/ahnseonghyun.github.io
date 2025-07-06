@@ -2,7 +2,9 @@
 title: '(vert.x) 설치하기'
 author: 'ash84'
 pub_date: '2015-09-24'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile6.uf.2670863A5190979F07179B.PNG)
+
+vert.x 홈페이지 : [http://vertx'
 featured_image: ''
 tags: ['vert.x', 'vert.x 설치', 'vertx', 'vertx install']
 ---

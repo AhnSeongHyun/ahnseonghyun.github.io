@@ -2,7 +2,7 @@
 title: '차분하게 프로그래밍 하라.'
 author: 'ash84'
 pub_date: '2010-01-09'
-description: ''
+description: '대학원에 있을때나, 혹은 회사를 다니면서 느낀것 중 하나는 프로그래머가 아닌 사람들은 결과에'
 featured_image: ''
 tags: ['An Seong Hyun', 'Programming', '안성현', '알고리즘', '어떻게 프로그래밍하는가?', '차분하게 프로그래밍 하라']
 ---

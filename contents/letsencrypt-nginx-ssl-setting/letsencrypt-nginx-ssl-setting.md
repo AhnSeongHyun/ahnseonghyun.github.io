@@ -2,7 +2,9 @@
 title: 'Letsencrypt & nginx ssl setting'
 author: 'ash84'
 pub_date: '2016-08-06'
-description: ''
+description: '[Letsencrypt](https://letsencrypt.org/) 를 적용해 보기로 하고 이 블로그는 Apache 로 운영되고 있어서 [certbot-auto](https://certbot.eff.org/) 을 이용해서 ```--apache``` 옵션을 주고 했는데 뭔가 이상하게 잘 안되었다. Apache 의 설정 문제인지 모르겠지만, 회사에서 가서 후임에게 물어보니 Nginx 는 잘 되었다고 해서 일단 nginx 로 바꾸고 ```certonly``` 옵션을 주고 인증서만 만들었다. 
+
+그리고 아래와 같이 ```/etc/ngi'
 featured_image: 'https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg'
 tags: ['nginx', 'letsencrypt', 'SSL', 'http', 'https']
 ---

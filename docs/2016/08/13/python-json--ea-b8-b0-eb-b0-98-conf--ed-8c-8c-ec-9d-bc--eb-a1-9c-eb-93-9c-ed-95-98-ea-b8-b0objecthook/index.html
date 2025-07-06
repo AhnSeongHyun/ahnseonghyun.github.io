@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="python json 기반 conf 파일 로드하기(object_hook)"/>
+    <meta property="og:description" content="conf 를 json 파일로 쓰는 경우가 있는데 주로 개인 프로젝트 할때 많이 쓰는 편인데 결국 conf 라는것을 환경설정 파일이기 때문에 파일로 가져와서 읽어야 하는 경우가 많다. 이 경우 json 을 바로 dict 으로 loads 해서 사용하게 되면 conf[“port”] 이런식으로 접근해야 하는데 object_hook 를 이용하면 객체의 형태로 접근할수가 있다. 좀더 코드가 깔끔해 진다랄까."/>
+    <meta property="og:url" content="https://ash84.io/docs/2016/08/13/python-json--ea-b8-b0-eb-b0-98-conf--ed-8c-8c-ec-9d-bc--eb-a1-9c-eb-93-9c-ed-95-98-ea-b8-b0objecthook"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>python json 기반 conf 파일 로드하기(object_hook)</title>
-    <meta name="description" content="" />
+    <meta name="description" content="conf 를 json 파일로 쓰는 경우가 있는데 주로 개인 프로젝트 할때 많이 쓰는 편인데 결국 conf 라는것을 환경설정 파일이기 때문에 파일로 가져와서 읽어야 하는 경우가 많다. 이 경우 json 을 바로 dict 으로 loads 해서 사용하게 되면 conf[“port”] 이런식으로 접근해야 하는데 object_hook 를 이용하면 객체의 형태로 접근할수가 있다. 좀더 코드가 깔끔해 진다랄까." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">python json 기반 conf 파일 로드하기(object_hook)</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2016-08-13</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2016-08-13</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>conf 를 json 파일로 쓰는 경우가 있는데 주로 개인 프로젝트 할때 많이 쓰는 편인데 결국 conf 라는것을 환경설정 파일이기 때문에 파일로 가져와서 읽어야 하는 경우가 많다. 이 경우 json 을 바로 dict 으로 loads 해서 사용하게 되면 conf[“port”] 이런식으로 접근해야 하는데 object_hook 를 이용하면 객체의 형태로 접근할수가 있다. 좀더 코드가 깔끔해 진다랄까. </p>
 <script src="https://gist.github.com/AhnSeongHyun/ba728b3f802ad3a9dfc4.js"></script>
@@ -80,21 +82,19 @@
 <p><a href="http://ash84.tistory.com/902">2013/01/11 – [Programming/Java] – [Java] 간단 gson wrapping 하기</a></p>
 <p><a href="http://ash84.tistory.com/775">2012/02/18 – [Programming/Java] – [JAVA] Gson 라이브러리로 JSon 이용하기</a></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'JSON'">#'JSON'</a>&nbsp;
+            #JSON&nbsp;
         
-            <a href="/tag/'loads'">#'loads'</a>&nbsp;
+            #loads&nbsp;
         
-            <a href="/tag/'object_hook'">#'object_hook'</a>&nbsp;
+            #object_hook&nbsp;
         
-            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+            #Python&nbsp;
         
-            <a href="/tag/'파이썬']">#'파이썬']</a>&nbsp;
+            #파이썬&nbsp;
         
     </div> 
     <footer>

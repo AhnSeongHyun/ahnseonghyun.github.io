@@ -2,7 +2,7 @@
 title: '(flask) jinja2 {% include %} 활용'
 author: 'ash84'
 pub_date: '2017-03-24'
-description: ''
+description: '대단한건 아니고, flask 는 기본적으로 jinja2 를 템플릿 언어로 사용하는데 사용하다 보면 하나의 template에서 공통적으로 사용되어 지는 부분이 있다. 예를 들면, 같은 css 나, 자바스크립트를 가져오는 header의 부분이나 상단의 navigation 부분, 하단의 footer 부분이 그러한데 일일히 모든 템플릿에 넣어 주기는 귀찮다. 그래서 jinja2 에서는{%  include %} 를 통해서 하나의 html 에서 다른 html 을 가져올수 있도록 해준다.'
 featured_image: ''
 tags: ['dev', 'FLASK', 'html include', 'ignore missing', 'include', 'jinja2', 'jinja2 template', 'Python']
 ---

@@ -2,7 +2,7 @@
 title: '공감세미나(세션4) 박재성 - 자바 웹 개발자의 학습 로드맵'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '꼭 자바 개발자가 아니더라도 한번쯤 들어 볼만 하다. 개발자란 무술가와 같기 때문에 (절대 과학자는 아님) 선배 개발자의 경험은 시행착오와 기로에'
 featured_image: ''
 tags: ['dev']
 ---

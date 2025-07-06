@@ -2,7 +2,7 @@
 title: '25연대 436기 전문연구요원 기초군사훈련 후기'
 author: 'ash84'
 pub_date: '2010-10-13'
-description: ''
+description: '9'
 featured_image: ''
 tags: ['']
 ---

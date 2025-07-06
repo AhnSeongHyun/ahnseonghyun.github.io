@@ -2,7 +2,17 @@
 title: '(flask) JSON 데이터 받기 및 예외처리'
 author: 'ash84'
 pub_date: '2017-09-29'
-description: ''
+description: 'flask 에서 json 데이터를 받아서 처리할 때 reqeust.get_json() 혹은 request.json 을 이용할 수 있는데, mime type을 application/json 타입으로 보내는데, {} 없이 빈 JSON 문자열 조차도 안 보내는 경우가 있을수가 있다. 
+
+
+```python
+from flask import Flask
+from flask import request 
+app = Flask(__name__)
+
+@app.route("/test", methods=['POST'])
+def test():
+    pri'
 featured_image: ''
 tags: ['dev', 'FLASK', 'Python', 'get_json()', 'on_json_loading_failed']
 ---

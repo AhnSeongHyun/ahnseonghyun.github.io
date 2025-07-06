@@ -2,7 +2,11 @@
 title: '한국 마이크로소프트 20주년.'
 author: 'ash84'
 pub_date: '2009-01-21'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/49767c5c01fbdDX.jpg)
+
+한국 마이크로소프트가 벌써 20 주년 이라는 사실에 놀란다. 많은 사람들이 마이크로소프트의 경영이나 소프트웨어 정책에 대해서 비판을 하지만, 난 그래도 마이크로소프트가 좋다. 고객을 위하는 것 보다, 개발자를 위하는 부분이 가장 마음에 든다.
+
+한국 마이크로소프트 20 주년  : [http://www.microsoft.com/korea/20th/index.htm](http://www.microsoft.com/korea'
 featured_image: ''
 tags: ['MS', 'MS 자격증', '한국 마이크로소프트', '한국 마이크로소프트 20 주년']
 ---

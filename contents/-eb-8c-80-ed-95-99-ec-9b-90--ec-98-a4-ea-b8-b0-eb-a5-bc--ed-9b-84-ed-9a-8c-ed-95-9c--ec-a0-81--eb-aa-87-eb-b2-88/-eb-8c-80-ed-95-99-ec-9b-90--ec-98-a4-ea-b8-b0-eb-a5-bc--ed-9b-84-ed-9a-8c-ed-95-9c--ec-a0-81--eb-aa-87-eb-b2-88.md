@@ -2,7 +2,11 @@
 title: '대학원 오기를 후회한 적 몇번.'
 author: 'ash84'
 pub_date: '2008-10-15'
-description: ''
+description: '그렇게 바라고 바라던, 대학원 이라는 곳을 돈과 시간을 들여 왔지만, 참 많은 후회를 하게 되는것 같다. 
+
+
+  
+ 처음과 다른 그 마음은'
 featured_image: ''
 tags: ['대학원', '후회']
 ---

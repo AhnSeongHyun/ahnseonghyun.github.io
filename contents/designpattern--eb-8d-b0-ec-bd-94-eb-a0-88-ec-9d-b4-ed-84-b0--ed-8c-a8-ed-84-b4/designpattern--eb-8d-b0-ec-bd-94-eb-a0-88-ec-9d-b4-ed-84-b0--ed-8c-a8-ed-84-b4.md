@@ -2,7 +2,7 @@
 title: '[DesignPattern] 데코레이터 패턴'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**[디자인 패턴 데코레이터 패턴](http://www.slideshare.net/sh84ahn/ss-12262824 "디자인 패턴 데코레이터 패턴")**'
 featured_image: ''
 tags: ['dev']
 ---

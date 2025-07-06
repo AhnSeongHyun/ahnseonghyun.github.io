@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="iOS7 beta4, 블루투스 관련 문제"/>
+    <meta property="og:description" content="최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>iOS7 beta4, 블루투스 관련 문제</title>
-    <meta name="description" content="" />
+    <meta name="description" content="최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">iOS7 beta4, 블루투스 관련 문제</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 <code>CBCentralManager</code> 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 <code>CBPeripheral</code> 에 writeValue 로 어떤 값을 보내는데 그 다음에 unknown 에러가 발생하는 것이다. </span></p>
 <p><span style="font-size: 11pt;">이 부분에 대해서 가장 큰 문제는 현재 iOS6 에서는 발생이 안된다는 점이고, pre-release 도큐먼트를 확인해 보면 몇가지 core bluetooth 부분에 추가되는 클래스나 함수 그리고  deprecated 되는 변수화 함수가 있는것 같은데, 그 부분과 내부적으로 영향을 미치는 지는 알수가 없으니 답답하다. </span></p>
@@ -76,21 +78,19 @@
 <p><span style="font-size: 11pt;">beta4 가 나와서 gm 버전이 곧 나올것 처럼 사람들이 애기하곤 하는데.. 글쎼다. 블루투스 쪽도 약간의 문제가 있는것 같고 iOS7 beta4 를 설치해서 사용해 보면 iOS6 보다 이상하게 터치후 액션이 느린것을 확연하게 느낄수 있다. 또한 status 바 부분 역시 맥부기의 다른 프로그래머들도 아직은 수정할 단계가 아니라고 한다. </span></p>
 <p><span style="font-size: 11pt;">좀더 지켜보자. iOS7.</span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['CBCentralManager'">#['CBCentralManager'</a>&nbsp;
+            #CBCentralManager&nbsp;
         
-            <a href="/tag/'CoreBluetooth'">#'CoreBluetooth'</a>&nbsp;
+            #CoreBluetooth&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'ios6'">#'ios6'</a>&nbsp;
+            #ios6&nbsp;
         
-            <a href="/tag/'블루투스'">#'블루투스'</a>&nbsp;
+            #블루투스&nbsp;
         
-            <a href="/tag/'코어 블루투스']">#'코어 블루투스']</a>&nbsp;
+            #코어 블루투스&nbsp;
         
     </div> 
     <footer>

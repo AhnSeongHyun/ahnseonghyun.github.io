@@ -2,7 +2,16 @@
 title: 'hyperdrive 사용기'
 author: 'ash84'
 pub_date: '2017-05-05'
-description: ''
+description: '맥북프로를 지른후 가장 큰 고민은 기존에 이용하던 주변기기를 어떻게 연결할 것인가 하는 문제였다. 집에서 사용하는 환경은 아래와 같았다. 
+
+- **HDMI 로 연결된 델 30인치 모니터** 
+- **USB 로 연결된 키보드** 
+- **USB 로 연결된 아이폰**
+- 이어폰 단자로 연결된 스피커 
+
+이어폰 단자는 기존에도 있었던 부분이라서 바로 연결해서 쓸 수 있었는데 나머지는 뭔가로 연결해야 하는 상황이었다. 애플에서 이미 맥북프로 신형을 구매할때 구매유도를 하긴 했었던것 같은데 가격이 후덜덜이라 망설이게 되었다. 
+
+![usb'
 featured_image: 'https://cdn.shopify.com/s/files/1/0872/6416/files/plugging-HyperDrive.gif?5293742308768704031'
 tags: ['hyperdrive', 'MAC Book Pro', 'usb-c']
 ---

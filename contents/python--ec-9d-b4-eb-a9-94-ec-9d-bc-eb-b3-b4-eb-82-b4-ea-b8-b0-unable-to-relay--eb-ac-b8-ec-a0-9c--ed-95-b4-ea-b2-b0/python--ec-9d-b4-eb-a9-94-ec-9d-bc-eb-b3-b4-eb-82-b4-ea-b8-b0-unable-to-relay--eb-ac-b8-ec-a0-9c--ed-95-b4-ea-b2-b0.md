@@ -2,7 +2,9 @@
 title: '[python] 이메일보내기, unable to relay 문제 해결'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '파이썬에서 이메일 보내기에 대한 소스인데 아주 기본적인 코드다. SMTP 를 이용해서 지정된 다른 사용자에게 이메일을 보내는 소스코드인데 간단하게 사내에서 시스템에서 뭔가 발생이 되었을때 쉽게 서버관리자의 메일로 보낼수가 있다.(요즘은 메신저로 보내는게 일반적이어서)
+  
+그런데 위의 소스코드에서 사내 서버가 아니라 gmail, naver'
 featured_image: ''
 tags: ['dev', 'Email', 'Python', 'SSL', 'TSL', 'unable to relay']
 ---

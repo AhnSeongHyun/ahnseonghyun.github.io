@@ -2,7 +2,7 @@
 title: '# 1/12 new Twit.'
 author: 'ash84'
 pub_date: '2011-01-12'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile29.uf.1460A9534D2DB864032E49.png)'
 featured_image: ''
 tags: ['Ahn Seong Hyun', 'MomoTwit', '모모트윗', '아이폰앱']
 ---

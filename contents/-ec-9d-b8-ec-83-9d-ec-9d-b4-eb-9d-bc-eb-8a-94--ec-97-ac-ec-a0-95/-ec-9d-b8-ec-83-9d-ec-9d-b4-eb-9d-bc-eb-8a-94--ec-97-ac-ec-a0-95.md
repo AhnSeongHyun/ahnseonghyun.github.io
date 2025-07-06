@@ -2,7 +2,10 @@
 title: '#인생이라는 여정.'
 author: 'ash84'
 pub_date: '2013-08-01'
-description: ''
+description: '[![family travel](http://farm1.staticflickr.com/55/182763318_2f9603acbc_z.jpg)](http://www.flickr.com/photos/smif/182763318/ "family travel by smif, on Flickr")  
+
+간간히 글을 썼는데 너무 기술적인 글만 쓰는것 같아서. 
+퇴근엔 말 보다 행동'
 featured_image: ''
 tags: ['']
 ---

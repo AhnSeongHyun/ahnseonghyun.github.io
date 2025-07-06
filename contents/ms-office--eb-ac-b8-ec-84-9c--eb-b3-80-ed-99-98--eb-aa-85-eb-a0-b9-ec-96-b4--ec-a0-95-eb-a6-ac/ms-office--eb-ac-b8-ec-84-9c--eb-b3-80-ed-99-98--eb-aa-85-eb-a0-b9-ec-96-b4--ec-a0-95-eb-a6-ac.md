@@ -2,7 +2,7 @@
 title: 'MS Office 문서 변환 명령어 정리.'
 author: 'ash84'
 pub_date: '2012-08-06'
-description: ''
+description: '최근에 문서파일 내 텍스트 추출에 대한 [오픈소스(Apache.POI)](http://poi.apache.org/)를 패키징해서 테스트 하던 중에 비정상적인 MS 2003-2007 문서에 대한 내용추출이 안되는 문제가 있었다. 오픈소스 자체의 한계인지도 모르겠지만, 찾은 대안중에 하나가 바로 이러한 문서들을 상위버전의 문서로 변환해서 내용을 추출하는 것이다. 즉, ppt, doc, xls'
 featured_image: ''
 tags: ['Apache.poi', 'excelcnv.exe', 'ms document convertor', 'ppcnvcom.exe', 'wordconv.exe', '문서 변환', '워드 변환', '파워포인트 변환']
 ---

@@ -2,7 +2,7 @@
 title: 'SVN Commit 시, Could not use external editor to fetch log message'
 author: 'ash84'
 pub_date: '2011-10-18'
-description: ''
+description: 'svn commit 시에 간혹'
 featured_image: ''
 tags: ['Commit', 'export', 'SVN', 'SVN_EDITOR', 'unix', '유닉스', '커밋']
 ---

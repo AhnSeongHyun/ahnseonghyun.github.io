@@ -2,7 +2,7 @@
 title: '(iOS) NSMutableArray + Delegate'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 `NSMutableArray` 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의  `NSMutableArray` 를 감싸서(wrapping) 사용하는데 주로 singlet'
 featured_image: ''
 tags: ['delegate', 'dev', 'IOS', 'NSMutableArray', 'Objective-C', '요청 큐']
 ---

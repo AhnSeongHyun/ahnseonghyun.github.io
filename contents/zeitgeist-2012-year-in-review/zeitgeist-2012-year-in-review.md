@@ -2,7 +2,7 @@
 title: 'Zeitgeist 2012: Year In Review'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '2012년의 마지막 포스팅. 설명이 필요없는 2012년 리뷰라는 동영상으로 대신한다. 멋'
 featured_image: ''
 tags: ['dev']
 ---

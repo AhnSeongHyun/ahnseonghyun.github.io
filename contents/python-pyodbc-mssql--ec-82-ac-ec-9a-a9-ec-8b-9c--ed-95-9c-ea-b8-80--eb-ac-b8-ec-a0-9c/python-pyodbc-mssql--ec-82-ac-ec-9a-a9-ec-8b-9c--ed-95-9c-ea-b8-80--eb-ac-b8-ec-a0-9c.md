@@ -2,7 +2,8 @@
 title: 'pyodbc-MSSQL 사용시, 한글 문제'
 author: 'ash84'
 pub_date: '2016-08-15'
-description: ''
+description: '[이전에 pyodbc 를 사용하는 부분](http://lab.ash84.net/post/99634203014/pyodbc-procedure)에 대해서 설명했었는데 이번에는 한글 insert 시 깨지는 문제가 생긴다. 이 문제의 해결을 위해서 사실은 사용하는 파이썬쪽, 그리고 돌아가는 리눅스의 LANG, LOCALE 설정, 그리고 PYODBC 와 FreeTDS, UNIXODBC 등의 설정을 모두 UTF8로 설정했음에도 불구하고 발생하는 문제였다. 한 2일 정도 고생하다가, 모든 내용을 StackOverflower 에 올렸다. 
+[h'
 featured_image: ''
 tags: ['dev', 'MSSQL', 'pyodbc', 'utf8', '한글문제']
 ---

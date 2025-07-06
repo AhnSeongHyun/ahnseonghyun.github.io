@@ -2,7 +2,12 @@
 title: '라이브러리 개발자를 위한 NullHandler'
 author: 'ash84'
 pub_date: '2018-07-25'
-description: ''
+description: '로깅에서 `FileHanlder`, `StreamHandler` 등의 핸들러는 로그를 어디에 남길것인지를 지정하는 역할을 하고, `Formatter` 는 로그를 남기는 형식을 지정할 수 있다. 그리고 `Filter` 는 그 로그 안에서 필터링 기능을 수행할 수 있다. 
+
+### 그런데 `NullHandler` 는 몰까?
+
+
+설명에 따르면 **어떤 포맷이나 출력을 가지지 않는다고 하고 이것은 no-op handler 로 라이브러리 개발자에게 필수적**이라고 한다. 왜 라이브러 개발자에게 필수적일까? 그에 대한 답은 [Configur'
 featured_image: ''
 tags: ['Python', 'nullhandler', 'logging']
 ---

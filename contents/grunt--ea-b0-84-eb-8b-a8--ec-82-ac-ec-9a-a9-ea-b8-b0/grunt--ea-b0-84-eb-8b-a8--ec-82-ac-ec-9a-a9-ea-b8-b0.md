@@ -2,7 +2,25 @@
 title: 'grunt 간단 사용기'
 author: 'ash84'
 pub_date: '2016-08-13'
-description: ''
+description: '#### 개요
+
+- task 를 지정해서 커맨드라인을 통해서 동작하는 자바스크립트 빌드용 툴이다. 
+- 여러가지 플러그인을 통해서 css, js 등의 유효성 검증 및 압축, 난독화등을 할 수 있다.
+
+#### 설치
+
+- bower 와 마찬가지로 npm 을 기반으로 설치되기 때문에 일단 node.js 를 설치해서 npm을 설치 시킨다. 
+
+**grunt-cli 설치하기**
+
+```javascript 
+$ npm install -g grunt-cl
+```
+
+**grunt 설치**
+
+```javascript
+$ npm install -'
 featured_image: ''
 tags: ['bower', 'dev', 'grunt', 'grunt-contrib-concat', 'grunt-contrib-jshint', 'grunt-contrib-uglify', 'jshint', 'Node.js', 'npm']
 ---

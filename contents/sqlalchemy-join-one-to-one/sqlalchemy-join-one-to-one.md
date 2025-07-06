@@ -2,7 +2,14 @@
 title: 'SQLAlchemy Join #3 One to One'
 author: 'ash84'
 pub_date: '2018-09-04'
-description: ''
+description: '**[One To One](http://docs.sqlalchemy.org/en/latest/orm/basic_relationships.html#one-to-one)**
+
+일대일 관계에서는 양쪽 매퍼에서 스칼라 속성을 통한 양방향 관계가 필수적이다. 이것을 위해서 `uselist` flag 가 있는데 이것은  많은쪽("many” side of the relationship.)의 컬랙션 대신에 스칼라 속성의 위치를 가리킨다. 
+
+일대다 를 일대일로 바꾸면,
+
+```python
+    class Parent(Base):'
 featured_image: ''
 tags: ['dev', 'Python', 'sqlalchemy', 'join']
 ---

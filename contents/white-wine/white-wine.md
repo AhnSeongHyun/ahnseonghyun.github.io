@@ -2,7 +2,10 @@
 title: 'white wine.'
 author: 'ash84'
 pub_date: '2011-07-08'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile3.uf.2051E43A4E1751AD134C02.png)
+
+  
+ 개인적으로 화이트 와인을 좋아한다.'
 featured_image: ''
 tags: ['']
 ---

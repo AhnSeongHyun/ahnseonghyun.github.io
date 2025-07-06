@@ -2,7 +2,22 @@
 title: 'React Native App 시작하기'
 author: 'ash84'
 pub_date: '2017-11-12'
-description: ''
+description: '이 글은  [React Native Getting Started](https://facebook.github.io/react-native/docs/getting-started.html) 에 대한 삽질기입니다. 
+
+
+### **node.js & npm 설치**
+
+https://nodejs.org/en/download/
+
+
+### **설치 진행**
+
+```
+$ npm install -g create-react-native-app
+$ create-react-native-app toystory_app
+```
+
+npm5 에 문제가 있다고 아'
 featured_image: ''
 tags: ['dev', 'react', 'react native', 'watchman']
 ---

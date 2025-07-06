@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="swagger 와 redocly/redoc"/>
+    <meta property="og:description" content="swagger 를 도입해서 쓰고 있는데 확실히 테스트가 가능하다는 점, 그리고 명확하게 request/response 모델을 보여 준다는 점에서 프론트엔드/클라이언트 개발자와 소통하는데 도움이 되는 것 같다. 그렇지만 마이크로서비스 상에서  swagger 를 사용하는 부분에 있어서 몇가지 고민이 있다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2019/09/08/swagger-redoc"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>swagger 와 redocly/redoc</title>
-    <meta name="description" content="" />
+    <meta name="description" content="swagger 를 도입해서 쓰고 있는데 확실히 테스트가 가능하다는 점, 그리고 명확하게 request/response 모델을 보여 준다는 점에서 프론트엔드/클라이언트 개발자와 소통하는데 도움이 되는 것 같다. 그렇지만 마이크로서비스 상에서  swagger 를 사용하는 부분에 있어서 몇가지 고민이 있다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">swagger 와 redocly/redoc</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2019-09-08</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2019-09-08</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>swagger 를 도입해서 쓰고 있는데 확실히 테스트가 가능하다는 점, 그리고 명확하게 request/response 모델을 보여 준다는 점에서 프론트엔드/클라이언트 개발자와 소통하는데 도움이 되는 것 같다. 그렇지만 마이크로서비스 상에서  swagger 를 사용하는 부분에 있어서 몇가지 고민이 있다. </p>
 <p><strong>하나는 어떻게 swagger.yaml 파일을 작성할 것인가 하는 것</strong>인데, 손으로 작성하는 데는 한계가 있기 때문에 Java 에서는 바로 swagger 문법의 파일로 만들어 줄 수 있고(실제로 해 보진 않았다.), Python 에서는 이전에 소개했던 <a href="https://fastapi.tiangolo.com/">fastapi</a> 나 <a href="https://flask-restplus.readthedocs.io/en/stable/swagger.html">flask-restplus</a> 에서는 지원을 하고 있다<strong>.</strong> </p>
@@ -131,15 +133,13 @@
 - <a href="https://www.slideshare.net/YongseonLee1/pycon-korea-2019-rest-api-document-generation-164504789">파이썬 웹서버 REST API 문서 쉽고 빠르게 작성하기</a> <br />
 - https://github.com/DragorWW/awesome-swagger</p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['swagger'">#['swagger'</a>&nbsp;
+            #swagger&nbsp;
         
-            <a href="/tag/'redoc'">#'redoc'</a>&nbsp;
+            #redoc&nbsp;
         
-            <a href="/tag/'redocly']">#'redocly']</a>&nbsp;
+            #redocly&nbsp;
         
     </div> 
     <footer>

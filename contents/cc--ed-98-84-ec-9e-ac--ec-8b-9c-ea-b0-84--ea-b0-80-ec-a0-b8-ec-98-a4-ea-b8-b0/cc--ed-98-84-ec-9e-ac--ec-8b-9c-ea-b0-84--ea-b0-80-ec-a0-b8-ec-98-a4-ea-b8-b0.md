@@ -2,7 +2,7 @@
 title: '[C/C++] 현재 시간 가져오기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '현재 시간을 가져오는 소스코드. 물론 시간관련 헤더파일이 **#include **가 추가 되어 있어야 한다. 좀더 유용하게 쓰기 위해서 현'
 featured_image: ''
 tags: ['C/C++', 'c#', 'dev', 'Time', '현재시간 가져오기']
 ---

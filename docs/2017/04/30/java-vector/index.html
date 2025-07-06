@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[Java] Vector에 대해서."/>
+    <meta property="og:description" content="vector는  증가 가능한 객체의 배열형태( a growable array of objects)라고 자바문서에서 설명하고 있다. ArrayList와 다른 점은 capacity와 capacityIncrement 를 관리함으로써 저장용량 최적화를 시도한다는 점이다. capacity는 vector의 용량인데 개발자가 지정할 수 있다.  capacityIncrement 은 capacity가 증가하는 단위이며, 초기 생성시 capacity는 10으로 지정되어 있다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/04/30/java-vector"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[Java] Vector에 대해서.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="vector는  증가 가능한 객체의 배열형태( a growable array of objects)라고 자바문서에서 설명하고 있다. ArrayList와 다른 점은 capacity와 capacityIncrement 를 관리함으로써 저장용량 최적화를 시도한다는 점이다. capacity는 vector의 용량인데 개발자가 지정할 수 있다.  capacityIncrement 은 capacity가 증가하는 단위이며, 초기 생성시 capacity는 10으로 지정되어 있다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[Java] Vector에 대해서.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-04-30</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-04-30</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>vector는  증가 가능한 객체의 배열형태( a growable array of objects)라고 자바문서에서 설명하고 있다. ArrayList와 다른 점은 capacity와 capacityIncrement 를 관리함으로써 저장용량 최적화를 시도한다는 점이다. capacity는 vector의 용량인데 개발자가 지정할 수 있다.  capacityIncrement 은 capacity가 증가하는 단위이며, 초기 생성시 capacity는 10으로 지정되어 있다. </p>
 <p>capacity가 절대 vector 내 들어가있는 component의 수 보다 클수가 없는데, capacity보다 커질때 미리 capacity를 조정해 준다면 vector의 사이즈가 변경될때의 재할당(re-allocation)을 최소화 할수 있다고 한다. </p>
@@ -77,25 +79,23 @@
 <p>보시는것과 같이 1, 2, 4, 8, 16, 32 이런식으로 증가되는 것을 알 수 있다.  </p>
 <p>vector는 기본적으로 List 인터페이스를 구현하기 때문에 iterator 를 사용할 수 있는데, iterator는 <strong>fast-fail방식</strong>으로 동작한다고 한다. <strong><a href="http://lng1982.tistory.com/95">fast-fail 이란, 순차적 접근이 끝나기 전에 콜렉션 객체 자체에 변경(ex.remove()) 이 일어나는 경우, 순차적 접근이 실패하면서 ConcurrentModificationException 가 발생되는것을 말한다.</a></strong> 좀더 자세한 사항은 <a href="http://lng1982.tistory.com/95">링크</a>를 참고하시면 이해가 빠를것 같다.</p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'fast-fail 방식'">#'fast-fail 방식'</a>&nbsp;
+            #fast-fail 방식&nbsp;
         
-            <a href="/tag/'iterator'">#'iterator'</a>&nbsp;
+            #iterator&nbsp;
         
-            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+            #Java&nbsp;
         
-            <a href="/tag/'list'">#'list'</a>&nbsp;
+            #list&nbsp;
         
-            <a href="/tag/'vector'">#'vector'</a>&nbsp;
+            #vector&nbsp;
         
-            <a href="/tag/'vector 성능'">#'vector 성능'</a>&nbsp;
+            #vector 성능&nbsp;
         
-            <a href="/tag/'vector 최적화']">#'vector 최적화']</a>&nbsp;
+            #vector 최적화&nbsp;
         
     </div> 
     <footer>

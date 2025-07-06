@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[JAVA] @Override eqauls() 함수"/>
+    <meta property="og:description" content="**** **Effective Java** 에 나오는 내용중 **[항목8]** 번에 해당하는 내용인데 equals()  메소드의 오버라이드에 대한 내용이 정리되어 있다. 요약하자면, 기본형(primitive) 타입은 == 을 이용해서 검사하고, 클래스 형은 자바에서 제공하는 것이라면, equals() 메소드를 사용하면 된다. 그리고 기본형 중에서 double, float 형은**[Double.Compare"/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/03/24/java-override-equals-function"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[JAVA] @Override eqauls() 함수</title>
-    <meta name="description" content="" />
+    <meta name="description" content="**** **Effective Java** 에 나오는 내용중 **[항목8]** 번에 해당하는 내용인데 equals()  메소드의 오버라이드에 대한 내용이 정리되어 있다. 요약하자면, 기본형(primitive) 타입은 == 을 이용해서 검사하고, 클래스 형은 자바에서 제공하는 것이라면, equals() 메소드를 사용하면 된다. 그리고 기본형 중에서 double, float 형은**[Double.Compare" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,36 +63,31 @@
     
 <div class="content">
     <h1 class="blog-post-title">[JAVA] @Override eqauls() 함수</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-03-24</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-03-24</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt; "><strong><em>*</span><span style="font-size: 11pt; "> </em>*Effective Java</strong> 에 나오는 내용중 <strong>[항목8]</strong> 번에 해당하는 내용인데 equals()  메소드의 오버라이드에 대한 내용이 정리되어 있다. 요약하자면, 기본형(primitive) 타입은 == 을 이용해서 검사하고, 클래스 형은 자바에서 제공하는 것이라면, equals() 메소드를 사용하면 된다. 그리고 기본형 중에서 double, float 형은<strong><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Double.html#compare(double, double)">Double.Compare()</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Float.html#compare(float, float)"> Float.Compare()</a></strong> 함수를 쓰도록 권장한다. 파라미터로 들어오는 Object 형은 <strong>instanceof</strong> 를 통해서 반드시 클래스 타입을 검사하고, 변환해서 사용하라고 한다. 파라미터 타입인 Object 타입은 바꾸지 말고. 읽어보면 좋은 내용이다. equals() 함수를 override 해서 사용하시는 분이라면 필독필요.</span></p>
 <p><span style="font-size: 11pt; "> </span></p>
 <script src="https://gist.github.com/3978638.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Effective Java'">#'Effective Java'</a>&nbsp;
+            #Effective Java&nbsp;
         
-            <a href="/tag/'equals 함수 오버라이드'">#'equals 함수 오버라이드'</a>&nbsp;
+            #equals 함수 오버라이드&nbsp;
         
-            <a href="/tag/'equals() 재정의'">#'equals() 재정의'</a>&nbsp;
+            #equals() 재정의&nbsp;
         
-            <a href="/tag/'equals()함수'">#'equals()함수'</a>&nbsp;
+            #equals()함수&nbsp;
         
-            <a href="/tag/'Java']">#'Java']</a>&nbsp;
+            #Java&nbsp;
         
     </div> 
     <footer>

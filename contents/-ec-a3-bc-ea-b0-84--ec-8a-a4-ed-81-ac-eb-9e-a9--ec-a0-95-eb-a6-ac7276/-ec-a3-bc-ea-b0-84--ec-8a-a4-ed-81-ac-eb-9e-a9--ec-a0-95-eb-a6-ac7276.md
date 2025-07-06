@@ -2,7 +2,10 @@
 title: '주간 스크랩 정리(7/2~7/6)'
 author: 'ash84'
 pub_date: '2012-07-07'
-description: ''
+description: '**리눅스 실행시간 측정 명령어 time**
+
+time 실행명령어 
+이렇게 입력하면 실제 해당 프로그램에 대한 실행 시간을 커널 레벨과 유저 레벨로 확인 할 수 있습니다. 장점이라면 단연 코드안에 time_t 와 같은 시간'
 featured_image: ''
 tags: ['C/C++', 'DevOps', 'KTH', 'memset', 'sqlite3', 'SQLITE3 명령어', 'Time', '배열 초기화', '성능튜닝', '실행시간 측정']
 ---

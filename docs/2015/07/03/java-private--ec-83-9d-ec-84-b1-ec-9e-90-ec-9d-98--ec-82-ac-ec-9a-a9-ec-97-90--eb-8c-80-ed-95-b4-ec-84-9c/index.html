@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[JAVA] private 생성자의 사용에 대해서."/>
+    <meta property="og:description" content="필자는 데이터 클래스라는 것을 많이 만들어쓰는 편인다. List나 Hashtable 의 변수에 이름을 주는 것 보다 클래스와 멤버에 이름을 줌으로써 좀 더 의미를 명확하게 표현할 수 있기 때문에 자주 사용하는 편이다. 데이터 클래스들의 경우 사실상 클래스에서 행동이라고 하는게 set, get 과 같은 정도의 것 밖에 없는 경우가 많다. 다음의"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/java-private--ec-83-9d-ec-84-b1-ec-9e-90-ec-9d-98--ec-82-ac-ec-9a-a9-ec-97-90--eb-8c-80-ed-95-b4-ec-84-9c"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[JAVA] private 생성자의 사용에 대해서.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="필자는 데이터 클래스라는 것을 많이 만들어쓰는 편인다. List나 Hashtable 의 변수에 이름을 주는 것 보다 클래스와 멤버에 이름을 줌으로써 좀 더 의미를 명확하게 표현할 수 있기 때문에 자주 사용하는 편이다. 데이터 클래스들의 경우 사실상 클래스에서 행동이라고 하는게 set, get 과 같은 정도의 것 밖에 없는 경우가 많다. 다음의" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[JAVA] private 생성자의 사용에 대해서.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">필자는 데이터 클래스라는 것을 많이 만들어쓰는 편인다. </span><span style="font-size: 11pt;">List나 Hashtable 의 변수에 이름을 주는 것 보다 클래스와 멤버에 이름을 줌으로써 좀 더 의미를 명확하게 표현할 수 있기 때문에 자주 사용하는 편이다. </span><span style="font-size: 11pt;">데이터 클래스들의 경우 사실상 클래스에서 행동이라고 하는게 set, get 과 같은 정도의 것 밖에 없는 경우가 많다. 다음의 케이스를 보자. </span></p>
 <p><span style="font-size: 11pt;"></span></p>
@@ -87,19 +89,17 @@
 <p><span style="font-size: 11pt;">이럴경우, 가장 중요한 부분은 바로 기본 생성자에 대한 <strong>private 생성자 처리</strong>이다. private 생성자를 쓰지 않으면 아무 값도 들어가지 않은 생성자가 생겨나게 된다. 문제는 set 함수가 없기 때문에 값을 지정할 수가 없다. 때문에 private 생성자를 써서 컴파일 시점에서 개발자가 기본 생성자로 객체를 만드는 것을 막아야한다. </span></p>
 <p><span style="font-size: 11pt;">왜 이렇게 사용하는가에 대한 의문이 있을수 있겠지만, 사실 이것은 Hanja 클래스를 데이터 클래스로 쓰겠다는 용도와 생성시에만 값을 넣게 하겠다는 정책의 결과이다. 그렇지만 은근히 이렇게 데이터 클래스를 만들어 사용하는 경우가 많기 때문에 이런 경우 private 생성자를 써주길 바란다. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['AssertionError'">#['AssertionError'</a>&nbsp;
+            #AssertionError&nbsp;
         
-            <a href="/tag/'date class'">#'date class'</a>&nbsp;
+            #date class&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+            #Java&nbsp;
         
-            <a href="/tag/'private 생성자']">#'private 생성자']</a>&nbsp;
+            #private 생성자&nbsp;
         
     </div> 
     <footer>

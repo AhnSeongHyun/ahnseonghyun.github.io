@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[Java] Set 인터페이스, 간략 정리."/>
+    <meta property="og:description" content="Set 인터페이스에 대해서 알아보자. Collection 의 일부인데 중복되는 element를 포함하지 않는것이 가장 큰 특징이며, Java Doc 에서는 “수학적으로 말해서 집합을 의미한다” 라고 설명하고 있다. Set 인터페이스는 Collection 를 상속 받아서 만들어진 인터페이스이다. 때문에 대부분의 함수들이 Collection 에서 제공하는 함수들과 동일하다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2016/08/10/java-set--ec-9d-b8-ed-84-b0-ed-8e-98-ec-9d-b4-ec-8a-a4--ea-b0-84-eb-9e-b5--ec-a0-95-eb-a6-ac"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[Java] Set 인터페이스, 간략 정리.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Set 인터페이스에 대해서 알아보자. Collection 의 일부인데 중복되는 element를 포함하지 않는것이 가장 큰 특징이며, Java Doc 에서는 “수학적으로 말해서 집합을 의미한다” 라고 설명하고 있다. Set 인터페이스는 Collection 를 상속 받아서 만들어진 인터페이스이다. 때문에 대부분의 함수들이 Collection 에서 제공하는 함수들과 동일하다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[Java] Set 인터페이스, 간략 정리.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2016-08-10</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2016-08-10</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>Set 인터페이스에 대해서 알아보자. Collection 의 일부인데 중복되는 element를 포함하지 않는것이 가장 큰 특징이며, Java Doc 에서는 “수학적으로 말해서 집합을 의미한다” 라고 설명하고 있다. Set 인터페이스는 Collection 를 상속 받아서 만들어진 인터페이스이다. 때문에 대부분의 함수들이 Collection 에서 제공하는 함수들과 동일하다.</p>
 <p><strong>List 와 Map 그리고 Set의 차이점</strong></p>
@@ -77,21 +79,19 @@
 <p>중복이 안되는 것을 떠올리면 단연 Hashtable HashMap과 같은 Map 형태가 떠오를 수 있을 것이다. 그러나 다른 점이라면, <Key,Value> 형태를 Map 에서는 가진다는점이 가장 큰 차이일 것이다. 중복을 검사하는 대상 자체가 key, value 이기 때문에 <strong>key 를 기준으로 중복검사</strong> 를 하게 된다. <strong>이 애기는 value는 중복 되더라도 상관없다는 이야기이다.</strong></p>
 <p>간단하게나마 Set 인터페이스에 대해서 알아보았다. 사실은 잘 쓰게 되지 않는 인터페이스고 Set 인터페이스를 상속(extends) 또는 구현(implements) 한것을 몇번 써보지않았는데, 중복에 대한 부분을 이용할때는 괜찮을것 같다는 생각이 든다. 굳이 Map 쪽 클래스들을 사용하지 않더라도 말이다. </p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'HashSet'">#'HashSet'</a>&nbsp;
+            #HashSet&nbsp;
         
-            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+            #Java&nbsp;
         
-            <a href="/tag/'MAP'">#'MAP'</a>&nbsp;
+            #MAP&nbsp;
         
-            <a href="/tag/'Set 인터페이스'">#'Set 인터페이스'</a>&nbsp;
+            #Set 인터페이스&nbsp;
         
-            <a href="/tag/'중복 제거']">#'중복 제거']</a>&nbsp;
+            #중복 제거&nbsp;
         
     </div> 
     <footer>

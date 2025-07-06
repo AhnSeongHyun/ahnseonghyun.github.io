@@ -2,7 +2,9 @@
 title: 'python csv and encoding in csv file.'
 author: 'ash84'
 pub_date: '2015-09-03'
-description: ''
+description: '파이썬의 csv 모듈을 이용해서 MS Excel2010 에서 만든 csv 형식을 가져오는 코드이다. 별것 없는 코드를 올리는 이유는 단연 인코딩 때문인데 csv 모듈은 파이썬2.7 에서 다음과 같은 내용이 있다.
+
+> **Note This version of the csv module doesn’t support Unicode input. Also, there are curre'
 featured_image: ''
 tags: ['csv', 'encoding', 'Python', 'python2.7', '파이썬']
 ---

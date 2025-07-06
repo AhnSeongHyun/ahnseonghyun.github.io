@@ -2,7 +2,12 @@
 title: 'mac에 mysql 설치 관련 링크 정리, 이것만 알면돼!!'
 author: 'ash84'
 pub_date: '2012-10-30'
-description: ''
+description: 'mac(osx) 에서 mysql 설치하기 위해서 참고했던 링크들이다. 다른 분들도 도움이 되시길. 
+
+![](http://ash84.net/wp-content/uploads/1/cfile9.uf.2031E54F508F0E710EF62A.jpg)
+
+**1. 설치 및 기본 세팅**
+– [http://hoyanet.pe.kr/1942](ht'
 featured_image: ''
 tags: ['mac', 'mac mysql 설치', 'MySQL', 'mysql 패스워드']
 ---

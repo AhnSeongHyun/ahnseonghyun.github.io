@@ -2,7 +2,7 @@
 title: '기본 UIRefreshControl 및 Custom 라이브러리 소개'
 author: 'ash84'
 pub_date: '2016-08-15'
-description: ''
+description: '기본적인 UIRefreshControl 에 대한 사용법이다. UITableView에 addSubView:  하는것만으로도 쉽게 사용할 수 있다. spinner 의 색은 setTintColor 를 이용해서 설정할 수가 있고, backgroundColor 을 지정하면 끌어 당겼을 때의 배경색을 지정할 수가 있다. selector 로 지정한 함수에서 웹서비스를  호출하는 함수를 지정해'
 featured_image: ''
 tags: ['dev', 'Objective-C', 'UIRefreshControl', 'UITableView']
 ---

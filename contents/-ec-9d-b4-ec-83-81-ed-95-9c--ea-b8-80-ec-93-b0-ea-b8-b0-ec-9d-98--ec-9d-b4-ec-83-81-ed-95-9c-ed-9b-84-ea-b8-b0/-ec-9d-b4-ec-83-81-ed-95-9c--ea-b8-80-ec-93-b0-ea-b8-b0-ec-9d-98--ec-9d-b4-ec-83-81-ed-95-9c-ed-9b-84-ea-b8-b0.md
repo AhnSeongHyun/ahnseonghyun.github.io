@@ -2,7 +2,7 @@
 title: '#이상한 글쓰기의 이상한후기'
 author: 'ash84'
 pub_date: '2017-04-03'
-description: ''
+description: '[![blogging](https://farm1.staticflickr.com/55/160711313_01f4948420_z.jpg)](https://flic.kr/p/fcFSH)이상한 모임 5월 세미나 #이상한 글쓰기에 참가를 하였고, 평소에 글쓰기에 대해서 그리고 기술블로그를 운영해오는 입장에서 다른 사람들은 어떻게 운영하고 있는지에 대해서 궁금해서 유료임에도 불구하고 참가하게 되었다. 순서는 다음과 같았고, 간단하게 들은 내용을 요약해 보도록 하겠다.'
 featured_image: ''
 tags: ['dev', '이상한글쓰기', '이상한모임']
 ---

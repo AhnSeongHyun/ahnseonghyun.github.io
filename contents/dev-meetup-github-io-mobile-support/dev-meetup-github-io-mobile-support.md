@@ -2,7 +2,13 @@
 title: 'dev-meetup.github.io 모바일 지원'
 author: 'ash84'
 pub_date: '2017-05-24'
-description: ''
+description: '참고 : [dev-meetup.github.io 개발기](https://ash84.net/2017/03/28/dev-meetup-github-io/)
+
+fullcalendar 를 이용해서 calendar 형태와 list 형태로 밋업/세미나들을 보여주도록 구성했었는데, 모바일에서 과연 calendar 가 필요한지 혹은 list 형태가 모바일에서 쓰기 적합한가? 에 대한 의문이 들기 시작했다. 모바일에 좀더 최적화한 버전을 올렸는데 몇가지 한 작업은 아래와 같다. 
+
+
+- 메뉴와 footer 의 삭제 
+  - 메뉴는 calendar,'
 featured_image: 'https://c1.staticflickr.com/5/4198/34700337702_8f6675a01d_b.jpg'
 tags: ['dev-meetup.github.io', 'mobile', 'hammer.js']
 ---

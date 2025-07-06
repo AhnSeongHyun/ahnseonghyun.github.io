@@ -2,7 +2,14 @@
 title: 'python travis-ci 와 github repository 연동하기'
 author: 'ash84'
 pub_date: '2017-04-03'
-description: ''
+description: '별거 없다. 파이썬 기준으로 설명  
+
+ 
+
+[travis-ci](https://travis-ci.org) 는 github 와 연결되어서 개발자가 어떤 commit을 할때마다 원하는 테스트 혹은 빌드를 할수 있는  
+ 서비스라고 보면 이해가 쉬울것 같다. 여기서는 기본적으로 연동을 하고, python 의 unitttest 를 travis-ci 로 실행시키고 그 결과를 github README.md 에 표시하는 방법에 대해서 설명하겠다.
+
+#### 1. 기본 연동'
 featured_image: ''
 tags: ['dev', 'Python', 'travis-ci', '파이썬']
 ---

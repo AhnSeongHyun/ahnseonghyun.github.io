@@ -2,7 +2,15 @@
 title: 'Rust-DAY1'
 author: 'ash84'
 pub_date: '2020-01-08'
-description: ''
+description: '![sun](https://live.staticflickr.com/65535/49351849271_1a8164bbd0_z.jpg)
+
+[sun](https://github.com/AhnSeongHyun/sun)
+- 간단한 프로그램을 배우면서 Rust 를 배워서 남주자!
+- multiple host  에  shell 명령어를 보내고 그것을 보여주는 단순한 CLI 프로그램(사실 python ansible 조합이면 금방 될것 같지만...)
+- github action 에 CI 관련 스트립트 정의하고 시작! 
+
+```yaml
+    name'
 featured_image: ''
 tags: ['rust', '100DaysOfRust']
 ---

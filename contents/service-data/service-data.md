@@ -2,7 +2,11 @@
 title: '서비스와 데이터'
 author: 'ash84'
 pub_date: '2025-02-09'
-description: ''
+description: '세상의 모든 것이 SaaS(Software as a Service) 형태로 변화하고 있다. 문서 작성, 디자인, 개발, 데이터 저장, 심지어는 개인 블로그와 글쓰기 툴들까지도 SaaS 기반 서비스들이 대세를 이루고 있다. SaaS의 장점은 분명하다. 설치할 필요 없이 즉시 사용할 수 있고, 유지보수를 신경 쓸 필요 없이 최신 기능을 누릴 수 있다. 하지만 이와 동시에 우리가 만든 데이터와 서비스의 소유권이 우리 손을 떠나는 문제도 존재한다.
+
+# 편리함 하지만 불안함
+
+블로그를 예로 들어보자. 나는 처음에는 테터툴즈에서 시작해서,'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/service-data/saas.png'
 tags: ['essay', 'service', 'data']
 ---

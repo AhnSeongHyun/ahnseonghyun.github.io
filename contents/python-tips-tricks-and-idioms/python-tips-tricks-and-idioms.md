@@ -2,7 +2,7 @@
 title: 'Python: Tips, Tricks and Idioms'
 author: 'ash84'
 pub_date: '2017-04-27'
-description: ''
+description: '원문 : [Python: Tips, Tricks and Idioms](https://codefisher.org/catch/blog/2015/01/27/python-tips-tricks-and-idioms/?utm_source=Python+Weekly+Newsletter&utm_campaign=8416b188e6-Python_Weekly_Issue_176_January_29_2015&utm_medium=email&utm_term=0_9e26887fc5-8416b188e6-312692397 "Python: Tips, Tricks an'
 featured_image: ''
 tags: ['dev', 'performances', 'Python', 'tips', 'tricks']
 ---

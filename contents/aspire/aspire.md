@@ -2,7 +2,8 @@
 title: '"Aspire"'
 author: 'ash84'
 pub_date: '2008-12-29'
-description: ''
+description: '대학교 처음 들어와서, 영어 공부를 할때, 우연히   
+ 핀 사진속에서** “Aspire”** 라는 단어를 본적이 있다.'
 featured_image: ''
 tags: ['aspire', '바쁜일상', '바쁜일상속에서', '열망', '열정', '일']
 ---

@@ -2,7 +2,14 @@
 title: 'ModHeader를 이용해서 쉽게 Header 넣기'
 author: 'ash84'
 pub_date: '2025-01-25'
-description: ''
+description: 'https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj
+
+
+
+모바일 앱내 웹 뷰에 들어갈 웹 페이지에는 커스텀 헤더를 일부러 넣곤 한다. 예를 들면 다른 곳에서 호출하지 못하도록 특정 헤더값을 앱과 웹이 약속을 한채로 보내고 인증이 된 클라이언트에서만 보여지게 하기 위해서인데, 테스트/개발을 할때는 서버 개발자가 본인의 컴퓨터, 브라우저에서 해야하기 때문에 불편하다. 
+
+
+**개발자 세트 구매하기** 🤟'
 featured_image: 'https://c5.staticflickr.com/6/5690/30904141620_a137ed1b48_z.jpg'
 tags: ['chrome', 'ModHeader', 'header']
 ---

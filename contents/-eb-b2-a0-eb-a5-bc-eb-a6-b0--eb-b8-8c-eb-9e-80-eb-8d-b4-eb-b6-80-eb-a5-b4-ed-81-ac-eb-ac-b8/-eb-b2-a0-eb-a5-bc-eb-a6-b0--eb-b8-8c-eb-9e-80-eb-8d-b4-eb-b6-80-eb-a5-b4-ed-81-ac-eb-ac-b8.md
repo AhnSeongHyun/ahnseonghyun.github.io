@@ -2,7 +2,7 @@
 title: '베를린 브란덴부르크문'
 author: 'ash84'
 pub_date: '2009-11-19'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile30.uf.205E13194AFF633A8C798D.JPG)![](http://ash84.net/wp-content/uploads/1/cfile21.uf.115E13194AFF633A8DD528.JPG)![](http://ash84.net/wp-content/uploads/1/cfile24.uf.135E13194AFF633B8EB890.JPG)![](http://ash84.net/wp-content/uploads/1/cfile4.uf.155E131'
 featured_image: ''
 tags: ['베를린', '브란덴부르크 문']
 ---

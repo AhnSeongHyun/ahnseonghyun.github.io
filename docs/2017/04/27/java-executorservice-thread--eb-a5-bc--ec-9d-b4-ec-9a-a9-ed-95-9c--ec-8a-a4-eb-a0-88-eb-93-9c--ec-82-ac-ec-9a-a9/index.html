@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(Java) ExecutorService, Thread 를 이용한 스레드 사용"/>
+    <meta property="og:description" content="자바 프로그래밍을 하면서 스레드를 자주 사용하는 편인데, 아무래도 속도가 안나오면 데이터를 많이 처리하는 부분에서 병렬처리를 하는 것이 가장 첫 번째로 생각할 수 있는 처리속도의 향상 방법이라고 할수 있겠다. **Thread 객체를 사용하는 방법과 ExecutorService를 사용하는 방법이 있는데, 필자는 주로 각각 다른 작업을 병렬로 해야하는 경우에는 Thread-Runnable 조합을 이용하고, 같은 작업을 여러개로 나눠서 처리한 뒤 결과를 모아서 정렬, 처리 등을 하는 작업의 경우 ExecutorService-Callab"/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/04/27/java-executorservice-thread--eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c--ec-8a-a4-eb-a0-88-eb-93-9c--ec-82-ac-ec-9a-a9"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(Java) ExecutorService, Thread 를 이용한 스레드 사용</title>
-    <meta name="description" content="" />
+    <meta name="description" content="자바 프로그래밍을 하면서 스레드를 자주 사용하는 편인데, 아무래도 속도가 안나오면 데이터를 많이 처리하는 부분에서 병렬처리를 하는 것이 가장 첫 번째로 생각할 수 있는 처리속도의 향상 방법이라고 할수 있겠다. **Thread 객체를 사용하는 방법과 ExecutorService를 사용하는 방법이 있는데, 필자는 주로 각각 다른 작업을 병렬로 해야하는 경우에는 Thread-Runnable 조합을 이용하고, 같은 작업을 여러개로 나눠서 처리한 뒤 결과를 모아서 정렬, 처리 등을 하는 작업의 경우 ExecutorService-Callab" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(Java) ExecutorService, Thread 를 이용한 스레드 사용</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-04-27</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-04-27</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>자바 프로그래밍을 하면서 스레드를 자주 사용하는 편인데, 아무래도 속도가 안나오면 데이터를 많이 처리하는 부분에서 병렬처리를 하는 것이 가장 첫 번째로 생각할 수 있는 처리속도의 향상 방법이라고 할수 있겠다. <strong>Thread 객체를 사용하는 방법과 ExecutorService를 사용하는 방법이 있는데, 필자는 주로 각각 다른 작업을 병렬로 해야하는 경우에는 Thread-Runnable 조합을 이용하고, 같은 작업을 여러개로 나눠서 처리한 뒤 결과를 모아서 정렬, 처리 등을 하는 작업의 경우 ExecutorService-Callable 조합을 사용하고 있다.</strong> </p>
 <script src="https://gist.github.com/AhnSeongHyun/4951392.js"></script>
@@ -82,23 +84,21 @@
 <p><a href="http://www.ibm.com/developerworks/kr/library/j-5things4.html">java.util.concurrent에 대해 모르고 있던 5가지 사항, Part 1</a> </p>
 <p><a href="http://www.ibm.com/developerworks/kr/library/j-5things5.html">java.util.concurrent에 대해 모르고 있던 5가지 사항, Part 2</a></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'ExecutorService'">#'ExecutorService'</a>&nbsp;
+            #ExecutorService&nbsp;
         
-            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+            #Java&nbsp;
         
-            <a href="/tag/'Thread'">#'Thread'</a>&nbsp;
+            #Thread&nbsp;
         
-            <a href="/tag/'스레드'">#'스레드'</a>&nbsp;
+            #스레드&nbsp;
         
-            <a href="/tag/'스레드 리턴'">#'스레드 리턴'</a>&nbsp;
+            #스레드 리턴&nbsp;
         
-            <a href="/tag/'자바 스레드']">#'자바 스레드']</a>&nbsp;
+            #자바 스레드&nbsp;
         
     </div> 
     <footer>

@@ -2,7 +2,9 @@
 title: '(vert.x) logging.properties 파헤치기'
 author: 'ash84'
 pub_date: '2013-05-25'
-description: ''
+description: '앞선 포스팅에서 logging.properties 를 이용해서 로그파일인 vertx.log 파일의 위치를 변경하였는데 이번에는 logging.properties내 설정된 다른 항목들을 보도록 하자. 
+
+JUL 기반'
 featured_image: ''
 tags: ['logging.properties', 'vert.x', 'vert.x 로그 설정', 'vertx logging.properties', 'vertx.log']
 ---

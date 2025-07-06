@@ -2,7 +2,11 @@
 title: '나의 둔촌주공아파트'
 author: 'ash84'
 pub_date: '2018-05-31'
-description: ''
+description: '발단은 하나의 트위터에서 시작되었다.  
+
+> <안녕, 둔촌주공아파트> [http://t.co/s8KdWXx3oI](http://t.co/s8KdWXx3oI) 타임라인에 혹시 계실지 모르는 둔촌주공에서 어린시절을 보낸 분들은 꼭 한권씩 사서 수고한 저자가 2쇄정도는 찍을 수 있게 해줍시다. 둔촌주공 살았을만한 친구있는 분들은 RT해주세요~
+> 
+> — 최우형 (Woohyong CHOI) (@woohyong) [September 3, 2013](https://twitter.com/woohyong/statuses/37474239534'
 featured_image: ''
 tags: ['둔촌주공아파트']
 ---

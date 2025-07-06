@@ -2,7 +2,10 @@
 title: '아이폰 수리기, 당신의 아이폰이 망가졌다면??'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**사건의 발단** 
+
+
+수요일 저녁'
 featured_image: ''
 tags: ['dev', '강화유리 파손', '사제수리', '아이폰', '아이폰 고장']
 ---

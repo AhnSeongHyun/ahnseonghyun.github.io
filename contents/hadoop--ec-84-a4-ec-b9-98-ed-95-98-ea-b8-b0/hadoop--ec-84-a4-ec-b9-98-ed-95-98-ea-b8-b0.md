@@ -2,7 +2,8 @@
 title: '(Hadoop) 설치하기.'
 author: 'ash84'
 pub_date: '2013-08-03'
-description: ''
+description: '하둡을 그 많은 사람들이 설치 및 wordcount 예제 돌리는 부분을 올렸는데, 내가 올린다고 뭐가 그리 대단한 포스팅따위가 되리라고 생각하진 않지만, 자의반 타의반으로 정리해야 하는 상황에서 부족한 부분이 있겠지만 일단 정리한다. **분명히 말해두지만, 개인정리용이고, mac osx  상에서 개인적으로 개발 테스트를 위함이니 따라하지 마시길. **
+[http://apache.tt.co.kr/'
 featured_image: ''
 tags: ['Hadoop', 'HDFS', '태그를 입력해 주세요.', '하둡', '하둡설치']
 ---

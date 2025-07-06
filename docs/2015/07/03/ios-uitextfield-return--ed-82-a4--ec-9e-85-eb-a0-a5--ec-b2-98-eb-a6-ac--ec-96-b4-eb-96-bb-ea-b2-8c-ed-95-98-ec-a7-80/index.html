@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) UITextField, Return 키 입력 처리 어떻게하지?"/>
+    <meta property="og:description" content="UITextField 를 뷰에 넣은 상태에서 사용자가 누르면 당연히 텍스트 입력을 해야하니까 키보드가 올라오는데 그 상태에서 텍스트를 입력하고 나서 Return key를 누른다면 다양한 행동들을 해줘야한다. 카톡이라면 당연히 다음글로 넘어가야 할테도 어떤 앱에서는 그냥 바로 전송하는 경우도 있다. 이러한 행동을 해주기 위해서는 아래의 코드처럼 UITextFiledDelegate 의 t"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/ios-uitextfield-return--ed-82-a4--ec-9e-85-eb-a0-a5--ec-b2-98-eb-a6-ac--ec-96-b4-eb-96-bb-ea-b2-8c-ed-95-98-ec-a7-80"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) UITextField, Return 키 입력 처리 어떻게하지?</title>
-    <meta name="description" content="" />
+    <meta name="description" content="UITextField 를 뷰에 넣은 상태에서 사용자가 누르면 당연히 텍스트 입력을 해야하니까 키보드가 올라오는데 그 상태에서 텍스트를 입력하고 나서 Return key를 누른다면 다양한 행동들을 해줘야한다. 카톡이라면 당연히 다음글로 넘어가야 할테도 어떤 앱에서는 그냥 바로 전송하는 경우도 있다. 이러한 행동을 해주기 위해서는 아래의 코드처럼 UITextFiledDelegate 의 t" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) UITextField, Return 키 입력 처리 어떻게하지?</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">UITextField 를 뷰에 넣은 상태에서 사용자가 누르면 당연히 텍스트 입력을 해야하니까 키보드가 올라오는데 그 상태에서 텍스트를 입력하고 나서 Return key를 누른다면 다양한 행동들을 해줘야한다. 카톡이라면 당연히 다음글로 넘어가야 할테도 어떤 앱에서는 그냥 바로 전송하는 경우도 있다. 이러한 행동을 해주기 위해서는 아래의 코드처럼 UITextFiledDelegate 의 t</span><span style="font-size: 11pt; line-height: 1.5;">extFieldShouldReturn 에서 처리해 주면 된다. 아래의 코드는 .h 파일과 .m이 섞여있는 코드이니 주의해서 보길 바란다. </span></p>
 <p><span style="font-size: 11pt; line-height: 1.5;"><br />
@@ -76,23 +78,21 @@
 </span></p>
 <script src="https://gist.github.com/4586277.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'ios keyboard'">#'ios keyboard'</a>&nbsp;
+            #ios keyboard&nbsp;
         
-            <a href="/tag/'keyboard enter'">#'keyboard enter'</a>&nbsp;
+            #keyboard enter&nbsp;
         
-            <a href="/tag/'Keyboard return key'">#'Keyboard return key'</a>&nbsp;
+            #Keyboard return key&nbsp;
         
-            <a href="/tag/'UITextField Keyboard'">#'UITextField Keyboard'</a>&nbsp;
+            #UITextField Keyboard&nbsp;
         
-            <a href="/tag/'엔터키 입력']">#'엔터키 입력']</a>&nbsp;
+            #엔터키 입력&nbsp;
         
     </div> 
     <footer>

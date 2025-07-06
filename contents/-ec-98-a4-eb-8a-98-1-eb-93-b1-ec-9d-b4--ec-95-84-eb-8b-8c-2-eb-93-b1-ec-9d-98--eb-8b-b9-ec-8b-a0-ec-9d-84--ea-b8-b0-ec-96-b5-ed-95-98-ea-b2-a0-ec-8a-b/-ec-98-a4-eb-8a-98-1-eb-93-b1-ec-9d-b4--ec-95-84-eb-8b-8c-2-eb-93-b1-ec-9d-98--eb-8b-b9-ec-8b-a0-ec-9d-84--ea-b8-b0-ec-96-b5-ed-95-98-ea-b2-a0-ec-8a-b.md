@@ -2,7 +2,19 @@
 title: '오늘, 1등이 아닌 2등의 당신을 기억하겠습니다.'
 author: 'ash84'
 pub_date: '2009-10-24'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile4.uf.1455A3284AE392CC563174.jpg)  
+
+
+
+
+
+김성근 감독님, 수고하셨습니다. 
+모두가 1등을 기억하는 세상에서 
+2등의 당신을 기억하겠습니다. 
+
+
+이기기 위해서 최선을 다하고 
+타는 목마름으로 승리를 염원하는'
 featured_image: ''
 tags: ['SK', '김성근', '한국시리즈 v3']
 ---

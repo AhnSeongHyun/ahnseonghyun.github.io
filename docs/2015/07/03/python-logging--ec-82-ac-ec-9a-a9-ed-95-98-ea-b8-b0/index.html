@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(python) usage logging"/>
+    <meta property="og:description" content="flask 관련 작업을 하면서 로깅을 어떻게 할까 하는 생각이 있었는데 python 에 기본적으로 logging을 탑재하고 있어서 이렇게 사용법을 올린다. 별 다른 건 없고, basicConfig 라는 것을 통해서 filename, filemode, level 을 설정할수 있는데 file 관련 설정을 하지 않으면 stdout 으로 출력되게 된다. 자세한 사항은 [http://docs.python.org/2/library/logging.html](http://docs.pytho"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/python-logging--ec-82-ac-ec-9a-a9-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(python) usage logging</title>
-    <meta name="description" content="" />
+    <meta name="description" content="flask 관련 작업을 하면서 로깅을 어떻게 할까 하는 생각이 있었는데 python 에 기본적으로 logging을 탑재하고 있어서 이렇게 사용법을 올린다. 별 다른 건 없고, basicConfig 라는 것을 통해서 filename, filemode, level 을 설정할수 있는데 file 관련 설정을 하지 않으면 stdout 으로 출력되게 된다. 자세한 사항은 [http://docs.python.org/2/library/logging.html](http://docs.pytho" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(python) usage logging</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">flask 관련 작업을 하면서 로깅을 어떻게 할까 하는 생각이 있었는데 python 에 기본적으로 logging을 탑재하고 있어서 이렇게 사용법을 올린다. 별 다른 건 없고, basicConfig 라는 것을 통해서 filename, filemode, level 을 설정할수 있는데 file 관련 설정을 하지 않으면 stdout 으로 출력되게 된다. 자세한 사항은 <a href="http://docs.python.org/2/library/logging.html">http://docs.python.org/2/library/logging.html</a> 에서 확인하자. </span></p>
 <p><span style="font-size: 11pt;"><br />
@@ -77,15 +79,13 @@
 <p><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"><a href="http://lab.ash84.net/1047">다른 포스팅</a>에서 언급한 traceback 을 이용한 예외처리 부분에서도 logging을 사용하면 코드를 단축할수 있고, 예외 부분 자체를 지정한 로그 파일에 남길수가 있다. </span></p>
 <script src="https://gist.github.com/AhnSeongHyun/7313062.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'logging'">#'logging'</a>&nbsp;
+            #logging&nbsp;
         
-            <a href="/tag/'Python']">#'Python']</a>&nbsp;
+            #Python&nbsp;
         
     </div> 
     <footer>

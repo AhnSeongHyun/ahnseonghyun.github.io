@@ -2,7 +2,7 @@
 title: '디자인네트에 실린 나의 첫 Public Writing'
 author: 'ash84'
 pub_date: '2010-08-05'
-description: ''
+description: '디자인네트 8월호에 제 글이 실렸습니다. 2010 월드 IT 쇼(WIS) 에 대한 포스팅을 보시고 기자분께서 연락을 주셔'
 featured_image: ''
 tags: ['디자인네트', '월드 IT 쇼']
 ---

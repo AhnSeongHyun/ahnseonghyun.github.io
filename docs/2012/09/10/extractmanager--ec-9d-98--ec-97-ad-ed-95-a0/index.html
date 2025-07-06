@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ExtractManager 의 역할"/>
+    <meta property="og:description" content="ExtractorManager 가 굳이 필요한가? 에 대한 물음이 들 것이다. 왜냐하면 굳이 각 Extractor 이 파일타입에 따른 상세 구현 Extractor 클래스가 있고 그것을 그냥 쓰면 되지 않는가 하는 물음에서 이다. 그러나 필자가 ExtractorManager 를 만든 이유는 다음과 같다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2012/09/10/extractmanager--ec-9d-98--ec-97-ad-ed-95-a0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>ExtractManager 의 역할</title>
-    <meta name="description" content="" />
+    <meta name="description" content="ExtractorManager 가 굳이 필요한가? 에 대한 물음이 들 것이다. 왜냐하면 굳이 각 Extractor 이 파일타입에 따른 상세 구현 Extractor 클래스가 있고 그것을 그냥 쓰면 되지 않는가 하는 물음에서 이다. 그러나 필자가 ExtractorManager 를 만든 이유는 다음과 같다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">ExtractManager 의 역할</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2012-09-10</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2012-09-10</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt; ">ExtractorManager 가 굳이 필요한가? 에 대한 물음이 들 것이다. 왜냐하면 굳이 각 Extractor 이 파일타입에 따른 상세 구현 Extractor 클래스가 있고 그것을 그냥 쓰면 되지 않는가 하는 물음에서 이다. 그러나 필자가 ExtractorManager 를 만든 이유는 다음과 같다. </span></p>
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; ">**1. 파일명을 모르는 상태에서의 텍스트/이미지 추출**
@@ -86,19 +88,17 @@
 
 <p><span style="font-size: 11pt; ">원래는 이러한 파일 타입에 따라서 객체를 생성하는 부분이 ExtractorManager 에 있었는데, 지나치게 new 를 남발하는것 같아서 간단하게 팩토리 클래스를 구현함으로써 나름대로(?) 깔끔하게 정리된것 같다. 추가적으로 더 정리를 한다면, ExtractorManager 를 세분화 하는 방안도 있을 수 있다고 생각되고, 또는 팩토리 클래스는 추상화하는 방안 역시 있을 수 있을 것으로 예상된다. </span><span style="font-size: 11pt; line-height: 2; ">ImageExtractor 역시 마찬가지의 팩토리 클래스에서 객체를 받아와서 사용하는 방식으로 구현되어 있다. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['DocumentExtractor'">#['DocumentExtractor'</a>&nbsp;
+            #DocumentExtractor&nbsp;
         
-            <a href="/tag/'ExtractorManager'">#'ExtractorManager'</a>&nbsp;
+            #ExtractorManager&nbsp;
         
-            <a href="/tag/'FACTORY'">#'FACTORY'</a>&nbsp;
+            #FACTORY&nbsp;
         
-            <a href="/tag/'TextExtractorFactory'">#'TextExtractorFactory'</a>&nbsp;
+            #TextExtractorFactory&nbsp;
         
-            <a href="/tag/'팩토리패턴']">#'팩토리패턴']</a>&nbsp;
+            #팩토리패턴&nbsp;
         
     </div> 
     <footer>

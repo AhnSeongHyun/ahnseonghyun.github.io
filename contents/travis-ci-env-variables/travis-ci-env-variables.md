@@ -2,7 +2,13 @@
 title: 'travis-ci 환경변수 '
 author: 'ash84'
 pub_date: '2018-05-29'
-description: ''
+description: '테스팅을 구성하고 travis-ci 를 연결을 해서 테스트 하던중 의문이 생겼다. 로컬 컴퓨터에서 테스트 할 때에는 db 정보를 설정에 두거나 하드코딩된 채로 사용했었는데, travis-ci 에 올리기 위해서는 그런 정보들을 어디엔가 두어야 한다. 물론 저장소에 둘 수도 있지만, 그리 좋은 방법은 아니다. 
+
+### travis-ci 환경변수 설정 
+
+ ![travis-ci](https://farm2.staticflickr.com/1741/41695627814_5f6bd0655f_b.jpg)
+
+travis-ci 에서 로그인하고, 본'
 featured_image: ''
 tags: ['dev', 'testing', 'travis-ci', 'env', 'env variables']
 ---

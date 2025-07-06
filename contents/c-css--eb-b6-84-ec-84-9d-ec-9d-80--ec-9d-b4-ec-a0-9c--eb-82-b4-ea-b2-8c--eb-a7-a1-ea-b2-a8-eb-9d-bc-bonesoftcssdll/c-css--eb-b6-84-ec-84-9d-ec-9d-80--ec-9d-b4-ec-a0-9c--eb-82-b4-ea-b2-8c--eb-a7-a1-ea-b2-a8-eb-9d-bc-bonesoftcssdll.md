@@ -2,7 +2,8 @@
 title: '[C#] CSS 분석은 이제 내게 맡겨라. Bonesoft.CSS.dll'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '***  
+ CSS란?***'
 featured_image: ''
 tags: ['An Seong Hyun', 'Analysis CSS', 'Bonesofr.css.dll', 'c#', 'css', 'CSS분석', 'dev', 'EBOOK READER 개발', 'html', '안성현']
 ---

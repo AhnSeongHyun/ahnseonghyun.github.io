@@ -2,7 +2,7 @@
 title: '뮤지컬 웨딩싱어'
 author: 'ash84'
 pub_date: '2010-01-11'
-description: ''
+description: '﻿'
 featured_image: ''
 tags: ['An Seong Hyun', 'Wedding Singer', '드류배리모어', '박건형', '아담샌들러', '안성현', '웨딩싱어', '충무아트홀', '황정민']
 ---

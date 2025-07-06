@@ -2,7 +2,12 @@
 title: 'PowerMockup 사용기'
 author: 'ash84'
 pub_date: '2019-09-06'
-description: ''
+description: '![Alt text](https://live.staticflickr.com/65535/48690914577_fed50ce155_b.jpg
+)
+  
+여러가지 mockup 툴 중에 PowerMockup 이라는 툴이 있어서 대략 소개하고자 한다. PowerMockup 은 기본 템플릿 및 아이콘 등 PPT를 사용할 때 쉽고 편리하게 문서에 적용할 수 있도록 제공해주며 필요 시 팀원을 추가하여 쉽게 공유가 가능한 기능을 제공하고 있다. 
+
+ ![Alt text](https://live.staticflickr.com/65535/48690748'
 featured_image: ''
 tags: ['powermockup']
 ---

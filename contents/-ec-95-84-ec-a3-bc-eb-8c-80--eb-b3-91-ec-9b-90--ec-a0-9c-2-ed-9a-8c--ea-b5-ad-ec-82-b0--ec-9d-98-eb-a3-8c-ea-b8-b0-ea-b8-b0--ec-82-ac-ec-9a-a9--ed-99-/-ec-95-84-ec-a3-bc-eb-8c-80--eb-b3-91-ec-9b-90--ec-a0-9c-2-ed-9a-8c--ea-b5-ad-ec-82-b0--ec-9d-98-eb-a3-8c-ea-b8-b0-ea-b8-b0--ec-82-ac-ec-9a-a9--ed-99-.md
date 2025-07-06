@@ -2,7 +2,7 @@
 title: '[아주대 병원] 제 2회 국산 의료기기 사용 활성화 심포지엄'
 author: 'ash84'
 pub_date: '2007-10-08'
-description: ''
+description: '![](http://redesign.co.kr/mail2_upload/board/96_.jpg)'
 featured_image: ''
 tags: ['10월11일', '아주대 병원', '제 2회 국산 의료기기 사용 활성화 심포지엄']
 ---

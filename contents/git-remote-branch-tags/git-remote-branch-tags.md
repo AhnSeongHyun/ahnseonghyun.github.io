@@ -2,7 +2,7 @@
 title: 'git remote branch 혹은 tags 가져오기'
 author: 'ash84'
 pub_date: '2019-09-02'
-description: ''
+description: '최근에 git pull 혹은 checkout 하는 개인적은 툴을 만들고 있는데, git 의  remote 의  branch 나 tags 를 가져오고 싶을때가 있다. 예를 들어, git-flow 로 작업을 하게 되면 `feature/support-api` 이런식의 branch 로 작업을 하고 remote 로 push 하는 경우가 있는데, 이런 branch 를 가져오고 싶었다. 또 github 의 release 의 경우 tags 에서 따서 하는 경우가 보통인데, tags 를 가져오고 싶었다. 그런데 보통 git repo 안에서 git'
 featured_image: ''
 tags: ['Git', 'remote', 'branch', 'tags']
 ---

@@ -2,7 +2,10 @@
 title: '송도 외국병원 유치와 기회'
 author: 'ash84'
 pub_date: '2007-04-16'
-description: ''
+description: '<메디게이트>
+
+**  
+송도 외국병원, 국내 파트너 선정 물밑접촉 **'
 featured_image: ''
 tags: ['기회', '송도', '외국병원', '의공학']
 ---

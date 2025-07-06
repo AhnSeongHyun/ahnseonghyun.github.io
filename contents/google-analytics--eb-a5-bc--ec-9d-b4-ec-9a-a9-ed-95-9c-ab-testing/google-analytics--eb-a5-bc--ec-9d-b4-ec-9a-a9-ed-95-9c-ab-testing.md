@@ -2,7 +2,11 @@
 title: 'Google Analytics 를 이용한 A/B Testing'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '### 방식
+
+– 구글 애널리틱스의 A/B Testing 방식은 2개이상의 페이지(이건 개발자가 개발을 해 놔야 한다.) 를 등록하면 특정 js 파일을 삽입하라고 알려주고 해당 js 파일을 2개 이상의 페이지에서 삽입하면 진입시에 지정한 비율에 따라서 지정된 페이지로 이동이 된다.
+
+[![Image1](https://farm9.staticflickr.com/8861/17928935856_c48de2b037_n.jpg)](https://flic.kr/p/tjjtZJ)</'
 featured_image: ''
 tags: ['dev', 'GA', 'google analytics a/b testing']
 ---

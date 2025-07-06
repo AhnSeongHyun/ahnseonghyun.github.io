@@ -2,7 +2,7 @@
 title: 'github.io 페이지 만들기'
 author: 'ash84'
 pub_date: '2015-06-28'
-description: ''
+description: 'github 는 소스를 관리하고 이슈를 관리해주는 역할을 기본적으로 해준다. 기존의 svn + trac 의 조합으로 사용해야 했던 부분을 github 내의 소스 레포지토리를 사용하면 편하게 이슈와 소스를 연결해서 사용할수 있다. 또다른 특징중 하나는 정적 페이지 호스팅을 한 계정에 한해서 지원한다는 점인데, 이것은 유료, 무료에 상관없이 모두 지원을 한다.'
 featured_image: ''
 tags: ['github', 'github.io', 'github.io 만들기']
 ---

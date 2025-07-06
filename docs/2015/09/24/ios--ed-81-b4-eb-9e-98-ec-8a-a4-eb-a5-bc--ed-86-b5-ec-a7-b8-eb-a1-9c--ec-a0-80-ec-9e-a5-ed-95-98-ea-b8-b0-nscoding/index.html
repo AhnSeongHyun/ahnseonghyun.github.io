@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) 클래스를 통째로 저장하기, NSCoding"/>
+    <meta property="og:description" content="단순히 문자열을 저장하는 것만으로 앱내 데이터 저장에는 확실히 한계가 있다. 그리고 문자열을 저장하고 읽어올때 다시 파싱을해서 읽어오는 방식은 그리 달갑지도 않고 빠른 앱 개발 방식에도 한계가 있다. 그래서 Objective-c 에서는 [NSCoding](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSCoding_Protocol/Reference/Refer"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/09/24/ios--ed-81-b4-eb-9e-98-ec-8a-a4-eb-a5-bc--ed-86-b5-ec-a7-b8-eb-a1-9c--ec-a0-80-ec-9e-a5-ed-95-98-ea-b8-b0-nscoding"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) 클래스를 통째로 저장하기, NSCoding</title>
-    <meta name="description" content="" />
+    <meta name="description" content="단순히 문자열을 저장하는 것만으로 앱내 데이터 저장에는 확실히 한계가 있다. 그리고 문자열을 저장하고 읽어올때 다시 파싱을해서 읽어오는 방식은 그리 달갑지도 않고 빠른 앱 개발 방식에도 한계가 있다. 그래서 Objective-c 에서는 [NSCoding](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSCoding_Protocol/Reference/Refer" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) 클래스를 통째로 저장하기, NSCoding</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-09-24</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-09-24</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">단순히 문자열을 저장하는 것만으로 앱내 데이터 저장에는 확실히 한계가 있다. 그리고 문자열을 저장하고 읽어올때 다시 파싱을해서 읽어오는 방식은 그리 달갑지도 않고 빠른 앱 개발 방식에도 한계가 있다. 그래서 Objective-c 에서는 <a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSCoding_Protocol/Reference/Reference.html">NSCoding</a> 프로토콜을 준수하면 <a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSKeyedArchiver_Class/Reference/Reference.html">NSKeyedArchiver</a>를 이용해서 객체내 데이터를 쉽게 저장할수 있는 방법을 제시하고 있다. </span></p>
 <p><span style="font-size: 11pt;">일단 아래와 같이 <a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSCoding_Protocol/Reference/Reference.html">NSCoding</a> 프로토콜을 준수하는 코드를 만든다. 간단하게, 아래의 두 함수를 구현하면 된다. </span></p>
@@ -92,23 +94,21 @@
 <p><span style="font-size: 11pt;">상속관계에서 NSCoding 프로토콜을 구현할때에 주의사항이 있다. 당연한 이야기겠지만 encodeWithCoder 함수와 initWithCoder 함수에서 상위 클래스의 해당 함수를 호출해 주어야 한다. 그렇지 않으면 상속을 받은 클래스는 NSCoding 프로토콜을 구현시, 본인 클래스에 한해서만 저장 혹은 로드를 하는 문제점이 발생된다. </span></p>
 <script src="https://gist.github.com/AhnSeongHyun/6433486.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'NSCoding'">#'NSCoding'</a>&nbsp;
+            #NSCoding&nbsp;
         
-            <a href="/tag/'objective-c nscoding protocol'">#'objective-c nscoding protocol'</a>&nbsp;
+            #objective-c nscoding protocol&nbsp;
         
-            <a href="/tag/'객체 저장'">#'객체 저장'</a>&nbsp;
+            #객체 저장&nbsp;
         
-            <a href="/tag/'클래스 저장'">#'클래스 저장'</a>&nbsp;
+            #클래스 저장&nbsp;
         
-            <a href="/tag/'파일 저장']">#'파일 저장']</a>&nbsp;
+            #파일 저장&nbsp;
         
     </div> 
     <footer>

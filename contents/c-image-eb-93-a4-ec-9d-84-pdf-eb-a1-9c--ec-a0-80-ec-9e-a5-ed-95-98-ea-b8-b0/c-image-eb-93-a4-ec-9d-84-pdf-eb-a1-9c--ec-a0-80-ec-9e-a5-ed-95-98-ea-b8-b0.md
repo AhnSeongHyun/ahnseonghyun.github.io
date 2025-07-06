@@ -2,7 +2,9 @@
 title: '[C#] Image들을 PDF로 저장하기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**  
+****  
+ Image를 PDF로 저장하기 위한 C# 소스코드 **'
 featured_image: ''
 tags: ['c#', 'Convert Image to PDF', 'dev', 'IMAGE TO PDF', 'Make pdf file', 'pdf 만들기', '개발자', '프로그래밍']
 ---

@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) NSTimer 사용하기"/>
+    <meta property="og:description" content="개인적으로 타이머를 그렇게 좋아하진 않는다.(다들 개인적으로 좋아하지 않는 프로그래밍의 한 부분이 있을것이라 생각됨.) 사실 어떤 이벤트가 발생했다는 것을 타이머를 통해서 감지하거나 하는 경우가 있는데 그런 부분에서 잘 사용하진 않는다. 이유는 Objective-C 에는 delegate 라는 막강한 놈이 있고, 그게 아니라면 `NSNotificiation` 을 사용하는 것도 나쁘진 않다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/03/24/ios-use-nstime"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) NSTimer 사용하기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="개인적으로 타이머를 그렇게 좋아하진 않는다.(다들 개인적으로 좋아하지 않는 프로그래밍의 한 부분이 있을것이라 생각됨.) 사실 어떤 이벤트가 발생했다는 것을 타이머를 통해서 감지하거나 하는 경우가 있는데 그런 부분에서 잘 사용하진 않는다. 이유는 Objective-C 에는 delegate 라는 막강한 놈이 있고, 그게 아니라면 `NSNotificiation` 을 사용하는 것도 나쁘진 않다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) NSTimer 사용하기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-03-24</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-03-24</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">개인적으로 타이머를 그렇게 좋아하진 않는다.(다들 개인적으로 좋아하지 않는 프로그래밍의 한 부분이 있을것이라 생각됨.) 사실 어떤 이벤트가 발생했다는 것을 타이머를 통해서 감지하거나 하는 경우가 있는데 그런 부분에서 잘 사용하진 않는다. 이유는 Objective-C 에는 delegate 라는 막강한 놈이 있고, 그게 아니라면 <code>NSNotificiation</code> 을 사용하는 것도 나쁘진 않다. </span></p>
 <p><span style="font-size: 11pt;"><br />
@@ -86,17 +88,15 @@
 </span></p>
 <p><span style="font-size: 11pt;">핸들러 함수에서는 timer 의 userInfo 를 가져와서 전달한 값을 가져오고 <code>[timer invalidate]</code> 함수로 타이머를 정지하도록 하였다. 아주 기본코드인데, 사실 타이머는 이정도만 알아도 되는것 같다. 백그라운드로 들어갔을때나 블루투스와 같이 쓸때는 좀더 유의해서 사용하면 될듯. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'NSTimer'">#'NSTimer'</a>&nbsp;
+            #NSTimer&nbsp;
         
-            <a href="/tag/'scheduledTimerWithTimeInterval']">#'scheduledTimerWithTimeInterval']</a>&nbsp;
+            #scheduledTimerWithTimeInterval&nbsp;
         
     </div> 
     <footer>

@@ -2,7 +2,7 @@
 title: '그게 그렇게 중요한건지..'
 author: 'ash84'
 pub_date: '2011-07-08'
-description: ''
+description: '점수 맞춰서 갔던 대학의 전공이라는 것이'
 featured_image: ''
 tags: ['']
 ---

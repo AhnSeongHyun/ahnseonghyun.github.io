@@ -2,7 +2,9 @@
 title: '(UNIX) nohup ?'
 author: 'ash84'
 pub_date: '2013-01-24'
-description: ''
+description: '**nohup**
+리눅스, 유닉스에서 프로그램을 데몬처럼 실행하고 싶을때 사용하는것인데, 
+명령어 &'
 featured_image: ''
 tags: ['nohup', 'nohup.out', 'unix', '노홉', '유닉스']
 ---

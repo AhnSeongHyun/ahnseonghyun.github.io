@@ -2,7 +2,7 @@
 title: '탈옥보다 못한 아이폰 OS4: 돈 받는다면 사기다.'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**탈옥보다 못한 아이폰 OS4: 돈 받는다면 사기다.**'
 featured_image: ''
 tags: ['3.13 탈옥', 'dev', 'iOS4', 'iOS4 GM버전', '아이폰 OS', '아이폰 멀티태스킹', '아이폰 배경화면', '아이폰 카메라', '아이폰 탈옥', '아이폰 폴더', '탈옥']
 ---

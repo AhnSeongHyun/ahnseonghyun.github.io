@@ -2,7 +2,9 @@
 title: '포도는 어떻게 되었을까?🍇'
 author: 'ash84'
 pub_date: '2020-10-02'
-description: ''
+description: '[이전 글들](https://ash84.io/2020/04/26/sub-character/)에서 포도나무를 심고 주말마다 가꾼 부캐의 썰을 풀었는데, 그 이후 포도는 어떻게 되었는지에 대해서 애기하려고 한다.  우선 잡초를 뽑는 것 이상으로 생각보다 할 일이 많다는 것을 깨닫게 되었다. 사실 그냥 심어보자는 무계획적인 부분이 많았고 전문적으로 포도재배에 대해서 공부한 것도 아니여서 부족한 부분이 많았고 그런 부분들은 그때 그때 몸으로 때웠다. 
+
+  ![grape](https://s3.ap-northeast-2.amazonaws.c'
 featured_image: ''
 tags: ['grape', 'grape-garden']
 ---

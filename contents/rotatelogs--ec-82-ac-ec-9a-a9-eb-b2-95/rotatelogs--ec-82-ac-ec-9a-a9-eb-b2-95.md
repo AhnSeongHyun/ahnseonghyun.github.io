@@ -2,7 +2,20 @@
 title: 'rotatelogs 사용법'
 author: 'ash84'
 pub_date: '2015-11-05'
-description: ''
+description: '링크 : [https://httpd.apache.org/docs/2.2/ko/programs/rotatelogs.html](https://httpd.apache.org/docs/2.2/ko/programs/rotatelogs.html)
+
+- Apache와 함께 자동 설치
+- /usr/local/apache/bin/rotatelogs
+
+ 
+
+#### **사용법**
+
+rotatelogs [ -l ] logfile [ rotationtime [ offset ]] | [ filesizeM ]
+
+ 
+
+#### **실행 옵션**'
 featured_image: ''
 tags: ['apache logs', 'dev', 'logrorate', 'roratelogs']
 ---

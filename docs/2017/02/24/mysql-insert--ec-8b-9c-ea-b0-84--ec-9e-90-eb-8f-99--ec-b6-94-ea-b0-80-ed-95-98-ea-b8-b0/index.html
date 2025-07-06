@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(mysql) insert 시간 자동 추가하기"/>
+    <meta property="og:description" content="데이터베이스 입력 시간이 중요할때가 있다. 예를 들면, 어떤 데이터를 수집한다고 할때, 일별 혹은 시간별 데이터를 뽑기 위해서는 입력시간 컬럼을 넣어주는 것이 필요하다. 프로그램상에서 Date 형으로 넣어 줄수도 있겠지만, SQL 은 짧으면 좋다고, INSERT OR UPDATE 시 자동으로 시간을 추가하는 방법을 사용하면 더 좋은것 같다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/02/24/mysql-insert--ec-8b-9c-ea-b0-84--ec-9e-90-eb-8f-99--ec-b6-94-ea-b0-80-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(mysql) insert 시간 자동 추가하기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="데이터베이스 입력 시간이 중요할때가 있다. 예를 들면, 어떤 데이터를 수집한다고 할때, 일별 혹은 시간별 데이터를 뽑기 위해서는 입력시간 컬럼을 넣어주는 것이 필요하다. 프로그램상에서 Date 형으로 넣어 줄수도 있겠지만, SQL 은 짧으면 좋다고, INSERT OR UPDATE 시 자동으로 시간을 추가하는 방법을 사용하면 더 좋은것 같다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(mysql) insert 시간 자동 추가하기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-02-24</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-02-24</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt; ">데이터베이스 입력 시간이 중요할때가 있다. 예를 들면, 어떤 데이터를 수집한다고 할때, 일별 혹은 시간별 데이터를 뽑기 위해서는 입력시간 컬럼을 넣어주는 것이 필요하다. 프로그램상에서 Date 형으로 넣어 줄수도 있겠지만, SQL 은 짧으면 좋다고, INSERT OR UPDATE 시 자동으로 시간을 추가하는 방법을 사용하면 더 좋은것 같다. </span></p>
 <p><strong><span style="font-size: 11pt; ">1. TIMESTAMP 컬럼 추가. </span></strong></p>
@@ -91,23 +93,21 @@
 
 </div>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'INSERT 시간 추가'">#'INSERT 시간 추가'</a>&nbsp;
+            #INSERT 시간 추가&nbsp;
         
-            <a href="/tag/'MySQL'">#'MySQL'</a>&nbsp;
+            #MySQL&nbsp;
         
-            <a href="/tag/'timestamp'">#'timestamp'</a>&nbsp;
+            #timestamp&nbsp;
         
-            <a href="/tag/'UPDATE 시간 추가'">#'UPDATE 시간 추가'</a>&nbsp;
+            #UPDATE 시간 추가&nbsp;
         
-            <a href="/tag/'insert'">#'insert'</a>&nbsp;
+            #insert&nbsp;
         
-            <a href="/tag/'update']">#'update']</a>&nbsp;
+            #update&nbsp;
         
     </div> 
     <footer>

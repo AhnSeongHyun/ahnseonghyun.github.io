@@ -2,7 +2,9 @@
 title: '런칭 이후의 일들 '
 author: 'ash84'
 pub_date: '2018-07-05'
-description: ''
+description: '요 몇년간 큰 조직과 작은 조직에서 번갈아 가면서 서비스를 런칭을 해보면서 드는 생각이 있다. 런칭 이전에는 설계와 코드에 많은 공을 들이지만, 이후에는 그것 보다는 좀 더 프로세스 및 자동화에 신경을 많이 쓰게 되는 것 같다.(설계와 코드는 항상 중요하다.) 오픈하고 땡이라는 개념은 개발-운영이 분리된 조직에서나 가능한 것 같고. **개발하면서 운영도 해야하는 작은 조직에서 가장 중요한 것은 개발생산성과 품질을 운영을 하면서 유지 하는 일이다.**  
+
+당연히 운영이 더 중요한데 당장 발생하는 운영상의 이슈들을 처리해야하고 운영하'
 featured_image: 'https://images.unsplash.com/photo-1490813236138-21f12c606371?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0678ee7c332321516001887f8441a527&auto=format&fit=crop&w=2851&q=80'
 tags: [' ', 'dev', 'essay', 'service', 'launching']
 ---

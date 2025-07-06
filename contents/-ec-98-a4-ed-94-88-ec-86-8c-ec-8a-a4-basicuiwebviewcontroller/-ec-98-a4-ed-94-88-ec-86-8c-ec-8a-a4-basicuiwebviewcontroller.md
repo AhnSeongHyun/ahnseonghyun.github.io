@@ -2,7 +2,7 @@
 title: '(오픈소스) BasicUIWebViewController'
 author: 'ash84'
 pub_date: '2013-02-13'
-description: ''
+description: '앱을 만들다 보면 주로 Naver, Daum Open API와 연동하는 경우가 많은데, 데이터를 가져오더라도 상세 데이터를 보려면 UIWebView를 쓸수 밖에 없다. BasicUIWebViewController 는 ViewController 에 웹 컨텐츠를 보여줄 수 있는 UIWebView 를 붙이고 해당 웹 컨텐츠가 로딩 될때의 진행상황을 표시해주기 위해서 UIProgressBar 를 붙였다. 또한 해당 웹 페이지의 타이틀(document.title)을 가져와서 제일 상단'
 featured_image: ''
 tags: ['BasicUIWebViewController', 'Opensource', 'WebViewController', '오픈소스']
 ---

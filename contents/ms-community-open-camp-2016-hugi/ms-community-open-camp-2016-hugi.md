@@ -2,7 +2,11 @@
 title: 'MS Community Open Camp 2016'
 author: 'ash84'
 pub_date: '2017-03-28'
-description: ''
+description: '오키나와 여름휴가를 마치고 이전에 신청해봤던 MS Community Open Camp 2016에 참가하게 되었다. 광화문이라는(언제 이사를 간 거야, MS) 먼 곳을 가기 위해서 많이 고민했지만, 가기를 잘했다는 생각이 든 세미나였다.  
+
+**Keynote 2: 마이크로소프트, 리눅스와의 어색하지 않은 동거, 김명신/임백준**
+
+- build 2016 에 대한 요약이었다고 해도 과언이 아니지만, 사실 리눅스를 지원한다는 것에 대해서 어렴풋이 들었지 어떤 식으로 지원하는지에 대해서는 자세히 보지는 못했다. 김명신 에반젤리스트의 감칠'
 featured_image: 'https://farm2.staticflickr.com/1615/26379780452_40557fc3de_k.jpg'
 tags: ['MS', 'community open camp', 'dev', 'Developer', 'IT Innovation Conference 2008', 'conference']
 ---

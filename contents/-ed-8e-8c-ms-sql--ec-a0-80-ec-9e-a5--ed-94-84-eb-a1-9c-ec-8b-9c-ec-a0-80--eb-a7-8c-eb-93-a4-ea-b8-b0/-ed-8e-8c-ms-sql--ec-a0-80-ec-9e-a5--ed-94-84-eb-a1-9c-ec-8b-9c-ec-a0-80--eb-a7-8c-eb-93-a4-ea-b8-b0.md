@@ -2,7 +2,18 @@
 title: '[펌] MS-SQL : 저장 프로시저 만들기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '출처 : [http://cafe.naver.com/hackertime/397](http://cafe.naver.com/hackertime/397)
+
+  
+
+
+
+  
+**저장 프로시저 만들기**
+
+  
+  
+사용법)'
 featured_image: ''
 tags: ['dev', 'MSSQL', '저장프로시저']
 ---

@@ -2,7 +2,11 @@
 title: '(Shell) 사용자 추가/삭제 스크립트[펌]'
 author: 'ash84'
 pub_date: '2012-12-27'
-description: ''
+description: '페이스북에서 일하는 방식처럼, 하기 싫은 업무는 자동화 해야한다. 그게 프로그래머가 일하는 방식이라는것. 
+
+
+
+**1. 사용자 추가 script**'
 featured_image: ''
 tags: ['passwd', 'useradd', 'userdel', '리눅스 사용자 추가', '사용자 삭제', '사용자 추가', '쉘스크립트']
 ---

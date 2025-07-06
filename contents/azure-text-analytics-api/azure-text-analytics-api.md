@@ -2,7 +2,11 @@
 title: 'Azure Text Analytics 연동하기'
 author: 'ash84'
 pub_date: '2017-07-05'
-description: ''
+description: '[지난 글](https://ash84.net/2017/07/02/using-chatfuel-make-chatbot/)에서 chatfuel을 이용해서 챗봇을 간단하게 만들어봤는데 MS Azure 에서 제공하는 Text Analytics API 를 연동해서 감정분석까지는 아니고 단순하게 텍스트에 대한 긍정부정을 알려주는 챗봇을 구성해 보기로 했다. 
+
+https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/
+
+총 4가지 API를 제공하는데 **Detect'
 featured_image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTCoP89IrLxbeI_UcIeXK8kYFXf0aWLOmDs-_MWt2qn8JpnY9nsg'
 tags: ['dev', 'azure', 'text-analytics', 'ML', 'chatbot']
 ---

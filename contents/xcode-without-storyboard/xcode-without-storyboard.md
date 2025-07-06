@@ -2,7 +2,11 @@
 title: 'xcode without storyboard'
 author: 'ash84'
 pub_date: '2016-02-15'
-description: ''
+description: '이상하게도 난 여전히 스토리보드가 쉽지 않다. 코드를 통해서 UIViewController 를 만들어내고 호출하고 이동하는 것들이 자연스러운 구시대 유물인셈. storyboard 없이 프로젝트를 시작하려면 일단 simple view application을 선택하고, AppDelegate.m 에서 아래와 같이 코딩해주면 된다. 
+
+
+
+그리고'
 featured_image: ''
 tags: ['dev', 'Xcode', 'storyboard']
 ---

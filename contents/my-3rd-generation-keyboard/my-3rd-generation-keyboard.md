@@ -2,7 +2,11 @@
 title: '나의 3세대 키보드'
 author: 'ash84'
 pub_date: '2025-02-05'
-description: ''
+description: '개발자를 하면서 그리고 글 쓰는 것을 좋아하기 때문에 키보드를 자주 쓸수 밖에 없다보니 그리고 앞으로 무슨일을 하더라도 키보드는 계속 쓸 것 같고, 키보드에 대한 관심은 계속 있을것 같아서 이렇게 글 을 써본다. 아마 이 글은 계속 업데이트되는 식으로 되지 않을까 싶다. 
+
+# 1세대 
+
+꽤 오래전 좋은 키보드가 필요하다고 느껴서 리서치를 했었다. 정확히는 겉멋이었고, 난 MS키보드에서 막 벗어나고 있는 시점이었고, [리얼포스](https://link.coupang.com/a/cbwcpc)와 [HHKB](https://link.co'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/my-3rd-generation-keyboard/thumbnail.jpeg'
 tags: ['Keyboard', 'essay', 'dev']
 ---

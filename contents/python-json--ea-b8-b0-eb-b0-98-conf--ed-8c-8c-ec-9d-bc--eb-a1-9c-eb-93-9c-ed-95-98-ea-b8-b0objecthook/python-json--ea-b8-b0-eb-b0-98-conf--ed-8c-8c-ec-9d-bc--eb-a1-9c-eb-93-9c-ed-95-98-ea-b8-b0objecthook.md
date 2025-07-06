@@ -2,7 +2,7 @@
 title: 'python json 기반 conf 파일 로드하기(object_hook)'
 author: 'ash84'
 pub_date: '2016-08-13'
-description: ''
+description: 'conf 를 json 파일로 쓰는 경우가 있는데 주로 개인 프로젝트 할때 많이 쓰는 편인데 결국 conf 라는것을 환경설정 파일이기 때문에 파일로 가져와서 읽어야 하는 경우가 많다. 이 경우 json 을 바로 dict 으로 loads 해서 사용하게 되면 conf[“port”] 이런식으로 접근해야 하는데 object_hook 를 이용하면 객체의 형태로 접근할수가 있다. 좀더 코드가 깔끔해 진다랄까.'
 featured_image: ''
 tags: ['dev', 'JSON', 'loads', 'object_hook', 'Python', '파이썬']
 ---

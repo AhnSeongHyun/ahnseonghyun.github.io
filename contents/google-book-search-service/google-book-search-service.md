@@ -2,7 +2,8 @@
 title: 'Google Book Search Service'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: 'Google Book Search Service
+![](http://ash84.net/wp-content/uploads/1/cfile24.uf.153F0E0E4A86342771A131.jpg)'
 featured_image: ''
 tags: ['dev', 'Google', 'Google Book Search Service', '구글', '도서관 프로젝트', '전자책', '책검색']
 ---

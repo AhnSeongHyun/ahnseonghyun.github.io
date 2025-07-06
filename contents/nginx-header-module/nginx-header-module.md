@@ -2,7 +2,14 @@
 title: 'nginx header module'
 author: 'ash84'
 pub_date: '2020-01-22'
-description: ''
+description: '```shell
+add_header 'Access-Control-Allow-Origin' '{ DOMAIN }';
+add_header 'Access-Control-Allow-Credentials' 'true';
+add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PUT, HEAD';
+add_header 'Access-Control-Allow-Headers' 'Origin,Content-Type,authorization,accept';
+```
+
+API 작업할 때는 별다른 이'
 featured_image: ''
 tags: ['nginx', 'cors', 'header', 'add_header']
 ---

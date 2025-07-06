@@ -2,7 +2,11 @@
 title: 'Python - 잘못된 클래스 변수의 사용'
 author: 'ash84'
 pub_date: '2017-06-01'
-description: ''
+description: '본 글은 Toptal에 올라온 [Buggy Python Code: The 10 Most Common Mistakes That Python Developers Make](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) 글을 보고 공부하면서 쓴 글이다. 번역 + 개인의 공부내용이라고 생각하면 될 것 같다.
+
+**Common Mistake #2: Using class variables incorrectly**
+
+**잘못된 클래스 변수의 사용*'
 featured_image: ''
 tags: ['dev', 'Python', 'class variable', 'toptal']
 ---

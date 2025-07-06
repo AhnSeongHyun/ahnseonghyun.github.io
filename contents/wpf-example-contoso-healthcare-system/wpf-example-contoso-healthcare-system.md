@@ -2,7 +2,12 @@
 title: 'WPF example - CONTOSO Healthcare System'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/gl138.png)
+
+  
+ 강성재님의 MS 세미나에서 보았던 예제중 하나다. 조금은 내게 아이디어를 주었던 자료. 
+  
+ 이전 랩미팅때 About .NET Framework3.0 라는 주제로 발표할건데, WPF(Windows Presentation Foundation) 부분에 대한 예제로 첨가할 예정이다. </'
 featured_image: ''
 tags: ['.Net Framework 3.0', 'contoso', 'dev', 'healthcare system', 'Prototype', 'WPF']
 ---

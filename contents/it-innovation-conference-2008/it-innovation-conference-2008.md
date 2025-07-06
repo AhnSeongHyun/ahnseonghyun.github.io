@@ -2,7 +2,7 @@
 title: 'IT Innovation Conference 2008'
 author: 'ash84'
 pub_date: '2008-12-04'
-description: ''
+description: '![](http://img.etnews.co.kr/Et_2008/newsletter/081029_ebiz/1127_top.jpg)'
 featured_image: ''
 tags: ['IT Innovation Conference 2008']
 ---

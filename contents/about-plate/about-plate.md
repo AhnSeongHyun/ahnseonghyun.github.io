@@ -2,7 +2,7 @@
 title: 'EMOCON 2015 F/W - Plate 에 대한 이야기'
 author: 'ash84'
 pub_date: '2015-10-28'
-description: ''
+description: '이상한모임 컨퍼런스, 일명 EMOCON 2015 F/W 에 1일차에 ‘카피캣으로 시작하는 오픈소스’ 라는 약을 팔았다. 올해의 목표중 하나가 컨퍼런스 발표였는데 난 아직도 대면은 어려운지라, 이상한 모임 덕분에 올해의 목표를 이룬것 같아'
 featured_image: ''
 tags: ['dev', 'emocon f/w 2015', 'plate', 'plate-project', 'slate', '이모콘', '이상한모임']
 ---

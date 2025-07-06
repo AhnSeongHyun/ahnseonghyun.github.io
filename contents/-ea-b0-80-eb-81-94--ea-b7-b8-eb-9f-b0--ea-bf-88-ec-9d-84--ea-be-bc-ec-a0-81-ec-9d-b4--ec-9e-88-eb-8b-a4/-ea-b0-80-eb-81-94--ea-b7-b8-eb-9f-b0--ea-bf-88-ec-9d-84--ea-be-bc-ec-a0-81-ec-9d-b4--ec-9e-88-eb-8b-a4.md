@@ -2,7 +2,7 @@
 title: '# 가끔 그런 꿈을 꾼적이 있다.'
 author: 'ash84'
 pub_date: '2010-02-22'
-description: ''
+description: '가끔 그런 꿈을 꾼적이 있다. 특히, 홍대에 있는 제너럴 닥터에 갔을때 그 공간(Space)이'
 featured_image: ''
 tags: ['']
 ---

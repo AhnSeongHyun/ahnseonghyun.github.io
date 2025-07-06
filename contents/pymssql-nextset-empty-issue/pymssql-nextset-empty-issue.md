@@ -2,7 +2,9 @@
 title: 'pymssql nextset() 빈값 이슈'
 author: 'ash84'
 pub_date: '2017-07-25'
-description: ''
+description: '최근에 구현한 부분에서 이상한 경험을 했는데 같은 db 프로시저를 호출하는 코드를 쓰고 테스트를 했는데 어떤 조건으로는 데이터가 순서에 맞게 잘 나오고 안나오고 하는 경우였다. 
+
+데이터는 mssql 저장 프로시저에서 2개의 결과셋을 반환하는데 첫번째에서는 보여줄 데이터의 금액, 건수 합산 데이터를 보여주고, 두번째에서는 실제 보여줄 데이터가 나오는 것이었다. 그래서 generator 를 이용해서 `g.next()`, `g.next()` 이렇게 2번 호출해서 해당 데이터를 받아오고 각각을 다른 변수에 담아서 리턴하고 있었다. 리턴된'
 featured_image: ''
 tags: ['dev', 'Python', 'MSSQL', 'pymssql', 'nextset']
 ---

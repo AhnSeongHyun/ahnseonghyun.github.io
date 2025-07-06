@@ -2,7 +2,11 @@
 title: '[Java] HashSet 을 파헤쳐보자.'
 author: 'ash84'
 pub_date: '2017-04-24'
-description: ''
+description: 'HashSet은 Set 인터페이스를 구현하는 클래스로 내부적으로 HashMap 인스턴스의 지원을 받는다. [GrepCode](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/6-b14/java/lang/String.java)에 가서 HashSet을 찾아보자.  
+
+
+
+위와 같이 HashSet은 내부적으로 HashMap을 가지고 있다. 그렇기 때문에 대부'
 featured_image: ''
 tags: ['dev', 'HashMap', 'HashSet', 'Java', 'set']
 ---

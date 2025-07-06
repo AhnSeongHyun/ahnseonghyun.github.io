@@ -2,7 +2,13 @@
 title: 'mysqldump - dump & restore'
 author: 'ash84'
 pub_date: '2015-08-31'
-description: ''
+description: '**mysqldump 덤프뜨기**
+
+ 
+
+위의 명령 실행시, 저장프로시저, 트리거 함수, 스키마가 sql로 만들어 진다.   **mysqldump 덤프복원**  
+
+명령 실행전, 사용할 계정을 만들고 디비를 만들고 계정의 접근과 계정과'
 featured_image: ''
 tags: ['dump', 'MySQL', 'mysqldump', 'restore']
 ---

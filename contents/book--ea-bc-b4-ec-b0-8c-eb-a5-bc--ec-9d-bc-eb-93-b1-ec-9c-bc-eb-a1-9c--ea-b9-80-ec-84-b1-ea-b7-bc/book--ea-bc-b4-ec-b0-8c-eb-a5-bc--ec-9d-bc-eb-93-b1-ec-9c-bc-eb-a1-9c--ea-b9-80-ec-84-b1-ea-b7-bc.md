@@ -2,7 +2,8 @@
 title: '[Book] 꼴찌를 일등으로 - 김성근 -'
 author: 'ash84'
 pub_date: '2009-11-06'
-description: ''
+description: '﻿  
+![](http://ash84.net/wp-content/uploads/1/cfile29.uf.157C0B244AF39E5249DB32.jpg)현재 다니고 있는 회사로 오면'
 featured_image: ''
 tags: ['SK와이번즈', '김성근', '꼴찌를 일등으로', '야구']
 ---

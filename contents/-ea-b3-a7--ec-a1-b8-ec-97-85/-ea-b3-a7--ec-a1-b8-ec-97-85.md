@@ -2,7 +2,8 @@
 title: '곧 졸업.'
 author: 'ash84'
 pub_date: '2009-05-06'
-description: ''
+description: '[![Graduation Cake Guy](http://farm1.static.flickr.com/47/143186839_5c9fad13cd.jpg)](http://www.flickr.com/photos/15923063@N00/143186839 "Graduation Cake Guy")  
+Graduation Cake Guy by [CarbonNYC](http://www.flickr.com/photos/15923063@N00'
 featured_image: ''
 tags: ['졸업']
 ---

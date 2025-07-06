@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[C/C++] strlen() 과 String 클래스의 length()함수의 차이점."/>
+    <meta property="og:description" content="문자열의 갯수를 구하는 함수만큼 공통적으로 여러 언어에서 구현되어 있는 기능도 드문것 같습니다. 오늘 소개할 내용은 C++ 의  내에 있는 char * 형의 문자열의 갯수를 세어주는 `strlen()` 함수에 대해서 이야기 하려고 합니다. 제목처럼 일반적인 객체지향의 언어 자바나 C#의 String 클래스에서 사용하는 length() 함수와 어떻게 다른지 이야기 하려고 합니다. 물론 아시는 분들도 있겠지만.^^"/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/04/17/cc-strlen--ea-b3-bc-string--ed-81-b4-eb-9e-98-ec-8a-a4-ec-9d-98-length-ed-95-a8-ec-88-98-ec-9d-98--ec-b0-a8-ec-9d-b4-ec-a0-90"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[C/C++] strlen() 과 String 클래스의 length()함수의 차이점.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="문자열의 갯수를 구하는 함수만큼 공통적으로 여러 언어에서 구현되어 있는 기능도 드문것 같습니다. 오늘 소개할 내용은 C++ 의  내에 있는 char * 형의 문자열의 갯수를 세어주는 `strlen()` 함수에 대해서 이야기 하려고 합니다. 제목처럼 일반적인 객체지향의 언어 자바나 C#의 String 클래스에서 사용하는 length() 함수와 어떻게 다른지 이야기 하려고 합니다. 물론 아시는 분들도 있겠지만.^^" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[C/C++] strlen() 과 String 클래스의 length()함수의 차이점.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-04-17</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-04-17</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>문자열의 갯수를 구하는 함수만큼 공통적으로 여러 언어에서 구현되어 있는 기능도 드문것 같습니다. 오늘 소개할 내용은 C++ 의 <string.h> 내에 있는 char * 형의 문자열의 갯수를 세어주는 <code>strlen()</code> 함수에 대해서 이야기 하려고 합니다. 제목처럼 일반적인 객체지향의 언어 자바나 C#의 String 클래스에서 사용하는 length() 함수와 어떻게 다른지 이야기 하려고 합니다. 물론 아시는 분들도 있겠지만.^^   </p>
 <p>먼저 C++ 에서 사용하는 경우를 살펴볼까요? 대부분 다음과 같이 사용하겠지요.</p>
@@ -100,23 +102,21 @@ System.out.println(name.length());
 
 <p>최근에 알게된 사실은 외국의 문자에서는 3바이트 짜리 문자도 있다고 하더군요. 사실 자바 개발자 분들이나 혹은 다른 개발자 분들이 strlen()을 쓰실때 그렇게 길이라고 생각하고 쓰실수도 있지만, 더 큰 문제는 다양한 개발자들이 개발해 놓은 소스코드 내에서 <code>strlen()</code> 함수가 랩핑되어져서 <code>length()</code> 처럼 표현되었을 경우, 혼란을 가져올수 있다는 것입니다.  또 다른 문제는 사실상 다국어에 대한 처리가 없다면 상관이 없지만 혼합되 문자열의 처리의 경우 strlen()만으로 글자수를 체크한 다는 것은 조금은 버거운 일이 아닌가 하는 생각이 들었습니다.  </p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['c#'">#['c#'</a>&nbsp;
+            #c#&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+            #Java&nbsp;
         
-            <a href="/tag/'length()'">#'length()'</a>&nbsp;
+            #length()&nbsp;
         
-            <a href="/tag/'String class'">#'String class'</a>&nbsp;
+            #String class&nbsp;
         
-            <a href="/tag/'string.h'">#'string.h'</a>&nbsp;
+            #string.h&nbsp;
         
-            <a href="/tag/'strlen']">#'strlen']</a>&nbsp;
+            #strlen&nbsp;
         
     </div> 
     <footer>

@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="jinja - {% break %} 사용하기"/>
+    <meta property="og:description" content="jinja template 는 강력한 형태의 for 문을 제공하는데, 당연히 일반적인 for 문 안에서의 continue 나 break 등이 가능할 것이라고 생각하지만, 기본적으로 제공하지는 않는다. 이런 기능을 사요하기 위해서는 `jinja2.ext.loopcontrols` 을 설치해야 한다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2018/05/31/jinja-break-for-loop-controls"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>jinja - {% break %} 사용하기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="jinja template 는 강력한 형태의 for 문을 제공하는데, 당연히 일반적인 for 문 안에서의 continue 나 break 등이 가능할 것이라고 생각하지만, 기본적으로 제공하지는 않는다. 이런 기능을 사요하기 위해서는 `jinja2.ext.loopcontrols` 을 설치해야 한다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">jinja - {% break %} 사용하기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2018-05-31</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2018-05-31</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>jinja template 는 강력한 형태의 for 문을 제공하는데, 당연히 일반적인 for 문 안에서의 continue 나 break 등이 가능할 것이라고 생각하지만, 기본적으로 제공하지는 않는다. 이런 기능을 사요하기 위해서는 <code>jinja2.ext.loopcontrols</code> 을 설치해야 한다. </p>
 <p>flask 에서 설치 하는 방법은 아래와 같이 app 객체내에서 <code>jinja_env.add_extension</code> 함수에 추가해 주면 된다. </p>
@@ -85,19 +87,17 @@
 <p>위의 코드는 메뉴의 코드가 권한에 있으면 메뉴를 표시하는 코드인데, 한번만 확인하면 빠져나오도록 <code>{% break %}</code> 문을 통해서 제어하고 있다. </p>
 <p>jinja 에서는 다양한 extension 을 제공하고 있는데, http://jinja.pocoo.org/docs/2.10/extensions/ 여기에 가면 그런 항목을 확인 할 수가 있다. </p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['jinja2'">#['jinja2'</a>&nbsp;
+            #jinja2&nbsp;
         
-            <a href="/tag/'jinja2 template'">#'jinja2 template'</a>&nbsp;
+            #jinja2 template&nbsp;
         
-            <a href="/tag/'break'">#'break'</a>&nbsp;
+            #break&nbsp;
         
-            <a href="/tag/'loop controls'">#'loop controls'</a>&nbsp;
+            #loop controls&nbsp;
         
-            <a href="/tag/'FLASK']">#'FLASK']</a>&nbsp;
+            #FLASK&nbsp;
         
     </div> 
     <footer>

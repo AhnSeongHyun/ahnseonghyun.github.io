@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[JAVA] 공백제거와 미제거의 md5 차이에 대해서."/>
+    <meta property="og:description" content="기술적인 것은 아니기 때문에 너무 큰 기대를 하진 마시길 바라며 쓴다. 일단 md5 키를 추출하는 방법은 이전 포스팅에서도 언급했었다. (링크) 최근에 md5에 대한 또 다른 생각이 있어서 이글을 쓰게 된다. 이전에는 캐쉬를 하기위한 키 값 데이터 추출에 사용했었는데, 최근에 어떤 내용의 중복여부를 체크 하기 위한 도구로 사용하기도 했었다. 그런데 그 과정에서 문자열 데이터의 공백 여부에 대해서 전처리가 필요하다는 것을 알게 되었다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/04/30/java--ea-b3-b5-eb-b0-b1-ec-a0-9c-ea-b1-b0-ec-99-80--eb-af-b8-ec-a0-9c-ea-b1-b0-ec-9d-98-md5--ec-b0-a8-ec-9d-b4-ec-97-90--eb-8c-80-ed-95-b4-ec-84-9c"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[JAVA] 공백제거와 미제거의 md5 차이에 대해서.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="기술적인 것은 아니기 때문에 너무 큰 기대를 하진 마시길 바라며 쓴다. 일단 md5 키를 추출하는 방법은 이전 포스팅에서도 언급했었다. (링크) 최근에 md5에 대한 또 다른 생각이 있어서 이글을 쓰게 된다. 이전에는 캐쉬를 하기위한 키 값 데이터 추출에 사용했었는데, 최근에 어떤 내용의 중복여부를 체크 하기 위한 도구로 사용하기도 했었다. 그런데 그 과정에서 문자열 데이터의 공백 여부에 대해서 전처리가 필요하다는 것을 알게 되었다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[JAVA] 공백제거와 미제거의 md5 차이에 대해서.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-04-30</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-04-30</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>기술적인 것은 아니기 때문에 너무 큰 기대를 하진 마시길 바라며 쓴다. 일단 md5 키를 추출하는 방법은 이전 포스팅에서도 언급했었다. (링크) 최근에 md5에 대한 또 다른 생각이 있어서 이글을 쓰게 된다. 이전에는 캐쉬를 하기위한 키 값 데이터 추출에 사용했었는데, 최근에 어떤 내용의 중복여부를 체크 하기 위한 도구로 사용하기도 했었다. 그런데 그 과정에서 문자열 데이터의 공백 여부에 대해서 전처리가 필요하다는 것을 알게 되었다.</p>
 <p>예를 들어,</p>
@@ -84,11 +86,9 @@ UML다이어그램
 <p>고객의 요구사항에 따라 다르겠지만, 공백문자 제거 및 특수문자/숫자 제거 등을 전처리 단계로 생각해 봐야 할 것이다.  물론 문자열의 성격이나 해당 문자열이 나타내는 것이 무엇인가에 따라 다르겠지만 이러한 전처리 작업이 필요하다고 생각한다.</p>
 <script src="https://gist.github.com/3217796.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev']">#['dev']</a>&nbsp;
+            #dev&nbsp;
         
     </div> 
     <footer>

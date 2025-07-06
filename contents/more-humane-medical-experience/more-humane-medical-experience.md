@@ -2,7 +2,7 @@
 title: 'More Humane Medical Experience'
 author: 'ash84'
 pub_date: '2012-12-20'
-description: ''
+description: '조금 된 동영상인데, 홍대의 제너럴 닥터에 대한 이야기'
 featured_image: ''
 tags: ['tedxseoul', '제너럴 닥터', '홍대']
 ---

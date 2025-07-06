@@ -2,7 +2,8 @@
 title: '[iOS] UIImagePicker 호출 후, ViewDidLoad가 호출되는 이유.'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '최근 개발하고 있는 프로젝트에 겪었던 기 현상을 먼저 이야기 하자면 이렇다.   
+<'
 featured_image: ''
 tags: ['dev', 'IOS', 'UIImagePicker', 'ViewDidLoad', 'ViewDidUnload', '메모리경고']
 ---

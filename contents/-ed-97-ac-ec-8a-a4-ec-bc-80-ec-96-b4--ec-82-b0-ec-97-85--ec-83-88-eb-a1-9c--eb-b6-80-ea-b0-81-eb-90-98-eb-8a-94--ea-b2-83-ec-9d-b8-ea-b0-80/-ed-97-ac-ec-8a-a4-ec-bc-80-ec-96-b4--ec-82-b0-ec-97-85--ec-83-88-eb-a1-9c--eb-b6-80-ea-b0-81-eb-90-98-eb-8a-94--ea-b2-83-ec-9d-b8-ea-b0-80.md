@@ -2,7 +2,7 @@
 title: '헬스케어 산업, 새로 부각되는 것인가?'
 author: 'ash84'
 pub_date: '2007-06-07'
-description: ''
+description: '![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/fk64.jpg) 인텔에서 헬스케어 PC를 만들었다는 소식을 접했다. 교수님을 통해서 였지만, 실제 네이버 뉴스에서 이 기사와 그림을 봤을때는 인텔에서 이정도로 헬스케어 산업에 관심을 가지고 있는 줄은 몰랐다. 단지 하나의 타블렛 단말기로 보기보다는 헬스케어 산업의 부흥으로 봐야 하지 않을까 싶다. 실제로 우리나라에서도 U'
 featured_image: ''
 tags: ['Healcare Service', 'healthcare', 'intel', 'MS', '부흥', '인텔', '타블렛PC', '헬스케어']
 ---

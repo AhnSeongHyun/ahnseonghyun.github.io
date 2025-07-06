@@ -2,7 +2,7 @@
 title: '[MomoTwit] Plan Of Source Open (소스공개 계획)'
 author: 'ash84'
 pub_date: '2011-01-18'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile9.uf.1540533D4D34E1F62BAFFE.PNG)'
 featured_image: ''
 tags: ['MAKE ICON', 'MomoTwit', 'OAConsumer', 'PUBLISH APP', 'Twitter', 'twitter api', '소스코드공개', '아이폰 강의', '트위터 API']
 ---

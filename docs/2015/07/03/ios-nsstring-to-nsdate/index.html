@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) NSString to NSDate"/>
+    <meta property="og:description" content="데이터를 저장하다 보면  NSDate 를 결국 문자열의 형태로 저장할 수 밖에 없다. 당연히 텍스트 파일에 저장하니까 그런데, 다시 파일에서 데이터로 복원할때는 당연히 NSDate 형식으로 바꾸어서 써야 할때가 있다. 아래의 코드를 보자."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/ios-nsstring-to-nsdate"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) NSString to NSDate</title>
-    <meta name="description" content="" />
+    <meta name="description" content="데이터를 저장하다 보면  NSDate 를 결국 문자열의 형태로 저장할 수 밖에 없다. 당연히 텍스트 파일에 저장하니까 그런데, 다시 파일에서 데이터로 복원할때는 당연히 NSDate 형식으로 바꾸어서 써야 할때가 있다. 아래의 코드를 보자." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) NSString to NSDate</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">데이터를 저장하다 보면  NSDate 를 결국 문자열의 형태로 저장할 수 밖에 없다. 당연히 텍스트 파일에 저장하니까 그런데, 다시 파일에서 데이터로 복원할때는 당연히 NSDate 형식으로 바꾸어서 써야 할때가 있다. 아래의 코드를 보자. </span></p>
 <p><span style="font-size: 11pt;"><br />
@@ -76,17 +78,15 @@
 
 <p><span style="font-size: 11pt;">가장 중요한 부분은 포맷터의 설정이다. NSString to NSDate를 할때에는 NSDateFormatter를 이용해서 문자열을 어떤 형식의 NSDate 로 변경할 것인지를 설정해 주는 부분이다. 그래서 그 포맷터를 이용해서 NSString 을 NSDate로 변환하면 된다. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'NSDate 변환'">#'NSDate 변환'</a>&nbsp;
+            #NSDate 변환&nbsp;
         
-            <a href="/tag/'NSString to NSDate']">#'NSString to NSDate']</a>&nbsp;
+            #NSString to NSDate&nbsp;
         
     </div> 
     <footer>

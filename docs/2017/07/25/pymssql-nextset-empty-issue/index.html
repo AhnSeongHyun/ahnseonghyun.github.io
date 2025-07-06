@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="pymssql nextset() 빈값 이슈"/>
+    <meta property="og:description" content="최근에 구현한 부분에서 이상한 경험을 했는데 같은 db 프로시저를 호출하는 코드를 쓰고 테스트를 했는데 어떤 조건으로는 데이터가 순서에 맞게 잘 나오고 안나오고 하는 경우였다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/07/25/pymssql-nextset-empty-issue"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>pymssql nextset() 빈값 이슈</title>
-    <meta name="description" content="" />
+    <meta name="description" content="최근에 구현한 부분에서 이상한 경험을 했는데 같은 db 프로시저를 호출하는 코드를 쓰고 테스트를 했는데 어떤 조건으로는 데이터가 순서에 맞게 잘 나오고 안나오고 하는 경우였다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">pymssql nextset() 빈값 이슈</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-07-25</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-07-25</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>최근에 구현한 부분에서 이상한 경험을 했는데 같은 db 프로시저를 호출하는 코드를 쓰고 테스트를 했는데 어떤 조건으로는 데이터가 순서에 맞게 잘 나오고 안나오고 하는 경우였다. </p>
 <p>데이터는 mssql 저장 프로시저에서 2개의 결과셋을 반환하는데 첫번째에서는 보여줄 데이터의 금액, 건수 합산 데이터를 보여주고, 두번째에서는 실제 보여줄 데이터가 나오는 것이었다. 그래서 generator 를 이용해서 <code>g.next()</code>, <code>g.next()</code> 이렇게 2번 호출해서 해당 데이터를 받아오고 각각을 다른 변수에 담아서 리턴하고 있었다. 리턴된 데이터는 웹상에서 2개의 datatables 에 표시하는 식으로 구성되어 있었다. </p>
@@ -92,19 +94,17 @@ result_detail = g.nextset()
 <p>처음에는 이렇게 여러개의 결과셋을 반환하는 경우가 1개 밖에 없었는데 지금은 대부분의 저장프로시저들(그래봐야 5개?)이 이런식으로 리턴하고 있어서 모두 컬럼명으로 매칭하는 작업을 수행해줬다. </p>
 <p>개인적으로 pymssql 이 좀더 설치하기가 쉬워서(pip) 자주 사용하고 있는데 이런 문제가 있는것 처음 겪었던것 같고, 처음 보고된게 2013년인데 아직 잘 처리가 안된것 같아서 좀 아쉽다. 혹시 사용하시는 분이 있다면, <code>nextset()</code> 을 가져오는 부분에서 반드시 위와 같이 빈값을 보내는 경우를 테스트해서 예외처리 해보시길 바란다. </p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+            #Python&nbsp;
         
-            <a href="/tag/'MSSQL'">#'MSSQL'</a>&nbsp;
+            #MSSQL&nbsp;
         
-            <a href="/tag/'pymssql'">#'pymssql'</a>&nbsp;
+            #pymssql&nbsp;
         
-            <a href="/tag/'nextset']">#'nextset']</a>&nbsp;
+            #nextset&nbsp;
         
     </div> 
     <footer>

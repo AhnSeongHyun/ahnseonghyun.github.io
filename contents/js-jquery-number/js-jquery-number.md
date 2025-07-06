@@ -2,7 +2,7 @@
 title: '[js] jquery-number 3자리 금액 쉼표(,) 찍기'
 author: 'ash84'
 pub_date: '2017-03-28'
-description: ''
+description: '서버 단에서 해도 되겠지만, 프론트 단에서 괜찮은 라이브러리가 있어서 소개한다. 3자리마다 금액 숫자에서 쉼표를 찍는 라이브러리인데 쓰기가 쉬워서 메모해 놓는다.'
 featured_image: ''
 tags: ['3자리 금액 자바스크립트', 'dev', 'jQuery', 'jquery-number', 'JS', '통화']
 ---

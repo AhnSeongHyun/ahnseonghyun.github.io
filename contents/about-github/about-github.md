@@ -2,7 +2,7 @@
 title: '발표자료 - github : 유용한 기능들'
 author: 'ash84'
 pub_date: '2023-03-19'
-description: ''
+description: '사내에서 github 의 다양한 기능들에 대해서 소개했던 자료 공유합니다.'
 featured_image: ''
 tags: ['github', '발표자료']
 ---

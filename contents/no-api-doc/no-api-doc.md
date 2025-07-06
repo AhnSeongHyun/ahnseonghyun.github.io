@@ -2,7 +2,11 @@
 title: 'API 문서 없음.'
 author: 'ash84'
 pub_date: '2022-12-08'
-description: ''
+description: '자극적인 제목으로 어그로를 끌어봤다. 그렇지만 이 제목은 내 감정에 비하면 새 발의 피다. 작년과 올해 일을 하면서 API 문서에 대해서 많이 생각을 하게 되었다. 많은 업체들과 일하면서 API 문서를 받아서 작업을 할 경우도, 때로는 내가 만들어서 전달해 주어야 하는 경우가 있었다. **API 문서 없음**은 받은 경우에 해당한다.
+
+내가 생각하는 그리고 경험이 좋았던 API 문서들은 대체적으로 클라우드 서비스를 하거나 IT서비스를 전문적으로 하는 경우가 많았던 것 같다. 그들의 문서들은 공통적으로 특징이 있었다. 
+
+- 거의 8'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/no-api-doc/beatriz-perez-moya-XN4T2PVUUgk-unsplash+(1).jpg'
 tags: ['API', 'tech', 'development', 'dev']
 ---

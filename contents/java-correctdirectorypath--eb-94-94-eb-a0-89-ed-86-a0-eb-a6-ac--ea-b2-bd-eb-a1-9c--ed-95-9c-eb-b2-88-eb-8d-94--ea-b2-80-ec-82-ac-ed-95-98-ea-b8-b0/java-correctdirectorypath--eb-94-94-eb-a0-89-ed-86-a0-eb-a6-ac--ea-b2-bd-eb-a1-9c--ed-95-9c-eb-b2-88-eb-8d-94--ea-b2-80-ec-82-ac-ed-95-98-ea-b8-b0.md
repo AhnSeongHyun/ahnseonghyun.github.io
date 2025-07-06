@@ -2,7 +2,7 @@
 title: '[JAVA] correctDirectoryPath(), 디렉토리 경로 한번더 검사하기.'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '간혹 디렉토리 안에 여러가지 파일에 대해서 접근해야 할때, 디렉토리 경로를 받을때가 있다. 그런데 이 경로를 가지고 뭔가 작업을 할때 머리속에 늘 남는것 중 하나가 바로 사용자의 입력 행태이다. 즉, 사용자는 디렉토리 경로를 다음과 같이 입력할수 있다.'
 featured_image: ''
 tags: ['dev', 'File', 'Java', '디렉토리 경로 검사', '자바 디렉토리 추출']
 ---

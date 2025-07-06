@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="SQLAlchemy autocommit 에 대해서 "/>
+    <meta property="og:description" content="DB 상에서 autocommit 이란 데이터 변경 작업에 대한 SQL 자체가 바로 반영되는 것을 의미하는데   autocommit 이 아닌 상태에서는 여러줄의 명령을 하나의 트랜잭션으로 묶을수가 있다.(개별 DBMS 엔진이나 DB타입에 따라 다를수는 있다. 여기에서는 MYSQL InnoDB 기반으로 테스트를 진행하였다.)"/>
+    <meta property="og:url" content="https://ash84.io/docs/2018/07/31/sqlalchemy-autocommit"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>SQLAlchemy autocommit 에 대해서 </title>
-    <meta name="description" content="" />
+    <meta name="description" content="DB 상에서 autocommit 이란 데이터 변경 작업에 대한 SQL 자체가 바로 반영되는 것을 의미하는데   autocommit 이 아닌 상태에서는 여러줄의 명령을 하나의 트랜잭션으로 묶을수가 있다.(개별 DBMS 엔진이나 DB타입에 따라 다를수는 있다. 여기에서는 MYSQL InnoDB 기반으로 테스트를 진행하였다.)" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">SQLAlchemy autocommit 에 대해서 </h1>
-    <div class="blog-post-meta">
-        
-            <small>  2018-07-31</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2018-07-31</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>DB 상에서 autocommit 이란 데이터 변경 작업에 대한 SQL 자체가 바로 반영되는 것을 의미하는데   autocommit 이 아닌 상태에서는 여러줄의 명령을 하나의 트랜잭션으로 묶을수가 있다.(개별 DBMS 엔진이나 DB타입에 따라 다를수는 있다. 여기에서는 MYSQL InnoDB 기반으로 테스트를 진행하였다.)</p>
 <p><strong>mysql autocommit 확인하기</strong> </p>
@@ -361,15 +363,13 @@ session.close()
 <li>http://bryan7.tistory.com/78</li>
 </ul>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['Python'">#['Python'</a>&nbsp;
+            #Python&nbsp;
         
-            <a href="/tag/'sqlalchemy'">#'sqlalchemy'</a>&nbsp;
+            #sqlalchemy&nbsp;
         
-            <a href="/tag/'autocommit']">#'autocommit']</a>&nbsp;
+            #autocommit&nbsp;
         
     </div> 
     <footer>

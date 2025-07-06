@@ -2,7 +2,7 @@
 title: '(iOS) iPhone 시뮬레이터 경로'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '~/Library/Application Support/iPhone Simulator/'
 featured_image: ''
 tags: ['~/Library/Application Support/iPhone Simulator/', 'dev', 'IOS', 'iPhone 시뮬레이터 경로', '시뮬레이터']
 ---

@@ -2,7 +2,7 @@
 title: '내가 사랑하는 샴페인 #2 - 돔페리뇽(Dom Perignon)'
 author: 'ash84'
 pub_date: '2010-02-18'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile25.uf.153F470D4B7C8D265ECACC.jpg)'
 featured_image: ''
 tags: ['An Seong Hyun', 'Dom perignon', 'Moet Chandon', '내가사랑하는 샴페인', '돔페리뇽', '모엣 샹동', '베네딕트 수도원', '샴페인', '샴페인중의 샴페인', '안성현']
 ---

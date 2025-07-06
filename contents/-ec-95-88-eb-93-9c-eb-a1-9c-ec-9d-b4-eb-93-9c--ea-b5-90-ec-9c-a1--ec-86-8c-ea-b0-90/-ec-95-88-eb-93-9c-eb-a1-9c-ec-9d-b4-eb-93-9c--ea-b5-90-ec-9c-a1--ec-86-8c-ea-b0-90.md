@@ -2,7 +2,8 @@
 title: '안드로이드 교육 소감'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**  
+****안드로이드 교육 5일차.**'
 featured_image: ''
 tags: ['An Seong Hyun', 'Android', 'dev', 'KOCCA', '안드로이드 교육', '안성현', '한국문화컨텐츠진흥원']
 ---

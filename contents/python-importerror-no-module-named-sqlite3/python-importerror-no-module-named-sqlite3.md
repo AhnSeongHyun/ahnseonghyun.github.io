@@ -2,7 +2,7 @@
 title: '[Python] ImportError: No module named _sqlite3'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '파이썬에서 자주 사용하는것 중에 하나가 sqlite3 라이브러리인데, 해당 라이브러리를 사용하기 위해서는 파이썬 소스 첫 머리에서 import sqlite 문을 넣어 주어야 한다. 그런데 import 를 한후에 실행을 시켜보면, 다음과 같은 에러가 떨어진다.'
 featured_image: ''
 tags: ['dev', 'importError', 'No module named _sqlite3', 'sqlite3', '파이썬']
 ---

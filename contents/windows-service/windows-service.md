@@ -2,7 +2,11 @@
 title: 'Windows Service'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: 'Windows Service   
+
+
+  
+![사용자 삽입 이미지](http://ash84.'
 featured_image: ''
 tags: ['c#', 'dev', 'Installtutil', 'System.ComponentModel', 'System.Configuration.Install', 'System.ServiceProcess', 'Windows Service', '서비스등록']
 ---

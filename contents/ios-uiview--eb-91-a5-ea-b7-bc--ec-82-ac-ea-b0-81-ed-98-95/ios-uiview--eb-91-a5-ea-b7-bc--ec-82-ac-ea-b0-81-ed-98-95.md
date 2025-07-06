@@ -2,7 +2,7 @@
 title: '(iOS) UIView 둥근 사각형'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: 'UIView 계열에 모두 적용된다. UIImageView도 마찬가지. 자꾸까먹어서 메모.'
 featured_image: ''
 tags: ['dev', 'UIView Round Corner', 'UIView Round Rect', 'UIView 둥근 사각형']
 ---

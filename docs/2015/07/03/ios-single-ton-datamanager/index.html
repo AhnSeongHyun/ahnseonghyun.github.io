@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) Single-ton DataManager"/>
+    <meta property="og:description" content="자주 쓰는 프로그래밍 방식중 하나인데, 싱글턴으로 DataManager 라는 클래스를 만들어서 그곳에서 앱내에 모든 파일 관련 작업들을 다 해주는 것이다. 다른 각 클래스에서는 singleTon_GetInstance 를 이용해서 그냥 객체 생성하듯 생성하면 되지만 실제로는 하나만 생성이 된다. 아래의 코드는 그냥 간단하다. 저장하고자 하는 데"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/ios-single-ton-datamanager"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) Single-ton DataManager</title>
-    <meta name="description" content="" />
+    <meta name="description" content="자주 쓰는 프로그래밍 방식중 하나인데, 싱글턴으로 DataManager 라는 클래스를 만들어서 그곳에서 앱내에 모든 파일 관련 작업들을 다 해주는 것이다. 다른 각 클래스에서는 singleTon_GetInstance 를 이용해서 그냥 객체 생성하듯 생성하면 되지만 실제로는 하나만 생성이 된다. 아래의 코드는 그냥 간단하다. 저장하고자 하는 데" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,33 +63,28 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) Single-ton DataManager</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">자주 쓰는 프로그래밍 방식중 하나인데, 싱글턴으로 DataManager 라는 클래스를 만들어서 그곳에서 앱내에 모든 파일 관련 작업들을 다 해주는 것이다. 다른 각 클래스에서는 </span><span style="color: rgb(0, 0, 0);  line-height: 2; font-size: 11pt;">singleTon_GetInstance 를 이용해서 그냥 객체 생성하듯 생성하면 되지만 실제로는 하나만 생성이 된다. 아래의 코드는 그냥 간단하다. 저장하고자 하는 데이터가 있으면 NSMutableArray를 받아서 파일이름으로 현재 Application 에 Document 에 저장을 하는 방식이다. </span><span style="color: rgb(0, 0, 0);  font-size: 11pt; line-height: 2; ">읽어올때는 파일이름으로 읽어온다고 보면 된다. 저장되는 형식은 .plist 파일형식이다. </span></p>
 <script src="https://gist.github.com/4568422.js"></script>
 
 <script src="https://gist.github.com/4568397.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['DataManager'">#['DataManager'</a>&nbsp;
+            #DataManager&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'아이폰 개발']">#'아이폰 개발']</a>&nbsp;
+            #아이폰 개발&nbsp;
         
     </div> 
     <footer>

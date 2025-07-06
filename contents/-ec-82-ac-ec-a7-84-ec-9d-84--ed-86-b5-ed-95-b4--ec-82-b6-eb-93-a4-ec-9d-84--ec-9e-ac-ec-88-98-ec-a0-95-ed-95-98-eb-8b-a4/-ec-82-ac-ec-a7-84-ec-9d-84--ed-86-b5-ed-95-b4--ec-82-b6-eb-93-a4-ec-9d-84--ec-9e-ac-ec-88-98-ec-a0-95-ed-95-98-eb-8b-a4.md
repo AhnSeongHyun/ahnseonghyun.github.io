@@ -2,7 +2,7 @@
 title: '사진을 통해 삶들을 재수정하다.'
 author: 'ash84'
 pub_date: '2012-12-06'
-description: ''
+description: '집에오'
 featured_image: ''
 tags: ['ted', '사진', '사진 복원', '소셜네트워크', '쓰나미', '일본', '재능기부']
 ---

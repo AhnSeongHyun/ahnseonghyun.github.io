@@ -2,7 +2,12 @@
 title: 'tailon 으로 로그파일 웹에서 보기'
 author: 'ash84'
 pub_date: '2016-03-29'
-description: ''
+description: '서버에 있는 로그를 웹상의 타인에게 보여줘야 할 경우가 있는데(가급적 이런 경우는 좋지 않은 상황인 경우이다.) 어떻게 할까 찾아보다가 python 으로 된 tailon 이라는 쉽게 커맨드 명령어로 띄울 수 있는 툴이 있어서 소개한다. 
+
+https://github.com/gvalkov/tailon
+http://tailon.rtfd.org/
+
+특별한 새로고침 없이 자동으로 로그가 올라오고 **GREP** 이나 **AWK**를 항목이 UI상에 있기 때문에 원하는 검색 키워드를 입력하면 바로 검색해서 보여준다. 한가지 단점은 이상하게'
 featured_image: 'http://tailon.readthedocs.org/en/latest/_images/awk.png'
 tags: ['dev', 'logfile', 'weblog', 'tailon', 'Python', 'log.io']
 ---

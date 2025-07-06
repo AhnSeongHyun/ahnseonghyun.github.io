@@ -2,7 +2,12 @@
 title: '[C#] Bluetooth Communication in Black Jack phone(블랙잭에서 블루투스 이용)'
 author: 'ash84'
 pub_date: '2017-03-28'
-description: ''
+description: '블랙잭 폰에서(블랙잭 1) 블루투스를 이용한 프로그램 개발.
+
+**주의사항**  
+ – 기존의 PC 환경과는 다르게 SerialPort class를 통한 연결은 어려울 뿐만 아니라, 잘 되지가 않는다. 때문에 C# 으로 개발하기 위해서는 기존의 SerialPort 방식과는 다른 방식을 사용해야 한다.
+
+**라이브러리 : InTheHa'
 featured_image: ''
 tags: ['bluetooth', 'c#', 'dev', 'Serial Port', '블랙잭', '블랙잭에서 블루투스 이용하기', '블루투스', '윈도우 모바일', '윈도우 모바일 5', '프로그래밍', '프로그램개발']
 ---

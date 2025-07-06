@@ -2,7 +2,7 @@
 title: '# 삼성 바다 플랫폼 SDK 공개 및 설치'
 author: 'ash84'
 pub_date: '2010-05-07'
-description: ''
+description: '오늘 삼성 바다(bada) 플랫폼 개발 SDK 에 대한 이메일이 왔더군요. SDK 다운 받으라는 메일이어서 한번 받아봤습니다. 저는 인스톨 버전을 받았는데 한 300 메가정도 되는것 같습니다. 설치는 생각보다 오래걸리진 않았습니다.'
 featured_image: ''
 tags: ['bada', 'bada sdk', '바다플랫폼', '삼성']
 ---

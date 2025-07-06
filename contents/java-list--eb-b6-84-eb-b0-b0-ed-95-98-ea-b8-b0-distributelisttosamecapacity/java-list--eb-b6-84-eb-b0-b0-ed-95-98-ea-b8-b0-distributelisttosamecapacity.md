@@ -2,7 +2,7 @@
 title: '[Java] List 분배하기, distributeListToSameCapacity()'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '앞의 포스트에서는 [하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()](http://ash84.tistory.com/874) 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함'
 featured_image: ''
 tags: ['dev', 'distributeListToSameCapacity', 'distributeListToSubList', 'Java', '리스트 분배']
 ---

@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[C#] HL7 Validation 시, 주의점."/>
+    <meta property="og:description" content="HL7 Validation 시 주의점, 대부분의 XML의 Validation은 별 문제가 없었지만, HL7 같은 경우는 다음과 같은 예외가 발생했다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/c-hl7-validation--ec-8b-9c--ec-a3-bc-ec-9d-98-ec-a0-90"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[C#] HL7 Validation 시, 주의점.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="HL7 Validation 시 주의점, 대부분의 XML의 Validation은 별 문제가 없었지만, HL7 같은 경우는 다음과 같은 예외가 발생했다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[C#] HL7 Validation 시, 주의점.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>HL7 Validation 시 주의점, 대부분의 XML의 Validation은 별 문제가 없었지만, HL7 같은 경우는 다음과 같은 예외가 발생했다.</p>
 <div class="txc-textbox" style="BORDER-BOTTOM: #9fd331 1px solid; BORDER-LEFT: #9fd331 1px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #e7fdb5; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #9fd331 1px solid; BORDER-RIGHT: #9fd331 1px solid; PADDING-TOP: 10px">  
@@ -139,25 +141,23 @@
 </div>
 <p><font color="#840000">위의 XML에서 보면, include schemaLocation 이라고 되어 있는 부분이 있을 것이다. </font><font color="#840000">즉, 현재의 스키마는 datatytes.xsd 와 voc.xsd라는 두개의 다른 스키마를 참조하고 있다는 것이다. </font><font color="#840000">그래서 실제로 저 경로에 두 개의 파일이 존재하지 않으면, 위와 같은 예외가 발생한다는 것이다. </font><font color="#840000">비주얼스튜디오에서는 XML 문서자체의 규칙위반은 없기 때문에, </font><font color="#840000">컴파일시 아무 문제가 없지만, 제대로 스키마를 잡아 주지 않으면 큰 문제가 생길수가 있다.</font></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['c#'">#['c#'</a>&nbsp;
+            #c#&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'HL7'">#'HL7'</a>&nbsp;
+            #HL7&nbsp;
         
-            <a href="/tag/'ValidationCheck'">#'ValidationCheck'</a>&nbsp;
+            #ValidationCheck&nbsp;
         
-            <a href="/tag/'XSD'">#'XSD'</a>&nbsp;
+            #XSD&nbsp;
         
-            <a href="/tag/'스키마'">#'스키마'</a>&nbsp;
+            #스키마&nbsp;
         
-            <a href="/tag/'예외'">#'예외'</a>&nbsp;
+            #예외&nbsp;
         
-            <a href="/tag/'프로그래밍']">#'프로그래밍']</a>&nbsp;
+            #프로그래밍&nbsp;
         
     </div> 
     <footer>

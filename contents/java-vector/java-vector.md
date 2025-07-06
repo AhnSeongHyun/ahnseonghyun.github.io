@@ -2,7 +2,9 @@
 title: '[Java] Vector에 대해서.'
 author: 'ash84'
 pub_date: '2017-04-30'
-description: ''
+description: 'vector는  증가 가능한 객체의 배열형태( a growable array of objects)라고 자바문서에서 설명하고 있다. ArrayList와 다른 점은 capacity와 capacityIncrement 를 관리함으로써 저장용량 최적화를 시도한다는 점이다. capacity는 vector의 용량인데 개발자가 지정할 수 있다.  capacityIncrement 은 capacity가 증가하는 단위이며, 초기 생성시 capacity는 10으로 지정되어 있다. 
+
+capacity가 절대 vector 내 들어가있는 component의'
 featured_image: ''
 tags: ['dev', 'fast-fail 방식', 'iterator', 'Java', 'list', 'vector', 'vector 성능', 'vector 최적화']
 ---

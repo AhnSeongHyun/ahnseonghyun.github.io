@@ -2,7 +2,7 @@
 title: '[C#] ScrollToCaret 를 이용한 TextBox 자동 스크롤링'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: 'TextBox는 본래, 사용자의 데이터 입력을 받아 들이는 기능을 주로 하지만, 때때로 데이터를 보기위해서 쓰이기도 합니다. 특히, 저는 시리얼 포트를 통해서 들어오는 데이터를 한눈에 보기 위해서 자주 사용하는데요,'
 featured_image: ''
 tags: ['An Seong Hyun', 'c#', 'dev', 'ScrollToCaret', 'TextBox', '안성현', '자동스크롤링']
 ---

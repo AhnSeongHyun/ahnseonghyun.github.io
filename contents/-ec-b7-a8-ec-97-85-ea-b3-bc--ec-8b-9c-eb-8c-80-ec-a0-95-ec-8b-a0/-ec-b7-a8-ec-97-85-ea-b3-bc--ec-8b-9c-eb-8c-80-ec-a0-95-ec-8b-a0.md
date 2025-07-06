@@ -2,7 +2,8 @@
 title: '취업과 시대정신'
 author: 'ash84'
 pub_date: '2009-05-28'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile5.uf.204A480B4A1E4642747583.PNG)미티(출처 - 다음만화)면접 본후, 2주가 지났고 출근하라는 메일을 받게 되었다. 뛸듯이 끼뻤다.   
+ 벤처회사이지만 사장'
 featured_image: ''
 tags: ['서태지', '시대유감', '시대정신', '취업']
 ---

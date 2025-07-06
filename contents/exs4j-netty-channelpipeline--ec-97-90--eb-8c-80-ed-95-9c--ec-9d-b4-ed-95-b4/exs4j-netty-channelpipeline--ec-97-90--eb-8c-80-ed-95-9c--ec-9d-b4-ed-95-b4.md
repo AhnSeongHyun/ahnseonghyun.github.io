@@ -2,7 +2,7 @@
 title: '(exs4j) Netty ChannelPipeline 에 대한 이해.'
 author: 'ash84'
 pub_date: '2013-03-08'
-description: ''
+description: '현재 개발하고 있는 [exs4j](https://github.com/AhnSeongHyun/exs4j) 에서는 네트워크 파트는 전적으로 [Netty](http://netty.io)가 담당하고 있다. 이유는 여러가지가 있겠지만 쉽게  서버를 구성할 수 있고 pipeline을 변경함에 따라 HTTP 통신 방식도 지원할 수 있기 때문이다.(v1.6 지원예정) [Netty ](http://netty.io)에서 여러가지 예제를 제공하고 있기 때문에 쉽게 따라 할수 있는데 필자 역시 따'
 featured_image: ''
 tags: ['ChannelPipeline', 'ChannelPipelineFactory', 'espressoOtr', 'exs4j', 'github', 'Netty']
 ---

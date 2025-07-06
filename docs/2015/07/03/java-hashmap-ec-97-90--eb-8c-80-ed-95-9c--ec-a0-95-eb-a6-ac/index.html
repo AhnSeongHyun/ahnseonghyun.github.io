@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[Java] HashMap에 대한 정리."/>
+    <meta property="og:description" content="뭐, 다들 아는 사실이겠지만, HashMap에 대해서 한번 더 정리를 하려고 한다. 필자는 Hashtable을 많이 쓰긴 하는데 HashMap에 대해서 정리를 하는 이유는 단연 **성능**때문이다. 스케일 아웃도 좋지만, 일정 수준이상의 성능 최적화 작업은 늘 필요하기 마련이기 때문이다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/java-hashmap-ec-97-90--eb-8c-80-ed-95-9c--ec-a0-95-eb-a6-ac"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[Java] HashMap에 대한 정리.</title>
-    <meta name="description" content="" />
+    <meta name="description" content="뭐, 다들 아는 사실이겠지만, HashMap에 대해서 한번 더 정리를 하려고 한다. 필자는 Hashtable을 많이 쓰긴 하는데 HashMap에 대해서 정리를 하는 이유는 단연 **성능**때문이다. 스케일 아웃도 좋지만, 일정 수준이상의 성능 최적화 작업은 늘 필요하기 마련이기 때문이다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[Java] HashMap에 대한 정리.</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">뭐, 다들 아는 사실이겠지만, HashMap에 대해서 한번 더 정리를 하려고 한다. 필자는 Hashtable을 많이 쓰긴 하는데 HashMap에 대해서 정리를 하는 이유는 단연 <strong>성능</strong>때문이다. 스케일 아웃도 좋지만, 일정 수준이상의 성능 최적화 작업은 늘 필요하기 마련이기 때문이다. </span></p>
 <p><span style="font-size: 11pt;"><strong>HashMap </strong></span></p>
@@ -126,19 +128,17 @@
 </span></p>
 <p><span style="font-size: 11pt;">보시는 것 처럼 분명히 성능 차이가 있다. HashMap에 얼마만큼의 엔트리가 들어갈지 미리 안다는 것은 사실 쉽지가 않다. 대부분의 Collection 들은 불확실한 리스트, 집합 등등을 지원하기 때문에 존재하기 때문이다. 그럼에도 불구하고 어느정도 예측할 수 있다면, 어느정도의 성능향상을 가져올 수 있지 않을까 싶다.   </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'HashMap'">#'HashMap'</a>&nbsp;
+            #HashMap&nbsp;
         
-            <a href="/tag/'HashMap 성능'">#'HashMap 성능'</a>&nbsp;
+            #HashMap 성능&nbsp;
         
-            <a href="/tag/'Hashtable'">#'Hashtable'</a>&nbsp;
+            #Hashtable&nbsp;
         
-            <a href="/tag/'Java']">#'Java']</a>&nbsp;
+            #Java&nbsp;
         
     </div> 
     <footer>

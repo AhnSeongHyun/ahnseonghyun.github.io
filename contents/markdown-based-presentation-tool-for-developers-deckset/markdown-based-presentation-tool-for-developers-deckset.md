@@ -2,7 +2,13 @@
 title: '개발자를 위한 마크다운 기반의 발표툴 - deckset'
 author: 'ash84'
 pub_date: '2024-02-23'
-description: ''
+description: '# 도입 계기
+
+사내에서 그렇게 자주 발표할 일이 없었는데(대부분 테크직군 안에서 1년에 2~3번이 다였다.) 최근 그래도 1분기에 2~3번은 해야해서 고민이 많았다. 키노트 서식이 정해져있는 경우는 그것을 따르면 되지만 그렇지 않은 경우, 일일히 키노트 서식까지 꾸미는 게 솔직히 번거로웠다. 
+
+# 사용기 
+
+그러던 중 작년 파이콘US 2023 후기 세미나에서 김영근님 발표 QNA에서 나왔던 발표툴 [deckset](https://www.deckset.com/)이 갑자기 생각이 나서 결제해서 사용을 해봤다. 일단 마크다운 기반이라'
 featured_image: ''
 tags: ['markdown', 'deckset', 'presentation', 'dev']
 ---

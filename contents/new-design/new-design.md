@@ -2,7 +2,7 @@
 title: '# new Design'
 author: 'ash84'
 pub_date: '2011-01-12'
-description: ''
+description: '﻿![](http'
 featured_image: ''
 tags: ['new design']
 ---

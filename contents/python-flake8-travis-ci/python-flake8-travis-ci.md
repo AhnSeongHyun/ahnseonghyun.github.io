@@ -2,7 +2,16 @@
 title: 'Python flake8 사용하기'
 author: 'ash84'
 pub_date: '2016-08-02'
-description: ''
+description: '[pep8](https://pypi.python.org/pypi/pep8), [flake8](http://flake8.pycqa.org/en/latest/) 등의 툴이 파이썬 코드의 정적검사를 하는 툴이다. 
+
+```python
+$ python -m pip install flake8
+  
+flake8 --count --exclude ./tests,./docs --ignore E501,F401
+  
+# --count : 위반 개수 표시
+# --exclue : 특정 디렉토리 제외, 쉼표로 구분
+# --ignore : 무시 규칙 명시,'
 featured_image: ''
 tags: ['Python', 'dev', 'flake8', 'travis-ci']
 ---

@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="Azure Text Analytics 연동하기"/>
+    <meta property="og:description" content="[지난 글](https://ash84.net/2017/07/02/using-chatfuel-make-chatbot/)에서 chatfuel을 이용해서 챗봇을 간단하게 만들어봤는데 MS Azure 에서 제공하는 Text Analytics API 를 연동해서 감정분석까지는 아니고 단순하게 텍스트에 대한 긍정부정을 알려주는 챗봇을 구성해 보기로 했다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/07/05/azure-text-analytics-api"/>
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTCoP89IrLxbeI_UcIeXK8kYFXf0aWLOmDs-_MWt2qn8JpnY9nsg"/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>Azure Text Analytics 연동하기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="[지난 글](https://ash84.net/2017/07/02/using-chatfuel-make-chatbot/)에서 chatfuel을 이용해서 챗봇을 간단하게 만들어봤는데 MS Azure 에서 제공하는 Text Analytics API 를 연동해서 감정분석까지는 아니고 단순하게 텍스트에 대한 긍정부정을 알려주는 챗봇을 구성해 보기로 했다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,10 +63,8 @@
     
 <div class="content">
     <h1 class="blog-post-title">Azure Text Analytics 연동하기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-07-05</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-07-05</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
@@ -69,7 +72,6 @@
     
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTCoP89IrLxbeI_UcIeXK8kYFXf0aWLOmDs-_MWt2qn8JpnY9nsg" alt="">
     
-
     <div class="blog-post">
         <p><a href="https://ash84.net/2017/07/02/using-chatfuel-make-chatbot/">지난 글</a>에서 chatfuel을 이용해서 챗봇을 간단하게 만들어봤는데 MS Azure 에서 제공하는 Text Analytics API 를 연동해서 감정분석까지는 아니고 단순하게 텍스트에 대한 긍정부정을 알려주는 챗봇을 구성해 보기로 했다. </p>
 <p>https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/</p>
@@ -132,19 +134,17 @@ class SentimentScore(object):
             return &quot;기분이 매우 좋아보이네요&quot;
 </code></pre>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'azure'">#'azure'</a>&nbsp;
+            #azure&nbsp;
         
-            <a href="/tag/'text-analytics'">#'text-analytics'</a>&nbsp;
+            #text-analytics&nbsp;
         
-            <a href="/tag/'ML'">#'ML'</a>&nbsp;
+            #ML&nbsp;
         
-            <a href="/tag/'chatbot']">#'chatbot']</a>&nbsp;
+            #chatbot&nbsp;
         
     </div> 
     <footer>

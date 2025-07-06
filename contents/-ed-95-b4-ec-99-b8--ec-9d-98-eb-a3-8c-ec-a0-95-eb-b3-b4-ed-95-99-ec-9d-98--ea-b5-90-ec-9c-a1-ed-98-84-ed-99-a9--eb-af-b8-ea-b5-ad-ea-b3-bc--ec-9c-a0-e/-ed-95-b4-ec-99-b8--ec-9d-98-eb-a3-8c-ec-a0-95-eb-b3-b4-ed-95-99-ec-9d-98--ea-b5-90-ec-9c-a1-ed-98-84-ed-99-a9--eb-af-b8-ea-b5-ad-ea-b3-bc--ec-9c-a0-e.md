@@ -2,7 +2,7 @@
 title: '해외 의료정보학의 교육현황 - 미국과 유럽을 중심으로'
 author: 'ash84'
 pub_date: '2007-01-20'
-description: ''
+description: '경북대학교 의과대학 의료정보학교실 조 훈 교수 (학회 국제협력이사)'
 featured_image: ''
 tags: ['의료정보학', '의료정보학 교육현황']
 ---

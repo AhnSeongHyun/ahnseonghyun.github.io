@@ -2,7 +2,7 @@
 title: '월급쟁이의 우버X이용기, 난 이렇게 탔다.'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '우버를 꼭 타봐야 겠다고 다짐하고 있었는데'
 featured_image: ''
 tags: ['dev', '우버', '우버 이용기', '우버X']
 ---

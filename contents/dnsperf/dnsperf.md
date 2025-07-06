@@ -2,7 +2,8 @@
 title: 'dnsperf 로 dns서버 성능 측정하기'
 author: 'ash84'
 pub_date: '2020-02-21'
-description: ''
+description: '요즘 DNS 에 대해서 관심을 많이 가지게 되었는데 😂 domain name system 은 도메인 이름을 ip 로 바꿔주거나 그 반대의 역할을 하는 것으로 알고 있다. 일반적으로 AWS Route53, google dns(8.8.8.8, 8.8.4.4) 이 이런 역할을 하는 것으로 보면 된다. 
+[https://www.dnsperf.com/#!dns-resolvers](https://www.dnsperf.com/#!dns-resolvers) 에 가면 속도/안정성 같은 부분의 통계를 볼 수 있다. 물론,직접 구축을 할 수도 있는데'
 featured_image: ''
 tags: ['dns', 'Performance', 'dns-performance', 'dnsperf']
 ---

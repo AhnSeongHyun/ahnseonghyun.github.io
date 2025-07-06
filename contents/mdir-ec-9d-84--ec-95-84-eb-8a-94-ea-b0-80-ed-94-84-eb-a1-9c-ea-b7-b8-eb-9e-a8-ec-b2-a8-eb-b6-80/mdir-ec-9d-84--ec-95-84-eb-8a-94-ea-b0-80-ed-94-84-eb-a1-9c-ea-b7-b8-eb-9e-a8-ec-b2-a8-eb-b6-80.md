@@ -2,7 +2,14 @@
 title: 'MDIR을 아는가?(프로그램첨부)'
 author: 'ash84'
 pub_date: '2007-08-20'
-description: ''
+description: '[](http://ash84.net/wp-content/uploads/1/gl119.zip)gl119.zip
+
+
+
+
+
+
+![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/fl106.JPG)'
 featured_image: ''
 tags: ['Mdir', '추억']
 ---

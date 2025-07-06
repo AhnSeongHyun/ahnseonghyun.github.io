@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="flask logger decorator(데코레이터)와 함께 사용하기"/>
+    <meta property="og:description" content="###기본로그 세팅하기###"/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/04/03/flask-logger-decorator"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>flask logger decorator(데코레이터)와 함께 사용하기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="###기본로그 세팅하기###" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">flask logger decorator(데코레이터)와 함께 사용하기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-04-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-04-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <h3>기본로그 세팅하기</h3>
 <p>로그에 대한 부분이 늘 걱정이긴 한데, 사실 따로 python logger 클래스를 사용해서 로그는 남기는 클래스를 만들고 만드는 프로젝트 마다 붙여서 사용하는 식으로 했었는데 이번에 flask 에 있는 logger 를 이용해 보기로 했다. 기본적으로 다음과 같은 몇개의 핸들러를 제공하고 있다. </p>
@@ -135,21 +137,19 @@ AssertionError: **View function mapping is overwriting an existing endpoint fun
 <p>데코레이터를 활용하면 좀더 메서드에서 선작업(pre-process) 을 지정할 수가 있다. 본 글에서는 단순히 로그를 처리하는 작업을 했는데 좀더 나아간다면 암호환된 키를 체크한다던지 하는 등의 매 함수마다 체크하는 작업들을 하는것도 좋을것 같다. 데코레이터가 좋은 점은 반복코드를 줄여줄수 있다는 점이고 일반적인 함수호출 부분과 같은 역할을 하는것 같지만, 메인코드가 아닌 함수 선언 위쪽에 위치함으로써 좀더 개발자로 하여금 깔끔한 코드를 작성하게 하는것 같다. </p>
 <p>functools 에는 데코레이터 및 함수와 관련된 몇가지 기능들이 있으니 한번 살펴보면 좋은데 <a href="http://pymotw.com/2/functools/">PyMOTW</a> 에 들어가서 보면 좀더 예제와 함께 잘 이해할 수가 있다. </p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['Decorator'">#['Decorator'</a>&nbsp;
+            #Decorator&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'FLASK'">#'FLASK'</a>&nbsp;
+            #FLASK&nbsp;
         
-            <a href="/tag/'Logger'">#'Logger'</a>&nbsp;
+            #Logger&nbsp;
         
-            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+            #Python&nbsp;
         
-            <a href="/tag/'flask 웹서버']">#'flask 웹서버']</a>&nbsp;
+            #flask 웹서버&nbsp;
         
     </div> 
     <footer>

@@ -2,7 +2,9 @@
 title: 'brave - 패도의 길'
 author: 'ash84'
 pub_date: '2024-03-24'
-description: ''
+description: '패도의 길을 가야한다. 그래야 원하는 것들을 이룩할 수 있다. 그럼 내가 왜 그것을 해야하는가? 왜 그런 위험을 감수해야하는가? 이유는 2가지이다. 하나는 꽤 괜찮은 회사를 만들고 싶은것 그리고 다른 하나는 내가 그 길을 원하기 때문이다. 다른 걸 다 차지하고, 최종적으로는 내가 그 길을 원하기 때문이다. 
+
+좋은게 좋은식으로 비지니스적인 상황, 프로덕트적인 상황들을 항상 이해해왔다고 생각하지만 결국 균형을 맞추기 위해서는 이 길을 걸어야 한다. 여러 이 길을 걸었던 CTO들을 보면서 균형을 맞추지 못했고 또는 그 과정에서 거친언행'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/brave-way/john-forson-V8DUsA0Pxfs-unsplash.jpg'
 tags: ['brave', 'essay']
 ---

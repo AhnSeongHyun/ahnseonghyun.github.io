@@ -2,7 +2,9 @@
 title: 'AI를 통한 셀프서비스의 시대'
 author: 'ash84'
 pub_date: '2024-08-16'
-description: ''
+description: 'chatgpt4o를 나오자마자 결제를 했다. 한달에 29,000원, 사용하는 saas 서비스 중에서 가장 비싸다. 근데 한번도 사용하면서 비싸다는 생각을 해본적이 없다. 개인 비서 한명 원격으로 채용을 해도 이것보다는 비싸긴하다. 오히려 비슷한 시기에 계속 가격을 올리고 동의해달라고 팝업으로 계속 뜬 유튜브 프리미엄을 해지했다.(유튜브 뮤직은 애플뮤직으로 변경해서 잘 사용하고 있다.)
+
+몇 주정도 사용해 보다가, 최근에는 일선에서 코딩을 잘안하는데 golang으로 웹훅을 만들어줄 일이 있었다. 원래 얘기했던 일정 하루 앞두고 시작'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/the-era-of-self-service-with-ai/andrea-de-santis-zwd435-ewb4-unsplash.jpg'
 tags: ['essay', 'ai', 'llm', 'self-service', 'chatgpt']
 ---

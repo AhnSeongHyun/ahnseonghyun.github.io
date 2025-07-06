@@ -2,7 +2,9 @@
 title: '헬스케어 산업, 언제까지 시범 사업인가?'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '[](http://ash84.net/wp-content/uploads/1/48d7b4dad941e6J.bmp)48d7b4dad941e6J.bmpFROM LG CNS
+
+<'
 featured_image: ''
 tags: ['dev', 'LG CNS', '제도 법', '표준', '헬스케어산업', '활성화']
 ---

@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) Register gesture"/>
+    <meta property="og:description" content="요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/09/24/ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) Register gesture</title>
-    <meta name="description" content="" />
+    <meta name="description" content="요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) Register gesture</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-09-24</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-09-24</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자. </span></p>
 <p><span style="font-size: 11pt;">  </p>
@@ -81,29 +83,27 @@
 <p><span style="font-size: 11pt;">위의 코드를 보면 알겠지만 Tap은 Swipe와 달리 UITapGestureRecognizer를 사용한다. 그리고 설정시에 반드시, numberOfTapsRequired를 지정함으로써 </span><span style="font-size: 11pt;">몇번 Tap을 해야 Gesture 로 인지할것인지를 지정해야 한다. 그 외에는 모두 swipe와 같다. 그런데 아쉽게도 제대로 수행되지 않는다. 그 이유는 <strong>UILabel에 UserInteractionEnabled 라는 속성때문이데, UILabel 의 경우 NO로 설정되어 있다. 때문에 제대로 된 기능을 위해서는 YES로 명시적으로 지정해 주어야한다. </strong></span></p>
 <p><span style="font-size: 11pt;">Gesture를 만들고 연결하는 작업에 대해서 알아 보았는데, 여러가지 다른 Gesture가 있기 때문에 공식문서를 보면서 확인해 보는것도 좋을것같다. 세세한 동작을 지원하기 위해서는 방향과 행위의 횟수 등의 설정들을 지정해서 사용하면 가능할것으로 본다. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'gesture'">#'gesture'</a>&nbsp;
+            #gesture&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'objective c gesture recognizer'">#'objective c gesture recognizer'</a>&nbsp;
+            #objective c gesture recognizer&nbsp;
         
-            <a href="/tag/'Swipe'">#'Swipe'</a>&nbsp;
+            #Swipe&nbsp;
         
-            <a href="/tag/'tap'">#'tap'</a>&nbsp;
+            #tap&nbsp;
         
-            <a href="/tag/'UIGesture'">#'UIGesture'</a>&nbsp;
+            #UIGesture&nbsp;
         
-            <a href="/tag/'uilabel tap'">#'uilabel tap'</a>&nbsp;
+            #uilabel tap&nbsp;
         
-            <a href="/tag/'uilabel touchupinside'">#'uilabel touchupinside'</a>&nbsp;
+            #uilabel touchupinside&nbsp;
         
-            <a href="/tag/'제스처']">#'제스처']</a>&nbsp;
+            #제스처&nbsp;
         
     </div> 
     <footer>

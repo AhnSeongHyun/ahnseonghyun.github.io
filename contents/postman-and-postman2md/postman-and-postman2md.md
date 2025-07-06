@@ -2,7 +2,10 @@
 title: 'postman and postman2md'
 author: 'ash84'
 pub_date: '2018-05-19'
-description: ''
+description: '## **postman**
+ 
+    
+ API 작업을 할때 테스트할수 있는 툴이 필요한데, 쉽게 테스트 할수 있는 [postman](https://www.getpostman.com/) 이라는 툴이 있다. 로그인도 필요없고 쉽게 GET, POST 등의 HTTP 기반의 API들을 테스트할수 있다. **특히 history 기능이 있어서 매우 좋은데 언제 들어가더라도 이전에 내가 테스트했던 내역들을 볼 수가 있다.** postman 이 2.0 으로 버전업을 하면서 로그인을 할 수가 있고 collection 이라는 개념을'
 featured_image: 'https://farm1.staticflickr.com/694/21682297821_bf00b22e44_o.png'
 tags: ['dev', 'postman', 'postman to markdown']
 ---

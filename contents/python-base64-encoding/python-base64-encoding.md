@@ -2,7 +2,7 @@
 title: '[Python] base64 인코딩 디코딩'
 author: 'ash84'
 pub_date: '2017-03-28'
-description: ''
+description: '파이썬은 기본적으로 base64를 지원한다. 간단한게 올림.'
 featured_image: ''
 tags: ['base64 decoding', 'base64 encoding', 'dev', 'Python', '파이썬']
 ---

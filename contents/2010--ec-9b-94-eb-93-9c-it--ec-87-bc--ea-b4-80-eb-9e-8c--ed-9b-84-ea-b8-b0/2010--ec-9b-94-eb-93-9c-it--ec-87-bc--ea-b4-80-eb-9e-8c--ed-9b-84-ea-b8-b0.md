@@ -2,7 +2,8 @@
 title: '# 2010 월드 IT 쇼 관람 후기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile21.uf.163860164BFBAC8458A9A0.png)  
+할일없는 직장인 안군이 월드 IT 쇼를 다녀왔습니다. 작년에는 제가 짬밥이 안되서 회사에서 고참들만 갔지만, 이제는 제가 원치 않는 고참이 되어서 월드 IT 쇼를 다녀 왔습니다. 사실은'
 featured_image: ''
 tags: ['dev', 'world it show', '갤럭시 A', '갤럭시s', '삼성 Wave 폰', '월드 IT 쇼', '코엑스']
 ---

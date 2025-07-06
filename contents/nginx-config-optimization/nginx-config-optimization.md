@@ -2,7 +2,7 @@
 title: '[번역] How To Optimize Nginx Configuration(Nginx 의 설정 최적화)'
 author: 'ash84'
 pub_date: '2017-03-24'
-description: ''
+description: 'Nginx 에 대해서 몇가지 관심을 갖다가 설정에 따른 성능향상, 영향에 대해서 쓴 글을 보게 되었는데 공부할겸 정리해 둔다. 거창하게 제목에 번역이라고 달았지만, 그냥 아는단어를 한글화 했다고 보면 된다. 아래의 링크는 원문링크이다. 오류가 있다면 댓글로!'
 featured_image: ''
 tags: ['dev', 'How To Optimize Nginx Configuration', 'nginx', 'nginx optmize', 'nginx 설정', 'nginx 설정 최적화']
 ---

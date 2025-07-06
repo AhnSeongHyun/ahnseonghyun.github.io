@@ -2,7 +2,8 @@
 title: '용기가 필요한 때.'
 author: 'ash84'
 pub_date: '2009-04-20'
-description: ''
+description: '[![uae brazil](http://farm1.static.flickr.com/27/62604509_fdc384dcea.jpg)](http://www.flickr.com/photos/60635032@N00/62604509 "uae brazil")  
+uae brazil by [LhaYeb](http://www.flickr.com/photos/60635032@N0'
 featured_image: ''
 tags: ['취업']
 ---

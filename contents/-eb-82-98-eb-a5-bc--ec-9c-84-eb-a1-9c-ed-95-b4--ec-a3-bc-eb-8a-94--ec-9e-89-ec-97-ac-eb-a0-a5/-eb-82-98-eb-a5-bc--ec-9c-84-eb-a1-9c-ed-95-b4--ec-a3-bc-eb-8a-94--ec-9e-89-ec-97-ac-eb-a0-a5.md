@@ -2,7 +2,7 @@
 title: '나를 위로해 주는 잉여력.'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**개발자에게 잉여력이란 무엇일까? **그리고 왜 필요한 것일까 하는 생각을 해 보았다. 최근에 필자는 새로운 회사에'
 featured_image: ''
 tags: ['dev', 'Make', '개발자', '잉여력', '프로그래머']
 ---

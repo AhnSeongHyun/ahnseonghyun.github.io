@@ -2,7 +2,7 @@
 title: '[폰트 관련 특집] 2. 폰트를 제작하려면? 폰트 개발 툴이 필요하죠~'
 author: 'ash84'
 pub_date: '2010-09-01'
-description: ''
+description: '[앞 시간에 이어서'
 featured_image: ''
 tags: ['font', 'font craetor', 'font struct', '폰트', '폰트 제작', '폰트제작 툴']
 ---

@@ -2,7 +2,8 @@
 title: '...'
 author: 'ash84'
 pub_date: '2009-10-02'
-description: ''
+description: '[![Pali watch the sky](http://farm1.static.flickr.com/227/520691712_7adf22cfd8.jpg)](http://www.flickr.com/photos/14127431@N00/520691712 "Pali watch the sky")  
+Pali watch the sky by [Simon Pais-Thomas](http://www.flickr.com/photos/14127431@N00)</'
 featured_image: ''
 tags: ['결과', '과정', '머리아프다', '사회화', '최선']
 ---

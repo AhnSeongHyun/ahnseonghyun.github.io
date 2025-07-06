@@ -2,7 +2,11 @@
 title: 'Starting wordpress'
 author: 'ash84'
 pub_date: '2018-05-31'
-description: ''
+description: '정든 티스토리를 떠나기로 결정한 것은 예전에도 언급한적이 있지만, 티스토리의 답답함에서 비롯된것이었다. 그리고 워드프레스와 Automattic 사, 매트 뮬렌웨그와 바지를 벗고 일해도되나요? 라는 책을 보고 워드프레스로 옮겨가게 되었다. 늘 그렇듯 여러가지 걸림돌이 있어서 이사가기가 힘들었는데 이번에는 진짜 이사를 제대로 가보자고 굳게 마음을 먹었고, 이사과정에서 생긴 이슈들을 아래와 같이 정리해본다.
+
+**1. wordpress.com vs. wordpress.org**
+
+– 처음에는 Automattic 에 대한 관심으로 wor'
 featured_image: 'https://images.unsplash.com/photo-1484544808355-8ec84e534d75?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fc1407c2a550b0ebf3def8b81fa7b4a2&auto=format&fit=crop&w=1366&q=80'
 tags: ['dev', 'wordpress', 'wordpress.com vs. wordpress.org', '워드프레스']
 ---

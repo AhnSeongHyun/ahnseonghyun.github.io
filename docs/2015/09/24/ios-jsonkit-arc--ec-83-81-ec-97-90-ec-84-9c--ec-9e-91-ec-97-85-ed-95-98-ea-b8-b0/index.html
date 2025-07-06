@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) JSONKit ARC 상에서 작업하기"/>
+    <meta property="og:description" content="다음 티스토리 API 연동중에 JSON 으로 연동하는 과정에서 JSONKit 라이브러리를 사용하고 있었는데 이 라이브러리는 아쉽게도 ARC로 작성되어 있지 않다. 하지만 JSONKit은 자기네들 말로는 Objective-C JSON 처리 라이브러리 중에서는 가장 빠르다고 하니 안 쓸수도 없는 노릇([성능평가자료](https://github.com/johnezang/JSONKit))."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/09/24/ios-jsonkit-arc--ec-83-81-ec-97-90-ec-84-9c--ec-9e-91-ec-97-85-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>(iOS) JSONKit ARC 상에서 작업하기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="다음 티스토리 API 연동중에 JSON 으로 연동하는 과정에서 JSONKit 라이브러리를 사용하고 있었는데 이 라이브러리는 아쉽게도 ARC로 작성되어 있지 않다. 하지만 JSONKit은 자기네들 말로는 Objective-C JSON 처리 라이브러리 중에서는 가장 빠르다고 하니 안 쓸수도 없는 노릇([성능평가자료](https://github.com/johnezang/JSONKit))." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">(iOS) JSONKit ARC 상에서 작업하기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-09-24</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-09-24</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt; line-height: 2;">다음 티스토리 API 연동중에 JSON 으로 연동하는 과정에서 JSONKit 라이브러리를 사용하고 있었는데 이 라이브러리는 아쉽게도 ARC로 작성되어 있지 않다. 하지만 JSONKit은 자기네들 말로는 Objective-C JSON 처리 라이브러리 중에서는 가장 빠르다고 하니 안 쓸수도 없는 노릇(<a href="https://github.com/johnezang/JSONKit">성능평가자료</a>). </span></p>
 <p><span style="font-size: 11pt;">StackOverflow에도 나와 같은 의문을 가지신 분들이 많이 계시는 지라, 찾아보니 답이 있다. 사용하는 방법을 아래와 같이 스크린샷으로 남긴다. </span></p>
@@ -98,23 +100,21 @@ There are many other compiler flags. They let you control the way the code is co
 <p><span style="font-size: 11pt;">해석을 해보면, <strong>위의 옵션은 링커(Linker)가 아닌 컴파일러(Compiler)에 대한 옵션이고 컴파일러에게 이 소스코드에 대해서는 수동적으로 <code>releasing/retaining</code> 을 수행하겠다고 지정하는 것이다.</strong> ARC가 아닌 코드를 ARC 코드로 변환하려면 그것 자체로 많은 일이기 때문에 이런 옵션을 통해서 ARC와 ARC가 아닌것을 컴파일 할수 있다는 이야기이다. </span></p>
 <p><span style="font-size: 11pt;">ARC로 본인코드라면 변경을 하는것도 좋지만, 너무 많은 코드라면 컴파일 옵션을 사용하는것이 좋을것 같기도 하다. 파일형태의 오픈 소스는 이렇게 해도 되는데, 정적라이브러</span><span style="font-size: 11pt;">리(.a) 는 어떻게 하는지도 좀 알아둬야 할것 같다. </span></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['Arc'">#['Arc'</a>&nbsp;
+            #Arc&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'IOS'">#'IOS'</a>&nbsp;
+            #IOS&nbsp;
         
-            <a href="/tag/'JSON'">#'JSON'</a>&nbsp;
+            #JSON&nbsp;
         
-            <a href="/tag/'JSONKit'">#'JSONKit'</a>&nbsp;
+            #JSONKit&nbsp;
         
-            <a href="/tag/'JSONKit ARC'">#'JSONKit ARC'</a>&nbsp;
+            #JSONKit ARC&nbsp;
         
-            <a href="/tag/'objective-c jsonkit arc']">#'objective-c jsonkit arc']</a>&nbsp;
+            #objective-c jsonkit arc&nbsp;
         
     </div> 
     <footer>

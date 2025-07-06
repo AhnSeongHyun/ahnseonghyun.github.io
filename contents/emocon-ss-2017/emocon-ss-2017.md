@@ -2,7 +2,15 @@
 title: 'EMOCON S/S 2017 후기'
 author: 'ash84'
 pub_date: '2017-04-24'
-description: ''
+description: '올해도 어김없이 이모콘을 들었다. 아래의 타임테이블에서 내가 들은것만 볼드 표시를 했다. 주로 Day1을 들었는데 Day2는 듣다가 아드님이 놀아달라고 보채는 바람에 듣길 포기했던것 같다. 
+
+Time Table Day1
+
+- **Google Analytics Chatbot 만들기, Rookie bot! (20분)**
+- **마케팅에 써먹을 수 있는 Microsoft Flow + Azure Functions (20분)**
+- **try! Swift Tokyo 2017 후기 (20분)**
+- **텐서플로우 맛보기 (30분)**
+- *'
 featured_image: 'https://crowdcast-prod.imgix.net/-K1IiEdJY7b6fHZ3oBEf/event-cover-3485?w=800'
 tags: ['conf', 'seminar', 'EMOCON', 'EMOCON S/S 2017', '이상한모임', 'conference']
 ---

@@ -2,7 +2,15 @@
 title: '의료 정보학을 공부하기 위해서'
 author: 'ash84'
 pub_date: '2007-02-03'
-description: ''
+description: '미국대학의 의료정보 관련 학과에서 가르치는 주요 분야를   
+ 나열하면 다음과 같다.
+
+  
+> **Medical informatics**  
+>  – computer applications in medical care  
+>  – computer assisted medical decision making  
+>  – algorithm and representation for melecular biology  
+>  – medical imaging'
 featured_image: ''
 tags: ['MYCIN', 'STANDFORD', '스탠포드', '의료정보학']
 ---

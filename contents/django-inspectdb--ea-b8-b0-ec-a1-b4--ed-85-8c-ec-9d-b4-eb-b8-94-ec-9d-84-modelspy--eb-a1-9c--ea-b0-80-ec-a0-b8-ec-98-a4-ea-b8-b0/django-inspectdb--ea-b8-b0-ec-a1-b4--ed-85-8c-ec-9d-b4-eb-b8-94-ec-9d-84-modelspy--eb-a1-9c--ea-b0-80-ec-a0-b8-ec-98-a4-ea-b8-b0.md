@@ -2,7 +2,7 @@
 title: '(django) inspectdb, 기존 테이블을 models.py 로 가져오기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '많은 장고(Django) 예제에서 models.py 를 먼저 만들고 syncdb 를 통해서 실제 데이터베이스에 구조를 잡게 되는데 사실은 실제 데이터베이스에 이미 데이터나 구조가 있는 경우가 더 많은것같다. 그럴경우 일일히 models.py에서 데이터 모델들을 잡아주는것이 번거로운데(테이블이 많으니까) 장고에서는 inspectdb 라는 기능을 통해서 settings.py에 연결되어 있는 데이터베이스에 대한 models.py의 내용을 가져올 수 있도록 해준다.'
 featured_image: ''
 tags: ['dev', 'Django', 'how to get db table to models.py', 'inspectdb', '파이썬']
 ---

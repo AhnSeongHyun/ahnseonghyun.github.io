@@ -2,7 +2,7 @@
 title: '# 설연휴.. 그리고 1월 정리.'
 author: 'ash84'
 pub_date: '2011-01-31'
-description: ''
+description: '설 연휴다. 이제곧. 이제 진짜 세뱃돈 받을 나이가 아닌 어머니, 할머니께 돈을 드려야할 나이가 되어버렸다. 조금은 슬프다. 예전에는 세뱃돈을 많이 받으면 엄마 주기 시러'
 featured_image: ''
 tags: ['1월결산', 'MomoTwit', 'Monthly App Project', '리솜스파캐슬', '모모트윗', '설연휴', '손예진', '여자친구']
 ---

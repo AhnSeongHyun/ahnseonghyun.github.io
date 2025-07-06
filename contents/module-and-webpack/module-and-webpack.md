@@ -2,7 +2,18 @@
 title: '모듈화 Webpack 관련 정리'
 author: 'ash84'
 pub_date: '2016-04-25'
-description: ''
+description: '**주의**
+- ==본 글은 타링크에 대한 개인적인 정리글입니다.  ==
+
+- [CommonJS](http://www.commonjs.org/)
+  - JS를 여러곳에서 쓰자는 워킹그룹
+  - 브라우저 밖에서의 실행, 서버사이드에서 js를 쓰자. 
+  - 주요 명세 : 모듈화(모듈에 대한 정의와 사용)
+     - 스코프(scope) : 자신만의 독립적인 실행영역
+     - 정의 : ``exports`` 함수 이용 
+     - 사용 : ``require`` 함수 이용 
+
+- 서버 사이드에서는 파일스코프가 있어서 전역변수가 겹치지'
 featured_image: 'https://camo.githubusercontent.com/ebc085019011ababb0d35024824304831c7dc72a/68747470733a2f2f7765627061636b2e6769746875622e696f2f6173736574732f6c6f676f2e706e67'
 tags: ['JS', 'webpack', 'commonJS']
 ---

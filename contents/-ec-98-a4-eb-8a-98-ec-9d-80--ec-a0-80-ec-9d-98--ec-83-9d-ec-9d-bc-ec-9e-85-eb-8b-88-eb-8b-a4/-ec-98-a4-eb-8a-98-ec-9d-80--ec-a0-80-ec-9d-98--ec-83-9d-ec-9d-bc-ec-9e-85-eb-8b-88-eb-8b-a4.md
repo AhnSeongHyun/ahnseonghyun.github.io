@@ -2,7 +2,8 @@
 title: '오늘은 저의 생일입니다.'
 author: 'ash84'
 pub_date: '2009-11-26'
-description: ''
+description: '[![Yes! It's My Birthday! And It's My Footprint :D](http://farm1.static.flickr.com/178/475538963_dd18b35636.jpg)](http://www.flickr.com/photos/44124425616@N01/475538963 "Yes! It's My Birthday! And It's My Footprint :D")  
+Yes! It’s My Bir'
 featured_image: ''
 tags: ['11월26일', '26살', '생일', '안성현']
 ---

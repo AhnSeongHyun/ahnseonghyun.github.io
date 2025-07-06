@@ -2,7 +2,10 @@
 title: '파이어폭스 컨퍼런스 후기 #fxdevconkr'
 author: 'ash84'
 pub_date: '2017-03-28'
-description: ''
+description: '**Firefox OS 소개 – 신혁석**
+
+
+– 파이어폭스 OS ='
 featured_image: ''
 tags: ['#fxdevconkr', 'dev', '컨퍼런스', '파이어폭스', '파폭', 'conference']
 ---

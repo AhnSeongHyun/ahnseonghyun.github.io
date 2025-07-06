@@ -2,7 +2,11 @@
 title: '[C#] 네이버 지역검색 오픈 API 검색결과 <b> 태그제거'
 author: 'ash84'
 pub_date: '2017-03-28'
-description: ''
+description: '네이버 지역검색 오픈 API를 사용해서 검색한 결과는 RSS로 볼수도 있지만,  XML의 형식으로 볼수도 있다. 특히  안에 있는 부분이 그러하다. 
+
+
+  
+ 예를 들면'
 featured_image: ''
 tags: ['&lt;b&gt;태그', 'c#', 'dev', 'rss', 'XML', '네이버', '네이버 지역검색', '오픈 API', '지역검색', '프로그래밍']
 ---

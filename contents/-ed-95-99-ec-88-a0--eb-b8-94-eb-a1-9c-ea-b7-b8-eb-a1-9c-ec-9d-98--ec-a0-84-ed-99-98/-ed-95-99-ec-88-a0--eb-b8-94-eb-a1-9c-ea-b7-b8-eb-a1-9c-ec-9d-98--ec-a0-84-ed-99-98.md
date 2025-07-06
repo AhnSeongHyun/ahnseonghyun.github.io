@@ -2,7 +2,7 @@
 title: '학술 블로그로의 전환'
 author: 'ash84'
 pub_date: '2008-12-07'
-description: ''
+description: '[![Day 106 - I am a librarian](http://farm1.static.flickr.com/134/352573802_'
 featured_image: ''
 tags: ['Blog', 'medical informatics', 'subject', '블로그', '주제', '학술블로그']
 ---

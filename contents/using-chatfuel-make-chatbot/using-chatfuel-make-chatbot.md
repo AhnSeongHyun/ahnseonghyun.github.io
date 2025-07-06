@@ -2,7 +2,9 @@
 title: 'chatfuel 이용 간단하게 챗봇 만들기'
 author: 'ash84'
 pub_date: '2017-07-04'
-description: ''
+description: '실용주의 머신러닝 스터디 과제를 하면서 챗봇을 만들수 있는 여러 프레임워크나 도구들을 알게 되었는데 그 중 하나가 chatfule 이었다. bot framework 는 azure를 가입해야하는 부담감이, api.ai는 gcp를 이용해야 하는것 같았다. 기존에 쓰던 개인 서버에서 돌려보고 싶었고 비교적 간단한 [chatfuel](https://chatfuel.com) 을 이용하게 되었다. 
+
+일단 [chatfuel](https://chatfuel.com) 은 현재 페이스북 메신저와 텔레그램 봇을 지원하고 있는데, 페이스북 메신저로 연'
 featured_image: 'https://chatfuel.com/images/chatfuel_fb.jpg'
 tags: ['chatbot', 'chatfuel', '챗봇']
 ---

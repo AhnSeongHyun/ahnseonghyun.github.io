@@ -2,7 +2,13 @@
 title: '제 23회 국제 의료기기 및 의료정보 전시회 KIMES 가자~'
 author: 'ash84'
 pub_date: '2007-02-28'
-description: ''
+description: '**KIMES**
+
+23rd Korea International medical & hospital equipment show  
+  
+매년 3월에는 코엑스에서 KMIES가 열린다. KIMES는 국제 의료기기 및 의료정보 전시회이다. 1년에 2회 혹은 1회 열리는 경우가 있는데, 그중 한번은 서울에서 열린다. 주로 한국 뿐만아니라 수많은 다른 나라의 의료기기 업체 들이 신제품들을 가지고 나온다.
+
+![사용자 삽입 이미지](http'
 featured_image: ''
 tags: ['KIMES', '의공학', '의료기기', '의료정보']
 ---

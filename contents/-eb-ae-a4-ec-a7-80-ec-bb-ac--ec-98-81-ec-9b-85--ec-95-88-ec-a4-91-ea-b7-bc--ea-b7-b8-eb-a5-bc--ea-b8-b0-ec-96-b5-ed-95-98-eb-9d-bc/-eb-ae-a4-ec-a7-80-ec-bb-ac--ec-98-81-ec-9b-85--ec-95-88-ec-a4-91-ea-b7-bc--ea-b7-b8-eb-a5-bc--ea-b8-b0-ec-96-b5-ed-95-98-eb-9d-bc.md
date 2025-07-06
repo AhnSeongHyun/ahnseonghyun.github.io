@@ -2,7 +2,9 @@
 title: '[뮤지컬] 영웅 - 안중근 그를 기억하라.'
 author: 'ash84'
 pub_date: '2009-11-13'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile6.uf.18544C044AFCAF2E4586B4.jpg)
+
+최근에'
 featured_image: ''
 tags: ['An Seong Hyun', 'LG아트센터', '류정한', '뮤지컬 영웅', '안성현', '안중근', '안중근 의사', '안중근 의사 서거 100주년', '영웅', '정성화']
 ---

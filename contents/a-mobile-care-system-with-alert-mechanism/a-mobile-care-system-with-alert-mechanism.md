@@ -2,7 +2,8 @@
 title: 'A Mobile Care System with alert mechanism'
 author: 'ash84'
 pub_date: '2008-09-29'
-description: ''
+description: '[](http://ash84.net/wp-content/uploads/1/48e0707f8ebe97H.pdf)48e0707f8ebe97H.pdf  
+ 특징'
 featured_image: ''
 tags: ['EMBS', 'gateway', 'healthcare', 'IEEE', 'mobile', 'role-based']
 ---

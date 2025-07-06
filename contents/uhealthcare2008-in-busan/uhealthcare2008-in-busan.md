@@ -2,7 +2,7 @@
 title: 'uHealthcare2008 in Busan'
 author: 'ash84'
 pub_date: '2008-11-01'
-description: ''
+description: 'uHealthcare 2008 을'
 featured_image: ''
 tags: ['uHealthcare 2008']
 ---

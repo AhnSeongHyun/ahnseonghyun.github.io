@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[JAVA] Comparable 인터페이스 구현"/>
+    <meta property="og:description" content="필자는 Comparable 인터페이스를 이용해서 compareTo 함수를 구현하는 것 보다는 사실 Comparator 를 이용해서 정렬에 활용하는 케이스를 자주 사용했었다. (물론 그 안에서 이미 구현되어 있는 기본 클래스의 compareTo()를 사용한다.) 여기서는,** Effective Java** 항목12번에 Comparable 인터페이스의 구현을 고려하자 라는 부분에 대해서 요약해서 정리하고, Watch 클래스를 통해서 시계를 비교하는 compareTo() 함수를 구"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/java-comparable--ec-9d-b8-ed-84-b0-ed-8e-98-ec-9d-b4-ec-8a-a4--ea-b5-ac-ed-98-84"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[JAVA] Comparable 인터페이스 구현</title>
-    <meta name="description" content="" />
+    <meta name="description" content="필자는 Comparable 인터페이스를 이용해서 compareTo 함수를 구현하는 것 보다는 사실 Comparator 를 이용해서 정렬에 활용하는 케이스를 자주 사용했었다. (물론 그 안에서 이미 구현되어 있는 기본 클래스의 compareTo()를 사용한다.) 여기서는,** Effective Java** 항목12번에 Comparable 인터페이스의 구현을 고려하자 라는 부분에 대해서 요약해서 정리하고, Watch 클래스를 통해서 시계를 비교하는 compareTo() 함수를 구" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[JAVA] Comparable 인터페이스 구현</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">필자는 Comparable 인터페이스를 이용해서 compareTo 함수를 구현하는 것 보다는 사실 Comparator 를 이용해서 정렬에 활용하는 케이스를 자주 사용했었다. (물론 그 안에서 이미 구현되어 있는 기본 클래스의 compareTo()를 사용한다.) 여기서는,<strong> Effective Java</strong> 항목12번에 Comparable 인터페이스의 구현을 고려하자 라는 부분에 대해서 요약해서 정리하고, Watch 클래스를 통해서 시계를 비교하는 compareTo() 함수를 구현해 보겠다. </span></p>
 <p><span style="font-size: 11pt;">compareTo()는 비교하는 함수이긴 하지만 equals() 와는 다르고, 자연율(<a href="http://stackoverflow.com/questions/5167928/what-is-natural-ordering-when-we-talk-about-sorting">natural ordering</a>, 상식적인 순서)을 고려한다. equals() 함수와 다른점은 동일한지 비교하고, 순서가 같은지도 비교하고, 제네릭 타입을 지원한다는 점이다. </span></p>
@@ -97,23 +99,21 @@
 <p><span style="font-size: 11pt;">Watch 클래스에는 다양한 필드가 있다.(접근 지정자는 신경안썼음.) 일단 필자가 생각한 비교의 기준 순서는 <strong>오토매틱의 여부&gt;무브먼트타입&gt;서브 판의 개수&gt;잡다한 기능의 수</strong> 순이다. 다음은 Watch 클래스를 객체화 하고 비교하는 코드이다. </span></p>
 <script src="https://gist.github.com/4129789.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['Comparable'">#['Comparable'</a>&nbsp;
+            #Comparable&nbsp;
         
-            <a href="/tag/'CompareTo()'">#'CompareTo()'</a>&nbsp;
+            #CompareTo()&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Effective Java'">#'Effective Java'</a>&nbsp;
+            #Effective Java&nbsp;
         
-            <a href="/tag/'Java'">#'Java'</a>&nbsp;
+            #Java&nbsp;
         
-            <a href="/tag/'이펙티브 자바'">#'이펙티브 자바'</a>&nbsp;
+            #이펙티브 자바&nbsp;
         
-            <a href="/tag/'자바']">#'자바']</a>&nbsp;
+            #자바&nbsp;
         
     </div> 
     <footer>

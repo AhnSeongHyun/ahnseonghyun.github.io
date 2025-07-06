@@ -2,7 +2,11 @@
 title: '2009 발렌타인데이'
 author: 'ash84'
 pub_date: '2009-02-17'
-description: ''
+description: '발렌타인데이가 어김없이 다가온 2월. 
+
+
+
+<'
 featured_image: ''
 tags: ['발렌타인데이', '선물', '영화 작전', '와인', '와인바', '작전', '초콜릿']
 ---

@@ -2,7 +2,8 @@
 title: '아학. 머리가 좋아지는 코딩?'
 author: 'ash84'
 pub_date: '2007-10-16'
-description: ''
+description: '[![Hello World](http://farm1.static.flickr.com/125/359320246_ddad1ceef1.jpg)](http://www.flickr.com/photos/55835038@N00/359320246 "Hello World")  
+Hello World by [Aristocrat](http://www.flickr.com/photos/55835038@N00)[![저작자 표시](http://cfs.t'
 featured_image: ''
 tags: ['12시간 코딩', 'An Seong Hyun', 'coding', '안성현', '코딩']
 ---

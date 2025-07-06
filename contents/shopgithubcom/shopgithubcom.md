@@ -2,7 +2,10 @@
 title: 'shop.github.com'
 author: 'ash84'
 pub_date: '2012-04-08'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile29.uf.117383474F80D93B068833.png)
+
+좋아라 하는 github에는 다양한 github 관련 상품이 파는데, 
+특히 그 중에서 스티커랑 머그컵이 가장 갖고 싶다.'
 featured_image: ''
 tags: ['']
 ---

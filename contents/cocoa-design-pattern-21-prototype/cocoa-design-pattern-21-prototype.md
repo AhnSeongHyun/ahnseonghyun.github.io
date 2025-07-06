@@ -2,7 +2,8 @@
 title: '[Cocoa Design Pattern] 21. Prototype'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile21.uf.197E8A4E4E1BAD76357DCD.jpg)
+**'
 featured_image: ''
 tags: ['dev', 'IOS', 'prototype pattern', '디자인패턴', '프로토타입']
 ---

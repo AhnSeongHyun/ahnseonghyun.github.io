@@ -2,7 +2,7 @@
 title: '[github] README.MD에 이미지 올리기.'
 author: 'ash84'
 pub_date: '2013-01-09'
-description: ''
+description: 'github 의 가장 큰 특징중 하나는 저장소에 README.MD 를 읽어서 저장소의 가장 처음에 보여준다는 것이다. 이것은 마치 README.txt 와 같은 것인데, 특유의 마크업을 사용한다. 자세한 사항은 [여기](http://daringfireball.net/projects/markdown/syntax)를 살펴보면 된다.'
 featured_image: ''
 tags: ['github', 'github README.MD', 'github upload image']
 ---

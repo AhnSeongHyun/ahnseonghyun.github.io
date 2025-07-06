@@ -2,7 +2,11 @@
 title: 'SharePoint server 운영자 6차 세미나 후기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile23.uf.194249474EEFCB5910C9D2.png)
+
+ 
+
+**세션 3 디자이너 +'
 featured_image: ''
 tags: ['dev', 'Microsoft', 'SharePoint Server']
 ---

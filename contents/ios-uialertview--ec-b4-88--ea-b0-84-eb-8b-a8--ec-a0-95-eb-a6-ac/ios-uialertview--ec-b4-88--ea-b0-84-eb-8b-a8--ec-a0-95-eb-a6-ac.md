@@ -2,7 +2,7 @@
 title: '(iOS) UIAlertView 초 간단 정리'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '위와 같이 쓰면된다. title에는 어떤 경고를 줄것인지 쓰면 되고, message에는 상세한 경고 문구를 써 주면 된다. cancelButtonTitle'
 featured_image: ''
 tags: ['dev', 'ios dev', 'UIActivityIndicatorView', 'UIAlterView']
 ---

@@ -2,7 +2,7 @@
 title: 'ExtractManager 의 역할'
 author: 'ash84'
 pub_date: '2012-09-10'
-description: ''
+description: 'ExtractorManager 가 굳이 필요한가? 에 대한 물음이 들 것이다. 왜냐하면 굳이 각 Extractor 이 파일타입에 따른 상세 구현 Extractor 클래스가 있고 그것을 그냥 쓰면 되지 않는가 하는 물음에서 이다. 그러나 필자가 ExtractorManager 를 만든 이유는 다음과 같다.'
 featured_image: ''
 tags: ['DocumentExtractor', 'ExtractorManager', 'FACTORY', 'TextExtractorFactory', '팩토리패턴']
 ---

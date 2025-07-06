@@ -2,7 +2,7 @@
 title: '[폰트 관련 특집] 1. 유니코드와 폰트와의 관계에 대해서.'
 author: 'ash84'
 pub_date: '2010-08-30'
-description: ''
+description: '이번 프로젝트를 하면서 폰트를 개발하고'
 featured_image: ''
 tags: ['font', 'Unicode', '유니코드', '폰트']
 ---

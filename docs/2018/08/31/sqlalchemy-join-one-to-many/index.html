@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="SQLAlchemy Join #1 One To Many"/>
+    <meta property="og:description" content="SQLAlchemy Join 에 대해서 막연하게 쓰다보니 여러가지 관계 테이블상황에서 제대로 사용하지 못하고 수박겉핣기식으로 쓰는 경우가 많았다. 그래서 공식 문서상의 Join 관련 부분(아래의 URL)을 따라하면서 막히는 부분을 풀어보고자 한다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2018/08/31/sqlalchemy-join-one-to-many"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>SQLAlchemy Join #1 One To Many</title>
-    <meta name="description" content="" />
+    <meta name="description" content="SQLAlchemy Join 에 대해서 막연하게 쓰다보니 여러가지 관계 테이블상황에서 제대로 사용하지 못하고 수박겉핣기식으로 쓰는 경우가 많았다. 그래서 공식 문서상의 Join 관련 부분(아래의 URL)을 따라하면서 막히는 부분을 풀어보고자 한다." />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">SQLAlchemy Join #1 One To Many</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2018-08-31</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2018-08-31</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>SQLAlchemy Join 에 대해서 막연하게 쓰다보니 여러가지 관계 테이블상황에서 제대로 사용하지 못하고 수박겉핣기식으로 쓰는 경우가 많았다. 그래서 공식 문서상의 Join 관련 부분(아래의 URL)을 따라하면서 막히는 부분을 풀어보고자 한다. </p>
 <p><a href="http://docs.sqlalchemy.org/en/latest/orm/relationships.html">http://docs.sqlalchemy.org/en/latest/orm/relationships.html</a></p>
@@ -197,17 +199,15 @@
     &gt; immutabledict({'parent': Table('parent', MetaData(bind=None), Column('id', Integer(), table=&lt;parent&gt;, primary_key=True, nullable=False), schema=None), 'child': Table('child', MetaData(bind=None), Column('id', Integer(), table=&lt;child&gt;, primary_key=True, nullable=False), Column('parent_id', Integer(), ForeignKey('parent.id'), table=&lt;child&gt;), schema=None)})
 </code></pre>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+            #Python&nbsp;
         
-            <a href="/tag/'sqlalchemy'">#'sqlalchemy'</a>&nbsp;
+            #sqlalchemy&nbsp;
         
-            <a href="/tag/'join']">#'join']</a>&nbsp;
+            #join&nbsp;
         
     </div> 
     <footer>

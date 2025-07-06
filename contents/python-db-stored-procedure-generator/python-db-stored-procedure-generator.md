@@ -2,7 +2,7 @@
 title: 'python - db stored procedure 호출에 generator 활용하기'
 author: 'ash84'
 pub_date: '2017-09-12'
-description: ''
+description: '프로시저 호출은 몇 가지 제약을 가진다. 일단 프로시저명을 전달해야 하고 파라미터를 순서대로 전달해야 한다. 그리고 결과를 주는 방식이 하나의 결과를 줄 수도 있고 여러 결과를 줄 수도 있다. 프로시저당 하나의 호출 함수를 만들면 너무 많은 프로시저 호출 함수가 생기는 문제가 있다. 그래서 프로시저 이름을 받는 파라미터와 전달할 프로시저 파라미터, 그리고 insert, update, delete 의 경우 commit 을 해야하기 때문에 commit 여부를 위한 파라미터, 그리고 여러 결과를 반환하는 여부에 대한 파라미터를 추가한 호'
 featured_image: ''
 tags: ['dev', 'Python', 'generator', '제너레이터', '저장프로시저']
 ---

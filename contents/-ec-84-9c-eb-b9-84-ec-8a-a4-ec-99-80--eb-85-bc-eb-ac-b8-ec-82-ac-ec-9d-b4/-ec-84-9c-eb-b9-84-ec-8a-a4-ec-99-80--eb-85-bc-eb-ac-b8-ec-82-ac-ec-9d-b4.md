@@ -2,7 +2,9 @@
 title: '서비스와 논문사이.'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '논문거리냐, 서비스거리냐 
+
+![](http://ash84.net/wp-content/uploads/1/cfile21.uf.17026A1E4A0268CD877ACD.jpg)'
 featured_image: ''
 tags: ['dev', '꽃가루', '논문', '서비스', '오픈API']
 ---

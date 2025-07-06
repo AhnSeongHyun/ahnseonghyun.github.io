@@ -2,7 +2,9 @@
 title: '면접자가 하면 절대 안되는 말'
 author: 'ash84'
 pub_date: '2018-09-15'
-description: ''
+description: '면접자로도 참여하기도 하고 면접관으로도 참여하는 짬이 되었다.(애매한) 그런데 면접관으로 참여하면서 느낀 것중 하나는 면접자 스스로 절대 하면 안되는 말이 있다. 그건 바로 **스스로 연봉을 낮추는 것이다.** 스스로 연봉을 낮춰지는 어떤 행위나 말을 하는게 아니라, 실제로 연봉을 낮게 받아도 된다고 말하는 경우들을 많이 봐왔다. 
+
+어떤 처우협의가 별도의 단계가 없는(사실 처우협의 단계가 있는 회사를 지원하시기를 추천한다.) 경우 더 그런데 면접과정에서 현재 연봉과 희망연봉(내규에 따름..?) 을 애기하는 과정에서 지원자가 스스로'
 featured_image: 'https://images.unsplash.com/photo-1494888427482-242d32babc0b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a689c51340e923fd138d8f3b5f578110&auto=format&fit=crop&w=1650&q=80'
 tags: ['essay', 'develper', 'recruiter', 'Developer']
 ---

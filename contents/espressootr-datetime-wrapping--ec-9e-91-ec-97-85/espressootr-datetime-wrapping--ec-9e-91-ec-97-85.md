@@ -2,7 +2,7 @@
 title: '(espressoOtr) DateTime wrapping 작업'
 author: 'ash84'
 pub_date: '2013-03-07'
-description: ''
+description: '개인적으로 여러가지 데이터 형이 있겠지만 가장 쓰기 불편하고 짜증나는 형은 단연 날짜와 시간에 대한 데이터 형식인 Date(Java 기준, 다른 언어도 크게 다르지 않다.) 일것이다. wrapping 작업을 하는 이유는 사실 우리가 날짜 와 시간 관련 작업을 할때 하는 작업이 그리 다양하지 않다는 가정에서 출발했다. 실제로 내가 가장 필요했던'
 featured_image: ''
 tags: ['espressoOtr', 'github', 'Java', '자바 라이브러리']
 ---

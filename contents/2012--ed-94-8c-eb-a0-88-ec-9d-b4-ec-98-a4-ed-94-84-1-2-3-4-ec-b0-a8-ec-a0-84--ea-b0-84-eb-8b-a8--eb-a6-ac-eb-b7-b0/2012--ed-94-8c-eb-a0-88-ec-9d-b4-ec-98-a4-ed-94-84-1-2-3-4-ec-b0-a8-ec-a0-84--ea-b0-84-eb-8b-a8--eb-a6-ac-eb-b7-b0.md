@@ -2,7 +2,11 @@
 title: '2012 플레이오프 1, 2, 3, 4차전 간단 리뷰'
 author: 'ash84'
 pub_date: '2012-10-21'
-description: ''
+description: 'SK 와이번스 팬인지 어언 5년. 김성근 감독님을 보내고 이만수 감독 체제에 들어온지도 2년차 시점에서 2012년도 플레이 오프를 지켜본 골수팬으로서의 간단한 리뷰를 남기고자 한다. 
+
+
+
+![](http://ash84.net/wp-content/uploads/1/cfile5.uf.030BEE435083FF10210C83.jpg)'
 featured_image: ''
 tags: ['2012 플레이오프', '5차전', '프로야구', '플레이오프 5차전 전망']
 ---

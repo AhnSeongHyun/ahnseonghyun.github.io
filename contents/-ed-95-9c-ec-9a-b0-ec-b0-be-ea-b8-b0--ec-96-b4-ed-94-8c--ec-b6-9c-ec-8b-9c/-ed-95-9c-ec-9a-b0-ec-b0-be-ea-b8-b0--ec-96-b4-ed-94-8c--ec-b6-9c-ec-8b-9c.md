@@ -2,7 +2,7 @@
 title: '한우찾기 어플 출시.'
 author: 'ash84'
 pub_date: '2011-03-25'
-description: ''
+description: '안녕하세요, 2월 앱인데, 이제서야 인사드리네요^^;;(개발만 2월에 시작한 앱임.ㅠ)'
 featured_image: ''
 tags: ['devMomo', 'devmomo.com', 'Monthly App Project', '쇠고기이력조회', '아이폰어플', '이력추적제', '한우어플', '한우찾기', '한우찾기 어플']
 ---

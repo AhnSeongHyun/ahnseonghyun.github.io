@@ -2,7 +2,8 @@
 title: 'github_reader, github 유저의 활동을 내 블로그에 보여주기.'
 author: 'ash84'
 pub_date: '2015-09-03'
-description: ''
+description: '개인적으로 github를 가장 좋아하는 서비스로 뽑고 있고, 필자 역시 github 에 무엇인가를 올리는 작업을 좋아한다. 여타의 코드 저장소 및 커뮤니티와 다른 점이라면 단연 소셜적인 기능을 통해서 다른 사람들과 좀더 친밀하게 뭔가를 할수 있다는 점이겠다. 이러한 이유로 인해서 github는 개발자들 외 여타의 다른 분들도 많이들 쓰신다. 
+거두절미 하고. 내가 **[github_reader](https:'
 featured_image: ''
 tags: ['github', 'github 블로그', 'github 연동', 'github_reader', 'public activity', '블로그와 연동']
 ---

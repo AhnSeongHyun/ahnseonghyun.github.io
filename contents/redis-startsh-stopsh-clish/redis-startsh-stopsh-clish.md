@@ -2,7 +2,10 @@
 title: '(redis) start.sh, stop.sh, cli.sh'
 author: 'ash84'
 pub_date: '2013-04-19'
-description: ''
+description: '별거 없는데 redis 를 회사에서 서버로 쓰려니까 일일히 명령어 쓰기도 귀찮고 스케쥴 걸거나 그렬려면 또 쉘 스크립트화 해두는게 편해서, start.sh, stop.sh, cli.sh 만들었다. 그냥 복사해서 쓰시면 될듯.
+
+
+**start.sh'
 featured_image: ''
 tags: ['redis', 'start.sh', 'stop.sh', '명령어']
 ---

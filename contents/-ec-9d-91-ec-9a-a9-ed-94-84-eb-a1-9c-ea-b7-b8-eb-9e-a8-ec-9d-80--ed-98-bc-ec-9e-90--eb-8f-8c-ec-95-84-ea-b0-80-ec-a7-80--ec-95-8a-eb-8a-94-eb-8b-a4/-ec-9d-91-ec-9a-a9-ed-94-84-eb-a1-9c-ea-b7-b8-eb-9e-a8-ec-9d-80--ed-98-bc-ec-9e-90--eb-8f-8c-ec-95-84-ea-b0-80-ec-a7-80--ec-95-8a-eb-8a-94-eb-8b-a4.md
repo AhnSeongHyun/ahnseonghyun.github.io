@@ -2,7 +2,7 @@
 title: '응용프로그램은 혼자 돌아가지 않는다.'
 author: 'ash84'
 pub_date: '2010-02-09'
-description: ''
+description: '개발을 하다보면 이런저런 일이 많이 생기겠지만, 제가 겪은 일 중에 가장 황당한 일은 하드웨어와 연동된 응용프로그램을 개발하면서 겪은일이었습니다.'
 featured_image: ''
 tags: ['An Seong Hyun', '안성현', '응용프로그램 최적화', '펌웨어']
 ---

@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="python 3항 연산자"/>
+    <meta property="og:description" content="이걸 언제 쓰냐라고 생각했지만, 내가 오늘 이 글을 적게 될줄은 ‘나’조차도 몰랐다. 3항 연산자, 일명 if 축약 이라고도 하는데 사실 그리 쓸일이 많지는 않은데 flask 에서 유독 짜증나는 부분이 있어서 쓰게 되었다. flask 에서 함수를 구성하다 보면 초반에 하는 것중 하나가 request 객체에서 get 혹은 post 에 대한 데이터를 가져오는 작업이다. 일반적으로 get 의 경우 `request.args.get("id", None)` 이런식으로 가져오는데 get"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/python-3-ed-95-ad--ec-97-b0-ec-82-b0-ec-9e-90"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>python 3항 연산자</title>
-    <meta name="description" content="" />
+    <meta name="description" content="이걸 언제 쓰냐라고 생각했지만, 내가 오늘 이 글을 적게 될줄은 ‘나’조차도 몰랐다. 3항 연산자, 일명 if 축약 이라고도 하는데 사실 그리 쓸일이 많지는 않은데 flask 에서 유독 짜증나는 부분이 있어서 쓰게 되었다. flask 에서 함수를 구성하다 보면 초반에 하는 것중 하나가 request 객체에서 get 혹은 post 에 대한 데이터를 가져오는 작업이다. 일반적으로 get 의 경우 `request.args.get("id", None)` 이런식으로 가져오는데 get" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,32 +63,27 @@
     
 <div class="content">
     <h1 class="blog-post-title">python 3항 연산자</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p><span style="font-size: 11pt;">이걸 언제 쓰냐라고 생각했지만, 내가 오늘 이 글을 적게 될줄은 ‘나’조차도 몰랐다. 3항 연산자, 일명 if 축약 이라고도 하는데 사실 그리 쓸일이 많지는 않은데 flask 에서 유독 짜증나는 부분이 있어서 쓰게 되었다. flask 에서 함수를 구성하다 보면 초반에 하는 것중 하나가 request 객체에서 get 혹은 post 에 대한 데이터를 가져오는 작업이다. 일반적으로 get 의 경우 <code>request.args.get("id", None)</code> 이런식으로 가져오는데 get 의 경우에는 초기값을 줄수가 있다. 때</span><span style="font-size: 11pt;">문에 실제 쿼리스트링에 “id” 가 없더라도 문제가 되지 않는다. 그런데 post 에서 form 데이터를 가져오는 경우 <code>request.form['id']</code>이런식으로 가져오게 되는데 이 경우, id가 없으면 400을 뱉는다. 그게 싫은 경우는 id 가 request.form에 있는지 일일히 if문으로 검사를 해야한다. </span></p>
 <p><span style="font-size: 11pt;">3항 연산자를 사용하면 좀더 깔끔(?) 하게 처리할수 있는데 아쉽게도 파이썬의 3항 연산자는 사실상 if문이라서. 그리 깔끔한지는 모르겠지만. </span></p>
 <script src="https://gist.github.com/AhnSeongHyun/3730228f2ee7c29b9e45.js"></script>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['3항연산자'">#['3항연산자'</a>&nbsp;
+            #3항연산자&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+            #Python&nbsp;
         
-            <a href="/tag/'파이썬']">#'파이썬']</a>&nbsp;
+            #파이썬&nbsp;
         
     </div> 
     <footer>

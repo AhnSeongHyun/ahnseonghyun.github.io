@@ -2,7 +2,7 @@
 title: '# 화이트데이 'la cuisine'을 다녀오다.'
 author: 'ash84'
 pub_date: '2010-03-15'
-description: ''
+description: '화이트데이(White Day)는 남자가 여성분에게 사탕을 주는 날이라고들 하는데, 요즘은 사탕말고 초콜렛이나 작은 선물을 주는 날이라고 사람들이 많이 인식하는것 같습니다. 애인이 있'
 featured_image: ''
 tags: ['An Seong Hyun', 'la cuisine', 'White Day', '라퀴진', '안성현', '화이트데이']
 ---

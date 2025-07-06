@@ -2,7 +2,7 @@
 title: '방가방가, 외국인 노동자가 웃을수 있는 그날까지.'
 author: 'ash84'
 pub_date: '2010-11-21'
-description: ''
+description: '우연히 보게된 방가방가라'
 featured_image: ''
 tags: ['김인권', '김정태', '방가방가', '부탄', '영화', '외국인노동자']
 ---

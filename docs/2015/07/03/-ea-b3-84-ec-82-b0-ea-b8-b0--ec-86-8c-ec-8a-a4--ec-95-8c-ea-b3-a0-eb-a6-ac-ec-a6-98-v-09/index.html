@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="계산기 소스 알고리즘 V 0.9"/>
+    <meta property="og:description" content="계산기 프로그램은 어찌보면, 매우 간단하다고 생각 할수 있다. 그건, 기능 자체를 간단하다고 간주해 버리면 간단해 진다. 즉, 두수에 대한 사칙연산 만을 지원하는 경우에는 매우 간단하며, 정말 기초적인 부분(함수)으로 구현할수 있다.(물론 한 함수에 통으로 짤 수도 있다.)"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/07/03/-ea-b3-84-ec-82-b0-ea-b8-b0--ec-86-8c-ec-8a-a4--ec-95-8c-ea-b3-a0-eb-a6-ac-ec-a6-98-v-09"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>계산기 소스 알고리즘 V 0.9</title>
-    <meta name="description" content="" />
+    <meta name="description" content="계산기 프로그램은 어찌보면, 매우 간단하다고 생각 할수 있다. 그건, 기능 자체를 간단하다고 간주해 버리면 간단해 진다. 즉, 두수에 대한 사칙연산 만을 지원하는 경우에는 매우 간단하며, 정말 기초적인 부분(함수)으로 구현할수 있다.(물론 한 함수에 통으로 짤 수도 있다.)" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">계산기 소스 알고리즘 V 0.9</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2015-07-03</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2015-07-03</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>계산기 프로그램은 어찌보면, 매우 간단하다고 생각 할수 있다. 그건, 기능 자체를 간단하다고 간주해 버리면 간단해 진다. 즉, 두수에 대한 사칙연산 만을 지원하는 경우에는 매우 간단하며, 정말 기초적인 부분(함수)으로 구현할수 있다.(물론 한 함수에 통으로 짤 수도 있다.)</p>
 <p>그렇지만, 윈도우 계산기를 보면 알듯이, 계산기는 항계산이 기본적으로 되어야 한다. 항 계산 기능은 다음과 같다. <br />
@@ -129,17 +131,15 @@ ex)  “*” 를 누르면, 2+3 이 계산되어서 보여져야 하고,
 <p>즉, 버튼이나 입력이 있을때 마다, ArrayList(C#) 에 넣어서 연산자를 누를때(1번이후) 마다 이전의 계산식을 연산하는 방식이다. 곱셈과 나눗셈을 없애고 더하기와 빼기만으로 구성된 식이 나오면, 그것을 처리한다. 다음 연산에서 또 다시 곱셈과 나눗셈이 들어 간다면, 다시 처리를 반복 하게 된다. <div style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; BACKGROUND-COLOR: #ffdaed"><br />
 <font color="#d41a01">Version 0.9의 가장 큰 문제는  ( ) 괄호 처리가 안된다는 것이다. 입력 자체를 텍스트 박스로 받을려고 했지만, 괄호와 여러 계산 불가능한 문자의 처리가 귀찮아서 ReadOnly 설정으로 예외를 방지 했다. 그외에도 루트기능, 승의 기능, 진수 변환의 기능이 없기 때문에 version 2.0으로의 업그레이드에는 이런 기능들이 추가 하려고 한다. </font></div></p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['c#'">#['c#'</a>&nbsp;
+            #c#&nbsp;
         
-            <a href="/tag/'dev'">#'dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'계산기 알고리즘'">#'계산기 알고리즘'</a>&nbsp;
+            #계산기 알고리즘&nbsp;
         
-            <a href="/tag/'프로그래밍']">#'프로그래밍']</a>&nbsp;
+            #프로그래밍&nbsp;
         
     </div> 
     <footer>

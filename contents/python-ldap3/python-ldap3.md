@@ -2,7 +2,14 @@
 title: 'python LDAP, ldap3 연동'
 author: 'ash84'
 pub_date: '2019-10-19'
-description: ''
+description: 'LDAP 자체는 정보를 제공하는 시스템이라서 로그인, 토큰이라는 개념이 없어서 id, password 를 넣어서 정보를 조회하고, 조회가 되면 로그인이 되었다는 것으로 인식해서 이를 연동하는 시스템에서 자체적으로 토큰을 발급해야 한다. python 에서 LDAP 을 연동하는 방식은 python-ldap, ldap3 라이브러리를 사용하는 것인데, 아래와 같이 ldap3를 사용하면 된다. 
+
+```shell
+    pip install ldap3
+```
+
+```python
+    from ldap3 import Server, ALL,'
 featured_image: ''
 tags: ['Python', 'LDAP']
 ---

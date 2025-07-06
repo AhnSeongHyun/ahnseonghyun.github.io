@@ -2,7 +2,7 @@
 title: '[C#] Winform(윈폼) 제목표시줄에 안뜨게 하기'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile29.uf.134855014B0BEAB21F9F39.jpg)Form1과 Form'
 featured_image: ''
 tags: ['An Seong Hyun', 'c#', 'dev', 'ShowTaskbar', 'Windows Application', 'winform', '속성', '안성현', '윈폼', '제목표시줄', '제목표시줄 표시', '프로그래밍']
 ---

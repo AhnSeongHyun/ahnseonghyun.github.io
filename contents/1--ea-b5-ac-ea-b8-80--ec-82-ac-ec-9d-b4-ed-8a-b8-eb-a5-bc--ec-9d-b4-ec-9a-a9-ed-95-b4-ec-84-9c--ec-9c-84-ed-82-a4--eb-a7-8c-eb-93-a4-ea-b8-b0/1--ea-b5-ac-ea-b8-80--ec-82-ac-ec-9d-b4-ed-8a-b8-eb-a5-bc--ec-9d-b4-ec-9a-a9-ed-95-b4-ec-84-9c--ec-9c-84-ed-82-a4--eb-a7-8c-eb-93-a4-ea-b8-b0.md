@@ -2,7 +2,7 @@
 title: '1) 구글 사이트를 이용해서 위키 만들기'
 author: 'ash84'
 pub_date: '2012-01-17'
-description: ''
+description: '![](http://ash84.net/wp-content/uploads/1/cfile22.uf.1648A33A4F15A04B31AB58.jpg'
 featured_image: ''
 tags: ['google sites', '개발문서', '개인 개발 위키', '구글 사이트도구', '위키']
 ---

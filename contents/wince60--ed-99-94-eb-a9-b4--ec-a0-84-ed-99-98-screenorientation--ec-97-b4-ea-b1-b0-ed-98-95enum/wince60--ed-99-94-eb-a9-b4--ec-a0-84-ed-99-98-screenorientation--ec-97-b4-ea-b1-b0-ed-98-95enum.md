@@ -2,7 +2,7 @@
 title: '[WINCE 6.0] 화면 전환 ScreenOrientation 열거형(enum)'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '**ScreenOrientation 열거형(enum)**'
 featured_image: ''
 tags: ['An Seong Hyun', 'dev', 'ScreenOrientation', 'SystemSettings.ScreenOrientation', 'Wince', 'WINCE6.0', '안성현', '화면 전환', '화면 회전']
 ---

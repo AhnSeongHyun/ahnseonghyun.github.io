@@ -2,7 +2,15 @@
 title: '시간과 나이와 경험과 추억'
 author: 'ash84'
 pub_date: '2024-09-08'
-description: ''
+description: '시간의 흐름, 나이의 듦
+
+추억을 가져야 한다. 
+
+아이들과 아내와 삶을 살아간다는 것.
+
+그건 시간을 함께 보내고, 경험을 나누는 것
+
+결국 그걸 지향해야하지 않을까.'
 featured_image: ''
 tags: [' ', 'essay']
 ---

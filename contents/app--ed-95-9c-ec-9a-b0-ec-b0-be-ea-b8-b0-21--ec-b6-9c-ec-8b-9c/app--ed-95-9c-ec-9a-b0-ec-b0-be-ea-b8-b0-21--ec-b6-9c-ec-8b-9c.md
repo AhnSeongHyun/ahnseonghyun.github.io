@@ -2,7 +2,7 @@
 title: '[App] 한우찾기 2.1 출시.'
 author: 'ash84'
 pub_date: '2011-10-25'
-description: ''
+description: '**한우찾기 2.1을 출시하였습니다.**(we release the app “Search Hanwoo v2.1”)'
 featured_image: ''
 tags: ['2.1', 'Hanwoo', 'SearchHanwoo', 'SVProgressHUD', '쇠고기이력조회', '찾기', '축산물 등급 판정소', '한우', '한우찾기']
 ---

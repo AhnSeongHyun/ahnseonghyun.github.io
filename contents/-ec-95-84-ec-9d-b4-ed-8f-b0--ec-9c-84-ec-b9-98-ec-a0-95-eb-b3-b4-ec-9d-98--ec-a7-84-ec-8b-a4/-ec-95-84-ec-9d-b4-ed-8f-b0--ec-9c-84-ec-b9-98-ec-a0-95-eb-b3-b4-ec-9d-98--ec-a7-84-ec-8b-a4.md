@@ -2,7 +2,7 @@
 title: '아이폰 위치정보의 진실.'
 author: 'ash84'
 pub_date: '2011-01-29'
-description: ''
+description: '예전에 미국에 갔을때, 갔다 오니 폰 요금이 한달요금이 무려. [46만원이 나왔다는 애기를 했었는데요.](http://ash84.tistory.com/638 "[http://ash84.tistory.com/638]로 이동합니다.") 최근에 아이폰 스터디를 하면서 코어'
 featured_image: ''
 tags: ['GPS', 'WPS', '아이폰', '위치정보', '코어로케이션']
 ---

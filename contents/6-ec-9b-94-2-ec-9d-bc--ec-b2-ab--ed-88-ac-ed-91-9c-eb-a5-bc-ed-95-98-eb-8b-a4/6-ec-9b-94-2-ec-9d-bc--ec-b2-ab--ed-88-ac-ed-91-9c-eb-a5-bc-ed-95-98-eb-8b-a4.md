@@ -2,7 +2,10 @@
 title: '# 6월 2일 첫, 투표를하다.'
 author: 'ash84'
 pub_date: '2010-06-03'
-description: ''
+description: '**  
+****  
+****![](http://ash84.net/wp-content/uploads/1/cfile27.uf.206304224C06FA2851B2CE.jpg)  
+**'
 featured_image: ''
 tags: ['생애첫투표', '선거', '지방선거']
 ---

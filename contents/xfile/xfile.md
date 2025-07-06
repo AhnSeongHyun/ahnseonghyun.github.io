@@ -2,7 +2,12 @@
 title: '...'
 author: 'ash84'
 pub_date: '2008-12-26'
-description: ''
+description: '2008 년이 얼마 남지 않았다는 사실에 조금은 당황 스럽기도 하고.. 
+  
+ 아니면, 점점 나이가 들어가면서 무덤덤해 진건지 모르겠다. 
+
+
+어렸을때는, 날짜와 시간에 어떤 의미를'
 featured_image: ''
 tags: ['']
 ---

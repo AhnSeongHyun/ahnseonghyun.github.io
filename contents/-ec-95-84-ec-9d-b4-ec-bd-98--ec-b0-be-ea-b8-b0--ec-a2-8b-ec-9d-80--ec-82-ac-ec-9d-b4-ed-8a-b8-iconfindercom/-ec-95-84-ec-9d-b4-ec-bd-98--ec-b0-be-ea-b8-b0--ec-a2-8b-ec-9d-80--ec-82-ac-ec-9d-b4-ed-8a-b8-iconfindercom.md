@@ -2,7 +2,7 @@
 title: '# 아이콘 찾기 좋은 사이트 IconFinder.com'
 author: 'ash84'
 pub_date: '2010-05-24'
-description: ''
+description: '﻿![](http://ash84.net/wp-content/uploads/1/cfile2.uf.161319044BF9D0036ADBAE.jpg)'
 featured_image: ''
 tags: ['ICON', 'ICON FINDER', 'iconfinder.com', 'User Interface', '아이콘 찾기', '프로그램 디자인']
 ---

@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[pull request] spgen, generate mysql stored procedure"/>
+    <meta property="og:description" content="#### **앞서서, 프로시저에 대한 이야기**"/>
+    <meta property="og:url" content="https://ash84.io/docs/2016/08/05/pull-request-spgen-generate-mysql-stored-procedure"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>[pull request] spgen, generate mysql stored procedure</title>
-    <meta name="description" content="" />
+    <meta name="description" content="#### **앞서서, 프로시저에 대한 이야기**" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">[pull request] spgen, generate mysql stored procedure</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2016-08-05</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2016-08-05</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <h4><strong>앞서서, 프로시저에 대한 이야기</strong></h4>
 <p>ORM 이 추세이긴 하지만 여전히 사용하는 곳이 있다. 물론 로직이 숨어 있다는 문제, 가독성이 떨어지는 문제가 있지만 여전히 성능면에서는 최고의 방법이 아닌가 싶다.(이견이 있으시다면 댓글로,, <del datetime="2015-07-20T23:36:34+00:00">댓글구걸</del>)</p>
@@ -98,21 +100,19 @@ optional arguments:
 <p>위의 diff 에서 보면, 추가한 부분을 알 수 있는데 <code>if not self.tables:</code> 부분은 이전에 내가 넣었던 부분이고, tables 를 통해서 받은 사용할 테이블 리스트와 mysql db 의 <code>show tables;</code> 을 통해서 나온 테이블 리스트와의 교집합에 해당 하는 Table 에 한해서만 저장 프로시저를 생성하도록 하였다.</p>
 <p>꽤 오래전에 만드신 것 같아서 PULL REQUEST 가 받아질까? 하는 걱정도 있었지만, 다행히 잘 받아졌다. 단순히 기능을 추가한 것과 별개로 PR을 위해서 기본적으로 README.md 도 고치고, 테스트 케이스를 통과하기 위해서 <code>travis.yml</code> 도 수정하고, 새로운 파이썬 버전에 대한 테스트도 추가하는 등등의 작업을 하였는데, 뭔가 기여하고 있고 좀더 낫게 만들고 있다는 느낌을 받게 되는것 같다. PR을 보내는 과정이나 보내고 나서 기다리는 과정은 재밌고, 즐겁다. 마치 뭔가 허락을 받는 아이같은 느낌. <a href="https://github.com/jongha/spgen">spgen</a> 은 지금은 <code>add(insert), update, delete</code> 에 한해서 프로시저를 생성하고 있고, 이 글을 쓰는 지금은 로컬에서 약간 더 수정한 버전을 가지고 현재 진행하는 프로젝트에서 잘 사용하고 있다.</p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'generate stored procedure'">#'generate stored procedure'</a>&nbsp;
+            #generate stored procedure&nbsp;
         
-            <a href="/tag/'MySQL'">#'MySQL'</a>&nbsp;
+            #MySQL&nbsp;
         
-            <a href="/tag/'sp'">#'sp'</a>&nbsp;
+            #sp&nbsp;
         
-            <a href="/tag/'spgen'">#'spgen'</a>&nbsp;
+            #spgen&nbsp;
         
-            <a href="/tag/'stored procedure']">#'stored procedure']</a>&nbsp;
+            #stored procedure&nbsp;
         
     </div> 
     <footer>

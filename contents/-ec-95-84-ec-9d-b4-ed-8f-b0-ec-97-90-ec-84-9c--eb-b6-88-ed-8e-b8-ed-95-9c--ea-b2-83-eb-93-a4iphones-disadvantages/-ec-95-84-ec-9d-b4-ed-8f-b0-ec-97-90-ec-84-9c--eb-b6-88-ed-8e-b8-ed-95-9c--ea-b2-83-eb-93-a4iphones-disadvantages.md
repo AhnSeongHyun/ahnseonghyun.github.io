@@ -2,7 +2,7 @@
 title: '아이폰에서 불편한 것들(iPhone's disadvantages)'
 author: 'ash84'
 pub_date: '2015-07-03'
-description: ''
+description: '아이폰을 구입한지도 어언 3주정도 됐네요. 순정상태에서 쓰다가 이제는 해킹을 해서 사용하고 있습니다. 아이폰은 기존의 폰 보다 분명히 혁신적이고 보다 유저에게 친숙하고 친절한 폰입니다(굳이 스마트 폰이라는 말은 붙이지 않겠습니다)![](http://ash84.net/wp-content/uploads/1/'
 featured_image: ''
 tags: ['An Seong Hyun', 'dev', 'iPhone', 'iphone's disadvantages', '불편한것들', '아이폰', '안성현']
 ---

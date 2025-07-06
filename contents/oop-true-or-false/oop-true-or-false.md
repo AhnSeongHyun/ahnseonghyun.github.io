@@ -2,7 +2,9 @@
 title: '객체지향 사실과 오해를 읽고.'
 author: 'ash84'
 pub_date: '2020-02-22'
-description: ''
+description: '객체지향이라는 말은 어떻게 보면 올드스쿨이다. 함수형 프로그래밍과 대척점에 있어 보이기도 하고, 객체지향 == 자바라고 느껴지기도 하니 말이다. 어떻게 보면 이 책은 그런 생각들이 오해였고, 사실에 대해서 설명해 주는 책이라는 생각이 들었다. 
+
+내가 처음 객체지향이라는 단어를 배웠을 때는 C++ 을 배우면서 절차지향(이 말도 들어본지 꽤 됐다.) 의 대척점에 있는 존재였다. 마치 C vs.C++, 절차지향 vs. 객체지향 같은 느낌. 그래도 힙(hip)한 느낌이었다. 클래스와 캡슐화, 다형성 그리고 예제는 항상 Person 과 E'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/oop-true-or-false/photo-1550767988-929d81a0a090.jpeg'
 tags: ['oop', 'book', '객체지향 사실과 오해']
 ---

@@ -2,7 +2,7 @@
 title: '[CleanCode] 조건문의 캡슐화를 하자.'
 author: 'ash84'
 pub_date: '2012-03-17'
-description: ''
+description: 'CleanCode의 신봉자로서 맨 처음 여러분께 소개해드릴 내용을 그리 거창한 것도, 특별한 디자인패턴을 요하는 기술도 아니지만 개인적으로 CleanCode라는 책을 읽고 가장 많이 사용하는 부분을 가장 먼저 소개해 드릴려고 합니다.'
 featured_image: ''
 tags: ['Cleancode', 'G28', '조건문을 캡슐화하라', '클린코드']
 ---

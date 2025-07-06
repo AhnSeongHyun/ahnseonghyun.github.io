@@ -2,7 +2,7 @@
 title: '(Hadoop) standalone 모드에서 wordcount 실행하기.'
 author: 'ash84'
 pub_date: '2013-08-03'
-description: ''
+description: 'wordcount 말 그래도 단어수를 세는 것으로 하둡의 기본적인 예제이다. 하둡의 hello world 라고 해도 좋을것 같다. 기본적으로 예제가 담긴 jar파일을 가지고 있어서 굳이 찾을 필요는 없고, 분석 대상 텍스트 파일을 input이라는 디렉토리에 넣어두자.'
 featured_image: ''
 tags: ['Hadoop', 'wordcount', 'wordcount 예제', '하둡', '하웁']
 ---

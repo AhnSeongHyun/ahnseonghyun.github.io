@@ -2,7 +2,23 @@
 title: 'Ansible 간단이해'
 author: 'ash84'
 pub_date: '2017-03-28'
-description: ''
+description: '#개요
+
+- 간단히 애기하자면 내 컴퓨터에서 서버에 원격접속 혹은 직접적인 ssh 접근을 하지 않고 뭔가 작업, 혹은 배포를 할때 사용하는 툴이다.
+- 파이썬 기반으로 되어 있다.
+
+### 설치
+
+- python 2.6 이상 권장, 그 이하 버전에서 설치하면 별도의 라이브러리를 설치해야 한다. 
+
+```bash 
+sudo pip install ansible 
+```
+
+### 윈도우 작동 관련
+
+- Ansible 1.7 버전 이하에서는 원래 윈도우 지원하지 않았다.
+- 1.7이상부터 조건부 지원을 하고 있는데 ssh 대신에 Pow'
 featured_image: 'http://theeye.pe.kr/wp-content/uploads/2016/02/ansible_logo-1.png'
 tags: ['ansible', 'dev', 'Python', 'server']
 ---

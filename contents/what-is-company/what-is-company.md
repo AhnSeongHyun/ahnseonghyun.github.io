@@ -2,7 +2,13 @@
 title: '회사란 무엇인가?'
 author: 'ash84'
 pub_date: '2024-02-14'
-description: ''
+description: '회사란 무엇인가? 에 대한 생각들 정리
+
+법인이나, 유한회사니, 개인회사니 그런 것들을 떠나서 요즘 그리고 내가 가져왔던, 의문을 가졌었던 `회사`라는 개체에 대한 이런 저런 애기를 써보자. 
+
+- 회사란 이익집단이라고 배워왔던 것 같다. 그 안에 있는 모든 사람들이 이익을 추구한다. 
+
+- 보통 사장이 있고, 직원이 있는데 사장 입장에서는 회사의 가치와 벌어들이는 돈이 이익인데, 직원 입장에서는 회사의 가치 보다는 실질적인 월급이 개인의 입장에서 이익이다. 여기서 서로의 괴리가 시작되는 것 같다. 물론 회사의 가치는 여러가지 종류'
 featured_image: 'https://images.unsplash.com/photo-1549637642-90187f64f420?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3548&q=80'
 tags: ['essay', 'company', 'startup']
 ---

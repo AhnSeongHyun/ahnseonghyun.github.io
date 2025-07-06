@@ -2,7 +2,12 @@
 title: '[Java] Set 인터페이스, 간략 정리.'
 author: 'ash84'
 pub_date: '2016-08-10'
-description: ''
+description: 'Set 인터페이스에 대해서 알아보자. Collection 의 일부인데 중복되는 element를 포함하지 않는것이 가장 큰 특징이며, Java Doc 에서는 “수학적으로 말해서 집합을 의미한다” 라고 설명하고 있다. Set 인터페이스는 Collection 를 상속 받아서 만들어진 인터페이스이다. 때문에 대부분의 함수들이 Collection 에서 제공하는 함수들과 동일하다.
+
+
+**List 와 Map 그리고 Set의 차이점**
+
+List 와 Set은 Collection Interface를 구현한다는 점에서 비슷하다고 할수 있다. 그러나'
 featured_image: ''
 tags: ['dev', 'HashSet', 'Java', 'MAP', 'Set 인터페이스', '중복 제거']
 ---

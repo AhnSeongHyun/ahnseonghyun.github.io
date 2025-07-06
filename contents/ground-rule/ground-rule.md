@@ -2,7 +2,9 @@
 title: '우리에겐 그라운드 룰이 필요하다. '
 author: 'ash84'
 pub_date: '2020-06-07'
-description: ''
+description: '[부캐의 일상](https://ash84.io/2020/04/26/sub-character/)은 계속 진행 중인데, 보통 금요일 밤 늦게 9시 넘어서 내려가서 토요일 오전 6시 정도부터 일을 시작하고 11시~4시 정도는 여름으로 접어들어서 시에스타를 즐기고 있다. 여름으로 넘어오면서 잡초들이 진짜 무섭게 자라는 것을 느끼고 있는데, 일주일마다 잡초가 다시 무성하게 자라는 것을 보고 왜 이게 잡초라고 불리는지를 새삼느끼고 있다. 
+
+![ground_rule](https://s3.ap-northeast-2.amazonaws.com/st'
 featured_image: ''
 tags: ['ground-rule']
 ---

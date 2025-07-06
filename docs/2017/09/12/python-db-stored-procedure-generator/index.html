@@ -20,10 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="python - db stored procedure 호출에 generator 활용하기"/>
+    <meta property="og:description" content="프로시저 호출은 몇 가지 제약을 가진다. 일단 프로시저명을 전달해야 하고 파라미터를 순서대로 전달해야 한다. 그리고 결과를 주는 방식이 하나의 결과를 줄 수도 있고 여러 결과를 줄 수도 있다. 프로시저당 하나의 호출 함수를 만들면 너무 많은 프로시저 호출 함수가 생기는 문제가 있다. 그래서 프로시저 이름을 받는 파라미터와 전달할 프로시저 파라미터, 그리고 insert, update, delete 의 경우 commit 을 해야하기 때문에 commit 여부를 위한 파라미터, 그리고 여러 결과를 반환하는 여부에 대한 파라미터를 추가한 호"/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/09/12/python-db-stored-procedure-generator"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>python - db stored procedure 호출에 generator 활용하기</title>
-    <meta name="description" content="" />
+    <meta name="description" content="프로시저 호출은 몇 가지 제약을 가진다. 일단 프로시저명을 전달해야 하고 파라미터를 순서대로 전달해야 한다. 그리고 결과를 주는 방식이 하나의 결과를 줄 수도 있고 여러 결과를 줄 수도 있다. 프로시저당 하나의 호출 함수를 만들면 너무 많은 프로시저 호출 함수가 생기는 문제가 있다. 그래서 프로시저 이름을 받는 파라미터와 전달할 프로시저 파라미터, 그리고 insert, update, delete 의 경우 commit 을 해야하기 때문에 commit 여부를 위한 파라미터, 그리고 여러 결과를 반환하는 여부에 대한 파라미터를 추가한 호" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -58,16 +63,13 @@
     
 <div class="content">
     <h1 class="blog-post-title">python - db stored procedure 호출에 generator 활용하기</h1>
-    <div class="blog-post-meta">
-        
-            <small>  2017-09-12</small>
-        
+    <div class="blog-post-meta"> 
+        <small>  2017-09-12</small> 
     </div> 
 
     <div class="pre-blog-post"></div>
 
     
-
     <div class="blog-post">
         <p>프로시저 호출은 몇 가지 제약을 가진다. 일단 프로시저명을 전달해야 하고 파라미터를 순서대로 전달해야 한다. 그리고 결과를 주는 방식이 하나의 결과를 줄 수도 있고 여러 결과를 줄 수도 있다. 프로시저당 하나의 호출 함수를 만들면 너무 많은 프로시저 호출 함수가 생기는 문제가 있다. 그래서 프로시저 이름을 받는 파라미터와 전달할 프로시저 파라미터, 그리고 insert, update, delete 의 경우 commit 을 해야하기 때문에 commit 여부를 위한 파라미터, 그리고 여러 결과를 반환하는 여부에 대한 파라미터를 추가한 호출하는 함수 1개를 만들었다. </p>
 <pre><code class="language-python">def call_procedure(self, procedure_name, params, with_commit=False, with_next_set=False):
@@ -134,19 +136,17 @@ generator.close()
 </code></pre>
 <p>프로시저 당 하나의 함수를 만들어야 했던 문제도 해결 되었고, 각 프로시저마다 가지고있는 기능들을 호출하는 쪽에서 담당하게 되니 더 간결해진 것 같다. 제너레이터가 좋은 점은 많이 사용해 보진 않았지만, <strong>호출하는 함수 내의 동작을 외부에서 제어할 수 있다는 점인 것 같다.</strong> 어떻게 보면 이상하게 보일 수도 있지만, 좀 더 효율적으로 호출하는 방식이 될 수도 있다는 생각이 든다. </p>
     </div>
-
-    <hr/>
     <div>
         
-            <a href="/tag/['dev'">#['dev'</a>&nbsp;
+            #dev&nbsp;
         
-            <a href="/tag/'Python'">#'Python'</a>&nbsp;
+            #Python&nbsp;
         
-            <a href="/tag/'generator'">#'generator'</a>&nbsp;
+            #generator&nbsp;
         
-            <a href="/tag/'제너레이터'">#'제너레이터'</a>&nbsp;
+            #제너레이터&nbsp;
         
-            <a href="/tag/'저장프로시저']">#'저장프로시저']</a>&nbsp;
+            #저장프로시저&nbsp;
         
     </div> 
     <footer>

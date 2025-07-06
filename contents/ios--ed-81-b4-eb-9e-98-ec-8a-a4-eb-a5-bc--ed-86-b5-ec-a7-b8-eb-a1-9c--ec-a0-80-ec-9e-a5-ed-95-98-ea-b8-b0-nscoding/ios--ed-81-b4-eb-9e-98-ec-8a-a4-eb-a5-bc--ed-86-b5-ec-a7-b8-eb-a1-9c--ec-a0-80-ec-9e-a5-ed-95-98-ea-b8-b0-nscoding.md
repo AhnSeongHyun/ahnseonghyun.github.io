@@ -2,7 +2,7 @@
 title: '(iOS) 클래스를 통째로 저장하기, NSCoding'
 author: 'ash84'
 pub_date: '2015-09-24'
-description: ''
+description: '단순히 문자열을 저장하는 것만으로 앱내 데이터 저장에는 확실히 한계가 있다. 그리고 문자열을 저장하고 읽어올때 다시 파싱을해서 읽어오는 방식은 그리 달갑지도 않고 빠른 앱 개발 방식에도 한계가 있다. 그래서 Objective-c 에서는 [NSCoding](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSCoding_Protocol/Reference/Refer'
 featured_image: ''
 tags: ['dev', 'IOS', 'NSCoding', 'objective-c nscoding protocol', '객체 저장', '클래스 저장', '파일 저장']
 ---

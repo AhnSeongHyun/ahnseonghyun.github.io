@@ -2,7 +2,13 @@
 title: 'A/B Testing 간단이해'
 author: 'ash84'
 pub_date: '2017-04-03'
-description: ''
+description: '**A/B Testing**
+
+ 
+
+[![abtesting-small](https://farm9.staticflickr.com/8734/17770510261_c223ccefe0_n.jpg)](https://flic.kr/p/t5jvzX)– 전체 디자인에서 한가지 요소에 대한 두가지 이상의 버전을 시험, 더 나은것을 판별하는 기법  
+ – 무작위비교연구(Randomized-controlled trial) 를 인터넷 마케팅에 적용한것.  
+ – 기존의 웹 뿐만'
 featured_image: ''
 tags: ['A/B Testing', 'dev']
 ---
