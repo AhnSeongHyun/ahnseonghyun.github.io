@@ -7,7 +7,7 @@ featured_image: ''
 tags: ['blog', 'markdown', 'static generator']
 ---
 
-몇일 전에 Notion API를 이용해서 회사 블로그에 글을 쓸 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고 싶은 생각이 들었다. 그동안 나는 개인적으로 meier라는 backend는 flask, frontend는 TOAST UI를 이용해서 admin/backoffice를 만들어서 블로그 글을 써왔다. 그렇지만 아쉬웠던 것은 그 이후에 노션과 옵시디언이 나오면서 더 이상 글을 admin에서 쓰지 않고 별도의 markdown 파일에 쓰고 그 텍스트를 admin에 옮겨서 save하는 식으로 작업을 해왔다. 물론 admin에는 draft, private 같은 기능들이 있었다. 이건 workpress, tistory, ghost 등의 블로그 플랫폼에 있는 기능들을 구현한 것이었다. 그렇지만 노션이나 옵시디언 자체가 별도의 CMS이자 글쓰기 도구로 쓰고 있는 입장에서 이걸 유지해야 하는가에 대한 생각이 들었다.
+몇일 전에 Notion API를 이용해서 회사 블로그에 글을 쓸 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고 싶은 생각이 들었다. 그동안 나는 개인적으로 meier라는 backend는 flask, frontend는 TOAST UI를 이용해서 admin/backoffice를 만들어서 블로그 글을 써왔다. 그렇지만 아쉬웠던 것은 처음 만든 이후에 노션과 옵시디언이 나오면서 더 이상 글을 admin에서 쓰지 않고 노션에서 쓰고 markdown 파일을 다운로드 받아서 그 텍스트를 다시 admin에 옮겨서 저장하는 식으로 작업을 해왔다. 물론 admin에는 draft, private 같은 기능들이 있었다. 이건 wordpress, tistory, ghost 등의 블로그 플랫폼에 있는 기능들을 구현한 것이었다. 그렇지만 노션이나 옵시디언 자체가 별도의 CMS이자 글쓰기 도구로 쓰고 있는 상황에서 이걸 유지해야 하는가에 대한 생각이 들었다.
 
 ## 지속가능성에 대한 고민
 
