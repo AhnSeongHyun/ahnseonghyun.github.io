@@ -22,3 +22,18 @@ zv = "zv.cli:main"
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+# Enable pycodestyle ('E'), pyflakes ('F'), and isort ('I') rules
+select = ["E", "F", "I"]
+
+# Python files to analyze
+include = ["*.py"]
+
+# Maximum line length
+line-length = 120
+
+# Sort imports
+[tool.ruff.isort]
+combine-as-imports = true
+force-sort-within-sections = true
