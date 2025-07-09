@@ -1,7 +1,7 @@
 ---
 title: '[Java] Collection Hierarchy'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-12-27'
 description: '출처 : [http://ajaypinnaka.blogspot.kr/2011/01/java-collection-hierarchy.html](http://ajaypinnaka.blogspot.kr/2011/01/java-collection-hierarchy.html)
 
 일단 출처를 밝히고 시작하는데, Collection 인터페이스에 대해서 한눈에'

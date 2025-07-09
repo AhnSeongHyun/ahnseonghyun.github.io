@@ -1,7 +1,7 @@
 ---
 title: '[iOS] UIImagePicker 호출 후, ViewDidLoad가 호출되는 이유.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-06-04'
 description: '최근 개발하고 있는 프로젝트에 겪었던 기 현상을 먼저 이야기 하자면 이렇다.   
 <'
 featured_image: ''

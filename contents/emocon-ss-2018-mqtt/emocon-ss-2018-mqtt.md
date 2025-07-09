@@ -1,7 +1,7 @@
 ---
 title: '발표자료 - MQTT 를 이용한 주문 시스템 개선'
 author: 'ash84'
-pub_date: '2018-05-18'
+pub_date: '2018-03-22'
 description: '동영상 : https://youtu.be/agnXsel_EnU
 
 EMOCON 2018 SS 에서 **MQTT 를 이용한 주문 시스템 개선** 이라는 주제로 발표를 했습니다. 온라인에서 하는 세미나의 형식이어서 확실히 부담이 덜 하긴 하네요. 발'

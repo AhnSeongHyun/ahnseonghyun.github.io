@@ -1,7 +1,7 @@
 ---
 title: '[flask] robots.txt, sitemap.xml'
 author: 'ash84'
-pub_date: '2016-08-13'
+pub_date: '2014-11-25'
 description: 'static 디렉토리에 robots.tx, sitemap.xml 파일이 있다는 가정하에 사용하면 된다. 
 
 robots.txt 에 대한 설명은 아래의 링크를 참조. 

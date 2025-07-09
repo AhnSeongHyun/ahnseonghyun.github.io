@@ -1,7 +1,7 @@
 ---
 title: '파이어폭스 컨퍼런스 후기 #fxdevconkr'
 author: 'ash84'
-pub_date: '2017-03-28'
+pub_date: '2014-04-11'
 description: '**Firefox OS 소개 – 신혁석**
 
 

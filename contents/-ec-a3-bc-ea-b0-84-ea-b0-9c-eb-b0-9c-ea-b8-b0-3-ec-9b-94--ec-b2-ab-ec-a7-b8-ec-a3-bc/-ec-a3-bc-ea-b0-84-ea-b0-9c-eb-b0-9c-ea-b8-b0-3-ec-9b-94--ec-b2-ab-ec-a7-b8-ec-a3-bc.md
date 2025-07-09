@@ -1,7 +1,7 @@
 ---
 title: '#주간개발기, 3월 첫째주'
 author: 'ash84'
-pub_date: '2015-10-22'
+pub_date: '2013-03-09'
 description: '**exs4j**
 – DB에 OpenAPI를 이용한 검색 결과를 저장하는 것은 되었고, 저장된 검색 결과의 빠른 검색을 위해서 [exs4j](https://github.com/AhnSeongHyun/exs4j) 내에 올려서 유지할 인덱스를 만드는 작업을 하였다. 기존의 [espressoOtr](https://github.com/AhnSeongHyun/espressoOtr) 라이브러리 내에 Canister/S'
 featured_image: ''

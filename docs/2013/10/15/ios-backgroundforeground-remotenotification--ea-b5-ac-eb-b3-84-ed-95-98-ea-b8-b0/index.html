@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - (iOS) background/foreground, RemoteNotification 구별하기"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="https://ash84.io/docs/2013/10/15/ios-backgroundforeground-remotenotification--ea-b5-ac-eb-b3-84-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(iOS) background/foreground, RemoteNotification 구별하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(iOS) background/foreground, RemoteNotification 구별하기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2013-10-15</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>제목이 좀 난감한데;; 상황은 이렇게 Remote Notification은 말 그대로 원격지에서 알람이 오는것인데 애플의 경우 APNS를 통해서 이루어 지는데, 앱의 입장에서 보면 Remote Notification 을 받는 2가지 경우가 있다. </p>
+<p><strong>1. 앱이 켜져 있는 상태에서 Remote Notification이 오는 경우(foreground)</strong> </p>
+<p><strong>2. 앱이 꺼져 있는 상태에서 Remote Notification이 오는 경우(background)</strong></p>
+<p>이 두경우가 가장 큰 다른점은 앱이 foreground 에 있는 1번의 경우, 살펴보면 알림이 오긴 하지만 팝업이나 화면 상단의 표시되었다가 들어가는 식으로 동작하지 않는다. 라인(Line) 의 경우 다른 채팅창에 있는 경우 back버튼에 (1) 이런식으로 표시가 된다. 당연히 background 에서는 팝업이나 상단 표시가 된다.  또하나의 다른 점은 앱이 foreground에 있기 때문에 알림을 위한 json 에서 지정한 sound가 발생되지 않는다. 이때는 foreground 앱에서 따로 필요하다면 sound를 재생해 주어야 한다.  </p>
+<p>그런데 background 에서 알림이 왔고 사용자가 터치를 하면 앱이 켜지는데 이 상태에서 앱이 Remote Notification 을 받는 delegate는 아래와 같은데 foreground 에서도 아래의 메소드에 처리를 해야한다. </span></p>
+<pre><code class="language-objective-c">– (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+</code></pre>
+<p>그러다 보니 이런 문제가 생긴다. 예를들면, Remote Notification 이 왔을때 어떤 소리를 재생해줘야 한다고 할때 json 의  sound 지정된것을 iOS  에서 재생이 되고, foreground 에서는 iOS 가 json의 sound에서 재생해주지 않기 때문에 sound를 따로 재생을 해주는데 문제는 background 에서 알림이와서 눌러서 들어갈때도 이 sound가 다시 재생이 된다는 것이다.  </p>
+<p>그래서 중요한 부분은 background 에서 알림이 왔을때 사용자가 알림을 눌러서 앱에 들어와서 알림을 처리하는 경우와 foreground 에서 알림이 와서 처리하는 경우를 구별해 주어야 한다. 아래의 코드를 보자.</p>
+<script src="https://gist.github.com/AhnSeongHyun/6988113.js"></script>
+
+<p>크게 다른것은 없는데 중요한 부분은 앱이 background 에 있거나 종료되었다가 실행되는 경우에는, UIApplication 의 <code>applicationState</code> 가 <code>UIApplciationStateInActive</code> 상태라는 것이고 foreground 는 당연히 <code>UIApplciationStateActive</code> 상태라는 것이 가장 큰 차이다. 그래서 해당 메소드에서 <code>application.applicationState</code> 로 구분해 주면 된다. </p>
+<p>다른 경우 가 좀더 있을지 모르겠는데, 일단은 앱의 <code>applicationState</code> 를 이용해서 처리할수 있었다. 보다 좋은 방법이나 다른 경우가 있으면 댓글달아 주시길. 아니면 위의 gist를 수정해 주시는 것도 하나의 방법일듯.^^ </p>
+    </div>
+    <div>
+        
+            #Background&nbsp;
+        
+            #dev&nbsp;
+        
+            #foreground&nbsp;
+        
+            #IOS&nbsp;
+        
+            #Remote Notification&nbsp;
+        
+            #백그라운드&nbsp;
+        
+            #포그라운드&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

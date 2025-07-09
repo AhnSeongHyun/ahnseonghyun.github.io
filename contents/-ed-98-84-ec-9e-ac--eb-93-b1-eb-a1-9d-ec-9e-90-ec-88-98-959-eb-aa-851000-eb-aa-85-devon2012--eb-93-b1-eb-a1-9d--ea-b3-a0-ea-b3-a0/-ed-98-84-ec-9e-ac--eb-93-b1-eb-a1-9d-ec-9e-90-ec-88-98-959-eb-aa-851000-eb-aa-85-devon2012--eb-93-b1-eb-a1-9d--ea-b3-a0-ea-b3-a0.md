@@ -1,7 +1,7 @@
 ---
 title: '현재 등록자수: 959명/1,000명, DevOn2012 등록 고고.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-09-28'
 description: '**다음 커뮤니케이션**이 주최하는 [DevOn](http://devon.daum.net/2012/#.UGVZNKSubgc) [2012](http://devon.daum.net/2012/#.UGVZNKSubgc) 를 등록하였습니다. NHN의 **[Deview2012](http://ash84.tistory.com/821)** 와 다르게 유료(10000원 기부)이긴 하지만, 그래두 점심을 주기 때문에 점심값 6000원(시세)이라고 하면 뭐 그리 나쁘지 않다고 생각합니다.^^</'
 featured_image: ''
 tags: ['dev', 'DevOn2012', '개발자', '개발자 세미나', '소프트웨어 엔지니어']

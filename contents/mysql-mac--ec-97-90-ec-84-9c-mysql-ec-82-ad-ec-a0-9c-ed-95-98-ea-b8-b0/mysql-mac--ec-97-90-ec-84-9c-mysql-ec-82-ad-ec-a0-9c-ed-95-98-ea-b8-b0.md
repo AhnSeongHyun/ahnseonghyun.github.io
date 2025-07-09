@@ -1,7 +1,7 @@
 ---
 title: '(mysql) mac 에서 mysql삭제하기.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-08-03'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile28.uf.2323793651FD2A151C7CEE.png)편하긴 편하다. 
 mysql 을 mac 에서 설치하게 되면 보통 위'
 featured_image: ''

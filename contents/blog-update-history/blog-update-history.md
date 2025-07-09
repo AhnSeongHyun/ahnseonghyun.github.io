@@ -1,7 +1,7 @@
 ---
 title: '블로그 기능 업데이트 히스토리'
 author: 'ash84'
-pub_date: '2024-05-11'
+pub_date: '2023-03-05'
 description: '### History
 - 2023.01.21 공지사항 기능 추가, 댓글 기능 추가 
 - 2023.03.04 랜덤 포스트 단축키 추가, created_at, update_at 추가

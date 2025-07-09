@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [C#] Image들을 PDF로 저장하기"/>
+    <meta property="og:description" content="**"/>
+    <meta property="og:url" content="https://ash84.io/docs/2009/09/25/c-image-eb-93-a4-ec-9d-84-pdf-eb-a1-9c--ec-a0-80-ec-9e-a5-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[C#] Image들을 PDF로 저장하기</title>
+    <meta name="description" content="**" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[C#] Image들을 PDF로 저장하기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2009-09-25</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><strong><br />
+</strong><span style="font-size: 11pt; "><span style="font-family: Dotum; "><strong><br />
+ Image를 PDF로 저장하기 위한 C# 소스코드 </strong><div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><font color="#474747"><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-size: 15px; line-height: 29px; ">ResultPath : 실제 저장할 주소 (C:\TEMP.PDF)</span></font></span></span></span></span></div></div></span></span></p>
+<p><span style="font-size: 11pt; "><span style="font-family: Dotum; "><br />
+ ArrayList :  이미지 파일들이 실제 있는 경로의 집합</span></span></p>
+<p><span style="font-size: 11pt; "><span style="font-family: Dotum; "><br />
+ 그래서 소스가 실행되면, 이미지 들을 하나씩 읽어와서 하나의 PDF 파일에 차례대로 </span></span><br />
+<span style="font-size: 11pt; "><span style="font-family: Dotum; "><br />
+ 이미지를 넣어서 PDF 파일을 만든다. </span></span></p>
+<p><span style="font-size: 11pt; "><span style="font-family: Dotum; "><br />
+ 아래의 소스코드를 실행하기 위해서는 다음의 Dll이 필요하다. </span></span></p>
+<p><a href="http://ash84.net/wp-content/uploads/1/cfile29.uf.136CB40B4ABC166017FD11.dll"></a>cfile29.uf.136CB40B4ABC166017FD11.dll</p>
+<textarea class="C#" name="code" style="MARGIN: 2px; WIDTH: 712px; HEIGHT: 377px">  public String SaveToPDF(String ResultPath, ArrayList imgPathList)  
+  {  
+             // PDF 문서를 생성하기 위해 Document를 생성  
+             PdfDocument PDFDocument = new PdfDocument();</textarea>
+
+<p>// 페이지의 세로를 Pixel로 변환<br />
+             //int PageHeightPx = (int)(((double)842 / 72) * 96);<br />
+                 int PageCount = imgPathList.Count;<br />
+             for (int i = 0; i</p>
+<p><font color="#e31600"><strong><span style="font-size: 11pt; "><span style="font-family: Dotum; ">주의점</span></span></strong><span style="font-size: 11pt; "><span style="font-family: Dotum; "><div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span class="Apple-style-span" style="font-family: 굴림; font-size: 12px; "><span style="font-size: 11pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#000000">이미지 파일 자체를 첨부하여 PDF 를 만드는 경우, 프로그램이 실행되는동안 해당 이미지 파일에 대한 삭제 </font></span></span><span style="font-size: 11pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#000000">및 접근은 제한될수 있기 때문에 그러한 프로세스가 필요한 경우에는 이미지를 Image 객체에 담아서 사용하는 것이 좋다.</font></span></span></span></div></div></span></span></font></p>
+    </div>
+    <div>
+        
+            #c#&nbsp;
+        
+            #Convert Image to PDF&nbsp;
+        
+            #dev&nbsp;
+        
+            #IMAGE TO PDF&nbsp;
+        
+            #Make pdf file&nbsp;
+        
+            #pdf 만들기&nbsp;
+        
+            #개발자&nbsp;
+        
+            #프로그래밍&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

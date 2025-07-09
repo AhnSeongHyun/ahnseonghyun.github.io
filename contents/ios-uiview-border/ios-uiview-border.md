@@ -1,7 +1,7 @@
 ---
 title: '(iOS) UIView border'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-10-01'
 description: ''
 featured_image: ''
 tags: ['Border', 'dev', 'IOS', 'UIView', 'UIView Border']

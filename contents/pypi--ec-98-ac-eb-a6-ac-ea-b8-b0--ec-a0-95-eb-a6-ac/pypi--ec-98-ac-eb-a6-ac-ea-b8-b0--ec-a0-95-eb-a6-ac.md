@@ -1,7 +1,7 @@
 ---
 title: 'pypi 올리기 정리'
 author: 'ash84'
-pub_date: '2023-03-19'
+pub_date: '2014-02-24'
 description: '올릴때 마다 고생하는데 간단 정리 
 
 ****

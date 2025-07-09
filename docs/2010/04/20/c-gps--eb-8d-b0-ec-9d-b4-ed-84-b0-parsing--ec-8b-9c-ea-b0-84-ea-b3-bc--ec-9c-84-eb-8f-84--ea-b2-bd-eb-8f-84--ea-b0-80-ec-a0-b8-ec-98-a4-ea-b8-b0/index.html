@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [C#] GPS 데이터 Parsing 시간과 위도 경도 가져오기"/>
+    <meta property="og:description" content="이번시간에는 GPS 정보를 가져오는 부분을 다루려고 합니다. 다들 알다시피 GPS는 보통 시리얼 통신을 통해서 Com Port로 들어오게 됩니다. 그런데 GPS라고 해서 Latitude와 Longitude가 바로 들어오는 것이 아니라 GPS NEMA 프로토콜의 형태로 들어오게 되고 그 프로토콜을 해석해서 Application에서 필요한 정보를 우리가 취득하면 되는것이겠지요."/>
+    <meta property="og:url" content="https://ash84.io/docs/2010/04/20/c-gps--eb-8d-b0-ec-9d-b4-ed-84-b0-parsing--ec-8b-9c-ea-b0-84-ea-b3-bc--ec-9c-84-eb-8f-84--ea-b2-bd-eb-8f-84--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[C#] GPS 데이터 Parsing 시간과 위도 경도 가져오기</title>
+    <meta name="description" content="이번시간에는 GPS 정보를 가져오는 부분을 다루려고 합니다. 다들 알다시피 GPS는 보통 시리얼 통신을 통해서 Com Port로 들어오게 됩니다. 그런데 GPS라고 해서 Latitude와 Longitude가 바로 들어오는 것이 아니라 GPS NEMA 프로토콜의 형태로 들어오게 되고 그 프로토콜을 해석해서 Application에서 필요한 정보를 우리가 취득하면 되는것이겠지요." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[C#] GPS 데이터 Parsing 시간과 위도 경도 가져오기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2010-04-20</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p>이번시간에는 GPS 정보를 가져오는 부분을 다루려고 합니다. 다들 알다시피 GPS는 보통 시리얼 통신을 통해서 Com Port로 들어오게 됩니다. 그런데 GPS라고 해서 Latitude와 Longitude가 바로 들어오는 것이 아니라 GPS NEMA 프로토콜의 형태로 들어오게 되고 그 프로토콜을 해석해서 Application에서 필요한 정보를 우리가 취득하면 되는것이겠지요.</p>
+<p>GPS 시리얼 포트를 통해서 받는 법이라던지, NEMA 프로토콜 자체에 대해서 궁금하신 분은 밑의 포스팅을 참고해주시기 바랍니다.</p>
+<p><a href="https://ko.wikipedia.org/wiki/NMEA_0183">NEMA 프로토콜</a></p>
+<h2>GPS NEMA Protocol 에서 시간, 위도, 경도 가져오기</h2>
+<p>아래의 ReadGPSData() 함수는 GPS Port를 연 후, 데이터가 들어오는 부분에 대해서 처리하는 부분입니다. SerialPort 클래스의 DataReceived 이벤트가 발생하게 되면 this.Invoke 를 호출하고 Invoke 대상이 ReadGPSData가 되는 것이지요.</p>
+<p>GPS NEMA 프로토콜에는 여러 섹션이 있는 데 GPRMC는 들어온 GPS 데이터에 대한 요약본이라고 보시면 될것 같습니다. 그래서 여기서는 GPRMC를 대상으로 시간과 위도, 경도를 가져오는 방법을 설명하도록 하겠습니다.</p>
+<h2>시간 / 날짜 정보 가져오기</h2>
+<p>GPRMC 프로토콜에서 가장 중요한 부분은 바로 ‘A’ 라고 표시 되어 있는 부분입니다. A과 V값이 올수 있는데 A는 Valid, V는 Invalid 를 나타냅니다. 때문에 아래의 코드에서도 GPRMC를 추출한 후에 바로 다음에 하는것이 A인지 V인지를 체크하는 작업입니다. A이면 바로 시간과 위치, 경도를 구하게 되고 아니면 그냥 계속 데이터를 받아오게 됩니다.</p>
+<p>134807.000 라고 써 있는 부분이 시간정보를 나타내는 부분입니다. NEMA 프로토콜에 대해서는 자세히 설명하지는 않겠지만, 꼭 한번 보시는것이 도움이 됩니다. 이 부분은 13시 48분 07.00 초(hhmmss.sss) 라는것을 나타내게 됩니다. 시간정보는 그리니치 천문대(GMT)를 기준으로 나타내기 때문에 우리나라의 경우 시(hour) 정보에 +9 를 해 줘야 맞는 시간이 됩니다.</p>
+<p>날짜의 경우 110808 이라는 부분에 해당하는데 DDMMYY 형식이기 때문에 2008년 08월 11일이라는 것을 나타내고 있습니다. 날짜의 경우 뒷의 숫자만 나오기 때문에 +2000을 해줘야 합니다. </p>
+<p><strong>개발자 세트 구매하기</strong> 🤟</p>
+<iframe src="https://coupa.ng/chcDbD" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+<iframe src="https://coupa.ng/chcDdd" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+<iframe src="https://coupa.ng/chcDdZ" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+
+<h2>위도 / 경도 가져오기</h2>
+<p>위도, 경도 정보는 3732.6627,N,12701.3549,E 이 부분에 해당하는 부분입니다. 3732.6627 이 위도를 나타내고 12701.3549 이 경도를 나타내고 있습니다. 위도 37도 35.0079분, 경도 127도 1.6446분을 나타내고 있습니다. 프로토콜에서는 친절하게 데이터가 나오지 않기 때문에 받은 데이터를 가지고 Split 함수를 가지고 프로토콜 표를 보면서 추출해 내야 합니다. </p>
+<hr />
+<script src="https://gist.github.com/3386234.js"></script>
+
+<p><small>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</small></p>
+    </div>
+    <div>
+        
+            #c#&nbsp;
+        
+            #dev&nbsp;
+        
+            #GPS&nbsp;
+        
+            #GPS 시간정보 가져오기&nbsp;
+        
+            #GPS 위도경도&nbsp;
+        
+            #Latitude&nbsp;
+        
+            #Longitude&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

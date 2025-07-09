@@ -1,7 +1,7 @@
 ---
 title: '(Java) Thread, Runnable 콜백함수'
 author: 'ash84'
-pub_date: '2017-04-24'
+pub_date: '2013-05-29'
 description: '최근에 [자바 네트워크 관련 책](http://book.naver.com/bookdb/book_detail.nhn?bid=1583597)을 보고 있는데(조금 옛날책) 스레드에 관련된 내용이 나와서 정리한다. [이전에 ExcutorService 에 대해서 썼을때](http://ash84.tistory.com/933)는 Runnable 의 run()함수가 void 형을 리턴하도록 되어 있기 때문에 결과 값을 받을수 없다고 설명했었는데, 이 책에서는 콜백 함수를 이용해서 각 스레드'
 featured_image: ''
 tags: ['dev', 'Java', 'java thread runnable callback', 'Runnable', '스레드', '스레드 결과', '스레드 콜백함수', '콜백함수']

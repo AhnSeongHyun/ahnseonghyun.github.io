@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - python mysqldb DictCursor 이용하기"/>
+    <meta property="og:description" content="아무래도 제일많이 사용하는게 mysql 이고 python 으로 연동하기 위해서 MySQLdb 를 사용하는데 맨날 기존 cursor를 이용해서 데이터를 가져오곤 했다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/01/29/python-mysqldb-dictcursor--ec-9d-b4-ec-9a-a9-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>python mysqldb DictCursor 이용하기</title>
+    <meta name="description" content="아무래도 제일많이 사용하는게 mysql 이고 python 으로 연동하기 위해서 MySQLdb 를 사용하는데 맨날 기존 cursor를 이용해서 데이터를 가져오곤 했다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">python mysqldb DictCursor 이용하기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2015-01-29</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">아무래도 제일많이 사용하는게 mysql 이고 python 으로 연동하기 위해서 MySQLdb 를 사용하는데 맨날 기존 cursor를 이용해서 데이터를 가져오곤 했다. </span></p>
+<p><span style="font-size: 11pt;"><script src="https://gist.github.com/AhnSeongHyun/a01d7154c9cf37774d4a.js"></script></span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); padding: 10px; line-height: 2; background-color: rgb(255, 255, 255);"><span style="font-size: 10pt;">((2L, ‘test’, ‘Test’, ‘{test}’, datetime.datetime(2015, 1, 6, 13, 26, 45), (..))</span>
+
+</div>
+<p><span style="font-size: 11pt;">그러다 보면 위의 결과처럼 튜플(tuple)의 형태로 나오게 되는데 사실 컬럼명이 필요한 경우들이 있다. 예를들면, 공통적으로 저장프로시저를 호출하고 결과를 리턴하는 함수를 만들때는 프로시저에 종속적이지 않게 하기 위해서는 컬럼명을 키값으로 잡아서 결과와 함께 리턴해 주는게 낫다. 그래서 어떻게 하면 컬럼명을 가져올수 있을까 살펴보니, DictCursor 라는 것이 있다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); padding: 10px; text-align: justify; line-height: 2; background-color: rgb(255, 255, 255);"><dl class="docutils" style="color: rgb(0, 0, 0); font-family: Gulim; font-size:12pt; line-height: normal;"><dt><span style="font-size: 11pt;">BaseCursor</span></dt><dd style="margin-bottom: 0.5em;"><span style="font-size: 11pt;">The base class for Cursor objects. This does not raise Warnings.</span></dd><dt><span style="font-size: 11pt;">CursorStoreResultMixIn</span></dt><dd style="margin-bottom: 0.5em;"><span style="font-size: 11pt;">Causes the Cursor to use the</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">mysql_store_result()</span></tt><span style="font-size: 11pt;"> </span><span style="font-size: 11pt;">function to get the query result. The entire result set is stored on the client side.</span></dd><dt><span style="font-size: 11pt;">CursorUseResultMixIn</span></dt><dd style="margin-bottom: 0.5em;"><span style="font-size: 11pt;">Causes the cursor to use the</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">mysql_use_result()</span></tt><span style="font-size: 11pt;"> </span><span style="font-size: 11pt;">function to get the query result. The result set is stored on the server side and is transferred row by row using fetch operations.</span></dd><dt><span style="font-size: 11pt;">CursorTupleRowsMixIn</span></dt><dd style="margin-bottom: 0.5em;"><span style="font-size: 11pt;">Causes the cursor to return rows as a tuple of the column values.</span></dd></dl><span style="font-size: 11pt;">CursorDictRowsMixIn</span>
+
+> <span style="font-size: 11pt;">Causes the cursor to return rows as a dictionary, where the keys are column names and the values are column values. Note that if the column names are not unique, i.e., you are selecting from two tables that share column names, some of them will be rewritten as</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">table.column</span></tt><span style="font-size: 11pt;">. This can be avoided by using the SQL</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">AS</span></tt><span style="font-size: 11pt;"> </span><span style="font-size: 11pt;">keyword. (This is yet-another reason not to use</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">*</span></tt><span style="font-size: 11pt;"> </span><span style="font-size: 11pt;">in SQL queries, particularly where</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">JOIN</span></tt><span style="font-size: 11pt;"> </span><span style="font-size: 11pt;">is involved.)</span>
+
+<dl class="docutils" style="color: rgb(0, 0, 0); font-family: Gulim; font-size:12pt; line-height: normal;"><dt><span style="font-size: 11pt;">Cursor</span></dt><dd style="margin-bottom: 0.5em;"><span style="font-size: 11pt;">The default cursor class. This class is composed of</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">CursorWarningMixIn</span></tt><span style="font-size: 11pt;">,</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">CursorStoreResultMixIn</span></tt><span style="font-size: 11pt;">,</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">CursorTupleRowsMixIn,</span></tt><span style="font-size: 11pt;"> </span><span style="font-size: 11pt;">and</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">BaseCursor</span></tt><span style="font-size: 11pt;">, i.e. it raises</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">Warning</span></tt><span style="font-size: 11pt;">, uses</span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">mysql_store_result()</span></tt><span style="font-size: 11pt;">, and returns rows as tuples.</span></dd><dt><span style="font-size: 11pt;">DictCursor</span></dt><dd style="margin-bottom: 0.5em;"><span style="font-size: 11pt;">Like</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">Cursor</span></tt><span style="font-size: 11pt;"> </span><span style="font-size: 11pt;">except it returns rows as dictionaries.</span></dd><dt><span style="font-size: 11pt;">SSCursor</span></dt><dd style="margin-bottom: 0.5em;"><span style="font-size: 11pt;">A “server-side” cursor. Like</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">Cursor</span></tt><span style="font-size: 11pt;"> </span><span style="font-size: 11pt;">but uses</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">CursorUseResultMixIn</span></tt><span style="font-size: 11pt;">. Use only if you are dealing with potentially large result sets.</span></dd><dt><span style="font-size: 11pt;">SSDictCursor</span></dt><dd style="margin-bottom: 0.5em;"><span style="font-size: 11pt;">Like</span><span style="font-size: 11pt;"> </span><tt class="docutils literal" style="background-color: rgb(238, 238, 238);"><span class="pre" style="white-space: pre; font-size: 11pt;">SSCursor</span></tt><span style="font-size: 11pt;"> </span><span style="font-size: 11pt;">except it returns rows as dictionaries.</span></dd></dl></div>
+<p><span style="font-size: 11pt;">위의 <a href="http://mysql-python.sourceforge.net/MySQLdb.html#cursor-objects">자료</a>에서 보면 다양한 커서(cursor)들이 있는데 그 중에서 기본으로 사용하는 것은 여러 커서로 구성된 클래스이다. 특히 CursorTupleRowsMixIn 이 포함되어 있어서 기본적으로 fectchall() 시 결과가 튜플(tuple) 기반으로 출력되게 되는 것이다. 다음과 같이 처음 커서 생성시에 DictCursor를 지정하게 되면 튜플 기반이 아니라 사전(dict) 기반으로 출력이 되는 것을 확인할 수가 있다. </span></p>
+<p><span style="font-size: 11pt;"><script src="https://gist.github.com/AhnSeongHyun/0b9405aa130491233037.js"></script></span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); padding: 10px; line-height: 2; background-color: rgb(255, 255, 255);"><span style="font-size: 10pt;">({‘</span><span style="font-size: 10pt;">Data’: ‘{test}’, ‘seqNo’: 2L, ‘</span><span style="font-size: 10pt;">Date’: datetime.datetime(2015, 1, 6, 13, 26, 45), ‘Name</span><span style="font-size: 10pt;">‘: ‘test’, ‘ID’: ‘Test’}. {…})</span>
+
+</div>
+<p><a href="http://ash84.tistory.com/1003">2013/08/04 – [Programming/DB] – (mysql) mac 에서 mysql삭제하기.</a></p>
+<p><a href="http://ash84.tistory.com/993">2013/07/09 – [Programming/DB] – (stackoverflow) how to improve select performance in mysql?</a></p>
+<p><a href="http://ash84.tistory.com/988">2013/07/04 – [Programming/DB] – (mysql) mysqldump 을 이용한 백업 스크립트</a></p>
+<p><a href="http://ash84.tistory.com/987">2013/06/28 – [Programming/DB] – (mysql) insert 시간 자동 추가하기</a></p>
+<p><a href="http://ash84.tistory.com/985">2013/06/26 – [Programming/DB] – (mysql) Data truncation: Data too long for column ‘xxx’ at row 1</a></p>
+<p><a href="http://ash84.tistory.com/846">2012/11/07 – [Programming/iOS] – (iOS) iOS앱 – mysql 연동, 이렇게 하면 쉽다.</a></p>
+<p><a href="http://ash84.tistory.com/842">2012/10/31 – [Technique] – mac에 mysql 설치 관련 링크 정리, 이것만 알면돼!!</a></p>
+    </div>
+    <div>
+        
+            #cursor&nbsp;
+        
+            #dev&nbsp;
+        
+            #dictcursor&nbsp;
+        
+            #MySQL&nbsp;
+        
+            #mysqldb&nbsp;
+        
+            #Python&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 title: '아이폰 UI 스케치 이미지'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-01-12'
 description: '[](http://ash84.net/wp-content/uploads/1/cfile24.uf.173BB8034B4D00551E21A2.pdf)cfile24.uf.173BB8034B4D00551E21A2.pdf아이폰 UI 스케치 이미지 입니다. 
 
 출처 : http://acdcomm.com![](http://ash84.net/wp-content/uploads/1/cfile3.uf.171662014B4D00323825D8.jpg'

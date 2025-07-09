@@ -1,7 +1,7 @@
 ---
 title: 'git feature branch 모델 프로젝트 적용기'
 author: 'ash84'
-pub_date: '2017-05-18'
+pub_date: '2017-03-30'
 description: '원래 사내에서 svn을 사용하고 있는데 자회사쪽과 작업을 하면서 그쪽 개발자를 구워 삶아서(홀려서) svn 이 아닌 git을 저장소로 사용하기로 하고, github 를 쓰고 싶었지만 작업자가 2명이라서 [yona H2 embedded 버전](https://github.com/yona-projects/yona)을 사용하기로 했다. 
 
 오픈소스에 기여하거나 혹은 만들거나 할때 master 브랜치 외에 develop 브랜치 까지만 써보긴 했고, [git feature branch 모델](http://dogfeet.github.io/art'

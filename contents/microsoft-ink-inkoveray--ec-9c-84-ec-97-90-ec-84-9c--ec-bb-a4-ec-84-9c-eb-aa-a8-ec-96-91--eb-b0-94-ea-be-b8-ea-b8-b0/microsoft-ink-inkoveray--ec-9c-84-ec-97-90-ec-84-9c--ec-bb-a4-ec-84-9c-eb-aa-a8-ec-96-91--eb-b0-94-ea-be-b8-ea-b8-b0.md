@@ -1,7 +1,7 @@
 ---
 title: '[Microsoft Ink] InkOveray 위에서 커서모양 바꾸기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-01-20'
 description: '필자는 요즘 회사에서 Microsoft Ink 관련 Applicat'
 featured_image: ''
 tags: ['c#', 'change cursor', 'dev', 'InkOverlay curosr', 'Ink상에서의 커서변화', 'Microsoft.Ink', 'MS INK', '커서변화']

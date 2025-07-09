@@ -1,7 +1,7 @@
 ---
 title: 'flask - json_encoder 지정하기'
 author: 'ash84'
-pub_date: '2017-06-16'
+pub_date: '2017-06-15'
 description: 'API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 `json.dumps()`를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 `cls` 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다. 
 
 flask 에서도 `json.dumps`'

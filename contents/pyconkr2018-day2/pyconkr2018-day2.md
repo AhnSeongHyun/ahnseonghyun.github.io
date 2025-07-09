@@ -1,7 +1,7 @@
 ---
 title: 'PyconKR 2018 후기 2일차 '
 author: 'ash84'
-pub_date: '2018-09-02'
+pub_date: '2018-08-29'
 description: '# 2일차 후기
 
 ***

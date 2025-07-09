@@ -1,7 +1,7 @@
 ---
 title: '(iOS) 로컬 HTML UIWebView 에 뿌리기.'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2013-01-26'
 description: ''
 featured_image: ''
 tags: ['dev', 'html file uiwebview', 'html string uiwebview', 'IOS', 'UIWebView']

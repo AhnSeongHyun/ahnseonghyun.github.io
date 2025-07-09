@@ -1,7 +1,7 @@
 ---
 title: '[devMomo] Monthly App Project.'
 author: 'ash84'
-pub_date: '2015-06-08'
+pub_date: '2011-01-25'
 description: 'devMomo에서 이번 년도 2011년에 야심차게 기획한 Monthly App Project에 대해서 설명드리겠습니다. Monthly App Project의 기원은 전혀 다른 영역에서 다가왔습니다. 그것은 바로..'
 featured_image: ''
 tags: ['devMomo', 'Monthly App Project']

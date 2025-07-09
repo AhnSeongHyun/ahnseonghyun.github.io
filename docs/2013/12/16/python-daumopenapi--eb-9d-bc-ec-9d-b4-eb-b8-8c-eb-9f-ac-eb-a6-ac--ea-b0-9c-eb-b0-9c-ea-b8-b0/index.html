@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - (python) daum_openapi 라이브러리 개발기"/>
+    <meta property="og:description" content="[Daum Open API](http://dna.daum.net/apis/dashboard) 중에서 데이터형 API 를 쉽게 쓸 수 있는 Python 라이브러리를 만들어서 pypi 에 등록을 하였다. 이미 Daum 쪽에서 python 으로 api를 호출할 수 있는 예제코드를 제공하고 있는데, 만들게된 계기는 아래와 같다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2013/12/16/python-daumopenapi--eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac--ea-b0-9c-eb-b0-9c-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(python) daum_openapi 라이브러리 개발기</title>
+    <meta name="description" content="[Daum Open API](http://dna.daum.net/apis/dashboard) 중에서 데이터형 API 를 쉽게 쓸 수 있는 Python 라이브러리를 만들어서 pypi 에 등록을 하였다. 이미 Daum 쪽에서 python 으로 api를 호출할 수 있는 예제코드를 제공하고 있는데, 만들게된 계기는 아래와 같다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(python) daum_openapi 라이브러리 개발기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2013-12-16</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;"><a href="http://dna.daum.net/apis/dashboard">Daum Open API</a> 중에서 데이터형 API 를 쉽게 쓸 수 있는 Python 라이브러리를 만들어서 pypi</span><span style="font-size: 11pt;"> 에 등록을 하였다. 이미 Daum 쪽에서 python 으로 api를 호출할 수 있는 예제코드를 제공하고 있는데, 만들게된 계기는 아래와 같다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; line-height: 2;"><span style="font-size: 11pt;">1. daum, naver api를 자주 사용하는 편인데, 매번 만들때 마다 새롭게 만들기 귀찮아서.</span>
+
+<span style="font-size: 11pt;">2. pypi</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt;">에 찾아보니 없어서(내 생각엔 너무 쉽게 만들수 있어서 없는 듯)</span>
+
+<span style="font-size: 11pt;">3.</span><span style="font-size: 11pt;"> json 키를 클래스의 멤버변수로 매핑해서 사용하면 좀더 쉽게 사용할수 있지 않을까 싶어서. </span>
+
+</div>
+<p><span style="font-size: 11pt;">3번에 대해서 설명하면 이런식이다. </span></p>
+<script src="https://gist.github.com/AhnSeongHyun/7972848.js"></script>
+
+<p><span style="font-size: 11pt;">관건은 어떻게 json 키를 가져와서 매핑 시키느냐 하는 부분과 더불어서 계층적인 구조로 매핑을 어떻게 시키느냐 하는것이었다. 이부분은 다른 개발자분들께 트위터를 통해서 공개 질의를 했었는데, <a href="http://stackoverflow.com/questions/20091760/how-to-convert-json-to-python-class?noredirect=1#comment29934628_20091760">stacko</a> <a href="http://stackoverflow.com/questions/20091760/how-to-convert-json-to-python-class?noredirect=1#comment29934628_20091760">verflow</a> 에도 올리고 해서 찾았다. 요지는 class 의 변수를 키-값 형태로 가지고 있는 <code>__dict__</code> 에 넣어주면 되는 것인데, 처음에는 결과 json 을</span><span style="font-size: 11pt;"> 다 파싱을 해서 넣어야 하나 했는데, 찾아보니 dictionary 형의 </span><span style="font-size: 11pt;"><code>update()</code> 함수를 통해서 가져온 json 을 키 값 형태로 바로 넣을 수가 있어서 그것을 활용하였다. </span></p>
+<script src="https://gist.github.com/AhnSeongHyun/7972744.js"></script>
+
+<p><span style="font-size: 11pt;"> </span></p>
+<p><span style="background-color: transparent; font-size: 11pt; line-height: 2;">개발하던 중 Daum OpenAPI 에서는 리턴값으로 XML을 주는 경우가 있다는 것을 알게 되었다. 어떻게 해야할까 고민했는데, </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;"></span><a href="https://pypi.python.org/pypi/daum_openapi/0.1">daum_openapi</a><span style="background-color: transparent; font-size: 11pt; line-height: 2;"></span><span style="background-color: transparent; font-size: 11pt; line-height: 2;"> 라이브러리에서는 xml인 경우에 xml을 json으로 변환한 후, 클래스 맵핑을 하였다. 이 과정에서는 </span><a href="https://pypi.python.org/pypi/xmltodict/0.8.3">xmltodict</a><span style="background-color: transparent; font-size: 11pt; line-height: 2;"> 이라는 python 라이브러리를 사용했다. 그 외에 사용하는 라이브러리로는 </span><a href="http://requests.readthedocs.org/en/latest/">requests</a><span style="background-color: transparent; font-size: 11pt; line-height: 2;"> 라 http 요청 라이브러리를 urllib 대신에 사용하고 있다. </span></p>
+<p><span style="background-color: transparent; font-size: 11pt; line-height: 2;"><br />
+</span></p>
+<p><span style="font-size: 15px; line-height: 29px;"><strong>설치법 </strong></span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 15px; line-height: 29px;">pip install daum_openapi</span>
+
+</div>
+<p><span style="font-size: 15px; line-height: 29px;"><br />
+</span></p>
+<p><span style="font-size: 15px; line-height: 29px;"><strong>github 및 사용법</strong></span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 15px; line-height: 29px;">[https://github.com/AhnSeongHyun/daum_openapi](https://github.com/AhnSeongHyun/daum_openapi)</span>
+
+</div>
+<p><span style="font-size: 15px; line-height: 29px;"><br />
+</span></p>
+<p><span style="font-size: 11pt;">만드는 과정은 그리 어렵지 않았지만, pypi 에 올리는 과정은 역시 험난했다. 목요일에 업무를 다하고, 금요일 오전부터 업로드 작업을 했는데 3시간 정도 걸렸던 것 같다. pypi</span><span style="font-size: 11pt;"> 에 올리는 것을 나중에 따로 포스팅 할 예정이긴 한데, 간략하게 말하자면 준비보다 나중에 pip install ‘내가 만든 모듈’ 을 받는 부분과 받아서 python 프로그램에 들어가서 <code>import daum_openapi</code> 식으로해서 테스트를 하고 고치는 부분에서 많은 시간을 보냈다.</span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;">사실 내가 필요해서 만들었고, json 결과를 클래스처럼 사용하고 싶다는 생각을 가지고있었는데 어느정도 만족한것 같다. 다음주 중으로 <a href="https://travis-ci.org/">travis-ci</a> 와 github를 연결해서 테스트 코드를 돌려볼 생각이다.(사실 이것도 <a href="https://travis-ci.org/">travis-ci</a> 를 써보고 싶어서.) 스터디 성이 강한 오픈소스긴 하지만. 나름 유익하고 재미있는 경험이었던것 같다. </span></p>
+    </div>
+    <div>
+        
+            #daum open api python&nbsp;
+        
+            #daum_openapi&nbsp;
+        
+            #dev&nbsp;
+        
+            #Python&nbsp;
+        
+            #requests&nbsp;
+        
+            #travis-ci&nbsp;
+        
+            #xmltodict&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

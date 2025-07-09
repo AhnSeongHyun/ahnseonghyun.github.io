@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - (shell) 쉘 스크립트 프롬프트 변경하기"/>
+    <meta property="og:description" content="쉘에서 프롬프트를 변경할일이 있을까 싶기도 하지만 어떤 서버의 경우 요상하리 만큼 로그인후 쉘의 길이가 긴 경우가 있다. 그냥 쓰면 될껄 왜 변경하느냐 하는 분도 있겠지만 길이가 길면 터미널 창에 잘 들어오지도 않고 자바 같은 경우 실행시 좀 짜증나게 되서. 쉘 변경하는 내용을 올린다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2013/07/08/shell--ec-89-98--ec-8a-a4-ed-81-ac-eb-a6-bd-ed-8a-b8--ed-94-84-eb-a1-ac-ed-94-84-ed-8a-b8--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(shell) 쉘 스크립트 프롬프트 변경하기</title>
+    <meta name="description" content="쉘에서 프롬프트를 변경할일이 있을까 싶기도 하지만 어떤 서버의 경우 요상하리 만큼 로그인후 쉘의 길이가 긴 경우가 있다. 그냥 쓰면 될껄 왜 변경하느냐 하는 분도 있겠지만 길이가 길면 터미널 창에 잘 들어오지도 않고 자바 같은 경우 실행시 좀 짜증나게 되서. 쉘 변경하는 내용을 올린다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(shell) 쉘 스크립트 프롬프트 변경하기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2013-07-08</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">쉘에서 프롬프트를 변경할일이 있을까 싶기도 하지만 어떤 서버의 경우 요상하리 만큼 로그인후 쉘의 길이가 긴 경우가 있다. 그냥 쓰면 될껄 왜 변경하느냐 하는 분도 있겠지만 길이가 길면 터미널 창에 잘 들어오지도 않고 자바 같은 경우 실행시 좀 짜증나게 되서. 쉘 변경하는 내용을 올린다. </span></p>
+<p><strong><span style="font-size: 11pt;">어디서?</span></strong></p>
+<p><span style="font-size: 11pt;">필자 같은 경우는 본인 home 디렉토리의 자기 계정내에 있는 .bashrc 에서 수행하였다. 여기서 수행한 이유는 일단은 전체적으로 같은 쉘을 쓸지 말지는 모르는 상황이어서 일단은 내 계정에 대해서는 수행하고자 .bashrc 에서 수정작업을 진행하였다. </span><span style="font-size: 11pt; line-height: 2;">해당 서버를 사용하는 전체에 대한 수정작업을 하고 싶다면, etc/bashrc(bash.basrc) 에서 아래의 작업을 해주면 될것으로 생각된다.(필자역시 해보진 않았다.)</span></p>
+<p><span style="font-size: 9pt; line-height: 2;"><br />
+</span></p>
+<p><span style="font-size: 9pt; line-height: 2;"><br />
+</span></p>
+<p><span style="font-size: 9pt; line-height: 2;"><br />
+</span></p>
+<p><strong><span style="font-size: 11pt;">어떻게?</span></strong></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; line-height: 2;"><span style="font-size: 11pt;">ash84@b4c2ce95-a9bc-489d-a2b1-3c8cb0bb13f1:~$</span>
+
+</div>
+<p><span style="font-size: 11pt;">원래 내 계정의 쉘 프로프트이다. 보기만 해도 답답하다. ash84 라는 아이디 다음에 오는 일련의 문자와 숫자들은 도데체 무엇인지 모르겠지만 일단 내가 원하는 것은 현재 계정과 경로만 표시되기를 원했다. .bashrc 를 열어서 제일 하단에 아래의 스크립트를 추가했다. </span></p>
+<p><span style="font-size: 11pt;"></span></p>
+<script src="https://gist.github.com/AhnSeongHyun/5943257.js"></script>
+<p><span style="font-size: 11pt;"></span></p>
+<p><span style="font-size: 11pt;">저장한후, 닫고 나서 바로 다시 로그인을 해서 프롬프트를 확인해 보았다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt; line-height: 2;">ash84@:~$ cd nanpa/</span>
+
+<span style="font-size: 11pt;">ash84@:~/nanpa$</span>
+
+</div>
+<p><span style="font-size: 11pt;">이상한 문자열이 없어진것을 확인 할 수가 있다. 그리고 더불어서 프롬프트의 색도 빨간색으로 변경을 하였다. 쉘쪽에서 작업을 많이하면 아무래도 검은 바탕에 약간의 색으로 구분할수 있게 하는 편이 좋아서 색도 변경하였다. </span></p>
+<p><span style="font-size: 11pt;">그렇다면, <code>PS1</code> 과 그 문자들이 의미하는 것은 무엇일까?</span></p>
+<p><span style="font-size: 11pt;">프롬프트의 제어는 쉘 상에서 특별한 변수에 의해서 제어가 된다. <code>PS1</code>, <code>PS2</code>, <code>PS3</code>, <code>PS4</code> 변수가 그런것들인데, 각각의 의미하는 바는 아래와 같다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">PS1 – Primary Prompt String(default value : \s-\v$)</span>
+
+<span style="font-size: 11pt;">PS2 – Secondary Prompt String(default value : >)</span>
+
+<span style="font-size: 11pt;">PS3 – select command를 위한 prompt</span>
+
+<span style="font-size: 11pt;">PS4 – shell script 를 디버깅 모드에서 실행시 사용되는 prompt</span>
+
+</div>
+<p><span style="font-size: 11pt;">각각의 변수를 아래와 같이 확인해 보면 현재 어떤 변수에 어떤값이 할당되어 있는지를 알 수 있다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">echo $PS1</span>
+
+</div>
+<p><span style="font-size: 11pt;">여기서 우리가 대상으로 하는 것은 로그인을 한후 일반적으로 나오는 프롬프트이기 때문에 당연히 <code>PS1</code>을 대상으로 하였고 위에서 수정한 부분 역시 <code>PS1</code>을 대상으로 하였다. 자, 이제 그렇다면 <code>PS1</code>에 설정한 문자는 어떤 의미일까?</span></p>
+<table align="justify" border="0" cellpadding="0" cellspacing="0" class="txc-table" style="border:none;border-collapse:collapse;;font-family:돋움;font-size:12px" width="604"><tbody><tr><td style="width: 95px; height: 24px; border: 1px solid rgb(204, 204, 204); background-color: rgb(218, 217, 255);"> 설정 문자  
+
+</td><td style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(218, 217, 255);">** 의미  **
+
+</td></tr><tr><td style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \a
+
+</td><td style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> an ASCII bell character(07) 
+
+</td></tr><tr><td style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \d
+
+</td><td style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> the date in “Weekday Month Date” format (e**.**g., “Tue May 26”)
+
+</td></tr><tr><td style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \D{format}
+
+</td><td style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> format의 지정에 따른 date, strftime(3)
+
+</td></tr><tr><td style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \e
+
+</td><td style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> an ASCII escape character(033)
+
+</td></tr><tr><td style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \h
+
+</td><td style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> the hostname up to the first ‘.’
+
+</td></tr><tr><td style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \H
+
+</td><td style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> the hostname 
+
+</td></tr><tr><td style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \j
+
+</td><td style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> 쉘에 의해서 관리되는 현재 job의 수  
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \l</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> 쉘의 터미널 디바이스 이름의 basename 
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \n</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> newline 
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \r</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> carriage return 
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \s</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> 쉘의 이름 </td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \t
+
+</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> 24-hour, 현재시간,  HH:MM:SS
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \T
+
+</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> 12-hour, 현재시간, <span style="font-size: 9pt; line-height: 2;">HH:MM:SS</span>
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \@</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> 12-hour, 현재시간, am/pm  
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \A
+
+</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);">  24-hour, 현재시간,  HH:MM
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \u
+
+</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> 현재 사용자 이름  </td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \v
+
+</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> bash 의 버전  
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \V
+
+</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> bash 의 릴리즈
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \w</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> 현재 working 디렉토리</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \W</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> 현재 working 디렉토리의 basename</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \!</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> the history number of this command 
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \#</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> the command number of this command 
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \$
+
+</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> if the effective UID is 0, a #, otherwise a $ 
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \nnn
+
+</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> the character corresponding to the octal number nnn
+
+</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \\</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> backslash </td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \[</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> begin a sequence of non-printing characters, which could be used to embed a terminal control sequence into the prompt</td></tr><tr><td rowspan="1" style="width: 95px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"> \]</td><td rowspan="1" style="width: 508px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"> end a sequence of non-printing characters</td></tr></tbody></table>
+<p><span style="font-size: 11pt;">PS1=’[ \e [0;31m ] \u@:\w$ [ \e[m] ‘</span></p>
+<p><span style="font-size: 11pt;"><code>PS1</code> 설정한 부분에서 [0;31] 이 부분은 색을 넣은 부분은데, 색 처리에 대한 코드는 아래의 Reference 에서 색처리 관련 링크를 찾아보면 이해가 될것이다. 위의 설정에서 \u@\w 를 설정함으로써 간단하게 현재 사용자와 현재 디렉토리를 보여주고 있는 것이다. </span></p>
+<p><span style="font-size: 11pt;">쉘 프롬프트 수정에 대해서 조사하면서 리눅스 쉘에 대해서 모르는게 참 많다는 생각이 들었고 .bashrc 를 통해서 다양한 작업이 가능하겠구나 하는 생각이 들었다. 쉘은 쉘일 뿐이지만 그래두 커스텀을 원하는 개발자가 있다면 참고하시길. </span></p>
+<p><span style="font-size: 11pt;"><strong>Reference </strong></span></p>
+<p><span style="font-size: 11pt;">–</span><a href="http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html"><span style="font-size: 11pt;"> How to : Change/Setup bash custom prompt(PS1)</span></a></p>
+<p><span style="font-size: 11pt;">– </span><a href="http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/"><span style="font-size: 11pt;">BASH Shell: Change The Color of My Shell Prompt Under Linux or UNIX</span></a></p>
+    </div>
+    <div>
+        
+            #change shell prompt&nbsp;
+        
+            #dev&nbsp;
+        
+            #Shell&nbsp;
+        
+            #쉘&nbsp;
+        
+            #쉘 프로프트 변경&nbsp;
+        
+            #프롬프트&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

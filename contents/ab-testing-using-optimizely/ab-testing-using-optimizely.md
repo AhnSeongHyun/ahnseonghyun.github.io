@@ -1,7 +1,7 @@
 ---
 title: 'optimizely를 이용한  A/B Testing'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2015-05-31'
 description: '이번에는 optimizely를 이용한 A/B Testing에 대해서 간단하게 알아 보도록 하겠다.
 
 

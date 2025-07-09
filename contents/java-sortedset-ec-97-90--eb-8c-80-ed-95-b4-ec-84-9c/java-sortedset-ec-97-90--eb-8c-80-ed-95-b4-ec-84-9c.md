@@ -1,7 +1,7 @@
 ---
 title: '[Java] SortedSet에 대해서.'
 author: 'ash84'
-pub_date: '2017-04-27'
+pub_date: '2013-01-14'
 description: ''
 featured_image: ''
 tags: ['collection', 'dev', 'SortedSet', 'TreeSet', '자바']

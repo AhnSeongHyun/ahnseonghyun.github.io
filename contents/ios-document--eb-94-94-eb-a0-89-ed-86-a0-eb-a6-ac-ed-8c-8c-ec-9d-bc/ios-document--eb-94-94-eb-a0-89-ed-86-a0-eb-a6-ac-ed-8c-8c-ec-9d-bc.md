@@ -1,7 +1,7 @@
 ---
 title: '[iOS] Document + 디렉토리/파일'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-07-27'
 description: ''
 featured_image: ''
 tags: ['dev', 'document', 'NSFileManager', 'Objective-C', '디렉토리 생성', '파일']

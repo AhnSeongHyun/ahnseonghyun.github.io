@@ -1,7 +1,7 @@
 ---
 title: '(flask) Pluggable View, Class 에서 요청처리하기'
 author: 'ash84'
-pub_date: '2017-03-29'
+pub_date: '2013-11-11'
 description: '[Pluggable View](http://flask.pocoo.org/docs/views/?highlight=as_view) 라고 말이 어려운데, 간단하게 말하자면 flask 는 기본적으로 url 과 함수의 맵핑으로 이루어져있다. 아래의 Quick Start 에서도 보면 알겠지만, url “/ ” 는 hello_world() 라는 함수에 맵핑이 되어 있어서 / 로 들어오게 되면 hello_world() 함수로 들어오게 된다.'
 featured_image: ''
 tags: ['dev', 'FLASK', 'flask multi view', 'Pluggable View', 'Python', '파이썬']

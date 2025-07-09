@@ -1,7 +1,7 @@
 ---
 title: 'maven, UTF-8 인코딩 소스일경우, 경고 문구 해결법'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-12-28'
 description: 'maven빌드를 하고 나면 이상하게 아래와 같은 문구가 나온다. 말인즉, UTF-8 인코딩으로 작성되어 있어서 특정 플랫폼에서 종속적(dependent)라는 애기인데, `'
 featured_image: ''
 tags: ['dev', 'File encoding has not been set', 'i.e. build is platform dependent!', 'maven', 'using platform encoding UTF-8', 'UTF-8 인코딩', '메이븐']

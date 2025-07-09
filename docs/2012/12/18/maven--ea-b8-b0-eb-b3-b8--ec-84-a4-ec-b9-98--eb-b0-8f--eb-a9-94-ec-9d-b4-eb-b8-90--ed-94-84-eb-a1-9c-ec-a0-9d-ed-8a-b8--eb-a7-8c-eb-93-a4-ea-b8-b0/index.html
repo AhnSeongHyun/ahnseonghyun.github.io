@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [maven] 기본 설치 및 메이븐 프로젝트 만들기"/>
+    <meta property="og:description" content="maven에 대해서 포스팅 하는 이유는 Java 의 빌드에 대해서 여러가지 방법이 있지만, 가장 jar에 대한 관리가 잘 되기 때문이라는 생각에서였다. 본 글은 이클립스 Juno 버전이 설치되어 있다는 가정하에 진행하도록 하겠다. 기존의 이클립스가 있으신 분들이라면 Juno 버전을 따로 다운 받아서 해보시길 바란다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2012/12/18/maven--ea-b8-b0-eb-b3-b8--ec-84-a4-ec-b9-98--eb-b0-8f--eb-a9-94-ec-9d-b4-eb-b8-90--ed-94-84-eb-a1-9c-ec-a0-9d-ed-8a-b8--eb-a7-8c-eb-93-a4-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[maven] 기본 설치 및 메이븐 프로젝트 만들기</title>
+    <meta name="description" content="maven에 대해서 포스팅 하는 이유는 Java 의 빌드에 대해서 여러가지 방법이 있지만, 가장 jar에 대한 관리가 잘 되기 때문이라는 생각에서였다. 본 글은 이클립스 Juno 버전이 설치되어 있다는 가정하에 진행하도록 하겠다. 기존의 이클립스가 있으신 분들이라면 Juno 버전을 따로 다운 받아서 해보시길 바란다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[maven] 기본 설치 및 메이븐 프로젝트 만들기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2012-12-18</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">maven에 대해서 포스팅 하는 이유는 Java 의 빌드에 대해서 여러가지 방법이 있지만, 가장 jar에 대한 관리가 잘 되기 때문이라는 생각에서였다. 본 글은 이클립스 Juno 버전이 설치되어 있다는 가정하에 진행하도록 하겠다. 기존의 이클립스가 있으신 분들이라면 Juno 버전을 따로 다운 받아서 해보시길 바란다. </span></p>
+<p><span style="font-size: 11pt;"><strong>1. 마켓플레이스에서 다운 받기 </strong></span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile27.uf.03666E5050CFBA4D05EE1B.PNG" /></p>
+<p><span style="font-size: 11pt;">보시는 화면처럼 maven 이라고 검색을 하면 몇개의 메이븐 관련 플러그인들이 나오는데, 제일 위에 있는<strong> m2eclipse-wtp : Maven Integration for Eclipse WTP(Incubation)</strong>을 사용하면 된다.  Install 을 누르면 자동적으로 설치될것이고, 이클립스를 한번 restart 할것이다. </span></p>
+<p><span style="font-size: 11pt;"><strong>2. maven 프로젝트 만들기 </strong></span></p>
+<p><span style="font-size: 11pt;">플러그인이 설치된 상태에서 늘 하던대로 <strong>New&gt;Other&gt;Maven Project</strong>를 아래처럼 누른다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile7.uf.0230BF4E50CFBBD111EF09.PNG" /></p>
+<p><span style="font-size: 11pt;">그리고 나서 일단 기본적인 maven 프로젝트를 만드는 것이기 때문에 Create a simple project를 체크하도록 하자. 그리고 나서 Next. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile2.uf.2228804B50CFBBEF1DACFB.PNG" /></p>
+<p><span style="font-size: 11pt;">아래와 같이 정보를 입력하는데 세가지 용어에 대해서 알아보자. 그전에 하나의 artifact를 하나의 jar 라고 간편 생각해보자. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">1. Group Id : artifact 제작을 책임지는 개체, 조직, ex) com.ibm.devworks</span>
+
+<span style="font-size: 11pt;">2. Artifact Id : 실제 Artifact 이름, ex) HelloWorld</span>
+
+<span style="font-size: 11pt;">3. version : aritifact 버전,  mmm.nnn.bbb-qqqqqqq-dd 와 같다. 여기에서 mmm 은 메이저 버전 숫자, nnn 은 마이너 버전 숫자, bbb 는 버그 수정 레벨을 나타낸다. 가끔 qqqqq (수식어) 또는 dd (빌드 숫자)를 버전 넘버에 추가로 붙일 수 있다.</span>
+
+</div>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile7.uf.25469C4750CFBC591F547B.PNG" /></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile9.uf.20668A4D50CFBE971E8856.jpg" /></p>
+<p><span style="font-size: 11pt;">Finish를 누르면 maven 프로젝트가 생성된 것이다. 구조를 한번 보면 다음과 같다. 기존의 자바프로젝트와 다른점이라면, <strong>Maven Dependencies 와 pom.xml</strong> 이라는 것이 생겼다는 것이다. pom.xml에 마우스 우클릭을 하면 maven 항목이 있는데, 그 안에서 Add Dependency 를 선택하자. 구글의 json 파서인 Gson 라이브러리를 추가해보도록 하자. gson 이라고 입력한 결과 화면이다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile22.uf.2122AD4850CFBF402D2B28.PNG" /></p>
+<p><span style="font-size: 11pt;">검색된 결과 화면을 볼수 있을것이다. 가장 위에 있는 com.google.code.gson 을 선택해 보자. 선택을 하면 2가지가 바뀌는데 한가지는 pom.xml 을 열어보면 <dependency> 에 gson이 다음과 같이 걸려 있는것을 볼수가 있다. 또 한가지는 Maven Dependencies 에 gson-2.2.2.jar 가 다음과 같이 추가된 것을 볼 수가 있다. 즉, Maven 을 통해서 추가된 라이브러리는 maven 에 의해서 관리가 되는것이다. </span></p>
+<script src="https://gist.github.com/4324000.js"></script>
+
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile21.uf.247ECA4A50CFC0DB2BBAFC.jpg" /></p>
+<p><span style="font-size: 11pt;">다음 시간에는 아래와 같이 차례대로 알아보도록 할것이다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 9pt; color: rgb(0, 34, 102);">[1](http://ash84.tistory.com/871) [. nexus 를 이용해서 사내 Maven ](http://ash84.tistory.com/871)</span><span style="font-size: 9pt;"><span style="color: rgb(0, 34, 102);">[Repository 만드는 방법. ](http://ash84.tistory.com/871)</span></span>
+
+<span style="color: rgb(0, 34, 102); line-height: 29px;">2. 실제 개발된 자바 프로그램을 maven을 이용해서 jar화 하는 방법.</span>
+
+</div>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><strong>Reference</strong></span></p>
+<p><span style="font-size: 11pt;"> – <a href="http://www.ibm.com/developerworks/kr/library/tutorial/j-mavenv2/section4.html">http://www.ibm.com/developerworks/kr/library/tutorial/j-mavenv2/section4.html</a></span></p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #JAR&nbsp;
+        
+            #Java&nbsp;
+        
+            #maven&nbsp;
+        
+            #메이븐&nbsp;
+        
+            #빌드&nbsp;
+        
+            #자바 빌드&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

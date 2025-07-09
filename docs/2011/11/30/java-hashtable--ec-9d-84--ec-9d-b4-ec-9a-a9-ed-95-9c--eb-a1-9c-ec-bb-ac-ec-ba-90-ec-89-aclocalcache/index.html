@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [JAVA] HashTable 을 이용한 로컬캐쉬(LocalCache)"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="https://ash84.io/docs/2011/11/30/java-hashtable--ec-9d-84--ec-9d-b4-ec-9a-a9-ed-95-9c--eb-a1-9c-ec-bb-ac-ec-ba-90-ec-89-aclocalcache"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[JAVA] HashTable 을 이용한 로컬캐쉬(LocalCache)</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[JAVA] HashTable 을 이용한 로컬캐쉬(LocalCache)</h1>
+    <div class="blog-post-meta"> 
+        <small>  2011-11-30</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>자바 프로그래머도 아니면서 자꾸 자바 소스코드를 내놓게 되는데 사실 환경만 구축되어 있으면, 이것만큼 쉽게 프로토타입핑을 쉽게 해 볼수 있는 언어도 드문것 같다. 오늘 소개한 코드는 일명 로컬캐쉬(LocalCache) 라는 것이다. 만든 취지는 원래 회사에서 캐쉬관련 모듈이 있는데, 캐쉬라는것은 한 마디로 미리 저장해 놓는 개념이라고 볼수 있다. 그래서 자바의 HastTable 을 이용해서 로컬캐쉬 즉, 프로그램 내에서 싱글턴의 형태로 존재하면서 무엇인가를 저장하고 있다가 요청하게 되면 반환해 주는 것이다. 여러가지로 활용될수 있는 여지가 있다고 생각되어 진다. 특정 API 관련된 결과를 다시 호출할 필요없이 일정기간 내에서는 로컬 캐쉬내에서 찾아서 보여준다면 빠르지 않을까? </p>
+<script src="https://gist.github.com/3383363.js"></script>
+
+<p><strong>1. 용량제한 장치</strong></p>
+<p>– 사실 엄청 많은 데이터를 넣을수는 있지만, 메모리 부족 문제가 생길수 있다. 그리고 해쉬테이블 상 Java 의 Object 형을 인자로 받기 때문에 모든 형들이 다 들어갈수 있다. 원래 취지는 데이터 사이즈를 고려해서 특정 데이터 사이즈 이상은 넣지 않는 것으로 할려 했으나, C에서 처럼 sizeof() 함수가 없기 때문에 건수 자체(limit_chche_entry )를 지정하는 방식으로 되어 있다. </p>
+<p><strong>2. 타이머 기능</strong></p>
+<p>– 타이머 기능은 당연히, 특정 시간 동안에만 캐쉬를 유지하는 기능이다. 너무 오랫동안 유지할 경우, 메모리 부족의 문제도 있기 때문에 시간을 둔것이다. 사용자가 설정한 시간이 지나면 저절로 해쉬테이블 내의 모든 데이터를 초기화 시킨다. </p>
+<p><strong>3. 멀티스레드 기능</strong></p>
+<p>– 당연히 멀티스레드를 생각했었고, 처음부터 멀티유저 동시 접속시의 성능향상을 위해서 만든 것이다. 때문에 멀티스레드를 위한 다양한 장치를 했는데 우선 본 클래스의 인스턴스 생성은 아예 한번만 이루어지고, 해당 인스턴스를 빌려서 쓰게 만드는 방식을 사용했다. 사실은 <code>getInstance()</code> 함수에서 Null 인지를 체크하고 널인 경우에만 인스턴스를 생성해서 반환하는 방식을 사용했는데 멀티쓰레드의 보장 문제가 테스트 할때 발견이 되어서 급히 수정했다. </p>
+<p>그리고 또 한가지는 바로 <code>setCache()</code> 함수시의 내부에서 선 진입스레드가 수행하고 후 진입 스레드는 계속 대기(waiting)하는 것이 아니라, 대기하면서 계속 해쉬테이블 안에 키가 있는지 확인하는 과정을 거치게 만들었다. 선진입한 스레드와 후 진입한 스레드가 동일한 데이터를 쓰려고 하면 문제가 발생하는것은 아니지만, 후 진입한 스레드의 입장에서는 시간낭비이기 떄문이다. </p>
+<p>사실 이 로컬캐쉬 코드와 쌍으로 이루어서 쓸수 있는것은 전에 포스팅에서 했던 MD5를 만드는 자바코드이다. 사실 해쉬테이블은 키-값, 키벨류 방식의 사전(Dictionary) 형태이기 때문에 하나의 데이터를 넣기 위해서는 고유한 키가 필요하다. 때문에 MD5 코드를 통해서 특정한 string 값을 입력하면 MD5의 형태로 문자열을 출력하고, 그 문자열을 해쉬테이블의 키 값으로 사용하는 것이다. MD5가 완벽하게 확실한 키 값을 추출해 준다고 말할수는 없겠지만, 테스트 결과 같은 문자열을 넣으면, 같은 MD5 키를 추출해 주었다.</p>
+<p>좀더 좋은 의견이나 개선사항이 있으면, 무조건 댓글 달아 주시라.^^ </p>
+    </div>
+    <div>
+        
+            #An Seong Hyun&nbsp;
+        
+            #Cache&nbsp;
+        
+            #dev&nbsp;
+        
+            #Hashtable&nbsp;
+        
+            #Java&nbsp;
+        
+            #local cache&nbsp;
+        
+            #MD5&nbsp;
+        
+            #안성현&nbsp;
+        
+            #자바&nbsp;
+        
+            #캐쉬&nbsp;
+        
+            #프로그래밍&nbsp;
+        
+            #해쉬테이블&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

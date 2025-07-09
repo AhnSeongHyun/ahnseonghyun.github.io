@@ -1,7 +1,7 @@
 ---
 title: '[Java] List 분배하기, distributeListToSubList()'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-12-24'
 description: '개인적으로 필요할것 같은데 하는 라이브러리를 만드는 작업을 하고 있는데 이름은 espressoOtr 이라고 지었다. (github에 아직은 미공개상태.) 뭐 이름은 내 마음대로니까 거두절미하고, 짜잘한 라이브러리가 있지만, 최근에 만든것을 하나 공개하려고 한다. 대단한건 절대 아니고, 누군가 이미 만들어 쓰고 있을지도 모르지만. 
 하나의 리스트를 n 개의 리스트로 분할하는 함수이다. distributeLis'
 featured_image: ''

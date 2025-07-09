@@ -1,7 +1,7 @@
 ---
 title: '사용자 추가 삭제 및 그룹지정'
 author: 'ash84'
-pub_date: '2015-09-24'
+pub_date: '2015-08-06'
 description: '자주 까먹는거라서 메모!!'
 featured_image: ''
 tags: ['dev', 'linux']

@@ -1,7 +1,7 @@
 ---
 title: '[Cocoa Design Pattern]18ch. Responder Chain'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-06-17'
 description: '**코코아 디자인 패턴 18장. 리소폰더 체인**
 **'
 featured_image: ''

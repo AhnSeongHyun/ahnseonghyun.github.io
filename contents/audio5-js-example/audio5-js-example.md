@@ -1,7 +1,7 @@
 ---
 title: 'audio5.js 를 이용한 음원 재생 및 제어'
 author: 'ash84'
-pub_date: '2016-12-05'
+pub_date: '2016-12-02'
 description: '이번 프로젝트 하면서, 주문이 들어왔을 때 웹상에서 특정 소리로 사용자에게 알려줘야하는 부분이 있었는데, 음원 재생관련 라이브러리를 찾아 보다가 괜찮은 것이 있어서 예제코드를 남긴다. 
 
 http://zohararad.github.io/audio5js/

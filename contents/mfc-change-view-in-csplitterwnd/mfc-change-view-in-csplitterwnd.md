@@ -1,7 +1,7 @@
 ---
 title: '[MFC] Change View in CSplitterWnd'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-06-08'
 description: '이번 프로젝트를 하면서 허벌나게 CSplitterWnd 와 함께 동거동락을 하고 있는데요. MainFrame 에서'
 featured_image: ''
 tags: ['CreateView', 'CSplitterwnd', 'dev', 'OnInitalUpdate', '뷰전환']

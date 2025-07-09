@@ -1,7 +1,7 @@
 ---
 title: '[iOS]HTML 파싱 - HTMLParser 를 이용하기, more fast'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-09-24'
 description: '한우찾기 관련 포스트에서 밝힌적이 있듯이, HTML 파싱을 핵심으로 하고 있는 한우찾기의 라이브러리화 작업이 한창 진행중이다. 이전의[ HTML 파싱 포스팅](http://ash84.tistory.com/697)'
 featured_image: ''
 tags: ['dev', 'html', 'HTML Parsing', 'HTMLNode', 'HtmlParser', 'ios html parsing', '아이폰', '아이폰 개발', '파싱']

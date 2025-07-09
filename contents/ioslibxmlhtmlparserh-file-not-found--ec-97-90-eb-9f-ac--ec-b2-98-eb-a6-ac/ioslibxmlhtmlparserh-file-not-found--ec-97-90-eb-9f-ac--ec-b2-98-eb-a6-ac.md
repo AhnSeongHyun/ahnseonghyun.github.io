@@ -1,7 +1,7 @@
 ---
 title: '(iOS)libxml/HTMLparser.h file not found 에러 처리'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-10-17'
 description: '이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트'
 featured_image: ''
 tags: ['dev', 'HTML Parsing', 'HTML 파싱', 'libxml/HTMLparser file not found', 'libxml2', '아이폰 앱', '앱 개발']

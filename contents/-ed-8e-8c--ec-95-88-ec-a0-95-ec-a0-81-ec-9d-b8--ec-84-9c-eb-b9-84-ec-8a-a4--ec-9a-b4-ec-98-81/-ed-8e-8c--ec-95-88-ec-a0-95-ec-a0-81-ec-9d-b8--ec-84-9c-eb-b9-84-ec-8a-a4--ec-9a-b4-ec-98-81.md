@@ -1,7 +1,7 @@
 ---
 title: '[펌] 안정적인 서비스 운영'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2015-02-03'
 description: ''
 featured_image: ''
 tags: ['dev', '서버', '성능', '안정적인 서비스 운영']

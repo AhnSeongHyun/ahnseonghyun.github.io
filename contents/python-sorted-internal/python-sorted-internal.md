@@ -1,7 +1,7 @@
 ---
 title: 'python sorted 에 대해서.'
 author: 'ash84'
-pub_date: '2018-05-18'
+pub_date: '2017-08-28'
 description: 'sorted 에 대해서 질문을 받았고 잘 대답을 하지 못해서 복기차원에서 이 글을 쓴다. 대부분의 내용은 [Sorting HOW TO](https://docs.python.org/3/howto/sorting.html) 라는 글에서 가져왔음을 밝힌다. 
 
 

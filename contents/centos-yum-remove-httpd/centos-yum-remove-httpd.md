@@ -1,7 +1,7 @@
 ---
 title: 'centos yum remove httpd'
 author: 'ash84'
-pub_date: '2016-08-13'
+pub_date: '2015-03-04'
 description: 'centos 상에서 아파치 소스를 받아서 설치하다 보면 아래와 같이 redefinition 에러가 발생하는 경우가 있다.
 
 > exports.c:2048: error: redefinition of ‘aphackaprbrigadeputc’

@@ -1,7 +1,7 @@
 ---
 title: '싸다구 앱 업데이트와 개발 주저리'
 author: 'ash84'
-pub_date: '2015-08-26'
+pub_date: '2015-05-31'
 description: '[새버전](https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8)에서 어떤 기능이 있는지 여기에서 설명하기 보다는 [INDF(IDEAN AND DOGFOOT)팀 블로그](http://blog.indf.net/)에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모'
 featured_image: ''
 tags: ['dev', 'sada9', '싸다구']

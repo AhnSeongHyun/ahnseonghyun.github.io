@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - flask 파일업로드 검증하기"/>
+    <meta property="og:description" content="파일 업로드의 경우 주의할 점이(업로드를 당하는 입장에서) 악성파일 혹은 원치 않는 파일들이 들어올 수 있음을 항상 인지해야한다. 그래서 왠만하면 파일 업로드를 잘 안만들거나 내부에서 몇명의 인가된 사용자만 따로 업로드 메뉴를 보이게 해서 제공하거나 하는 식으로 하곤 했었다. 그래도 업로드가 필요할 경우 아래와 같은 방법으로 제한 할 수 있다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2018/09/10/flask-upload-limit"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>flask 파일업로드 검증하기</title>
+    <meta name="description" content="파일 업로드의 경우 주의할 점이(업로드를 당하는 입장에서) 악성파일 혹은 원치 않는 파일들이 들어올 수 있음을 항상 인지해야한다. 그래서 왠만하면 파일 업로드를 잘 안만들거나 내부에서 몇명의 인가된 사용자만 따로 업로드 메뉴를 보이게 해서 제공하거나 하는 식으로 하곤 했었다. 그래도 업로드가 필요할 경우 아래와 같은 방법으로 제한 할 수 있다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">flask 파일업로드 검증하기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2018-09-10</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p>파일 업로드의 경우 주의할 점이(업로드를 당하는 입장에서) 악성파일 혹은 원치 않는 파일들이 들어올 수 있음을 항상 인지해야한다. 그래서 왠만하면 파일 업로드를 잘 안만들거나 내부에서 몇명의 인가된 사용자만 따로 업로드 메뉴를 보이게 해서 제공하거나 하는 식으로 하곤 했었다. 그래도 업로드가 필요할 경우 아래와 같은 방법으로 제한 할 수 있다. </p>
+<ul>
+<li>파일 확장자 체크</li>
+<li>사이즈 체크</li>
+<li>mime type 체크</li>
+</ul>
+<p>그렇지만, <strong>파일 확장자는 언제나 변경가능하기 때문에 위험하다.</strong> 예를 들어, 악성 자바스크립트, 웹쉘 같은 파일들을 .png, .jpg, .docx 등과 같이 업무에서 자주 사용하는 파일 확장자로 변경해서 올릴 여지가 여전히 있다. mime type 체크 역시 웹프레임워크 상에서 내려주는 값을 보면 문제가 생긴다. </p>
+<p><a href="http://flask.pocoo.org/docs/1.0/patterns/fileuploads/">http://flask.pocoo.org/docs/1.0/patterns/fileuploads/</a></p>
+<p>Flask 의 문서에서는 파일 사이즈에 대한 제한과 확장자에 대한 제한 그리고 <code>secure_filename()</code> 함수를 통한 <a href="http://werkzeug.pocoo.org/docs/0.14/utils/#werkzeug.utils.secure_filename">서버내에서의 다른 경로로의 접근을 제한</a>하고 있다. 위의 링크에 있는 소스를 가지고 Whale.exe 파일을 Whale.pdf 로 변경한 후에 파일 업로드를 올리고 아래와 같은 코드로 mimetype 을 찍어봤다. </p>
+<pre><code class="language-python">    @app.route('/upload', methods=['POST'])
+    def upload():
+        upload_file = request.files.get('file', None)
+        print(upload_file.mimetype)
+        print(upload_file.content_type)
+        print(upload_file.headers)
+
+
+    &gt;&gt;&gt; application/pdf
+    &gt;&gt;&gt; Content-Disposition: form-data; name=&quot;file&quot;; filename=&quot;WhaleSetup.pdf&quot;
+    &gt;&gt;&gt; Content-Type: application/pdf
+</code></pre>
+<p>결과를 보면, 확장자를 변경했기 때문에 mimetype 내용이 <code>application/pdf</code> 로 나오는 것을 확인 할 수가 있다. <strong>즉 확장자만 바꾸면, 업로드 제한을 회피 할 수 있다는 것이다.</strong> 이런 회피를 감지하기 위해서는 파일 자체를 봐야하는데, 파일 자체를 보기에는 큰 파일의 경우 다 볼수가 없다. 그래서 파일 시그니처(signature) 를 확인해야 한다. </p>
+<p><strong>파일 시그니처란 무엇일까?</strong> </p>
+<ul>
+<li>각각의 파일들은 포맷(format) 이라는것이 있고, 그 포맷들을 파일 시그니처를 가지고 있다.</li>
+<li>파일의 첫 부분 혹은 끝 부분 몇 바이트를 가지고 시그니처로 사용한다. (헤더 시그니처, 푸터 시그니처)</li>
+</ul>
+<p>파일 시그니처를 통해서 전송받은 파일이 어떤 파일인지 분류를 하게 되면 해당 파일을 지우거나 혹은 파일을 전송한 사용자 혹은 ip 등을 로그를 남기고, 차단을 하는 등의 조치를 취할 수가 있다. </p>
+<p>일단 어떤 파일들을 허용할 지를 지정하고, 해당 파일들이 전송되었을때의 mimetype 을 지정했다. </p>
+<pre><code class="language-python">    ALLOWED_FILE_TYPE_MAPPING = {
+        'pdf': 'application/pdf',
+        'png': 'image/png',
+        'jpg': 'image/jpeg',
+        'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        'pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+
+    }
+    ALLOWED_EXTENSIONS = set(ALLOWED_FILE_TYPE_MAPPING.keys())
+    ALLOWED_MIME_TYPES = set(ALLOWED_FILE_TYPE_MAPPING.values())
+</code></pre>
+<p>허용하는 파일은 이미지파일(png, jpg), 문서파일(pdf, docx, xlsx, pptx) 로 한정했다. 사이트에 따라, 용도에 따라 몇가지 더 추가 할 수 있을것 같다. 그에 따른 mimetype 도 같이 추가해주면 된다. </p>
+<p><strong>fleep 라이브러리</strong> </p>
+<p>저장한 파일에서 파일 시그니처를 가져와서 분석하고, mimetype 을 반환해주는 라이브러리는 fleep 을 사용하면 된다. 파이썬에서 제공하는 imghdr 이나 기타 라이브러리들이 있지만, 찾은것 중에 가장 최근까지 관리가 되고, 많은 파일에 대한 분석을 제공하는 것은 fleep 이었다. </p>
+<p>fleep 은 사용법이 간단한데 아래와 같이 사용하면 된다. 내부적으로 data.json 이라는 파일에서 파일시그니처와 type, extension, mime, offset 등의 정보들을 가지고 있어서 바이너리모드로 읽은 파일에 대한 시그니처를 가지고 맵핑된 결과를 반환하는 식으로 구성되어 있다. </p>
+<pre><code class="language-python">    import fleep
+
+    with open(&quot;png_image&quot;, &quot;rb&quot;) as file:
+        info = fleep.get(file.read(128))
+
+    print(info.type)  # prints ['raster-image']
+    print(info.extension)  # prints ['png']
+    print(info.mime)  # prints ['image/png']
+
+    print(info.type_matches(&quot;raster-image&quot;))  # prints True
+    print(info.extension_matches(&quot;gif&quot;))  # prints False
+    print(info.mime_matches(&quot;image/png&quot;))  # prints True
+</code></pre>
+<p>fleep 라이브러리는 아쉽게도 python 버전 3.1 이상을 요구한다. python2.x 에서 사용하고 싶으면 아래와 같이 fleep 라이브러리의 <code>get()</code> 함수에서 <code>ord()</code> 를 추가하면 된다. </p>
+<pre><code class="language-python">    stream = &quot; &quot;.join(['{:02X}'.format(ord(byte)) for byte in obj])
+</code></pre>
+<hr />
+<p>다시 돌아와서 upload 하는 부분의 코드에서 기존의 확장자 체크와 더불어서 fleep 을 이용해서 mimetype 을 체크하는 부분을 넣어보았다. fleep 은 일단 파일이 서버에 저장된 이후에 검사할 수 있기 때문에 저장하고 검사하고, 정한 mimetype 이 아닌 경우에는 로컬에 저장한 파일을 삭제 하는 식으로 진행했다. </p>
+<pre><code class="language-python">    @app.route('/upload', methods=['POST'])
+    def upload():
+        upload_file = request.files.get('file', None) 
+        if not upload_file or not upload_file.filename:
+            return &quot;NOT EXIST FILE&quot;
+
+        if upload_file and allowed_file(upload_file.filename):
+            filename = secure_filename(upload_file.filename)
+            save_file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            print('SAVE_FILE_PATH : {}'.format(save_file_path))
+            upload_file.save(save_file_path)
+
+            with open(save_file_path, &quot;rb&quot;) as file:
+                info = fleep.get(file.read(128))
+                mime_type = info.mime
+
+            if mime_type and allowed_mime(mime_type):
+                return &quot;SAVED : {}&quot;.format(save_file_path)
+            else:
+                os.remove(save_file_path)
+                return 'INVALID MIMETYPE : {}'.format(mime_type)
+        else:
+            return 'INVALID FILE'
+</code></pre>
+<p>파일이 없는 경우나 확장자가 유효하지 않은 경우, mimetype 이 유효하지 않은 경우에 response 메시지만 내보내고 있지만, 실제 프로젝트에서는 json 형식의 status code 400, 403 등을 정의해서 내보내면 될 것이다. </p>
+<p><a href="https://github.com/AhnSeongHyun/flask-upload-limit">https://github.com/AhnSeongHyun/flask-upload-limit</a> </p>
+<p><strong>Reference:</strong></p>
+<p><a href="https://github.com/floyernick/fleep-py">https://github.com/floyernick/fleep-py</a></p>
+<p><a href="http://forensic-proof.com/archives/300">http://forensic-proof.com/archives/300</a></p>
+<p><a href="https://hackernoon.com/determining-file-format-using-python-c4e7b18d4fc4">https://hackernoon.com/determining-file-format-using-python-c4e7b18d4fc4</a></p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #Python&nbsp;
+        
+            #FLASK&nbsp;
+        
+            #upload file&nbsp;
+        
+            #fleep&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

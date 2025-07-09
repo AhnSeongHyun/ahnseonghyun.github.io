@@ -1,7 +1,7 @@
 ---
 title: 'mod_wsgi libpython2.7.a could not read symbols bad value'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2015-06-01'
 description: ''
 featured_image: ''
 tags: ['apache', 'dev', 'mod_wsgi', 'Python']

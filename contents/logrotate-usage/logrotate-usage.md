@@ -1,7 +1,7 @@
 ---
 title: 'logrotate 사용해서 로그 일별분할 하기'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2015-11-04'
 description: ''
 featured_image: ''
 tags: ['dev', 'logrotate', '로그 분할', '로그 일별 분할', 'log', '로그']

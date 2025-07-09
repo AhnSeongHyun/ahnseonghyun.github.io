@@ -1,7 +1,7 @@
 ---
 title: 'STS(Search Tech Summit) 빅 데이터 시대의 검색 기술과 협업 전략 간략 요약'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-09-28'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile22.uf.136617434E832AE119877E.jpg)'
 featured_image: ''
 tags: ['big data', 'dev', 'Hadoop', 'search', 'UX', '검색 기술', '다이제스트', '보안데이터', '소셜미디어', '솔트룩스', '아이폰', '이장우', '코난테크놀로지', '텍스트분석', '페이스북']

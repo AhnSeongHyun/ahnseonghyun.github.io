@@ -1,7 +1,7 @@
 ---
 title: '(CSS) <code> 태그에 대한 CSS'
 author: 'ash84'
-pub_date: '2015-09-24'
+pub_date: '2013-05-14'
 description: '트위터 부트스트랩에 있는 `` 태그에 대한 스타일이 이뻐서 훔쳐왔음. 블로그 스킨 CSS 에도 사용하면 좋음.'
 featured_image: ''
 tags: [' ', 'code 태그', 'css', 'css code tag style', 'dev', '트위터 부트스트랩']

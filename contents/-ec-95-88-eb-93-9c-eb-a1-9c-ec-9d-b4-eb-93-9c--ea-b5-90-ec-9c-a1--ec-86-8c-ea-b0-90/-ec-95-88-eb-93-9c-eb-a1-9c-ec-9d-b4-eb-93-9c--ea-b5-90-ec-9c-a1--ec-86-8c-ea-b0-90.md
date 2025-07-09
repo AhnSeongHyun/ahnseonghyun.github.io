@@ -1,7 +1,7 @@
 ---
 title: '안드로이드 교육 소감'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2009-12-11'
 description: '**  
 ****안드로이드 교육 5일차.**'
 featured_image: ''

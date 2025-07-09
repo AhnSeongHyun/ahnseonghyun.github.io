@@ -1,7 +1,7 @@
 ---
 title: '(LockLizard) 인쇄 막힌 PDC 파일 캡처하는 방법'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2012-10-07'
 description: ''
 featured_image: ''
 tags: ['dev', 'PDC', 'PDC 파일 락 해제', 'PDC 파일 인쇄', 'PDC 파일 캡처', 'pdf', '스크린샷']

@@ -1,7 +1,7 @@
 ---
 title: '블로그 툴 이사'
 author: 'ash84'
-pub_date: '2018-05-31'
+pub_date: '2018-05-11'
 description: '블로그를 개편했다. 아니 정확히는 블로그 툴을 바꿨다는게 맞는것 같다. 블로그에 대한 나의 편력(?)은 대단한 편이다. 처음에 테터툴즈로 시작했고, 티스토리, 네이버를 거쳐서 워드프레스([Startig wordpress](https://ash84.net/2015/04/14/starting-wordpress/)) 그리고 ghost까지. 그리고 지금은 직접 개발하고 있는 블로그 툴을 사용하고 있다.
 
 ### ghost를 사용하면서 

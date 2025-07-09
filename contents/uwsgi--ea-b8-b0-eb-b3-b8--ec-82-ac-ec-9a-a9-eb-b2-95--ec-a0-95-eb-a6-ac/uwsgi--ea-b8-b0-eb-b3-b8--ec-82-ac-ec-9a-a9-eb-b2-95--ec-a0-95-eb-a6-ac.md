@@ -1,7 +1,7 @@
 ---
 title: 'uwsgi 기본 사용법 정리'
 author: 'ash84'
-pub_date: '2016-08-13'
+pub_date: '2015-03-10'
 description: '### 개요
 
 - WAS 서버의 일종, 현재 파이썬 서버 중 가장 좋은 성능으로 알려져 있다. 

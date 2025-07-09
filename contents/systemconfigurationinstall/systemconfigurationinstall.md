@@ -1,7 +1,7 @@
 ---
 title: 'System.Configuration.Install'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2007-10-05'
 description: '******System.Configuration.Install ?**'
 featured_image: ''
 tags: ['dev', 'Installer Class', 'System.Configuration.Install']

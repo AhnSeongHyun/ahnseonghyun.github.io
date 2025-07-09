@@ -1,7 +1,7 @@
 ---
 title: 'jinja - {% break %} 사용하기'
 author: 'ash84'
-pub_date: '2018-05-31'
+pub_date: '2018-01-09'
 description: 'jinja template 는 강력한 형태의 for 문을 제공하는데, 당연히 일반적인 for 문 안에서의 continue 나 break 등이 가능할 것이라고 생각하지만, 기본적으로 제공하지는 않는다. 이런 기능을 사요하기 위해서는 `jinja2.ext.loopcontrols` 을 설치해야 한다. 
 
 flask 에서 설치 하는 방법은 아래와 같이 app 객체내에서 `jinja_env.add_extension` 함수에 추가해 주면 된다. 

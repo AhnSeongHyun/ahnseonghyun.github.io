@@ -1,7 +1,7 @@
 ---
 title: '(Java) 상수 인터페이스 패턴'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2013-02-06'
 description: ''
 featured_image: ''
 tags: ['dev', 'Interface', 'Java', '디자인 패턴', '상수 인터페이스 패턴', '안티 패턴', '인터페이스']

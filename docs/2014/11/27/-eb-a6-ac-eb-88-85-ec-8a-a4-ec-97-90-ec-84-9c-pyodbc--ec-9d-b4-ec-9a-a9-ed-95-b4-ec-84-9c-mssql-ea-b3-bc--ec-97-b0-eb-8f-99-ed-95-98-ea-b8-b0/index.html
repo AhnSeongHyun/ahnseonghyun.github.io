@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - 리눅스에서 pyodbc 이용해서 mssql과 연동하기"/>
+    <meta property="og:description" content="일반적으로 python-mssql 라이브러리들은 윈도우를 기반으로 동작한다. 이때 pyodbc나 pymssql 들은 내부적으로 윈도우에 설치된 SqlClient 등의 라이브러리에 의존하게 된다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2014/11/27/-eb-a6-ac-eb-88-85-ec-8a-a4-ec-97-90-ec-84-9c-pyodbc--ec-9d-b4-ec-9a-a9-ed-95-b4-ec-84-9c-mssql-ea-b3-bc--ec-97-b0-eb-8f-99-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>리눅스에서 pyodbc 이용해서 mssql과 연동하기</title>
+    <meta name="description" content="일반적으로 python-mssql 라이브러리들은 윈도우를 기반으로 동작한다. 이때 pyodbc나 pymssql 들은 내부적으로 윈도우에 설치된 SqlClient 등의 라이브러리에 의존하게 된다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">리눅스에서 pyodbc 이용해서 mssql과 연동하기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2014-11-27</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p>일반적으로 python-mssql 라이브러리들은 윈도우를 기반으로 동작한다. 이때 pyodbc나 pymssql 들은 내부적으로 윈도우에 설치된 SqlClient 등의 라이브러리에 의존하게 된다. </p>
+<p><strong>문제 : 리눅스 환경에서는 SqlClient 와 같은 라이브러리가 없는데 어디에 의존해야 할까?</strong></p>
+<p>pyodbc 를 기준으로 설명하자면, 리눅스 환경. CentOS, Ubuntu, MAC OSX 등의 환경에서는 unixODBC 와 FreeTDS 라는 라이브러리가 필요하다. </p>
+<p><strong><a href="http://www.unixodbc.org/"> unixODBC  </a></strong></p>
+<p>– non winodws platform 상에서 표준 ODBC를 사용할수 있도록 해주는 라이브러리.  </p>
+<p>– 설치법  </p>
+<ul>
+<li>centos : </li>
+</ul>
+<pre><code>yum install unixODBC unixODBC-devel 
+</code></pre>
+<ul>
+<li>ubuntu : </li>
+</ul>
+<pre><code>apt-get install unixodbc-dev unixodbc-bin unixodbc 
+</code></pre>
+<p><strong><a href="http://www.freetds.org/"> FreeTDS  </a></strong></p>
+<p>– 유닉스, 리눅스를 위한 라이브러리 집합으로 MS SQL  Server, Sybase 데이터베이스와의 통신을 위한 라이브러리  </p>
+<p>– TDS(Tabular Data Stream)프로토콜 에 대한 오픈소스 구현체이다.  </p>
+<p>– 설치법 :  <a href="ftp://ftp.freetds.org/pub/freetds/stable/freetds-stable.tgz"> ftp://ftp.freetds.org/pub/freetds/stable/freetds-stable.tgz </a>  다운로드후, 다음의 작업 수행. </p>
+<script src="https://gist.github.com/AhnSeongHyun/0b3b802c75784c6f1693.js"></script>
+
+<p>설치시, 만약 unixODBC 를 먼저 설치했다면, <code>./configure</code> 하는 부분에서 다음과 같이 실행해 준다. </p>
+<script src="https://gist.github.com/AhnSeongHyun/e21b71e85832c4c7c0ee.js"></script>
+
+<p><strong>설치후 해야할 일</strong></p>
+<p>– 두개의 파일을 설정해야 하는데 <code>/etc/odbcinst.ini</code>, <code>/etc/obbc.ini</code></p>
+<p>– <code>/etc/odbcinst.ini</code> 에서는 다음과 같이 마지막줄에 FreeTDS 추가할 것을 명시해준다. 즉, 여기서는 드라이버를 FreeTDS 를 쓰겠다고 지정하는것이다.  </p>
+<script src="https://gist.github.com/AhnSeongHyun/5c03139a99b6e2935be3.js"></script>
+
+<p>– <code>/etc/odbc.ini</code> 에서는 실제 연결할 데이터베이스에 대한 정보를 입력한다.  </p>
+<script src="https://gist.github.com/AhnSeongHyun/9906b7f4fdb7da32e2c2.js"></script>
+
+<script src="https://gist.github.com/AhnSeongHyun/3690774bf40cca02333d.js"></script>
+
+<p><strong>자, 이제 연동하는 법</strong></p>
+<ul>
+<li><code>/etc/freetds.conf</code> 추가</li>
+</ul>
+<pre><code>[DB_PRM]
+host=10.10.1.116
+port=1443
+tds version=7.0
+dump file=/tmp/freetds.log
+</code></pre>
+<ul>
+<li><strong>중요한점은 connect 함수에서 연결시, 앞에서 /etc/odbc.ini 에서 [MSSSQLTEST] 라고 영역을 지정해 두었던 것을 Connect 함수의 DSN 부분에 써주어야 한다. 이유는 모르겠지만, server 로 해서 ip 나 호스트 이름을 지정하게 되면 연결이 되지 않는다.</strong></li>
+</ul>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #freetds&nbsp;
+        
+            #MSSQL&nbsp;
+        
+            #pyodbc&nbsp;
+        
+            #Python&nbsp;
+        
+            #unixODBC&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

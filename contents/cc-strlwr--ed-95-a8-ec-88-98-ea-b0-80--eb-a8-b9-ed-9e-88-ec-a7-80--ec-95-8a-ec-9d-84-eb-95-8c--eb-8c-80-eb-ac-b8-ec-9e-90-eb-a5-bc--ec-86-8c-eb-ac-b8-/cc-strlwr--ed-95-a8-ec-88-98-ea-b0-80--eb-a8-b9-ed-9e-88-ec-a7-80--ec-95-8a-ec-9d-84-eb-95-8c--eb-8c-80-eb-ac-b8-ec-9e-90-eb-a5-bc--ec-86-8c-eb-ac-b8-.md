@@ -1,7 +1,7 @@
 ---
 title: '[C/C++] strlwr() 함수가 먹히지 않을때? 대문자를 소문자로.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-10-28'
 description: ''
 featured_image: ''
 tags: ['aix', 'c#', 'dev', 'strcasecmp', 'strlwr', '대문자를 소문자로']

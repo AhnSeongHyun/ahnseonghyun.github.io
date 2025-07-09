@@ -1,7 +1,7 @@
 ---
 title: '(iOS) Category 란?'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2014-02-11'
 description: ''
 featured_image: ''
 tags: ['category', 'dev', 'IOS', '상속', '카테고리 기능']

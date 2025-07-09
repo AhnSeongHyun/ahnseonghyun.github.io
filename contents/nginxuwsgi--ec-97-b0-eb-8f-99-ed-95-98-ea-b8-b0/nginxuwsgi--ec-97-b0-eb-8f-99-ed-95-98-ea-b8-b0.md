@@ -1,7 +1,7 @@
 ---
 title: 'nginx-uwsgi 연동하기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2015-03-20'
 description: '### uwsgi – flask 기본 연동 
 
 기존의 uwsgi 소개글에서는 http 옵션을 통해서 바로 웹을 띄웠었는데 여기에서는 기본적으로 소켓의 형태로 띄워지게 된다. 앞단에서 nginx 의 request 를 전달받아서 처리하는 형태라고 보면 된다. 

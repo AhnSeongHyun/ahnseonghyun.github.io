@@ -1,7 +1,7 @@
 ---
 title: 'Python flake8 사용하기'
 author: 'ash84'
-pub_date: '2016-08-02'
+pub_date: '2016-07-27'
 description: '[pep8](https://pypi.python.org/pypi/pep8), [flake8](http://flake8.pycqa.org/en/latest/) 등의 툴이 파이썬 코드의 정적검사를 하는 툴이다. 
 
 ```python

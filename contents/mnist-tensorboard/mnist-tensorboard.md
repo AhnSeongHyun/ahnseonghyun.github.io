@@ -1,7 +1,7 @@
 ---
 title: 'MNIST Tensorboard 따라하기'
 author: 'ash84'
-pub_date: '2018-05-18'
+pub_date: '2017-07-12'
 description: ''
 featured_image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/2000px-Tensorflow_logo.svg.png'
 tags: ['ML', 'mnist', 'tensorflow', 'tensorboard']

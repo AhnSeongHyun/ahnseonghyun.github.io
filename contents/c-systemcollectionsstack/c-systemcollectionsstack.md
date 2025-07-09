@@ -1,7 +1,7 @@
 ---
 title: '[C#] System.Collections.Stack'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2007-08-13'
 description: ''
 featured_image: ''
 tags: ['.net', 'c#', 'dev', 'System.Collections.Stack', '스택', '후입선출']

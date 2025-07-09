@@ -1,7 +1,7 @@
 ---
 title: 'Deview2014 Review'
 author: 'ash84'
-pub_date: '2017-04-27'
+pub_date: '2014-10-02'
 description: '9/29일(월) 9:00 ~ 18:00 
 
 **1. 행복한 프로그래머를 위한 철학 : 유석문**

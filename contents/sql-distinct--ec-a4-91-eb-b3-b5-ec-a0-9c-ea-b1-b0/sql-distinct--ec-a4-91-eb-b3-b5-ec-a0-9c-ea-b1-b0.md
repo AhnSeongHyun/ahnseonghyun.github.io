@@ -1,7 +1,7 @@
 ---
 title: '(sql) Distinct 중복제거'
 author: 'ash84'
-pub_date: '2015-09-24'
+pub_date: '2013-07-06'
 description: 'SQL 쪽 공부를 최근에 벼락치기로 했는데, Distinct 에 대해서 약간의 이해가 안되서 정리할겸 올린다. 용어를 찾아보면 중복제거라고 하는데, 말 그대로다. 반대로 all 이라는 것이 있는데 이건 select 문에서 아무것도 지정하지 않아도 되는 것이다. 
 예를 들어, 아래의 sql의 실행했다고 가정해 보자.'
 featured_image: ''

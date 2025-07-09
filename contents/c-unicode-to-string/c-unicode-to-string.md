@@ -1,7 +1,7 @@
 ---
 title: '[C#] Unicode To String'
 author: 'ash84'
-pub_date: '2017-04-27'
+pub_date: '2010-07-19'
 description: ''
 featured_image: ''
 tags: ['c#', 'dev', 'Unicod', 'Unicode to String', 'UTF-8']

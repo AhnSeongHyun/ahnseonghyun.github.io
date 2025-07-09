@@ -1,7 +1,7 @@
 ---
 title: '(iOS) NSMutableArray에 저장된 객체내 필드 기반 정렬'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-03-01'
 description: '이전에 포스팅에서 NSArray에 대한 String 에 대한 정렬을 하는 것에 대한 포스팅을 했었다. 사실 그렇게도 많이 쓰이긴 하지만, 어떤  데이터 자체를 하나의 클래스화 시키고 그 클래스에 대한 객체를 만들어서 자료구조, Array, List 등에 저장한 후에 정렬해야 하는 경우도 많다. 예를 들어, 아래와 같은 형식의 어떤 소셜데이터를 담는 클래스가 있다고 가정하자.'
 featured_image: ''
 tags: ['dev', 'NSArray', 'NSMutableArray', 'sortUsingDescriptors', '정렬', '클래스 정렬']

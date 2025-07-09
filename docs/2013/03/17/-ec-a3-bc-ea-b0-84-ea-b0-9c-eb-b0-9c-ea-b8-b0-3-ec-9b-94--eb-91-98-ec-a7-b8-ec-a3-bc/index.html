@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - #주간개발기, 3월 둘째주."/>
+    <meta property="og:description" content="**exs4j 테스트에 대한 이야기 **"/>
+    <meta property="og:url" content="https://ash84.io/docs/2013/03/17/-ec-a3-bc-ea-b0-84-ea-b0-9c-eb-b0-9c-ea-b8-b0-3-ec-9b-94--eb-91-98-ec-a7-b8-ec-a3-bc"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>#주간개발기, 3월 둘째주.</title>
+    <meta name="description" content="**exs4j 테스트에 대한 이야기 **" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">#주간개발기, 3월 둘째주.</h1>
+    <div class="blog-post-meta"> 
+        <small>  2013-03-17</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;"><strong>exs4j 테스트에 대한 이야기 </strong></span></p>
+<p><span style="font-size: 11pt;">테스트를 진행하였다. OpenAPI 검색 결과 저장 및 검색 키워드에 대한 인덱스 생성 및 조회 개발 작업을 완료하였다. 러프한 상태의 v1.5 를 달성하긴 했는데 테스트를 해보고자 했다. 분명히 문제가 혹은 불편한 부분이 있을것이라고 생각이 되었다. </span><span style="font-size: 11pt;">테스트는 간단했다. 1 클라이언트가 10000</span><span style="font-size: 11pt;">개의 검색을 한후, 해당 검색어에 대한 1일 동안 랜덤으로 요청해서 죽지 않은채, 원하는 시간내에 응답할 수 있는가에 대한 것이었다. 그리고 이 테스트를 통과하면 10, 100 클라이언트 식으로 동시성 테스트를 진행할 예정이었다. </span></p>
+<p><span style="font-size: 11pt;">결과는 참담했다. </span></p>
+<p><span style="font-size: 11pt;">화요일에 시작한 테스트는 아직도 통과하지 못한 상태이다. 몇가지 문제점이 있었는데 나열하면 아래와 같다. </span></p>
+<p><span style="font-size: 11pt;"><strong>1. 검색 모드의 필요성</strong></span></p>
+<p><span style="font-size: 11pt;">– 이 애기가 무엇이냐 하면 나는 처음에 10000 개의 검색결과 색인을 목표로 하였는데 이상하게 2000여개 밖에 색인이 안되는 문제가 있었다. 왜 이럴까 하며서 계속 트레이스를 한 결과, 검색 키워드가 약간의 중복이 있는 경우, OpenAPI 요청하기 전에 색인된 데이터가 있는지 인덱스에서 검사를 하는데 그 부분에서 계속 걸리는 것이었다. 즉, “아이유 유희열” 이라고 검색을 한후, 다음 키워들가 “유희열 스케치북” 이면 이미 검색했다고 판단되어 “아이유 유희열”의 검색결과를 던져 주는 것이었다. 물론 데이터가 많아 진다면 교집합 관계를 통해서 추려낼수 있지만, 일정한 데이터를 색인만 하는 모드, 색인 + 조회하는 모드, 조회만 하는 모드 이렇게 3가지 모드가 필요할것 같다는 생각이 들었다. 그리고 이 부분은 수정해서 반영한 상태이다. </span></p>
+<p><span style="font-size: 11pt;"><strong>2. 실시간 반영에 대한 문제 </strong></span></p>
+<p><span style="font-size: 11pt;">– 원래 목표는 실시간 색인반영이었다. 사용자가 검색을 하면 OpenAPI에 있는 내용이 검색이 되고 그 내용이 자연스럽게 exs4j에 저장이 되어서 다음에 같은 혹은 비슷한 검색어가 들어왔을때 해당 검색 결과를 리턴해주는것이었다. 때문에 실시간 색인 반영이 중요한 부분중에 하나였는데, 실제로 테스트해 보니 그렇게 잘 되지는 않았다. 방식 자체가 검색을 한 스레드에서 StoringCache 라는 곳에 데이터를 임시 저장하고, 메인 스레드가 루프를 돌면서</span><span style="font-size: 11pt;"> MessagQueue 의 내용을 가져와서 저장하고 인덱스에 반영하는 방식이었다. 문제는 이 메인 스레드의 속도에 비해서 MessageQueue에 쌓이는 속도가 더 빠르다는 것이다. </span></p>
+<p><span style="font-size: 11pt;">실시간 반영이 잘 안되는 것은 속도의 문제인데 더 큰 문제는 중복 데이터의 발생 가능성에 대한 부분이다. MessageQueue에 쌓이고 메인 스레드가 처리할 때 까지 약 몇분 혹은 몇초의 시간이 걸리는데 그 사이에 같은 검색어가 들어올때 문제가 생긴다. 인덱스에 반영이 되지 않았기 때문에 OpenAPI에서 데이터를 가져오고 MessagQueue 에 들어가게 되는 문제가 있다. </span></p>
+<p><span style="font-size: 11pt;">이 부분은 현재 고민중이긴 한데, 메인 스레드가 인덱스 처리 속도를 높이거나 혹은 분할해서 처리하는 방법 아니면 반영 예정을 나타내는 자료구조를 두어서 OpenAPI 를 타지않고 메모리에서 결과를 가져와서 보내주는 방식을 생각해 보고 있는 중이다. </span></p>
+<p><span style="font-size: 11pt;"><strong>3. 요청 코드가 너무 많은 경우, 느리다. </strong></span></p>
+<p><span style="font-size: 11pt;">– 검색결과 인덱스와 결과 자체는 requestCode 라는 것을 키값으로 연결되어 있는데, 너무 일반적인 단어의 경우 이미 많이 저장되어 있어서 requestCode가 많이 나오게 되고 이에 따른 검색 결과 조회의 속도가 느려지는 문제를 발견했다. 이 부분은 requestCode의 우선순위를 판별할 수 있는 정책 혹은 알고리즘이 개발 반영되어야 할것 같다. </span>이러한 문제들이 있어서 일단 이 부분들 부터 개선하고 다음 테스트로 넘어갈 예정이다. 이번주는 약간 멘붕크리 상태였다. 생각보다 검색엔진 비슷한 서버를 만든다는것 자체가 그리 쉽지만은 않다라는 것을 알게되었던 한 주였다.</p>
+<p><span style="font-size: 11pt;"><strong>앱 개발에 대한 이야기 </strong></span></p>
+<p><span style="font-size: 11pt;">지지난주 애플의 막강 공격에 주저앉은 상태에서 지난주 딴짓만 하다가 서버 작업을 다시 했다. 기존의 OpenAPI 부분을 네이버와 다음에서 가져오는 방식이었는데, 이제는 자체 팀 서버에서 JSON을 통해서 가져오는 방식으로 전환하였다. 불편한 XML 파싱 부분도 없어졌고, JSONKit 라이브러리를 사용하니 훨씬 더 좋아진것 같다. 실제로 XCODE 프로파일링 도구를 통해서 측정한 결과, 메모리 릭 나던 부분을 고치게 되었고, 다음주 주중에 다시 한번 애플의 심사에 도전할 예정이다. 이번이 벌써 4번째인데, 평일에 해야 좀 빨리 될것 같아서 화요일이 지난후에 할 예정이다. </span></p>
+    </div>
+    <div>
+        
+            #espressoOtr&nbsp;
+        
+            #exs4j&nbsp;
+        
+            #OpenAPI&nbsp;
+        
+            #검색&nbsp;
+        
+            #검색엔진&nbsp;
+        
+            #주간개발기&nbsp;
+        
+            #테스트&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 title: 'iftop 설치, 실시간 트래픽 확인하기'
 author: 'ash84'
-pub_date: '2017-11-16'
+pub_date: '2017-11-15'
 description: '실시간 트래픽을 보고 싶을때가 있는데, 여러가지 툴들이 있겠지만 iftop 을 설치하면 좀 더 간단하게 볼 수 있다. 
 
 ![iftop](https://farm5.staticflickr.com/4553/38383480446_08b68be12e_b.jpg)

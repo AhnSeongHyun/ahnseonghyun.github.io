@@ -1,7 +1,7 @@
 ---
 title: '[Python] 장고(Django) 설치 및 이클립스(eclipse) 세팅'
 author: 'ash84'
-pub_date: '2016-06-22'
+pub_date: '2011-12-23'
 description: '일단 장고(Django) 의 개념이나 필요성에 대해서는 필자도 아직 초급자이므로 애기하지 않고 차후에 본 블로그를 통해서 해당 부분에 대해서 자세히 소개 하도록 하겠습니다. 그래두 일단 장고(Django) 를 설치해 보고, 유난히 파이썬(python) 관련된 쪽이 개발환경(IDE)가 잘 마련되어 있지 않은데, 장고(Djan'
 featured_image: ''
 tags: ['dev', 'Django', 'Eclipse', 'pydev', 'Python', '이클립스', '장고', '파이썬']

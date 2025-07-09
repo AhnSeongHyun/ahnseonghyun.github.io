@@ -1,7 +1,7 @@
 ---
 title: '[C#]매틀랩과 닷넷 C# 연결하기(Connect Matlab to .NET C#)'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-02-05'
 description: '매틀랩과 C 혹은 C++ 과 연결하는 방법에 대해서 이미 다른 블로거 분들이 올렸는데, 실질적으로 .NET 라이브러리화되어서 연동시켜서 매틀랩의 함수들을 사용하는 방식에 대해서는 안 나와 있어서 이렇게 올리게 되었습니다. 일단. 아래의 링크에 가셔서 기본적인 절차를 숙지 하셔'
 featured_image: ''
 tags: ['.net dll matlab', 'c#', 'Connect matlab to c#', 'dev', 'Matlab', '매틀랩', '매틀랩과 c# 연동하기']

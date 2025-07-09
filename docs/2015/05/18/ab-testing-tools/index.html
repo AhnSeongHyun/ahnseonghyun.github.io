@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - A/B Testing Tools"/>
+    <meta property="og:description" content="Google AnalyticsOptimizelyVWO사이트[http://www.google.com/analytics/](http://www.google.com/analytics/"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/05/18/ab-testing-tools"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>A/B Testing Tools</title>
+    <meta name="description" content="Google AnalyticsOptimizelyVWO사이트[http://www.google.com/analytics/](http://www.google.com/analytics/" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">A/B Testing Tools</h1>
+    <div class="blog-post-meta"> 
+        <small>  2015-05-18</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <div><div><div><div><div><div><div><div><div><div><table><thead><tr><th><div></div></th><th><div>Google Analytics</div></th><th><div>Optimizely</div></th><th colspan="1"><div>VWO</div></th></tr></thead><tbody><tr><td>사이트</td><td>[http://www.google.com/analytics/](http://www.google.com/analytics/)</td><td>[https://www.optimizely.com](https://www.optimizely.com/)</td><td colspan="1">[https://vwo.com/](https://vwo.com/)</td></tr><tr><td>개요</td><td style="text-align: left;">구글 웹사이트 및 모바일 앱 분석도구</td><td style="text-align: left;">설치가 쉽고, 위지윅이 매우 직관적이도 17$ 부터 시작하는데,가성비가 좋다. 분할, 다변량, 그리고 모바일 테스팅 옵션도 있다. 30일까지 무료
+
+</td><td colspan="1">A/B Testing 외에도 다양한 테스팅 지원
+
+비주얼 에디터가 특징, 30일 까지 무료
+
+</td></tr><tr><td>장점</td><td><div><div><div style="text-align: left;">– 무료</div></div><div style="text-align: left;"><div>– 간단한 인터페이스</div></div><div style="text-align: left;"><div>– “Goals” 기능을 통해서 비지니스 목표에 대한 추적이 쉽게된다.</div></div><div style="text-align: left;"><div>– 빠르게 제공하고 보다 다양한 테스팅.</div></div><div style="text-align: left;"><div>– 직접적으로 다른 분석 특징 그리고 데이터 풀과 연결된다.</div></div></div></td><td style="text-align: left;"><div>– 초보자에게 가성비 좋음</div><div>– 쉽고 직관적인 인터페이스</div><div>– 효과적인 A/B , 다변량, 모바일에 초점이 맞춰진 테스팅 옵션</div></td><td colspan="1">– 직관적인 인터페이스
+
+– 설치가 매우 쉽다.
+
+– 구글 애널리틱스와의 통합 기능 제공
+
+</td></tr><tr><td>단점</td><td><div><div style="text-align: left;">– 익히는데 시간이 걸린다.</div></div><div style="text-align: left;"><div>– 다변량(multivariate testing)과 프리미엄 경쟁자들에 비해</div><div>제공하는 테스팅 옵션들이 부족하다.</div></div><div style="text-align: left;"><div>– 동적 페이지에 사용하는데 어렵다</div></div><div style="text-align: left;"><div>– 비쥬얼 데이터가 부족하다.</div></div><div style="text-align: left;"><div>– 다른 추가적인 데이터 소스와의 병합이 업렵다.</div></div></td><td style="text-align: left;"><div>– 외부 데이터와의 병합 없음</div><div>– 결과를 판단하기 위한 알고리즘 대안이 없다. 예를 들면, bandit 나 적응성 테스트</div></td><td colspan="1" style="text-align: left;">– 변수별 트래픽 할당 기능 제공 안함.</td></tr></tbody></table></div></div></div></div></div></div></div></div></div></div>
+    </div>
+    <div>
+        
+            #A/B Testing Tools&nbsp;
+        
+            #GA&nbsp;
+        
+            #Optimizely&nbsp;
+        
+            #VWO&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

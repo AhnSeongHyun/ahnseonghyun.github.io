@@ -1,7 +1,7 @@
 ---
 title: '2021 회고 : CTO로서 1년'
 author: 'ash84'
-pub_date: '2021-12-29'
+pub_date: '2021-12-26'
 description: '- **2020년 12월 TechAssemble 진행**
     - TechAssemble이라는 Tech내부에서 현황을 공유하고 앞으로 해야할 일들을 공유하는 자리를 마련했다. 
     - 2020년 12월 어떤 식으로 일을 할 것이고, 코드리뷰를 하는 방식, git branch 전략을 Github Flow로 통일했다. 

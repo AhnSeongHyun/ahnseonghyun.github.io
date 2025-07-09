@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - (iOS) UIWebView objc_msg_send 문제"/>
+    <meta property="og:description" content="한우찾기 앱을 만들때에도 이렇게 힘들지는 않았는데, 풍문검색은 좀 어렵네. 아무튼 업로드 및 빠른 심사를 부탁해 놓은 상황인데, 어제 crash가 났던 상황에 대해서 정리하고자 포스팅을 한다. 일단 상황을 설명하자면 단순하게 UITableView 의 한 셀을 선택하면 그 셀이 가지고 있는 링크주소를 내가 만든 BasicUIWebViewController 에서 보여주는 것이었는데, 보여주고나서 viewController를 내리면(dismiss) 문제가 생기는 것이었다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2013/02/19/ios-uiwebview-objcmsgsend--eb-ac-b8-ec-a0-9c"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(iOS) UIWebView objc_msg_send 문제</title>
+    <meta name="description" content="한우찾기 앱을 만들때에도 이렇게 힘들지는 않았는데, 풍문검색은 좀 어렵네. 아무튼 업로드 및 빠른 심사를 부탁해 놓은 상황인데, 어제 crash가 났던 상황에 대해서 정리하고자 포스팅을 한다. 일단 상황을 설명하자면 단순하게 UITableView 의 한 셀을 선택하면 그 셀이 가지고 있는 링크주소를 내가 만든 BasicUIWebViewController 에서 보여주는 것이었는데, 보여주고나서 viewController를 내리면(dismiss) 문제가 생기는 것이었다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(iOS) UIWebView objc_msg_send 문제</h1>
+    <div class="blog-post-meta"> 
+        <small>  2013-02-19</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">한우찾기 앱을 만들때에도 이렇게 힘들지는 않았는데, 풍문검색은 좀 어렵네. 아무튼 업로드 및 빠른 심사를 부탁해 놓은 상황인데, 어제 crash가 났던 상황에 대해서 정리하고자 포스팅을 한다. 일단 상황을 설명하자면 단순하게 UITableView 의 한 셀을 선택하면 그 셀이 가지고 있는 링크주소를 내가 만든 BasicUIWebViewController 에서 보여주는 것이었는데, 보여주고나서 viewController를 내리면(dismiss) 문제가 생기는 것이었다. </span></p>
+<p><span style="font-size: 11pt;">메시지는 단순하게 아래와 같은 메시지가 나온다. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">objc_msg_send </span>
+
+</div>
+<p><span style="font-size: 11pt;">NSZombieEnabled 옵션을 켜서 좀더 상세한 메시지를 확인해 보았다. XCode4.0 에서 NSZombieEnabled  옵션은 아래와 같이 설정해 주면 된다. XCode 메뉴 [Product]=&gt;[Edit Scheme] 를 눌러서 설정을 시작하면 된다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile29.uf.1769AE505120B9020624E5.png" /></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile30.uf.2466374D5120B9231188E7.png" /></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt; line-height:2; font-weight: bold;"><span style="font-size: 10pt;">[WebViewController respondsToSelector:]: message sent to deallocated instance 0x7295100</span></span>
+
+</div>
+<p><strong><br />
+</strong></p>
+<p><span style="font-size: 11pt;">발번역을 해보자면, 메시지가 이미 메모리 해제된 instance 에게 전해져서 문제라는 일이다. 내 생각엔 close 버튼을 누르면 ViewController가 내려가고 해제가 되었는데, webViewDelegate에 대한 메시지가 그 이후에 받게 되어서 문제가 생기는 듯한데.. 검색을 해보니 아래의 링크를 찾게 되었다.<strong> </strong></span></p>
+<p><strong><br />
+</strong></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 10pt;">[http://stackoverflow.com/questions/8995146/frustrating-uiwebview-delegate-crash-issue](http://stackoverflow.com/questions/8995146/frustrating-uiwebview-delegate-crash-issue)</span>****
+
+</div>
+<p><strong><br />
+</strong></p>
+<p><span style="font-size: 9pt; line-height: 2;"><span style="font-size: 11pt;">예상한대로였다. 받아야 하는 webView instance가 없어서 생기는 문제이다. 위의 링크에서 처럼 close 버튼을 누르는 시점에 아래의 코드를 삽입하였다. </span></span></p>
+<p><strong><span style="font-size: 11pt;"><br />
+</span></strong></p>
+<p><strong><br />
+</strong></p>
+<p><span style="font-size: 11pt;"><br />
+</span><span style="font-size: 11pt;"></span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span class="s1" style="font-size: 11pt;">self</span><span style="font-size: 11pt;">.</span><span class="s2" style="font-size: 11pt;">webView</span><span style="font-size: 11pt;">.</span><span class="s3" style="font-size: 11pt;">delegate</span><span style="font-size: 11pt;"> = </span><span class="s1" style="font-size: 11pt;">nil</span><span style="font-size: 11pt;">;</span>
+
+<span class="s1" style="font-size: 11pt;">self</span><span style="font-size: 11pt;">.</span><span class="s2" style="font-size: 11pt;">webView</span><span style="font-size: 11pt;"> = </span><span class="s1" style="font-size: 11pt;">nil</span><span style="font-size: 11pt;">;</span>
+
+</div>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;">        </span></p>
+<p><span style="font-size: 11pt; line-height: 2;">다행히 에러는 발생되지 않았다. 다른 컨트롤은 모르겠으나 UIWebView는 말 그대로 웹에 있는 컨텐츠를 가져오는 작업을 한다. 때문에 Delegate 역시 웹 서버에서 응답을 준 시점에 발동이 된다고 봐야 할것 같다. 그런 부분에서는 delegate를 명시적으로 끊어줘야 위와 같은 문제가 없을것 같다는 생각이 든다. </span></p>
+<p><span style="font-size: 11pt; line-height: 2;">추가적으로 NSZombieEnabled 설정은 디폴트로 하고 작업을 하는것이 훨씬 편하다. VS, Eclipse, XCode 등의 다양한 툴을 많이 사용해 봤지만, VS가 디버깅 측면에서는 가장 낫지 않은가 싶다. 물론 다른 측면에서는 각각 다르겠지만 말이다. 좀더 빠른 디버깅을 위해서는 NSZombieEnabled 설정을 이용하자. </span></p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #objc_msg_send&nbsp;
+        
+            #UIWebView&nbsp;
+        
+            #UIWebViewDelegate crash&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

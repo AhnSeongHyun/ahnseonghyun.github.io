@@ -1,7 +1,7 @@
 ---
 title: '(Java) 싱글톤 + Map을 이용한 객체관리.'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2013-02-08'
 description: ''
 featured_image: ''
 tags: ['dev', 'Java', '객체 관리', '싱글톤', '자바']

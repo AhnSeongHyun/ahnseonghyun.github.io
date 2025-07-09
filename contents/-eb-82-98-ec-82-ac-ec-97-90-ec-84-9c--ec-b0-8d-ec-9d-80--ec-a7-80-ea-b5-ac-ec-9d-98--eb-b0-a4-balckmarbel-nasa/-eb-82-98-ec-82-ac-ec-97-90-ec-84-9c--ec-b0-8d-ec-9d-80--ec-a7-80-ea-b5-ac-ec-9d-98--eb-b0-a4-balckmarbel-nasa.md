@@ -1,7 +1,7 @@
 ---
 title: '나사에서 찍은 지구의 밤. (BalckMarbel-NASA)'
 author: 'ash84'
-pub_date: '2015-06-08'
+pub_date: '2012-12-08'
 description: ''
 featured_image: ''
 tags: ['BLACKMARBEL', 'nasa', '나사', '지구의 밤']

@@ -1,7 +1,7 @@
 ---
 title: '(Java) ExecutorService, Thread 를 이용한 스레드 사용'
 author: 'ash84'
-pub_date: '2017-04-27'
+pub_date: '2013-02-15'
 description: '자바 프로그래밍을 하면서 스레드를 자주 사용하는 편인데, 아무래도 속도가 안나오면 데이터를 많이 처리하는 부분에서 병렬처리를 하는 것이 가장 첫 번째로 생각할 수 있는 처리속도의 향상 방법이라고 할수 있겠다. **Thread 객체를 사용하는 방법과 ExecutorService를 사용하는 방법이 있는데, 필자는 주로 각각 다른 작업을 병렬로 해야하는 경우에는 Thread-Runnable 조합을 이용하고, 같은 작업을 여러개로 나눠서 처리한 뒤 결과를 모아서 정렬, 처리 등을 하는 작업의 경우 ExecutorService-Callab'
 featured_image: ''
 tags: ['dev', 'ExecutorService', 'Java', 'Thread', '스레드', '스레드 리턴', '자바 스레드']

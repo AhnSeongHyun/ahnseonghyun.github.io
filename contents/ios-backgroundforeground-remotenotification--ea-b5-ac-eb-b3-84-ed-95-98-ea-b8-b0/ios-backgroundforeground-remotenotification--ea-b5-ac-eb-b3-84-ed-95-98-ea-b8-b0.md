@@ -1,7 +1,7 @@
 ---
 title: '(iOS) background/foreground, RemoteNotification 구별하기'
 author: 'ash84'
-pub_date: '2017-04-24'
+pub_date: '2013-10-15'
 description: ''
 featured_image: ''
 tags: ['Background', 'dev', 'foreground', 'IOS', 'Remote Notification', '백그라운드', '포그라운드']

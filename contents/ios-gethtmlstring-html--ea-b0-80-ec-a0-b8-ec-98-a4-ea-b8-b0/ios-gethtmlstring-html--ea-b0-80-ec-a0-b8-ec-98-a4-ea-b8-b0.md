@@ -1,7 +1,7 @@
 ---
 title: '[iOS] GetHtmlString(), HTML 가져오기'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2012-08-30'
 description: ''
 featured_image: ''
 tags: ['dev', 'get html string', 'HTML Parsing', 'IOS', 'Objective-C', 'Open Source']

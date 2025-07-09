@@ -1,7 +1,7 @@
 ---
 title: '[JAVA] jedis를 이용한 Redis 와 연동하기'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2012-09-03'
 description: ''
 featured_image: ''
 tags: ['dev', 'github', 'java redis 연동하기', 'jedis', 'redis', 'redis 연동하기']

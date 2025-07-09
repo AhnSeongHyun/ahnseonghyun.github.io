@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - 싸다구 앱 업데이트와 개발 주저리"/>
+    <meta property="og:description" content="[새버전](https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8)에서 어떤 기능이 있는지 여기에서 설명하기 보다는 [INDF(IDEAN AND DOGFOOT)팀 블로그](http://blog.indf.net/)에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/05/31/-ec-8b-b8-eb-8b-a4-ea-b5-ac--ec-95-b1--ec-97-85-eb-8d-b0-ec-9d-b4-ed-8a-b8-ec-99-80--ea-b0-9c-eb-b0-9c--ec-a3-bc-ec-a0-80-eb-a6-ac"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>싸다구 앱 업데이트와 개발 주저리</title>
+    <meta name="description" content="[새버전](https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8)에서 어떤 기능이 있는지 여기에서 설명하기 보다는 [INDF(IDEAN AND DOGFOOT)팀 블로그](http://blog.indf.net/)에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">싸다구 앱 업데이트와 개발 주저리</h1>
+    <div class="blog-post-meta"> 
+        <small>  2015-05-31</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><a href="https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8">새버전</a>에서 어떤 기능이 있는지 여기에서 설명하기 보다는 <a href="http://blog.indf.net/">INDF(IDEAN AND DOGFOOT)팀 블로그</a>에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모았고, 워크샵을 가서 개발회의를 할 정도로 의욕에 차 있었다. 그럼에도 불구하고 1.1.3 버전이 거의 1년 가까이 시간이 걸려버렸다. 몇가지 간단하게 적어보면 문제점은 아래와 같았다.</p>
+<h2><strong>원격 작업의 문제점</strong></h2>
+<p>– 일정이 맞지가 않았다. 원격작업의 문제점이라기 보다는 팀의 성격이 모호하기도 하고, 스터디와 스타트업도 아닌, 그리고 각자의 회사에서의 작업이 있는지라 사실 일정 맞추기가 쉽지 않았다. 릴리즈 일정만을 못 박는정도? 사실 그 마저도 지켜지지 않았다.</p>
+<p>– 회의를 하고 돌아서면 약간씩 다른 내용을 기억. 이것도 문제이긴 한데, 진도가 나가지 않으니까 오프라인에서 모임을 가졌는데 사실상 그렇게 효율적이진 않았던것같다. 스타트업 얼라이언스 서버 신청 등등, 싸다구 기능을 위한 모임을 해도 회의내용을 적어도 상세 내용을 못박지 않으면 잘 기억이 나지 않더라.</p>
+<p>– 좀더 진화된 협업툴을 사용해야 하지 않을까 하는 문제 트렐로, 네이버 까페를 사용하고 있었는데.. 사실 이건 문화의 문제라는 생각도 들긴 했다. 툴이 달라진다고 얼마나 달라질지..(될건 된다.) 슬랙(Slack)으로 가야할지.</p>
+<div class="jetpack-video-wrapper">[![One day in Startup Bootcamp](https://farm2.staticflickr.com/1223/5128524436_d5ca37f091_z.jpg)](https://flic.kr/p/8Pc2D7)</div>
+<h2><strong>결혼을 준비하면서 하기가 힘들더라</strong></h2>
+<p>– 밸런스가 무너졌다. 잉여력을 자랑했지만, 쉽지 않았다. 결혼 준비를 위해서 매일 결정해야 할 것들이 수십가지였다.(그리고 그것들은 대부분 돈과 관련이 있었다.) 도저히 개발을 할 수 없는 상황이었다. 개발을 하려고 앉아도 이전에 어디까지 했는지, 어떻게 하기로 했는지 등등 생각나지도, 적어놓은것 조차 생각나지 않는 그런 상황이 이어졌다. 12월 정도 부터는 과감하게 놨던것 같다. 결혼준비와 개발중에 팀원들에게는 미안하지만, 나는 결혼준비를 선택했다.</p>
+<h2><strong>결혼 후에는 더 힘들더라 , 뭔가 대책이 필요했다.</strong></h2>
+<p>– 결혼만 하면 다 될줄 알았는데 다른것 없었다. 이상하게 집에와서 집안일을 하고 나면 힘이 들었다. 그동안 진짜 편하게 살았구나 라는 생각이 들었고, 2주 정도가 지나자마자 ‘이러다 큰일 나겠다’ 라는 생각이 들었다. 아침 시간을 활용, 아침에 1~2시간 정도 일찍와서 코딩을 했다. 회사에서 개인 맥북의 사용이 보안적인 이유로 쓸수가 없어서 스타벅스에서 주로 작업을 했다. 사실 이마저도 요즘에는 잘 되지 않는데, 와이프가 자는 시간을 활용하고 있긴 하지만, 개발자라는 직업에 대해서 이해를 시키고 집에서 개발하는 시간을 가지려고 하고 있다. 실제로 2달전에 비해서는 많이 늘어났다.</p>
+<div class="jetpack-video-wrapper">[![Startup Live Lisbon](https://farm9.staticflickr.com/8389/8624443762_93a5fd9ce1_z.jpg)](https://flic.kr/p/e97wEf)</div>
+<h2><strong>드는 생각</strong></h2>
+<p>– 계속 지속할수 있을까?</p>
+<p>– 잘 개발진도가 빠지지 않고, 의욕이 없는것이 풀타임으로 이일에 매달리지 않아서일까?</p>
+<p>– 팀이 모호한 만큼, 새로운 형식, 생각, 우리만의 스타일이 필요한것 같은데?</p>
+<p>– 언제 접어야 할까? 계속 이어나갈수 있을까? 이게 진짜 맞는 아이템일까?</p>
+<p>– 열정의 선순환이 가능할까? 출시가 길어지니까 늘어지는 느낌 열정이 사막에서 눈녹듯이 사라졌다. 다시 출시하니 살아나는 느낌적인 느낌?</p>
+<p>– 잘게 쪼개서 업데이트 하려고 한다. 이게 열정의 선순환에 도움이 될까?</p>
+<p>– 앱을 어떻게 홍보해야하지? 출시를 했고, 매일 일정의 사용자가 다운을 받는데 재사용률(RETENTION)이 떨어진다. 어떤 기능을 추가해야 하지?</p>
+<p>– 전략의 부재, 여러가지 길이 있고 그 길을 좀더 보기위해서 각종 모니터링 &amp; 분석툴을 앱에 달았는데 사실 그것들을 보더라도 좀더 명확하게 보기 위한 노력이 필요하다는 생각이 들고, 여러가지 방안 중에서 우선순위를 매기는 것이 참 어렵다.</p>
+<h2><strong>줄이며..</strong></h2>
+<p>주저리 주저리 쓰고 있는 이 밤에도 나는 싸다구의 버그를 고치고 있고, 새로운 기능을 테스트하면서, 주말의 선선한 밤을 보내고 있다. 처음에 출시하기 전에는 ‘이게될까?’ 라고 생각했던 불안감처럼, 지금은 또 다른 불안감에 쌓여져 있다. 어떤 방향으로 나아가야 할지, 우리가 처음에 생각한 방향이 이게 맞는지 등등. 일단 지금은 ‘잘개 쪼개서 업데이트’를 하면서 일단 나부터 먼저 페이스를 찾아가려고 한다. 그리고 사용자의 데이터에 집중하고, 데이터를 해석하는 것도 능력이지만, 좀더 우리가 원하는 것에 집중에서 다음 작업의 우선순위를 정해야하지 않을까? 하는 생각이 든다. 그래도 가만히 있는것 보다는 만들면서 경험하는게 중요하기에.</p>
+<p>ps) 업데이트 할때마다 보통 기능 위주로 쓰는데, 너무 오랜만에 업데이트를 했던거라서 이제서야 이 글을 쓰게되었는데, 주저리 성인것 같다. 쩝.ㅎㅎ 다음엔 좀더 재밌고 활기찬 글을 쓸수 있었으면 하는 바램.</p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #sada9&nbsp;
+        
+            #싸다구&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 title: '(iOS) NSDate 현재 날짜 시간 가져오기'
 author: 'ash84'
-pub_date: '2017-04-24'
+pub_date: '2013-01-14'
 description: ''
 featured_image: ''
 tags: ['dev', 'IOS', 'NSDATE', 'Objective-C', '현재 날짜', '현재 시간 가져오기']

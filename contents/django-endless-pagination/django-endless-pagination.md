@@ -1,7 +1,7 @@
 ---
 title: 'django-endless-pagination 을 이용한 페이징구현'
 author: 'ash84'
-pub_date: '2023-03-11'
+pub_date: '2014-01-22'
 description: '페이징 기능은 사실 게시판에 있어서 필수적인 기능인데 구현하는데 있어서 겁을 먹게 되는것 같다. (나같은 초보 웹쟁이는 더 그렇지) django 에서 페이징 기능을 쉽게 추가할수 있는것이 있을까 싶어서 [djangopackages](https://www.djangopackages.com/) 에서 찾아 봤는데 pagination 이라는 단어로 검색했을때 search weight 가 78%인 [django-endless-pagination](http://django-endless-pagination.readthedocs.org/) 를'
 featured_image: ''
 tags: ['dev', 'Django', 'django pagination', 'django-endless-pagination', '장고 페이징', 'Python']

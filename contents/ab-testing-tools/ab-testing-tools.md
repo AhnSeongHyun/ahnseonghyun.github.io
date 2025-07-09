@@ -1,7 +1,7 @@
 ---
 title: 'A/B Testing Tools'
 author: 'ash84'
-pub_date: '2015-05-17'
+pub_date: '2015-05-18'
 description: 'Google AnalyticsOptimizelyVWO사이트[http://www.google.com/analytics/](http://www.google.com/analytics/'
 featured_image: ''
 tags: ['A/B Testing Tools', 'GA', 'Optimizely', 'VWO']

@@ -1,7 +1,7 @@
 ---
 title: 'mac port 설치하기.'
 author: 'ash84'
-pub_date: '2015-09-24'
+pub_date: '2013-08-04'
 description: 'yum, apt-get, make 같은 명령어를 사용하기 위해서는 mac port 라는 것이 필요하다. [이곳](http://www.macports.org/install.php)에 가면 각 OSX 버전 별로  .pkg 설치 파일을 받을 수 있도록 되어있다. 설치를 한 후에 해주어야 할일은 링크의 웹 페이지에도 잘 나와있지만,'
 featured_image: ''
 tags: ['apt-get', 'Mac port', 'yum', '맥포트']

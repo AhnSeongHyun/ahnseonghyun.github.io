@@ -1,7 +1,7 @@
 ---
 title: '피드백(Feedback) 의 시대'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2009-02-24'
 description: '﻿![](http://ash84.net/wp-content/uploads/1/49a36eb4a030fD0.jpg)'
 featured_image: ''
 tags: ['An Seong Hyun', 'dev', 'feedback', '네이버지식인', '안성현', '짱공유', '짱공유닷컴', '피드백', '피드백의 시대']

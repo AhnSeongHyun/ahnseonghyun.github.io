@@ -1,7 +1,7 @@
 ---
 title: 'beaker_session MySQL server has gone away'
 author: 'ash84'
-pub_date: '2017-11-10'
+pub_date: '2017-10-26'
 description: '매일 아침 와서 현재 개발중인 백오피스를 켜면 Internal Server Error 발생. 로그를 보니 아래와 같은 오류 발생 
 
 ```

@@ -1,7 +1,7 @@
 ---
 title: 'Upstream and Syncing a fork'
 author: 'ash84'
-pub_date: '2016-03-28'
+pub_date: '2016-03-15'
 description: '위와 같은 경우가 많이 발생을 한다. 하나의 github 프로젝트에서 내가 뭔가의 수정을 위해서 fork 를 하고, 수정을 해서 Pull Request 를 날린후, Merge 가 된다. 그리고 다른 사람이 원래의 프로젝트에 커밋을 하면 내가 fork 뜬 프로젝트에서는 해당 커밋들을 가져와야 한다. 그래야 최신 상태에서의 기여가 가능하니까. 어떻게 해야할까? 찾아 보니 Upstream 이라는 개념이 github 에 있어서 소개 한다. 
 
 

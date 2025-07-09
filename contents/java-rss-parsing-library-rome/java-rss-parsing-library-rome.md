@@ -1,7 +1,7 @@
 ---
 title: '(Java) RSS 파싱 라이브러리 ROME'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2013-05-28'
 description: ''
 featured_image: ''
 tags: ['dev', 'Java', 'java rss parser rome', 'rss', 'RSS JAVA Library', 'RSS 파싱', '자바']

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - grunt 간단 사용기"/>
+    <meta property="og:description" content="#### 개요"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/03/27/grunt--ea-b0-84-eb-8b-a8--ec-82-ac-ec-9a-a9-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>grunt 간단 사용기</title>
+    <meta name="description" content="#### 개요" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">grunt 간단 사용기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2015-03-27</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <h4>개요</h4>
+<ul>
+<li>task 를 지정해서 커맨드라인을 통해서 동작하는 자바스크립트 빌드용 툴이다. </li>
+<li>여러가지 플러그인을 통해서 css, js 등의 유효성 검증 및 압축, 난독화등을 할 수 있다.</li>
+</ul>
+<h4>설치</h4>
+<ul>
+<li>bower 와 마찬가지로 npm 을 기반으로 설치되기 때문에 일단 node.js 를 설치해서 npm을 설치 시킨다. </li>
+</ul>
+<p><strong>grunt-cli 설치하기</strong></p>
+<pre><code class="language-javascript">$ npm install -g grunt-cl
+</code></pre>
+<p><strong>grunt 설치</strong></p>
+<pre><code class="language-javascript">$ npm install -g grunt-cl
+</code></pre>
+<h4>사용하기</h4>
+<p><strong>package.json 파일 생성하기</strong></p>
+<p>– 다음의 명령으로 실행하는데 별도의 입력할 것이 없다면, 계속 enter를 쳐서 넘어가도 된다. </p>
+<pre><code class="language-bash">$ npm init
+</code></pre>
+<p><strong>Gruntfile.js 파일 생성</strong></p>
+<p>– 프로젝트와 동일한 위치에 생성한다. 실질적인 grunt 명령어를 위해서 어떤 작업을 수행할 것인지를 지시하는 파일 </p>
+<p>– 대소문자 주의 할것. </p>
+<script src="https://gist.github.com/AhnSeongHyun/9196675cc46138c4b0e6.js"></script>
+
+<p>– registerTask 부분에서 dev 라고 하는 task 명과 작업할 리스트를 적는데, 위의 경우 적지 않았음. </p>
+<h4>실행하기</h4>
+<pre><code class="language-bash">$ npm install -g grunt-cl
+</code></pre>
+<p><strong>플러그인 설치하기</strong></p>
+<p>– 다양한 플러그인을 통해서 여러가지 기능을 제공함. </p>
+<p>– 여기에서는 js를 검증하고, 합쳐주고, 난독화 하는 부분에 대해서 설치하고, Gruntfile.js 에 명시하는 부분까지 설명한다<span style="font-size: 11pt; line-height: 2;">. </p>
+<p><strong>grunt-contrib-concat</strong></p>
+<p>– 말 그대로 파일을 합쳐주는 플러그인 </p>
+<pre><code class="language-bash">$ npm install -g grunt-cl
+</code></pre>
+<script src="https://gist.github.com/AhnSeongHyun/71545d2c284e7e4c2500.js"></script>
+
+<p>– 위와 같이 설정하면 되는데, 설치한 플러그인을 로드하는 부분을 <code>loadNpmTasks()</code>함수를 통해서 지정하고, .initConfig 에서 플러그인에 대한 설정을 명시한다. </p>
+<p>– 그리고 마지막으로 해당 작업을 registerTask를 통해서 등록하면 된다. </p>
+<p>– 주의할점이 src, dest의 위치를 지정해 줘야 하는데 src 에서 static/js 하위에 여러 디렉토리가 있고 그 하위에 js가 있다면 /**/ 으로 써주면 알아서 찾는다. </p>
+<p>옵션 </p>
+<p>Optiosseparator</p>
+<ul>
+<li>파일이 통합되는 지점에 들어갈 string 설정</li>
+</ul>
+<p>banner</p>
+<ul>
+<li>파일이 통합된 output 파일 최상단의 banner string을 설정</li>
+</ul>
+<p>footer</p>
+<ul>
+<li>‘banner’와 같은 방식으로, 통합된 파일의 최하단에 위치하는 string을 설정</li>
+</ul>
+<p>stripBanners</p>
+<ul>
+<li>각각의 파일에 쓰여있는 JavaScript banner comments를 제거</li>
+</ul>
+<p>· false – 제거하지 않는다.(default)</p>
+<p>· true – /<em> … </em>/ 은 제거되지만, /<em>! … </em>/은 제거되지 않는다.</p>
+<p>· options</p>
+<ul>
+<li>
+<p>block : true 인 경우, 모든 block comments 제거</p>
+</li>
+<li>
+<p>line : true 인 경우, 모든 // 라인 제거</p>
+</li>
+</ul>
+<p><strong>grunt-contrib-jshint</strong></p>
+<p>– JSHint를 통한 file validation </p>
+<p>force</p>
+<p>· true – error 검출 시 task를  fail시키지 않고 계속 진단</p>
+<p>reporter</p>
+<p>· output을 modifying할 수 있는 옵션 (jshint-stylish 설치 :  $npm install jshint-stylish –save-dev)</p>
+<script src="https://gist.github.com/AhnSeongHyun/59c6d0e8c22d3bb1fe31.js"></script>
+
+<p><strong>*grunt-contrib-uglify</strong></p>
+<p>– UglifyJS를 통한 file minfying</p>
+<p>옵션</p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); padding: 10px; line-height: 2; background-color: rgb(255, 255, 255);">banner
+
+mangle
+
+     · false – 변수명과 함수명의 변형을 막는다.
+
+compress
+
+     · drop_console
+
+  true – console 출력문 제거
+
+beautify
+
+     · true – 코드의 syntax 유지
+
+preserveComments
+
+     · false – 모든 주석 제거
+
+     · ‘all’ – ‘!’로 시작하는 주석만 보존
+
+</div>
+
+<script src="https://gist.github.com/AhnSeongHyun/2f5583555fd14dcf00fc.js"></script>
+
+<p><strong>다양한 플러스인을 한번에 쓰는 경우</strong></p>
+<script src="https://gist.github.com/AhnSeongHyun/385db78198c3f755984f.js"></script>
+
+<ul>
+<li>
+<p>주의할점중 하나는 <code>registerTask()</code> 함수를 통해서 등록할때, 작업의 명시 순서에 따라 호출이 된다. </p>
+</li>
+<li>
+<p>예를 들어, 위에서 dist의 경우 jshint, concat, uglify 순으로 호출되어 진다. </p>
+</li>
+</ul>
+    </div>
+    <div>
+        
+            #bower&nbsp;
+        
+            #dev&nbsp;
+        
+            #grunt&nbsp;
+        
+            #grunt-contrib-concat&nbsp;
+        
+            #grunt-contrib-jshint&nbsp;
+        
+            #grunt-contrib-uglify&nbsp;
+        
+            #jshint&nbsp;
+        
+            #Node.js&nbsp;
+        
+            #npm&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

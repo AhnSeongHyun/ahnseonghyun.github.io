@@ -1,7 +1,7 @@
 ---
 title: '승려와 수수께끼'
 author: 'ash84'
-pub_date: '2018-05-19'
+pub_date: '2015-12-05'
 description: '[청년창업, 8권의 책으로 시작하다](http://book.naver.com/bookdb/book_detail.nhn?bid=7237005)라는 배달의 민족 김봉진 대표이사의 책을 우연히 읽게 되었다. 책에 대해서 관심도 많았고, 창업에 대해서 관심도 많은 지라 선택한 책이었는데, 재밌게 읽은 기억이 있다. 총 8권의 책을 소개하면서 창업과 관련되어서 일과 성공, 인생과 삶에 대해서 애기를 하고 있는 책이다. 기회가 된다면 한번 읽어보기를 추천한다. 왜 이야기를 할까? 그 8권의 책 중 하나가 바로 [승려와 수수께끼(The mon'
 featured_image: 'http://preview.kyobobook.co.kr/preview/006/064/46/5800004606446/580370300370606446001.jpg'
 tags: ['dev', '승려와 수수께끼', '이상한모임', 'The Monk and The Riddle', 'book']

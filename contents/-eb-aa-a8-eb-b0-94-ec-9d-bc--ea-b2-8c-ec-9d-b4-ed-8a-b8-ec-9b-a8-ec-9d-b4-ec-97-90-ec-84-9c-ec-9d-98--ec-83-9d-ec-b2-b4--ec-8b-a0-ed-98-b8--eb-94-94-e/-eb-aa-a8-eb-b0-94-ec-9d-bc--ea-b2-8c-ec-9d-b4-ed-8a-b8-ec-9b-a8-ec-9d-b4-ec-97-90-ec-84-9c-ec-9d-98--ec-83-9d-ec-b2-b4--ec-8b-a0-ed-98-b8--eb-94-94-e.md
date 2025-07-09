@@ -1,7 +1,7 @@
 ---
 title: '모바일 게이트웨이에서의 생체 신호 디스플레이에 대한 고찰.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2008-12-04'
 description: '약 한달간 개발해 오고 있는 모바일 게이트웨이에 대해서 오늘 랩 미팅시간에 많은 이야기가 오고 갔다.'
 featured_image: ''
 tags: ['biosignal display', 'dev', 'gateway', 'healthcare service', 'healthcare system', 'measure biosignal', 'mobile gateway', '게이트웨이이', '모바일 게이트웨이', '생체신호 디스플레이', '생체신호 측정', '헬스케어 서비스']

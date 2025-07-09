@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - ngrok 를 이용한 localhost 를 public domain 연결하기"/>
+    <meta property="og:description" content="테스트를 하거나 아니면 인증 쪽 관련 작업들을 하려고 하면 localhost 에서 띄우면 되는데 도메인이 필요한 경우들이 있다. 예를 들면 github 에서 webhook  테스트를 한다고 할 때 도메인을 입력해야 github 상에서 이벤트가 발생했을 때 webhook 을 받을수 있다. (github 입장에서 localhost 는 자기자신이니..😅) 또는 모바일과 연동 테스트를 진행할 때도 도메인을 만들기 전이나 실서버 올리기 전에 임시로 테스트를 하기 위해서도 유용할 것 같다. 😙"/>
+    <meta property="og:url" content="https://ash84.io/docs/2019/12/31/ngrok-for-public-domain"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>ngrok 를 이용한 localhost 를 public domain 연결하기</title>
+    <meta name="description" content="테스트를 하거나 아니면 인증 쪽 관련 작업들을 하려고 하면 localhost 에서 띄우면 되는데 도메인이 필요한 경우들이 있다. 예를 들면 github 에서 webhook  테스트를 한다고 할 때 도메인을 입력해야 github 상에서 이벤트가 발생했을 때 webhook 을 받을수 있다. (github 입장에서 localhost 는 자기자신이니..😅) 또는 모바일과 연동 테스트를 진행할 때도 도메인을 만들기 전이나 실서버 올리기 전에 임시로 테스트를 하기 위해서도 유용할 것 같다. 😙" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">ngrok 를 이용한 localhost 를 public domain 연결하기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2019-12-31</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p>테스트를 하거나 아니면 인증 쪽 관련 작업들을 하려고 하면 localhost 에서 띄우면 되는데 도메인이 필요한 경우들이 있다. 예를 들면 github 에서 webhook  테스트를 한다고 할 때 도메인을 입력해야 github 상에서 이벤트가 발생했을 때 webhook 을 받을수 있다. (github 입장에서 localhost 는 자기자신이니..😅) 또는 모바일과 연동 테스트를 진행할 때도 도메인을 만들기 전이나 실서버 올리기 전에 임시로 테스트를 하기 위해서도 유용할 것 같다. 😙</p>
+<p><img alt="ngrok%20localhost%20public%20domain/Untitled.png" src="https://live.staticflickr.com/65535/49304043123_abb75e334e_z.jpg" /></p>
+<p>이럴때 사용하는 것이 ngrok 이라는 서비스이다. ngrok 은 내 컴퓨터에 <a href="http://localhost">localhost</a> 로 띄운 서버를 ngrok 도메인을 붙여서 임시적(?) 으로 사용할 수 있게 해준다. </p>
+<p><a href="https://ngrok.com/pricing">price plan</a> 은 free 도 제공하고 있고, 하나의 도메인만 사용할 경우에는 free 도 충분하다. 서브 도메인을 사용하거나 whitelist access 같은 좀 더 복잡한 그리고 분당 연결 수 같은 부분을 추가적으로 늘리려면 여러가지 price plan 을 선택 할 수 있다. </p>
+<p>일단 가입을 하고 나면 ngrok 을 다운로드 받으면 된다. 거의 모든 운영체제를 지원하고 있다. 간단히 사용하는 방법은 다음과 같다.  </p>
+<p>일단 localhost 로 python 기본 http server 5000번 포트를 연다. </p>
+<pre><code class="language-shell">
+    &gt; python3 -m http.server 5000
+    Serving HTTP on 0.0.0.0 port 5000 (http://0.0.0.0:5000/) ...
+</code></pre>
+<pre><code class="language-shell">    &gt; ngrok http 5000    
+    ngrok by @inconshreveable                                                                                    (Ctrl+C to quit)
+
+    Session Status                online
+    Account                       ahnseonghyun (Plan: Free)
+    Version                       2.3.35
+    Region                        United States (us)
+    Web Interface                 http://127.0.0.1:4040
+    Forwarding                    http://a0bedc75.ngrok.io -&gt; http://localhost:5000
+    Forwarding                    https://a0bedc75.ngrok.io -&gt; http://localhost:5000
+
+    Connections                   ttl     opn     rt1     rt5     p50     p90
+                                  0       0       0.00    0.00    0.00    0.00
+
+ ```
+
+위와 같이 `ngrok` 명령어와 연결하고자 하는 port 번호를 입력하면 http, https [ngrok.io](http://ngrok.io) 의 서브도메인이 생성된다. 해당 주소로 요청을 보내면 실제 python server 의 다음과 같이 로그가 찍히는 것을 확인 할 수 가 있다. 
+
+```shell
+    ❯ python3 -m http.server 5000
+    Serving HTTP on 0.0.0.0 port 5000 (http://0.0.0.0:5000/) ...
+    127.0.0.1 - - [31/Dec/2019 13:29:45] &quot;GET / HTTP/1.1&quot; 200 -
+    127.0.0.1 - - [31/Dec/2019 13:29:46] code 404, message File not found
+    127.0.0.1 - - [31/Dec/2019 13:29:46] &quot;GET /favicon.ico HTTP/1.1&quot; 404 -
+    127.0.0.1 - - [31/Dec/2019 22:14:37] &quot;GET / HTTP/1.1&quot; 200 -
+    127.0.0.1 - - [31/Dec/2019 22:14:37] code 404, message File not found
+    127.0.0.1 - - [31/Dec/2019 22:14:37] &quot;GET /favicon.ico HTTP/1.1&quot; 404 -
+</code></pre>
+<p>그리고 아래와 같이 실제 ngrok Dashboard 에 status 에서도 확인 할 수 있다. ngrok 이 떠있는 상태에서 ctrl+c 를 누르고 취소를 하면 연결을 사라지게 된다. </p>
+<p><img alt="ngrok%20localhost%20public%20domain/Untitled%201.png" src="https://live.staticflickr.com/65535/49304043238_5060d65236_z.jpg" /></p>
+    </div>
+    <div>
+        
+            #ngrok&nbsp;
+        
+            #domain&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

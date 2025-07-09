@@ -1,7 +1,7 @@
 ---
 title: '[jquery] jquery.timeago.js 몇초전, 몇일전 계산하기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2015-03-24'
 description: '페이스북이나 최근에 SNS 및 뉴스에서는 특정 일자를 알려주기 보다는 과거의 상대성으로 시간을 표시한다. 예를들면 3일전, 2시간전 이렇게 말이다. 개발자가 일일히 보여지는 날짜 데이터에 대해서 계산해서 만들어 내야하는데 jquery.timeago.js 에서 이 기능을 지원해 준다. 
 **사용법 **'
 featured_image: ''

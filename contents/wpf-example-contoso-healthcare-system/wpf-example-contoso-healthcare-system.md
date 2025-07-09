@@ -1,7 +1,7 @@
 ---
 title: 'WPF example - CONTOSO Healthcare System'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2007-10-25'
 description: '![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/gl138.png)
 
   

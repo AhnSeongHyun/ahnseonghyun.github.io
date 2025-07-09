@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [JAVA] 자바에서 싱글턴 패턴을 구현하는 세 가지 방식들."/>
+    <meta property="og:description" content="안티패턴임에도 불구하고, 자주 쓰게 되는 패턴중 하나가 싱글턴 패턴인데, 멀티스레드에 취약하다는 문제점을 가지고 있으면서도 선택된 데이터나 현재 데이터만을 표현할때 좋은것 같다. 이전 포스팅에서도 [H](http://ash84.tistory.com/762) [ashtable 을 이용한 로컬 캐쉬 소스](http://ash84.tistory.com/762)에서도 싱글턴을 썼는데 이번에 이펙티브 자바를 읽으면서 싱글톤에 대한 이야기가 나와서 정리하고자 한다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2012/10/22/java--ec-9e-90-eb-b0-94-ec-97-90-ec-84-9c--ec-8b-b1-ea-b8-80-ed-84-b4--ed-8c-a8-ed-84-b4-ec-9d-84--ea-b5-ac-ed-98-84-ed-95-98-eb-8a-94--ec-84-b8--ea-b"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[JAVA] 자바에서 싱글턴 패턴을 구현하는 세 가지 방식들.</title>
+    <meta name="description" content="안티패턴임에도 불구하고, 자주 쓰게 되는 패턴중 하나가 싱글턴 패턴인데, 멀티스레드에 취약하다는 문제점을 가지고 있으면서도 선택된 데이터나 현재 데이터만을 표현할때 좋은것 같다. 이전 포스팅에서도 [H](http://ash84.tistory.com/762) [ashtable 을 이용한 로컬 캐쉬 소스](http://ash84.tistory.com/762)에서도 싱글턴을 썼는데 이번에 이펙티브 자바를 읽으면서 싱글톤에 대한 이야기가 나와서 정리하고자 한다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[JAVA] 자바에서 싱글턴 패턴을 구현하는 세 가지 방식들.</h1>
+    <div class="blog-post-meta"> 
+        <small>  2012-10-22</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt; ">안티패턴임에도 불구하고, 자주 쓰게 되는 패턴중 하나가 싱글턴 패턴인데, 멀티스레드에 취약하다는 문제점을 가지고 있으면서도 선택된 데이터나 현재 데이터만을 표현할때 좋은것 같다. 이전 포스팅에서도 <a href="http://ash84.tistory.com/762">H</a> <a href="http://ash84.tistory.com/762">ashtable 을 이용한 로컬 캐쉬 소스</a>에서도 싱글턴을 썼는데 이번에 이펙티브 자바를 읽으면서 싱글톤에 대한 이야기가 나와서 정리하고자 한다. </span></p>
+<p><span style="font-size: 11pt; ">가장 기본적인 형태이다. </span></p>
+<script src="https://gist.github.com/3918482.js"></script>
+
+<p><span style="font-size: 11pt; "><strong>public static 인스턴스를 만드는 방식이다.</strong> private 생성자로부터 인스턴스가 만들어 지고 final 키워드에 의해서 한번만 초기화가 된다. 이 코드의 장점은 간단하는 점이다. 그런데 조금 유연하지 못한 부분이 있다. </span></p>
+<p><span style="font-size: 11pt; "><strong>두번째 방식은 private static final 인스턴스를 만드는 방식이다.</strong> 그렇다면 만들어진 객체를 어떻게 리턴할까? static method를 통해서 생성된 인스턴스를 반환하게 하고 있다. 사실 이 방식이 static factory 메소드에서 다른 여타의 작업들을 하나밖에 없는 객체이지만, 객제가 반환되는 시점에 다른 작업을 추가할 수 있다는 장점이 있다.</span></p>
+<p><span style="font-size: 11pt; "> </span></p>
+<script src="https://gist.github.com/3918471.js"></script>
+
+<p><span style="font-size: 11pt; "><strong>세번째 방식은 좀 생소한데, class 가 아니라, enum 으로 생성해 버리는 것이다.</strong> 보통 enum은 어떤 모드를 구분하고 지정하기 위해서 사용되는데, 이렇게 함수를 가지고 있을수 있다는 것은 처음 알았다. 가장 큰 장점은 단연 serialization 할 경우에 두번째 방식에서는 여타의 작업들을 해주어야만 하나의 객체가 유지되는데, enum 방식은 그럴 필요가 없다는 것이다. </span></p>
+<script src="https://gist.github.com/3918487.js"></script>
+
+<p><span style="font-size: 11pt; ">원래 싱글턴을 만드는 방식은 여기에는 안 나와있는데, 하나의 인스턴스를 처음에 요청하면 만들고, 그 인스턴스가 null 인지를 다음 요청이 들어올때 체크해서 null 이 아니면 이전에 생성한 것을 반환하는 형태로 많이 사용되었는데, 이러한 방식의 코드의 단점은 멀티 스레드 환경에서 교묘한 시점에 객체가 1개 이상이 반환될 여지가 있다는 점이다. </span></p>
+<p><span style="font-size: 11pt; ">주의해서 사용하자. </span></p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #Java&nbsp;
+        
+            #Single ton&nbsp;
+        
+            #디자인패턴&nbsp;
+        
+            #싱글톤패턴&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

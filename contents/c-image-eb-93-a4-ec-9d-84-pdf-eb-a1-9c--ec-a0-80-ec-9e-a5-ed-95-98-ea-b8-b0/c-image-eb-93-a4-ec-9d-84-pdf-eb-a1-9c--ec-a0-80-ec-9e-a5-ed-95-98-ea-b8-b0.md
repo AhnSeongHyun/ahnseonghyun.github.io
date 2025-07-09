@@ -1,7 +1,7 @@
 ---
 title: '[C#] Image들을 PDF로 저장하기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2009-09-25'
 description: '**  
 ****  
  Image를 PDF로 저장하기 위한 C# 소스코드 **'

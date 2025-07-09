@@ -1,7 +1,7 @@
 ---
 title: '[C#] DotNetBar 이용하기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2009-11-10'
 description: 'Office 2007 부터 리본시스템이 UI에 도입되면서 UX의 개념이 나오기 시작한것 같다. 자주 사용하는 메뉴를 사용자가 보편적으로 자주 사용하는 곳에 배치함으로써 좀더 사용성을 증가 시킨다는 것은 사람과 컴퓨터 사이를 좀더 가깝게 만들어 주는 하나의 혁신이라고 볼수가 있다. 하지만, 일반 Visual Studio 2008의 Windows Applicatio'
 featured_image: ''
 tags: ['dev', 'DotNetBar', 'Office2007 개발 UI', 'Ribbon Control', 'UI', '닷넷바']

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - Python - 함수 디폴트인자의 잘못된 사용"/>
+    <meta property="og:description" content="본 글은 Toptal에 올라온 [Buggy Python Code: The 10 Most Common Mistakes That Python Developers Make](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) 글을 보고 공부하면서 쓴 글이다. 번역 + 개인의 공부내용이라고 생각하면 될 것 같다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/05/22/python-misusing-expressions-as-defaults-for-function-arguments"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Python - 함수 디폴트인자의 잘못된 사용</title>
+    <meta name="description" content="본 글은 Toptal에 올라온 [Buggy Python Code: The 10 Most Common Mistakes That Python Developers Make](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) 글을 보고 공부하면서 쓴 글이다. 번역 + 개인의 공부내용이라고 생각하면 될 것 같다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Python - 함수 디폴트인자의 잘못된 사용</h1>
+    <div class="blog-post-meta"> 
+        <small>  2017-05-22</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p>본 글은 Toptal에 올라온 <a href="https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make">Buggy Python Code: The 10 Most Common Mistakes That Python Developers Make</a> 글을 보고 공부하면서 쓴 글이다. 번역 + 개인의 공부내용이라고 생각하면 될 것 같다. </p>
+<p><strong>Common Mistake #1: Misusing expressions as defaults for function arguments</strong></p>
+<p><strong>함수 디폴트인자의 잘못된 사용</strong></p>
+<pre><code class="language-python">def foo(bar=[]):
+    bar.append(&quot;baz&quot;)
+    return bar
+
+print foo()
+print foo()
+print foo()
+</code></pre>
+<p>보통 이렇게 쓰는 이유는 함수 bar 에서 옵션으로 초기값으로 빈 리스트를 주기 위함이다. 그런데 위의 예저에서처럼 수행하게 되면 우리가 예상할 때는 ['baz'] 가 3번 나와야 하는데 실제로는 아래와 같이 출력된다. </p>
+<p>이러는 이유는 ==<strong>함수의 디폴트 인자는 함수가 정의되는 시점에 오직 한번만 평가된다고 한다.</strong>==(생성 된다는게 맞을듯) 그렇기 때문에 처음에 foo 함수가 정의될때 bar에 빈 리스트가 생성/할당된다. foo() 로 함수가 호출되는 시점에는 bar 는 이미 리스트가 가지고 있기 때문에 계속 baz 값이 들어가게 된다. </p>
+<pre><code>&gt;&gt;&gt; foo()
+[&quot;baz&quot;]
+&gt;&gt;&gt; foo()
+[&quot;baz&quot;, &quot;baz&quot;]
+&gt;&gt;&gt; foo()
+[&quot;baz&quot;, &quot;baz&quot;, &quot;baz&quot;]
+</code></pre>
+<p>아래와 같이 None 으로 주고 내부적으로 None 을 체크해서 빈 리스트로 재할당 해주면된다. </p>
+<pre><code class="language-python">def foo(bar=None):
+    if not bar:
+        bar = []
+    bar.append(&quot;baz&quot;)
+    return bar
+</code></pre>
+<p>이 문제는 리스트냐 아니냐의 문제가 아니라, ==디폴트 값의 형식이 mutable, immutable 의 문제가 중요한 부분이다.== <br />
+Pycharm 을 사용하는 개발자라면 <code>Default argument value is mutable.</code> 라는 경고(warning)가 노출 되게 된다. 이럴경우 함수 인자를 살펴볼 필요가 있다. 파이썬에서 mutable, immutable type 은 여기를 참고하면 된다.(https://docs.python.org/2/reference/datamodel.html)</p>
+<blockquote>
+<p><strong>immutable</strong>: numeric(int, float ..), string, unicode, tuple, frozenset, bytes</p>
+<p><strong>mutable</strong>: list, dict, set, byte array, class, class instance </p>
+</blockquote>
+<p>위의 mutable, immutable 형식들을 가지고 다시 테스트를 해보자. 먼저 int 와 string 을 테스트 해보면 immutable 형이라서 3번 다 같은 값이 나오는 것을 확인 할 수가 있다. </p>
+<pre><code class="language-python">def int_mutable_test():
+    def foo_int(bar=0):
+        bar+=2
+        return bar
+
+    print foo_int()
+    print foo_int()
+    print foo_int()
+
+def string_mutable_test():
+    def foo_string(bar=''):
+        bar+='test'
+        return bar
+
+    print foo_string()
+    print foo_string()
+    print foo_string()
+</code></pre>
+<pre><code>2
+2
+2
+test
+test
+test
+</code></pre>
+<p><code>tuple</code> 이나 <code>frozenset</code> 같은 경우, immutable 형이라서 <code>add()</code>, <code>append()</code> 같은 함수 자체를 제공하고 있지 않다. 사용자가 정의한 클래스에서 <code>int</code>나 <code>string</code>을 사용하는 경우는 어떠할까? 예를 들면 User 클래스의 level, job 같은 immutable 멤버변수의 경우라면? (~~구현하기 나름이겠지만.~~)</p>
+<pre><code class="language-python">def class_mutable_test():
+    class User(object):
+        def __init__(self):
+            self.level = 0
+            self.items = []
+            self.job = ''
+
+        def __str__(self):
+            return &quot;job : %s, level : %s, items: %s&quot; %(self.job, str(self.level), self.items)
+
+    def level_up(bar=User()):
+        bar.level+=1
+        bar.job += 'knignt'
+        bar.items.append('Sword')
+        return bar
+
+    print level_up()
+    print level_up()
+    print level_up()
+</code></pre>
+<pre><code>job : knignt, level : 1, items: ['Sword']
+job : knigntknignt, level : 2, items: ['Sword', 'Sword']
+job : knigntknigntknignt, level : 3, items: ['Sword', 'Sword', 'Sword']
+</code></pre>
+<p>사용자 정의 클래스 자체가 mutable 이기 때문에 함수가 정의되고 평가되는 시점에 생성된 <code>User()</code> 인스턴스 bar 가 <code>level_up()</code> 함수가 실행될 때 마다 재사용되고 있는 것을 확인 할 수 있다. </p>
+    </div>
+    <div>
+        
+            #Python&nbsp;
+        
+            #toptal&nbsp;
+        
+            #mutable&nbsp;
+        
+            #immutable&nbsp;
+        
+            #function argument&nbsp;
+        
+            #python function argument type&nbsp;
+        
+            #dev&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

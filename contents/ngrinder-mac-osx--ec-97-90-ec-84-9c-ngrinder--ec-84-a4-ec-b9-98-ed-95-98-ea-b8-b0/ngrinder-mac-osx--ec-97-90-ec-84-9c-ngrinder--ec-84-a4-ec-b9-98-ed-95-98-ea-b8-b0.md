@@ -1,7 +1,7 @@
 ---
 title: '(ngrinder) mac osx 에서 ngrinder 설치하기'
 author: 'ash84'
-pub_date: '2015-05-19'
+pub_date: '2014-02-12'
 description: '웹 서비스 부하테스트를 해야하는 작업이 있었는데 예전에 컨퍼런스에 가서 들었던 [ngrinder](http://www.nhnopensource.org/ngrinder/) 라는 툴이 생각나서 이번 기회에 익히면서 써보기로 하였다. 기본적인 설명이나 컨셉들은 본 글의 제일 하단에 Reference 부분을 참고하면 될것 같다.'
 featured_image: ''
 tags: ['ngrinder', '모니터링', '웹서버 성능', '웹서비스 성능측정']

@@ -1,7 +1,7 @@
 ---
 title: '블로그 포스팅의 지루한 레이아웃.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-07-29'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile27.uf.162CA5024C50E9752018C1.jpg)'
 featured_image: ''
 tags: ['dev', '블로그', '블로그 레이아웃', '에스콰이어', '포스팅 레이아웃']

@@ -1,7 +1,7 @@
 ---
 title: '[C#] Click Once 배포오류 fileloadException에 대해서.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-02-24'
 description: '요즘 계속 배포작업을 하고 있습니다. 처음 배포 한 msi 파일이 배포오류가 생겼었는데, 그 오류를 자세히 들여가 보면 fileloadException 에 의해서 발생된 오류였다. 처음에는 기본적으로 ini 파일이나, 폰트파일 혹은 외부 dll 파일을 못 읽어서 문제가 생겼나 해서 예외처리를 한 상태에서 해 봤더니, 걸리지'
 featured_image: ''
 tags: ['Ahn Seong Hyun', 'c#', 'Click Once', 'dev', 'fileloadexception', '배포오류', '클릭원스']

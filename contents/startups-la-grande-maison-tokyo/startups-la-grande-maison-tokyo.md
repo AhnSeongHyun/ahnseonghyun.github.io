@@ -1,7 +1,7 @@
 ---
 title: '그랑메종도쿄로 보는 스타트업'
 author: 'ash84'
-pub_date: '2025-01-25'
+pub_date: '2024-09-22'
 description: '그랑메종도쿄를 넷플릭스에서 최근에 시청을 했다. 개인적으로 기무라 타쿠야의 드라마를 좋아했었는데, 간만에 보게 되어서 재밌었다. 뻔한 클리셰들이 있긴 했지만 요즘은 그런것들을 느끼기가 쉽지 않아서 더 새롭게 느껴졌던것 같다. 요리라는것 자체에 관심이 있기도 하지만, 그랑메종도쿄를 보면서 새롭게 드는 생각은 스타트업의 여러부분과 비슷한 부분이 있어서 더 공감이 갔던것 같다. 이 드라마는 미슐랭 3스타를 받기 위해서 그랑메종도쿄라는 프렌치 레스토랑을 도쿄에 만드는 과정, 그리고 미슐랭 3스타를 받기 위해서 성장하는 과정들을 그리고 있다'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/startups-la-grande-maison-tokyo/1316x741.webp'
 tags: ['essay', 'startup']

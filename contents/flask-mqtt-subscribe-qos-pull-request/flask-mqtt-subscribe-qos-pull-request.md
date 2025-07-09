@@ -1,7 +1,7 @@
 ---
 title: 'flask-mqtt : subscribe 시 qos 설정 이슈 수정하기'
 author: 'ash84'
-pub_date: '2018-02-01'
+pub_date: '2018-01-29'
 description: '이번 프로젝트를 하면서 주문관련 부분을 기존의 폴링(polling) 을 하던 방식에서 중간에 브로커서버를 두고 주문하는 쪽에서 주문을 보내면 브로커 서버의 특정 topic 을 구독하고 있는 구독자가 해당 주문을 받는 형태로 구성을 했다. 그 과정에서 mqtt 를 이용했고, [emqtt](https://emqtt.io) 브로커 서버를 선택해서 사용하고 있다. 주문을 하는 쪽에서는 flask 로 구성되어 있어서 별도의 [paho client](https://pypi.python.org/pypi/paho-mqtt/1.2) 라이브러리를 띄'
 featured_image: 'https://camo.githubusercontent.com/98ac5a9047bbf6a063e667a933cc056ea3e627a6/68747470733a2f2f6d617863646e2e69636f6e73382e636f6d2f416e64726f69645f4c2f504e472f3531322f50726f6772616d6d696e672f70756c6c5f726571756573742d3531322e706e67'
 tags: ['FLASK', 'mqtt', 'flask-mqtt', 'github', 'QOS']

@@ -1,7 +1,7 @@
 ---
 title: '[C#] Bluetooth Communication in Black Jack phone(블랙잭에서 블루투스 이용)'
 author: 'ash84'
-pub_date: '2017-03-28'
+pub_date: '2008-12-22'
 description: '블랙잭 폰에서(블랙잭 1) 블루투스를 이용한 프로그램 개발.
 
 **주의사항**  

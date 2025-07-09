@@ -1,7 +1,7 @@
 ---
 title: '(mysql) Data truncation: Data too long for column 'xxx' at row 1'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2013-06-26'
 description: ''
 featured_image: ''
 tags: ['data', 'dev', 'LONGTEXT', 'MySQL', 'text', 'TINYTEXT']

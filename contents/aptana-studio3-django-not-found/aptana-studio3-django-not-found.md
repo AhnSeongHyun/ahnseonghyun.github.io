@@ -1,7 +1,7 @@
 ---
 title: '(Django) Aptana Studio3 Django Not found 오류 해결법'
 author: 'ash84'
-pub_date: '2017-03-28'
+pub_date: '2013-12-17'
 description: 'Django 프로젝트를 만들려고 하는데 pip install django 로 django를 설치했음에도 불구하고  
  Django not found 라는 오류창과 함께 프로젝트가 생성되지 않는다. 
 

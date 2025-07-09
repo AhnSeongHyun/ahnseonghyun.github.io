@@ -1,7 +1,7 @@
 ---
 title: '(iOS) 날짜에서 요일 가져오기'
 author: 'ash84'
-pub_date: '2017-04-24'
+pub_date: '2013-05-20'
 description: ''
 featured_image: ''
 tags: ['dev', 'IOS', 'NSDAT', 'NSDate 변환', '날짜 계산 Objective-c', '날짜 요일']

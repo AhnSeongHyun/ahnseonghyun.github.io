@@ -1,7 +1,7 @@
 ---
 title: '[JAVA] getUnicodeFromString, 문자에서 유니코드 값 가져오기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-12-05'
 description: '유니코드를 가져와야 하는 경우가 있다. 어떤 경우에는 문자 대신에 유니코드 자체값을 사전 같은 곳에 넣어 주는 곳이 있다. 사실은 그리 선호 하지 않는 경우인데 이유인즉, 해당 문자를 별도로 눈으로 확인해야 할 필요성이 있는경우, 불편하다. 대부분 이런 경우, unicodinator 를 이용한다. 자바에서 어떤 문자에 대한 유니코드 값을 가져오는 코드는 다음과 같다.'
 featured_image: ''
 tags: ['dev', 'Java', 'Unicode', '유니코드 값 반환']

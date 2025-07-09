@@ -1,7 +1,7 @@
 ---
 title: '[iOS] UIAlertView + UIActivityIndicatorView'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-05-06'
 description: ''
 featured_image: ''
 tags: ['dev', 'IOS', 'UIActivityIndicatorView', 'UIAlertView', '로딩뷰']

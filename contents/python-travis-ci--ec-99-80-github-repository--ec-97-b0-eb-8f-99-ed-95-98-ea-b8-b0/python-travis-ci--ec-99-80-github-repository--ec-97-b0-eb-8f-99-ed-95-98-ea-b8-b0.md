@@ -1,7 +1,7 @@
 ---
 title: 'python travis-ci 와 github repository 연동하기'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2013-12-26'
 description: '별거 없다. 파이썬 기준으로 설명  
 
  

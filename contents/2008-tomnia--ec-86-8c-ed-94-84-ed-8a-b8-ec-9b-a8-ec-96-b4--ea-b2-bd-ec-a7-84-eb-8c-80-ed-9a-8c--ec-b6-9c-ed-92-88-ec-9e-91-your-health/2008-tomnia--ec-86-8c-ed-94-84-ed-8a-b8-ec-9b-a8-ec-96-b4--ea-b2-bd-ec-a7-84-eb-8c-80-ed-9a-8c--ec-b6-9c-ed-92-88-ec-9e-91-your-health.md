@@ -1,7 +1,7 @@
 ---
 title: '2008 TOMNIA 소프트웨어 경진대회 출품작 Your Health'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2009-03-10'
 description: '[](http://ash84.net/wp-content/uploads/1/cfile5.uf.1566E70C49B63C7F2AFDC3.bmp)cfile5.uf.1566E70C49B63C7F2AFDC3.bmp'
 featured_image: ''
 tags: ['dev', 'FIND HOSPITAL', 'TOMNIA 소프트웨어 경진대회', 'YOUR HEALTH', '경진대회', '모바일 프로그램', '병원 찾기', '소프트웨어 개발', '진료기록 관리']

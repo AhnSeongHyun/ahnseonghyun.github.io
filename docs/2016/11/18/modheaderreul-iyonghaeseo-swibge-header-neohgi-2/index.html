@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - ModHeader를 이용해서 쉽게 Header 넣기"/>
+    <meta property="og:description" content="https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj"/>
+    <meta property="og:url" content="https://ash84.io/docs/2016/11/18/modheaderreul-iyonghaeseo-swibge-header-neohgi-2"/>
+    <meta property="og:image" content="https://c5.staticflickr.com/6/5690/30904141620_a137ed1b48_z.jpg"/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>ModHeader를 이용해서 쉽게 Header 넣기</title>
+    <meta name="description" content="https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">ModHeader를 이용해서 쉽게 Header 넣기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2016-11-18</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+        <img src="https://c5.staticflickr.com/6/5690/30904141620_a137ed1b48_z.jpg" alt="">
+    
+    <div class="blog-post">
+        <p>https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj</p>
+<p>모바일 앱내 웹 뷰에 들어갈 웹 페이지에는 커스텀 헤더를 일부러 넣곤 한다. 예를 들면 다른 곳에서 호출하지 못하도록 특정 헤더값을 앱과 웹이 약속을 한채로 보내고 인증이 된 클라이언트에서만 보여지게 하기 위해서인데, 테스트/개발을 할때는 서버 개발자가 본인의 컴퓨터, 브라우저에서 해야하기 때문에 불편하다. </p>
+<p><strong>개발자 세트 구매하기</strong> 🤟</p>
+<iframe src="https://coupa.ng/chcDbD" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+<iframe src="https://coupa.ng/chcDdd" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+<iframe src="https://coupa.ng/chcDdZ" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+
+<p>크롬의 ModHeaher 플러그인은 그런 불편한 점을 해소해 주는데, 해당 플러그인을 설치하면 우측상단 도구모음에 아이콘이 생기게 되고 Request, Response Header 를 지정해서 넣을수가 있다. 이 플러그인이 좋은점 중에 하나는 프로젝트 혹은 사용자가 지정하는 종류별로 지정할 수 있다. 예를 들면 프로젝트 별로 지정할 수도 있고, 필자 같은 경우에는 개발서버와 실서버를 구분해서 다르게 헤더값들을 넣어두고 테스트할 때 사용했었다. </p>
+<p>한가지 단점은 Authorization 헤더 같은 경우 일반 다른 웹사이트에서도 사용하기 때문에 로그인이 안되거나 인증 문제가 발생할 수 있는데 그럴경우 해당 헤더를 비활성화 시키고 진입하면 된다. </p>
+<p><small>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</small></p>
+    </div>
+    <div>
+        
+            #chrome&nbsp;
+        
+            #ModHeader&nbsp;
+        
+            #header&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

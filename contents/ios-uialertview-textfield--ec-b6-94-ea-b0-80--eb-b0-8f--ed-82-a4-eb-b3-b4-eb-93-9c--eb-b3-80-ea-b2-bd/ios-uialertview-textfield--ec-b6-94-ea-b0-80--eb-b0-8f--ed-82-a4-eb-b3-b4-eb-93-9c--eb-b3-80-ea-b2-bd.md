@@ -1,7 +1,7 @@
 ---
 title: '(iOS) UIAlertView TextField 추가 및 키보드 변경'
 author: 'ash84'
-pub_date: '2016-08-09'
+pub_date: '2013-09-27'
 description: '어떤 정보를 수정하거나 할때 뷰를 Navigation 으로 열어서 하는 방법들이 있겠지만 일단 가장 쉬운것이 팝업이고 iOS에서는 UIAlterView 로 그런것들을 대신할 수 있다. 여기서는 UIAlertView 에서 UITextField 를 사용하는 법을 정리하고자 한다.'
 featured_image: ''
 tags: ['dev', 'TextField', 'UIAlertView', 'UIAlertView 텍스트필드 삽입']

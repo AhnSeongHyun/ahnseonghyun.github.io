@@ -1,7 +1,7 @@
 ---
 title: '(iOS) HTML Tag Remover'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2012-11-19'
 description: ''
 featured_image: ''
 tags: ['dev', 'IOS', '개발', '아이폰 앱 개발', '어플', '한우찾기']

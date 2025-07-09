@@ -1,7 +1,7 @@
 ---
 title: '(iOS) AVAudioSessionCategory 정리'
 author: 'ash84'
-pub_date: '2015-09-24'
+pub_date: '2013-09-17'
 description: '다들 알다시피 AVAudioSession 이라는 것을 통해서 iOS 내에서 음악을 재생하는데 `AVAudioSessionCategory `라는 것에 대해서 알아둘 필요가있다. 이것이 왜 중요한지에 대해서 일단 일화를 설명하자면, 
 알람소리(Remote Notification 이 아님)를 재생함에 있어서 아이폰 무음모드에서도 재생되는 문제점이 있어서 찾아보니 무음모드와 소리모드를 체크할수 있는 아래의 코드를'
 featured_image: ''

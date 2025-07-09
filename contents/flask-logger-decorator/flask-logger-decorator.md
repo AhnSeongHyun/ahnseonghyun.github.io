@@ -1,7 +1,7 @@
 ---
 title: 'flask logger decorator(데코레이터)와 함께 사용하기'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2014-12-18'
 description: '###기본로그 세팅하기###
 
 

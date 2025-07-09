@@ -1,7 +1,7 @@
 ---
 title: '(iOS) NSCopying 프로토콜 구현하기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-11-21'
 description: '어떤 사용자 정의 클래스의 객체 자체를 copy 해야하는 경우가 있다. 그럴때 사용하는 것이 `NSCopying` 프로토콜이다. 객체를 복사할때는 `'
 featured_image: ''
 tags: ['deepcopy', 'dev', 'IOS', 'NSCopying', 'NSZONE']

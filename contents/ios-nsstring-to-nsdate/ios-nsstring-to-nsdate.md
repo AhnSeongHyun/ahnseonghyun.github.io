@@ -1,7 +1,7 @@
 ---
 title: '(iOS) NSString to NSDate'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-01-30'
 description: '데이터를 저장하다 보면  NSDate 를 결국 문자열의 형태로 저장할 수 밖에 없다. 당연히 텍스트 파일에 저장하니까 그런데, 다시 파일에서 데이터로 복원할때는 당연히 NSDate 형식으로 바꾸어서 써야 할때가 있다. 아래의 코드를 보자.'
 featured_image: ''
 tags: ['dev', 'IOS', 'NSDate 변환', 'NSString to NSDate']

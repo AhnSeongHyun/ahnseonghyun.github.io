@@ -1,7 +1,7 @@
 ---
 title: '[pull request] spgen, generate mysql stored procedure'
 author: 'ash84'
-pub_date: '2016-08-05'
+pub_date: '2015-07-23'
 description: '#### **앞서서, 프로시저에 대한 이야기**
 
  ORM 이 추세이긴 하지만 여전히 사용하는 곳이 있다. 물론 로직이 숨어 있다는 문제, 가독성이 떨어지는 문제가 있지만 여전히 성능면에서는 최고의 방법이 아닌가 싶다.(이견이 있으시다면 댓글로,, 댓글구걸)

@@ -1,7 +1,7 @@
 ---
 title: '#주간개발기, 3월 둘째주.'
 author: 'ash84'
-pub_date: '2015-10-22'
+pub_date: '2013-03-17'
 description: '**exs4j 테스트에 대한 이야기 **
 
  

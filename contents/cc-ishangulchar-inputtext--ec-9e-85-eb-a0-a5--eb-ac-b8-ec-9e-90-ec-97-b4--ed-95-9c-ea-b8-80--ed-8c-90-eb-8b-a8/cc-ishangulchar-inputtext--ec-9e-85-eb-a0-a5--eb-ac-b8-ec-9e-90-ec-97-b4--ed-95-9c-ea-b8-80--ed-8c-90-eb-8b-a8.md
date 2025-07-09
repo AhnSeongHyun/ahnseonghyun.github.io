@@ -1,7 +1,7 @@
 ---
 title: '[C/C++]  IsHangul(char * input_text) 입력 문자열 한글 판단.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-11-24'
 description: ''
 featured_image: ''
 tags: ['C/C++', 'Cleancode', 'C언어', 'dev', 'IsHangul()', '문자열', '클린코드', '한글']

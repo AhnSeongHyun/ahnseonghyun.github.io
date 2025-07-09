@@ -1,7 +1,7 @@
 ---
 title: '(iOS) TestFlight 사용해서 ipa 배포하기'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2013-12-19'
 description: ''
 featured_image: ''
 tags: ['dev', 'IOS', 'IPA', 'ipa 만들기', 'ipa 설치', 'TestFlight', '배포']

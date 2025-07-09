@@ -1,7 +1,7 @@
 ---
 title: '[iOS] NSDATE-TimeAgo Usage'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2015-04-16'
 description: ''
 featured_image: ''
 tags: ['dev', 'IOS', 'NSDATE', 'timeago']

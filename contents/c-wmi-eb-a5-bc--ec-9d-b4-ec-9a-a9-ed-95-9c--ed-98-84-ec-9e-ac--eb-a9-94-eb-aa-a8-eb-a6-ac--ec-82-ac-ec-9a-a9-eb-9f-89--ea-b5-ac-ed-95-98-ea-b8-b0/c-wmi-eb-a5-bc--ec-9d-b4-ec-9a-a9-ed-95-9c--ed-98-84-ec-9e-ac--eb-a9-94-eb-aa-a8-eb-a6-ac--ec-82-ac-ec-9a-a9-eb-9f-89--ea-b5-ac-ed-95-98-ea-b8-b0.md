@@ -1,7 +1,7 @@
 ---
 title: '[C#] WMI를 이용한 현재 메모리 사용량 구하기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-03-03'
 description: ''
 featured_image: ''
 tags: ['c#', 'dev', 'Memory', 'WMI', '메모리', '메모리 사용량']

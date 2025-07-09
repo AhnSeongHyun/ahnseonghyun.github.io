@@ -1,7 +1,7 @@
 ---
 title: '(iOS) UIWebView objc_msg_send 문제'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-02-19'
 description: '한우찾기 앱을 만들때에도 이렇게 힘들지는 않았는데, 풍문검색은 좀 어렵네. 아무튼 업로드 및 빠른 심사를 부탁해 놓은 상황인데, 어제 crash가 났던 상황에 대해서 정리하고자 포스팅을 한다. 일단 상황을 설명하자면 단순하게 UITableView 의 한 셀을 선택하면 그 셀이 가지고 있는 링크주소를 내가 만든 BasicUIWebViewController 에서 보여주는 것이었는데, 보여주고나서 viewController를 내리면(dismiss) 문제가 생기는 것이었다.'
 featured_image: ''
 tags: ['dev', 'objc_msg_send', 'UIWebView', 'UIWebViewDelegate crash']

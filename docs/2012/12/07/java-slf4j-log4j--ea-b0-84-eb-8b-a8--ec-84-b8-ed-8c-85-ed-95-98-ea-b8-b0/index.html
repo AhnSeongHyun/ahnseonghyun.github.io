@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [JAVA] slf4j-log4j 간단 세팅하기."/>
+    <meta property="og:description" content="개인적으로 log4j 세팅을 그리 좋아하지 않고, logger 라는것 자체가 좀 싫어하는데 많은 사람들이 사용하고 사실상 회사에서 자바 프로젝트를 하려면 안 쓸수가 없다. 때문에 간략하게 나마 정리를 한다. slf4j를 log4j보다 선호하는 이유는 각자 찾아보길 바란다. ([링크](https://www.google.com/search?q=slf4j%EB%A5%BC+%EC%82%AC%EC%9A%A"/>
+    <meta property="og:url" content="https://ash84.io/docs/2012/12/07/java-slf4j-log4j--ea-b0-84-eb-8b-a8--ec-84-b8-ed-8c-85-ed-95-98-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[JAVA] slf4j-log4j 간단 세팅하기.</title>
+    <meta name="description" content="개인적으로 log4j 세팅을 그리 좋아하지 않고, logger 라는것 자체가 좀 싫어하는데 많은 사람들이 사용하고 사실상 회사에서 자바 프로젝트를 하려면 안 쓸수가 없다. 때문에 간략하게 나마 정리를 한다. slf4j를 log4j보다 선호하는 이유는 각자 찾아보길 바란다. ([링크](https://www.google.com/search?q=slf4j%EB%A5%BC+%EC%82%AC%EC%9A%A" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[JAVA] slf4j-log4j 간단 세팅하기.</h1>
+    <div class="blog-post-meta"> 
+        <small>  2012-12-07</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">개인적으로 log4j 세팅을 그리 좋아하지 않고, logger 라는것 자체가 좀 싫어하는데 많은 사람들이 사용하고 사실상 회사에서 자바 프로젝트를 하려면 안 쓸수가 없다. 때문에 간략하게 나마 정리를 한다. slf4j를 log4j보다 선호하는 이유는 각자 찾아보길 바란다. (</span><a href="https://www.google.com/search?q=slf4j%EB%A5%BC+%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC+%ED%95%98%EB%8A%94+%EC%9D%B4%EC%9C%A0&amp;oq=slf4j%EB%A5%BC+%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC+%ED%95%98%EB%8A%94+%EC%9D%B4%EC%9C%A0&amp;aqs=chrome.0.57.10108&amp;sugexp=chrome,mod=9&amp;sourceid=chrome&amp;ie=UTF-8"><span style="font-size: 11pt;">링크</span></a><span style="font-size: 11pt;">) </span></p>
+<p><strong><span style="font-size: 11pt;">1. 일단 slf4j를 다운 받는다. (</span><a href="http://www.slf4j.org/download.html"><span style="font-size: 11pt;">링크</span></a><span style="font-size: 11pt;">)</span></strong></p>
+<p><span style="font-size: 11pt;">아래의 두 파일을 자바 프로젝트 lib 폴더에 복사하자. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; text-align: justify;"><span style="font-size: 11pt;">– slf4j-api.1.6.1.jar</span>
+
+<span style="font-size: 11pt;">– slf4j-log4j12-1.6.2.jar </span>
+
+</div>
+<p><strong><span style="font-size: 11pt;">2. log4j를 다운 받는다. (</span><a href="http://logging.apache.org/log4j/1.2/download.html"><span style="font-size: 11pt;">링크</span></a><span style="font-size: 11pt;">)</span></strong></p>
+<p><span style="font-size: 11pt;">아래의 파일을 자바 프로젝트 lib 폴더에 복사하자. </span></p>
+<div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; text-align: justify;"><span style="font-size: 11pt;">– log4j-1.2.16.jar</span>
+
+</div>
+<p><span style="font-size: 11pt;"><strong>3. BuildPath 잡아주기.</strong> </span></p>
+<p><span style="font-size: 11pt;">다음과 같이 잡아주자. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile8.uf.0319413850C17E1F21BF8A.PNG" /></p>
+<p><span style="font-size: 11pt;">코드는 다음과 같다. </span></p>
+<script src="https://gist.github.com/4230118.js"><span style="font-size: 11pt;"></script>
+
+<p><span style="font-size: 11pt;">일단 원래 log4j.propertise 는 src 밑에 두면 되는데, 간혹 안 잡히는 경우가 있다.(log4j의 최고 단점) 이럴경우, 아예 디렉토리를 두고 지정하는 방법도 있음을 보여주기 위해서 PropertyConfigurator 를 사용하였다. log4j.propertise를 만들기 싫다면 BasicConfigurator 를 사용하면 된다. </span></p>
+<p><span style="font-size: 11pt;">다음은 log4j.propertise 를 보자. 간단하게 만들었다.(초보가 만든것임을 알아주시길..) 인터넷에서 몇가지 더 찾아 보긴 했지만, 기본적으로 console로 나오게 하는 것과 file로 나오게 하는 것 두개에 대해서 설정했다. file로 로그가 나올때는 DEBUG도 출력하도록 설정하였다. </span></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<script src="https://gist.github.com/4230138.js"><span style="font-size: 11pt;"></script>
+
+<p><span style="font-size: 11pt; line-height:2;">log4j의 범위에 대한 부분은 스스로 해보면 알수 있을것이라고 생각된다. 이해하는데는 그리 어렵지 않다. log4j.propertise는 여간 귀찮은 일이 아니지만, 한번쯤 이렇게 정리를 해 두면 편할것이라고 생각되어서 정리해둔다. 추가적으로 위의 3가지 jar에 대한 버전을 제대로 맞춰야 제대로 작동이 된다. 단순히 logger.info(“”)함수로 테스트하는 것 보다 logger.info(“{}”) 함수로 테스트 하길 권장한다. </span></p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #Java&nbsp;
+        
+            #Log4J&nbsp;
+        
+            #log4j.propertise&nbsp;
+        
+            #slf4j&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

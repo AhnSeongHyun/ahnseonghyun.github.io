@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - 차별과 마주하다."/>
+    <meta property="og:description" content="최근에 면접에 참가하고 개발자를 뽑으면서 겪었던 일은 조금 화가 났던 일이다. 자꾸만 생각나는 일이어서, 이렇게 글을 쓰게 되는데. 나는 이 업계에는 그래도 다른 업계에 비해서 나이와 성별에 대한 제약이 차별이 덜하고 생각해 왔었다. 그리고 그런 곳에서 일을 한다는 것에 자부심을 느끼고 일을 하고 있었다. 그렇지만, 왜 성별이 다른 개발자를 뽑았냐고 물어보는 사람에서 부터,  예쁘냐고 물어보는 사람까지. 예전 같았으면 그냥 넘어갔을 이야기지만, 나도 모르게 거북함을 느꼈다. 개발자를 뽑았을 때 내가 들었던 이야기의 대부분은 잘 적응"/>
+    <meta property="og:url" content="https://ash84.io/docs/2018/06/08/gender-equality"/>
+    <meta property="og:image" content="https://images.unsplash.com/photo-1526289955287-b32d935b0ddf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f43ef69eb7a14a62a92eace253db8047&auto=format&fit=crop&w=1334&q=80"/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>차별과 마주하다.</title>
+    <meta name="description" content="최근에 면접에 참가하고 개발자를 뽑으면서 겪었던 일은 조금 화가 났던 일이다. 자꾸만 생각나는 일이어서, 이렇게 글을 쓰게 되는데. 나는 이 업계에는 그래도 다른 업계에 비해서 나이와 성별에 대한 제약이 차별이 덜하고 생각해 왔었다. 그리고 그런 곳에서 일을 한다는 것에 자부심을 느끼고 일을 하고 있었다. 그렇지만, 왜 성별이 다른 개발자를 뽑았냐고 물어보는 사람에서 부터,  예쁘냐고 물어보는 사람까지. 예전 같았으면 그냥 넘어갔을 이야기지만, 나도 모르게 거북함을 느꼈다. 개발자를 뽑았을 때 내가 들었던 이야기의 대부분은 잘 적응" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">차별과 마주하다.</h1>
+    <div class="blog-post-meta"> 
+        <small>  2018-06-08</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+        <img src="https://images.unsplash.com/photo-1526289955287-b32d935b0ddf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f43ef69eb7a14a62a92eace253db8047&auto=format&fit=crop&w=1334&q=80" alt="">
+    
+    <div class="blog-post">
+        <p>최근에 면접에 참가하고 개발자를 뽑으면서 겪었던 일은 조금 화가 났던 일이다. 자꾸만 생각나는 일이어서, 이렇게 글을 쓰게 되는데. 나는 이 업계에는 그래도 다른 업계에 비해서 나이와 성별에 대한 제약이 차별이 덜하고 생각해 왔었다. 그리고 그런 곳에서 일을 한다는 것에 자부심을 느끼고 일을 하고 있었다. 그렇지만, 왜 성별이 다른 개발자를 뽑았냐고 물어보는 사람에서 부터,  예쁘냐고 물어보는 사람까지. 예전 같았으면 그냥 넘어갔을 이야기지만, 나도 모르게 거북함을 느꼈다. 개발자를 뽑았을 때 내가 들었던 이야기의 대부분은 잘 적응하는지, 어떤 기술을 주로 사용해왔는지, 어떤 일을 담당하는 지에 대한것들이었는데. 성별이 다른 개발자라고 해서 다르게 물어보는건 차별이라는 생각이 들었다. 이미 그런것을 깔고 바라보고 있는건 아닌지. </p>
+<blockquote>
+<p>이런일을 몇주내에 겪어보니 </p>
+<p>숨어있던 차별과 마주한 느낌이었다. </p>
+</blockquote>
+<p>나이, 성별, 그런게 중요한가? 개발자는 우리가 만들어 나가는 무엇인가에 좀 더  적절한 사람인지가 더 중요한게 아닌가? 적절한 기술과 직무 그리고 소통할 수 있으면 될 수 있었던게 아니였나? 남자 개발자에 비해서 야근을 덜 할것 같아서? 아니면 출산이후 계속 회사를 다니지 않을것 같아서? 그래서 채용하지 말아야 하는가? 기피해야하는가?</p>
+<p>나이들어서, 여자라서, 학벌이 좋지 않아서 등등 뽑지 않고 채용에 차별을 두는 것 자체가 모순이고, 해당 조직과 회사의 경쟁력을 악화시키는 가장 큰 요인이라는 생각이 든다. </p>
+<p>씁쓸해지는 밤이다. </p>
+    </div>
+    <div>
+        
+            #개발자&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

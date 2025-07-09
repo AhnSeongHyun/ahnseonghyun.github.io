@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - (Java) Thread, Runnable 콜백함수"/>
+    <meta property="og:description" content="최근에 [자바 네트워크 관련 책](http://book.naver.com/bookdb/book_detail.nhn?bid=1583597)을 보고 있는데(조금 옛날책) 스레드에 관련된 내용이 나와서 정리한다. [이전에 ExcutorService 에 대해서 썼을때](http://ash84.tistory.com/933)는 Runnable 의 run()함수가 void 형을 리턴하도록 되어 있기 때문에 결과 값을 받을수 없다고 설명했었는데, 이 책에서는 콜백 함수를 이용해서 각 스레드"/>
+    <meta property="og:url" content="https://ash84.io/docs/2013/05/29/java-thread-runnable-call-back-function"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(Java) Thread, Runnable 콜백함수</title>
+    <meta name="description" content="최근에 [자바 네트워크 관련 책](http://book.naver.com/bookdb/book_detail.nhn?bid=1583597)을 보고 있는데(조금 옛날책) 스레드에 관련된 내용이 나와서 정리한다. [이전에 ExcutorService 에 대해서 썼을때](http://ash84.tistory.com/933)는 Runnable 의 run()함수가 void 형을 리턴하도록 되어 있기 때문에 결과 값을 받을수 없다고 설명했었는데, 이 책에서는 콜백 함수를 이용해서 각 스레드" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(Java) Thread, Runnable 콜백함수</h1>
+    <div class="blog-post-meta"> 
+        <small>  2013-05-29</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">최근에 <a href="http://book.naver.com/bookdb/book_detail.nhn?bid=1583597">자바 네트워크 관련 책</a>을 보고 있는데(조금 옛날책) 스레드에 관련된 내용이 나와서 정리한다. <a href="http://ash84.tistory.com/933">이전에 ExcutorService 에 대해서 썼을때</a>는 Runnable 의 run()함수가 void 형을 리턴하도록 되어 있기 때문에 결과 값을 받을수 없다고 설명했었는데, 이 책에서는 콜백 함수를 이용해서 각 스레드의 결과를 받을수 있다고 설명하고 있다. </span></p>
+<p><span style="font-size: 11pt;">그전에 폴링(polling) 방식에 대해서 설명을 하자면, 이건 스레드내 어떤 플래그를 두고 그 플래그를 스레드 내에서 처리가 완료가 되면 변경해 주고 스레드 밖에서는 그것을 계속 체크해서 변경되면 값을 가져오는 방식이다. 다들 알다시피 이 방식의 문제점은 필요이상의 일을 너무 많이 한다는 것이다. </span></p>
+<p><span style="font-size: 11pt;">콜백함수는 폴링방식과는 반대다. 즉, <strong>폴링방식은 메인이 스레드에게 물어보는 방식이라면 콜백방식은 스레드가 메인에 알려주는 방식</strong>이다. 콜백함수는 2가지 방식으로 작성을 하는데, 하나는 메인 프로그램의 <strong>클래스 메소드를 호출하거나 아니면 인스턴스 메소드를 호출</strong>하는 방식이다. </span></p>
+<script src="https://gist.github.com/AhnSeongHyun/5667540.js"></script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p><span style="font-size: 11pt;">위의 클래스는 Runnable 를 구현한 것인데, 초기값을 받고 단순 계산을 하는 작업이다. 코드에서 보면 처음에 클래스 오버로드된 </span><span style="font-size: 11pt;">생성자 부분에서 callback 객체를 받고 있는데 ThreadTestMain 클래스를 받고 있다. 이 객체를 받아서 스레드 클래스 멤버에 저장을 한다. 그리고 나서 run() 함수가 완료 후에, 생성자에서 받은 callback 객체를 이용해서 계산된 값을 <code>callBack2(sum)</code> 함수를 이용해서 전달하고 있다. 클래스 메소드를 이용한 경우는 위와 같이 생성자에서 callback 객체를 받을 필요 없이, 주석처리된 부분처럼 호출해주면 된다. 예제는 Runnable를 사용했는데 Thread 클래스를 상속받을때도 마찬가지로 구현해 주면 된다. </span></p>
+<script src="https://gist.github.com/AhnSeongHyun/5667566.js"></script>
+
+<p><span style="font-size: 11pt;">어떤 방식이 더 좋다고는 말할수 없겠지만 필자의 경우 Callable 방식이 더 편한것은 사실이다. 그러나 늘 새로짜는 것이 아니고 어떤 관공서나 회사는 자바 4를 사용할수 있다는 점에서 이러한 방식도 알아둘 필요는 있는것 같다. </span></p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #Java&nbsp;
+        
+            #java thread runnable callback&nbsp;
+        
+            #Runnable&nbsp;
+        
+            #스레드&nbsp;
+        
+            #스레드 결과&nbsp;
+        
+            #스레드 콜백함수&nbsp;
+        
+            #콜백함수&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

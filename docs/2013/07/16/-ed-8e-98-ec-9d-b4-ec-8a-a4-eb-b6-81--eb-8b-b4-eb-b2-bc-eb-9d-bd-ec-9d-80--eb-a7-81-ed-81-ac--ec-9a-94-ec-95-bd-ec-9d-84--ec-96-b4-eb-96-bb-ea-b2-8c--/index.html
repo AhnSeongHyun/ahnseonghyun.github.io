@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - 페이스북 담벼락은 링크 요약을 어떻게 가져올까?"/>
+    <meta property="og:description" content="페이스북이 처음 내가 쓰게되었을 때 가장 신기했던 것은 친구를 찾는다는 것? 친구와 관계를 맺는 다는 것? 친구의 활동이 싸이월드처럼 내가 가서 확인해야 한다는 것? 그런 것들이 아니였다. **단 하나 신기했던 것은 글을 쓰는 창에 url 을 넣게 되면 요약(summary)가 나온다는 점이었다. **"/>
+    <meta property="og:url" content="https://ash84.io/docs/2013/07/16/-ed-8e-98-ec-9d-b4-ec-8a-a4-eb-b6-81--eb-8b-b4-eb-b2-bc-eb-9d-bd-ec-9d-80--eb-a7-81-ed-81-ac--ec-9a-94-ec-95-bd-ec-9d-84--ec-96-b4-eb-96-bb-ea-b2-8c--"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>페이스북 담벼락은 링크 요약을 어떻게 가져올까?</title>
+    <meta name="description" content="페이스북이 처음 내가 쓰게되었을 때 가장 신기했던 것은 친구를 찾는다는 것? 친구와 관계를 맺는 다는 것? 친구의 활동이 싸이월드처럼 내가 가서 확인해야 한다는 것? 그런 것들이 아니였다. **단 하나 신기했던 것은 글을 쓰는 창에 url 을 넣게 되면 요약(summary)가 나온다는 점이었다. **" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">페이스북 담벼락은 링크 요약을 어떻게 가져올까?</h1>
+    <div class="blog-post-meta"> 
+        <small>  2013-07-16</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">페이스북이 처음 내가 쓰게되었을 때 가장 신기했던 것은 친구를 찾는다는 것? 친구와 관계를 맺는 다는 것? 친구의 활동이 싸이월드처럼 내가 가서 확인해야 한다는 것? 그런 것들이 아니였다. <strong>단 하나 신기했던 것은 글을 쓰는 창에 url 을 넣게 되면 요약(summary)가 나온다는 점이었다. </strong></span></p>
+<p><span style="font-size: 11pt;">그 당시 생각으로는 </span></p>
+<p><span style="font-size: 11pt;"><strong>어떻게 저걸 가져올 수가 있지? </strong></span></p>
+<p><span style="font-size: 11pt;"><strong>내가 url 입력을 기다리는 시간은 고작 2~3초 내외인데, 그 시간내에 url 에서 html을 가져와서 데이터를 추출하고, 분석해서, 만들어 낸다는 것 인가? </strong></span></p>
+<p><span style="font-size: 11pt;"><strong>역시 페이스북 대단해!! </strong></span></p>
+<p><span style="font-size: 11pt;"> </span></p>
+<p><span style="font-size: 11pt;">이런생각을 가지고 있었다. </span></p>
+<p><span style="font-size: 11pt;">우연치 않게 포털사 코딩시험에서 HTML 파서를 만들라는 문제를 받게 되었고, 문제 분석을 위해서 각종 사이트들의 소스보기를 통해서 HTML 코드를 보던중 ** 태그 부분에서 <meta> 태그에 대해서 알게 되었다.** 특히 아래와 같은 부분에 대해서 말이다.(시험을 떨어졌지만, 코드는 남았다.)</span></p>
+<script src="https://gist.github.com/AhnSeongHyun/6001123.js"></script>
+
+<p><span style="font-size: 11pt;">og 가 무엇일까 찾아보니 <a href="http://ogp.me/">opengraph</a> 의 약자이다. 그렇다면 <a href="http://ogp.me/">opengraph</a>는 뭘까? 하고 구글신에게 찾아보니 잘 설명되어 있는 웹 페이지를 찾을수 있다. (<a href="http://ogp.me/">링크</a>)</span></p>
+<p><span style="font-size: 11pt;">한 마디로 말하자면, </span></p>
+<p><span style="font-size: 11pt;">OpenGraph Protocol 이라는 것은, 소셜 그래프 상에서 어떤 웹 페이지라도 rich object 가 되게 만든다. 너무 어렵게 올수 있을지 모르겠으나,<strong> 내가 이해했을때는 meta 태그를 이용해서 </strong></span><span style="font-size: 11pt; line-height: 2;"><strong>OpenGraph Protocol 상에서 정해놓은 값들을 지정해 놓는 것이다. 그 지정해 놓은 값들이 한마디로 그 웹페이지에 대한 요약을 나타내는 것이다. </strong></span></p>
+<p><span style="font-size: 11pt;">기본요소와 옵션요소가 있다. </span></p>
+<p><span style="font-size: 11pt;">기본 요소는 4가지로. 아래의 것이 그것이다. </span></p>
+<div class="txc-textbox" style="border: 1px solid #cbcbcb; background-color: #ffffff; padding: 10px;">- <span class="s1" style="font-size: 10pt;">og:title</span><span style="font-size: 10pt;"> – The title of your object as it should appear within the graph, e.g., “The Rock”.</span>
+- <span class="s1" style="font-size: 10pt;">og:type</span><span style="font-size: 10pt;"> – The </span>[<span class="s2" style="font-size: 10pt;">type</span>](http://ogp.me/#types)<span style="font-size: 10pt;"> of your object, e.g., “video.movie”. Depending on the type you specify, other properties may also be required.</span>
+
+- <span class="s1" style="font-size: 10pt;">og:image</span><span style="font-size: 10pt;"> – An image URL which should represent your object within the graph.</span>
+
+- <span class="s1" style="font-size: 10pt;">og:url</span><span style="font-size: 10pt;"> – The canonical URL of your object that will be used as its permanent ID in the graph, e.g., “http://www.imdb.com/title/tt0117500/”.</span>
+
+</div>
+<p><span style="font-size: 11pt;">위의 4가지가 기본적인 메타데이터이다. title은 말 그대로 현재 웹페이지의 타이틀을 나타내고, type은 웹페이지의 타입을 나타내는데, video, book, profile, website등이 있다. 하부적인 요소까지 지정할 수 있기 때문에 그 부분은 좀더 스펙을 보기를 바란다. image 는 웹페이지를 대표하는 이미지, url은 url 이다. </span><span style="font-size: 11pt; line-height: 1.5;">기타 description, determiner, locale 등의 다양한 메타데이터들을 추가적인 옵션 메타데이터가 있기 때문에 잘 보면 된다.</span></p>
+<p><span style="font-size: 11pt;"><strong>Reference</strong></span></p>
+<p><span style="font-size: 11pt;"><strong>– </strong><a href="http://ogp.me">OpenGraph Protocol</a> </span></p>
+<p><span style="font-size: 11pt;">– <a href="http://blog.choyoungil.com/67">페이스북 캐쉬 및 디버깅 관련 포스팅</a></span></p>
+    </div>
+    <div>
+        
+            #facebook&nbsp;
+        
+            #open graph&nbsp;
+        
+            #담벼락 링크&nbsp;
+        
+            #오픈그래프&nbsp;
+        
+            #웹페이지 요약&nbsp;
+        
+            #페이스북&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

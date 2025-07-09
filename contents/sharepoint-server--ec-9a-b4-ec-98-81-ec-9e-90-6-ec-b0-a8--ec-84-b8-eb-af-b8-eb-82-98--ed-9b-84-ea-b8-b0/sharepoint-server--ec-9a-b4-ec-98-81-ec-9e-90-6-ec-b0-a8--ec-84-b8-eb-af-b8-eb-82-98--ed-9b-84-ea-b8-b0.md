@@ -1,7 +1,7 @@
 ---
 title: 'SharePoint server 운영자 6차 세미나 후기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-12-18'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile23.uf.194249474EEFCB5910C9D2.png)
 
  

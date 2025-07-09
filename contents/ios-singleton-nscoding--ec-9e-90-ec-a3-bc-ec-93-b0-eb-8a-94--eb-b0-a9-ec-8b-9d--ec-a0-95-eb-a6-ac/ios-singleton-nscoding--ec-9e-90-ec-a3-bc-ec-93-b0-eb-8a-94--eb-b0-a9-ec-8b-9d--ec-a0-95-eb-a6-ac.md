@@ -1,7 +1,7 @@
 ---
 title: '(iOS) Singleton + NSCoding 자주쓰는 방식 정리'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-09-17'
 description: '자주쓰는 나만의 방식(?) 이라서 정리하는 것인데, Singleton 을 이용하는 이유는 여러 클래스에서 하나의 객체로 접근하고 싶을때 사용하고 NSCoding 라이브러리를 이용해서 encoding, decoding 을 해서 save, load 함수에서는 사실상 아이폰 앱내 설정 `NSUserDefault` 를 이용해서 저장하고 읽어오면 편하'
 featured_image: ''
 tags: ['dev', 'NSCoding', 'NSDictionary', 'NSUserDefault', 'singleton']

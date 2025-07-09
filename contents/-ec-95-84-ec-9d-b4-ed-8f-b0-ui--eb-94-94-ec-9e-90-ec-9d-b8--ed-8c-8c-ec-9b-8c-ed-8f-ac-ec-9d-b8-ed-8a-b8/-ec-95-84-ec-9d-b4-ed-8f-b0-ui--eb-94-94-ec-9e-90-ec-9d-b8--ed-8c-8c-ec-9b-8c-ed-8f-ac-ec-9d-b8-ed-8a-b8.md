@@ -1,7 +1,7 @@
 ---
 title: '아이폰 UI 디자인 파워포인트'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-01-13'
 description: ''
 featured_image: ''
 tags: ['dev', 'iPhone GUI', 'make iphone ui', 'mock app', '아이폰 개발']

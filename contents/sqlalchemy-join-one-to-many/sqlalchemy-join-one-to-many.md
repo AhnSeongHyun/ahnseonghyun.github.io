@@ -1,7 +1,7 @@
 ---
 title: 'SQLAlchemy Join #1 One To Many'
 author: 'ash84'
-pub_date: '2018-08-31'
+pub_date: '2018-08-18'
 description: 'SQLAlchemy Join 에 대해서 막연하게 쓰다보니 여러가지 관계 테이블상황에서 제대로 사용하지 못하고 수박겉핣기식으로 쓰는 경우가 많았다. 그래서 공식 문서상의 Join 관련 부분(아래의 URL)을 따라하면서 막히는 부분을 풀어보고자 한다. 
 
 [http://docs.sqlalchemy.org/en/latest/orm/relationships.html](http://docs.sqlalchemy.org/en/latest/orm/relationships.html)

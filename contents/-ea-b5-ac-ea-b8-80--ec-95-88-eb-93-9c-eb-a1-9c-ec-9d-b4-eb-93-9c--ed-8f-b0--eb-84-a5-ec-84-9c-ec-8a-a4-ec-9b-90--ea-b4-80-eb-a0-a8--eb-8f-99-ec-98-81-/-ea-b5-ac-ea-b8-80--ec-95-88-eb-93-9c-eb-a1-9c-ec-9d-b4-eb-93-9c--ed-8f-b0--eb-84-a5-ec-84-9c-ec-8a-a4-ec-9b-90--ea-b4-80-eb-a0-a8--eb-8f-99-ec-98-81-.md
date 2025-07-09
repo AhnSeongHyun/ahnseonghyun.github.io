@@ -1,7 +1,7 @@
 ---
 title: '구글 안드로이드 폰 - 넥서스원 관련 동영상(nexus one)'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-01-06'
 description: '구글에서 만든 안드로이드폰(일명)인 넥서스 원(Nexus One)에 관한 동영상입니다.'
 featured_image: ''
 tags: ['Android', 'compare iphone to nexus one', 'dev', 'Google', 'iPhone', 'moss berg', 'nexus one video', 'walt mossberg', '아이폰', '안드로이드']

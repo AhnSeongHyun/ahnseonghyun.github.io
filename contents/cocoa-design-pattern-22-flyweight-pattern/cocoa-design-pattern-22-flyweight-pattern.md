@@ -1,7 +1,7 @@
 ---
 title: '[Cocoa Design Pattern] 22. Flyweight pattern'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-07-12'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile24.uf.122D734C4E1C04261DF168.jpg)
 
 **22. 플라이 웨이트 패턴 **

@@ -1,7 +1,7 @@
 ---
 title: 'pycharm - bookmarks 북마크'
 author: 'ash84'
-pub_date: '2018-05-17'
+pub_date: '2017-04-17'
 description: 'pycharm 에는 북마크 기능이 있다. 많은 파일과 소스 파일내에 특정 위치를 빠르게 이동하기 위해서는 북마크 기능이 필수적이다. `F11`(윈도우 기준) 키를 눌러서 현재 있는 위치에 북마크를 지정 할 수 있다. 중요한 점은 소스파일 뿐만 아니라 project 뷰 안에 파일을 선택한 상태에서도 F11을 통해서 북마크에 추가 할 수가 있다. 
 
 ![pycharm-bookmark](https://c1.staticflickr.com/3/2879/33711871000_057eab8a6a_b.jpg)

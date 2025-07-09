@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - nginx 설치 및 구동"/>
+    <meta property="og:description" content="### 개요"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/03/18/nginx-setup-install"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>nginx 설치 및 구동</title>
+    <meta name="description" content="### 개요" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">nginx 설치 및 구동</h1>
+    <div class="blog-post-meta"> 
+        <small>  2015-03-18</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <h3>개요</h3>
+<p>– 웹 서버 소프트웨어로, 가벼움과 높은 성능을 목표로 한다. 웹 서버, 리버스 프록시 및 메일 프록시 기능을 가진다. Netcraft의 2011년 1월 웹서버 설문조사에 따르면, nginx는 전체 도메인에서 4번째(7.50%)로 많이 쓰이는 웹서버이며, 활성화된 웹 사이트에 대한 통계에서도 역시 4번째(8.23%)로 많이 사용된다. </p>
+<p>– Nginx는 요청에 응답하기 위해 비동기 이벤트 기반 구조를 가진다. 이것은 아파치 HTTP 서버의 스레드/프로세스 기반 구조를 가지는 것과는 대조적이다. 이러한 구조는 서버에 많은 부하가 생길 경우의 성능을 예측하기 쉽게 해준다. </p>
+<h3>설치</h3>
+<blockquote>
+<p>다운로드 : http://nginx.org/en/download.html</p>
+</blockquote>
+<h3>압축푼후 설치</h3>
+<pre><code>./configure &gt; make 
+sudo make install 
+</code></pre>
+<ul>
+<li>별도의 옵션없이 설치하게 되면, <code>/usr/local/nginx</code> 에 설치되게 된다. </li>
+</ul>
+<script src="https://gist.github.com/AhnSeongHyun/c1c6fe333051b29f6ea3.js"></script>
+
+<p>– /sbin : nginx 바이너리가 실질적인 서버를 실행시키는 역할을 한다. </p>
+<p>– /conf : nginx.conf 등을 비롯한 다양한 conf 가 존재한다. uwsgi 관련 설정도 기본으로 제공한다.</p>
+<script src="https://gist.github.com/AhnSeongHyun/37a1ee16d8a820414a65.js"></script>
+
+<p>/logs : 로그 관련 파일 존재 </p>
+<script src="https://gist.github.com/AhnSeongHyun/a6de3935a4538a11a019.js"></script>
+
+<h3>구동</h3>
+<pre><code>usr/local/nginx/sbin/nginx
+</code></pre>
+<p>– 위와 같이 입력하게 되면 기본 디렉토리 즉,<code>/usr/local/nginx/conf/nginx.conf</code> 를 설정으로 구동되게 된다. </p>
+<h3>정지</h3>
+<pre><code>usr/local/nginx/sbin/nginx -s stop
+</code></pre>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #nginx&nbsp;
+        
+            #Nginx 설치&nbsp;
+        
+            #python nginx&nbsp;
+        
+            #uwsgi nginx&nbsp;
+        
+            #nginx 설정&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

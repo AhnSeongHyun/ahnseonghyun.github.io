@@ -1,7 +1,7 @@
 ---
 title: '아이폰 수리기, 당신의 아이폰이 망가졌다면??'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-07-26'
 description: '**사건의 발단** 
 
 

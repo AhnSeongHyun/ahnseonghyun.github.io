@@ -1,7 +1,7 @@
 ---
 title: '[JAVA] @Override eqauls() 함수'
 author: 'ash84'
-pub_date: '2017-03-24'
+pub_date: '2012-11-01'
 description: '**** **Effective Java** 에 나오는 내용중 **[항목8]** 번에 해당하는 내용인데 equals()  메소드의 오버라이드에 대한 내용이 정리되어 있다. 요약하자면, 기본형(primitive) 타입은 == 을 이용해서 검사하고, 클래스 형은 자바에서 제공하는 것이라면, equals() 메소드를 사용하면 된다. 그리고 기본형 중에서 double, float 형은**[Double.Compare'
 featured_image: ''
 tags: ['dev', 'Effective Java', 'equals 함수 오버라이드', 'equals() 재정의', 'equals()함수', 'Java']

@@ -1,7 +1,7 @@
 ---
 title: '[Cocoa Design Pattern] 21. Prototype'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-07-12'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile21.uf.197E8A4E4E1BAD76357DCD.jpg)
 **'
 featured_image: ''

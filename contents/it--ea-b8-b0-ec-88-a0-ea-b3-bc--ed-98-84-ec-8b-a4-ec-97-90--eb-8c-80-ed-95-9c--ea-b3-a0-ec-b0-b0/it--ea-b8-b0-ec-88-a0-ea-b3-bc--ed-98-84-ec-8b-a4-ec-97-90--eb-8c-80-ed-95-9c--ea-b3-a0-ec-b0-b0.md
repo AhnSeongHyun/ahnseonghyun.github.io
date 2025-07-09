@@ -1,7 +1,7 @@
 ---
 title: 'IT 기술과 현실에 대한 고찰.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2007-11-30'
 description: '[![Big pockets](http://farm2.static.flickr.com/1329/822246089_a7fb5b0bf5.jpg)](http://www.flickr.com/photos/73491156@N00/822246089 "Big pockets")'
 featured_image: ''
 tags: ['dev', 'IT 기술', '기술', '유비쿼터스', '정책']

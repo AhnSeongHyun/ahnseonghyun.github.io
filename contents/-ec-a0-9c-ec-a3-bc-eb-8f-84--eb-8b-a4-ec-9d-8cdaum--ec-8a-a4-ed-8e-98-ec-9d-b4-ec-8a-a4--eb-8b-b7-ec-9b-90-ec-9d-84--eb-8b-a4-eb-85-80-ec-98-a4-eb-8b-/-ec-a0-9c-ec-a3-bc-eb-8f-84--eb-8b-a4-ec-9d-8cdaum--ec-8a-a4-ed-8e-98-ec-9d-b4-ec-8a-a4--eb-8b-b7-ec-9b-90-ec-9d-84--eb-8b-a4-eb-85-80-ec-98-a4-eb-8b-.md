@@ -1,7 +1,7 @@
 ---
 title: '제주도 다음(Daum) 스페이스 닷원을 다녀오다.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-08-20'
 description: '[지난해 다음(DAUM)GMC 에 놀러갔을 때,](http://ash84.tistory.com/741) 새로 사옥을 짓고 있다는 소식을 전해 들었는데 1년만에 스페이스 닷원 사옥을 보러가게 될줄은 몰랐다. 아무튼, 어무이, 동생과 제주도 여행'
 featured_image: ''
 tags: ['Daum', 'dev', '다음', '닷원스페이스', '제주도']

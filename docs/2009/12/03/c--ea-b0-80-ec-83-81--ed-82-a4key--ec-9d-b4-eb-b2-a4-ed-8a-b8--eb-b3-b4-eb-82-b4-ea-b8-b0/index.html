@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [C#] 가상 키(Key) 이벤트 보내기"/>
+    <meta property="og:description" content="["/>
+    <meta property="og:url" content="https://ash84.io/docs/2009/12/03/c--ea-b0-80-ec-83-81--ed-82-a4key--ec-9d-b4-eb-b2-a4-ed-8a-b8--eb-b3-b4-eb-82-b4-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[C#] 가상 키(Key) 이벤트 보내기</title>
+    <meta name="description" content="[" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[C#] 가상 키(Key) 이벤트 보내기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2009-12-03</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
+<table class="flickrImgSearch">  
+<tbody>  
+<tr>  
+<td>[<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">  
+![Apple's Flat Keyboard](http://farm3.static.flickr.com/2543/4153789271_a0a01c21b6.jpg)</span></span>](http://www.flickr.com/photos/30647744@N00/4153789271 "Apple's Flat Keyboard")  
+<span><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">Apple’s Flat Keyboard by </span></span>[<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">dmuth</span></span>](http://www.flickr.com/photos/30647744@N00)</span><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"></span></span>[<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">![저작자 표시](http://cfs.tistory.com/static/admin/editor/ccl_black01.png)</span></span><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">![동일조건 변경허락](http://cfs.tistory.com/static/admin/editor/ccl_black03.png)</span></span>](http://creativecommons.org/licenses/by-sa/2.0/kr/)</td></tr></tbody></table><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">C#  뿐만 아니라, 많은 프로그래밍 언어에서는 키(KEY) 이벤트를 받아서 처리하는 이벤트 핸들러가 정의되어 있어서 쓰면 되는데, 가상으로 키 이벤트를 보내는 기능이 필요해서 찾아 보게 되었습니다. 그러던 중 발견한것. </span></span></span>
+
+**<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">SendKeys.Send() 함수</span></span>**<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"></span></span>
+
+</div>
+<div style="LINE-HEIGHT: 2"></div>
+<div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
+<div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div>  
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">﻿</span></span></font><span style="FONT-SIZE: 10pt"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">﻿</span></span></font><span style="FONT-FAMILY: Dotum"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">﻿</span></span></font><span style="FONT-SIZE: 10pt"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">﻿ </span></span></font></span></span></span></span>  
+</div></div>
+<div style="LINE-HEIGHT: 2"></div>
+<div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">SendKeys.Send() 함수를 이용하면 사용자가 키를 누르지 않았어도 마치 키 입력이 들어온것 처럼 할수가 있습니다. 예를 들어 </span></span></span><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">SendKeys.Send(“{ENTER}”);  //엔터키를 눌렀다. </span></span></span>
+
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">이런식으로 보낼수가 있습니다. 자주 쓰는 Ctrl+C, Ctrl+V 같은 경우에는 이렇게 표현할수 있겠죠.</span></span></span>
+
+<font color="#c8056a"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">SendKeys.Send(“^c”); // Ctrl+c 키를 눌렀다. </span></span></span>  
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">SendKeys.Send(“^v”); // Ctrl+v 키를 눌렀다. </span></span></span></font>
+
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">일반 알파벳 키와 합쳐서 쓰기 위해서는 </span></span></span>
+
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">Ctrl = ^</span></span></span>  
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">Shift = +</span></span></span>  
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">Alt = %</span></span></span>
+
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">이런식으로 ” ” 알파벳키 앞에 붙여줘야 합니다. </span></span></span>
+
+**<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">특수키는 어떻게?</span></span>**
+
+</div>
+<div style="LINE-HEIGHT: 2"></div>
+<div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
+<div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div>  
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">﻿</span></span></span></font><span style="FONT-SIZE: 10pt"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">﻿</span></span></span></font><span style="FONT-FAMILY: Dotum"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">﻿</span></span></span></font><span style="FONT-SIZE: 10pt"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">﻿그렇다면 특수키를 어떻게 쓸까요? (눈치 빠른 분들은 벌써 눈치 채신듯^^;;)</span></span></span>  
+</font></span></span></span></span>  
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">특수키의 경우네는 ” ”  문자열안에 { } 중괄호를 넣은 그 안에 특수키 이름을 넣어 줍니다. 예를들면</span></span></span><font color="#c8056a"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">SendKeys.Send(“{ENTER}”);</span></span></span>  
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">SendKeys.Send(“{HELP}”);  </span></span></span>  
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">SendKeys.Send(“{ESC}”); </span></span></span>  
+<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">SendKeys.Send(“{F1}”);  </span></span></span></font>
+
+</div></div>
+<div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">이런식으로 넣어주면 됩니다. </span></span></span><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">참고 URL : </span></span></span>[<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">http://msdn.microsoft.com/ko-kr/library/system.windows.forms.sendkeys.aspx</span></span></span>](http://msdn.microsoft.com/ko-kr/library/system.windows.forms.sendkeys.aspx)
+
+**<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">C# 관련 이전글 </span></span>**
+
+<div>  
+<div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div>  
+<div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">﻿</span></span></span></font><span style="FONT-SIZE: 10pt"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">﻿</span></span></span></font><span style="FONT-FAMILY: Dotum"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">﻿</span></span></span></font><span style="FONT-SIZE: 10pt"><font color="#474747"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">﻿</span></span></span></font></span></span></span></span>[<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">2009/11/24 – [Development] – [C#] Winform(윈폼) 제목표시줄에 안뜨게 하기</span></span></span>](http://ash84.tistory.com/530)  
+[<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">2009/11/20 – [Development/C#] – [C#] Serial Port 구분하기.</span></span></span>](http://ash84.tistory.com/526)</div></div></div>
+<div style="TEXT-ALIGN: justify">  
+<div>  
+<div style="LINE-HEIGHT: 1.7"></div></div></div>
+    </div>
+    <div>
+        
+            #.net&nbsp;
+        
+            #An Seong Hyun&nbsp;
+        
+            #c#&nbsp;
+        
+            #dev&nbsp;
+        
+            #SendKeys.Send()&nbsp;
+        
+            #가상 키 입력&nbsp;
+        
+            #가상키&nbsp;
+        
+            #안성현&nbsp;
+        
+            #프로그래밍&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

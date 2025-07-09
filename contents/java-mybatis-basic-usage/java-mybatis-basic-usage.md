@@ -1,7 +1,7 @@
 ---
 title: '(Java) mybatis 기본 사용 정리'
 author: 'ash84'
-pub_date: '2017-04-26'
+pub_date: '2013-02-18'
 description: ''
 featured_image: ''
 tags: ['dev', 'Java', 'mybatis', '데이터베이스 연동']

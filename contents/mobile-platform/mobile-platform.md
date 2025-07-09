@@ -1,7 +1,7 @@
 ---
 title: 'Mobile Platform'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2008-10-22'
 description: ''
 featured_image: ''
 tags: ['dev', 'mobile platform', '모바일 플랫폼']

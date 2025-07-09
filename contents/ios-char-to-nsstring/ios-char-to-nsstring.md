@@ -1,7 +1,7 @@
 ---
 title: '(iOS) char * to NSString'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-10-17'
 description: ''
 featured_image: ''
 tags: ['char * to NSString', 'dev', 'IOS', 'NSString']

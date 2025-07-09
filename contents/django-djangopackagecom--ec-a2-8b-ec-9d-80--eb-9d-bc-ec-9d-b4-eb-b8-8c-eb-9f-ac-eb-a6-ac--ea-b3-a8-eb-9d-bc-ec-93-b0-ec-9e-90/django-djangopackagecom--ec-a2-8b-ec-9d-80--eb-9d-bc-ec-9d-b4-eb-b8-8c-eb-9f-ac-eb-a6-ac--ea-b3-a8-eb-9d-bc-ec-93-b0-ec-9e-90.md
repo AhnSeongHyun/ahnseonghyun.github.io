@@ -1,7 +1,7 @@
 ---
 title: '(django) djangopackage.com'
 author: 'ash84'
-pub_date: '2016-08-11'
+pub_date: '2014-01-13'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile30.uf.257F4C5052D3A44C267839.png)
 
 maven, pypi, npm 등의 외부라이브러리를 쉽게 검색, 설치, 연동, 관리할수 있는 툴들이 있는데 djangopackage.com 은 pypi 안에 있는 django 부분을 특화시켜놓은 부분이라고 보여진다. 사실 현대의 개발이라고 하는 부분이 빠르게 개발되는것이 요구되고 그러려면 필수불가결하게 라이브러리를'

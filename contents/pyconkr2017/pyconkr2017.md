@@ -1,7 +1,7 @@
 ---
 title: 'PYCONKR2017 을 다녀와서.'
 author: 'ash84'
-pub_date: '2018-05-14'
+pub_date: '2017-08-29'
 description: '[파이콘2017](https://www.pycon.kr/2017/) 에 다녀왔다. [작년의 pyconApac 의 화려함을 뒤로하고](https://ash84.net/2016/08/24/pyconapac-2016/) 올해는 표제부터 Back to the Basic 이었다. 언제나 파이콘의 티켓 예약은 전쟁터였다. 나 빠른 점심을 먹고 들어와서 예약을 했고, 몇분후 예약을 못한 사람들이 속출하기 시작했다. 발표자 모집이 시작이 되었고, 발표를 하고 싶은 마음도 있었지만 올해는 한발자국 멀리서 지켜보게 되었다. 2-3주 정도 남았을 무렵'
 featured_image: 'https://farm5.staticflickr.com/4354/36927790565_b7c2d5fcb5_k.jpg'
 tags: ['dev', 'Python', 'pyconkr', 'pyconkr2017', 'conference']

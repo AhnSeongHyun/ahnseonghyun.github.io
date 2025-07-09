@@ -1,7 +1,7 @@
 ---
 title: 'euc-kr data in flask'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2015-07-16'
 description: '### **파이썬에서의 unicode와 str**
 
 - 유니코드는 평문이고, str은 암호화된 유니코드라고 생각하자.

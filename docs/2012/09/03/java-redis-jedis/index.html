@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [JAVA] jedis를 이용한 Redis 와 연동하기"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="https://ash84.io/docs/2012/09/03/java-redis-jedis"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[JAVA] jedis를 이용한 Redis 와 연동하기</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[JAVA] jedis를 이용한 Redis 와 연동하기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2012-09-03</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>In-Memory DB 중에 여러가지가 있겠지만, 요즘에 각광 받는것이 redis 이다. redis 에 대해서는 찾아보시면 많이 나올텐데, 한마디로 말하자면 메모리에 key-value 방식으로 데이터를 저장하는 서버라고 보면 된다.</span><span style="font-size: 11pt;"> 좀더 다양한 설명자료는 검색과 그리고 사이트에서 redis를 다운 받아서 사용해 보면 쉽게 알 수 있다.  </p>
+<blockquote>
+<p>그렇다면, 연동은 어떻게 해야할까?</p>
+</blockquote>
+<p>redis 에서는 C부터 시작해서 Scala 까지 </span><span style="font-size: 11pt;">다양한 언어별로 client 링크를 제공해 주고 있다. 대부분 일반 개발자들이 만들어 놓은 오픈소스인데, 그 중에서도 자바(java) 와 관련된 항목은 다음과 같다. </p>
+<p>그 중에서도 <a href="https://github.com/xetorthio/jedis/">jedis</a>에 대해서 알아보면, <strong>jedis는 redis 에서 추천(recommend) 하는 클라이언트</strong>이고,  github 를 통해서 소스를 제공하고 있다. 해당 github 의 wiki 에 Getting Started 에 가서 보면, git명령어를 통해서 jedis 소스를 다운받고 그리고 maven 을 통해서 패키징을 할 수 있도록 가이드하고 있다.</p>
+<p>하지만, 필자가 Getting Started 에서 하라는 대로 해봤을때에는 솔직히 말해서 쉽게 되지가 않는 문제가 있었다. maven 자체에 익숙하지 못한 부분도 있었고, 맥에서 설치하기란 조금 난감했다. 그래서 jar 화된 것을 찾아보니 다음과 같이<a href="https://github.com/xetorthio/jedis/downloads"> 2.1.0 버전의 안정화된(stable) 버전</a>을 제공해 주고 있다. 나의 목적은 redis 에 내가 만든 명령어로 통신하는 것이라는 점을 다시 한번 상기시키면서 다운. </p>
+<p>일반적인 방법으로 받은 jar 파일을 추가하고 다음과 같이 RedisTest 라는 자바 프로젝트를 만들었다. 그리고 main 이라는 클래스를 만들고, 다음과 같이 jedis 관련 3가지 클래스를 import 하자. </p>
+<p>일단 가장 쉽게 데이터를 넣고 빼는 작업부터 해보자. 기본적으로 redis 와 통신하기 위한 객체로 JedisPool 객체를 생성한다. 일반 Jedis 객체를 생성하지 않는 이유는 해당 github 의 Getting Started 에서 권장하듯이 에도 나와있듯이 멀티스레드 환경에서 안전하지 않기 때문이다. 스레드 관련된 문제를 해결하기 위해서 JedisPool 객체를 다음과 같이 생성한다. 그리고 pool 객체의 getResource()함수를 이용해서 단일 Jedis 객체를 가져와서 이용하는 방식으로 사용하면 된다. </p>
+<p>getResource() 함수로 가져온 단일 Jedis 객체에 set 과 get 함수를 이용해서 key-value 로 데이터를 넣고 빼는 것 을 볼 수가 있다. Redis 명령어의 SET, GET 명령어를 함수화 한 것인데, Redis 고유 명령어와 jedis 의 함수명들이 대부분 일치하고 있어서, Redis 커맨드를 사용해 본 개발자라면 쉽게 함수를 이용할 수가 있다.  </p>
+<p>일단 다 썼으면 종료를 해야하는데, 종료를 할때에는 다음과 같이 두가지 구문을 반드시 입력해 줘야 한다. 하나는 pool로 부터 가져온 Jedis객체를 사용후에 다시 pool 로 반환하는 것이고, 그 이후에 종료를 위해서 JedisPool 의 destory() 함수를 호출하면 종료가 됩니다. </p>
+<p>jedis 의 가장 기본적인 함수를 사용해 보았는데, 생각보다 어렵진 않다. 사용자 입맛에 따라서 쉽게 함수를 호출할 수 있을것으로 생각된다. 어느정도 수준까지 jedis가 지원하는지는 좀더 살펴봐야 겠지만, github 에 나와있는 소개문으로만 판단해 본다면, replication, distribution 등의 기능들도 제공하는것으로 보인다. </p>
+<p>Redis를 실제 업무에 적용하는것은 적용 도메인 마다 다르겠지만, 자바 기반의 환경에서 jedis 를 이용한다면 좀더 쉽게 연동이 가능하고 비지니스 로직에만 집중할 수 있을것 같아서 유용할것으로 생각된다.</p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #github&nbsp;
+        
+            #java redis 연동하기&nbsp;
+        
+            #jedis&nbsp;
+        
+            #redis&nbsp;
+        
+            #redis 연동하기&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

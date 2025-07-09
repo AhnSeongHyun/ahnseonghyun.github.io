@@ -1,7 +1,7 @@
 ---
 title: 'Google Book Search Service'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2009-08-14'
 description: 'Google Book Search Service
 ![](http://ash84.net/wp-content/uploads/1/cfile24.uf.153F0E0E4A86342771A131.jpg)'
 featured_image: ''

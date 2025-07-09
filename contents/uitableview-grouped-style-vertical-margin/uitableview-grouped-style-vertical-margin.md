@@ -1,7 +1,7 @@
 ---
 title: 'UITableView section과 tableview cell 사이 뜨는 문제'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2015-06-07'
 description: '[![스크린샷_2015-06-04_오전_1.24.39](https://farm9.staticflickr.com/8896/18409219728_a729291b6a_n.jpg)](https://flic.kr/p/u3L4E9)위와 같이 grouped 스타일로 커스텀 셀을 만들고 secion 을 두었을때 이상하게 그림처럼 마지막 테이블셀과 다음 섹션 사이에 뜨는 문제가 있는데, 이 문제에 대해서 찾아보니 처음에는 UITableViewCell 상에서'
 featured_image: ''
 tags: ['dev', 'Grouped Style', 'IOS', 'Reducing the space between sections of the UITableView', 'UITableView']

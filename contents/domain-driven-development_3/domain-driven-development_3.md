@@ -1,7 +1,7 @@
 ---
 title: '[책] 도메인 주도 설계(에릭에반스) -3'
 author: 'ash84'
-pub_date: '2017-09-22'
+pub_date: '2017-06-08'
 description: '링크 - http://yimay.kr/t499o6dfsz 
 
 ##제 2부 모델 주도 설계의 기본 요소 

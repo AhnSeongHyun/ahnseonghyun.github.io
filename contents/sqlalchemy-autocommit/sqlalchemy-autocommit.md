@@ -1,7 +1,7 @@
 ---
 title: 'SQLAlchemy autocommit 에 대해서 '
 author: 'ash84'
-pub_date: '2018-07-31'
+pub_date: '2018-07-30'
 description: 'DB 상에서 autocommit 이란 데이터 변경 작업에 대한 SQL 자체가 바로 반영되는 것을 의미하는데   autocommit 이 아닌 상태에서는 여러줄의 명령을 하나의 트랜잭션으로 묶을수가 있다.(개별 DBMS 엔진이나 DB타입에 따라 다를수는 있다. 여기에서는 MYSQL InnoDB 기반으로 테스트를 진행하였다.)
 
 **mysql autocommit 확인하기** 

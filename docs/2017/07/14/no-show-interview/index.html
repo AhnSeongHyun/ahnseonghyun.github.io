@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - No Show 면접"/>
+    <meta property="og:description" content="**말 그대로 노쇼(No Show)다.** 면접자가 나타나지 않았다. 연락도 되지 않았다. 한 자릿수의 서류 통과자 중에 2명이 불참했다. (불참을 선언한게 아니다.) 한명은 전화를 받지 않았고, 다른 한명은 면접일자/시간을 변경해 줬음에도 불구하고 아무 말도 없이 오지 않았다. **오지 않는건 자유다.** 그렇지만 못 간다는 애기를 전달해 주는게 예의가 아닐까? 왜 오지 않는지 묻지도 않는데 기다리는 사람도 생각해 주는게 맞는거 아닐까?"/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/07/14/no-show-interview"/>
+    <meta property="og:image" content="https://farm6.staticflickr.com/5254/5498329705_3a3059b478_b.jpg"/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>No Show 면접</title>
+    <meta name="description" content="**말 그대로 노쇼(No Show)다.** 면접자가 나타나지 않았다. 연락도 되지 않았다. 한 자릿수의 서류 통과자 중에 2명이 불참했다. (불참을 선언한게 아니다.) 한명은 전화를 받지 않았고, 다른 한명은 면접일자/시간을 변경해 줬음에도 불구하고 아무 말도 없이 오지 않았다. **오지 않는건 자유다.** 그렇지만 못 간다는 애기를 전달해 주는게 예의가 아닐까? 왜 오지 않는지 묻지도 않는데 기다리는 사람도 생각해 주는게 맞는거 아닐까?" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">No Show 면접</h1>
+    <div class="blog-post-meta"> 
+        <small>  2017-07-14</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+        <img src="https://farm6.staticflickr.com/5254/5498329705_3a3059b478_b.jpg" alt="">
+    
+    <div class="blog-post">
+        <p><strong>말 그대로 노쇼(No Show)다.</strong> 면접자가 나타나지 않았다. 연락도 되지 않았다. 한 자릿수의 서류 통과자 중에 2명이 불참했다. (불참을 선언한게 아니다.) 한명은 전화를 받지 않았고, 다른 한명은 면접일자/시간을 변경해 줬음에도 불구하고 아무 말도 없이 오지 않았다. <strong>오지 않는건 자유다.</strong> 그렇지만 못 간다는 애기를 전달해 주는게 예의가 아닐까? 왜 오지 않는지 묻지도 않는데 기다리는 사람도 생각해 주는게 맞는거 아닐까? </p>
+<p>나 뿐만이 아니였다. 이상하게 그날따라 페이스북에서 다른 개발자분들도 똑같은 노쇼면접을 겪었다. 다들 분개했고, 블랙리스트를 만들어야 한다는 댓글들도 있었다. <strong>왜 이런 문제가 발생할까?</strong> 여러가지 이유가 있을것이다. 개인적인 사정이 있을수도 있고, 지레 포기할 수도 있고, 회사일이 바쁠수도 있고, 더운날에 정장을 입고 면접을 갈 만큼 매력적인 회사가 아닐 수도 있다. </p>
+<p>노쇼면접은 면접자와 회사 모두에게 좋지 않다. </p>
+<h3>면접자에게 안 좋은 이유</h3>
+<p>면접전에 필자는 기본적으로 이름으로 페이스북에서 검색해 보거나, 이메일을 구글에 검색해 본다. 면접관도 개발자라는 사실을 알아야 한다. 외부활동을 많이 한 개발자일수록 노출될 확률도 크다. 이런 경우 좋게 보고 있었던 부분이 좀 마이너스 되어버리기도 한다.(실제 좋게 생각한 경우, 면접에서도 좋은 결과로 이어진다.) 이름이 특이한 경우 더 잘 기억하게 되더라. </p>
+<h3>회사에게 안좋은 이유</h3>
+<p>회사 입장에서는 다른 사람을 면접볼 기회를 놓치게 된다. 비슷비슷한 경력의 경우, 1차 면접 전에 탈락 통보를 하기 때문에 노쇼면접이 발생하면 다시 연락하기 애매해진다. 결국 그 시즌에 뽑아야할 사람을 뽑지 못하는 경우가 발생해 버린다. 혹은 차선책으로 뽑는 경우가 간혹 있는데, 늘 좋지 못한 결과가 일어나더라. </p>
+<p>한편으로는 면접과 채용 관련된 부분도 회사에서 데이터화 해야하지 않을까 싶다. 예를 들면 팀별 노쇼율을 조사해서 다음 시즌에는 그 몇배수를 뽑는 등의 대책이 필요하다는 생각이 든다. </p>
+<p><strong>면접에 갈 수 없다면, 최소한 연락을 주자.</strong></p>
+<p>좁은 세상이라 다 만난다, 혹은 연결된 세상이라서 <br />
+다 알 수 있다 그런게 아니라, <strong>그냥 그게 예의 아닌가.</strong> </p>
+    </div>
+    <div>
+        
+            #essay&nbsp;
+        
+            #노쇼&nbsp;
+        
+            #noshow&nbsp;
+        
+            #노쇼면접&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

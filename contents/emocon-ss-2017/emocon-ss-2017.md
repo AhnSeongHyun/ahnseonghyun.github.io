@@ -1,7 +1,7 @@
 ---
 title: 'EMOCON S/S 2017 후기'
 author: 'ash84'
-pub_date: '2017-04-24'
+pub_date: '2017-04-17'
 description: '올해도 어김없이 이모콘을 들었다. 아래의 타임테이블에서 내가 들은것만 볼드 표시를 했다. 주로 Day1을 들었는데 Day2는 듣다가 아드님이 놀아달라고 보채는 바람에 듣길 포기했던것 같다. 
 
 Time Table Day1

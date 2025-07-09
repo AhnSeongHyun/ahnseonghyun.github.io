@@ -1,7 +1,7 @@
 ---
 title: '광복절 Google 첫 화면'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-08-14'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile6.uf.13081E43502AD7E8163D6B.png)
 
 광복절이라서 구글에서 오늘 나온 새 로고. ㅎㅎ

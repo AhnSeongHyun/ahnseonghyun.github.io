@@ -1,7 +1,7 @@
 ---
 title: '최고의 개발자 세미나, Deview2012 를 다녀와서.'
 author: 'ash84'
-pub_date: '2017-03-28'
+pub_date: '2012-09-20'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile7.uf.161BB63D505A67730E71A3.jpg)
 
 

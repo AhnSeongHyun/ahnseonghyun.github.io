@@ -1,7 +1,7 @@
 ---
 title: 'LocalStorage & SessionStorage'
 author: 'ash84'
-pub_date: '2018-05-31'
+pub_date: '2015-05-27'
 description: '#### 개요
 
  

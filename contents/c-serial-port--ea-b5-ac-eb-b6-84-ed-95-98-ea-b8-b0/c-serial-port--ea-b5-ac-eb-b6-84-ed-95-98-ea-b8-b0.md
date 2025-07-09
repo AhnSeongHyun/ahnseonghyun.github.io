@@ -1,7 +1,7 @@
 ---
 title: '[C#] Serial Port 구분하기.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2009-11-20'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile29.uf.1460001B4B0654F75990D2.PNG)
 
 실제 프로그래밍을 하다보면 요즘 컴퓨터는 COM Port 가 없는 경우가 많기 때문에 젠더를 통해서 USB로 연결되고 실제 보드'

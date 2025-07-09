@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - Nexus를 이용한 사내 Maven Repository 만들기 1."/>
+    <meta property="og:description" content="앞서 이클립스에 maven을 설치하는 과정에 대해서 설명했는데, 이번 장에는 사내 maven Repository를 구성하는 방법에 대해서 알아보자. 일단 사내 Repository를 구성해야 하는 가장 큰 이유는 매번 참조하고 있는 라이브러리를 가져와야 하는 불편함도 있겠지만, 솔직히 필자에게 더 필요한건 사내에서 만들어진 라이브러리를 Repository에 올려놓고 다른 동료개발자분들이 쉽게 찾아서 쓸수 있게 하는것이 더 중요했다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2012/12/20/nexus-eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c--ec-82-ac-eb-82-b4-maven-repository--eb-a7-8c-eb-93-a4-ea-b8-b0-1"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Nexus를 이용한 사내 Maven Repository 만들기 1.</title>
+    <meta name="description" content="앞서 이클립스에 maven을 설치하는 과정에 대해서 설명했는데, 이번 장에는 사내 maven Repository를 구성하는 방법에 대해서 알아보자. 일단 사내 Repository를 구성해야 하는 가장 큰 이유는 매번 참조하고 있는 라이브러리를 가져와야 하는 불편함도 있겠지만, 솔직히 필자에게 더 필요한건 사내에서 만들어진 라이브러리를 Repository에 올려놓고 다른 동료개발자분들이 쉽게 찾아서 쓸수 있게 하는것이 더 중요했다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Nexus를 이용한 사내 Maven Repository 만들기 1.</h1>
+    <div class="blog-post-meta"> 
+        <small>  2012-12-20</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">앞서 이클립스에 maven을 설치하는 과정에 대해서 설명했는데, 이번 장에는 사내 maven Repository를 구성하는 방법에 대해서 알아보자. 일단 사내 Repository를 구성해야 하는 가장 큰 이유는 매번 참조하고 있는 라이브러리를 가져와야 하는 불편함도 있겠지만, 솔직히 필자에게 더 필요한건 사내에서 만들어진 라이브러리를 Repository에 올려놓고 다른 동료개발자분들이 쉽게 찾아서 쓸수 있게 하는것이 더 중요했다. </span></p>
+<p><span style="font-size: 11pt;">자, 이제 Nexus의 세계로 떠나보자. </span></p>
+<p><strong><a href="http://www.sonatype.org/nexus/go"><span style="font-size: 11pt;">1. Nexus 다운받기. </span></a></strong></p>
+<p><span style="font-size: 11pt;">여타의 다른 블로그 글들은 이전 버전으로 되어 있는 경우로 설명하고 있는데, 그래서 war파일을 받아서 설치하는 식으로 설명을 하고 있는데, nexus 측에서 버전을 개량한것으로 보인다. 그냥 다운 받으면 된다.  zip 혹은 tgz 중 원하는것을 받으면 된다. 필자가 받은 버전은 2.2 버전이다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile7.uf.156EA43650D276AC1502A8.PNG" /></p>
+<p><span style="font-size: 11pt;">참고로 필자는 윈도우 데스크톱 환경에서 세팅하고 있음을 미리 애기하는 바이다. 리눅스 서버나 윈도우 서버에 설치할수 있으나 연습삼아서 일단 로컬  환경에 해보고 서버로 이전할 생각이다. </span></p>
+<p><span style="font-size: 11pt;"><strong>2. 실행하기 </strong></span></p>
+<p><span style="font-size: 11pt;">다운 받은 파일에 압축을 풀어보면 디렉토리가 있는데 그 중에서</span><span style="font-size: 11pt;">nexus-2.2-01-bundle 디렉토리로 들어가면 다음과 같은 디렉토리와 파일들이 보인다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile24.uf.163E473A50D276C51D2AA3.jpg" /></p>
+<p><span style="font-size: 11pt;">일단 conf에 들어가면<strong> nexus.properties </strong>라는 파일이 있는데, nexus 에 대한 설정정보가 들어가 있는 파일이다. nexus는 jetty 기반으로 만들어졌는데, conf에 들어가면 host, port 및 디렉토리 설정 같은것이 있는데, 기본 포트는 8081로 설정되어 있는것을 볼수 있다. 만약, 8081 포트가 다른 용도로 사용하고 있다면 일단 변경하고 저장하자. </span></p>
+<script src="https://gist.github.com/4342358.js"></script>
+
+<p><span style="font-size: 11pt;">자, 이제 실행해 보자. bin 디렉토리에 들아가면 nexus.bat 파일이 있다. cmd 창을 열어서 nexus.bat 파일을 실행하도로고 하자. <span style="color: rgb(255, 94, 0);">여기서 주의할점! cmd 창이 UTF-8 로 설정되어 있다면 ASCII 로 바꾸어주자. 왜냐하면 nexus.bat 실행시, 다음과 같은 화면이 보여야 하는데, UTF-8의 경우 문구가 나오지 않는다. 주의하자. </span></span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile6.uf.1527833850D276E6104AC1.PNG" /></p>
+<p><span style="font-size: 11pt;">보시는 바와 같이 여러가지 명령어가 있는데, 아래와 같이</span><span style="font-size: 11pt;"> start 명령어를 입력해 보자. nexus 가 start 되는 것을 볼 수가 있다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile24.uf.126D0E3450D2771E1B7103.PNG" /></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><span style="font-size: 11pt;">좀더 확인을 해 보려면, logs 디렉토리에 있는 wrapper.log 파일을 tail -f 로 열어보면 다음과 같다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile2.uf.2336EF3750D276F51A8BAA.PNG" /></p>
+<p><span style="font-size: 11pt;"><strong>3. admin 화면 접속하기. </strong></span></p>
+<p><span style="font-size: 11pt; line-height: 2;">포트를 바꾸지 않았다면, http://localhost:8081/nexus 를 웹 브라우저에 입력하도록 하자. 만약 포트를 바꾸었다면 바뀐 포트를 입력하면 된다. 입력하면 아래와 같은 화면이 보여질것인데, 일단 로그인하자. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile2.uf.156CF23350D2778618578D.jpg" /></p>
+<p><span style="font-size: 11pt;">로그인은 기본적으로 <strong>admin/admin123</strong> 이다. 로그인 하고 Repositories를 누르면</span><span style="font-size: 11pt;"> 아래와 같은 화면이 보일것이다. 다양한 Repository 들을 nexus에서 기본적으로 제공하고 있기 때문에 잘 사용하면 된다. </span></p>
+<p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile25.uf.11310C3450D277A3136C68.jpg" /></p>
+<p><span style="font-size: 11pt;">다음 편에서는 본격적으로 <strong>nexus의 repository를 세팅하는 방법</strong>에 대해서 알아 보도록 하자. </span></p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #maven&nbsp;
+        
+            #Nexus&nbsp;
+        
+            #사내 repository&nbsp;
+        
+            #자바&nbsp;
+        
+            #저장소 연경&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 title: 'iBeacon 관련 기사 및 동영상 정리'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-09-27'
 description: 'iBeacon 은 간단히 말해서 BLE(Bluetooth Low Energy) 를 활용한 기술인데, 블루투스는 우리가 모르는 사이에 4.0 이 되었고 저전력 소모 방식이 개발된것 같다.(자세한건 모른다.) 그런데 아래의 링크들을 보면 NFC 에 비해서 오히려 더 성공할 가능성이 크다고 이야기 하는 이유는 NFC는 스마트폰을 대야하는데 블루투스는 신호를 발생시키기 때문에 아이폰에서 그 신호를 받아서 여러가지 정보를 보여주거나 할수 있기 때문에 더 가능성이 크다고 한다. 뭔가 됐'
 featured_image: ''
 tags: ['BLE', 'bluetooth', 'dev', 'iBeacon', 'ios7', '아이비콘']

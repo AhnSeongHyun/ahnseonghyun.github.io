@@ -1,7 +1,7 @@
 ---
 title: '8.18. pprint — Data pretty printer — Python 2.7.8 documentation'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2014-11-25'
 description: '# [8.18. pprint — Data pretty printer — Python 2.7.8 documentation](https://docs.python.org/2/library/pprint.html)
 
 우연히 json 을'

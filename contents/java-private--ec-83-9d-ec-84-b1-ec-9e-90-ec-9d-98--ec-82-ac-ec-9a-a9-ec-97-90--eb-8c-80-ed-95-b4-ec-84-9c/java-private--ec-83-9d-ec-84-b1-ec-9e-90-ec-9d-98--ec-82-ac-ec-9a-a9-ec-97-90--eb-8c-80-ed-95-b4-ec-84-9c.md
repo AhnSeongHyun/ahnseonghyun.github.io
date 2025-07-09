@@ -1,7 +1,7 @@
 ---
 title: '[JAVA] private 생성자의 사용에 대해서.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-11-29'
 description: '필자는 데이터 클래스라는 것을 많이 만들어쓰는 편인다. List나 Hashtable 의 변수에 이름을 주는 것 보다 클래스와 멤버에 이름을 줌으로써 좀 더 의미를 명확하게 표현할 수 있기 때문에 자주 사용하는 편이다. 데이터 클래스들의 경우 사실상 클래스에서 행동이라고 하는게 set, get 과 같은 정도의 것 밖에 없는 경우가 많다. 다음의'
 featured_image: ''
 tags: ['AssertionError', 'date class', 'dev', 'Java', 'private 생성자']

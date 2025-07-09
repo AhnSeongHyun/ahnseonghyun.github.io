@@ -1,7 +1,7 @@
 ---
 title: 'CentOS Apache2.4 설치'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2014-12-09'
 description: '####Apache 2.4 설치####
 
 

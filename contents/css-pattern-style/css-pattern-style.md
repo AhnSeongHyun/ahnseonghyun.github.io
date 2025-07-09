@@ -1,7 +1,7 @@
 ---
 title: '(CSS) pattern style'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-10-06'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile23.uf.2168AA3E5251DD0433ED45.png)
 
 패턴 관련 CSS 관련 자료를 찾다가 발견한 링크들. 나중에 사이트 만들때 활용하면 좋을듯. 

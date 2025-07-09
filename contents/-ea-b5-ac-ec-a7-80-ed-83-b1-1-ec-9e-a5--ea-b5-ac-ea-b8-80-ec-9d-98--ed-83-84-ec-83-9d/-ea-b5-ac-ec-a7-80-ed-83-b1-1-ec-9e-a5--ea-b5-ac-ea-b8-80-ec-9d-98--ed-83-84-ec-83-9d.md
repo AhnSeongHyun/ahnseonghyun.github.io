@@ -1,7 +1,7 @@
 ---
 title: '[구지탱] 1장. 구글의 탄생.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-12-04'
 description: ''
 featured_image: ''
 tags: ['dev', '구글', '구글 검색 기술', '구글 기술', '구글을 지탱하는 기술']

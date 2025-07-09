@@ -1,7 +1,7 @@
 ---
 title: '(iOS) UIActivityController 을 통해서 공유를 쉽게하자.'
 author: 'ash84'
-pub_date: '2017-02-24'
+pub_date: '2013-09-12'
 description: '다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 `UIActivityController`를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자. 
 **iOS7에서 깨지는것 외에도 기존의 결과 뷰에서 복사하기, 저장하기 메일로 보내기 버튼이 하단에 있는 문제점과 함께 카카오톡이나 페이스북, 메일, 라인 등으로 보낼수 없다는게 가장 큰 이'
 featured_image: ''

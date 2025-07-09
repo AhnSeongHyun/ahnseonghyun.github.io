@@ -1,7 +1,7 @@
 ---
 title: 'React Native App 시작하기'
 author: 'ash84'
-pub_date: '2017-11-12'
+pub_date: '2017-11-03'
 description: '이 글은  [React Native Getting Started](https://facebook.github.io/react-native/docs/getting-started.html) 에 대한 삽질기입니다. 
 
 

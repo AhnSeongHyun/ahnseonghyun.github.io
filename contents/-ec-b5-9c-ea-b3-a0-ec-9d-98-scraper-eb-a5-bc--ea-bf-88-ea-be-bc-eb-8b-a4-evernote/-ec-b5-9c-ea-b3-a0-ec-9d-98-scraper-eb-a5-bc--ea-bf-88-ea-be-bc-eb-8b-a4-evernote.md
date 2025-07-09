@@ -1,7 +1,7 @@
 ---
 title: '최고의 Scraper를 꿈꾼다. EverNote'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2009-08-28'
 description: '﻿﻿'
 featured_image: ''
 tags: ['dev', 'EVERNOTE', 'IPOD', 'lifelog', 'memo', 'Note']

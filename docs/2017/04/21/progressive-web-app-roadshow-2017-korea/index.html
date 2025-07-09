@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - PROGRESSIVE WEB APP ROADSHOW 2017 KOREA"/>
+    <meta property="og:description" content="커리어가 웹의 백엔드와 프론트 언저리에 걸쳐져 있는데 확실히 프론트엔드 개발쪽은 변화가 굉장히 빠르게 일어나고 있다는 것을 느낀다. AMP, PWA 에 대해서 도데체 뭔지 그리고 지금 결제 관련 일을 하고 있기 때문에 WebPaymentAPI 에 대해서 좀 더 알고자 참가하게 되었다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/04/21/progressive-web-app-roadshow-2017-korea"/>
+    <meta property="og:image" content="https://gdg-korea-webtech.firebaseapp.com/pwa-roadshow17/roadshow.svg"/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>PROGRESSIVE WEB APP ROADSHOW 2017 KOREA</title>
+    <meta name="description" content="커리어가 웹의 백엔드와 프론트 언저리에 걸쳐져 있는데 확실히 프론트엔드 개발쪽은 변화가 굉장히 빠르게 일어나고 있다는 것을 느낀다. AMP, PWA 에 대해서 도데체 뭔지 그리고 지금 결제 관련 일을 하고 있기 때문에 WebPaymentAPI 에 대해서 좀 더 알고자 참가하게 되었다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">PROGRESSIVE WEB APP ROADSHOW 2017 KOREA</h1>
+    <div class="blog-post-meta"> 
+        <small>  2017-04-21</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+        <img src="https://gdg-korea-webtech.firebaseapp.com/pwa-roadshow17/roadshow.svg" alt="">
+    
+    <div class="blog-post">
+        <p>커리어가 웹의 백엔드와 프론트 언저리에 걸쳐져 있는데 확실히 프론트엔드 개발쪽은 변화가 굉장히 빠르게 일어나고 있다는 것을 느낀다. AMP, PWA 에 대해서 도데체 뭔지 그리고 지금 결제 관련 일을 하고 있기 때문에 WebPaymentAPI 에 대해서 좀 더 알고자 참가하게 되었다. </p>
+<p><img alt="" src="https://c1.staticflickr.com/5/4186/34149995140_1140576652_k.jpg" /></p>
+<p>행사 준비 자체는 잘 되었던것 같다. 스타벅스 커피도 있었고, 오후에는 도넛을 나눠줘서 다들 즐겁게 먹으면서 봤던것 같다.(나는 몸이 안좋아서 스킵) </p>
+<p>PWA 에 대해서 주로 많은 설명을 들었다. 왜 이게 나오게 되었는지, 지향하는 부분이 어디인지, 그리고 기술적으로 어떻게 구현해야하는지 잘 설명해주고 있다. AMP 에 대해서 그리 많이 듣진 않았는데, 개인적으로 좀 별도의 페이지나 템플릿을 둬야 하나 하는 생각도 들었다. 전략적으로 선택해볼만 하지 않나 싶다. </p>
+<p><img alt="" src="https://c1.staticflickr.com/5/4171/33724691503_c66a83ca8d_k.jpg" /></p>
+<p>WebPaymentAPI 는 이전에도 발표를 다른 세미나/컨퍼런스에서 보긴 했었는데 아직도 갈길이 멀다는 생각이 들었다. 이런 표준화? 같은 작업은 top-down 방식으로 작업이 되고 있을텐데, 각 나라별 결제 방식이 조금씩 다르기 때문에 PG나 관련 회사에서 적극적인 참여가 필요하지 않나 싶었다. 결국엔 우리나라 실정과 맞지 않아서 안쓰는 형태로 가지 않을까 싶다. </p>
+<hr>
+
+<p>행사 링크 : https://gdg-korea-webtech.firebaseapp.com/pwa-roadshow17/</p>
+<p><strong>Keynote: Progressive Web Apps: What, Why and How(도창욱)</strong></p>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/O8KQmBR4Wxmtr" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/cwdoh/pwa-roadshow-seoul-keynote" title="PWA Roadshow Seoul - Keynote" target="_blank">PWA Roadshow Seoul - Keynote</a> </strong> from <strong><a target="_blank" href="https://www.slideshare.net/cwdoh">Chang W. Doh</a></strong> </div>
+
+<ul>
+<li>
+<p>웹의 큰 변화 - Ajax</p>
+</li>
+<li>
+<p>모바일 기기의 증가</p>
+</li>
+<li>
+<p>앱에 비해서 모바일 앱의 기능의 확산 =&gt; progressively(점진적인, 점진적으로) =&gt; 사용자 경험의 개선 </p>
+</li>
+<li>
+<p>이탈한 사용자를 다시 끌어오기란 어렵다 </p>
+</li>
+<li>
+<p>홈스크린 설치 유도, 우리 페이지는 사용자의 앱 리스트에 없다.</p>
+</li>
+<li>
+<p>서비스 워커 - 오프라인 웹앱에 대한 지원 </p>
+</li>
+<li>
+<p>아직 iOS 지원되지 않음. 모든 브라우저를 지원하지는 못함</p>
+</li>
+<li>
+<p>시작하기 : https </p>
+</li>
+<li>
+<p>PWA 3가지 접근 방법</p>
+</li>
+<li>다시 만들기 =&gt; 비난초래, 가장 완벽한 버전</li>
+<li>가벼운 버전</li>
+<li>
+<p>하나의 기능으로 시작 </p>
+</li>
+<li>
+<p>과거와 현재의웹에 대한 정리 </p>
+</li>
+<li>네이티브 앱과의 차이를 줄이는 방식으로 간다. </li>
+</ul>
+<p><strong>Session 1: Service Workers for Instant and Offline Experiences(삼성전자 송정기)</strong></p>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/BFxOHWSPrCnWMR" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/jungkees/pwa-roadshow-korea-service-worker-75350144" title="PWA Roadshow Korea - Service Worker" target="_blank">PWA Roadshow Korea - Service Worker</a> </strong> from <strong><a target="_blank" href="https://www.slideshare.net/jungkees">jungkees</a></strong> </div>
+
+<p>사용자에게 네이티브 앱같은 효과를 주자 </p>
+<p>PWA = 안정적, 빠르고, 고객을 쉽게 끌어 들인다. </p>
+<p>기존 모바일 웹사이트를 PWA기술로 보완한다. <br />
+이미 많은 서비스들이 PWA 기술을 이용해서 구현하고 있다. <br />
+PWA를 통해서 마케팅 적인 측면, 이탈율 감속, 실 구매율 증가 등의 효과를 보고 있다. </p>
+<p>flipkart - 홈화면에 추가시, 주소표시줄이 없어짐. 앱처럼 <br />
+weigo <br />
+twitter lite - twitter.com</p>
+<p>Service Worker</p>
+<ul>
+<li>udacity pwa 만드는 동영상이 있음 </li>
+<li>해결하고자 하는 문제 1: lie-fi 를 해결하자. 네트워크가 느린 경우 어떻게 페이지 로딩 할것인가? </li>
+<li>결국  컨텐츠 캐싱</li>
+<li>
+<p>네트워크 스택을 가기 전에 서비스워커가 가로채서 제어하는 방식</p>
+</li>
+<li>
+<p>문제 2: 백그라운드 서비스 제공 </p>
+</li>
+<li>
+<p>푸시 노티피케이션에서 활용 </p>
+</li>
+<li>
+<p>브라우저 서포트 : isServiceWorkerReady? </p>
+</li>
+<li>
+<p>가능한 브라우저만 지원해도 큰 효과, 메인 페이지에만 일단 적용, 점진적으로 적용하자. </p>
+</li>
+<li>
+<p>이벤트 기반으 워커(서비스워커)</p>
+</li>
+<li>요청시 발동되는 형태, 서비스 워커가 캐시에서 데이터 가져오기 </li>
+</ul>
+<p>Dedicated worker의 주기 <br />
+- 페이지에 바인딩, 계속 살아 있다. </p>
+<p>서비스워커의 주기<br />
+- 동작이 끝나면 종료 시킬 수 있다. </p>
+<p>pwa.rocks</p>
+<p><strong>Session 2: Securing the Foundation with HTTPS(도창욱)</strong></p>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/brnvghAXhukfmt" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/cwdoh/pwa-roadshow-seoul-https" title="PWA Roadshow Seoul - HTTPS" target="_blank">PWA Roadshow Seoul - HTTPS</a> </strong> from <strong><a target="_blank" href="https://www.slideshare.net/cwdoh">Chang W. Doh</a></strong> </div>
+
+<ul>
+<li>보안의 이슈 </li>
+<li>https 를 쓰면 느리다?</li>
+<li>조금이라도 빠르게 하기 위한 장치 필요 </li>
+<li>
+<p>first start : 핸드쉐이크가 정상적으로 이루어 질것이라고 예상하는 방식 </p>
+</li>
+<li>
+<p>http/2</p>
+</li>
+<li>성능 유지와 보안 강화 </li>
+</ul>
+<p><strong>Session 3: Deep Engagement: Installable apps and Push Notifications(박상현)</strong></p>
+<p>슬라이드 링크 : https://docs.google.com/presentation/d/14_jRqn1xwe29RqXsy-uoVcrbt6tkuAW3sKr3PXZXliw/edit#slide=id.p11</p>
+<ul>
+<li>
+<p>바탕화면에 숏컷으로 설치 </p>
+</li>
+<li>
+<p>설치 정보 명시 : manifest.json 파일로 숏컷에서 보여줄 정보 </p>
+</li>
+<li>
+<p>개발자 도구 &gt; 애플리케이션 &gt; manifest 확인 </p>
+</li>
+<li>
+<p>Push API </p>
+</li>
+<li>VAPID(라이브러리를 통해서 키 생성)</li>
+</ul>
+<p><strong>Session 4: Tooling for Progressive Web Apps: Lighthouse and More(장기효)</strong></p>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/7MxUnE3qeLwELJ" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/GihyoJoshuaJang/2017googlepwaroadshowlighthouse" title="2017_Google_PWA_Roadshow_Lighthouse" target="_blank">2017_Google_PWA_Roadshow_Lighthouse</a> </strong> from <strong><a target="_blank" href="https://www.slideshare.net/GihyoJoshuaJang">Gihyo Joshua Jang</a></strong> </div>
+
+<ul>
+<li>LightHouse 라는 툴 : 웹 페이지 성능 측정 도구, PWA 도 측정, 구조적 설계 및 객관적 수치화 </li>
+<li>크롬 개발자 도구로 쉽게 설치 할 수 있다. </li>
+<li>
+<p>lighthouse viewer : report 형태로 제공이 된다. </p>
+</li>
+<li>
+<p>https://developers.google.com/web/tools/lighthouse/?hl=ko</p>
+</li>
+<li>
+<p>옵션 상에서 측정의 기준을 변경 할 수 있다. </p>
+</li>
+</ul>
+<p><strong>Session 5: AMP for Progressive Web Apps(조은)</strong></p>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/LaJSHQI2zP6krN" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/euncho161/amp-and-pwa" title="AMP and PWA" target="_blank">AMP and PWA</a> </strong> from <strong><a target="_blank" href="https://www.slideshare.net/euncho161">Eun Cho</a></strong> </div>
+
+<ul>
+<li>모바일 페이지가 느리다. </li>
+<li>
+<p>Start fast, Stay fast</p>
+</li>
+<li>
+<p>AMP : accelerated mobile page </p>
+</li>
+<li>amp html </li>
+<li>amp js</li>
+<li>
+<p>amp cache</p>
+</li>
+<li>
+<p>외부 로딩에 민감함. </p>
+</li>
+<li>css 작성에 제한이 있음. </li>
+<li>
+<p>우선순위 컨텐츠 로딩 </p>
+</li>
+<li>
+<p>변경할게 많지 않다고 하지만, 적지도 않은듯. </p>
+</li>
+<li>
+<p>AMP and PWA</p>
+</li>
+<li>
+<p>참고 사이트 :</p>
+</li>
+<li>ampproject.org</li>
+<li>ampbyexample.com</li>
+</ul>
+<p><strong>Session 6: Web Payments API(방진호)</strong></p>
+<p>슬라이드 링크 - https://docs.google.com/presentation/d/1MwAe4lLVpBEEjEGSj0EQ0nsp-tXL555iUp-OpwZlohI/edit#slide=id.p</p>
+<ul>
+<li>W3C 표준, 브라우저에서 관심을 가진다. </li>
+<li>카트 단계에서 취소 하는 고객이 엄청 많다 &gt; 입력하는게 귀찮다. </li>
+<li>결제 관련 ux를 cp가 아닌 브라우저에서 만든다. 보여줘야 할 정보는 cp가 브라우저에게 준다. </li>
+<li>실제 페이먼트 부분은 아직까지 표준안 논의중. </li>
+</ul>
+<p>Payment Request API</p>
+<ul>
+<li>결제를 요청하는 API</li>
+<li>method data : 핸드폰 소액결제, 신용카드 </li>
+<li>details : 결제 정보 </li>
+<li>
+<p>options : 사용자로부터 수집할 정보 </p>
+</li>
+<li>
+<p>http://paytest.github.io/</p>
+</li>
+<li>
+<p>https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/?hl=ko</p>
+</li>
+<li>
+<p>새로운 결제 시스템이 아니다. 사용자가 선택한 정보를 CP로 보내고 그걸 cp가 pg로 보내서 결제를 이루어 진다. 결국 결제는 pg가 수행. </p>
+</li>
+<li>
+<p>국내에서는 각 pg 마다 간편결제가 있고 그것을 사용하는 곳은 한정적, 티몬페이-티몬, 스마일페이-지마켓</p>
+</li>
+<li>
+<p>실질적으로 payment app 과 연관이 되어야 한다. payment request - payment app  </p>
+</li>
+</ul>
+<p>Payment Handler API</p>
+<ul>
+<li>payment request가 있어야 handler를 쓸수 잇다. </li>
+<li>payment app에 대한 관리 </li>
+<li>서비스워커를 이용 </li>
+<li>웹앱 기반, 설치하는데 별도의 시간 없음 </li>
+<li>서비스 워커?</li>
+<li>
+<p>payment app에 대한 저장 관리 </p>
+</li>
+<li>
+<p>현재 handler 는 구현중. </p>
+</li>
+</ul>
+<p><strong>Session 7: PWA with React.js and Firebase</strong></p>
+<p><strong>Session 8: PWA with Angular</strong></p>
+<ul>
+<li>개인적으로 큰 React.js, Angular는 관심이 적어서 듣질 않음. </li>
+</ul>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #conference&nbsp;
+        
+            #PWA&nbsp;
+        
+            #AMP&nbsp;
+        
+            #WebPaymentAPI&nbsp;
+        
+            #ServiceWorker&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

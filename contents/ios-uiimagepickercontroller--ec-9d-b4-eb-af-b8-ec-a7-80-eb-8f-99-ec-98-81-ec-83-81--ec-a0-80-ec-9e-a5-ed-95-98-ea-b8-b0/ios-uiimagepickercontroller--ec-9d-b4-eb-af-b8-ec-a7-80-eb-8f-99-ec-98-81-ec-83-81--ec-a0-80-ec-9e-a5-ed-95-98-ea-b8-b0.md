@@ -1,7 +1,7 @@
 ---
 title: '(iOS) UIImagePickerController Image & Video'
 author: 'ash84'
-pub_date: '2016-08-11'
+pub_date: '2014-01-20'
 description: '매번 찾아서 쓰던건데 너무 귀찮아서 정리한다. 카메라나 동영상의 간단한 뷰를 띄우기 위해서 UIImagePickerController 를 사용하는데 사진을 찍는 방법, 동영상을 찍는 방법 및 아이폰 내장 포토 앨범에 저장하는 방법은 아래와 같다. 
   
 #### 1. 띄우기

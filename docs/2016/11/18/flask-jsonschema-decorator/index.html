@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - (flask) jsonschema 를 이용해서 request.json 검사하기"/>
+    <meta property="og:description" content="API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2016/11/18/flask-jsonschema-decorator"/>
+    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/2182898?v=3&s=200"/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(flask) jsonschema 를 이용해서 request.json 검사하기</title>
+    <meta name="description" content="API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(flask) jsonschema 를 이용해서 request.json 검사하기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2016-11-18</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+        <img src="https://avatars0.githubusercontent.com/u/2182898?v=3&s=200" alt="">
+    
+    <div class="blog-post">
+        <p>API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 <code>POST</code>로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다. </p>
+<p>JSON 검증을 위해서 <a href="https://pypi.python.org/pypi/jsonschema">jsonschema</a> 를 활용할 수 있다는 것을 알았는데, 문제는 라이브러리를 써서 검증할 수 있지만, 일단 <strong>스키마가 있어야 한다는 사실</strong>이다. <a href="https://pypi.python.org/pypi/jsonschema">jsonschema</a> 라이브러리는 단순히 스키마에 대한 검증을 해주는 도구이다.</p>
+<p>스키마를 만들기 위해서 <a href="http://jsonschema.net/">jsonschema.net</a> 을 이용했다. 이 사이트는 요청하려는 JSON Payload를 넣게 되면 해당 Payload에 맞는 스키마를 추출해 주는 작업을 해준다. 예를 들어, 아래와 같이 회원가입을 하는 JSON Payload가 있다고 가정해보자. </p>
+<pre><code class="language-json">{
+    &quot;user_id&quot;:&quot;test123&quot;, 
+    &quot;name&quot;:&quot;TEST&quot;, 
+    &quot;password&quot;:&quot;test123&quot;, 
+    &quot;email&quot;:&quot;test@gmail.com&quot;,
+    &quot;mobile&quot;:&quot;01012341234&quot;, 
+    &quot;birthday&quot;:&quot;19701121&quot;,
+    &quot;gender&quot;:1
+}
+</code></pre>
+<p>payload 에 대한 스키마를 뽑기 위해서 해당 JSON을 <a href="http://jsonschema.net">jsonschema.net</a> 에 붙여넣기를 한다.  </p>
+<p><img alt="https://flic.kr/p/QRhLmR" src="https://c2.staticflickr.com/1/527/32062904185_44e4fa2308_z.jpg" /></p>
+<p>위와 같은 방법으로 JSON 스키마를 뽑게 되면 아래와 같이 나온다. </p>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;user_id&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;name&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;password&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;email&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;mobile&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;birthday&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;gender&quot;: {
+      &quot;type&quot;: &quot;integer&quot;
+    }
+  },
+  &quot;required&quot;: [
+    &quot;user_id&quot;,
+    &quot;name&quot;,
+    &quot;password&quot;,
+    &quot;email&quot;,
+    &quot;mobile&quot;,
+    &quot;birthday&quot;,
+    &quot;gender&quot;
+  ]
+}
+</code></pre>
+<p>자세히 살펴보면, <code>properties</code> 하는 부분에 각각의 항목에 대한 허용되는 타입이 정해져 있다. 입력한 값에 대해서 분석을 해서 type을 추출해서 보여주고 있고, 차후에 request json payload에 해당 항목의 타입이 스키마와 맞지 않으면 invalid 처리가 된다. 그리고 바로 아래에 보면 <code>required</code> 라고 하는 부분이 있는데 <strong>그 부분은 어떤 항목(key)를 강제할 것인지를 정하는 부분</strong>이다. 예를 들어 성별(gender)을 받을 수도 있지만, 안 받을 수도 있는 optional 한 값이라고 하면 해당 부분을 <code>required</code>에서 빼면 된다. 기타 좀더 상세한 설정은 <a href="http://json-schema.org/">http://json-schema.org/</a> 에서 jsonschema 에 대해서 좀 더 살펴본 후 수정해서 사용하면 된다. </p>
+<h4><strong>적용하기</strong></h4>
+<h5><strong>기본 라이브러리 사용</strong></h5>
+<p>앞서서 JSON Payload 를 이용해서 JSON 스키마를 뽑아내는 작업을 진행했다. 이제는 해당 스키마를 python의 jsonschema 라이브러리를 이용하는 방법을 알아보자. </p>
+<pre><code class="language-python">from jsonschema import validate, ValidationError
+# A sample schema, like what we'd get from json.load()
+schema = {
+...     &quot;type&quot; : &quot;object&quot;,
+...     &quot;properties&quot; : {
+...         &quot;price&quot; : {&quot;type&quot; : &quot;number&quot;},
+...         &quot;name&quot; : {&quot;type&quot; : &quot;string&quot;},
+...     },
+... }
+validate({&quot;name&quot; : &quot;Eggs&quot;, &quot;price&quot; : 34.99}, schema)
+</code></pre>
+<p>간단한 사용법은 이렇다. <code>schema</code> 변수에 우리가 검증하고자 하는 스키마(dict 형태)를 넣고, <code>validate</code> 함수를 이용해서 검증하고자 하는 json 을 검증하면된다. <code>validate</code> 함수는 invalid 한 경우 2가지 에러를 발생시키는데 하나는 <code>ValidationError</code> 이고 다른 하나는 <code>SchemaError</code> 이다. 말 그대로 스키마가 문제가 있으면 <code>SchemaError</code> 를, 검증이 실패한 경우이면, <code>ValidationError</code>를 발생시킨다. </p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<h5><strong>flask decorator 로 활용하기</strong></h5>
+<p>이제 flask의 요청을 받는 함수에서 사용해 보자. 당연히 요청을 받는 함수 안에서 처리하는게 좋지만, Python의 decorator 를 이용하는게 더 깔끔하게 처리 할 수 있고, 무엇보다도 요청처리 함수 안에서는 비지니스 로직을 구현하고 이런 처리는 decorator 를 작성해서 위임하는게 좋다고 생각했다. </p>
+<pre><code class="language-python">@json_schema('signup_api')
+def signup():
+    .... 
+</code></pre>
+<p>위와 같이 <code>json_schema</code> 라는 decorator 를 만들고, 인자값을 어떤 스키마가를 지칭하는 키(key) 값을 주면 <code>json_schema</code> 데코레이터에서 해당 스키마와 현재 요청으로 들어온 <code>request.json</code>과 비교해서 문제가 있으면 <strong>invalid parameter 400</strong> 에러를 반환하는 식으로 구현하였다. </p>
+<pre><code class="language-python">
+def json_schema(schema_name):
+    &quot;&quot;&quot;
+    지정한 API 에 대해서 지정한 schema_name로 검사한다.
+    :param schema_name: 검사대상 스키마 이름
+    :return: 에러나면 40000 에러
+    &quot;&quot;&quot;
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kw):
+            try:
+                request.on_json_loading_failed = on_json_loading_failed_return_dict
+                validate(request.json, current_app.config['API_JSON_SCHEMA'][schema_name])
+                return func(*args, **kw)
+            except ValidationError as e:
+                logger.exception(traceback.format_exc())
+                return ResponseData(code=HttpStatusCode.INVALID_PARAMETER).json
+        return wrapper
+    return decorator
+</code></pre>
+<p>지금 생각해보면, API의 함수명을 키 값으로 활용하는것도 나을 것 같다는 생각이 든다. 일일히 decorator 에 인자로 문자열을 전달하는 것은 키값이 변경시 문제가 발생할 수 있다는 생각이 든다. </p>
+<h5><strong>정리</strong></h5>
+<p>꽤 많은 API를 작성해야 하고 API의 요청으로 들어오는 값들을 검증하기 위해서 개발해야 하는 부분도 있지만, JSON 스키마를 이용하면 분명히 편리한 점이 있는 것 같다. 기본적인 파라미터 유무나 형식 등을 신경쓰지 않고 공통된 응답처리가 가능하다는 점 그리고 요청 처리 함수 안에서 좀 더 비지니스 로직에 집중할 수 있다는 점을 가장 큰 장점으로 느꼈다. </p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p><strong>추출한 JSON 스키마들을 어디에 둘 것인가?</strong> 에 대한 고민이 있었지만, 간단하게하려고 config 파일에 두고 <code>current_app.config</code> 에서 읽어오게 했다. 이렇게 사용할 때의 문제점은 많은 API에 JSON 스키마를 적용할 경우, 스키마들이 많아지고 관리하기 어려워진다는 문제인 것 같다. 스키마를 어디에 두고 어떻게 가져올 것인지에 대한 설계할 때 고려가 필요한 것 같다. </p>
+<p>이 글과 더불어서 채문창님의 <a href="https://github.com/mcchae/JSON-Schema/blob/master/JSON-API.md">JSON과 PYTHON API의 만남</a> 이라는 글을 읽어보면 좋을것 같다. 비슷한 글이지만, 스키마에 맞게 자동 데이터생성 이라는 부분이 있는데, JSON 스키마를 이용해서 테스트를 위한 데이터를 생성할 수 있다. </p>
+<h3>Reference</h3>
+<ul>
+<li>http://json-schema.org</li>
+<li>https://pypi.python.org/pypi/jsonschema</li>
+<li>http://jsonschema.net</li>
+</ul>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #FLASK&nbsp;
+        
+            #Python&nbsp;
+        
+            #JSON&nbsp;
+        
+            #jsonschema&nbsp;
+        
+            #Decorator&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - SQLAlchemy with StoreProcedure"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="https://ash84.io/docs/2016/08/24/sqlalchemy-with-storeprocedure"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>SQLAlchemy with StoreProcedure</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">SQLAlchemy with StoreProcedure</h1>
+    <div class="blog-post-meta"> 
+        <small>  2016-08-24</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>제목자체가 역설적이지만, 이렇게 써야 할때가 있다. 예를들면, 레거시를 다시 재개발하는 수준에서 특정 프로시저는 단순히 db를 조회하는 것 이상의 프로그래밍적인 기능을 가지고 있을때가 있다. 또한, 다른 이유로 ORM인 SQLAlchemy와 저장프로시저를 혼합해야할 때가 있는데, 그럴때 따로 저장프로시저용 코드를 쓰기 보다는 SQLAlchemy 를 이용해서 프로시저를 실행하고 값을 가져오는 것이 좋다. </p>
+<script src="https://gist.github.com/AhnSeongHyun/ad3653667d9094db71872683ff0a74fc.js"></script>
+
+<p>개인적으로 SQLAlchemy를 써서 좋다고 생각하는 이유는 유지보수 하는 입장에서 DB연결 문자열 등과 같은 관리포인트도 하나로 유지하면 좋고, ORM 외에 몇개의 프로시저를 위해서 DB연결 라이브러리에 종속적인 코드를 짜고 싶지 않다는 것을 느꼈다.(안된다는 것이 아니다.) </p>
+<p>위의 코드는 Flask-SQLAlchemy 로 짠 코드인데, 일반 SQLAlchemy를 아시는 개발자라면 쉽게 이해할 수 있는 코드이다. 다른 것보다도 <code>raw_connection()</code> 함수에 대해서 설명하자면 프록시된 DBAPI 연결 객체를 반환하는데, 실제 DBAPI 연결과 동일한 기능을 수행한다고 한다. 단 <code>close()</code> 함수에 한해서는 예외적으로 실제로 연결이 끊어지는 거이 아니라 pool로 리턴되어 진다고 한다.</p>
+<p><a href="http://docs.sqlalchemy.org/en/latest/core/connections.html#sqlalchemy.engine.Engine.raw_connection">원문</a>은 아래와 같다. </p>
+<blockquote>
+<p><strong>raw__connection(_connection=None)</strong></p>
+<p>Return a “raw” DBAPI connection from the connection pool.</p>
+<p>The returned object is a proxied version of the DBAPI connection object used by the underlying driver in use. The object will have all the same behavior as the real DBAPI connection, except that its close() method will result in the connection being returned to the pool, rather than being closed for real.</p>
+<p>This method provides direct DBAPI connection access for special situations when the API provided by Connection is not needed. When a Connection object is already present, the DBAPI connection is available using the Connection.connection accessor.</p>
+</blockquote>
+    </div>
+    <div>
+        
+            #sqlalchemy&nbsp;
+        
+            #Python&nbsp;
+        
+            #db&nbsp;
+        
+            #stored procedure&nbsp;
+        
+            #저장프로시저&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

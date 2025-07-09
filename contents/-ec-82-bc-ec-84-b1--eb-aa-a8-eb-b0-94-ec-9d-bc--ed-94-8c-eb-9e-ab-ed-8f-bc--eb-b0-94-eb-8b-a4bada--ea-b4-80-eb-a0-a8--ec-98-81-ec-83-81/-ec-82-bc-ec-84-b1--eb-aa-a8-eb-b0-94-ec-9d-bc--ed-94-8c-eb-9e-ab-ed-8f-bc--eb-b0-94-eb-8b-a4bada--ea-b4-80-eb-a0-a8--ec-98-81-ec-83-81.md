@@ -1,7 +1,7 @@
 ---
 title: '삼성 모바일 플랫폼 바다(bada) 관련 영상'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2009-12-18'
 description: '**Samsung bada OS Presentation  
 **'
 featured_image: ''

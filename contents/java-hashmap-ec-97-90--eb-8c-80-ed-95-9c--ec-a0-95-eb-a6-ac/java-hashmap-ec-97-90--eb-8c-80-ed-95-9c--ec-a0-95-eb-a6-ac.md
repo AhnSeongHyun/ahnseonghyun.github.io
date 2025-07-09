@@ -1,7 +1,7 @@
 ---
 title: '[Java] HashMap에 대한 정리.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-11-26'
 description: '뭐, 다들 아는 사실이겠지만, HashMap에 대해서 한번 더 정리를 하려고 한다. 필자는 Hashtable을 많이 쓰긴 하는데 HashMap에 대해서 정리를 하는 이유는 단연 **성능**때문이다. 스케일 아웃도 좋지만, 일정 수준이상의 성능 최적화 작업은 늘 필요하기 마련이기 때문이다. 
 **HashMap **
 – 일단 둘다 key-va'

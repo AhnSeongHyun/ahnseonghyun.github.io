@@ -1,7 +1,7 @@
 ---
 title: '프로그래머의 사회적 기여에 대해서. (About Social Contribution of Programmer)'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-10-17'
 description: ''
 featured_image: ''
 tags: ['Apple', 'dev', 'Medical Design', 'ted', '사회적 기여', '스마트폰', '앱', '제너럴닥터', '프로그래머']

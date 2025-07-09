@@ -1,7 +1,7 @@
 ---
 title: 'python Celery 기본 세팅'
 author: 'ash84'
-pub_date: '2016-08-15'
+pub_date: '2014-11-30'
 description: '예전부터 써보고 싶었는데 관련 업무가 주어져서(정확히는 그냥 내가 쓰고싶은데 업무시간에 테스트 하고 싶어서) 정리해 본다. 그냥 아주 기본적으로 돌려보는 정도. 
 
 **Broker 세팅(Redis)**

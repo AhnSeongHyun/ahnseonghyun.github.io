@@ -1,7 +1,7 @@
 ---
 title: '[C#] WinCE InputPanel(가상 키보드) 위치 조정하기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-04-22'
 description: 'WinCE 6.0 환경에서는 보통 키보드와 마우스가 제공되지 않는 환경입니다. 때문에 터치스크린이 마우스를 대체하고 키보드는 SIP 즉, 가상키보드가 그 역할을 대체합니다. 때문에 대부분의 WinCE는 포팅과정에서 가상 키보드'
 featured_image: ''
 tags: ['c#', 'dev', 'inputpanel', 'SIP', 'Wince', '가상키보드', '위치지정']

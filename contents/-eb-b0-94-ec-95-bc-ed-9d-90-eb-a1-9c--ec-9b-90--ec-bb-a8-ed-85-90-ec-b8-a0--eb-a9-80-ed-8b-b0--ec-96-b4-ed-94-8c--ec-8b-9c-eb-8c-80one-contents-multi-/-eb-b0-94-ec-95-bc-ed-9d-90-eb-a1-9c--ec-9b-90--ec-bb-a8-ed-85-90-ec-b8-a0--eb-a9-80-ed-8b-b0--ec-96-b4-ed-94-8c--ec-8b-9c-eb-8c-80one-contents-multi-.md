@@ -1,7 +1,7 @@
 ---
 title: '바야흐로, 원 컨텐츠 멀티 어플 시대(One Contents, Multi-App), 미친듯이 기획하라!!'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2009-12-23'
 description: '﻿
 바야흐로 다양한 플'
 featured_image: ''

@@ -1,7 +1,7 @@
 ---
 title: '[JAVA] C개발자를 위한 자바 코딩 스타일 파일'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-11-29'
 description: '[](http://ash84.net/wp-content/uploads/1/cfile27.uf.1231724F50B7509137A4BA.xml)cfile27.uf.1231724F50B7509137A4BA.xml'
 featured_image: ''
 tags: ['allman', 'allman.xml', 'dev', 'Java', '코드 스타일', '코딩 스타일']

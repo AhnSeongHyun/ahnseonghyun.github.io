@@ -1,7 +1,7 @@
 ---
 title: '[Java] StringAppender, StringBuilder 짭.'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2013-01-12'
 description: ''
 featured_image: ''
 tags: ['append', 'dev', 'Java', 'StringAppender', 'StringBuilder', 'StringBuilder 개선', '자바']

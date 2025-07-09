@@ -1,7 +1,7 @@
 ---
 title: '(python) image download conv base64'
 author: 'ash84'
-pub_date: '2015-09-24'
+pub_date: '2013-08-28'
 description: 'base64로 변환을 해야하는 이유부터 설명하자면 간단하다. 이미지의 경우, 파일서버에 저장하는 것이 최고의 방법이긴 하지만 다들 알다시피 서버의 용량 문제가 있어서 OpenAPI를 이용해서 데이터를 가져오게 되는'
 featured_image: ''
 tags: ['BASE64', 'dev', 'image download', 'Open API', 'Python']

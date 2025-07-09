@@ -1,7 +1,7 @@
 ---
 title: '[C#] 실행시간/동작시간 측정하기'
 author: 'ash84'
-pub_date: '2016-06-22'
+pub_date: '2012-03-22'
 description: ''
 featured_image: ''
 tags: ['c#', 'Class', 'datetime', 'dev', '실행시간', '실행시간 측정']

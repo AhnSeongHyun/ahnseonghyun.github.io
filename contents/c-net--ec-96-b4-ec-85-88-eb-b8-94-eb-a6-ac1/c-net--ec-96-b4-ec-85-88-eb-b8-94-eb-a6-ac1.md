@@ -1,7 +1,7 @@
 ---
 title: '[C#] .NET 어셈블리1'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2007-08-13'
 description: 'COM 바이너리의 문제점 
 
 – 배포의 문제   

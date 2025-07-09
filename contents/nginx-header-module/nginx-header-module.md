@@ -1,7 +1,7 @@
 ---
 title: 'nginx header module'
 author: 'ash84'
-pub_date: '2020-01-22'
+pub_date: '2020-01-20'
 description: '```shell
 add_header 'Access-Control-Allow-Origin' '{ DOMAIN }';
 add_header 'Access-Control-Allow-Credentials' 'true';

@@ -1,7 +1,7 @@
 ---
 title: 'posterous 설치'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-11-27'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile23.u'
 featured_image: ''
 tags: ['dev', 'posterous', '블로그 연동', '초벌쓰기']

@@ -1,7 +1,7 @@
 ---
 title: '[Windows Phone 7] 윈도우 폰 7 개발 Getting Started'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-03-18'
 description: ''
 featured_image: ''
 tags: ['An Seong Hyun', 'c#', 'dev', 'getting started', 'Windows Phone 7', 'Windows Phone Developer Tools CTP', '안성현', '윈도우 폰 개발', '윈도우폰']

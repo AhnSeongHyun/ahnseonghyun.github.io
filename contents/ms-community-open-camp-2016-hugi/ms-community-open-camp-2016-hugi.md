@@ -1,7 +1,7 @@
 ---
 title: 'MS Community Open Camp 2016'
 author: 'ash84'
-pub_date: '2017-03-28'
+pub_date: '2016-04-16'
 description: '오키나와 여름휴가를 마치고 이전에 신청해봤던 MS Community Open Camp 2016에 참가하게 되었다. 광화문이라는(언제 이사를 간 거야, MS) 먼 곳을 가기 위해서 많이 고민했지만, 가기를 잘했다는 생각이 든 세미나였다.  
 
 **Keynote 2: 마이크로소프트, 리눅스와의 어색하지 않은 동거, 김명신/임백준**

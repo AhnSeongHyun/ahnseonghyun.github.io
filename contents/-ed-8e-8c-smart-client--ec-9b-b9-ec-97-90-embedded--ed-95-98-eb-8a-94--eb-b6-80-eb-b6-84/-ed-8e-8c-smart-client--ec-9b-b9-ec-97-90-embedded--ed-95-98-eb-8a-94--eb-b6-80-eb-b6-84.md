@@ -1,7 +1,7 @@
 ---
 title: '[펌]  Smart Client 웹에 embedded 하는 부분.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2008-04-25'
 description: ''
 featured_image: ''
 tags: ['c#', 'dev', 'smart client .net']

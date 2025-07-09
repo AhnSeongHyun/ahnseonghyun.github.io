@@ -1,7 +1,7 @@
 ---
 title: 'bower 설치 및 사용하기, bower-installer'
 author: 'ash84'
-pub_date: '2017-04-25'
+pub_date: '2015-03-23'
 description: ''
 featured_image: ''
 tags: ['bower', 'brower-installer', 'dev', 'grunt', 'JavaScript', 'Node.js', 'npm', '자바스크립트', '패키지관리']

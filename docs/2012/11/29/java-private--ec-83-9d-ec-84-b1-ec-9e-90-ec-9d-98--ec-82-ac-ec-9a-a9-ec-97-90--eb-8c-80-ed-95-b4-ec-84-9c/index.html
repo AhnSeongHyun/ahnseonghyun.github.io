@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [JAVA] private 생성자의 사용에 대해서."/>
+    <meta property="og:description" content="필자는 데이터 클래스라는 것을 많이 만들어쓰는 편인다. List나 Hashtable 의 변수에 이름을 주는 것 보다 클래스와 멤버에 이름을 줌으로써 좀 더 의미를 명확하게 표현할 수 있기 때문에 자주 사용하는 편이다. 데이터 클래스들의 경우 사실상 클래스에서 행동이라고 하는게 set, get 과 같은 정도의 것 밖에 없는 경우가 많다. 다음의"/>
+    <meta property="og:url" content="https://ash84.io/docs/2012/11/29/java-private--ec-83-9d-ec-84-b1-ec-9e-90-ec-9d-98--ec-82-ac-ec-9a-a9-ec-97-90--eb-8c-80-ed-95-b4-ec-84-9c"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[JAVA] private 생성자의 사용에 대해서.</title>
+    <meta name="description" content="필자는 데이터 클래스라는 것을 많이 만들어쓰는 편인다. List나 Hashtable 의 변수에 이름을 주는 것 보다 클래스와 멤버에 이름을 줌으로써 좀 더 의미를 명확하게 표현할 수 있기 때문에 자주 사용하는 편이다. 데이터 클래스들의 경우 사실상 클래스에서 행동이라고 하는게 set, get 과 같은 정도의 것 밖에 없는 경우가 많다. 다음의" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[JAVA] private 생성자의 사용에 대해서.</h1>
+    <div class="blog-post-meta"> 
+        <small>  2012-11-29</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="font-size: 11pt;">필자는 데이터 클래스라는 것을 많이 만들어쓰는 편인다. </span><span style="font-size: 11pt;">List나 Hashtable 의 변수에 이름을 주는 것 보다 클래스와 멤버에 이름을 줌으로써 좀 더 의미를 명확하게 표현할 수 있기 때문에 자주 사용하는 편이다. </span><span style="font-size: 11pt;">데이터 클래스들의 경우 사실상 클래스에서 행동이라고 하는게 set, get 과 같은 정도의 것 밖에 없는 경우가 많다. 다음의 케이스를 보자. </span></p>
+<p><span style="font-size: 11pt;"></span></p>
+<script src="https://gist.github.com/4152877.js"></script>
+
+<p><span style="font-size: 11pt;">나는 한자와 한글을 담는 데이터 클래스를 만들었다. 그리고 이것이 여러개 있는것이 있는 리스트를 만들고 싶다. 그럴 경우 아래와 같이 사용한다. </span></p>
+<p><span style="font-size: 11pt;"></span></p>
+<script src="https://gist.github.com/4152895.js"></script>
+
+<p><span style="font-size: 11pt;">좀더 줄여보면 아래와 같이 사용하는 편이 더 간단한것이라고 생각된다. </span></p>
+<p><span style="font-size: 11pt;"></span></p>
+<script src="https://gist.github.com/4152899.js"></script>
+
+<p><span style="font-size: 11pt;">이렇게 사용될 경우, 당연히 생성자 오버로딩을 해야하며, 사실상 생성된 오버로딩만 해당 케이스를 통해서 사용될 경우가 많다. 생성자 오버로딩이 된다면 실질적으로 멤버필드들의 set 메소드를 필요 없게 된다. 이것은 set 은 오버로딩된 생성자를 통해서만 하겠다는 무언의 약속인 것이다. </span></p>
+<script src="https://gist.github.com/4152942.js"></script>
+
+<p><span style="font-size: 11pt;">이럴경우, 가장 중요한 부분은 바로 기본 생성자에 대한 <strong>private 생성자 처리</strong>이다. private 생성자를 쓰지 않으면 아무 값도 들어가지 않은 생성자가 생겨나게 된다. 문제는 set 함수가 없기 때문에 값을 지정할 수가 없다. 때문에 private 생성자를 써서 컴파일 시점에서 개발자가 기본 생성자로 객체를 만드는 것을 막아야한다. </span></p>
+<p><span style="font-size: 11pt;">왜 이렇게 사용하는가에 대한 의문이 있을수 있겠지만, 사실 이것은 Hanja 클래스를 데이터 클래스로 쓰겠다는 용도와 생성시에만 값을 넣게 하겠다는 정책의 결과이다. 그렇지만 은근히 이렇게 데이터 클래스를 만들어 사용하는 경우가 많기 때문에 이런 경우 private 생성자를 써주길 바란다. </span></p>
+    </div>
+    <div>
+        
+            #AssertionError&nbsp;
+        
+            #date class&nbsp;
+        
+            #dev&nbsp;
+        
+            #Java&nbsp;
+        
+            #private 생성자&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

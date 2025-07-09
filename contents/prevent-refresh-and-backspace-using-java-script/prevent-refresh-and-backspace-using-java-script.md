@@ -1,7 +1,7 @@
 ---
 title: 'Prevent refresh and backspace using java script'
 author: 'ash84'
-pub_date: '2017-04-24'
+pub_date: '2015-10-07'
 description: ''
 featured_image: ''
 tags: ['dev']

@@ -1,7 +1,7 @@
 ---
 title: 'polyfill & modernizr'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2016-01-24'
 description: ''
 featured_image: ''
 tags: ['dev', 'modernizr', 'polyfill']

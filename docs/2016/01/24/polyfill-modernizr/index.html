@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - polyfill & modernizr"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="https://ash84.io/docs/2016/01/24/polyfill-modernizr"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>polyfill & modernizr</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">polyfill & modernizr</h1>
+    <div class="blog-post-meta"> 
+        <small>  2016-01-24</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>이렇게 정리하게 된 계기는 이전에 올린 <a href="http://ash84.net/2015/12/23/console-log-browser-support/">console.log() 의 IE7에 대한 이슈</a>때문에 시작이 되었다.</p>
+<blockquote>
+<p><a href="https://twitter.com/sh84ahn">@sh84ahn</a> <a href="https://t.co/aOTeHRNAIJ">https://t.co/aOTeHRNAIJ</a> 구버전 IE에서도 서비스를 사용한다면 이런 폴리필도 예비로 넣어두는 것도 좋을 것 같아요. 디버그 플래그를 같이 넣는다거나 번들링 도구로 제거하는게 가장 좋겠지만요 ㅎㅎ</p>
+<p>— 용균 (@haruair) <a href="https://twitter.com/haruair/status/679432210148024324">2015년 12월 22일</a></p>
+</blockquote>
+<script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+
+<p>위와 같이 <a href="https://twitter.com/haruair">haruair</a> 님이 폴리필에 대해서 언급해주시면서 개인적으로 잘 모르는 부분이라 정리를 한다.</p>
+<h4>polyfill</h4>
+<ul>
+<li>필요 이유 : 브라우저가 여러가지가 생겨서, 브라우저 파편화가 발생됨. 비슷하게라도 결과를 보여줘야 하는데, 여러가지 방법을 동원, 이런 방식을 shim(끼움새), fallback 이라고 한다.</li>
+<li>Polyfill 이란 파편화를 보이는 브라우저에 삽입하는 자바스크립트 소스로 브라우저를 스스로 판별하여 해당 브라우저에 필요한 shim 을 알아서 끼워준다.</li>
+<li>영국의 개발자 Remy Sharp 가 처음 용어를 사용하였다.</li>
+<li>poly(여러가지방법), fill(공백을 메운다.) 라는 의미 즉, 브라우저간의 지원 공백을 다양한 방법으로 메우는것.</li>
+</ul>
+<h4><a href="http://modernizr.com">modernizr</a></h4>
+<p><img alt="" src="https://farm2.staticflickr.com/1520/23942400513_ee25c1f352_o.png" /></p>
+<p><a href="http://modernizr.com">http://modernizr.com</a> 은 HTML5, CSS3 의 특징들을 조합해서 JS로 만들어 주는 도구이다. 아쉽게도 <a href="https://github.com/paulmillr/console-polyfill">console-polyfill</a> 은 포함되어 있지 않다. 원래 modernizr 는 load 함수를 지원해서 다른 polyfill(modernizer)자바스크립트를 <code>load()</code>해서 쓸 수 있었는데(대부분의 한글 사용법이 이 방식을 설명), 추후 yepnope 라는 모듈을 통해서 지원해 왔었다.</p>
+<script src="https://gist.github.com/AhnSeongHyun/78eb7dd214161d405398.js"></script>
+
+<p>yepnope 가 개발유지를 하지 않으면서 <a href="https://github.com/Modernizr/Modernizr/issues/1666">modernizr 에서도 더 이상 직접적인 로드(load)를 지원하지 않는다.</a> 즉, 제공하는 것 외에, 현재 브라우저에서 어떤 기능이 가능한가 가능하지 않은가는 판별할 수 있는데, 그에 관한 js 의 로드는 알아서 해야하는 것 같다.</p>
+<ol>
+<li><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">기타 HTML5 Polyfill 을 모아놓은 사이트</a></li>
+</ol>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #modernizr&nbsp;
+        
+            #polyfill&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

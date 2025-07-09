@@ -1,7 +1,7 @@
 ---
 title: '[ELK] logstash'
 author: 'ash84'
-pub_date: '2018-05-18'
+pub_date: '2016-02-03'
 description: '###개요###
 - 자바 기반으로 다양한 로그들을 수집하고 처리해서 내보낼수 있음. 
 - 다양한 플러그인(input, filter, output) 을 제공하고 있는 것이 최대의 장점. 

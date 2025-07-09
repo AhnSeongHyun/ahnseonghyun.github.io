@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [책] 도메인 주도 설계(에릭에반스) -1"/>
+    <meta property="og:description" content="##제 1부 동작하는 도메인 만들기"/>
+    <meta property="og:url" content="https://ash84.io/docs/2017/06/03/domain-driven-development"/>
+    <meta property="og:image" content="https://c1.staticflickr.com/5/4197/35042157346_3b66b0bd9b_z.jpg"/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[책] 도메인 주도 설계(에릭에반스) -1</title>
+    <meta name="description" content="##제 1부 동작하는 도메인 만들기" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[책] 도메인 주도 설계(에릭에반스) -1</h1>
+    <div class="blog-post-meta"> 
+        <small>  2017-06-03</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+        <img src="https://c1.staticflickr.com/5/4197/35042157346_3b66b0bd9b_z.jpg" alt="">
+    
+    <div class="blog-post">
+        <h2>제 1부 동작하는 도메인 만들기</h2>
+<ul>
+<li>도메인과 모데인 로직에 집중</li>
+<li>설계는 모델을 기반으로 </li>
+<li>모델은 문제 해결을 위한 추상화, 세부사항 x</li>
+<li>지식의 추상화 - 도메인 모델 </li>
+</ul>
+<h3>01장__지식탐구</h3>
+<ul>
+<li>도메인 전문가와 대화를 통해서 지식을 습득해 가고 그것을 모델, 다이어그램으로 정리 </li>
+<li>초기 프로토타입 생성 </li>
+<li>지속적으로 모델을 발전 시키고 불필요한 개념 제거 </li>
+<li>과거의 폭포수 모델 : 지식의 방향이 한방향으로 흐른다. </li>
+<li>훌륭한 프로그래머 : 추상화를 통한 모델 발전, 도메인 전문가와의 협의 필요 </li>
+<li>모델은 결코 완별해질수 없으며, 다만 계속 발전해나갈뿐. </li>
+<li>모델은 도메인을 이해하는데 실용적이고 유용해야한다. </li>
+<li>도메인 전문가가 더 많이 배워 애플리케이션의 목표를 분명하게 만든다. </li>
+<li>정책이랑 Strategy패턴의 또다른 이름이다. </li>
+<li>명시적으로 드러나고 다른 구현과 분리되도록 하자. (ex. OverbookingPolicy 클래스) </li>
+</ul>
+<h3>02장__의사소통과 언어 사용</h3>
+<ul>
+<li>도메인 모델은 프로젝트를 위한 공통언어의 핵심 </li>
+<li>의사소통 = UML + 문서 + 코드 + 테스트 </li>
+<li>Ubiquitous Language(보편언어)</li>
+<li>공통언어를 사용해야한다. </li>
+<li>도메인 전문가 : 도메인언어 , 기술자 : 도메인을 이해한 자신들만의 언어 =&gt; 분열 </li>
+<li>쓰는 용어가 코드가 된다. </li>
+<li>번역은 의사소통을 무디게 하고 지식탐구를 빈약하게 만든다. </li>
+<li>클래스와 주요 연산의 이름이 있고, 패턴의 이름이 들어간다. </li>
+<li>모델의 관계는 모든 언어에 내재된 결합 규칙이 된다. </li>
+<li>도메인전문가, 기술자가 공통언어로 의사소통해야 한다. </li>
+<li>모델을 언어의 근간으로 사용하라. </li>
+<li>공통언어 =&gt; 모델 =&gt; 리팩토링(클래스, 메소드, 모듈)</li>
+<li>Ubiquitous Language 의 변화가 곧 모델의 변화. </li>
+<li>크게 소리내어 모델링하기</li>
+<li>모델을 정제하는 가장 좋은 방법은 다양한 구성요소들을 큰소리로 말하는 것. </li>
+<li>시스템에 관한 이야기를 주고 받을때 모델을사용하라 </li>
+<li>한팀, 한언어 </li>
+<li>모델의 핵심은 도메인 전문가의 관심을 끌어야 한다. </li>
+<li>수준높은 도메인 전문가도 해당모델을 이해하지 못한다면 모델이 뭔가 잘못된것. </li>
+<li>도메인 전문가과 개발자 사이에 언어절 분열이 일어나서는 안된다. </li>
+<li>대화, 논의, 코드까지 공유된 도메인 모델에서 비롯된 동일한 언어를 기반으로 해야한다. </li>
+<li><strong>문서와 다이어그램</strong><ul>
+<li>형식에 얽매이지 않는 UML 다이어그램 </li>
+<li>UML다이어그램은 모델 내 객체의 행위와 모델의 개념과 의미를 전달할 수 없다. </li>
+<li>필수적인 부분만 다이어그램으로 구성 </li>
+<li>설계의 세부사항은 코드에 담긴다. </li>
+<li>구현은 설계를 지태하는 모델을 드러내야 한다. </li>
+<li>모델은 다이어그램이 아니다. 모델을 전달하는 목적. </li>
+<li>코드는 설계의 세부사항의 저장소 역할 </li>
+</ul>
+</li>
+<li><strong>글로 쓴 설계 문서</strong> <ul>
+<li>문서는 코드와 말을 보완하는 역할을 해야한다. </li>
+<li>코드자체만으로는 양에 의해 압도 될수 있다. </li>
+<li>구두와 화이트보드는 일시적, 국지적</li>
+<li>문서는 코드가 이미 잘 하고 있는 것을 하려고 해서는 안된다. (코드는 세부사항)</li>
+<li>글로 쓴 문서는 코드와 논의를 보완해야한다. </li>
+<li>문서는 유효한 상태를 유지, 최신내용을 담고 있어야 한다. </li>
+<li>가장 큰 가치는 모델의 개념 설명, 코드의 세부사항 파악, 모델의 의도 파악 </li>
+<li>문서는 프로젝트 활동과 관련을 맺고 있어야 한다. (문서가 공통언어와 상호작용을 하는지)</li>
+<li>문서가 중요하다고 느껴지지 않으면 최신상태로 유지 하지 않게 된다. </li>
+<li>문서를 최소한 유지, 코드와 대화를 보완하는데 집중</li>
+</ul>
+</li>
+<li><strong>실행 가능한 기반</strong><ul>
+<li>코드가 전달하는 메시지가 정확하는 보장은 없다. </li>
+<li>올바른 실행뿐만 아니라, 올바른 의미를 전달하는 코드의 작성은 엄청난 노력이 필요 </li>
+<li>코드는 동일한 언어를 기반으로 해야한다. </li>
+</ul>
+</li>
+<li>설명을 위한 모델 </li>
+<li>하나의 모델이 구현, 설계, 의사소통의 기초가 되야한다. </li>
+<li>설명을 위한 모델(전달력 높은 의사소통 방식)과 기술적 모델(기능 수행을 위한 최소한의 범위)</li>
+</ul>
+    </div>
+    <div>
+        
+            #DDD&nbsp;
+        
+            #도메인주도의설계&nbsp;
+        
+            #에릭에반스&nbsp;
+        
+            #book&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 title: '[C#] DLL 등록하기 regsvr32.exe'
 author: 'ash84'
-pub_date: '2017-04-27'
+pub_date: '2012-07-28'
 description: ''
 featured_image: ''
 tags: ['c# DLL 등록', 'dev', 'dll 등록', 'MSDN', 'regsvr32.exe']

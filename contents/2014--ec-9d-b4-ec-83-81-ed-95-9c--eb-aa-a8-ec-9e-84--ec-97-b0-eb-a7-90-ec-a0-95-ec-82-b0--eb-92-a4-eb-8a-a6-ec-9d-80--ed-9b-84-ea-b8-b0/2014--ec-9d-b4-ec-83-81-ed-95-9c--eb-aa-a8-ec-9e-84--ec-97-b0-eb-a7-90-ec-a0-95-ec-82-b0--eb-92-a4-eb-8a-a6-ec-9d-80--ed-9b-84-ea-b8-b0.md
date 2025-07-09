@@ -1,7 +1,7 @@
 ---
 title: '2014 이상한 모임 연말정산 뒤늦은 후기'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2015-02-27'
 description: ''
 featured_image: ''
 tags: ['dev', 'http://we.weirdmeetup.com/', 'weirdmeetup', 'weweired', 'conference']

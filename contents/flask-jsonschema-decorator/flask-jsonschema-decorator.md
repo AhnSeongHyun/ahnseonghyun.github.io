@@ -1,7 +1,7 @@
 ---
 title: '(flask) jsonschema 를 이용해서 request.json 검사하기'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2016-11-18'
 description: 'API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다. 
 
 JSON 검증을 위해서 [jsonschema](https://pypi.python.org/pypi/jsonschema) 를 활용할 수 있다는 것을 알았는데, 문'

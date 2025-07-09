@@ -1,7 +1,7 @@
 ---
 title: '모듈화 Webpack 관련 정리'
 author: 'ash84'
-pub_date: '2016-04-25'
+pub_date: '2016-04-12'
 description: '**주의**
 - ==본 글은 타링크에 대한 개인적인 정리글입니다.  ==
 

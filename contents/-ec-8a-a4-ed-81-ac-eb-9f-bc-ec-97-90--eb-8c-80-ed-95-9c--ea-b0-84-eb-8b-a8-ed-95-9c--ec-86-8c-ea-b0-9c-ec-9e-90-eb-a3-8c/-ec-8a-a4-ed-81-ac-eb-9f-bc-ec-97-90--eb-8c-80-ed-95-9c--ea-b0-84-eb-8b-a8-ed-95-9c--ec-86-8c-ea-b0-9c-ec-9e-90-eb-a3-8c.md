@@ -1,7 +1,7 @@
 ---
 title: '스크럼에 대한 간단한 소개자료.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2012-06-16'
 description: '**[Introduction of scrum 안성현 20120606](http://www.slideshare.net/sh84ahn/introduction-of-scrum-20120606 "Introduction of scrum 안성현 20120606")**'
 featured_image: ''
 tags: ['dev', 'SCRUM', '스크럼', '스크럼 소개']

@@ -1,7 +1,7 @@
 ---
 title: 'Security bugs on Windows servers: Flask 0.12.2 and Werkzeug 0.12.2 released'
 author: 'ash84'
-pub_date: '2017-05-25'
+pub_date: '2017-05-22'
 description: '원문 : https://www.palletsprojects.com/blog/flask-werkzeug-0122-security-release/
 
 Flask 0.12.2, Werkzeug 0.12.2 가 릴리즈 되었는데 이것들은 `safe_join` 함수에 대한 보안관련 버그수정을 포함하고 있다. 이 문제는 Windows 서버에서 application 을 운영시에 발생한다. 

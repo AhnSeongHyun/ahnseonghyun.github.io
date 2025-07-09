@@ -1,7 +1,7 @@
 ---
 title: '# Make Program'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-05-23'
 description: '프로그램을 개발한다는 것은 언제 부터인가 협업이라는 개념에 대해서 생각하지 않을수 없었다. 단순히 한 개인이 하나의 프로그램을 개발하는 시대가 저물면서, 아니 어쩌면 너무나 큰 시스템들을, 너무나 빠르게 요구하는 시대일 지도 모른다. 
 
 ![](http://ash84.net/wp-content/uploads/1/cfile29'

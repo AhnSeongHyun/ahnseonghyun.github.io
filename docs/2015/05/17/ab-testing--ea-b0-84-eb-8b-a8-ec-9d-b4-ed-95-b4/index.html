@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - A/B Testing 간단이해"/>
+    <meta property="og:description" content="**A/B Testing**"/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/05/17/ab-testing--ea-b0-84-eb-8b-a8-ec-9d-b4-ed-95-b4"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>A/B Testing 간단이해</title>
+    <meta name="description" content="**A/B Testing**" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">A/B Testing 간단이해</h1>
+    <div class="blog-post-meta"> 
+        <small>  2015-05-17</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><strong>A/B Testing</strong></p>
+<div class="jetpack-video-wrapper">[![abtesting-small](https://farm9.staticflickr.com/8734/17770510261_c223ccefe0_n.jpg)](https://flic.kr/p/t5jvzX)</div>
+<p>– 전체 디자인에서 한가지 요소에 대한 두가지 이상의 버전을 시험, 더 나은것을 판별하는 기법<br />
+ – 무작위비교연구(Randomized-controlled trial) 를 인터넷 마케팅에 적용한것.<br />
+ – 기존의 웹 뿐만 아니라, 모바일앱, 게임등의 분야에서 활용.<br />
+ – 웹 마케팅에서 전환율을 높이기 위해서 가장 많이 사용하는 방식</p>
+<p><strong>왜 사용하는가?</strong><br />
+ – 보다 정확한 인과관계의 파악을 위해서, 가정을 두고 확인하는 작업<br />
+ – 예를 들어, 사이트를 개편했는데 방문객의 구매율이 20%가 늘었다. 개편한 이유 때문일까? 경쟁사 사이트가 닫아서 일까? 등등<br />
+ 어떤 현상에 대한 원인이 정확하지 않을때 “사이트의 개편으로 인해서 방문객의 구매율이 증가하였다”는<br />
+ 가정을 두고 사용자를 A 와 B 의 두 그룹으로 나누어서 한 그룹에는 개편이전의 사이트를 다른 그룹에는 개편후 사이트를 보여주면서 테스트함으로써 가정을 확인한다.</p>
+<p>*** 임의적 할당(random assignment)**<br />
+ – 두 집단, A/B 로 임의적으로 나눠야한다.<br />
+ – 임의적이어야 하는 이유는 특정 기준을 가지고 나누게 되면 해당 기준이 범용적이지 않게 된다.<br />
+ 예를들어, 초등학생과 아닌 사람을 두 집단으로 테스트를 하게 된다면 해당 결과가 과연 전체 사용자를 대변한다고 할수 있는가? 때문에 임의적으로 집단을 분할해야 한다.</p>
+<p><strong>테스트 방법 및 순서</strong></p>
+<ol>
+<li>목표 및 가정 설정하기<br />
+ 목표를 정해야 한다.<br />
+ 예) 어떤 형태의 버튼이 회원가입을 더 유도할것인가? , 어떤 형태의 상품정보가 더 구매로 이끌게 되는가?  </li>
+<li>
+<p>무엇을 테스트 할것인가?<br />
+ 목표에 따라 달라지는데, 목표(가정)을 검증하기 위해서 무엇을 테스트 할것인지 설정한다.<br />
+ 예) 빨간색 회원가입 버튼 vs. 파란색 회원가입 버튼<br />
+ 모든 A/B 테스트는 유일해야하고 확실해야 한다:<br />
+ – 행동을 부르는 워딩이나 크기, 컬러 위치<br />
+ – 헤드라인 또는 상품 설명<br />
+ – 폼의 길이와 타입<br />
+ – 웹 사이트 레이아웃과 스타일<br />
+ – 가격과 프로모션 제공<br />
+ – 랜딩 및 상품 페이ㅣㅈ의 이미지들<br />
+ – 한 페이지의 테스트의 양(적은지 많은지)</p>
+</li>
+<li>
+<p>테스트 방식 정하기<br />
+ 툴에 따라서 약간 다르긴 하지만, 대부분 2가지 방식중 하나로 선택한다.</p>
+</li>
+<li>
+<p>전환 목표(Conversion goal) 지정하기<br />
+ 어떤식으로 테스트의 결과를 측정할지를 지정, A/B 테스트의 결과 기준<br />
+ 예를 들면, 회원가입의 경우 회원가입 버튼을 누르는 지에 대한 클릭 카운트로 결과기준을 설정<br />
+ 혹은 특정 페이지로의 진입이나 재방문률 등의 지표로 지정하는데, 전환목표의 지정은 어떤 요소를 테스트하는지에 따라 다르다.</p>
+</li>
+</ol>
+<p><strong>장점</strong></p>
+<p>– 적은 이용, 빠르고 빈번하게 수행가능하고, 리스크가 적다</p>
+<p><strong>단점</strong><br />
+ – 유효 시간의 문제, 특정 기간내의 결과가 언제까지 유효할 것인가?<br />
+ – 혁신의 폭이 좁다. 둘중 하나<br />
+ – 더 나은것은 찾을수 있지만, 그걸 왜 선택했는지 근본적인 이유 알수 없다.<br />
+ – 포커스 그룹 인터뷰 같은 심층 인터뷰처럼 근본적인 이유 찾기 어렵다.</p>
+<p><strong>단점 보완</strong></p>
+<p><strong>최적안을 두고 계속 실험하기 : 탐험하기(Exploration)</strong><br />
+ – 현재의 최적 결과를 찾아 냈더라도 시간이 지남에따라 계속 변할수 있기 때문에 최적결과외의 다른 안을 가지고 계속 테스트하면서 변화를 추적하는 것이 중요하다.</p>
+<p><strong>최적안 몰아주기 : 뽑아먹기(exploitation)</strong><br />
+ – 최적안을 찾았으면 최적안으로 사용자를 몰아야 이익을 극대화 할수 있다.<br />
+ – 실험을 오래 자주 할수록 전체 사용자 중에서 최적안이 아닌 것에 노출되는 사용자가 많기 떄문에 이익이 줄어들수 있다.</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p><strong>탐험과 뽑아먹기는 분배의 문제</strong></p>
+<p><strong>사용의 예</strong><br />
+ – 웹 사이트에서 개편에서 활용<br />
+ – 모바일 앱이나 게임에서의 활용<br />
+ – 가입이나 구매 버튼의 위치, 색상, 문구 등을 바꿔보기<br />
+ – 이메일 메시지나 푸시 메시지의 제목/본문을 바꿔보기<br />
+ – 회원 가입 양식, 주문 양식 등에서 각종 필드의 순서나 필수여부 등 바꿔보기<br />
+ – 사이트 네비게이션 UI 구성이나 레이블 바꿔보기<br />
+ – 상품 배치나 종류 바꿔보기<br />
+ – 아이템 드랍률이 적절한가<br />
+ – 스테이지별 난이도가 적절하게 증가하는가<br />
+ – 특정 인던의 난이도가 지나치게 쉬운가<br />
+ – 레벨 디자인의 특정 요소가 플레이어로 하여금 기대한 행동을 하도록 잘 유도하는가<br />
+ – 몹이 리스폰되는 장소나 간격이 적절한가<br />
+ – 몬스터 AI가 지나치게 똑똑한가<br />
+ – 플레이어 실력 평가 및 매치매이킹 알고리즘이 적절한가<br />
+ – 새로 기획한 유료 아이템의 성능이 지나치게 좋지는 않은가</p>
+<p><strong>의문점</strong><br />
+ – 결과에 대한 검증은 어떻게 할 것인가?</p>
+<p><strong>References</strong><br />
+ – <a href="http://spoqa.github.io/2012/05/15/ab-testing-basic.html">A/B Testing 에 대한 기초적인 정보들</a><br />
+ – <a href="http://www.ecogwiki.com/A-B_Testing%EC%9D%98_%EB%8B%A8%EC%A0%90%EA%B3%BC_%EA%B0%9C%EC%84%A0%EC%95%88">A-B Testing 의 단점과 개선안</a><br />
+ – <a href="http://www.smashingmagazine.com/2010/06/24/the-ultimate-guide-to-a-b-testing/">The Ultimate Guide to A/B Testing</a></p>
+    </div>
+    <div>
+        
+            #A/B Testing&nbsp;
+        
+            #dev&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

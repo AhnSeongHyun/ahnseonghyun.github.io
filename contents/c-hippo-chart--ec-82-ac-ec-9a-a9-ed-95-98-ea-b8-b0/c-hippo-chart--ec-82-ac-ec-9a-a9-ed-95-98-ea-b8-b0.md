@@ -1,7 +1,7 @@
 ---
 title: '[C#] Hippo Chart 사용하기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-03-01'
 description: ''
 featured_image: ''
 tags: ['An Seong Hyun', 'c#', 'charts', 'dev', 'hippo chart', '국산차트', '안성현', '히포차트']

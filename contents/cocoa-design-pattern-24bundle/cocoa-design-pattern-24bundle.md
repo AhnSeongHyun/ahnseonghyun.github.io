@@ -1,7 +1,7 @@
 ---
 title: '[Cocoa Design Pattern] 24.Bundle'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-07-14'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile1.uf.111CE2494E1D5B1024A668.jpg)
 
 **'

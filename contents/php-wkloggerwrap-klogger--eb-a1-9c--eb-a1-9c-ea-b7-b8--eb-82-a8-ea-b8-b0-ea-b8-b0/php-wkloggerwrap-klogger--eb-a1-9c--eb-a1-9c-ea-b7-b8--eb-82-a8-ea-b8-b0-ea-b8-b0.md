@@ -1,7 +1,7 @@
 ---
 title: '(PHP) WKLogger(Wrap KLogger) 로 로그 남기기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-12-09'
 description: 'php 로거를 찾고 싶었다. 기존 개발자가 response 를 보내야할 페이지에 로그를 출력하는 만행(?) 을 저질르고 있었고 일단 해야하는 작업(지금도 하고 있는 작업)은 파일 로거를 도입하는것이었다. 당연히 내가 구현하는것 보다는 있는것을 쓰는게 편한데 찾아보니 [KLogger](https://github.com/katzgrau/KLogger) 라는것이 있었다. 사실 지금 생각해 보면 좀더 찾아볼껄 하는 생각이 들었는데 쓰는 방식이 log4j 와 흡사해서 채택하게 되었다.'
 featured_image: ''
 tags: ['dev', 'KLogger', 'Logger', 'php', 'WKLogger']

@@ -1,7 +1,7 @@
 ---
 title: '# iPad 버전의 Prezi'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-01-11'
 description: ''
 featured_image: ''
 tags: ['dev', 'iPad', 'prezi', '프리젠테이션']

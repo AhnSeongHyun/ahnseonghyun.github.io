@@ -1,7 +1,7 @@
 ---
 title: 'SQLAlchemy with StoreProcedure'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2016-08-24'
 description: ''
 featured_image: ''
 tags: ['sqlalchemy', 'Python', 'db', 'stored procedure', '저장프로시저']

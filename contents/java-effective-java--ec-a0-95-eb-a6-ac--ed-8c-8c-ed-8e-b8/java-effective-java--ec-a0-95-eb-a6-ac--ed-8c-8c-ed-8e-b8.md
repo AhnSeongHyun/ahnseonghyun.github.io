@@ -1,7 +1,7 @@
 ---
 title: '(Java) Effective Java 정리 파편.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-02-19'
 description: '별거는 아니고 Effective 자바 읽으면서 몇가지 메모한 사항들 정리한다.  
 
 **[항목45. 지역변수의 유효범위를 최소화하자.]**'

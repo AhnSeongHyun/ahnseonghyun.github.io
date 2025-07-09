@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - [C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동."/>
+    <meta property="og:description" content="원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면"/>
+    <meta property="og:url" content="https://ash84.io/docs/2010/11/18/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동.</title>
+    <meta name="description" content="원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동.</h1>
+    <div class="blog-post-meta"> 
+        <small>  2010-11-18</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <div style="text-align: justify; line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; color: rgb(200, 5, 106); font-family: Dotum; line-height: 2; ">원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면 출처표시 해 드리겠습니다. </span></div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div style="text-align: justify; line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
+</span><font color="#333333" face="굴림">  
+<span style="font-size: 11pt; ">  
+</span></font></div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div style="text-align: justify; line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">일단 설명을 드리자면, 윈폼에서 최소화, 최대화, 닫기 및 상단의 텍스트 표시를 없애고 이미지만 나오게 윈폼을 개발하는 경우가 있지요. 사실 ControlBox 를 마우스로 드래그앤 드롭하면 움직이는데, 전체를 이미지로 덮어 버리는 경우에는 그런 부분을 만들어 줘야 합니다. </span></span></font></div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div style="text-align: justify; line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
+</span>  
+<span style="font-size: 11pt; ">  
+</span></div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div style="line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
+</span><font color="#333333" face="굴림"></font></div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
+</span><div><span style="font-size: 11pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">public Point ptRect = new Point(0, 0);</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림">  
+<span style="font-size: 9pt; ">  
+</span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">private void panel_Keypad_MouseDown(object sender, MouseEventArgs e)</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">{</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">            ptRect.X = e.X;</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">            ptRect.Y = e.Y;</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">}</span></span></font></div><span style="font-size: 11pt; ">  
+</span>
+
+</div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div style="line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
+</span><font color="#333333" face="굴림"></font></div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div style="line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
+</span>  
+<span style="font-size: 11pt; ">  
+</span></div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div style="line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
+</span><font color="#333333" face="굴림"></font></div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
+</span><div><span style="font-size: 11pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">private void panel_Keypad_MouseMove(object sender, MouseEventArgs e)</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">{</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">            if (e.Button == MouseButtons.Left)</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">            {</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">                Point pt = new Point(this.Location.X + e.X – ptRect.X,this.Location.Y + e.Y – ptRect.Y);</span></span></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">                </span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">                this.Location = pt;</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">            }</span></span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">  
+</span><font color="#333333" face="굴림"></font><span style="font-family: 굴림; color: rgb(51, 51, 51); "><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 9pt; ">}</span></span></span></div><span style="font-size: 11pt; ">  
+</span>
+
+</div>
+<p><span style="font-size: 11pt; "><br />
+</span></p>
+<div style="line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
+</span><span style="font-family: 굴림; color: rgb(51, 51, 51); "></span></div>
+<p><span style="font-size: 11pt; "></span></p>
+<p><span style="font-size: 11pt; "><br />
+</span><br />
+<strong><span style="font-size: 11pt; ">C++ 에서의 구현(2011.07.21 Update)</span><br />
+<span style="font-size: 11pt; "><br />
+</span><br />
+</strong></p>
+<div><span style="font-size: 11pt; ">  
+</span></div>
+<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><span style="font-size: 11pt; ">  
+</span><div><span style="font-size: 11pt; ">  
+<span style="font-size: 9pt; ">void CLoginDlg::OnLButtonDown(UINT nFlags, CPoint point)</span></span></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">{</span><span class="Apple-tab-span" style="white-space: pre; font-size: 9pt; "></span><span style="font-size: 9pt; "> </span></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">   </span><font color="#e31600"><span style="font-size: 9pt; ">     PostMessage( WM_NCLBUTTONDOWN, HTCAPTION, MAKELPARAM( point.x, point.y)); </span>  
+<span style="font-size: 9pt; ">  
+  </span></font></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span class="Apple-tab-span" style="white-space: pre; font-size: 9pt; "></span><span style="font-size: 9pt; ">CDialogEx::OnLButtonDown(nFlags, point);</span></div><span style="font-size: 9pt; ">  
+</span>
+
+<div><span style="font-size: 9pt; ">}</span></div><span style="font-size: 11pt; ">  
+</span>****
+
+<span style="font-size: 11pt; ">  
+</span>
+
+</div>
+<p><strong><br />
+<span style="font-size: 11pt; "><br />
+</span></strong><span style="font-size: 11pt; ">다이얼로그의 OnLButtonDoown 에서 위의 PostMessage 부분 추가해 주면 됨. 생각보다 쉽게 구현됨. </span></p>
+    </div>
+    <div>
+        
+            #c#&nbsp;
+        
+            #dev&nbsp;
+        
+            #winform&nbsp;
+        
+            #안성현&nbsp;
+        
+            #윈폼&nbsp;
+        
+            #윈폼 이동&nbsp;
+        
+            #최대화&nbsp;
+        
+            #최소화&nbsp;
+        
+            #컨트롤박스&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

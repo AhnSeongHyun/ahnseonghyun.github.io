@@ -1,7 +1,7 @@
 ---
 title: '[MFC] Draw PNG'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2011-05-31'
 description: ''
 featured_image: ''
 tags: ['dev', 'draw png', 'mfc', 'png', 'png mfc', '리소스', '비트맵']

@@ -1,7 +1,7 @@
 ---
 title: 'PyconAPAC 2016 후기 슬라이드'
 author: 'ash84'
-pub_date: '2017-03-28'
+pub_date: '2016-08-23'
 description: ''
 featured_image: ''
 tags: ['Python', 'dev', 'pyconapac2016', 'pycon', 'conference']

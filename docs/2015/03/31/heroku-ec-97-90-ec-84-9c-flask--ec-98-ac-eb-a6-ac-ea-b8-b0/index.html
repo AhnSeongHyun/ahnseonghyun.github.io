@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - heroku에서 flask 올리기"/>
+    <meta property="og:description" content="heroku 를 아주 간단히 설명하자면 마치 서버를 가지고 있는것 처럼 웹의 공간을 대행해주는 업체인데, 클라우드 어플리케이션 플랫폼이라고한다. 특이하게 git 을통해서 올리고 내리고 함으로써 소스를 서버에 반영할 수 가 있다. heroku 에서는 python 부분은 기본적으로 django를 기본으로 하고 있는데 **[heroku에서 제공하는 flask 가이드](https://devcenter.heroku.com/articles/getting-started-with-python-o)**를 기본으로 해서 설명하겠다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2015/03/31/heroku-ec-97-90-ec-84-9c-flask--ec-98-ac-eb-a6-ac-ea-b8-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>heroku에서 flask 올리기</title>
+    <meta name="description" content="heroku 를 아주 간단히 설명하자면 마치 서버를 가지고 있는것 처럼 웹의 공간을 대행해주는 업체인데, 클라우드 어플리케이션 플랫폼이라고한다. 특이하게 git 을통해서 올리고 내리고 함으로써 소스를 서버에 반영할 수 가 있다. heroku 에서는 python 부분은 기본적으로 django를 기본으로 하고 있는데 **[heroku에서 제공하는 flask 가이드](https://devcenter.heroku.com/articles/getting-started-with-python-o)**를 기본으로 해서 설명하겠다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">heroku에서 flask 올리기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2015-03-31</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p>heroku 를 아주 간단히 설명하자면 마치 서버를 가지고 있는것 처럼 웹의 공간을 대행해주는 업체인데, 클라우드 어플리케이션 플랫폼이라고한다. 특이하게 git 을통해서 올리고 내리고 함으로써 소스를 서버에 반영할 수 가 있다. heroku 에서는 python 부분은 기본적으로 django를 기본으로 하고 있는데 <strong><a href="https://devcenter.heroku.com/articles/getting-started-with-python-o">heroku에서 제공하는 flask 가이드</a></strong>를 기본으로 해서 설명하겠다.  </p>
+<p>가입을 하고나서 toolbelt 라는것을 설치해야 한다. toolbelt 의 역할은 heroku 관련 명령어를 처리하는 역할을 한다. 아래의 링크에 가면 각 플랫폼 별로 설치할수 있는데 필자의 경우 ubuntu 버전으로 설치를 하였다.</p>
+<blockquote>
+<p>https://toolbelt.heroku.com</p>
+</blockquote>
+<p>그리고 나서 아래와 같이 login 작업을 해준다. </p>
+<pre><code>heroku login 
+Enter your Heroku credentials. 
+Email: kenneth@example.com 
+Password: Could not find an existing public key. Would you like to generate one? [Yn] 
+Generating new SSH public key. Uploading ssh public key /Users/kenneth/.ssh/id_rsa.pub
+</code></pre>
+<p>로그인 작업을 해주고 나서는 하나의 디렉토리를 만든다. 이 디렉토리가 실제로 내가 작업하는 프로젝트 디렉토리라고보면 된다. </p>
+<pre><code>$ mkdir helloflask
+$ cd helloflask
+</code></pre>
+<p>만든후에는 사실 가이드라인에서는<code>virtualenv</code> 를 이용해서 작업을 하도록 권장하고 있는데(원래 그게 맞다.) 여기서는 생략하고 설치해야 할것은 Flask 와 gunicorn 이다. pip 를 이용해서 설치되어 있다는 가정하에 진행</span><span style="font-size: 11pt;">하도록 하자. </p>
+<p>아래와 같이 <code>helloworld.py</code> 라고 이전에 만든 프로젝트 디렉토리(helloflask)에 입력한다. 코드는 간단하다.</p>
+<pre><code>import os
+from flask import
+Flask app = Flask(name) 
+
+@app.route('/') 
+def hello(): 
+    return'Hello World!'
+</code></pre>
+<p>다음은<code>Procfile</code>을 만드는 부분인데, 일종의 설정 .ini 파일이라고 생각하면되겠다. 이 부분에서 많이 헤맸는데, 파일 이름은 별도의 확장자 없이<code>Procfile</code>이다.(이건 진짜 이상함)  </p>
+<pre><code>web: gunicorn hello:app
+</code></pre>
+<p>위와 같이 입력하면 된다. 원래의 예제에서는 <code>--log-file</code> 부분이 있었는데 별도의 로그를 안썼더니 나중에 배포과정에서 에러가 나서 처음에는 그냥 뺴는게 나을 것 같다.</p>
+<pre><code>foreman start 
+2013-04-03 16:11:22 [8469] [INFO] Starting gunicorn 0.14.6 
+2013-04-03 16:11:22 [8469] [INFO] Listening at: http://127.0.0.1:5000 (8469)
+</code></pre>
+<p>예제에서 있는 <code>foreman start</code> 라는 부분은 <code>foreman</code> 은 heroku 에서 toolbelt 설치될때 설치되는데 위의 명령어를 이용해서 로컬에서 테스트 하는 과정이라고 보면 된다.</p>
+<pre><code class="language-shell">pip freeze &gt; requirements.txt
+</code></pre>
+<p>virtualenv 를 쓰면 pip freeze 시에 그 가상의 환경안에 있는 <code>pip list</code> 만 export 가 된다. 그래서 주로 사용하는데 (독립적인 공간을 사용하기 위해서) 일단 requirements.txt 에서 우리가 만드는 웹이 필요로 하는 파이썬 모듈을 명시해 주어야 한다. </p>
+<pre><code>$ git init 
+$ git add . 
+$ git commit -m &quot;init&quot;
+</code></pre>
+<p>배포 작업을 위해서는 일단 git 으로 초기화를 해주고 현재 프로젝트 디렉토리에 있는 파일들을 추가해준다. 그리고 나서 커밋을 한다. 커밋을 하고 나서는<code>git push</code>를 해서 heroku 에 넣어야 하는데 일단 처음이기 때문에 다음과 같이 <code>heroku create</code>로 공간을 만들어야 한다. 재밌는 점은 어떤 공간이름도 주지 않아도 된다.  </p>
+<pre><code>heroku create
+Creating stark-window-524... done, stack is cedar-14 http://stark-window-524.herokuapp.com/ | git@heroku.com:stark-window-524.git Git remote heroku added
+</code></pre>
+<p>생성되고 나면 다음과 같이 git push 명령어를 통해서 공간에 배포를 하면된다. 아래의 명령어는 추후에 소스를 수정하더라도 commit 후 배포할때 자주 사용하는 명령어이다. </p>
+<pre><code>git push heroku master 
+Counting objects: 10, done. 
+Delta compression using up to 8 threads. 
+Compressing objects: 100% (8/8), done. 
+Heroku To git@heroku.com:stark-window-524.git * [new branch] master -&gt; master
+</code></pre>
+<p>배포되고 나면,이제 실행을 해야하는데 아래와 같이 ps 명령어를 통해서 키면 된다.(정확히는 모르겠지만, dyno 라는 heroku 내의 컨테이너를 이용한다고 한다.)</p>
+<pre><code>heroku ps:scale web=1 
+Scaling web processes... done, now running 1
+</code></pre>
+<p>확인하려면 아래와 같이확인하면 된다. (리눅스의 ps 와 같다.)</p>
+<pre><code>heroku ps 
+web: `gunicorn hello:app`
+web.1: up for 5s
+</code></pre>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 페이지내_긴_배너 -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8699046198561974"
+     data-ad-slot="5480877276"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>원래 예제에서는 <code>open</code>명령어를 통해서 웹페이지를 여는데, ubuntu 에서는 문제가 생긴다. 디스플레이 할수 없기 때문인데, 웹 페이지를 확인 하기위해서는 heroku.com 에 가서 Personal App 부분에서 Setting 부분에 보면 domains 부분에 url을 확인 할 수가 있다. 나중에는 settings 부분에서 이름을 수정함으로써 app.heroku.com 으로 접근할 수가 있다.</p>
+<p>말로만 들었던 heroku 를 해봐서 너무 재밌었는데 여러가지 좋은점이 있겠지만, 내가 느낀점은 테스트 서버나 사내 서버로만 여러가지 요즘의 외부 서비스나 툴들을 테스트 할 수가 없다. 도메인을 요구하거나 public ip를 요구하는 경우가 많기 떄문에 그런 툴들을 이용하기 위해서 heroku는 좋은 대안이 될수 있겠다는 생각이 든다. </p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #FLASK&nbsp;
+        
+            #heroku&nbsp;
+        
+            #heroku with flask&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

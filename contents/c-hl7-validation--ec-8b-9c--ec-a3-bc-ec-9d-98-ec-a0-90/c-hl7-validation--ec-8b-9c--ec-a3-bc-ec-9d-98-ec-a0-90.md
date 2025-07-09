@@ -1,7 +1,7 @@
 ---
 title: '[C#] HL7 Validation 시, 주의점.'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2008-08-13'
 description: 'HL7 Validation 시 주의점, 대부분의 XML의 Validation은 별 문제가 없었지만, HL7 같은 경우는 다음과 같은 예외가 발생했다.'
 featured_image: ''
 tags: ['c#', 'dev', 'HL7', 'ValidationCheck', 'XSD', '스키마', '예외', '프로그래밍']

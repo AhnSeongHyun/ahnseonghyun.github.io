@@ -1,7 +1,7 @@
 ---
 title: '[C#] 이미지 Fade in 하며 보여주기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-04-14'
 description: ''
 featured_image: ''
 tags: ['c#', 'dev', 'Image Fade in', 'Wince', '윈ce', '윈도우 모바일']

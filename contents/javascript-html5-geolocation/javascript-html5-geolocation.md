@@ -1,7 +1,7 @@
 ---
 title: '(javascript) HTML5 geolocation 사용하기'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2013-09-02'
 description: ''
 featured_image: ''
 tags: ['dev', 'geolocation', 'HTML5', '위도 경도', '위치 찾기']

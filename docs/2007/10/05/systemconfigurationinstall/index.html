@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - System.Configuration.Install"/>
+    <meta property="og:description" content="******System.Configuration.Install ?**"/>
+    <meta property="og:url" content="https://ash84.io/docs/2007/10/05/systemconfigurationinstall"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>System.Configuration.Install</title>
+    <meta name="description" content="******System.Configuration.Install ?**" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">System.Configuration.Install</h1>
+    <div class="blog-post-meta"> 
+        <small>  2007-10-05</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><strong><span style="FONT-SIZE: 9pt"><font color="#000000" face="맑은 고딕"><span style="font-size: 11pt;"></span></font></span></strong><strong><span style="FONT-SIZE: 9pt"><font face="맑은 고딕"><font color="#000000"><span style="font-size: 11pt;">System.Configuration.Install ?</span></font></font></span></strong></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><strong><span style="FONT-SIZE: 9pt"><font color="#000000" face="맑은 고딕"><span style="font-size: 11pt;"> </span></font></span></strong></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><font face="맑은 고딕"><font color="#000000"><span style="font-size: 11pt; color: black;">– </span><span style="FONT-SIZE: 9pt; COLOR: black; mso-themecolor: text1"><span style="font-size: 11pt;">사용자 자신의 구성 요소에 대한 사용자 지정 설치 관리자를 쓸 수 있게 해주는 클래스를 제공합니다</span><span style="font-size: 11pt;">. </span></span><span><a href="http://msdn2.microsoft.com/ko-kr/library/system.configuration.install.installer(VS.80).aspx"><span style="font-size: 11pt; color: black;">Installer</span></a></span><span style="font-size: 11pt; color: black;"></span><span style="FONT-SIZE: 9pt; COLOR: black; mso-themecolor: text1"><span style="font-size: 11pt;">클래스는</span><span style="font-size: 11pt;"> .NET Framework</span><span style="font-size: 11pt;">의 모든 사용자 지정 설치 관리자에 대한 기본 클래스입니다</span><span style="font-size: 11pt;">. </span></span><span><a href="http://msdn2.microsoft.com/ko-kr/library/system.configuration.install.installer.installers(VS.80).aspx"><span style="font-size: 11pt; color: black;">Installer.Installers</span></a></span><span style="font-size: 11pt; color: black;"></span><span style="FONT-SIZE: 9pt; COLOR: black; mso-themecolor: text1"><span style="font-size: 11pt;">속성의 경우 설치 관리자에는 다른 설치 관리자의 컬렉션이 자식으로 포함되어 있습니다</span><span style="font-size: 11pt;">. </span><span style="font-size: 11pt;">설치 관리자가 실행될 때</span><span style="font-size: 11pt;">, </span><span style="font-size: 11pt;">설치 관리자는 해당 자식을 순환하고</span><span style="font-size: 11pt;"> System.Configuration.Install.Installer.Install, System.Configuration.Install.Installer.Commit, System.Configuration.Install.Installer.Rollback </span><span style="font-size: 11pt;">또는</span><span style="font-size: 11pt;"> System.Configuration.Install.Installer.Uninstall</span><span style="font-size: 11pt;">를 호출합니다</span><span style="font-size: 11pt;">.</span></span></font></font></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><font face="맑은 고딕"><font color="#000000"><strong><span style="font-size: 11pt;">└</span></strong><strong><span style="font-size: 11pt;"> Installer Class </span></strong></font></font></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><strong><span style="FONT-SIZE: 9pt"><font color="#000000" face="맑은 고딕"><span style="font-size: 11pt;"> </span></font></span></strong></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><font color="#000000"><strong><span style="FONT-SIZE: 9pt"><font face="Times New Roman"><span style="font-size: 11pt;">– </span></font></span></strong><span style="font-size: 11pt; color: black; font-family: 굴림;">사용자</span><span style="font-size: 11pt; color: black; font-family: Verdana, sans-serif;"></span><span style="font-size: 11pt; color: black; font-family: 굴림;">지정</span><span style="font-size: 11pt; color: black; font-family: Verdana, sans-serif;"></span><span style="font-size: 11pt; color: black; font-family: 굴림;">설치의</span><span style="font-size: 11pt; color: black; font-family: Verdana, sans-serif;"></span><span style="font-size: 11pt; color: black; font-family: 굴림;">기반을</span><span style="font-size: 11pt; color: black; font-family: Verdana, sans-serif;"></span><span style="font-size: 11pt; color: black; font-family: 굴림;">제공합니다</span><span style="FONT-SIZE: 8.5pt; COLOR: black; FONT-FAMILY: 'Verdana','sans-serif'; mso-fareast-font-family: 굴림; mso-bidi-font-family: 굴림; mso-font-kerning: 0pt"><span style="font-size: 11pt;">. </span></span></font></p>
+<p><span style="font-size: 11pt;">     </span><font face="맑은 고딕"><font color="#000000"><strong><span style="font-size: 11pt; color: black;">Installer</span></strong><strong><span style="FONT-SIZE: 9pt; COLOR: black; mso-themecolor: text1"><span style="font-size: 11pt;">를 사용하려면 다음 단계를 수행해야 합니다</span><span style="font-size: 11pt;">. </span></span></strong></font></font></p>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<ul>
+<li><font face="맑은 고딕"><font color="#000000"><strong><span style="font-size: 11pt;">Installer</span></strong><strong><span style="font-size: 11pt;"></span></strong><strong><span style="FONT-SIZE: 9pt"><span style="font-size: 11pt;">클래스를 상속합니다</span><span style="font-size: 11pt;">.</span></span></strong></font></font></li>
+<li><span style="COLOR: windowtext"><a href="http://msdn2.microsoft.com/ko-kr/library/system.configuration.install.installer.install(VS.80).aspx"><strong><span style="FONT-SIZE: 9pt; COLOR: black; mso-themecolor: text1"><font color="#000000" face="맑은 고딕"><span style="font-size: 11pt;">Install</span></font></span></strong></a></span><font face="맑은 고딕"><font color="#000000"><strong><span style="font-size: 11pt;">, </span></strong><span style="COLOR: windowtext"><a href="http://msdn2.microsoft.com/ko-kr/library/system.configuration.install.installer.commit(VS.80).aspx"><strong><span style="font-size: 11pt; color: black;">Commit</span></strong></a></span><strong><span style="font-size: 11pt;">, </span></strong><span style="COLOR: windowtext"><a href="http://msdn2.microsoft.com/ko-kr/library/system.configuration.install.installer.rollback(VS.80).aspx"><strong><span style="font-size: 11pt; color: black;">Rollback</span></strong></a></span><strong><span style="font-size: 11pt;"></span></strong><strong><span style="font-size: 11pt;">및 </span></strong><span style="COLOR: windowtext"><a href="http://msdn2.microsoft.com/ko-kr/library/system.configuration.install.installer.uninstall(VS.80).aspx"><strong><span style="font-size: 11pt; color: black;">Uninstall</span></strong></a></span><strong><span style="font-size: 11pt;"></span></strong><strong><span style="FONT-SIZE: 9pt"><span style="font-size: 11pt;">메서드를 재정의합니다</span><span style="font-size: 11pt;">.</span></span></strong></font></font></li>
+<li><span style="COLOR: windowtext"><a href="http://msdn2.microsoft.com/ko-kr/library/system.componentmodel.runinstallerattribute(VS.80).aspx"><strong><span style="FONT-SIZE: 9pt; COLOR: black; mso-themecolor: text1"><font color="#000000" face="맑은 고딕"><span style="font-size: 11pt;">RunInstallerAttribute</span></font></span></strong></a></span><strong><span style="FONT-SIZE: 9pt"><font face="맑은 고딕"><font color="#000000"><span style="font-size: 11pt;">를 파생 클래스에 추가한 다음 </span><span style="font-size: 11pt;">true</span><span style="font-size: 11pt;">로 설정합니다</span><span style="font-size: 11pt;">.</span></font></font></span></strong></li>
+<li><strong><span style="FONT-SIZE: 9pt"><font face="맑은 고딕"><font color="#000000"><span style="font-size: 11pt;">설치할 응용 프로그램의 어셈블리에 파생 클래스를 배치합니다</span><span style="font-size: 11pt;">.</span></font></font></span></strong></li>
+<li><strong><span style="FONT-SIZE: 9pt"><font face="맑은 고딕"><font color="#000000"><span style="font-size: 11pt;">설치 관리자를 호출합니다</span><span style="font-size: 11pt;">. </span><span style="font-size: 11pt;">예를 들어</span><span style="font-size: 11pt;">, InstallUtil.exe</span><span style="font-size: 11pt;">를 사용하여 설치 관리자를 호출합니다</span><span style="font-size: 11pt;">.</span></font></font></span></strong></li>
+</ul>
+<p><span style="font-size: 11pt;"><br />
+</span></p>
+<p><strong><span style="FONT-SIZE: 9pt; COLOR: black; mso-themecolor: text1"><font color="#000000" face="맑은 고딕"><span style="font-size: 11pt;"> </span></font></span></strong></p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #Installer Class&nbsp;
+        
+            #System.Configuration.Install&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

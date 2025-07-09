@@ -1,7 +1,7 @@
 ---
 title: '[JAVA] 서브클래싱을 막는 방법'
 author: 'ash84'
-pub_date: '2016-06-22'
+pub_date: '2012-12-12'
 description: '서브클래싱(subclassing)을 막는 두가지 방법
 
 **1. class에 final 키워드로 두기**

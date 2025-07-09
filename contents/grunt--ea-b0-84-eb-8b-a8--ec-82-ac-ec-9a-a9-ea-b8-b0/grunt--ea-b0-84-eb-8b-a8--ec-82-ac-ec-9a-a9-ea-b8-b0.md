@@ -1,7 +1,7 @@
 ---
 title: 'grunt 간단 사용기'
 author: 'ash84'
-pub_date: '2016-08-13'
+pub_date: '2015-03-27'
 description: '#### 개요
 
 - task 를 지정해서 커맨드라인을 통해서 동작하는 자바스크립트 빌드용 툴이다. 

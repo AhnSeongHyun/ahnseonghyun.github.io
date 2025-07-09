@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <!-- <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script> -->
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - (python) opengraph 라이브러리 리뷰"/>
+    <meta property="og:description" content="사실 [오픈그래프](http://ogp.me)라는 것에 대해서 알게 된것은 [전 포스팅](http://ash84.tistory.com/1000)에서 말했지만 우연한 기회였다. 난 그때만 해도 여전히 오픈그래프에 대해서 신기해하고 있던 터라 구글 검색을 해보았는데 파이썬 기반 오픈"/>
+    <meta property="og:url" content="https://ash84.io/docs/2013/07/16/python-opengraph--eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac--eb-a6-ac-eb-b7-b0"/>
+    <meta property="og:image" content=""/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>(python) opengraph 라이브러리 리뷰</title>
+    <meta name="description" content="사실 [오픈그래프](http://ogp.me)라는 것에 대해서 알게 된것은 [전 포스팅](http://ash84.tistory.com/1000)에서 말했지만 우연한 기회였다. 난 그때만 해도 여전히 오픈그래프에 대해서 신기해하고 있던 터라 구글 검색을 해보았는데 파이썬 기반 오픈" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">(python) opengraph 라이브러리 리뷰</h1>
+    <div class="blog-post-meta"> 
+        <small>  2013-07-16</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <p><span style="text-align: justify; font-size: 11pt; line-height: 2;">사실 <a href="http://ogp.me">오픈그래프</a>라는 것에 대해서 알게 된것은 </span><a href="http://ash84.tistory.com/1000">전 포스팅</a><span style="text-align: justify; font-size: 11pt; line-height: 2;">에서 말했지만 우연한 기회였다. 난 그때만 해도 여전히 오픈그래프에 대해서 신기해하고 있던 터라 구글 검색을 해보았는데 파이썬 기반 오픈그래프 파싱 라이브러리가 있었고 분석했던 내용을 소개하고자 한다. </span></p>
+<p><span style="font-size: 11pt;">인스톨은 아래와 같이 하면 되고 </span></p>
+<div class="txc-textbox" style="border: 1px solid #cbcbcb; background-color: #ffffff; padding: 10px;"><span style="font-size: 11pt;">pip install opengraph </span>
+
+</div>
+<p><span style="font-size: 11pt;">사용하는 방법은 아래와 같다. </span></p>
+<script src="https://gist.github.com/AhnSeongHyun/6010278.js"></script>
+
+<p><span style="font-size: 11pt;">간단한 편인데, url=”http://facebook.com” 이렇게 url을 지정하는 방식 외에도 html 문자열 자체를 넣는 방식도 있으니 한번 참고해 볼만 하다. 이 오픈소스의 가장 좋은 기능이라면 단연 json 과 xml 로 변환을 해준다는 것도 있지만 <code>is_valid()</code> 함수를 통해서 오픈그래프 프로토콜의 준수여부를 알려준다는 것이다. <strong>(난 사실 그것이 더 단점이라고 생각하기도 한다. 왜냐하면 오픈그래프 파서 라이브러리긴 하지만 페이스북에서는 오픈그래프 프로토콜이 없어도 웹 페이지에 대한 요약본을 만들수 있는데, 이 오픈소스는 그렇진 못하다.)</strong></span></p>
+<p><span style="font-size: 11pt;">내부적으로 사용하는 라이브러리는 총 3가지인데, <strong>re, urllib2, BeautifulSoup </strong>이렇게 3가지이다. re 는 대부분 파이썬을 사용하시는 분들이라면 아실듯 한데, 정규표현식을 계산하는 라이브러리고, urllib2는 url 을 열어서 데이터를 가져오는 라이브러리다. 마지막으로 BeautifulSoup은 html 파싱 라이브러리로 사실은 파이썬에서는 HTMLParser 라는 내부 html 파싱 라이브러리를 제공하지만, </span><span style="font-size: 11pt; line-height: 1.5;">BeautifulSoup이 좀더 편하다고 알려져 있다. </span></p>
+<p><span style="font-size: 11pt; line-height: 1.5;"> </span></p>
+<p><span style="font-size: 11pt; line-height: 2;"><strong><span style="font-size: 12pt;">동작 방식</span></strong></span></p>
+<p><span style="font-size: 9pt; line-height: 2;"> </span></p>
+<p><span style="font-size: 11pt; line-height: 2;">hrml 이냐 url 이냐에 따라서 갈라지긴 하지만, <strong>결과적으로는 html 을 파싱하는 것이다.</strong> 실행해 보면 알겠지만 사실 html 중에서도 부분만 파싱을 하는데 왜 이렇게 오래 걸릴까 하는 분들도 있겠지만 전체 데이터를 가져오기 때문에 오래 걸리는 것이다. 사실 파싱하는 양은 그리 많진 않다. urllib2 를 이용해서 데이터를 가져오고 </span><span style="font-size: 11pt;">BeautifulSoup을 이용해서 파싱을 하고 있다. </span></p>
+<p><span style="font-size: 9pt;"> </span></p>
+<p><span style="font-size: 15px; line-height: 29px;"> </span><span style="font-size: 15px; line-height: 29px;"><code>parser()</code></span><span style="font-size: 11pt;"> 함수를 보면 정규표현식을 이용해서 property 속성에서 og 가 있는 것들을 추리고 그 안에서 og:title 이라고 하면 title 값을 가져와서 키값으로 사용하고 content 속성의 값을 해당 키에 대한 값으로 활용하고 있다. 그리고 그 키값들이 오픈그래프 프로토콜의 basic metadata 를 모두 포함하고 있는지를 확인함으로써 <code>is_valid()</code>를 판별하고 있다. </span></p>
+<p><span style="font-size: 11pt;">하나의 파이썬 파일로 되어 있어서 보기엔 그리 어렵지 않고, 쓰기에도 적당한것 같다. pypi 에 가서 opengraph 를 쳐보면 실제로 가장 많은 weight를 가지고 있다.(약간 이름빨도 있는듯, 선점효과랄까) 웹페이지의 요약정보를 파싱하실 일이 있으면 사용하기 좋은 라이브러리다. </span></p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #ExtendedOpenGraph&nbsp;
+        
+            #opengraph&nbsp;
+        
+            #pypi&nbsp;
+        
+            #Python&nbsp;
+        
+            #오픈그래프&nbsp;
+        
+            #파이썬&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

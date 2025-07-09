@@ -1,7 +1,7 @@
 ---
 title: '헬스케어 산업, 언제까지 시범 사업인가?'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2008-09-22'
 description: '[](http://ash84.net/wp-content/uploads/1/48d7b4dad941e6J.bmp)48d7b4dad941e6J.bmpFROM LG CNS
 
 <'

@@ -1,7 +1,7 @@
 ---
 title: '(iOS) SVProgressHUD 를 이용한 팝업 보여주기'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2013-09-21'
 description: 'UIAlertViewController를 이용할수도 있겠지만 좀더 세련된 앱을 만들려면 조금이라도 이쁜 모냥새를 보워주는 것이 필수적이다. 그래서 SVProgressHUD 를 주로 팝업이나 로딩시 이용한다.'
 featured_image: ''
 tags: ['dev', 'Objective-C', 'showWithMaskType', 'showWithStatus', 'SVProgressHUD']

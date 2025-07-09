@@ -1,7 +1,7 @@
 ---
 title: '# 난 아이폰에서 앱 디자인한다. Interface'
 author: 'ash84'
-pub_date: '2015-07-03'
+pub_date: '2010-06-03'
 description: '우연히 이곳저곳 찾다가 발견한 **Interface App**'
 featured_image: ''
 tags: ['App UI', 'dev', 'interface app', 'UI', '아이폰 앱 디자인']

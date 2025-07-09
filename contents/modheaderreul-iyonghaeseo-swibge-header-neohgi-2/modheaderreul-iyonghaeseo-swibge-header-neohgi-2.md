@@ -1,7 +1,7 @@
 ---
 title: 'ModHeader를 이용해서 쉽게 Header 넣기'
 author: 'ash84'
-pub_date: '2025-01-25'
+pub_date: '2016-11-18'
 description: 'https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj
 
 

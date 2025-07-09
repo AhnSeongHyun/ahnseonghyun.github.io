@@ -1,7 +1,7 @@
 ---
 title: 'A/B Testing 간단이해'
 author: 'ash84'
-pub_date: '2017-04-03'
+pub_date: '2015-05-17'
 description: '**A/B Testing**
 
  

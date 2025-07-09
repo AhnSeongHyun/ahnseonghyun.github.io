@@ -1,7 +1,7 @@
 ---
 title: 'pycharm - 화면 모드'
 author: 'ash84'
-pub_date: '2018-05-17'
+pub_date: '2017-04-17'
 description: 'pycharm 에서는 3가지 화면을 다르게 볼수 있는 것을 제공하고 있다. 그래서 특정 상황에 맞는 화면모드를 사용 할 수가 있다. 
 
 - Full Screen
