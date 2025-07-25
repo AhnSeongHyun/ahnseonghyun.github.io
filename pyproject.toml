@@ -5,35 +5,5 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "markdown>=3.8.2",
-    "typer>=0.16.0",
-    "ruff>=0.12.2",
-    "jinja2>=3.1.6",
-    "pyyaml>=6.0.2",
-    "rich>=13.7.1",
-    "pydantic>=2.11.7",
-    "beautifulsoup4>=4.13.4",
-    "lxml>=6.0.0",
+    "zvc>=0.1.4",
 ]
-
-[project.scripts]
-zv = "zv.cli:main"
-
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
-[tool.ruff]
-# Enable pycodestyle ('E'), pyflakes ('F'), and isort ('I') rules
-select = ["E", "F", "I"]
-
-# Python files to analyze
-include = ["*.py"]
-
-# Maximum line length
-line-length = 120
-
-# Sort imports
-[tool.ruff.isort]
-combine-as-imports = true
-force-sort-within-sections = true

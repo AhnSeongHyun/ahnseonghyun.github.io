@@ -1,22 +1,17 @@
 # Makefile for ash84.io static site
 
-.PHONY: build clean format dev install
+.PHONY: build clean run
 
-# Install zv package in development mode
-install:
-	pip install -e .
 
 # Build the static site
-build: install
-	zv build
+build: 
+	zvc build
 
 # Clean generated files
-clean: install
-	zv clean
+clean: 
+	zvc clean
 
-dev: 
-	zv build
+run: 
+	zvc build
 	python -m http.server 8000  --directory ./docs 
-
-format: 
-	ruff format .
+ 
