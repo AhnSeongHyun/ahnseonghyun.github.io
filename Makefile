@@ -6,6 +6,7 @@
 # Build the static site
 build: 
 	zvc build
+	echo "ash84.io" > ./docs/CNAME
 
 # Clean generated files
 clean: 
