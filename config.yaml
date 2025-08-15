@@ -2,7 +2,7 @@ theme:
   name: solopreneur
 blog: 
   title: Ash84
-  description: Ash84's blog
+  description: Software Engineering, Product Management, and Leadership, LifeStyle, and more
   author: Ash84
 publication:
   path: ./docs
