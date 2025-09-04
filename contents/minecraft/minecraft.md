@@ -1,5 +1,5 @@
 ---
-title: '마인크래프트 docker'
+title: '마인크래프트 docker로 서버띄우기'
 author: 'ash84'
 pub_date: '2025-09-05'
 description: '마인크래프트 서버 띄워서 멀티플레이'
@@ -36,11 +36,11 @@ docker run -d --name mcbedrock \
 
 ## 추가사항
 
-⚠️ 약간의 틀린 내용이 있을수 있습니다. 저도 마인크래프트 전문가가 아님을 먼저 말씀드립니다. 
+> ⚠️ 약간의 틀린 내용이 있을수 있습니다. 저도 마인크래프트 전문가가 아님을 먼저 말씀드립니다. 
 
 일단 기본적으로 만들면 마인크래프트 아무것도 없는 곳이 나오는데, 아이들이 유튜브에서 마인크래프트를 접하게 되면 어느정도 구축된 세계를 플레이하는 유튜버의 플레이를 기준으로 삼게 된다. 한마디로 아빠가 만들어준 세계가 너무 시시하다. 그래서 처음에는 월드를 설치해줬다. 월드라는게 무엇이냐 하면, 스타크래프트로 치면 유즈맵세팅 같은 느낌이라고 보면된다.(맞나?) 원래 마인크래프트세계는 아무것도 없는데 여러가지 조건이나 제약이나 미리 어느정도의 세계를 구축해 놓은것이다. 
 
-https://mcpedl.com/tag/mcworld/
+[https://mcpedl.com/tag/mcworld/](https://mcpedl.com/tag/mcworld/)
 
 이런 사이트에 가면 좀비, 오징어게임 심지어 젤다까지 다양한 월드(mcworld)가 있고 이것을 다운로드 받아서 .zip으로 바꾸고 압축을 풀고 특정 디렉토리에 두면 된다. 그리고나서 volume이 연결된 위치, 그러니까 내 로컬로 치면 `~/workspace/bedrock-data` 하위에 `worlds` 하위로 다운로드 받은 디렉토리를 위치 시키면 된다. 그리고 그 디렉토리의 이름을 LEVEL_NAME에 연결시키면 된다. 지금 보면 `ActionAndStuff` 라는 디렉토리가 `~/workspace/bedrock-data/worlds/ActionAndStuff` 위치에 있고 LevelName이 `ActionAndStuff`로 되어 있다. 이렇게 되면 서버로 접속하면 그 월드로 연결되어서 나오게 된다. 
 
@@ -51,13 +51,13 @@ https://mcpedl.com/tag/mcworld/
 
 찾아보니 모드(mods)는 단순하게 생각하면 부분적인 커스터마이징이라고 보면 된다. 예를 들어, 월드는 그대로인데, 특정 아이템만 더 추가를 하고 싶다. 총을 추가하고 싶다라던가 괴물을 더 추가하고 싶다라고 할때 이 모드를 다운로드 받아서 설치하면 된다. 
 
-https://www.minecraftmods.com/
+[https://www.minecraftmods.com/](https://www.minecraftmods.com/)
 
 모드는 2가지 종류가 있느것 같은데 하나는 resource 다른 하나는 behavior. 그래서 둘다 있는 경우도 있고 하나만 있는 경우도 있는데
 다운로드 받으면 나의 docker volume이 연결된 기본 디렉토리 `~/workspace/bedrock-data` 하위에 2개의 디렉토리를 만든다. 
 
-- behavior_packs
-- resource_packs 
+- `behavior_packs`
+- `resource_packs`
 
 이 2개의 디렉토리 중 하나에 압축을 푼다. 그리고 나서 압축을 푼 디렉토리 안에 들어가면 manifeset.json 이라는 파일이 있는게 그것을 열면 이런 형식으로 나와있다. 
 
@@ -85,8 +85,8 @@ https://www.minecraftmods.com/
 중요한건 `header.uuid`, `header.version` 인데, 이 정보를 지금 만든 월드 안에 넣어야 한다. 어떻게 넣냐하면 
 본인이 만든 월드 디렉토리, 여기서는  `~/workspace/bedrock-data/worlds/ActionAndStuff` 이 디렉토리 하위로 가면 2개의 파일이 있다.(없으면 만든다)
 
-- world_resource_packs.json
-- world_behavior_packs.json
+- `world_resource_packs.json`
+- `world_behavior_packs.json`
 
 이 파일에 아까 저 `header.uuid`, `header.version`을 넣는다. 형식을 보면 json array 형식이다. 즉 하나의 월드안에 여러가지 모드(mods)를 원하는 만큼 추가 및 삭제가 가능하다는 것이다.
 

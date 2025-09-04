@@ -21,13 +21,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - 마인크래프트 docker"/>
+    <meta property="og:title" content="ASH84 - 마인크래프트 docker로 서버띄우기"/>
     <meta property="og:description" content="마인크래프트 서버 띄워서 멀티플레이"/>
     <meta property="og:url" content="https://ash84.io/docs/2025/09/05/minecraft"/>
     <meta property="og:image" content="https://ash84.io/docs/2025/09/05/minecraft/image.png"/> 
     <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>마인크래프트 docker</title>
+    <title>마인크래프트 docker로 서버띄우기</title>
     <meta name="description" content="마인크래프트 서버 띄워서 멀티플레이" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
@@ -62,7 +62,7 @@
     </header>
     
 <div class="content">
-    <h1 class="blog-post-title">마인크래프트 docker</h1>
+    <h1 class="blog-post-title">마인크래프트 docker로 서버띄우기</h1>
     <div class="blog-post-meta"> 
         <small>  2025-09-05</small> 
     </div> 
@@ -94,20 +94,22 @@ docker run -d --name mcbedrock \
 </code></pre>
 <p>일단 애들이 굉장히 좋아했고, 둘이 할수 있으니 ㅎㅎ 와이파이가 되는 공간에서만 둘이 할 수 있다보니 집이 아닌 어디를갈때 자꾸 챙기라고 한다. </p>
 <h2>추가사항</h2>
+<blockquote>
 <p>⚠️ 약간의 틀린 내용이 있을수 있습니다. 저도 마인크래프트 전문가가 아님을 먼저 말씀드립니다. </p>
+</blockquote>
 <p>일단 기본적으로 만들면 마인크래프트 아무것도 없는 곳이 나오는데, 아이들이 유튜브에서 마인크래프트를 접하게 되면 어느정도 구축된 세계를 플레이하는 유튜버의 플레이를 기준으로 삼게 된다. 한마디로 아빠가 만들어준 세계가 너무 시시하다. 그래서 처음에는 월드를 설치해줬다. 월드라는게 무엇이냐 하면, 스타크래프트로 치면 유즈맵세팅 같은 느낌이라고 보면된다.(맞나?) 원래 마인크래프트세계는 아무것도 없는데 여러가지 조건이나 제약이나 미리 어느정도의 세계를 구축해 놓은것이다. </p>
-<p>https://mcpedl.com/tag/mcworld/</p>
+<p><a href="https://mcpedl.com/tag/mcworld/">https://mcpedl.com/tag/mcworld/</a></p>
 <p>이런 사이트에 가면 좀비, 오징어게임 심지어 젤다까지 다양한 월드(mcworld)가 있고 이것을 다운로드 받아서 .zip으로 바꾸고 압축을 풀고 특정 디렉토리에 두면 된다. 그리고나서 volume이 연결된 위치, 그러니까 내 로컬로 치면 <code>~/workspace/bedrock-data</code> 하위에 <code>worlds</code> 하위로 다운로드 받은 디렉토리를 위치 시키면 된다. 그리고 그 디렉토리의 이름을 LEVEL_NAME에 연결시키면 된다. 지금 보면 <code>ActionAndStuff</code> 라는 디렉토리가 <code>~/workspace/bedrock-data/worlds/ActionAndStuff</code> 위치에 있고 LevelName이 <code>ActionAndStuff</code>로 되어 있다. 이렇게 되면 서버로 접속하면 그 월드로 연결되어서 나오게 된다. </p>
 <p>처음에 나는 인식을 서버라는건 말 그대로 서버라고 생각을 했고, 월드는 서버안에 여러개의 월드가 있어서 선택해서 들어갈 수 있는 형태라고 생각을 했다. 그래서 여러 월드를 깔아놓고 애들이 맘껏 놀게 해야지라고 생각했는데 그게 아니였다. </p>
 <p>잘 놀다가 갑자기 이게 아니라고 하면서 모드(mods)를 설치해달라고 한다. ㅠ 고객님들은 만족할줄을 모른다. 이건 또 뭔가 싶다. <br />
 어려운점이 뭐냐하면 대부분의 마인크래프트 유튜버들은 Java Edition 즉, PC에서 이걸하는데 약간 bedrock edition과 다른점도 있고 꽤 오래된 영상이들을 보게 되면 지금 시점에 어떻게 적용해야할지 막막하다. </p>
 <p>찾아보니 모드(mods)는 단순하게 생각하면 부분적인 커스터마이징이라고 보면 된다. 예를 들어, 월드는 그대로인데, 특정 아이템만 더 추가를 하고 싶다. 총을 추가하고 싶다라던가 괴물을 더 추가하고 싶다라고 할때 이 모드를 다운로드 받아서 설치하면 된다. </p>
-<p>https://www.minecraftmods.com/</p>
+<p><a href="https://www.minecraftmods.com/">https://www.minecraftmods.com/</a></p>
 <p>모드는 2가지 종류가 있느것 같은데 하나는 resource 다른 하나는 behavior. 그래서 둘다 있는 경우도 있고 하나만 있는 경우도 있는데<br />
 다운로드 받으면 나의 docker volume이 연결된 기본 디렉토리 <code>~/workspace/bedrock-data</code> 하위에 2개의 디렉토리를 만든다. </p>
 <ul>
-<li>behavior_packs</li>
-<li>resource_packs </li>
+<li><code>behavior_packs</code></li>
+<li><code>resource_packs</code></li>
 </ul>
 <p>이 2개의 디렉토리 중 하나에 압축을 푼다. 그리고 나서 압축을 푼 디렉토리 안에 들어가면 manifeset.json 이라는 파일이 있는게 그것을 열면 이런 형식으로 나와있다. </p>
 <pre><code>{
@@ -132,8 +134,8 @@ docker run -d --name mcbedrock \
 <p>중요한건 <code>header.uuid</code>, <code>header.version</code> 인데, 이 정보를 지금 만든 월드 안에 넣어야 한다. 어떻게 넣냐하면 <br />
 본인이 만든 월드 디렉토리, 여기서는  <code>~/workspace/bedrock-data/worlds/ActionAndStuff</code> 이 디렉토리 하위로 가면 2개의 파일이 있다.(없으면 만든다)</p>
 <ul>
-<li>world_resource_packs.json</li>
-<li>world_behavior_packs.json</li>
+<li><code>world_resource_packs.json</code></li>
+<li><code>world_behavior_packs.json</code></li>
 </ul>
 <p>이 파일에 아까 저 <code>header.uuid</code>, <code>header.version</code>을 넣는다. 형식을 보면 json array 형식이다. 즉 하나의 월드안에 여러가지 모드(mods)를 원하는 만큼 추가 및 삭제가 가능하다는 것이다.</p>
 <pre><code>[
