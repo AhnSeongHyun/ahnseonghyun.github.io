@@ -1,10 +1,10 @@
 ---
-title: '인텔 맥'
+title: '인텔 맥북 개발서버로 세팅하기 | Setting Up an Intel MacBook as a Development Server'
 author: 'ash84'
 pub_date: '2025-10-12'
-description: '인텍맥북을 개발서버로 쓰기'
+description: '처치 곤란의 인텔 맥북을 개발서버로 쓸 수 있도록 변경했습니다.'
 featured_image: ''
-tags: ['인텔 맥', '맥북활용', '인텔맥북']
+tags: ['인텔 맥북', '맥북활용', '인텔맥북', '개발서버', 'Setting Up an Intel MacBook as a Development Server']
 ---
 
 지금은 M1 맥북에어가 사실상 주력기기로 사용하고 있는데, 이전에는 인텔 맥북프로를 주로 사용했었다. 자세히 모델은 기억나지 않지만 터치바가 있는 모델이었는데 거의 안쓰게 되었다. 몇일전에 그래도 어떻게 활용해 볼까 생각을 해서 몇가지 생각난 건 아래와 같다. 
