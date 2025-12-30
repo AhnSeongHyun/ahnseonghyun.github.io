@@ -1,6 +1,6 @@
 # Makefile for ash84.io static site
 
-.PHONY: build clean run
+.PHONY: build clean run new
 
 
 # Build the static site
@@ -16,4 +16,14 @@ clean:
 run: 
 	zvc build
 	python -m http.server 8000  --directory ./docs 
- 
+
+# Create new content directory and file
+# Usage: make new NAME=2025-test
+new:
+	@if [ -z "$(NAME)" ]; then \
+		echo "Error: NAME is required. Usage: make new NAME=2025-test"; \
+		exit 1; \
+	fi
+	@mkdir -p contents/$(NAME)
+	@touch contents/$(NAME)/$(NAME).md
+	@echo "Created contents/$(NAME)/$(NAME).md"
