@@ -3,7 +3,7 @@ title: '2025 회고'
 author: 'ash84'
 pub_date: '2025-12-30'
 description: '🎁 이건 AI가 쓴 회고가 아닙니다.'
-featured_image: 
+featured_image: 'IMG_6681.jpeg'
 tags: ['회고', 'retrospective']
 ---
 
