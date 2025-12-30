@@ -1,5 +1,5 @@
 body {
-    font-family: 'SFProDisplay-Bold', Pretendard;
+    font-family: 'Pretendard', sans-serif;
     background-color: #FFFFFF;
     color: #1A1A1A;
     margin: 0;
@@ -40,10 +40,10 @@ body {
 }
 
 .description {
-    font-size: 32px;
+    font-size: 22px;
+    font-weight: 100;
     margin-top: 10px;
     color: #1A1A1A;
-    font-family: 'SFProDisplay-Bold';
 }
 
 /* Description의 a 태그 기본 스타일과 Hover 스타일 설정 */
