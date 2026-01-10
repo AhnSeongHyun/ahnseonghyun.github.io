@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-71946262-1');
+    </script>
+    
+    <!-- google adsense -->
+    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    
+    </script>
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - Postman에서 pre-request와 post-response 활용하기"/>
+    <meta property="og:description" content="Postman을 사용하다 보면 특정 변수를 매번 변경해서 요청을 보내거나, 이전 응답값을 다음 요청에 넘겨서 테스트해야 하는 경우가 있다. 이럴 때 pre-request와 post-response 스크립트를 활용하면 편리하다."/>
+    <meta property="og:url" content="https://ash84.io/docs/2026/01/10/postman-scripts"/>
+    <meta property="og:image" content="https://ash84.io/docs/2026/01/10/postman-scripts/"/> 
+    <meta property="og:type" content="article"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>Postman에서 pre-request와 post-response 활용하기</title>
+    <meta name="description" content="Postman을 사용하다 보면 특정 변수를 매번 변경해서 요청을 보내거나, 이전 응답값을 다음 요청에 넘겨서 테스트해야 하는 경우가 있다. 이럴 때 pre-request와 post-response 스크립트를 활용하면 편리하다." />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+     
+</head>
+<body class="font"> 
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+    
+<div class="content">
+    <h1 class="blog-post-title">Postman에서 pre-request와 post-response 활용하기</h1>
+    <div class="blog-post-meta"> 
+        <small>  2026-01-10</small> 
+    </div> 
+
+    <div class="pre-blog-post"></div>
+
+    
+    <div class="blog-post">
+        <h1>Postman에서 pre-request와 post-response 활용하기</h1>
+<p>Postman을 사용하다 보면 특정 변수를 매번 변경해서 요청을 보내거나, 이전 응답값을 다음 요청에 넘겨서 테스트해야 하는 경우가 있다. 이럴 때 <strong>pre-request</strong>와 <strong>post-response</strong> 스크립트를 활용하면 편리하다.</p>
+<blockquote>
+<p>📚 <strong>공식 문서</strong>: <a href="https://learning.postman.com/docs/tests-and-scripts/write-scripts/intro-to-scripts/">Use scripts to add logic and tests to Postman requests</a></p>
+</blockquote>
+<h2>Pre-request Script</h2>
+<pre><code class="language-js">// 32자리 숫자 문자열 생성 (맨 앞자리 0 방지)
+let pid = String(Math.floor(Math.random() * 9) + 1);
+for (let i = 1; i &lt; 32; i++) {
+  pid += Math.floor(Math.random() * 10);
+}
+pm.environment.set(&quot;pid&quot;, pid);
+console.log(&quot;pid:&quot;, pid);
+</code></pre>
+<p>서버에서 중복되지 않는 값을 전달해야 API 테스트가 가능한 경우가 있다. 이때 pre-request 스크립트에서 랜덤 값을 생성해 변수에 저장할 수 있다. 위 예제에서는 <code>pid</code>라는 32자리 숫자 문자열을 생성해 환경 변수에 저장하고 있다.</p>
+<p>이렇게 저장한 값은 Postman request body에서 <code>{{pid}}</code> 형태로 참조하면 된다. 요청을 보내기 전에 pre-request 스크립트가 먼저 실행되어 변수에 값이 담기고, 그 후 요청이 전송된다.</p>
+<blockquote>
+<p>📚 <strong>공식 문서</strong>: <a href="https://learning.postman.com/docs/tests-and-scripts/write-scripts/pre-request-scripts/">Write pre-request scripts</a></p>
+</blockquote>
+<h2>Post-response Script</h2>
+<pre><code class="language-js">const body = pm.response.json();
+pm.environment.set(&quot;refund_document_number&quot;, body.data.refund_document_number);
+</code></pre>
+<p>이전 응답값을 다음 요청에서 사용해야 하는 경우도 있다. 예를 들어 결제 요청 시 승인번호를 받고, 이 승인번호로 결제 취소를 해야 한다면? 매번 응답값을 복사해서 붙여넣는 건 번거롭다.</p>
+<p>post-response 스크립트를 활용하면 응답 JSON에서 필요한 값을 추출해 변수에 저장할 수 있다. 이후 요청에서는 <code>{{refund_document_number}}</code>처럼 변수로 바로 참조하면 된다.</p>
+<blockquote>
+<p>📚 <strong>공식 문서</strong>: <a href="https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/">Write scripts to test API response data</a></p>
+</blockquote>
+<h2>환경 변수 활용</h2>
+<p><code>pm.environment.set()</code>과 <code>pm.environment.get()</code>을 사용하면 요청 간에 데이터를 쉽게 전달할 수 있다. 환경 변수는 Collection Runner에서 여러 요청을 순차 실행할 때 특히 유용하다.</p>
+<blockquote>
+<p>📚 <strong>공식 문서</strong>:<br />
+- <a href="https://learning.postman.com/docs/sending-requests/variables/environment-variables/">Edit and set environment variables</a><br />
+- <a href="https://learning.postman.com/docs/tests-and-scripts/write-scripts/postman-sandbox-reference/pm-variables/">Reference variables in scripts</a></p>
+</blockquote>
+<h2>Collection Runner로 순차 실행</h2>
+<p>이 기능들을 조합하면 여러 request를 하나의 폴더에 넣고 <strong>Run</strong>을 통해 순차적으로 실행할 수 있다.</p>
+<pre><code>1번 request의 pre-request 실행 → 변수 저장
+↓
+1번 request 실행
+↓
+1번 request의 post-response 실행 → 응답값을 변수에 저장
+↓
+2번 request에서 저장된 변수 활용
+↓
+...반복
+</code></pre>
+<blockquote>
+<p>📚 <strong>공식 문서</strong>:<br />
+- <a href="https://learning.postman.com/docs/collections/running-collections/intro-to-collection-runs/">Test your API using the Collection Runner</a><br />
+- <a href="https://learning.postman.com/docs/collections/running-collections/building-workflows/">Customize request order in a collection run</a></p>
+</blockquote>
+<p>물론 curl이나 Python으로도 가능하지만, 스크립트 코드는 유지보수가 상대적으로 번거롭다. 개발자와 QA가 함께 Postman을 사용하는 조직이라면 이 방식을 적극 추천한다.</p>
+    </div>
+    <div>
+        
+            #dev&nbsp;
+        
+            #postman&nbsp;
+        
+            #api&nbsp;
+        
+            #testing&nbsp;
+        
+    </div> 
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>
