@@ -21,13 +21,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - {{ post.title }}"/>
+    <meta property="og:title" content="{{ post.title }} - ASH84"/>
     <meta property="og:description" content="{{ post.description | clean }}"/>
-    <meta property="og:url" content="https://ash84.io/{{ post.path }}"/>
-    <meta property="og:image" content="https://ash84.io/{{ post.path }}/{{ post.featured_image }}"/> 
+    <meta property="og:url" content="https://ash84.io/{{ post.path | replace('docs/', '') }}/"/>
+    {% if post.featured_image %}
+    <meta property="og:image" content="https://ash84.io/{{ post.path | replace('docs/', '') }}/{{ post.featured_image }}"/>
+    {% else %}
+    <meta property="og:image" content="https://ash84.io/assets/images/og-default.png"/>
+    {% endif %}
     <meta property="og:type" content="article"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <!-- Article Meta -->
+    <meta property="article:published_time" content="{{ post.created_at }}T00:00:00+09:00"/>
+    <meta property="article:modified_time" content="{{ post.created_at }}T00:00:00+09:00"/>
+    <meta property="article:author" content="ASH84"/>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{ post.title }} - ASH84"/>
+    <meta name="twitter:description" content="{{ post.description | clean }}"/>
+    {% if post.featured_image %}
+    <meta name="twitter:image" content="https://ash84.io/{{ post.path | replace('docs/', '') }}/{{ post.featured_image }}"/>
+    {% else %}
+    <meta name="twitter:image" content="https://ash84.io/assets/images/og-default.png"/>
+    {% endif %}
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>{{ post.title }}</title>
+    <link rel="canonical" href="https://ash84.io/{{ post.path | replace('docs/', '') }}/"/>
+    <title>{{ post.title }} - ASH84</title>
     <meta name="description" content="{{ post.description | clean }}" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
@@ -70,7 +89,7 @@
     <div class="pre-blog-post"></div>
 
     {% if post.featured_image %}
-        <img src="{{ post.featured_image }}" alt="">
+        <img src="{{ post.featured_image }}" alt="{{ post.title }}" loading="lazy">
     {% endif %}
     <div class="blog-post">
         {{post.html | safe}}
@@ -79,8 +98,29 @@
         {% for tag in tag_list %}
             #{{ tag }}&nbsp;
         {% endfor %}
-    </div> 
+    </div>
     {% include '/themes/solopreneur/footer.html' %}
 </div>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ post.title }}",
+    "description": "{{ post.description | clean }}",
+    "author": {
+        "@type": "Person",
+        "name": "ASH84",
+        "url": "https://ash84.io/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "ASH84 Blog",
+        "url": "https://ash84.io/"
+    },
+    "datePublished": "{{ post.created_at }}",
+    "dateModified": "{{ post.created_at }}",
+    "url": "https://ash84.io/{{ post.path | replace('docs/', '') }}/"
+}
+</script>
 </body>
 </html>
