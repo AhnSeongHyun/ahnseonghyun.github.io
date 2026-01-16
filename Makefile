@@ -4,12 +4,10 @@
 
 
 # Build the static site
-build:
+build: 
 	zvc build
 	echo "ash84.io" > ./docs/CNAME
 	echo "google.com, pub-8699046198561974, DIRECT, f08c47fec0942fa0" > ./docs/ads.txt
-	printf 'User-agent: *\nAllow: /\nSitemap: https://ash84.io/sitemap.xml\n' > ./docs/robots.txt
-	python scripts/generate_sitemap.py
 
 # Clean generated files
 clean: 
