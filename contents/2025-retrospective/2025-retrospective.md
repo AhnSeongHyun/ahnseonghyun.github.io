@@ -1,12 +1,15 @@
 ---
-title: '2025 회고'
-author: 'ash84'
+title: 2025 회고
+author: ash84
 pub_date: '2025-12-30'
-description: '🎁 이건 AI가 쓴 회고가 아닙니다.'
-featured_image: 'IMG_6681.jpeg'
-tags: ['회고', 'retrospective']
+description: claude에게 캘린더 연결하고 회고 해달라고 했는데 생각보다 잘 안되고 별로라서(opus 4.5) 내가 직접 하는게 나을
+  것 같다. 한해동안 많이 고민한 것들은 결국 나는 어디로 가야하는가? 에 대한 근본적인 물음이었다. 내가 하고싶은것은 무엇인가? 에 대한 매우
+  근본적인 물음, 그게 나라는 한 사람만 생각하기엔 나는 가정도 있고, 나이도 있기 때문에...
+featured_image: IMG_6681.jpeg
+tags:
+- 회고
+- retrospective
 ---
-
 
 claude에게 캘린더 연결하고 회고 해달라고 했는데 생각보다 잘 안되고 별로라서(opus 4.5) 내가 직접 하는게 나을 것 같다. 
 

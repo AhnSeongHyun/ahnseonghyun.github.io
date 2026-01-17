@@ -80,7 +80,7 @@ msgstr "사용자 이름 : "
 ```
 
 ```shell
-# zh 
+## zh 
 msgid "user_name_label"
 msgstr "用户名 : "
 ```

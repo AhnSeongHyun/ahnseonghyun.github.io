@@ -119,7 +119,7 @@ db.Model =&gt;  SQLAlchemy 의 self.Model = self.make_declarative_base(model_cla
 <ul>
 <li>Model 은 <code>make_declarative_base()</code> 함수에 의해서 생성 되는데 내부에서 sqlalchemy 의 <code>declarative_base()</code> 함수를 호출하면서 _BoundDeclarativeMeta 클래스를 metaclass 로 지정하고 있다. </li>
 </ul>
-<pre><code class="language-python"># flask_sqlalchemy/__init__.py
+<pre><code class="language-python">## flask_sqlalchemy/__init__.py
 
 def make_declarative_base(self, model, metadata=None):
     &quot;&quot;&quot;Creates the declarative base.&quot;&quot;&quot;
@@ -136,7 +136,7 @@ def make_declarative_base(self, model, metadata=None):
 <ul>
 <li>_BoundDeclarativeMeta 클래스는 생성자에서 파라미터로 전달된 <code>d</code> 에 <code>__bind_key__</code> 가 있는지 확인하고 있으면 table.info 의 <code>bind_key</code> 항목으로 넣고 있다. <code>__init__()</code> 함수로 전달되는 항목들을 찍어보면 아래와 같다. </li>
 </ul>
-<pre><code class="language-python"># flask_sqlalchemy/__init__.py
+<pre><code class="language-python">## flask_sqlalchemy/__init__.py
 
 class _BoundDeclarativeMeta(DeclarativeMeta):
     def __new__(cls, name, bases, d):

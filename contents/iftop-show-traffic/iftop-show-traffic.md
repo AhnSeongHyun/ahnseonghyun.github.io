@@ -38,7 +38,7 @@ tags: ['dev', 'iftop', 'traffic', 'network']
 yum install iftop
 ```
 ```
-# ubuntu
+## ubuntu
 apt-get install iftop
 ```
 
@@ -131,8 +131,8 @@ h - help for more keys and info
 - 설정파일은 `~/.iftoprc` 에 저장하면 사용할 수 있고 실행옵션에서 `-c` 옵션을 이용해서 지정할 수 있다. 
 - 자세한 내용은 [iftop manpage](https://linux.die.net/man/8/iftop) 을 확인해보자. 
 ```
-# .iftoprc
-# config file for iftop
+## .iftoprc
+## config file for iftop
 dns-resolution: no
 port-resolution: no
 show-bars: yes

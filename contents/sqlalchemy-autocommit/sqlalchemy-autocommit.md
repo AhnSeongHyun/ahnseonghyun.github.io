@@ -69,12 +69,12 @@ except:
 위의 코드는 context manager 를 이용해서 좀 더 간결하게 만들수 있다. 
 
 ```python
-# runs a transaction
+## runs a transaction
 with engine.begin() as connection:
     r1 = connection.execute(table1.select())
     connection.execute(table1.insert(), col1=7, col2='this is some data')
 
-# or 
+## or 
 with connection.begin() as trans:
     r1 = connection.execute(table1.select())
     connection.execute(table1.insert(), col1=7, col2='this is some data')
@@ -85,7 +85,7 @@ with connection.begin() as trans:
 `Transaction` 객체는 가장 바깥쪽 begin/commit 의 쌍을 추적해서 중첩(nested)된 동작을 처리한다. 아래의 코드에서 보면 가장 바같쪽의 method_a() 에 대한 커밋만 수행된다.  
 
 ```python
-# method_a starts a transaction and calls method_b
+## method_a starts a transaction and calls method_b
 def method_a(connection):
     trans = connection.begin()  # open a transaction
     try:
@@ -96,7 +96,7 @@ def method_a(connection):
         raise
 
 
-# method_b also starts a transaction
+## method_b also starts a transaction
 def method_b(connection):
     trans = connection.begin()  # open a transaction - this runs in the context of method_a's transaction
     try:
@@ -108,7 +108,7 @@ def method_b(connection):
         raise
 
 
-# open a Connection and call method_a
+## open a Connection and call method_a
 conn = engine.connect()
 method_a(conn)
 conn.close()
@@ -211,7 +211,7 @@ session.close()
 engine = create_engine("...")
 Session = sessionmaker(bind=engine)
 
-# new session.   no connections are in use.
+## new session.   no connections are in use.
 session = Session()
 try:
     # first query.  a Connection is acquired
@@ -329,7 +329,7 @@ with session.begin():
 
 ```python
 
-# method_a starts a transaction and calls method_b
+## method_a starts a transaction and calls method_b
 def method_a(session):
     session.begin(subtransactions=True)
     try:
@@ -340,9 +340,9 @@ def method_a(session):
         raise
 
 
-# method_b also starts a transaction, but when
-# called from method_a participates in the ongoing
-# transaction.
+## method_b also starts a transaction, but when
+## called from method_a participates in the ongoing
+## transaction.
 def method_b(session):
     session.begin(subtransactions=True)
     try:
@@ -354,7 +354,7 @@ def method_b(session):
         raise
 
 
-# create a Session and call method_a
+## create a Session and call method_a
 session = Session(autocommit=True)
 method_a(session)
 session.close()

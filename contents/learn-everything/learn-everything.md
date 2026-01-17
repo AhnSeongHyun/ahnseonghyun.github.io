@@ -1,14 +1,15 @@
 ---
-title: 'everything'
-author: 'ash84'
+title: everything
+author: ash84
 pub_date: '2023-06-18'
-description: '요즘들어 사람들과 애기해보면 어떤것을 해야하는가? 어떻게 성장해야할까요? 라는 애기들을 많이 든는다. 조언이랍시고, 모르는 것들을 위주로 다 알아 들을때까지 매일 공부하라고 하지만 사실 그건 어떤 조직에서 통용되는 지식(knowledge)에 적응해 나가는 단계일 뿐이다. 어느정도 적응이 되고 조직 내에서 머물렀던 시간의 크기가 늘어나게 되면 자연스럽게 알게 되긴 한다. (그래도 모른다면 개인의 문제다.)
-
-개인적으로 성장이라는 단어는 별로 좋아하지 않아서 여기서부터는 이 단어를 배제 하려고한다. 
-
-> **무엇을 배워야 하는가? 다'
-featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/learn-everything/ian-schneider-8COAUK8ckv8-unsplash.jpg'
-tags: ['software-engineer', 'essay']
+description: 요즘들어 사람들과 애기해보면 어떤것을 해야하는가? 어떻게 성장해야할까요? 라는 애기들을 많이 든는다. 조언이랍시고, 모르는
+  것들을 위주로 다 알아 들을때까지 매일 공부하라고 하지만 사실 그건 어떤 조직에서 통용되는 지식(knowledge)에 적응해 나가는 단계일 뿐이다.
+  어느정도 적응이 되고 조직 내에서 머물렀던 시간의 크기가 늘어나게 되면 자연스럽게 알게 되긴 한다. (그래도 모른다면 개인의 문제다.) 개인적으로
+  성장이라는 단어는 별로 좋아하지 않아서 여기서부터는 이 단어를 배제 하려고한다. > **무엇을 배워야 하는가? 다
+featured_image: https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/learn-everything/ian-schneider-8COAUK8ckv8-unsplash.jpg
+tags:
+- software-engineer
+- essay
 ---
 
 요즘들어 사람들과 애기해보면 어떤것을 해야하는가? 어떻게 성장해야할까요? 라는 애기들을 많이 든는다. 조언이랍시고, 모르는 것들을 위주로 다 알아 들을때까지 매일 공부하라고 하지만 사실 그건 어떤 조직에서 통용되는 지식(knowledge)에 적응해 나가는 단계일 뿐이다. 어느정도 적응이 되고 조직 내에서 머물렀던 시간의 크기가 늘어나게 되면 자연스럽게 알게 되긴 한다. (그래도 모른다면 개인의 문제다.)

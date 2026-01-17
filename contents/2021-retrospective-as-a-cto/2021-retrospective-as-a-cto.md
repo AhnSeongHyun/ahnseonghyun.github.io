@@ -1,14 +1,18 @@
 ---
 title: '2021 회고 : CTO로서 1년'
-author: 'ash84'
+author: ash84
 pub_date: '2021-12-26'
-description: '- **2020년 12월 TechAssemble 진행**
-    - TechAssemble이라는 Tech내부에서 현황을 공유하고 앞으로 해야할 일들을 공유하는 자리를 마련했다. 
-    - 2020년 12월 어떤 식으로 일을 할 것이고, 코드리뷰를 하는 방식, git branch 전략을 Github Flow로 통일했다. 
-    - 단순히 코딩을 한다는 것보다는 제품(product)/서비스를 만들고 가치를 만들어내는 중요한 역할을 하는 것이 우리의 역할이라고 상기시켰다. 
-    - 2021년 3월에 다시 TechAssemble을'
-featured_image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80'
-tags: ['essay', '회고', 'retrospective', '2021', 'cto']
+description: '- 2020년 12월 TechAssemble 진행 - TechAssemble이라는 Tech내부에서 현황을 공유하고 앞으로
+  해야할 일들을 공유하는 자리를 마련했다. - 2020년 12월 어떤 식으로 일을 할 것이고, 코드리뷰를 하는 방식, git branch 전략을
+  Github Flow로 통일했다. - 단순히 코딩을 한다는 것보다는 제품(product)/서비스를 만들고 가치를 만들어내는 중요한 역할을 하는
+  것이 우리의 역할이라고 상기시켰다. - 2021년 3월에 다시 TechAssemble을'
+featured_image: https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80
+tags:
+- essay
+- 회고
+- retrospective
+- '2021'
+- cto
 ---
 
 - **2020년 12월 TechAssemble 진행**

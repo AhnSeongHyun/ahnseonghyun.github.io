@@ -14,7 +14,6 @@ featured_image: ''
 tags: ['apache', 'centos', 'dev', 'SSL', '아파치', '아파치 소스 설치']
 ---
 
-
 ####Apache 2.4 설치####
 <br/>
 <script src="https://gist.github.com/AhnSeongHyun/9652aa49959d3bb52f4c.js"></script>
@@ -72,27 +71,27 @@ Include conf``/extra/httpd-ssl.conf
 public, private 키를 각각 SSLCertificateFile,SSLCertificateKeyFile 에 등록해주면 된다. 
  
 ```
-#   Server Certificate:
-#   Point SSLCertificateFile at a PEM encoded certificate.  If
-#   the certificate is encrypted, then you will be prompted for a
-#   pass phrase.  Note that a kill -HUP will prompt again.  Keep
-#   in mind that if you have both an RSA and a DSA certificate you
-#   can configure both in parallel (to also allow the use of DSA
-#   ciphers, etc.)
-#   Some ECC cipher suites (http://www.ietf.org/rfc/rfc4492.txt)
-#   require an ECC certificate which can also be configured in
-#   parallel.
+##   Server Certificate:
+##   Point SSLCertificateFile at a PEM encoded certificate.  If
+##   the certificate is encrypted, then you will be prompted for a
+##   pass phrase.  Note that a kill -HUP will prompt again.  Keep
+##   in mind that if you have both an RSA and a DSA certificate you
+##   can configure both in parallel (to also allow the use of DSA
+##   ciphers, etc.)
+##   Some ECC cipher suites (http://www.ietf.org/rfc/rfc4492.txt)
+##   require an ECC certificate which can also be configured in
+##   parallel.
 SSLCertificateFile  "/usr/local/apache/conf/xxx.Public.crt"
 #SSLCertificateFile "/usr/local/apache/conf/server-dsa.crt"
 #SSLCertificateFile "/usr/local/apache/conf/server-ecc.crt"
  
  
-#   Server Private Key:
-#   If the key is not combined with the certificate, use this
-#   directive to point at the key file.  Keep in mind that if
-#   you've both a RSA and a DSA private key you can configure
-#   both in parallel (to also allow the use of DSA ciphers, etc.)
-#   ECC keys, when in use, can also be configured in parallel
+##   Server Private Key:
+##   If the key is not combined with the certificate, use this
+##   directive to point at the key file.  Keep in mind that if
+##   you've both a RSA and a DSA private key you can configure
+##   both in parallel (to also allow the use of DSA ciphers, etc.)
+##   ECC keys, when in use, can also be configured in parallel
 SSLCertificateKeyFile  "/usr/local/apache/conf/xxx.Private.key"
 #SSLCertificateKeyFile "/usr/local/apache/conf/server-dsa.key"
 #SSLCertificateKeyFile "/usr/local/apache/conf/server-ecc.key"

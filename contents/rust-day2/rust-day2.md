@@ -1,24 +1,16 @@
 ---
-title: 'Rust-DAY2'
-author: 'ash84'
+title: Rust-DAY2
+author: ash84
 pub_date: '2020-01-28'
-description: '**TestCase 를 작성해보자.  [#2](https://github.com/AhnSeongHyun/sun/pull/2)**
-
-- 원래 프로젝트는 대략적인 구조는 이런식이었다.
-
-```
-    ├── Cargo.lock
-    ├── Cargo.toml
-    ├── Makefile
-    ├── README.md
-    ├── resource
-    │   └── host.yaml
-    └── src
-        ├── arg.rs
-        ├── config.rs 
-        ├── main.rs'
+description: 'TestCase 를 작성해보자. #2 - 원래 프로젝트는 대략적인 구조는 이런식이었다. ``` ├── Cargo.lock
+  ├── Cargo.toml ├── Makefile ├── README.md ├── resource │ └── host.yaml └── src ├──
+  arg.rs ├── config.rs ├── main.rs'
 featured_image: ''
-tags: ['rust', '100DaysOfRust', 'panic', 'testcase']
+tags:
+- rust
+- 100DaysOfRust
+- panic
+- testcase
 ---
 
 **TestCase 를 작성해보자.  [#2](https://github.com/AhnSeongHyun/sun/pull/2)**

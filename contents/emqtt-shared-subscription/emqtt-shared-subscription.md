@@ -23,7 +23,7 @@ publish 를 하는 부분에서는 별다른 차이는 없다. topic 인 test �
 
 
 ```python 
-# subscribe 
+## subscribe 
 import paho.mqtt.subscribe as subscribe
 
 topics = ['['$share/g1/test']

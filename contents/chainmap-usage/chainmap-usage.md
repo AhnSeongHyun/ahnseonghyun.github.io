@@ -29,7 +29,7 @@ ChainMap({'db': '127.0.0.1', 'port': 3306}, {'db': 'ash84.net', 'port': 3306, 'l
 [{'db': '127.0.0.1', 'port': 3306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'}]
 
 # 조회는 키가 발견될때 까지 연속적으로 찾는다. 
-# 반대로 쓰기, 업데이트, 삭제는 오직 첫번째 mappings 에서만 이루어진다. 
+## 반대로 쓰기, 업데이트, 삭제는 오직 첫번째 mappings 에서만 이루어진다. 
 
 >>> for k, v in chain_map.items():
 ...   print(k, v)
@@ -42,7 +42,7 @@ lib pymysql
 >>> chain_map
 ChainMap({'db': '127.0.0.1', 'port': 33306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'})
 
-# new_child 사용법 
+## new_child 사용법 
 
 >>> chain_map.new_child(m=1)
 ChainMap(1, {'db': '127.0.0.1', 'port': 33306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'})
@@ -51,20 +51,20 @@ ChainMap('test', {'db': '127.0.0.1', 'port': 33306}, {'db': 'ash84.net', 'port':
 >>> chain_map.new_child(m="test").maps
 ['test', {'db': '127.0.0.1', 'port': 33306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'}]
 
-# new_child(m) 함수는 m 값을 주지 않을 경우 {} 를 .maps 내 첫번째에 위치시키고 
-# 기존의 가지고 있던 다른 mappings 들을 복사한다. 
-# m 을 주어지면 해당 값을 maps 에 첫번째에 넣고 나머지 복사 
+## new_child(m) 함수는 m 값을 주지 않을 경우 {} 를 .maps 내 첫번째에 위치시키고 
+## 기존의 가지고 있던 다른 mappings 들을 복사한다. 
+## m 을 주어지면 해당 값을 maps 에 첫번째에 넣고 나머지 복사 
 
-# parents 사용법 
-# 제일 첫번째것을 제외한 나머지 것들을 새로운 ChainMap 으로 만들어서 반환 
+## parents 사용법 
+## 제일 첫번째것을 제외한 나머지 것들을 새로운 ChainMap 으로 만들어서 반환 
 >>> chain_map
 ChainMap({'db': '127.0.0.1', 'port': 33306}, {'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'})
 >>> chain_map.parents
 ChainMap({'db': 'ash84.net', 'port': 3306, 'lib': 'pymysql'})
 
-# 검색단계에서 첫번째 mappings 를 제외할때 편함 
+## 검색단계에서 첫번째 mappings 를 제외할때 편함 
 
-# 예 https://www.blog.pythonlibrary.org/2016/03/29/python-201-what-is-a-chainmap/
+## 예 https://www.blog.pythonlibrary.org/2016/03/29/python-201-what-is-a-chainmap/
 
 >>> from collections import ChainMap
 >>> car_parts = {'hood': 500, 'engine': 5000, 'front_door': 750}

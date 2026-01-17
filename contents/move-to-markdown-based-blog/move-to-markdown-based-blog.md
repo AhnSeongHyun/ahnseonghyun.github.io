@@ -1,10 +1,15 @@
 ---
-title: '이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다.'
-author: 'ash84'
+title: 이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다.
+author: ash84
 pub_date: '2025-07-08'
-description: '지속가능한 블로그'
-featured_image: 'image.png'
-tags: ['blog', 'markdown', 'static generator']
+description: 몇일 전에 Notion API를 이용해서 노션의 글을 블로그에 자동으로 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고
+  싶은 생각이 들었다. 그동안 나는 개인적으로 2018년부터 meier 툴라는 자체 제작 블로그 툴을 backend는 flask, frontend는
+  TOAST UI를 이용해서 admin/backoffice도 같이 만들었고 약...
+featured_image: image.png
+tags:
+- blog
+- markdown
+- static generator
 ---
 
 몇일 전에 Notion API를 이용해서 노션의 글을 블로그에 자동으로 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고 싶은 생각이 들었다. 그동안 나는 개인적으로 2018년부터 meier 툴라는 자체 제작 블로그 툴을 backend는 flask, frontend는 TOAST UI를 이용해서 admin/backoffice도 같이 만들었고 약 7년간 그것을 통해서 블로그 글을 써왔다. 그렇지만 아쉬웠던 것은 처음 만든 이후에 노션과 옵시디언이 나오면서 더 이상 글을 admin에서 쓰지 않고 노션에서 쓰고 markdown 파일을 다운로드 받아서 그 텍스트를 다시 admin에 옮겨서 저장하는 식으로 작업을 해왔다. 물론 admin에는 draft, private 같은 기능들이 있었다. 이건 wordpress, tistory, ghost 등의 블로그 플랫폼에 있는 기능들을 구현한 것이었다. 그렇지만 노션이나 옵시디언 자체가 별도의 CMS이자 글쓰기 도구로 쓰고 있는 상황에서 이걸 굳이 유지해야 하는가에 대한 생각이 들었다.

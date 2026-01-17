@@ -1,12 +1,15 @@
 ---
-title: '어쩌다 토론토 🍁'
-author: 'ash84'
+title: 어쩌다 토론토 🍁
+author: ash84
 pub_date: '2020-02-01'
-description: '**덜컥 작년에 PyCon US 2020 을 예매를 했다.** 1월부터 계속 아내가 왜 비행기표를 예약 안 하냐고 계속 물어봤다. 진짜 계속. 🤦🏻‍♂️ 그래서 할 거라고 하고 🛌에 누워서 본격적으로 찾았는데, 생각보다 피츠버그(Pittsburgh) 라는 데.. 멀다 😟솔직히 미국 어디에서 하는지는 안보고 등록해 버렸다. 그런데 미국 동부고, 심지어 뉴욕에서 생각보다 가깝다. 
-
-![map-pyconus-2020](https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blo'
+description: 덜컥 작년에 PyCon US 2020 을 예매를 했다. 1월부터 계속 아내가 왜 비행기표를 예약 안 하냐고 계속 물어봤다.
+  진짜 계속. 🤦🏻‍♂️ 그래서 할 거라고 하고 🛌에 누워서 본격적으로 찾았는데, 생각보다 피츠버그(Pittsburgh) 라는 데.. 멀다 😟솔직히
+  미국 어디에서 하는지는 안보고 등록해 버렸다. 그런데 미국 동부고, 심지어 뉴욕에서 생각보다 가깝다. ![map-pyconus-2020](https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blo
 featured_image: ''
-tags: ['pyconus2020', 'pyconus', 'toronto']
+tags:
+- pyconus2020
+- pyconus
+- toronto
 ---
 
 **덜컥 작년에 PyCon US 2020 을 예매를 했다.** 1월부터 계속 아내가 왜 비행기표를 예약 안 하냐고 계속 물어봤다. 진짜 계속. 🤦🏻‍♂️ 그래서 할 거라고 하고 🛌에 누워서 본격적으로 찾았는데, 생각보다 피츠버그(Pittsburgh) 라는 데.. 멀다 😟솔직히 미국 어디에서 하는지는 안보고 등록해 버렸다. 그런데 미국 동부고, 심지어 뉴욕에서 생각보다 가깝다. 

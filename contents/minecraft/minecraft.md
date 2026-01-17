@@ -1,10 +1,16 @@
 ---
-title: '마인크래프트 docker로 서버띄우기'
-author: 'ash84'
+title: 마인크래프트 docker로 서버띄우기
+author: ash84
 pub_date: '2025-09-05'
-description: '마인크래프트 서버 띄워서 멀티플레이'
-featured_image: 'image.png'
-tags: ['마인크래프트', 'minecraft', 'docker', '마인크래프트 서버띄우기']
+description: 발단 애들이 마인크래프트를 좋아하는데 iOS 기기로 둘이서 하려다보니 둘다 마이크로소프트 계정이 있으면 한쪽에서 한쪽을 초대해서
+  하거나 아니면 Realm 이라는것을 통해서 같이 할 수 있는것 같다. 근데 이건 유료인것 같고. 근데 내가 알기론 마인크래프트는 서버를 운영할
+  수 있다고 들었고 좀 더 찾아보니 java edition과 bedrock...
+featured_image: image.png
+tags:
+- 마인크래프트
+- minecraft
+- docker
+- 마인크래프트 서버띄우기
 ---
 
 ## 발단 

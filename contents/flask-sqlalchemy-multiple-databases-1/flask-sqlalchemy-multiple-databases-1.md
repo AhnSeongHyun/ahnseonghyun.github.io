@@ -74,7 +74,7 @@ db.Model =>  SQLAlchemy 의 self.Model = self.make_declarative_base(model_class,
 - Model 은 `make_declarative_base()` 함수에 의해서 생성 되는데 내부에서 sqlalchemy 의 `declarative_base()` 함수를 호출하면서 _BoundDeclarativeMeta 클래스를 metaclass 로 지정하고 있다. 
 
 ```python 
-# flask_sqlalchemy/__init__.py
+## flask_sqlalchemy/__init__.py
 
 def make_declarative_base(self, model, metadata=None):
     """Creates the declarative base."""
@@ -93,7 +93,7 @@ def make_declarative_base(self, model, metadata=None):
 
 
 ```python 
-# flask_sqlalchemy/__init__.py
+## flask_sqlalchemy/__init__.py
 
 class _BoundDeclarativeMeta(DeclarativeMeta):
     def __new__(cls, name, bases, d):
