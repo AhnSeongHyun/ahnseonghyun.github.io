@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-71946262-1');
+    </script>
+
+    <!-- google adsense -->
+    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+
+    </script>
+    <!-- //google adsense -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="ASH84 - #maven"/>
+    <meta property="og:description" content="maven 태그가 있는 모든 포스트"/>
+    <meta property="og:url" content="https://ash84.io/tags/maven.html"/>
+    <meta property="og:type" content="website"/>
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
+    <title>#maven - ASH84</title>
+    <meta name="description" content="maven 태그가 있는 모든 포스트" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
+    <!--  code highlight -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+    <script>hljs.highlightAll();</script>
+
+</head>
+<body class="font">
+    <header>
+        <div class="blog-post-back">
+            <a href="/">
+                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 219.151 219.151" xml:space="preserve">
+    <g>
+        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+    </g>
+        </svg></a>
+        </div>
+    </header>
+
+<div class="content">
+    <h1 class="blog-post-title">#maven</h1>
+    <div class="blog-post-meta">
+        <small>8개의 포스트</small>
+    </div>
+
+    <div class="pre-blog-post"></div>
+
+    <div class="blog-post">
+        <ul style="list-style: none; padding: 0;">
+            
+                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
+                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-06-26</div>
+                    <a href="/2013/06/26/maven-jar-dependency--eb-b3-b5-ec-82-ac-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(maven) jar-dependency 복사하기</a>
+                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">필자의 경우 자바 서버쪽에서 java -jar 로 만든 jar 파일을 만드는 경우가 있는데 그때에 maven 으로 연동한 라이브러리들을 모두 가지고 있어야 제대로 구동이 된다. 때문에 pom.xml 에 다음의 부분을 추가해서 jar 를 만들고 target/lib 에 연동된 라이브러리들을 배치(복사) 하도록 해야 한다.</div>
+                </li>
+            
+                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
+                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-02-12</div>
+                    <a href="/2013/02/12/maven-maven-phase/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(maven) maven phase</a>
+                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">maven에서 빌드를 하다보면 goal 을 입력해야하는 경우가 있는데 그냥 package 를 입력하면 jar를 생성해 주는것으로 생각해서 작업을 하곤 했는데, maven 홈페이지 가서 각 phase에 대한 내용을 발췌해왔다. 몇가지 살펴보면 package 는 당연히 compiled code 를 가지고 jar와 같은 배포형식으로 만든다고 되어 있다. install은 말 그대로 설치인데, package 된 것을 다른 프로젝트에서 사용할 수 있도록 (maven)local repos</div>
+                </li>
+            
+                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
+                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-01-04</div>
+                    <a href="/2013/01/04/maven-failed-to-load-main-class-manifest-attribute-from-ec-97-90-eb-9f-ac-eb-b0-9c-ec-83-9d-ec-8b-9c/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">maven Failed to load Main-Class manifest attribute from..에러발생시.</a>
+                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">java -jar lib.jar 이런식으로 jar를 직접실행하는 경우가 있다. 이런 경우 maven의 pom.xml에 main class를 지정해 주지 않으면 실행할 경우, 다음과 같은 에러가 발생 할 수 있다.</div>
+                </li>
+            
+                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
+                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-12-28</div>
+                    <a href="/2012/12/28/maven-ec-97-90-ec-84-9c--eb-8b-a8-ec-9c-84-ed-85-8c-ec-8a-a4-ed-8a-b8-ea-b0-80--ec-95-88-eb-90-a0-eb-95-8c-junit4-eb-a5-bc--ec-b6-94-ea-b0-80-ed-95-98/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">maven에서 단위테스트가 안될때, Junit4를 추가하자.</a>
+                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">maven 빌드 환경을 세팅하고 기존의 Junit 단위테스트 클래스를 maven 의 test (src/test/java)에 넣어서 빌드를 하니 빌드시(package), 이상하게 Junit 에서는 정상적으로 작동하는 maven 빌드에서만 이상하게 fail 이 발생하는 것을 볼수 있었다.</div>
+                </li>
+            
+                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
+                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-12-28</div>
+                    <a href="/2012/12/28/maven-log4j-1216jar--ec-97-b0-eb-8f-99-ec-8b-9c-pomxml--ec-97-90-eb-9f-ac--ed-95-b4-ea-b2-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">maven log4j-1.2.16.jar 연동시 pom.xml 에러 해결.</a>
+                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">slf4j-log4j를 연계해서 쓰는데, [이전 포스팅](http://ash84.tistory.com/863)에서도 말했지만 slf4j와 lo44j의 버전을 제대로 맞추어야 별 탈없이 붙어서 돌아가게 되는데, 필자의 경우 아래의 버전 조합으로 현재 회사에서 사용하고 있다.</div>
+                </li>
+            
+                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
+                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-12-28</div>
+                    <a href="/2012/12/28/maven-utf-8--ec-9d-b8-ec-bd-94-eb-94-a9--ec-86-8c-ec-8a-a4-ec-9d-bc-ea-b2-bd-ec-9a-b0--ea-b2-bd-ea-b3-a0--eb-ac-b8-ea-b5-ac--ed-95-b4-ea-b2-b0-eb-b2-9/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">maven, UTF-8 인코딩 소스일경우, 경고 문구 해결법</a>
+                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">maven빌드를 하고 나면 이상하게 아래와 같은 문구가 나온다. 말인즉, UTF-8 인코딩으로 작성되어 있어서 특정 플랫폼에서 종속적(dependent)라는 애기인데, `</div>
+                </li>
+            
+                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
+                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-12-20</div>
+                    <a href="/2012/12/20/nexus-eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c--ec-82-ac-eb-82-b4-maven-repository--eb-a7-8c-eb-93-a4-ea-b8-b0-1/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">Nexus를 이용한 사내 Maven Repository 만들기 1.</a>
+                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">앞서 이클립스에 maven을 설치하는 과정에 대해서 설명했는데, 이번 장에는 사내 maven Repository를 구성하는 방법에 대해서 알아보자. 일단 사내 Repository를 구성해야 하는 가장 큰 이유는 매번 참조하고 있는 라이브러리를 가져와야 하는 불편함도 있겠지만, 솔직히 필자에게 더 필요한건 사내에서 만들어진 라이브러리를 Repository에 올려놓고 다른 동료개발자분들이 쉽게 찾아서 쓸수 있게 하는것이 더 중요했다.</div>
+                </li>
+            
+                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
+                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-12-18</div>
+                    <a href="/2012/12/18/maven--ea-b8-b0-eb-b3-b8--ec-84-a4-ec-b9-98--eb-b0-8f--eb-a9-94-ec-9d-b4-eb-b8-90--ed-94-84-eb-a1-9c-ec-a0-9d-ed-8a-b8--eb-a7-8c-eb-93-a4-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[maven] 기본 설치 및 메이븐 프로젝트 만들기</a>
+                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">maven에 대해서 포스팅 하는 이유는 Java 의 빌드에 대해서 여러가지 방법이 있지만, 가장 jar에 대한 관리가 잘 되기 때문이라는 생각에서였다. 본 글은 이클립스 Juno 버전이 설치되어 있다는 가정하에 진행하도록 하겠다. 기존의 이클립스가 있으신 분들이라면 Juno 버전을 따로 다운 받아서 해보시길 바란다.</div>
+                </li>
+            
+        </ul>
+    </div>
+
+    <footer>
+    <div style="text-align: center;">
+        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -77,7 +77,7 @@
     </div>
     <div>
         {% for tag in tag_list %}
-            #{{ tag }}&nbsp;
+            <a href="/tags/{{ tag | replace('/', '-') | replace('\\', '-') | replace(':', '-') }}.html" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#{{ tag }}</a>
         {% endfor %}
     </div> 
     {% include '/themes/solopreneur/footer.html' %}

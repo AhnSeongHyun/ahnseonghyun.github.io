@@ -1,15 +1,20 @@
 # Makefile for ash84.io static site
 
-.PHONY: build clean run new
+.PHONY: build clean run new tags
 
 
 # Build the static site
 build:
 	uv run zvc build
+	uv run python scripts/generate_tags.py
 	uv run python scripts/generate_sitemap.py
 	uv run python scripts/generate_robots.py
 	echo "ash84.io" > ./docs/CNAME
 	echo "google.com, pub-8699046198561974, DIRECT, f08c47fec0942fa0" > ./docs/ads.txt
+
+# Generate tag pages
+tags:
+	uv run python scripts/generate_tags.py
 
 # Clean generated files
 clean:
