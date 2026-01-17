@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-05-31'
 description: ''
 featured_image: ''
-tags: ['devMomo', '한우어플', '한우찾기', '한우찾기 후기']
+tags: ['devMomo', '한우찾기']
 ---
-
-
 <div style="background-color: transparent; text-align: justify; line-height: 2; ">  
 <span style="font-size: 11pt; ">  
 </span></div><span style="font-size: 11pt; ">  

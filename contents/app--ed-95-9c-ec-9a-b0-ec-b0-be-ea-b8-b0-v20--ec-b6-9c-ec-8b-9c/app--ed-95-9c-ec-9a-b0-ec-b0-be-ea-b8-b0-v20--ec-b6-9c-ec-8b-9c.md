@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-05-03'
 description: '장장 1개월의 개발기간. 그리고 약 일주일간의 심사과정을 지나서 지난 일요일(5/1)에 하국 앱스토어에 한우찾기 v2.0 이 정식 업데이트 되었습니다. **'
 featured_image: ''
-tags: ['devMomo', '쇠고기 이력추척조회', '안성현', '이력추적', '축산물 등급 판정소', '한우', '한우찾기']
+tags: ['devMomo', '쇠고기 이력추척조회', '안성현', '이력추적', '축산물 등급 판정소', '한우찾기']
 ---
-
-
 <div style="background-color: transparent; "><div style="text-align: justify;line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">장장 1개월의 개발기간. 그리고 약 일주일간의 심사과정을 지나서 지난 일요일(5/1)에 하국 앱스토어에 한우찾기 v2.0 이 정식 업데이트 되었습니다. </span></span>**<span style="font-size: 10pt; "><span style="font-family: Dotum; ">자, 그럼 무엇이 업데이트 되었는지 볼까요?</span></span>**</div><div style="text-align: justify;"></div><div style="text-align: justify;"></div></div><span style="font-size: 10pt; "><span style="font-family: Dotum; "><figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile25.uf.181AB24E4DBF80F921E165.PNG)<figcaption class="wp-caption-text">첫화면</figcaption></figure></span></span>
 
 <div><div style="text-align: justify;"><span class="Apple-style-span" style="line-height: 24px;">  

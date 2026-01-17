@@ -8,10 +8,8 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile7.uf.161BB63D505A67
 
 3회째를 맞는 Deview 는 이제는 명실공히 국내 최고의 컨퍼런스라고 평가 할수 있을 만하다. 1회때의 NHN, 네이버 위주의 세션(솔직히 퀄리티는 1회가 최고였다.) 에서 2회때는 SK와 대학교쪽에서'
 featured_image: ''
-tags: ['dev', 'DEVIEW2012', 'HDFS', 'kafa', 'KTH', 'NHN', 'redis', 'zookeeper', '데뷰', '링크드인', '주키퍼', '카프다', '카프카', '트위터', 'conference']
+tags: ['dev', 'DEVIEW2012', 'HDFS', 'kafa', 'KTH', 'NHN', 'redis', 'zookeeper', '데뷰', '링크드인', '주키퍼', '카프다', 'kafka', '트위터', 'conference']
 ---
-
-
 ![](http://ash84.net/wp-content/uploads/1/cfile7.uf.161BB63D505A67730E71A3.jpg)
 
 <span style="font-size: 11pt; ">  

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2009-08-08'
 description: ''
 featured_image: ''
-tags: ['메트로섹슈얼', '싱글즈인 서울 2', '행복한 마이너', '황의건']
+tags: ['메트로섹슈얼', '싱글즈인 서울 2', '행복한 마이너']
 ---
-
-
 <div style="TEXT-ALIGN: justify"><font class="Apple-style-span" color="#000000" face="Arial" size="3"><span class="Apple-style-span" style="FONT-SIZE: 13px; LINE-HEIGHT: 16px">  
 </span></font></div>  
 <div style="TEXT-ALIGN: justify"><font class="Apple-style-span" color="#000000" face="Arial" size="3"><span class="Apple-style-span" style="FONT-SIZE: 13px; LINE-HEIGHT: 16px">황의건씨를 처음 본것은 몇년 전의 온스타일의 싱글지 인 서울 2 : 메트로섹슈얼 편에서 처음 보았다. 서글서글하면서도 어딘가 모르게 여성스러운 외모는 “모하는 사람이야?” 라는 궁금증을 자아냈다. 그리고 몇년후 다시 나는 취직을 했고, 월급 받은지 1개월, 앞으로의 나의 삶과 사랑 그리고 결혼에 대해서 많은 고민과 방황을 하던중 교보문고의 한 섹션에서 “행복한 마이너”를 만났다. </span></font></div>  

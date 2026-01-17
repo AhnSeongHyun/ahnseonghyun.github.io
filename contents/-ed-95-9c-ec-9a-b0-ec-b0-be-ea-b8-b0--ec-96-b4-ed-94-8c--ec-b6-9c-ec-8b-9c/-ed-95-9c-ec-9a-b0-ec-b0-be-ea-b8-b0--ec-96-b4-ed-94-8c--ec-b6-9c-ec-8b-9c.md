@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2011-03-25'
 description: '안녕하세요, 2월 앱인데, 이제서야 인사드리네요^^;;(개발만 2월에 시작한 앱임.ㅠ)'
 featured_image: ''
-tags: ['devMomo', 'devmomo.com', 'Monthly App Project', '쇠고기이력조회', 'iOS', '이력추적제', '한우어플', '한우찾기', '한우찾기 어플']
+tags: ['devMomo', 'devmomo.com', 'Monthly App Project', '쇠고기이력조회', 'iOS', '이력추적제', '한우찾기']
 ---
 <div style="text-align: justify;"><span class="Apple-style-span" style="font-family: Dotum; font-size: 13px; line-height: 26px; color: rgb(0, 0, 0); ">안녕하세요, 2월 앱인데, 이제서야 인사드리네요^^;;(개발만 2월에 시작한 앱임.ㅠ)</span></div><span style="orphans: 2; text-align: -webkit-auto; text-indent: 0px; widows: 2; "><div style="text-align: justify;"><font class="Apple-style-span" color="#000000" face="Dotum" size="2"><span class="Apple-style-span" style="line-height: 26px;">  
 </span></font></div><span style="text-align: justify; "><div style="text-align: justify;font-family: Tahoma; font-size: medium; border-collapse: separate; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 26px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span class="Apple-style-span" style="font-family: Dotum; font-size: 13px; "> </span></div>[![](http://ash84.net/wp-content/uploads/1/cfile9.uf.116FEA4F4D8C357F201E71.jpg)

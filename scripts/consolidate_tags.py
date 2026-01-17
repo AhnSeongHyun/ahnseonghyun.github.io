@@ -277,8 +277,28 @@ CONSOLIDATION_RULES = {
         '성현', '안성현.회고'
     ],
 
+    # Korean-specific projects/topics
+    '한우찾기': [
+        '한우', '한우찾기', '한우어플', '한우찾기 어플',
+        '한우찾기 2.4.0', '한우찾기 후기'
+    ],
+
+    # Additional technical tools
+    'Hadoop': [
+        'Hadoop', 'hadoop', '하둡', '하웁', '하둡설치'
+    ],
+
+    'kafka': [
+        'kafka', 'Kafka', '카프카'
+    ],
+
+    'paul-smith': [
+        'Paul Smith', 'paul smith', 'inside paul smith',
+        '폴 스미스', '폴스미스'
+    ],
+
     # Remove empty/problematic tags
-    None: [' ', '', '  ', '   ', '태그를 입력해 주세요.']
+    None: [' ', '', '  ', '   ', '태그를 입력해 주세요.', '황의건']
 }
 
 # Create reverse lookup: variant → target

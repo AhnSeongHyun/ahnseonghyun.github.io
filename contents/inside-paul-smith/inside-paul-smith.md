@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-11-07'
 description: 'Inside Paul Smith'
 featured_image: ''
-tags: ['inside paul smith', 'Paul Smith', '대림 미술관', '폴 스미스', '폴스미스']
+tags: ['paul-smith', '대림 미술관']
 ---
-
-
 <span style="letter-spacing: 0px; font-size: 11pt; ">Inside Paul Smith</span>
 
 <span style="font-size: 11pt; ">  
