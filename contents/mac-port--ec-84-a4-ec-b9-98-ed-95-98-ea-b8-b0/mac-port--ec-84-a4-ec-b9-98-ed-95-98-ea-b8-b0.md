@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-08-04'
 description: 'yum, apt-get, make 같은 명령어를 사용하기 위해서는 mac port 라는 것이 필요하다. [이곳](http://www.macports.org/install.php)에 가면 각 OSX 버전 별로  .pkg 설치 파일을 받을 수 있도록 되어있다. 설치를 한 후에 해주어야 할일은 링크의 웹 페이지에도 잘 나와있지만,'
 featured_image: ''
-tags: ['apt-get', 'Mac port', 'yum', '맥포트']
+tags: ['Mac port', 'apt-get', 'python', 'yum', '맥포트']
 ---
-
-
 <span style="font-size: 11pt;">yum, apt-get, make 같은 명령어를 사용하기 위해서는 mac port 라는 것이 필요하다.</span><span style="font-size: 11pt;"> [이곳](http://www.macports.org/install.php)에 가면 각 OSX 버전 별로  .pkg </span><span style="font-size: 11pt;">설치 파일을 받을 수 있도록 되어있다. 설치를 한 후에 해주어야 할일은 링크의 웹 페이지에도 잘 나와있지만, </span>
 
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 10pt;">sudo port -v selfupdate</span>

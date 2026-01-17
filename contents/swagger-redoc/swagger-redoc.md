@@ -6,9 +6,8 @@ description: 'swagger 를 도입해서 쓰고 있는데 확실히 테스트가 �
 
 **하나는 어떻게 swagger.yaml 파일을 작성할 것인가 하는 것**인데, 손으로 작성하는 데는 한계가 있기 때문에 Java 에서는 바로 swagger 문법의 파일로 만들어 줄 수 있고(실제로 해 보진 않았다.), Pytho'
 featured_image: ''
-tags: ['swagger', 'redoc', 'redocly']
+tags: ['deployment', 'java', 'python', 'redoc', 'redocly', 'swagger']
 ---
-
 swagger 를 도입해서 쓰고 있는데 확실히 테스트가 가능하다는 점, 그리고 명확하게 request/response 모델을 보여 준다는 점에서 프론트엔드/클라이언트 개발자와 소통하는데 도움이 되는 것 같다. 그렇지만 마이크로서비스 상에서  swagger 를 사용하는 부분에 있어서 몇가지 고민이 있다. 
 
 **하나는 어떻게 swagger.yaml 파일을 작성할 것인가 하는 것**인데, 손으로 작성하는 데는 한계가 있기 때문에 Java 에서는 바로 swagger 문법의 파일로 만들어 줄 수 있고(실제로 해 보진 않았다.), Python 에서는 이전에 소개했던 [fastapi](https://fastapi.tiangolo.com/) 나 [flask-restplus](https://flask-restplus.readthedocs.io/en/stable/swagger.html) 에서는 지원을 하고 있다**.** 

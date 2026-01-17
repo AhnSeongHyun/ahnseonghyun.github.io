@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2012-12-20'
 description: '조금 된 동영상인데, 홍대의 제너럴 닥터에 대한 이야기'
 featured_image: ''
-tags: ['tedxseoul', '제너럴 닥터', '홍대']
+tags: ['healthcare', 'tedxseoul', '제너럴 닥터', '홍대']
 ---
-
-
 <center>  
 <iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/un4qbATrmx8" width="420"></iframe><span style="font-size: 11pt;">  
 </span></center><center>  

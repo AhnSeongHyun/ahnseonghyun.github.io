@@ -6,10 +6,8 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile24.uf.225B864C52437
 
 기술 블로그 임에도 불구하고 이런 링크만 있는 글을 정리해 두는 이유는, **이 링크들은 모든 엔지니어가 어떤 새로운것 혹은 개선된 어떤 것을 만들때 가져야하는 마음가짐? 혹은 철학? 적인 부분을 상기 시킬수 있는 인터'
 featured_image: ''
-tags: ['dev', 'iOS7 이후', '아이브 인터뷰 내용.', '조너선 아이브', '팀쿡']
+tags: ['career', 'dev', 'iOS7 이후', '아이브 인터뷰 내용.', '조너선 아이브', '팀쿡']
 ---
-
-
 <span style="font-size: 11pt;"> </span>
 
 ![](http://ash84.net/wp-content/uploads/1/cfile24.uf.225B864C5243734C1E25E8.png)

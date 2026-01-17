@@ -6,10 +6,8 @@ description: '한우찾기 앱은 처음부터 ZBAR 라이브러리를 사용해
 **1. 다운로드**
 – 현재 시점(2013.추석연휴)기준으로 ZBar iPhone5 이상에 문제가 없게 하려면 다음의 링크에서 SDK를 다운받기를 권장하는'
 featured_image: ''
-tags: ['dev', 'Objective-C', 'ZBAR', '바코드', '바코드 인식 앱', '바코드인식']
+tags: ['Objective-C', 'ZBAR', 'dev', 'tutorial', '바코드', '바코드 인식 앱', '바코드인식']
 ---
-
-
 <span style="font-size: 11pt;">한우찾기 앱은 처음부터 ZBAR 라이브러리를 사용해 왔었는데 그동안 정리할 기회가 없었는데 이번 기회에 사용법에 대한 부분을 정리하는 포스팅을 하려고 한다. 나두 자꾸 까먹어서리. </span>
 
 <span style="font-size: 11pt;">**1. 다운로드**</span>

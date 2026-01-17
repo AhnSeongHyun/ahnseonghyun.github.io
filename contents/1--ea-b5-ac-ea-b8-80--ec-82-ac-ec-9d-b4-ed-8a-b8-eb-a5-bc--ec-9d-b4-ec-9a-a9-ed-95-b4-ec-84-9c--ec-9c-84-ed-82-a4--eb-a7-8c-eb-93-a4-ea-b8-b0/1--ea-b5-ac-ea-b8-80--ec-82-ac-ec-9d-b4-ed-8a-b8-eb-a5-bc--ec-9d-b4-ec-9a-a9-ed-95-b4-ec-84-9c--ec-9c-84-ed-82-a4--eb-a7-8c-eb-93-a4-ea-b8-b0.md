@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2012-01-17'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile22.uf.1648A33A4F15A04B31AB58.jpg'
 featured_image: ''
-tags: ['google sites', '개발문서', '개인 개발 위키', '구글 사이트도구', '위키']
+tags: ['google sites', 'open-source', '개발문서', '개인 개발 위키', '구글 사이트도구', '위키']
 ---
-
-
 <div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-size: 11pt; ">  
 <span style="font-size: 11pt; ">  
 </span><figure class="wp-caption aligncenter" style="width: 625px">![](http://ash84.net/wp-content/uploads/1/cfile22.uf.1648A33A4F15A04B31AB58.jpg)<figcaption class="wp-caption-text">언제봐도 Trac 은 멋지다. </figcaption></figure>

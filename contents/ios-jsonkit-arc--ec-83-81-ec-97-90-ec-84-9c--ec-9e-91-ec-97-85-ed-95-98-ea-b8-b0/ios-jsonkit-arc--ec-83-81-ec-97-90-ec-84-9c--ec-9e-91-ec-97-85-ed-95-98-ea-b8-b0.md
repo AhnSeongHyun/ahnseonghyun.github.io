@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2013-05-14'
 description: '다음 티스토리 API 연동중에 JSON 으로 연동하는 과정에서 JSONKit 라이브러리를 사용하고 있었는데 이 라이브러리는 아쉽게도 ARC로 작성되어 있지 않다. 하지만 JSONKit은 자기네들 말로는 Objective-C JSON 처리 라이브러리 중에서는 가장 빠르다고 하니 안 쓸수도 없는 노릇([성능평가자료](https://github.com/johnezang/JSONKit)).'
 featured_image: ''
-tags: ['Arc', 'dev', 'iOS', 'JSON', 'JSONKit', 'JSONKit ARC', 'objective-c jsonkit arc']
+tags: ['Arc', 'JSON', 'JSONKit', 'JSONKit ARC', 'dev', 'iOS', 'ios-development', 'objective-c jsonkit arc']
 ---
 <span style="font-size: 11pt; line-height: 2;">다음 티스토리 API 연동중에 JSON 으로 연동하는 과정에서 JSONKit 라이브러리를 사용하고 있었는데 이 라이브러리는 아쉽게도 ARC로 작성되어 있지 않다. 하지만 JSONKit은 자기네들 말로는 Objective-C JSON 처리 라이브러리 중에서는 가장 빠르다고 하니 안 쓸수도 없는 노릇([성능평가자료](https://github.com/johnezang/JSONKit)). </span>
 

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2008-12-04'
 description: '![](http://img.etnews.co.kr/Et_2008/newsletter/081029_ebiz/1127_top.jpg)'
 featured_image: ''
-tags: ['IT Innovation Conference 2008']
+tags: ['IT Innovation Conference 2008', 'conference']
 ---
-
-
 <table border="0" cellpadding="0" cellspacing="0" width="600">  
 <tbody>  
 <tr>  

@@ -9,10 +9,8 @@ description: '이번에는 optimizely를 이용한 A/B Testing에 대해서 간�
 
 optimizely 의 방식은 구글 애널리틱스와 다르게, 원본 페이지의 특정 부분, 예를 들면 로그인 버튼의 여러 디자인을 테스트 한다고 하면 한 페이지에 대한 디자인 시안은 optimizely.com 에서 수정하고 그것을 변수로 반영할수 있는 js 를 원본 페이지에 넣게 되면 원본페이지 로딩시 지정한 디자인으로 나오게 되는것이다. 즉, 구글 애널리틱스와 다른점은 여러개의 페이지를 만드는 것이 아니라 하나의 페이지에서'
 featured_image: ''
-tags: ['a/b testing optimizely', 'dev', 'Optimizely']
+tags: ['Optimizely', 'a/b testing optimizely', 'dev', 'project-showcase']
 ---
-
-
 이번에는 optimizely를 이용한 A/B Testing에 대해서 간단하게 알아 보도록 하겠다.
 
 

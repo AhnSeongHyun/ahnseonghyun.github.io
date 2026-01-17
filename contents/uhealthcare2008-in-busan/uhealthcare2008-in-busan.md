@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2008-11-01'
 description: 'uHealthcare 2008 을'
 featured_image: ''
-tags: ['uHealthcare 2008']
+tags: ['healthcare', 'uHealthcare 2008']
 ---
-
-
 <div style="text-align: justify; line-height: 2;"></div><span style="font-size: 11pt;">  
 </span>
 

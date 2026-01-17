@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2015-03-17'
 description: '페이지 이동후, ajax 호출해서 데이터를 넣고 데이터를 보여주는 부분을 갱신하고자 하거나 하는 등등의 현재 페이지를 새로고침할때 jquery mobile에서 쓰는 코드이다.'
 featured_image: ''
-tags: ['dev', 'jQuery', '현재 페이지 새로고침']
+tags: ['dev', 'jQuery', 'javascript', '현재 페이지 새로고침']
 ---
 <span style="font-size: 11pt;">페이지 이동후, ajax 호출해서 데이터를 넣고 데이터를 보여주는 부분을 갱신하고자 하거나 하는 등등의 현재 페이지를 새로고침할때 jquery mobile에서 쓰는 코드이다. </span>
 

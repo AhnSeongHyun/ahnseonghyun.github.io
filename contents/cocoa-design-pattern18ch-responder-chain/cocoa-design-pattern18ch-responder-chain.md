@@ -5,7 +5,7 @@ pub_date: '2011-06-17'
 description: '**코코아 디자인 패턴 18장. 리소폰더 체인**
 **'
 featured_image: ''
-tags: ['cocoa design pattern', 'dev', 'iOS', 'ResponderChain', '리스폰더 체인', '코코아 디자인 패턴']
+tags: ['ResponderChain', 'best-practices', 'cocoa design pattern', 'dev', 'iOS', '리스폰더 체인', '코코아 디자인 패턴']
 ---
 <div style="text-align: justify; line-height: 2; ">**<span style="font-size: 11pt; ">코코아 디자인 패턴 18장. 리소폰더 체인</span>**</div><span style="font-size: 11pt; ">  
 </span>**<div style="text-align: justify;"></div><div style="text-align: justify;"><span style="font-size: 11pt; ">  

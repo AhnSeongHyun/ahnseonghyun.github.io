@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2013-09-02'
 description: ''
 featured_image: ''
-tags: ['dev', 'geolocation', 'HTML5', '위도 경도', '위치 찾기']
+tags: ['HTML5', 'dev', 'geolocation', 'javascript', '위도 경도', '위치 찾기']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

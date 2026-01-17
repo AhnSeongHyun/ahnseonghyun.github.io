@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-01-22'
 description: '위와 같이 쓰면된다. title에는 어떤 경고를 줄것인지 쓰면 되고, message에는 상세한 경고 문구를 써 주면 된다. cancelButtonTitle'
 featured_image: ''
-tags: ['dev', 'ios dev', 'UIActivityIndicatorView', 'UIAlterView']
+tags: ['UIActivityIndicatorView', 'UIAlterView', 'dev', 'ios dev', 'open-source']
 ---
-
-
 <script src="https://gist.github.com/4598514.js"></script>
 
 <span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt;">위와 같이 쓰면된다. title에는 어떤 경고를 줄것인지 쓰면 되고, message에는 상세한 경고 문구를 써 주면 된다. </span></span><span style="color: rgb(0, 0, 0);   line-height: 2;   font-size: 11pt;">cancelButtonTitle 부분은 왼쪽 버튼 부분에 해당하는 텍스트를 입력하면 된다. 만약 버튼이 하나라면 </span><span class="nl" style="font-size: 11pt; color: rgb(0, 0, 0); line-height: 2;  ">otherButtonTitles:</span><span class="nb" style="font-size: 11pt; color: rgb(0, 0, 0);  line-height: 2; ">nil</span><span class="nb" style="font-size: 9pt;   line-height: 2; "><font color="#000000"><span style="color: rgb(0, 0, 0); font-size: 11pt;"> 이렇게 주자. </span></font></span><span class="nl" style="font-size: 11pt; color: rgb(0, 0, 0);   line-height: 2;  ">otherButtonTitles:</span><span class="nl" style="font-size: 9pt;   line-height: 2;  "><font color="#0086b3"><span style="color: rgb(0, 0, 0); font-size: 11pt;">@”” 이런식으로 처리할 경우 버튼이 2개 나오는데 텍스트가 없기 때문에 빈 버튼만 나오기 때문에 유의하자. </span></font></span>

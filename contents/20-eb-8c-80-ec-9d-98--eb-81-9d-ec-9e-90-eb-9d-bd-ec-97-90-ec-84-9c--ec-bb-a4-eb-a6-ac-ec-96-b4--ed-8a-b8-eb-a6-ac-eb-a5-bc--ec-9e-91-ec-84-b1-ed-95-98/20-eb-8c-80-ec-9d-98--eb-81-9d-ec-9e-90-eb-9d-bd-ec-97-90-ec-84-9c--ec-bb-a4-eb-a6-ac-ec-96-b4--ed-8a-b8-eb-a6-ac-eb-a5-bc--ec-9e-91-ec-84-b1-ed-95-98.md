@@ -6,10 +6,8 @@ description: '[channy 님의 나만의 경력지도 만들기](http://channy.cre
 
 ![](htt'
 featured_image: ''
-tags: ['dev', '경력지도', '커리어 패스']
+tags: ['career', 'dev', 'healthcare', '경력지도', '커리어 패스']
 ---
-
-
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;">[channy 님의 나만의 경력지도 만들기](http://channy.creation.net/blog/889/)라는 글을 보고, 경력지도 템플릿을 다운 받아서 작성해 보았다. 매년 자신의 이력서를 갱신해봐야 한다는 말을 만드는 내내 실감할 수 있었다. 아직 그렇게 경력이 많진 않지만, channy 님의 경력을 보면서 대단하다는 생각이 들었다. 노력도 많이해야겠다는 생각도 들었다. </span>
 
 ![](http://ash84.net/wp-content/uploads/1/cfile4.uf.0223E74150D992EE088233.png)

@@ -6,10 +6,8 @@ description: '[](http://ash84.net/wp-content/uploads/1/48d7b4dad941e6J.bmp)48d7b
 
 <'
 featured_image: ''
-tags: ['dev', 'LG CNS', '제도 법', '표준', '헬스케어산업', '활성화']
+tags: ['LG CNS', 'dev', 'healthcare', '제도 법', '표준', '헬스케어산업', '활성화']
 ---
-
-
 <span style="font-size: 11pt;">  
 </span>  
 <span style="font-size: 11pt;">  

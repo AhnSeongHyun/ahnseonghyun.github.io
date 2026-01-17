@@ -11,7 +11,7 @@ Flask 0.12.2, Werkzeug 0.12.2 가 릴리즈 되었는데 이것들은 `safe_join
 
 [David Lord](https://twitter.com/davidism)가 이 버그를 발견했고, 개인 이메일로 다른 관리자에게 알렸'
 featured_image: ''
-tags: ['Flask', 'Werkzeug', 'safe_join', 'CVE', 'CVE-2017-9088', 'Windows Flask', 'dev']
+tags: ['CVE', 'CVE-2017-9088', 'Flask', 'Werkzeug', 'Windows Flask', 'dev', 'python', 'safe_join', 'security']
 ---
 원문 : https://www.palletsprojects.com/blog/flask-werkzeug-0122-security-release/
 

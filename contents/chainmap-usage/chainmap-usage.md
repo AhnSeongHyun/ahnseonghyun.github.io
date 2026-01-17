@@ -6,9 +6,8 @@ description: 'Python3.3 에서 처음 나온  ChainMap 은 익히 잘 알고 있
 
 즉, 맵핑 형식을 이어주는 역할로 보면 될 것 같다. 그리고 dict 를 새로 생성하거나 여러번 `update()` 함수를 호출하는것 보다 빠르다고 설명하고 있다. 간단히'
 featured_image: ''
-tags: ['Python', 'chainmap']
+tags: ['Python', 'chainmap', 'tutorial']
 ---
-
 Python3.3 에서 처음 나온  ChainMap 은 익히 잘 알고 있는 collections 모듈에 위치해 있다. 3.3 에 나왔지만, 생각보다 많이 알려지지 않은 이유는 기존의 다른 방식의 코딩으로 대체가능한 영역이라서 인것 같다. ChainMap의 기본적인 역할은 quickly linking a number of mappings 이라고 소개하고 있다. 
 
 즉, 맵핑 형식을 이어주는 역할로 보면 될 것 같다. 그리고 dict 를 새로 생성하거나 여러번 `update()` 함수를 호출하는것 보다 빠르다고 설명하고 있다. 간단히 설명하면 ChainMap 은 기존의 list 안에 dict 을 넣고 for 문을 돌려서 무엇인가를 찾거나 update 하거나 했던 일들을 쉽게 해준다.

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2015-10-28'
 description: '이상한모임 컨퍼런스, 일명 EMOCON 2015 F/W 에 1일차에 ‘카피캣으로 시작하는 오픈소스’ 라는 약을 팔았다. 올해의 목표중 하나가 컨퍼런스 발표였는데 난 아직도 대면은 어려운지라, 이상한 모임 덕분에 올해의 목표를 이룬것 같아'
 featured_image: ''
-tags: ['dev', 'emocon f/w 2015', 'plate', 'plate-project', 'slate', '이모콘', '이상한모임']
+tags: ['conference', 'dev', 'emocon f/w 2015', 'open-source', 'plate', 'plate-project', 'python', 'slate', '이모콘', '이상한모임']
 ---
-
-
 <script async="" class="speakerdeck-embed" data-id="d31617a93e5c493fa657ed65d919deac" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 이상한모임 컨퍼런스, 일명 EMOCON 2015 F/W 에 1일차에 ‘카피캣으로 시작하는 오픈소스’ 라는 약을 팔았다. 올해의 목표중 하나가 컨퍼런스 발표였는데 난 아직도 대면은 어려운지라, 이상한 모임 덕분에 올해의 목표를 이룬것 같아서 기분이 좋다. 발표 동영상 자료는 [유투브 링크](https://www.youtube.com/watch?v=_4smfvDgmQY)에 가면 볼수가 있고, 다시 한번 이 글을 빌어서 이상한 모임에 감사드린다.

@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2012-12-05'
 description: ''
 featured_image: ''
-tags: ['ted', 'developer', '스스로 조직하여 배우는 컴퓨터 과목', '컴퓨터']
+tags: ['conference', 'developer', 'open-source', 'ted', '스스로 조직하여 배우는 컴퓨터 과목', '컴퓨터']
 ---
 <center>  
 <iframe allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" scrolling="no" src="http://embed.ted.com/talks/lang/ko/shimon_schocken_the_self_organizing_computer_course.html" webkitallowfullscreen="" width="560"></iframe></center><center>  

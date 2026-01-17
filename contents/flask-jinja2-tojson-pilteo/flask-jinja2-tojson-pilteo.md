@@ -10,7 +10,7 @@ description: 'flask 문서를 보다보니 [standard filters](http://flask.pocoo
 ```python 
 @a'
 featured_image: 'http://flask.pocoo.org/docs/0.12/_images/logo-full.png'
-tags: ['dev', 'Flask', 'Python', 'jinja2', 'tojson']
+tags: ['Flask', 'Python', 'dev', 'javascript', 'jinja2', 'tojson']
 ---
 flask 문서를 보다보니 [standard filters](http://flask.pocoo.org/docs/0.12/templating/#standard-filters) 라는 항목이 있는데 `tojson` 이 그 내용이다.(기본적으로 제공하는 필터라는 내용) 간략하게 애기하자면, 어떤 랜더링할 변수에
 `tojson` 이라고 jinja2 템플릿 상에서 `|` 를 이용해서 붙이게 되면 json으로 변환된 값을 랜더링해준다. 

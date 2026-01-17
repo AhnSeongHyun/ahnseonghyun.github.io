@@ -7,10 +7,8 @@ description: 'StackOverflow 를 자주 이용해 오진 않았지만 최근에�
 
 # [how to improve select performance in mysql?](http://stackoverflow.com/ques'
 featured_image: ''
-tags: ['dev', 'fulltext index', 'Index', 'MySQL', 'select performance', 'stackoverflow', 'text type', 'varchar']
+tags: ['Index', 'MySQL', 'dev', 'fulltext index', 'select performance', 'stackoverflow', 'text type', 'tutorial', 'varchar']
 ---
-
-
 <span style="font-size: 11pt;">StackOverflow 를 자주 이용해 오진 않았지만 최근에는 다른 개발자들의 이야기를 들어 보기 위해서 내가 해결한 어떤 문제라고 할지라도 올려서 물어보고 있다. 영어 공부가 된다고 생각하지는 않지만 물어보기 영어 레벨은 올라갈듯. 결국 검색도 실력. </span>
 
 

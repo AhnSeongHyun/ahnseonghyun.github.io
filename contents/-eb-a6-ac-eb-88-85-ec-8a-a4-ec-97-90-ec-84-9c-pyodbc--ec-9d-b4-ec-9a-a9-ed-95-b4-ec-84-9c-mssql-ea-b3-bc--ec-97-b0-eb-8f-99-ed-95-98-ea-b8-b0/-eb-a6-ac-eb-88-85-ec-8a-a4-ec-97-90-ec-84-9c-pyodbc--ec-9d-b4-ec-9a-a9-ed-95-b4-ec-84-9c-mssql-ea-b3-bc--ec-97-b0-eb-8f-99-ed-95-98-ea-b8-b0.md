@@ -12,9 +12,8 @@ pyodbc 를 기준으로 설명하자면, 리눅스 환경. CentOS, Ubuntu, MAC O
 
 **[ unixODBC  ](http://ww'
 featured_image: ''
-tags: ['dev', 'freetds', 'MSSQL', 'pyodbc', 'Python', 'unixODBC']
+tags: ['MSSQL', 'Python', 'dev', 'freetds', 'open-source', 'pyodbc', 'unixODBC']
 ---
-
 일반적으로 python-mssql 라이브러리들은 윈도우를 기반으로 동작한다. 이때 pyodbc나 pymssql 들은 내부적으로 윈도우에 설치된 SqlClient 등의 라이브러리에 의존하게 된다. 
 
 **문제 : 리눅스 환경에서는 SqlClient 와 같은 라이브러리가 없는데 어디에 의존해야 할까?**

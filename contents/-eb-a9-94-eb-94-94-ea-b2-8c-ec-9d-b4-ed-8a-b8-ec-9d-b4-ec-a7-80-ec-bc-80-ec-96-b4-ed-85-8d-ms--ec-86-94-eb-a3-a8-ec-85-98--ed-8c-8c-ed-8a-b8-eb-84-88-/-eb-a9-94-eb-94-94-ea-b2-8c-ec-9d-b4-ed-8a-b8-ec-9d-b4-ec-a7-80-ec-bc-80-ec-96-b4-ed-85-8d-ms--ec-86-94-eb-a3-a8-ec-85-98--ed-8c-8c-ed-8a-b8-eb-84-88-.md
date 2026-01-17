@@ -6,10 +6,8 @@ description: '이지케어텍, MS 솔루션 파트너 ‘선정’
 
 ****'
 featured_image: ''
-tags: ['MS 솔루션 파트너 '선정'', '메디게이트', '이지케어텍', '이창진기자']
+tags: ['MS 솔루션 파트너 '선정', 'healthcare', '메디게이트', '이지케어텍', '이창진기자']
 ---
-
-
 <table cellpadding="0" cellspacing="0" width="600">  
 <tbody>  
 <tr height="27">  

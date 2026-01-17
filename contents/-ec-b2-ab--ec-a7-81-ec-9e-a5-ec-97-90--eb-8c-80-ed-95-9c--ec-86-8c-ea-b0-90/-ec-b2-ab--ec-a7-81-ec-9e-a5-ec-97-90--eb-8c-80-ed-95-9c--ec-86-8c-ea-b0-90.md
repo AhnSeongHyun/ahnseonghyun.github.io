@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-09-04'
 description: '이런 글을 누구나 볼 수 있는 블로그에 쓴다는 것이 앞으로의 나의 커리어에 영향을 미칠수도 있다는 점을 나는 잘 알고 있다. 또한 결코 누군가를 비판 및 비난 하고자 쓰는 글이 아님을 미리 알린다. 하지만 내가 나이가 들고 다른 위'
 featured_image: ''
-tags: ['']
+tags: ['', 'career']
 ---
-
-
 <div style="line-height: 2; text-align: justify;"><span style="font-size: 11pt; color: rgb(227, 22, 0);"><span style="font-family: Dotum;"><span style="font-size: 10pt;">이런 글을 누구나 볼 수 있는 블로그에 쓴다는 것이 앞으로의 나의 커리어에 영향을 미칠수도 있다는 점을 나는 잘 알고 있다. 또한 결코 누군가를 비판 및 비난 하고자 쓰는 글이 아님을 미리 알린다. 하지만 내가 나이가 들고 다른 위치에 있을때, 그리고 나중에 죽기전에라도 다시 한번 이 글을 보며 그때를 회상할 수 있기를 바란다. </span></span></span><span style="font-size: 11pt;"><span style="font-family: Dotum;"><span style="font-size: 10pt;">지금 와서 생각해 보면 조금은 무모한 선택이 아니였나 싶다. 굳이 큰 기업을 가는것이 최선이라고 생각하지는 않았지만, 약간은 내 생각과 내 의지를 좀더 펼칠수 있고 재미있는 회사 생활을 기대하면서 시작한 것이 대한민국 벤처기업에서 내가 첫 직장 생활을 시작하게 된 이유였다. </span></span></span>
 
 <span style="font-size: 11pt;"><span style="font-family: Dotum;"><span style="font-size: 10pt;">실제로 재밌는 일들이 처음에는 많았다. 다른 사람의 생일을 축하해 주기도 하고, 20명 밖에 되지 않지만, 디자인 팀, 소프트웨어, 하드웨어 팀 등이 있다는 것은 신기하고도 다양한 체험을 할 수 있었던 계기 였던것 같다. 그럼에도 불구하고 벤처에서 조금 쓰라렸던, 그리고 그것을 통해서 내가 배우고 깨달았던 것을 말해 보고자 한다. </span></span></span>  

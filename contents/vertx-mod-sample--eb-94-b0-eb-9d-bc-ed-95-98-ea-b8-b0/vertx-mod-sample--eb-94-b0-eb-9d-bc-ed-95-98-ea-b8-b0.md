@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-05-16'
 description: '아직까지 vert.x에 대한 자료가 많지는 않은데, 설치 이후에 실제 서버를 돌려보기 위해서는 mod 라는 것을 만들어야 하는데 gradle로 되어 있어서 개발 환경 꾸미기도 쉽지 않은것 같다. 그래도 [h](http://helloworld.naver.com) [elloworld.naver.com](http://helloworld.naver.com)에서 vert.x 에 대해서 보고 (최근에 다른 글이 하나 더 올라왔다.) 글 쓰신 분이 운영하시는 블로그에서 [mod-sampl'
 featured_image: ''
-tags: ['mod-sample', 'vert.x', '모듈 만들기']
+tags: ['java', 'mod-sample', 'tutorial', 'vert.x', '모듈 만들기']
 ---
-
-
 <span style="font-size: 11pt;">아직까지 vert.x에 대한 자료가 많지는 않은데, 설치 이후에 실제 서버를 돌려보기 위해서는 mod 라는 것을 만들어야 하는데 gradle로 되어 있어서 개발 환경 꾸미기도 쉽지 않은것 같다. 그래도 [h](http://helloworld.naver.com) [elloworld.naver.com](http://helloworld.naver.com)에서 vert.x 에 대해서 보고 (최근에 다른 글이 하나 더 올라왔다.) 글 쓰신 분이 운영하시는 블로그에서 [mod-sample](https://github.com/keesun/mod-sample) 라는 것을 만들어 두시고 그것에 대한 사용법을 남겨 주셨다. </span>
 
 <span style="font-size: 11pt;">  

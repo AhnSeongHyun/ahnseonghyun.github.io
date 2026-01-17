@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-05-07'
 description: '오늘 삼성 바다(bada) 플랫폼 개발 SDK 에 대한 이메일이 왔더군요. SDK 다운 받으라는 메일이어서 한번 받아봤습니다. 저는 인스톨 버전을 받았는데 한 300 메가정도 되는것 같습니다. 설치는 생각보다 오래걸리진 않았습니다.'
 featured_image: ''
-tags: ['bada', 'bada sdk', '바다플랫폼', '삼성']
+tags: ['bada', 'bada sdk', 'project-showcase', '바다플랫폼', '삼성']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
 <span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">오늘 삼성 바다(bada) 플랫폼 개발 SDK 에 대한 이메일이 왔더군요. SDK 다운 받으라는 메일이어서 한번 받아봤습니다. 저는 인스톨 버전을 받았는데 한 300 메가정도 되는것 같습니다. 설치는 생각보다 오래걸리진 않았습니다. </span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">![](http://ash84.net/wp-content/uploads/1/cfile22.uf.144CE7174BE3819F468C5A.png)</span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">![](http://ash84.net/wp-content/uploads/1/cfile8.uf.114CE7174BE381A0479D49.png)</span></span>
 

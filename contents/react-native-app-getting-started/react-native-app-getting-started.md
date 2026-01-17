@@ -19,7 +19,7 @@ $ create-react-native-app toystory_app
 
 npm5 에 문제가 있다고 아'
 featured_image: ''
-tags: ['dev', 'React', 'react native', 'watchman']
+tags: ['React', 'dev', 'javascript', 'react native', 'tutorial', 'watchman']
 ---
 이 글은  [React Native Getting Started](https://facebook.github.io/react-native/docs/getting-started.html) 에 대한 삽질기입니다. 
 

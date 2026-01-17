@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2007-05-19'
 description: 'U-Healthcare 심포지엄'
 featured_image: ''
-tags: ['u-healthcare', '유비쿼터스', '유비쿼터스 공간', '유비쿼터스 도시', 'medical-informatics']
+tags: ['healthcare', 'medical-informatics', 'u-healthcare', '유비쿼터스', '유비쿼터스 공간', '유비쿼터스 도시']
 ---
 <font face="굴림"><font size="2"><u><font color="#d41a01"><span lang="EN-US">U-Healthcare </span>심포지엄</font></u></font></font>
 

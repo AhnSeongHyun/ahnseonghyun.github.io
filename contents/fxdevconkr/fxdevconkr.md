@@ -7,10 +7,8 @@ description: '**Firefox OS 소개 – 신혁석**
 
 – 파이어폭스 OS ='
 featured_image: ''
-tags: ['#fxdevconkr', 'dev', '컨퍼런스', '파이어폭스', '파폭', 'conference']
+tags: ['#fxdevconkr', 'conference', 'dev', 'javascript', '컨퍼런스', '파이어폭스', '파폭']
 ---
-
-
 <font face="Arial" size="2"><span style="line-height: 2.0;">**<span style="font-size: 14pt;">Firefox OS 소개 – 신혁석</span>**</span></font>
 
 <span style="font-size: 13px; line-height: 2.0; font-family: Arial;">  

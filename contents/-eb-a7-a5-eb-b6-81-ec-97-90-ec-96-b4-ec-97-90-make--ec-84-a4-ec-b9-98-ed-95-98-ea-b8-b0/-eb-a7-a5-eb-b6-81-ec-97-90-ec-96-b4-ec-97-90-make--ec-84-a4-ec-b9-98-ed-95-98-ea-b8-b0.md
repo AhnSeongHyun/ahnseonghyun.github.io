@@ -6,10 +6,8 @@ description: '최근에 오픈소스들을 다운 받아서 설치하고 있는�
 
 ![](http://ash84.net/wp-content/uploads/1/cfile25.uf.166'
 featured_image: ''
-tags: ['command line tools', 'dev', 'Make', 'make mac osx', 'Xcode', '맥에서 make']
+tags: ['Make', 'Xcode', 'command line tools', 'dev', 'ios-development', 'make mac osx', 'open-source', '맥에서 make']
 ---
-
-
 <span style="font-size: 11pt; ">최근에 오픈소스들을 다운 받아서 설치하고 있는데 그중에서 in-memory DB인 redis 를 맥북에어에 설치하려고 시도중에 make가 새로산 맥북에어에 없어서 redis 를 빌드하지를 못했었다. 그래서 mac  계열에서는 도데체 어떻게 make를 설치해야 하는지에 대해서 찾아보던중 쉽게 할수 있는 방법을 찾았다. Step by Step 으로 알려드리겠다. </span>
 
 ![](http://ash84.net/wp-content/uploads/1/cfile25.uf.1665B93450325481312F0D.jpg)

@@ -6,7 +6,7 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile1.uf.111CE2494E1D5B
 
 **'
 featured_image: ''
-tags: ['bundle', 'cocoa design pattern', 'dev', 'iOS', 'design-pattern', '번들']
+tags: ['best-practices', 'bundle', 'cocoa design pattern', 'design-pattern', 'dev', 'iOS', 'java', '번들']
 ---
 <div style="LINE-HEIGHT: 2"></div>  
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  

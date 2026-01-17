@@ -8,7 +8,7 @@ description: '한국대학생 IT경영학회에서 요청이 와서 개발자에
 
 ![](https://live.staticflickr.com/65535/49076208751_137219fca5_z.jpg)'
 featured_image: ''
-tags: ['developer', 'presentation', 'conference']
+tags: ['career', 'conference', 'developer', 'presentation']
 ---
 한국대학생 IT경영학회에서 요청이 와서 개발자에 대해서 소개해주는 시간을 가졌습니다. 
 

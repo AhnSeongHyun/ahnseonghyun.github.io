@@ -6,10 +6,8 @@ description: '뭐, 다들 아는 사실이겠지만, HashMap에 대해서 한번
 **HashMap **
 – 일단 둘다 key-va'
 featured_image: ''
-tags: ['dev', 'HashMap', 'HashMap 성능', 'Hashtable', 'Java']
+tags: ['HashMap', 'HashMap 성능', 'Hashtable', 'Java', 'dev', 'performance']
 ---
-
-
 <span style="font-size: 11pt;">뭐, 다들 아는 사실이겠지만, HashMap에 대해서 한번 더 정리를 하려고 한다. 필자는 Hashtable을 많이 쓰긴 하는데 HashMap에 대해서 정리를 하는 이유는 단연 **성능**때문이다. 스케일 아웃도 좋지만, 일정 수준이상의 성능 최적화 작업은 늘 필요하기 마련이기 때문이다. </span>
 
 <span style="font-size: 11pt;">**HashMap **</span>

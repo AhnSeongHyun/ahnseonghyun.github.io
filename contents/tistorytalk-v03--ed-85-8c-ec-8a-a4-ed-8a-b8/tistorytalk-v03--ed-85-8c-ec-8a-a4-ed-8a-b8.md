@@ -6,10 +6,8 @@ description: 'TistoryTalk v0.3 테스트
 현재 일고 있는 글은 티스토리 톡 아이폰 앱을 통해서 작성된 글임을 미리 알려드립니다. 티스토리 톡은 모바일 환경에서 티스토리의 원활한 블로깅을 지원하기 위한 앱으로 현재 v0.3 plain 버전아지 개발된 상태입니다.
 plai'
 featured_image: ''
-tags: ['Tistory', 'TistoryTalk', '티스토리톡']
+tags: ['Tistory', 'TistoryTalk', 'conference', '티스토리톡']
 ---
-
-
 <span style="font-size:11pt; line-height:2;">TistoryTalk v0.3 테스트</span>
 
 <span style="font-size:11pt; line-height:2;">현재 일고 있는 글은 티스토리 톡 아이폰 앱을 통해서 작성된 글임을 미리 알려드립니다. 티스토리 톡은 모바일 환경에서 티스토리의 원활한 블로깅을 지원하기 위한 앱으로 현재 v0.3 plain 버전아지 개발된 상태입니다.</span>

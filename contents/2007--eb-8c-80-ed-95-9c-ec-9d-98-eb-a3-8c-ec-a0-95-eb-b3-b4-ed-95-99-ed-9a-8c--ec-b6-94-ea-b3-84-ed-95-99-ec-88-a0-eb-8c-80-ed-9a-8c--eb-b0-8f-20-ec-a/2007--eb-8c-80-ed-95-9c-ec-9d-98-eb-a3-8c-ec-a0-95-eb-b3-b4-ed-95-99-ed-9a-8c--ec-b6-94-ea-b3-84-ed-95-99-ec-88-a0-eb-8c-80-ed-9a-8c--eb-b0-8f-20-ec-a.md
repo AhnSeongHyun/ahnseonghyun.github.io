@@ -5,7 +5,7 @@ pub_date: '2007-08-11'
 description: '**  
 **2007 대한의료정보학회 추계학술대회 및 20주년 기념 행사****'
 featured_image: ''
-tags: ['20주년', 'medical-informatics', '코엑스 인터컨티넨탈 호텔']
+tags: ['20주년', 'healthcare', 'medical-informatics', '코엑스 인터컨티넨탈 호텔']
 ---
 <font color="#666699" face="'Batang', 'Serif'" size="2">**  
 <div style="TEXT-ALIGN: center"><font color="#666699" face="'Batang', 'Serif'" size="2">**2007 대한의료정보학회 추계학술대회 및 20주년 기념 행사**</font></div>**</font>

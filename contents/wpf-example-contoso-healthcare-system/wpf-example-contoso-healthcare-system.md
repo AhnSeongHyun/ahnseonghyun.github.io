@@ -9,10 +9,8 @@ description: '![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/
   
  이전 랩미팅때 About .NET Framework3.0 라는 주제로 발표할건데, WPF(Windows Presentation Foundation) 부분에 대한 예제로 첨가할 예정이다. </'
 featured_image: ''
-tags: ['.Net Framework 3.0', 'contoso', 'dev', 'healthcare system', 'Prototype', 'WPF']
+tags: ['.Net Framework 3.0', 'Prototype', 'WPF', 'contoso', 'dev', 'healthcare', 'healthcare system']
 ---
-
-
 ![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/gl138.png)
 
 <span style="font-size: 11pt;">  

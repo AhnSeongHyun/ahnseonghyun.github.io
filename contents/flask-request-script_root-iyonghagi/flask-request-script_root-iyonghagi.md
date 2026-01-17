@@ -9,7 +9,7 @@ ajax 를 호출한다고 생각해 보자. 원래 `/web/api/room` 이런식으�
 $.ajax({
     url: "'
 featured_image: ''
-tags: ['Flask', 'Python', 'dev', 'script_root']
+tags: ['Flask', 'Python', 'dev', 'javascript', 'script_root']
 ---
 하나의 웹을 여러 path 에 올려야 할 경우가 있다. 예를 들면, 테스트를 위해서 `/web1`, `/web2` 이런식으로 구성해서 올릴 경우이다. 이런 경우 프론트단에서 URL로 지정해 놓은 값들을 수정해 줘야 한다. 
 ajax 를 호출한다고 생각해 보자. 원래 `/web/api/room` 이런식으로 ajax 를 호출하는 경우가 있었다면 `/web1`, `/web2` 에 따라서 `/web1/api/room`, `/web2/api/room` 이렇게 변경해 줘야 한다. 

@@ -7,10 +7,8 @@ description: '**2008 EHR 핵심공통기술 심포지움
   
  안녕하십니까?어느덧 2008년도 두 달여 남짓 남겨두고'
 featured_image: ''
-tags: ['2008 EHR 핵심공통기술 심포지엄', 'EHR 사업단']
+tags: ['2008 EHR 핵심공통기술 심포지엄', 'EHR 사업단', 'healthcare']
 ---
-
-
 <div style="text-align: center;"><font face="돋움">                      </font><font face="돋움"><font size="3">**2008 EHR 핵심공통기술 심포지움  
 **</font>  
 </font></div><div style="text-align: justify;"><font face="돋움">  

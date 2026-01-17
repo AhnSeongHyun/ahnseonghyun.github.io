@@ -12,7 +12,7 @@ description: '저저번주, 첫 랩미팅을 가졌다.
 > **  
 > – 이미'
 featured_image: ''
-tags: ['HL7', 'mobile', 'PDA', '당뇨병', '랩', '랩미팅', '병원정보시스템', '연구실', 'medical-informatics', '핸드폰']
+tags: ['HL7', 'PDA', 'healthcare', 'medical-informatics', 'mobile', '당뇨병', '랩', '랩미팅', '병원정보시스템', '연구실', '핸드폰']
 ---
 저저번주, 첫 랩미팅을 가졌다.
 

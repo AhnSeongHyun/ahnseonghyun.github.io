@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2008-10-07'
 description: 'INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가'
 featured_image: ''
-tags: ['안성현', 'C#', 'dev', 'Hashtable', 'INI', 'System.Collections', 'XML', 'programming', '해쉬테이블', '환경설정']
+tags: ['C#', 'Hashtable', 'INI', 'System.Collections', 'XML', 'dev', 'healthcare', 'programming', '안성현', '해쉬테이블', '환경설정']
 ---
 <div style="line-height: 2; ">  
 <span style="font-size: 11pt; "><span style="font-family: Dotum; ">  

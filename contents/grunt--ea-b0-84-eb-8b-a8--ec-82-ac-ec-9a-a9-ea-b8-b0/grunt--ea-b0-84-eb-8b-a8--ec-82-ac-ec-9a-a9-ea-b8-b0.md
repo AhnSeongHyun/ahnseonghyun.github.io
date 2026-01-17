@@ -22,10 +22,8 @@ $ npm install -g grunt-cl
 ```javascript
 $ npm install -'
 featured_image: ''
-tags: ['bower', 'dev', 'grunt', 'grunt-contrib-concat', 'grunt-contrib-jshint', 'grunt-contrib-uglify', 'jshint', 'Node.js', 'npm']
+tags: ['Node.js', 'bower', 'dev', 'grunt', 'grunt-contrib-concat', 'grunt-contrib-jshint', 'grunt-contrib-uglify', 'javascript', 'jshint', 'npm']
 ---
-
-
 #### 개요
 
 - task 를 지정해서 커맨드라인을 통해서 동작하는 자바스크립트 빌드용 툴이다. 

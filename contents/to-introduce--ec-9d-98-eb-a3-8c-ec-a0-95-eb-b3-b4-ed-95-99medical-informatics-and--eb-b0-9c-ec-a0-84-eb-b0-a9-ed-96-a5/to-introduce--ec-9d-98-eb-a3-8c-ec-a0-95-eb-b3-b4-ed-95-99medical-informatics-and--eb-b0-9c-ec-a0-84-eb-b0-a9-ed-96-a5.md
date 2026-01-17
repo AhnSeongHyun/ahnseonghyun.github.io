@@ -9,7 +9,7 @@ description: '**[](http://ash84.net/wp-content/uploads/1/gk8.bmp)gk8.bmp**
   
 > : Bio + mEdical + engineering 간단하게 생각하면 그렇다. 생물학적이고, 의학적인 것을 공학적으로 구현하는것. 단어의 의미로만 생각하면 그렇지만, 사실상 의공학이라는 학문은 솔직히 말하면'
 featured_image: ''
-tags: ['medical-informatics', '의료정보학의 발전방향', '의용재황', '의용전자']
+tags: ['healthcare', 'medical-informatics', '의료정보학의 발전방향', '의용재황', '의용전자']
 ---
 <font color="#d41a01">**[](http://ash84.net/wp-content/uploads/1/gk8.bmp)gk8.bmp<font color="#d41a01"></font>**</font>
 

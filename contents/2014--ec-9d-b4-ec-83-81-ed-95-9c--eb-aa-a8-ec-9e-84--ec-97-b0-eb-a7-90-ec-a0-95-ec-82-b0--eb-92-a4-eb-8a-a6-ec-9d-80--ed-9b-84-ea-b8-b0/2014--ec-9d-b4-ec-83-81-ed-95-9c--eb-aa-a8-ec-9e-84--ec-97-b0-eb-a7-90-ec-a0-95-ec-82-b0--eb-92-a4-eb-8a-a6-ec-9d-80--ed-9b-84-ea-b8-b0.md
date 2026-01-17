@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2015-02-27'
 description: ''
 featured_image: ''
-tags: ['dev', 'http://we.weirdmeetup.com/', 'weirdmeetup', 'weweired', 'conference']
+tags: ['conference', 'dev', 'http://we.weirdmeetup.com/', 'python', 'tutorial', 'weirdmeetup', 'weweired']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

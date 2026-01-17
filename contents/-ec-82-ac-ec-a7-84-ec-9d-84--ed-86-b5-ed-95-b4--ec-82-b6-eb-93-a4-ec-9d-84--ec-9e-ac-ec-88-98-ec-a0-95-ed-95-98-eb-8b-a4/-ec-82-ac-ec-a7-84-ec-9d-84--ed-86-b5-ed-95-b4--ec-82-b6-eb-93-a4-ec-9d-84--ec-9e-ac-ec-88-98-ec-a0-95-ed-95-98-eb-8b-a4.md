@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2012-12-06'
 description: '집에오'
 featured_image: ''
-tags: ['ted', '사진', '사진 복원', '소셜네트워크', '쓰나미', '일본', '재능기부']
+tags: ['conference', 'ted', '사진', '사진 복원', '소셜네트워크', '쓰나미', '일본', '재능기부']
 ---
-
-
 <center>  
 <iframe allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" scrolling="no" src="http://embed.ted.com/talks/lang/ko/becci_manson_re_touching_lives_through_photos.html" webkitallowfullscreen="" width="560"></iframe>  
 </center><div></div><span style="font-size: 11pt;">집에오는 버스안에서 봤던 기억이 난다. 사진에 대한 이야기라서 보게 되었는데, 몇분 안되는 시간이었지만, 청승맞게 버스 안에서 훌쩍거렸던  

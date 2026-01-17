@@ -8,9 +8,8 @@ description: '커리어가 웹의 백엔드와 프론트 언저리에 걸쳐져 
 
 행사 준비 자체는 잘 되었던것 같다. 스타벅스 커피도 있었고, 오후에는 도넛을 나눠줘서 다들 즐겁게 먹으면서 봤던것 같다.'
 featured_image: 'https://gdg-korea-webtech.firebaseapp.com/pwa-roadshow17/roadshow.svg'
-tags: ['dev', 'conference', 'PWA', 'AMP', 'WebPaymentAPI', 'ServiceWorker']
+tags: ['AMP', 'PWA', 'ServiceWorker', 'WebPaymentAPI', 'career', 'conference', 'dev']
 ---
-
 커리어가 웹의 백엔드와 프론트 언저리에 걸쳐져 있는데 확실히 프론트엔드 개발쪽은 변화가 굉장히 빠르게 일어나고 있다는 것을 느낀다. AMP, PWA 에 대해서 도데체 뭔지 그리고 지금 결제 관련 일을 하고 있기 때문에 WebPaymentAPI 에 대해서 좀 더 알고자 참가하게 되었다. 
 
 ![](https://c1.staticflickr.com/5/4186/34149995140_1140576652_k.jpg)

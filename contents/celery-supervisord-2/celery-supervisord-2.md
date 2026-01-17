@@ -13,9 +13,8 @@ pip install supervisor
 ```
 $ echo_supervis'
 featured_image: ''
-tags: ['Celery', 'supervisord', 'daemonize']
+tags: ['Celery', 'daemonize', 'project-showcase', 'python', 'supervisord', 'tutorial']
 ---
-
 celery 를 데몬방식으로 실행해야할 경우, [몇 가지 방법](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다. 
 
 ```

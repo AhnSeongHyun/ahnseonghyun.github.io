@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2008-12-26'
 description: ''
 featured_image: ''
-tags: ['bluetooth', 'CDMA', 'Home Healthcare', 'location depandency', 'mobile']
+tags: ['CDMA', 'Home Healthcare', 'bluetooth', 'healthcare', 'location depandency', 'medical-informatics', 'mobile']
 ---
 <div style="TEXT-ALIGN: center"><span style="FONT-SIZE: 12pt"><div class="txc-textbox" style="BORDER-RIGHT: #cbcbcb 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #cbcbcb 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: #cbcbcb 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #cbcbcb 1px solid; BACKGROUND-COLOR: #ffffff">  
 <div style="TEXT-ALIGN: center">**<span style="FONT-SIZE: 12pt"><span style="FONT-SIZE: 9pt">  

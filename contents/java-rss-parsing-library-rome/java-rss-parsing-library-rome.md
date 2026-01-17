@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2013-05-28'
 description: ''
 featured_image: ''
-tags: ['dev', 'Java', 'rss', 'RSS 파싱']
+tags: ['Java', 'RSS 파싱', 'dev', 'open-source', 'rss']
 ---
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->

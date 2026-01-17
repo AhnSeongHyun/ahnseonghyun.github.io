@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2012-11-22'
 description: '필자는 Comparable 인터페이스를 이용해서 compareTo 함수를 구현하는 것 보다는 사실 Comparator 를 이용해서 정렬에 활용하는 케이스를 자주 사용했었다. (물론 그 안에서 이미 구현되어 있는 기본 클래스의 compareTo()를 사용한다.) 여기서는,** Effective Java** 항목12번에 Comparable 인터페이스의 구현을 고려하자 라는 부분에 대해서 요약해서 정리하고, Watch 클래스를 통해서 시계를 비교하는 compareTo() 함수를 구'
 featured_image: ''
-tags: ['Comparable', 'CompareTo()', 'dev', 'Java']
+tags: ['Comparable', 'CompareTo()', 'Java', 'conference', 'dev']
 ---
 <span style="font-size: 11pt;">필자는 Comparable 인터페이스를 이용해서 compareTo 함수를 구현하는 것 보다는 사실 Comparator 를 이용해서 정렬에 활용하는 케이스를 자주 사용했었다. (물론 그 안에서 이미 구현되어 있는 기본 클래스의 compareTo()를 사용한다.) 여기서는,** Effective Java** 항목12번에 Comparable 인터페이스의 구현을 고려하자 라는 부분에 대해서 요약해서 정리하고, Watch 클래스를 통해서 시계를 비교하는 compareTo() 함수를 구현해 보겠다. </span>
 

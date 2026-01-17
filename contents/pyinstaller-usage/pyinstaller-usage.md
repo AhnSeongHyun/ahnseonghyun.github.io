@@ -16,9 +16,8 @@ pyinstaller test.py
 
 기본적으로 이런식으로 리눅스 상에서 사용하게 되면 실행파일이'
 featured_image: ''
-tags: ['pyinstaller', 'Python', '실행파일']
+tags: ['Python', 'pyinstaller', 'tutorial', '실행파일']
 ---
-
 암복호화 프로그램을 만들 일이 있었는데, 파이썬으로 작업을 하게 되면 *.py 파일 안에 암복화키가 보여지기 때문에 리눅스 실행파일로 만들수 있는 방법을 찾게 되었다. C/C++ 을 이용해서 실행파일을 만들까 싶다가 pyinstaller 가 있길래 사용해 봤는데, 사용법이 너무 간단하다. 
 
 http://www.pyinstaller.org/

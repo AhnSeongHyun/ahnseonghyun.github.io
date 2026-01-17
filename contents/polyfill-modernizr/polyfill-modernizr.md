@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2016-01-24'
 description: ''
 featured_image: ''
-tags: ['dev', 'modernizr', 'polyfill']
+tags: ['dev', 'modernizr', 'polyfill', 'tutorial', 'web-development']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

@@ -6,10 +6,8 @@ description: '[http://www.taeyo.net/Columns/View.aspx?SEQ=464&PSEQ=35](http://ww
 
 ASP.NET 에서 API 만 만드는것, 웹 페이지에서 단순히 JSON 만 리턴하는 것을 만들고 싶은데 찾다가 보니 MVC4 Web API 라는게 있어서 테스트 해봄. 해보니까 역시 flask 가 좀더 명확하다는 생각이 들었다.'
 featured_image: ''
-tags: ['ASP.NET WEBAPI', 'dev']
+tags: ['ASP.NET WEBAPI', 'dev', 'python']
 ---
-
-
 [http://www.taeyo.net/Columns/View.aspx?SEQ=464&PSEQ=35](http://www.taeyo.net/Columns/View.aspx?SEQ=464&PSEQ=35)
 
 <span style="font-size: 11pt;">ASP.NET 에서 API 만 만드는것, 웹 페이지에서 단순히 JSON 만 리턴하는 것을 만들고 싶은데 찾다가 보니 MVC4 Web API 라는게 있어서 테스트 해봄. 해보니까 역시 flask 가 좀더 명확하다는 생각이 들었다. </span>

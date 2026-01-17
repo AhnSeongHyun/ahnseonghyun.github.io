@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-11-04'
 description: 'flask 관련 작업을 하면서 로깅을 어떻게 할까 하는 생각이 있었는데 python 에 기본적으로 logging을 탑재하고 있어서 이렇게 사용법을 올린다. 별 다른 건 없고, basicConfig 라는 것을 통해서 filename, filemode, level 을 설정할수 있는데 file 관련 설정을 하지 않으면 stdout 으로 출력되게 된다. 자세한 사항은 [http://docs.python.org/2/library/logging.html](http://docs.pytho'
 featured_image: ''
-tags: ['dev', 'logging', 'Python']
+tags: ['Python', 'dev', 'logging', 'tutorial']
 ---
-
-
 <span style="font-size: 11pt;">flask 관련 작업을 하면서 로깅을 어떻게 할까 하는 생각이 있었는데 python 에 기본적으로 logging을 탑재하고 있어서 이렇게 사용법을 올린다. 별 다른 건 없고, basicConfig 라는 것을 통해서 filename, filemode, level 을 설정할수 있는데 file 관련 설정을 하지 않으면 stdout 으로 출력되게 된다. 자세한 사항은 [http://docs.python.org/2/library/logging.html](http://docs.python.org/2/library/logging.html) 에서 확인하자. </span>
 
 <span style="font-size: 11pt;">  

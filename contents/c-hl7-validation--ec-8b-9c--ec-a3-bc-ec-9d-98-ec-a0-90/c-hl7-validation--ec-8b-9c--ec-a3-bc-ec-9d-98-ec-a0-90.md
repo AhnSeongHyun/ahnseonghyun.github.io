@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2008-08-13'
 description: 'HL7 Validation 시 주의점, 대부분의 XML의 Validation은 별 문제가 없었지만, HL7 같은 경우는 다음과 같은 예외가 발생했다.'
 featured_image: ''
-tags: ['C#', 'dev', 'HL7', 'ValidationCheck', 'XSD', '스키마', '예외', 'programming']
+tags: ['C#', 'HL7', 'ValidationCheck', 'XSD', 'dev', 'medical-informatics', 'programming', '스키마', '예외']
 ---
 HL7 Validation 시 주의점, 대부분의 XML의 Validation은 별 문제가 없었지만, HL7 같은 경우는 다음과 같은 예외가 발생했다.
 

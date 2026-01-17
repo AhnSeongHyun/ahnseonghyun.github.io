@@ -8,7 +8,7 @@ description: '**![](http://ash84.net/wp-content/uploads/1/cfile1.uf.160435454E1A
 
 **'
 featured_image: ''
-tags: ['Action', 'cocoa design pattern', 'dev', 'iOS', 'outlet', 'Target', 'Xcode', '아웃렛', '액션', '타깃']
+tags: ['Action', 'Target', 'Xcode', 'best-practices', 'cocoa design pattern', 'dev', 'iOS', 'outlet', '아웃렛', '액션', '타깃']
 ---
 <div style="text-align: justify; line-height: 2; ">**<span style="font-family: Dotum; "><span style="font-size: 10pt; ">![](http://ash84.net/wp-content/uploads/1/cfile1.uf.160435454E1A59C5322140.jpg)
 

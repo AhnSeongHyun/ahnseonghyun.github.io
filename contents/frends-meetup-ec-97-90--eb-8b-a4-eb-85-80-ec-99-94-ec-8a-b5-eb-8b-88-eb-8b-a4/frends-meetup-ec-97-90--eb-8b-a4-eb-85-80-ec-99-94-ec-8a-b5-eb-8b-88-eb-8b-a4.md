@@ -5,7 +5,7 @@ pub_date: '2013-07-06'
 description: '평소에 트위터로 개발자분들을 모니터링(?) 하는 편인데 좋은 글을 많이 올리시는 분들이 FRENDS Meetup 을 여신다고 하길래 오늘 가보게 되었습니다. 지난주 정도 부터 온오프믹스를 통해서 참여여부를 받았는데 특이한 점은 보증금 제도다. 10000원을 입금을 하고 메일을 보내면 등록이 되는데 다시 오면 돌려주는 제도. 결과적으로 봤을때 참가를 적극적으로 유도할 수 있는 방식이 아니였을까 싶다. 
 FRE'
 featured_image: ''
-tags: ['angularJS', 'dev', 'FREDNS', 'outsideris', 'developer', '프론트엔드']
+tags: ['FREDNS', 'angularJS', 'best-practices', 'conference', 'dev', 'developer', 'javascript', 'outsideris', '프론트엔드']
 ---
 <span style="font-size: 11pt;">평소에 트위터로 개발자분들을 모니터링(?) 하는 편인데 좋은 글을 많이 올리시는 분들이 FRENDS Meetup 을 여신다고 하길래 오늘 가보게 되었습니다. 지난주 정도 부터 온오프믹스를 통해서 참여여부를 받았는데 특이한 점은 보증금 제도다. 10000원을 입금을 하고 메일을 보내면 등록이 되는데 다시 오면 돌려주는 제도. 결과적으로 봤을때 참가를 적극적으로 유도할 수 있는 방식이 아니였을까 싶다. </span>
 

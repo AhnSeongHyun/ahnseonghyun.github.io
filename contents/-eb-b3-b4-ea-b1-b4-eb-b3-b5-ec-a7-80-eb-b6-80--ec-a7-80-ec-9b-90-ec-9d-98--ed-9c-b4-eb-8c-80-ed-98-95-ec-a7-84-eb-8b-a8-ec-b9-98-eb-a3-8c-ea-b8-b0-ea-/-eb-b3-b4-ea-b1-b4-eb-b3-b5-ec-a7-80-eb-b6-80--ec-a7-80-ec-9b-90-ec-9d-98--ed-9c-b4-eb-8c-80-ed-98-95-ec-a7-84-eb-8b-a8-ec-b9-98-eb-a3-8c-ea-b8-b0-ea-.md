@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-07-21'
 description: ''
 featured_image: ''
-tags: ['']
+tags: ['', 'healthcare']
 ---
-
-
 <span class="Apple-style-span" style="color: rgb(102, 102, 102); font-family: 'Century Gothic'; line-height: 19px; "><div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(243, 197, 52); border-right-color: rgb(243, 197, 52); border-bottom-color: rgb(243, 197, 52); border-left-color: rgb(243, 197, 52); background-color: rgb(254, 254, 184); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div><span style="font-family: Dotum; "><span style="font-size: 10pt; ">Project Organization : Yonsei.Univ LOMIIO</span></span></div><div></div></div><div></div><div></div><div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><div><span style="font-family: Dotum; "><span style="font-size: 10pt; ">  
  Work : Development</span></span></div><div></div><div><span style="font-family: Dotum; "><span style="font-size: 10pt; ">  
  Language : .NET 2.0 with C#</span></span></div><div></div><div><span style="font-family: Dotum; "><span style="font-size: 10pt; ">  

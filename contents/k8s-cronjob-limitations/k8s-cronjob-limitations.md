@@ -10,9 +10,8 @@ Cronjob object는 하나의 crontab 파일.
 
 crontab 파일(리눅스에서의 cron 포맷으로 생성된) 이 정기적으로 job을'
 featured_image: ''
-tags: ['k8s', 'cronjob', 'limit', 'startingDeadlineSeconds', 'concurrencyPolicy']
+tags: ['concurrencyPolicy', 'cronjob', 'deployment', 'k8s', 'limit', 'startingDeadlineSeconds']
 ---
-
 원문 : [https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#cron-job-limitations](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#cron-job-limitations)
 
 Cron Job 은 job을 시간에 맞춰서 생성한다. 

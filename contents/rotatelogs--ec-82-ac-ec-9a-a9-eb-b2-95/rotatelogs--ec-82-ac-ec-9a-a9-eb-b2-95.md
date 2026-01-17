@@ -17,10 +17,8 @@ rotatelogs [ -l ] logfile [ rotationtime [ offset ]] | [ filesizeM ]
 
 #### **실행 옵션**'
 featured_image: ''
-tags: ['apache logs', 'dev', 'logrorate', 'roratelogs']
+tags: ['apache logs', 'dev', 'logrorate', 'roratelogs', 'tutorial']
 ---
-
-
 링크 : [https://httpd.apache.org/docs/2.2/ko/programs/rotatelogs.html](https://httpd.apache.org/docs/2.2/ko/programs/rotatelogs.html)
 
 - Apache와 함께 자동 설치

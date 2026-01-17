@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2012-05-17'
 description: '꼭 자바 개발자가 아니더라도 한번쯤 들어 볼만 하다. 개발자란 무술가와 같기 때문에 (절대 과학자는 아님) 선배 개발자의 경험은 시행착오와 기로에'
 featured_image: ''
-tags: ['dev']
+tags: ['dev', 'ios-development', 'learning']
 ---
-
-
 <center>  
 <iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/3mgMwObtaQ0" width="560"></iframe>  
 </center><span style="font-size: 11pt; ">꼭 자바 개발자가 아니더라도 한번쯤 들어 볼만 하다. 개발자란 무술가와 </span><span style="font-size: 11pt; ">같기 때문에 (절대 과학자는 아님) 선배 개발자의 경험은 시행착오와 기로에서의 선택에 많은 도움이 될것이라 생각된다. </span>

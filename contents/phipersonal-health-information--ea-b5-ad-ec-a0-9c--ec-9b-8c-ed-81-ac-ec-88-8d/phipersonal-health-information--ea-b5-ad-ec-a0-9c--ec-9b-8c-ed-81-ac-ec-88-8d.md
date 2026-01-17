@@ -7,7 +7,7 @@ description: '![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/
 
 대구를 어제 다녀왔다. PHI 국제 워크숍을 다녀 왔는데, 대구라는 지리적 역경(?)이 나의 온몸을 휘감았지만, 좋았던 점도 있었던것 같다. 많은 학회들이 열리고, 실제적으로 타 학문보다 “의료정보공학” 이라는 특성상, 의료 + 공학 적인 부분에 관심을 가져야 하기 때문에, 학회에 참가할 곳도 많은것 같다. 여러곳을 참가해 봤지만, 사실 나같은 일개 석사준비생 한테는 용어 자체만으로도'
 featured_image: ''
-tags: ['ISO/IEEE 11073', 'Medical device communication', 'Melvin Reynolds', 'PHI국제 워크샵', '곽연식교수님', 'medical-informatics']
+tags: ['ISO/IEEE 11073', 'Medical device communication', 'Melvin Reynolds', 'PHI국제 워크샵', 'healthcare', 'medical-informatics', '곽연식교수님']
 ---
 ![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/gl104.JPG)  
 하루동안 무슨일이 있었을까?

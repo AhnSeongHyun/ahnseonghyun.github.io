@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2008-12-07'
 description: '[![Day 106 - I am a librarian](http://farm1.static.flickr.com/134/352573802_'
 featured_image: ''
-tags: ['blog', 'medical-informatics', 'subject', '주제', '학술블로그']
+tags: ['blog', 'healthcare', 'medical-informatics', 'subject', '주제', '학술블로그']
 ---
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); padding: 10px; background-color: rgb(255, 255, 255); text-align: justify; line-height: 2;"><table align="justify" class="flickrImgSearch"><tbody><tr><td>[![Day 106 - I am a librarian](http://farm1.static.flickr.com/134/352573802_8f202edf53.jpg)](http://www.flickr.com/photos/23341397@N00/352573802 "Day 106 - I am a librarian")  
 <span>Day 106 – I am a librarian by [cindiann](http://www.flickr.com/photos/23341397@N00)</span>[![저작자 표시](http://cfs.tistory.com/static/admin/editor/ccl_black01.png)![비영리](http://cfs.tistory.com/static/admin/editor/ccl_black02.png)![변경 금지](http://cfs.tistory.com/static/admin/editor/ccl_black04.png)](http://creativecommons.org/licenses/by-nc-nd/2.0/kr/)</td></tr></tbody></table><span style="font-size: 11pt;"></span>

@@ -5,10 +5,8 @@ pub_date: '2008-09-29'
 description: '[](http://ash84.net/wp-content/uploads/1/48e0707f8ebe97H.pdf)48e0707f8ebe97H.pdf  
  특징'
 featured_image: ''
-tags: ['EMBS', 'gateway', 'healthcare', 'IEEE', 'mobile', 'role-based']
+tags: ['EMBS', 'IEEE', 'gateway', 'healthcare', 'medical-informatics', 'mobile', 'role-based']
 ---
-
-
 [](http://ash84.net/wp-content/uploads/1/48e0707f8ebe97H.pdf)48e0707f8ebe97H.pdf  
  특징
 

@@ -7,7 +7,7 @@ description: 'maven에 대해서 포스팅 하는 이유는 Java 의 빌드에 �
 
 ![](http://ash84.ne'
 featured_image: ''
-tags: ['dev', 'JAR', 'Java', 'maven', '빌드']
+tags: ['JAR', 'Java', 'dev', 'maven', 'project-showcase', '빌드']
 ---
 <span style="font-size: 11pt;">maven에 대해서 포스팅 하는 이유는 Java 의 빌드에 대해서 여러가지 방법이 있지만, 가장 jar에 대한 관리가 잘 되기 때문이라는 생각에서였다. 본 글은 이클립스 Juno 버전이 설치되어 있다는 가정하에 진행하도록 하겠다. 기존의 이클립스가 있으신 분들이라면 Juno 버전을 따로 다운 받아서 해보시길 바란다. </span>
 

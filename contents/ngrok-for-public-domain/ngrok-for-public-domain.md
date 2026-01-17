@@ -6,9 +6,8 @@ description: '테스트를 하거나 아니면 인증 쪽 관련 작업들을 �
 
 ![ngrok%20localhost%20publ'
 featured_image: ''
-tags: ['ngrok', 'domain']
+tags: ['domain', 'ngrok', 'python']
 ---
-
 테스트를 하거나 아니면 인증 쪽 관련 작업들을 하려고 하면 localhost 에서 띄우면 되는데 도메인이 필요한 경우들이 있다. 예를 들면 github 에서 webhook  테스트를 한다고 할 때 도메인을 입력해야 github 상에서 이벤트가 발생했을 때 webhook 을 받을수 있다. (github 입장에서 localhost 는 자기자신이니..😅) 또는 모바일과 연동 테스트를 진행할 때도 도메인을 만들기 전이나 실서버 올리기 전에 임시로 테스트를 하기 위해서도 유용할 것 같다. 😙
 
 ![ngrok%20localhost%20public%20domain/Untitled.png](https://live.staticflickr.com/65535/49304043123_abb75e334e_z.jpg)

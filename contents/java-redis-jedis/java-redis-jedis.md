@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2012-09-03'
 description: ''
 featured_image: ''
-tags: ['dev', 'GitHub', 'Java', 'jedis', 'redis', 'redis 연동하기']
+tags: ['GitHub', 'Java', 'dev', 'jedis', 'open-source', 'redis', 'redis 연동하기', 'tutorial']
 ---
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->

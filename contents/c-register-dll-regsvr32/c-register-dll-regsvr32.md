@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2012-07-28'
 description: ''
 featured_image: ''
-tags: ['c# DLL 등록', 'dev', 'dll 등록', 'MSDN', 'regsvr32.exe']
+tags: ['MSDN', 'c# DLL 등록', 'dev', 'dll 등록', 'regsvr32.exe', 'tutorial']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

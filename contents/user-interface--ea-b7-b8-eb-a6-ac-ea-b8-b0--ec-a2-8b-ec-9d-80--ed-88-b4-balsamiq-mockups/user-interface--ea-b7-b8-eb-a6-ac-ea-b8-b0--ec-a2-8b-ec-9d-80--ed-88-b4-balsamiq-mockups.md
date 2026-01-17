@@ -6,10 +6,8 @@ description: '작업 초기에 유저인터페이스를 먼저 개발하고 그�
 
 대표적인 프로그래밍 관련 잡지인 마이크로소프트웨어 5월호에 소개된 Balsamiq Mockups 는 그러한 사용자 인터페이스 화면'
 featured_image: ''
-tags: ['Balsamiq Mockups', 'GUI', 'http://www.balsamiq.com/products/mockups', 'User Interface', '사용자 인터페이스']
+tags: ['Balsamiq Mockups', 'GUI', 'User Interface', 'http://www.balsamiq.com/products/mockups', 'tutorial', '사용자 인터페이스']
 ---
-
-
 작업 초기에 유저인터페이스를 먼저 개발하고 그에 대해서 고객과 UI 에 대해서 이야기를 해야하는 경우가 많다. 물론 VS2008 롤 각종 컨트롤을 가져다가 구성하는 것이 어려운 일은 아니지만, 고객과의 상담결과가 늘 그렇듯 내가 만든 UI를 많이 바뀌게 만든다. 그래서 어차피 고쳐야 하기 때문에 사실상 실제 컨트롤을 구현한 화면을 가지고 미팅을 한다는건 상당히 귀찮은 일이다.(안귀찮을지도 모르지만.)
 
 대표적인 프로그래밍 관련 잡지인 마이크로소프트웨어 5월호에 소개된 Balsamiq Mockups 는 그러한 사용자 인터페이스 화면을 구성하게 해주는 툴로써 유행하다고 생각되어 사용해보게 되었다.

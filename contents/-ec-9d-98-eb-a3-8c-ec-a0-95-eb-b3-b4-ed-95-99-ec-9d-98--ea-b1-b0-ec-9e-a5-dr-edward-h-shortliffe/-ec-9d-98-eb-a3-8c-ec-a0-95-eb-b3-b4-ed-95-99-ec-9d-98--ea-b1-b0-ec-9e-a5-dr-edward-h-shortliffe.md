@@ -8,7 +8,7 @@ description: '![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/
 **의료정보학(medical informatics)의 거장(guru)은 누구일까?  
 **'
 featured_image: ''
-tags: ['AMIA', 'Edward H. Shortliffe', 'MYCIN', '스탠포드대학교', 'medical-informatics', '전문가시스템']
+tags: ['AMIA', 'Edward H. Shortliffe', 'MYCIN', 'healthcare', 'medical-informatics', '스탠포드대학교', '전문가시스템']
 ---
 ![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/fk15.jpg)  
 어떤 분야의 거장을 안다는 것은 특정분야를 이수하는 과정속에서 매우 중요한 일중하나라고 할수 있다. 디자인이나 패션계의 경우 일반인들에게 잘 알려져 있는 반면, 학계는 찾아 봐야 하는 수고가 필요하기도 한다.

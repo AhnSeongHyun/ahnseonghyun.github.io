@@ -8,10 +8,8 @@ description: '파이썬 위클리에서 개인적으로 관심있는것들만 �
 
 – [https://github.com/jtushman/memory_utils](https://'
 featured_image: ''
-tags: ['Celery', 'dev', 'memory_util', 'Python']
+tags: ['Celery', 'Python', 'dev', 'memory_util', 'tutorial']
 ---
-
-
 <span style="font-size: 10pt;">파이썬 위클리에서 개인적으로 관심있는것들만 정리하였음. </span>
 
 [**<span style="font-size: 10pt;">memory_util</span>**](https://github.com/jtushman/memory_utils)

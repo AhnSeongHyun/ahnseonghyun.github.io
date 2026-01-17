@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2012-11-26'
 description: '[윤석찬](https://twitter.com/channyun)님의 트'
 featured_image: ''
-tags: ['Clay Shirky', 'GitHub', 'ted', '어떻게 인터넷이 정부를 완전히 바꾸어 놓을것인가?']
+tags: ['Clay Shirky', 'GitHub', 'open-source', 'ted', '어떻게 인터넷이 정부를 완전히 바꾸어 놓을것인가?']
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gkIuwLGIp8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

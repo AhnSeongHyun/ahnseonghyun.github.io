@@ -5,7 +5,7 @@ pub_date: '2012-11-07'
 description: 'mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다. 
 mysql 을 연동하는 포스팅을 쓰는 가장 큰 이유는 iOS의 Cocoa 프레임워크 상에서 따로 DB연결 관련 클래스'
 featured_image: ''
-tags: ['dev', 'iOS', 'iOS DB 연동하기', 'MySQL', 'MYSQL 연동하기']
+tags: ['MYSQL 연동하기', 'MySQL', 'dev', 'iOS', 'iOS DB 연동하기', 'ios-development']
 ---
 <span style="font-size: 11pt;">mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다. </span>
 

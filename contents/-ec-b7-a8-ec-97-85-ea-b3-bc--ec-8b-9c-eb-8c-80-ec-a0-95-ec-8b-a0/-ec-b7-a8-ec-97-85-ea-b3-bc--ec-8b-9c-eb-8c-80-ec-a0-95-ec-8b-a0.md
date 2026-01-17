@@ -5,10 +5,8 @@ pub_date: '2009-05-28'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile5.uf.204A480B4A1E4642747583.PNG)미티(출처 - 다음만화)면접 본후, 2주가 지났고 출근하라는 메일을 받게 되었다. 뛸듯이 끼뻤다.   
  벤처회사이지만 사장'
 featured_image: ''
-tags: ['서태지', '시대유감', '시대정신', '취업']
+tags: ['career', '서태지', '시대유감', '시대정신', '취업']
 ---
-
-
 <figure class="wp-caption aligncenter" style="width: 280px">![](http://ash84.net/wp-content/uploads/1/cfile5.uf.204A480B4A1E4642747583.PNG)<figcaption class="wp-caption-text">미티(출처 - 다음만화)</figcaption></figure><div style="TEXT-ALIGN: justify">면접 본후, 2주가 지났고 출근하라는 메일을 받게 되었다. 뛸듯이 끼뻤다.   
  벤처회사이지만 사장님의 철학적인 부분(마인드)가 좋아서 다른 회사보다 더 마음이 쏠렸던것 갔다. 교수님께 말씀드리고, 욕좀먹고(인수인계), 주변정리를 하면서 느낀건 벌써 2년이라는 시간이 흘렀다는것이다. 늘 시간은 빠르고 나는 느리다. 이제는 직장인으로써의 삶을 살아가게 될것이다. 나자신에게 떳떳해 지면 결혼도 하고 한 가정을 책임져야할 아버지가 될지도 모르지만 돈 때문에 시대정신을 포기하고 싶지는 않다. 대학교 1학년때, 서동수 교수님의
 

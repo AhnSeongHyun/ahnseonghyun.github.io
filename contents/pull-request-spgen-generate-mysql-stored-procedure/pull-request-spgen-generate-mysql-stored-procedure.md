@@ -8,7 +8,7 @@ description: '#### **앞서서, 프로시저에 대한 이야기**
 
 현재 회사에서는 모든 데이터베이스 관련된 로직은 저장 프로시저(Stored Procedure) 방식으로 구현되고 있다. 개인적으로 이전 회사에서는 이런식으로 작업을 하지 않았고, ORM을'
 featured_image: ''
-tags: ['dev', 'generate stored procedure', 'MySQL', 'sp', 'spgen', 'stored-procedure']
+tags: ['MySQL', 'conference', 'dev', 'generate stored procedure', 'open-source', 'sp', 'spgen', 'stored-procedure']
 ---
 #### **앞서서, 프로시저에 대한 이야기**
 

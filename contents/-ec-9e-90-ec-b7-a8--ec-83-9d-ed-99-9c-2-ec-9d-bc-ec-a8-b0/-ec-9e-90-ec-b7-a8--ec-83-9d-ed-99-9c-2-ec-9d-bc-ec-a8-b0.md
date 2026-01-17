@@ -5,10 +5,8 @@ pub_date: '2009-02-24'
 description: '[![Grundvik main house](http://farm1.static.flickr.com/57/214317898_596c96ecb6.jpg)](http://www.flickr.com/photos/62223880@N00/214317898 "Grundvik main house")  
 Grundvik main house by [wili_hybrid](http://www.flickr.com/photos/62223'
 featured_image: ''
-tags: ['신촌', '자취']
+tags: ['career', '신촌', '자취']
 ---
-
-
 <div><table class="flickrImgSearch">  
 <tbody>  
 <tr>  

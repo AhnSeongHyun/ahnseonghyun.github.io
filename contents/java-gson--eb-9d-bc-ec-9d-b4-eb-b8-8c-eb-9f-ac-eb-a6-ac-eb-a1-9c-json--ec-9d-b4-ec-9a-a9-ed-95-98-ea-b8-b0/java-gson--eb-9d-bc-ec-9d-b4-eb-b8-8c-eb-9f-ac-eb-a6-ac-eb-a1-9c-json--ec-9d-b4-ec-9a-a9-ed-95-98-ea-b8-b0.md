@@ -15,7 +15,7 @@ description: '최근에 회사에서 프로젝트를 하면서 쓴 것은 아니
 
 즉, 어'
 featured_image: ''
-tags: ['dev', 'GSON', 'JSON', 'MD5', 'read from file json', 'write to file json', 'Java']
+tags: ['GSON', 'JSON', 'Java', 'MD5', 'dev', 'open-source', 'read from file json', 'write to file json']
 ---
 최근에 회사에서 프로젝트를 하면서 쓴 것은 아니고 프로토타입핑을 하는 도중에쓴것이 있어서 소개하려고한다. 목적은그랬다. 데이터양이엄청많았는데서버에서가져오기벅차니까결과를캐쉬하자는목적이었다. 그런데메모리에올려져있는캐쉬를사용하자니서버에부담도되고, 그 사용량 역시 만만치 않다는 결론에이르렀다. 
  

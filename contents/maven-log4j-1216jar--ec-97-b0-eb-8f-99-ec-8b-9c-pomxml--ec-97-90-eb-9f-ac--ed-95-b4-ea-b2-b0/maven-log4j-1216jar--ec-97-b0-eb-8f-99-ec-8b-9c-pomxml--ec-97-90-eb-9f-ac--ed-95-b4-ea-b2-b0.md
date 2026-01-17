@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2012-12-28'
 description: 'slf4j-log4j를 연계해서 쓰는데, [이전 포스팅](http://ash84.tistory.com/863)에서도 말했지만 slf4j와 lo44j의 버전을 제대로 맞추어야 별 탈없이 붙어서 돌아가게 되는데, 필자의 경우 아래의 버전 조합으로 현재 회사에서 사용하고 있다.'
 featured_image: ''
-tags: ['dev', 'log4j-1.2.16.jar', 'logtj', 'maven', 'pom.xml 에러']
+tags: ['dev', 'java', 'log4j-1.2.16.jar', 'logtj', 'maven', 'pom.xml 에러']
 ---
 <span style="font-size: 11pt;">slf4j-log4j를 연계해서 쓰는데, [이전 포스팅](http://ash84.tistory.com/863)에서도 말했지만 slf4j와 lo44j의 버전을 제대로 맞추어야 별 탈없이 붙어서 돌아가게 되는데, 필자의 경우 아래의 버전 조합으로 현재 회사에서 사용하고 있다. </span>
 

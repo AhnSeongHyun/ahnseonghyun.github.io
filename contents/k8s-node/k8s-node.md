@@ -16,9 +16,8 @@ description: '본 포스팅은 Qwiklabs 의 [Kubernetes in the Google Cloud](htt
 
 ![](https://farm5.staticflickr'
 featured_image: ''
-tags: ['k8s', 'node', 'gcp', 'gcr']
+tags: ['deployment', 'gcp', 'gcr', 'javascript', 'k8s', 'node']
 ---
-
 본 포스팅은 Qwiklabs 의 [Kubernetes in the Google Cloud](https://www.qwiklabs.com/quests/29)
 를 기반으로 하고 있습니다. 
 

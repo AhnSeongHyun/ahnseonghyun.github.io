@@ -10,7 +10,7 @@ description: '테스팅을 구성하고 travis-ci 를 연결을 해서 테스트
 
 travis-ci 에서 로그인하고, 본'
 featured_image: ''
-tags: ['dev', 'test', 'travis-ci', 'env', 'env variables']
+tags: ['dev', 'env', 'env variables', 'python', 'test', 'travis-ci']
 ---
 테스팅을 구성하고 travis-ci 를 연결을 해서 테스트 하던중 의문이 생겼다. 로컬 컴퓨터에서 테스트 할 때에는 db 정보를 설정에 두거나 하드코딩된 채로 사용했었는데, travis-ci 에 올리기 위해서는 그런 정보들을 어디엔가 두어야 한다. 물론 저장소에 둘 수도 있지만, 그리 좋은 방법은 아니다. 
 

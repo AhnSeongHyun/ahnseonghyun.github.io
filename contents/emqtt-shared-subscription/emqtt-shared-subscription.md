@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2017-09-11'
 description: '최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 **Shared Subscriptions** 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을'
 featured_image: 'https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif'
-tags: ['dev', 'emqtt', 'mqtt', 'shared subscription']
+tags: ['dev', 'emqtt', 'mqtt', 'open-source', 'python', 'shared subscription']
 ---
-
 최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 **Shared Subscriptions** 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을 사용하면 그 중 하나만 해당 토픽에서 온 메시지를 처리하는 기능을 하게 된다. 
 
 ![](https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif)

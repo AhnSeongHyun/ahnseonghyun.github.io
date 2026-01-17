@@ -10,9 +10,8 @@ description: '최근에 신규 프로젝트를 들어가면서 DB와 API 설계�
 
 워드 문서로 받아 쓰던 입장에서, 이제 만'
 featured_image: ''
-tags: ['dev', 'markdown', 'API', 'db', 'documetation']
+tags: ['API', 'db', 'dev', 'documetation', 'markdown', 'open-source', 'tutorial']
 ---
-
 최근에 신규 프로젝트를 들어가면서 DB와 API 설계를 담당하고 있는데 일반적으로 DB 설계는 설계 후 산출물을 가지고 검토를 받고, API는 설계 산출물을 가지고 클라이언트 개발자(앱과 웹) 전달해서 연동할 때 사용하도록 하는 식으로 진행이 된다. 
 
 다이어그램이나 그런 것들도 있겠지만, 테이블 상세나 API 상세는 워드 문서(.docx)로 작성되고, 그것을 나 역시 받아서 구현하는 쪽에서만 사용했었다. 

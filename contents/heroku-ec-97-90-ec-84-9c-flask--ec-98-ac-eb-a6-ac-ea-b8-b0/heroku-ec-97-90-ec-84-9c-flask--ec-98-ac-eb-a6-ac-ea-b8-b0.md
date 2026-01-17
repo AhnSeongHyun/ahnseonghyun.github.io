@@ -6,7 +6,7 @@ description: 'heroku 를 아주 간단히 설명하자면 마치 서버를 가�
 
 가입을 하'
 featured_image: ''
-tags: ['dev', 'Flask', 'heroku', 'heroku with flask']
+tags: ['Flask', 'dev', 'heroku', 'heroku with flask', 'python']
 ---
 heroku 를 아주 간단히 설명하자면 마치 서버를 가지고 있는것 처럼 웹의 공간을 대행해주는 업체인데, 클라우드 어플리케이션 플랫폼이라고한다. 특이하게 git 을통해서 올리고 내리고 함으로써 소스를 서버에 반영할 수 가 있다. heroku 에서는 python 부분은 기본적으로 django를 기본으로 하고 있는데 **[heroku에서 제공하는 flask 가이드](https://devcenter.heroku.com/articles/getting-started-with-python-o)**를 기본으로 해서 설명하겠다.  
 

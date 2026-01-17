@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2007-11-09'
 description: '11월 1, 2, 3일 코엑스 대서양 관에서 아시아-태평양 관광투자 컨퍼런스&박람회가 문화관광부 주관으로 열렸다. 여러 업체 보다는 다양한 지자체가 나와서 자신의 고향이나 지역의 특산물이나 지역적 위치를'
 featured_image: ''
-tags: ['LOMIIO', '아시아-태평양 관광투자 컨퍼런스와 박람회', '의료관광', '코엑스 대서양관']
+tags: ['LOMIIO', 'conference', 'healthcare', '아시아-태평양 관광투자 컨퍼런스와 박람회', '의료관광', '코엑스 대서양관']
 ---
-
-
 <span style="font-size: 11pt;">11월 1, 2, 3일 코엑스 대서양 관에서 </span><font color="#d41a01"><span style="font-size: 11pt;">아시아-태평양 관광투자 컨퍼런스&박람회</span></font><span style="font-size: 11pt;">가 문화관광부 주관으로 </span><span style="font-size: 11pt;">열렸다. 여러 업체 보다는 다양한 지자체가 나와서 자신의 고향이나 지역의 특산물이나 지역적 위치를</span><span style="font-size: 11pt;">고려한 관광시설을 소개하고 투자를 유치 하고자 하는 자리였다. </span>
 
 ![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/el138.JPG)

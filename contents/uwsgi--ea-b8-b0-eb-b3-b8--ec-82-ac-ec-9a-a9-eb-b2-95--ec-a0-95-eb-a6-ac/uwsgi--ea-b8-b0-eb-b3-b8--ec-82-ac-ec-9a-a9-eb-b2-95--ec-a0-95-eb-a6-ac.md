@@ -22,7 +22,7 @@ $ pip install uwsgi
 uwsgi –http 127.0.0.1:3031 –wsgi-file ./myflaskapp.py –callable app –processes 4 –threads 2 –stats 127.0.0.1:9191
 ````'
 featured_image: ''
-tags: ['dev', 'Flask', 'INI', 'uWSGI', 'uwsgi usage', 'uwsgi 사용법']
+tags: ['Flask', 'INI', 'dev', 'python', 'tutorial', 'uWSGI', 'uwsgi usage', 'uwsgi 사용법']
 ---
 ### 개요
 

@@ -7,10 +7,8 @@ description: 'log 관련 이전 포스팅을 일단 언급하자면 아래와 �
 [logging.properties 파헤치기](http://ash84.tistory.com/978) 
 위의 포스팅에서'
 featured_image: ''
-tags: ['vert.x log4j', 'vert.x slf4j', 'vertx', 'vertx slf4j', 'vertx.log']
+tags: ['java', 'vert.x log4j', 'vert.x slf4j', 'vertx', 'vertx slf4j', 'vertx.log']
 ---
-
-
 <span style="font-size: 11pt;">log 관련 이전 포스팅을 일단 언급하자면 아래와 같다. </span>
 
 <span style="font-size: 11pt;">[vertx.log 파일 위치 변경하기](http://ash84.tistory.com/976)</span>

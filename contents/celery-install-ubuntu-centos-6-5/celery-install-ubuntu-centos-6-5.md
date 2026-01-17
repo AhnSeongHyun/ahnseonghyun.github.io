@@ -18,10 +18,8 @@ ceontOS 에서는 설치하는 것이 복잡한데 잘 따라오면 된다. 먼�
 
 11. erlang 설치하기'
 featured_image: ''
-tags: ['Celery', 'celery centos', 'dev']
+tags: ['Celery', 'celery centos', 'dev', 'python']
 ---
-
-
 ### **celery 설치**
 
 `pip install celery`

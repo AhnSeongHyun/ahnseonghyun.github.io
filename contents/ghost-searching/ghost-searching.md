@@ -6,7 +6,7 @@ description: 'Ghost 블로그를 사용한지도 몇개월이 되었는데, 마�
 
 검색은 admin 상에서 제공하고 있기는 하지만, 블로그이면서 동시에 위키처럼 사용하기 때문에 가급적이면 블로그에서 검색이 이루어졌으면 하는 바램이었다. 아쉽게도 [ghost blog](http://blog.ghost.org) 에 가면 검색에 대한 부분은 [Swiftype](http://academy.ghost.o'
 featured_image: 'https://images.unsplash.com/photo-1508161887025-ebd8f2813550?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2f43153987d39aa20d3fc5f2053f4cf6&auto=format&fit=crop&w=1950&q=80'
-tags: ['ghost', 'blog', 'search', 'custom search api']
+tags: ['blog', 'custom search api', 'ghost', 'ios-development', 'python', 'search']
 ---
 Ghost 블로그를 사용한지도 몇개월이 되었는데, 마크다운 기반으로 작성하고 작성툴 역시 깔끔하지만 요상하게 2가지 부분에서 Ghost 블로그가 아쉬움이 있다. 하나는 **카테고리**고, 다른 하나는 **검색**이다. 
 

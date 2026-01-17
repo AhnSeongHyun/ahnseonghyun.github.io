@@ -10,7 +10,7 @@ description: '**KIMES**
 
 ![사용자 삽입 이미지](http'
 featured_image: ''
-tags: ['KIMES', 'medical-informatics', '의료기기']
+tags: ['KIMES', 'healthcare', 'medical-informatics', '의료기기']
 ---
 **<font color="#666699">KIMES</font>**
 

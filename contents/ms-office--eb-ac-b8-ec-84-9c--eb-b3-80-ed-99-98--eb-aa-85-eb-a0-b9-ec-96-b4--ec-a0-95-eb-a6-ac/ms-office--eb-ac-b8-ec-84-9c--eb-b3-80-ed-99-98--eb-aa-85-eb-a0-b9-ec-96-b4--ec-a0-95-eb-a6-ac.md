@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2012-08-06'
 description: '최근에 문서파일 내 텍스트 추출에 대한 [오픈소스(Apache.POI)](http://poi.apache.org/)를 패키징해서 테스트 하던 중에 비정상적인 MS 2003-2007 문서에 대한 내용추출이 안되는 문제가 있었다. 오픈소스 자체의 한계인지도 모르겠지만, 찾은 대안중에 하나가 바로 이러한 문서들을 상위버전의 문서로 변환해서 내용을 추출하는 것이다. 즉, ppt, doc, xls'
 featured_image: ''
-tags: ['Apache.poi', 'excelcnv.exe', 'ms document convertor', 'ppcnvcom.exe', 'wordconv.exe', '문서 변환', '워드 변환', '파워포인트 변환']
+tags: ['Apache.poi', 'excelcnv.exe', 'ms document convertor', 'open-source', 'ppcnvcom.exe', 'wordconv.exe', '문서 변환', '워드 변환', '파워포인트 변환']
 ---
-
-
 <span style="font-size: 11pt; font-family: Gulim, 굴림, AppleGothic, sans-serif; ">최근에 문서파일 내 텍스트 추출에 대한 [오픈소스(Apache.POI)](http://poi.apache.org/)를 패키징해서 테스트 하던 중에 비정상적인 MS 2003-2007 문서에 대한 내용추출이 안되는 문제가 있었다. 오픈소스 자체의 한계인지도 모르겠지만, 찾은 대안중에 하나가 바로 이러한 문서들을 상위버전의 문서로 변환해서 내용을 추출하는 것이다. 즉, ppt, doc, xls 등의 확장자를 가진 문서들을 pptx, xlsx, docx 로 만들어서 [오픈소스](http://poi.apache.org/)</span><span style="font-family: Gulim, 굴림, AppleGothic, sans-serif; font-size: 15px; line-height: 29px; ">[(Apache.POI)](http://poi.apache.org/)</span><span style="font-family: Gulim, 굴림, AppleGothic, sans-serif; font-size: 11pt; line-height: 2; ">로 내용을 추출하는 방식이다. </span>
 
 <span style="font-size: 11pt; font-family: Gulim, 굴림, AppleGothic, sans-serif; ">일단 이 방식의 단점은 윈도우에서만 가능하다는 점인데, MS에서 제공하는 문서 변환기를 다운로드 받아야 한다. 링크는 다음과 같다. </span>

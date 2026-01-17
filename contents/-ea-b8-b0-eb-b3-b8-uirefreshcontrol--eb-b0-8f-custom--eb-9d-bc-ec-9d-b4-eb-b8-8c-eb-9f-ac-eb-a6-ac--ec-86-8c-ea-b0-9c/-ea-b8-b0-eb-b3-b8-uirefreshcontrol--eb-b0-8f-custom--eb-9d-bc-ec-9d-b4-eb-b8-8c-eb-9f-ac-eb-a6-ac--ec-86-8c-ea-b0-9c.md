@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2014-11-28'
 description: '기본적인 UIRefreshControl 에 대한 사용법이다. UITableView에 addSubView:  하는것만으로도 쉽게 사용할 수 있다. spinner 의 색은 setTintColor 를 이용해서 설정할 수가 있고, backgroundColor 을 지정하면 끌어 당겼을 때의 배경색을 지정할 수가 있다. selector 로 지정한 함수에서 웹서비스를  호출하는 함수를 지정해'
 featured_image: ''
-tags: ['dev', 'Objective-C', 'UIRefreshControl', 'UITableView']
+tags: ['Objective-C', 'UIRefreshControl', 'UITableView', 'dev', 'tutorial']
 ---
-
-
 <script src="https://gist.github.com/AhnSeongHyun/6c83553e8e93838da564.js"></script>
 
 기본적인 UIRefreshControl 에 대한 사용법이다. UITableView에 addSubView:  하는것만으로도 쉽게 사용할 수 있다. spinner 의 색은 setTintColor 를 이용해서 설정할 수가 있고, backgroundColor 을 지정하면 끌어 당겼을 때의 배경색을 지정할 수가 있다. selector 로 지정한 함수에서 웹서비스를  호출하는 함수를 지정해 주면 된다. 

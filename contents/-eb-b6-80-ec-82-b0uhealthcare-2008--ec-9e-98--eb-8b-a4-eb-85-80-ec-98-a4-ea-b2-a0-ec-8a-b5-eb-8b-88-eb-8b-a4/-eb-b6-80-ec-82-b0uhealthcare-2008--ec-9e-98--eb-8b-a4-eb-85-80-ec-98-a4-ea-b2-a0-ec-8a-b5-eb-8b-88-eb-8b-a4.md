@@ -5,10 +5,8 @@ pub_date: '2008-10-28'
 description: '몇일간의 끙끙새면서 만든 피피티와 그리고 영어 스크립트를 가지고 
 생애 첫 영어로 학술대회에 발표하러 갑니다.'
 featured_image: ''
-tags: ['uHealthcare 2008', '부산']
+tags: ['healthcare', 'uHealthcare 2008', '부산']
 ---
-
-
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">몇일간의 끙끙새면서 만든 피피티와 그리고 영어 스크립트를 가지고</span><span style="font-size: 11pt;"> </span>  
 <span style="font-size: 11pt;">생애 첫 영어로 학술대회에 발표하러 갑니다.</span><span style="font-size: 11pt;"> </span>
 

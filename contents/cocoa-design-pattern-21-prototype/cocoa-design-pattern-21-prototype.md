@@ -5,7 +5,7 @@ pub_date: '2011-07-12'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile21.uf.197E8A4E4E1BAD76357DCD.jpg)
 **'
 featured_image: ''
-tags: ['dev', 'iOS', 'prototype pattern', 'design-pattern', '프로토타입']
+tags: ['best-practices', 'design-pattern', 'dev', 'iOS', 'prototype pattern', '프로토타입']
 ---
 <div></div><div style="line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">![](http://ash84.net/wp-content/uploads/1/cfile21.uf.197E8A4E4E1BAD76357DCD.jpg)</span></span>
 

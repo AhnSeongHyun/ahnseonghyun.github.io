@@ -8,9 +8,8 @@ description: 'sorted 에 대해서 질문을 받았고 잘 대답을 하지 못�
 ### list.sort() vs sorted()
 - `list.sort()` 는 리스트 내부에서 정렬된다. 그에 비해 `sorted()` 는 정렬된 값을 돌려준다. 그렇기 때문에 원래 값을 유지하면서 정렬된 결과를 얻고 싶다면 `sorted()` 를 사용하면 된다. `li'
 featured_image: 'https://images.unsplash.com/photo-1460058418905-d61a1b4a55fe?ixlib=rb-0.3.5&s=a8b0de48d09d5f907d871be8b775b5b3&auto=format&fit=crop&w=889&q=80'
-tags: ['dev', 'Python', 'sorted', 'list.sort()']
+tags: ['Python', 'dev', 'list.sort()', 'sorted', 'tutorial']
 ---
-
 sorted 에 대해서 질문을 받았고 잘 대답을 하지 못해서 복기차원에서 이 글을 쓴다. 대부분의 내용은 [Sorting HOW TO](https://docs.python.org/3/howto/sorting.html) 라는 글에서 가져왔음을 밝힌다. 
 <hr>
 

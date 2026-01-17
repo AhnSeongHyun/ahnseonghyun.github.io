@@ -6,10 +6,8 @@ description: 'GE헬스케어, EMR R&D 센터 설립
 
 **아시아지역 차세대 의료정보시스템 연구 및 개발 진행**'
 featured_image: ''
-tags: ['EMR R&amp;D 센터 설립', 'GE헬스케어', '메디게이트', '장종원']
+tags: ['EMR R&amp;D 센터 설립', 'GE헬스케어', 'healthcare', '메디게이트', '장종원']
 ---
-
-
 <table cellpadding="0" cellspacing="0" width="600">  
 <tbody>  
 <tr height="27">  

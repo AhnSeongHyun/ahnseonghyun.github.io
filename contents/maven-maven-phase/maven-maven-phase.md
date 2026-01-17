@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2013-02-12'
 description: 'maven에서 빌드를 하다보면 goal 을 입력해야하는 경우가 있는데 그냥 package 를 입력하면 jar를 생성해 주는것으로 생각해서 작업을 하곤 했는데, maven 홈페이지 가서 각 phase에 대한 내용을 발췌해왔다. 몇가지 살펴보면 package 는 당연히 compiled code 를 가지고 jar와 같은 배포형식으로 만든다고 되어 있다. install은 말 그대로 설치인데, package 된 것을 다른 프로젝트에서 사용할 수 있도록 (maven)local repos'
 featured_image: ''
-tags: ['dev', 'maven', 'maven goal', 'maven phase', 'Java']
+tags: ['Java', 'dev', 'maven', 'maven goal', 'maven phase', 'project-showcase']
 ---
 <span style="font-size: 11pt;">maven에서 빌드를 하다보면 goal 을 입력해야하는 경우가 있는데 그냥 package 를 입력하면 jar를 생성해 주는것으로 생각해서 작업을 하곤 했는데, maven 홈페이지 가서 각 phase에 대한 내용을 발췌해왔다. 몇가지 살펴보면 package 는 당연히 compiled code 를 가지고 jar와 같은 배포형식으로 만든다고 되어 있다. install은 말 그대로 설치인데, package 된 것을 다른 프로젝트에서 사용할 수 있도록 (maven)local repository에 설치하는 것이라고 설정하고 있다. 제일 끝의 deploy 단계는 통합 또는 릴리즈 환경이 구축된 상태에서 최종 패키지를 개발자나 혹은 다른 프로젝트를 위해서</span><span style="font-size: 11pt;"> 원격지의 저장소에 복사하는 것을 의미한다. </span><span style="font-size: 11pt;"> </span>
 

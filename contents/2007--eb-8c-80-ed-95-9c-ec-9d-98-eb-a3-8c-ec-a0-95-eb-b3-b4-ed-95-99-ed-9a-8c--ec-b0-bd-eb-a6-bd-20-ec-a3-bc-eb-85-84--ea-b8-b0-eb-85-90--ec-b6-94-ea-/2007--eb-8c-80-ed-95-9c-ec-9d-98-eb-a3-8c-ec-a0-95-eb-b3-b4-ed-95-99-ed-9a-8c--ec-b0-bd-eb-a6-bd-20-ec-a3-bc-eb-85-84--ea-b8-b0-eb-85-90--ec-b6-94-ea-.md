@@ -8,7 +8,7 @@ description: '**2007 대한의료정보학회 창립 20주년 기념 추계학�
   
 -'
 featured_image: ''
-tags: ['Web2.0', '대한의료정보학회 창립20주년', 'medical-informatics', '추계학술대회']
+tags: ['Web2.0', 'healthcare', 'medical-informatics', '대한의료정보학회 창립20주년', '추계학술대회']
 ---
 **<font size="1"><font face="arial,helvetica,sans-serif"><span lang="EN-US" style="FONT-WEIGHT: bold; FONT-SIZE: 11pt; FONT-FAMILY: 굴림">2007 </span><span style="FONT-WEIGHT: bold; FONT-SIZE: 11pt; FONT-FAMILY: 굴림">대한의료정보학회 창립 20주년 기념 추계학술대회</span></font></font>**
 

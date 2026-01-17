@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2012-08-22'
 description: '예전에 블로그에 소스코드를 처음에 넣을때에는 주로 박스 안에 코드를 넣는 작업을 했었다. 그런데 이 작업의 가장 큰 단점은 언어별 syntax 하이라이팅을 보여주지 않는 다는 점이다. 말 그대로 텍스트니까. 그리고 나온것이 [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/) 인데 자바스크립트를 이용해서  태그 속성에 class 이름'
 featured_image: ''
-tags: ['dev', 'gist', 'gisthub', 'syntaxhighlighter', 'blog', '워드프레스', '워드프레스 gist', 'code-input']
+tags: ['blog', 'code-input', 'dev', 'gist', 'gisthub', 'open-source', 'syntaxhighlighter', 'tutorial', '워드프레스', '워드프레스 gist']
 ---
 <span style="font-size: 11pt; ">예전에 블로그에 소스코드를 처음에 넣을때에는 주로 박스 안에 코드를 넣는 작업을 했었다. 그런데 이 작업의 가장 큰 단점은 언어별 syntax 하이라이팅을 보여주지 않는 다는 점이다. 말 그대로 텍스트니까. 그리고 나온것이 [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/) 인데 자바스크립트를 이용해서 <pre> 태그 속성에</span><span style="font-size: 11pt; "> class 이름에 java, cpp 처럼 프로그래밍 언어를 입력하고 <pre> 태그 안에 코드를 입력하면 해당 언어의 문법에 맞게 보여주는 방식이었다. </span>
 

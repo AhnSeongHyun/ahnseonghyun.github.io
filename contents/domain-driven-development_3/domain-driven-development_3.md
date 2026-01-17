@@ -15,7 +15,7 @@ description: '링크 - http://yimay.kr/t499o6dfsz
   - 이런 방식은 테스트가 어렵고, 이해하기 어렵고, 유지보수가 어렵다. 
   - *'
 featured_image: 'https://c1.staticflickr.com/5/4197/35042157346_3b66b0bd9b_z.jpg'
-tags: ['book', 'DDD', '에릭에반스']
+tags: ['DDD', 'book', 'learning', '에릭에반스']
 ---
 링크 - http://yimay.kr/t499o6dfsz 
 

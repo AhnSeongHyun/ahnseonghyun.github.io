@@ -8,7 +8,7 @@ MKMapViewDelegate 를 이용하는 방법이 있었다.
 
 MKPointAnnotation을 MKMapView 에 addAnnotattion 함수'
 featured_image: ''
-tags: ['dev', 'iOS', 'MapView', 'MKAnnotation Button', 'MKPointAnnotation', 'Objective-C']
+tags: ['MKAnnotation Button', 'MKPointAnnotation', 'MapView', 'Objective-C', 'dev', 'iOS', 'open-source']
 ---
 MKPointAnnotation 에 정보(i) 버튼을 추가하고 싶었다. 지도 관련 액션을 actionsheet 를 이용해서 하거나 다른 버튼을 이용해서 했었는데  
  핀에 버튼을 눌러서 보여주고 싶었다. [cocoacontrols](http://www.cocoacontrols.com/) 에 많은 개발자들이 만든 것이 있지만 좀더 손쉽게 할수 있는 방법이 없을까 하는 차에 찾아보니  
