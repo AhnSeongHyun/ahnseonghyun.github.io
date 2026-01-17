@@ -5,19 +5,19 @@
 
 # Build the static site
 build:
-	zvc build
-	.venv/bin/python scripts/generate_sitemap.py
-	.venv/bin/python scripts/generate_robots.py
+	uv run zvc build
+	uv run python scripts/generate_sitemap.py
+	uv run python scripts/generate_robots.py
 	echo "ash84.io" > ./docs/CNAME
 	echo "google.com, pub-8699046198561974, DIRECT, f08c47fec0942fa0" > ./docs/ads.txt
 
 # Clean generated files
-clean: 
-	zvc clean
+clean:
+	uv run zvc clean
 
-run: 
-	zvc build
-	python -m http.server 8000  --directory ./docs 
+run:
+	uv run zvc build
+	uv run python -m http.server 8000  --directory ./docs 
 
 # Create new content directory and file
 # Usage: make new NAME=2025-test
