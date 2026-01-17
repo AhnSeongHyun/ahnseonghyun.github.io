@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-04-13'
 description: '저는 몇가지 SNS 를 하는데요, 트위터, 페이스북, 미투데이가 가장 대표적인 것이겠죠. 트위터는 모바일에서 많이 하지만, 사실 페이스북은 모바일에서 좀 불편해서 잘 안하게 되고.. (링크 연결 입력이 잘 안되는..) 그리고 미.투.데.이. 개인적으로 애기하자면 미투데이 초기때 부터 했고, 트위터 모를때 부터 SN'
 featured_image: ''
-tags: ['dev', 'NHN', '네이버', '미투데이', '아이폰', '앱 파헤치기']
+tags: ['dev', 'NHN', '네이버', '미투데이', 'iOS', '앱 파헤치기']
 ---
-
-
 <div><div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">저는 몇가지 SNS 를 하는데요, 트위터, 페이스북, 미투데이가 가장 대표적인 것이겠죠. 트위터는 모바일에서 많이 하지만, 사실 페이스북은 모바일에서 좀 불편해서 잘 안하게 되고.. (링크 연결 입력이 잘 안되는..) 그리고 미.투.데.이. 개인적으로 애기하자면 미투데이 초기때 부터 했고, 트위터 모를때 부터 SNS 라는 이름이 몬지 몰랐을때 부터 아, 이거 몬가 재밌다라고 느끼면서 웹에서 하고 했습니다. </span></span></div><div style="text-align: justify;"><span class="Apple-style-span" style="line-height: 24px;">  
 </span></div></div><div><span class="Apple-style-span" style="line-height: 2;"><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; "><font class="Apple-style-span" color="#5C7FB0">간단히 미투데이엗 대한 느낌을 말하자면 미투데이는 좀더 트위터 보다 사람냄새나는 SNS 라는 생각이 듭니다. 지극히 개인적으로. 지극히 개인적입니다. 토달지 마세요. </font></span></span></div></span><div style="text-align: justify;"></div><span class="Apple-style-span" style="line-height: 2;"><div style="text-align: justify;"><span style="font-size: 10pt; "><span style="font-family: Dotum; ">자, 오늘은 미투데이 앱을 파헤쳐 볼거에요. <font class="Apple-style-span" color="#E31600">미투데이 앱의 가장 안 좋은거라면 알림으로 인한 뷰의 모달출력이라는 것 입니다.</font> 자, 어렵죠? 말이 어려운데.. 미투데이는 알람을 주고 알람을 보기를 누르면 자연스럽게 미투데이가 뜨게 되는데 해당 내용이 아래에서 올라옵니다. 그런데 한번 생각해 보죠. 하루에 친구신청 혹은 댓글을 10개 이상 받았다고 하고 그것을 다 보기 버튼을 눌러서 봤다고 가정 한다면. </span></span></div></span>
 

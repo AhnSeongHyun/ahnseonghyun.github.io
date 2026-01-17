@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-08-08'
 description: 'pip install flask'
 featured_image: ''
-tags: ['dev', 'Django', 'FLASK', 'Python']
+tags: ['dev', 'Django', 'Flask', 'Python']
 ---
-
-
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">pip install flask </span>
 
 </div> 

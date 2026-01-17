@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2012-11-27'
 description: '~/Library/Application Support/iPhone Simulator/'
 featured_image: ''
-tags: ['~/Library/Application Support/iPhone Simulator/', 'dev', 'IOS', 'iPhone 시뮬레이터 경로', '시뮬레이터']
+tags: ['iOS', 'dev', '시뮬레이터']
 ---
-
-
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">~/Library/Application Support/iPhone Simulator/</span>
 
 </div><div style="line-height: 2;"><span style="font-size: 11pt;">  

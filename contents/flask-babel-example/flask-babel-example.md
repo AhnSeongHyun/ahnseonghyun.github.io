@@ -6,9 +6,8 @@ description: 'flask 로 다국어 서비스를 만드는 일을 하고 있는데
 
 일단 여기서는 WEB 상에서 언어별로 사전을 만들고 jinja 템'
 featured_image: 'https://pythonhosted.org/Flask-Babel/_static/flask-babel.png'
-tags: ['dev', 'FLASK', '다국어', 'flask-babel', 'i18n']
+tags: ['dev', 'Flask', '다국어', 'flask-babel', 'i18n']
 ---
-
 flask 로 다국어 서비스를 만드는 일을 하고 있는데 일단 생각해 볼 부분이 API 와 WEB 이다. API는 모바일에서 요청이 들어오는 형태인데, 이 경우 모바일의 사용자 언어 설정을 파라미터로 받고 API 레벨에서 DB 내에 다국어 컬럼 혹은 행이 있다는 가정하에 select 를 해서 response 를 내보내면 된다. WEB 의 경우 AcceptLanguage 를 이용할 수도 있고, GET 요청의 파라미터로 언어코드가 전달 된다면 그것을 활용할 수도 있다. 
 
 일단 여기서는 WEB 상에서 언어별로 사전을 만들고 jinja 템플릿 안에서 어떻게 언어코드 별로 다른 문자를 보여줄것인지에 대해서 설명한다. 

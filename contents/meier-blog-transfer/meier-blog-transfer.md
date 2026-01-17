@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2019-07-23'
 description: '몇 주전부터 심심할 때마다 블로그 서버인 [meier](https://github.com/meier-project/meier) 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 `docker` 를 사용하도록 바꾸는 작업이었다. `docker` 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다.'
 featured_image: ''
-tags: ['meier', 'Blog', 'aws', 'lightsail']
+tags: ['meier', 'Blog', 'AWS', 'lightsail']
 ---
-
 몇 주전부터 심심할 때마다 블로그 서버인 [meier](https://github.com/meier-project/meier) 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 `docker` 를 사용하도록 바꾸는 작업이었다. `docker` 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다. 
 
 그래서 Dockerfile 을 만들었고, `alphine` 으로 base image 를 쓰다가 회사 동료가 `slim-stretch` 를 알려줘서 변경했다. dokcker 로 서버로 띄우는 작업까지 완료는 했는데 한가지 문제가 생겼다. 원래 블로그 프로젝트에 테마를 넣기 위한  구조가 `meier > templates > themes > custom_themes` 이런 구조로 있다. 그런데 테마들은 변동 가능한 부분이고, 여러 개를 가질 수 가 있어서, themes 하위에 어떤 블로그 테마를 넣을 때 마다 `docker build` 를 다시 해야 하는 이슈가 있었다. 

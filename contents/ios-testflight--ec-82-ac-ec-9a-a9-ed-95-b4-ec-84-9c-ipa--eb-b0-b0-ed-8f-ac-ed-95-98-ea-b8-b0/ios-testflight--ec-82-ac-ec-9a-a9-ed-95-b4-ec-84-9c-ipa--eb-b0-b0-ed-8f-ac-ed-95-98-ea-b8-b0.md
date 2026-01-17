@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2013-12-19'
 description: ''
 featured_image: ''
-tags: ['dev', 'IOS', 'IPA', 'ipa 만들기', 'ipa 설치', 'TestFlight', '배포']
+tags: ['dev', 'iOS', 'IPA', 'ipa 만들기', 'ipa 설치', 'TestFlight', '배포']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

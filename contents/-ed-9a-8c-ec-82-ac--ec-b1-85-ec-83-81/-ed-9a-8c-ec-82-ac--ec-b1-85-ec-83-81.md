@@ -18,10 +18,8 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile1.uf.153B6D0D4B4C3D
 
 iPhone 에서 작성된 글입니다.'
 featured_image: ''
-tags: ['An Seong Hyun', 'sinapi', '시나피', '안성현', '책상']
+tags: ['안성현', 'sinapi', '시나피', '책상']
 ---
-
-
 ![](http://ash84.net/wp-content/uploads/1/cfile1.uf.153B6D0D4B4C3D44494452)
 
 프로그래머의 책상이라고 하기엔  

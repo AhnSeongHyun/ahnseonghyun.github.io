@@ -6,10 +6,8 @@ description: '**
 ****  
  Image를 PDF로 저장하기 위한 C# 소스코드 **'
 featured_image: ''
-tags: ['c#', 'Convert Image to PDF', 'dev', 'IMAGE TO PDF', 'Make pdf file', 'pdf 만들기', '개발자', '프로그래밍']
+tags: ['C#', 'Convert Image to PDF', 'dev', 'IMAGE TO PDF', 'Make pdf file', 'pdf 만들기', 'developer', 'programming']
 ---
-
-
 **  
 **<span style="font-size: 11pt; "><span style="font-family: Dotum; ">**  
  Image를 PDF로 저장하기 위한 C# 소스코드 **<div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><font color="#474747"><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-size: 15px; line-height: 29px; ">ResultPath : 실제 저장할 주소 (C:\TEMP.PDF)</span></font></span></span></span></span></div></div></span></span>

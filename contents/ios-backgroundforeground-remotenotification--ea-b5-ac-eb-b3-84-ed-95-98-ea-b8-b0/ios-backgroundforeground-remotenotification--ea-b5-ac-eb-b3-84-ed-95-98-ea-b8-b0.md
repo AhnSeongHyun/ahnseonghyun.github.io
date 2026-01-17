@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2013-10-15'
 description: ''
 featured_image: ''
-tags: ['Background', 'dev', 'foreground', 'IOS', 'Remote Notification', '백그라운드', '포그라운드']
+tags: ['Background', 'dev', 'foreground', 'iOS', 'Remote Notification', '백그라운드', '포그라운드']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

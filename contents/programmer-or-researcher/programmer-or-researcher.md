@@ -9,10 +9,8 @@ description: '**![사용자 삽입 이미지](http://ash84.net/wp-content/upload
 
 **'
 featured_image: ''
-tags: ['CSIR', '로봇', '연구', '연구원', '젊음', '프로그래머', '프로그래밍']
+tags: ['CSIR', '로봇', '연구', '연구원', '젊음', '프로그래머', 'programming']
 ---
-
-
 <div style="TEXT-ALIGN: center"><font color="#003366">**![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/fk2.jpg)
 
 <span style="font-size: 11pt; ">  

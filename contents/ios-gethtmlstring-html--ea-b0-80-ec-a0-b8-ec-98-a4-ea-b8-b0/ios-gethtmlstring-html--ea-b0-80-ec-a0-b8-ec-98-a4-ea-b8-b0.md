@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2012-08-30'
 description: ''
 featured_image: ''
-tags: ['dev', 'get html string', 'HTML Parsing', 'IOS', 'Objective-C', 'Open Source']
+tags: ['dev', 'get html string', 'HTML Parsing', 'iOS', 'Objective-C', 'open-source']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-10-30'
 description: 'vingle 에 갔을 때, 앱 개발 관련 소개를 들으면서 crashlytics 라는 서비스가 있다고 해서 메모해 두었는데, 실제 업무에 적용해 보았다.([crashlytics 는 트위터에 인수되었다고 한다.](http://besuccess.com/2013/01/28496/))'
 featured_image: ''
-tags: ['Crashlytics', 'Crashlytics logger', 'dev', 'github', 'IOS']
+tags: ['Crashlytics', 'Crashlytics logger', 'dev', 'GitHub', 'iOS']
 ---
-
-
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">vingle 에 갔을 때, 앱 개발 관련 소개를 들으면서 crashlytics 라는 서비스가 있다고 해서 메모해 두었는데, 실제 업무에 적용해 보았다.(</span>[crashlytics 는 트위터에 인수되었다고 한다.](http://besuccess.com/2013/01/28496/)) <span style="background-color: transparent; font-size: 11pt;">일단 crashlytics 는 간단히 말해서 앱에서 crash 가 나게되면 해당 정보를 서버로 전송해주고 개발자는 해당 사이트의 웹을 통해서 확인하는 방식인데, 좋은 점은 crash 가 떨어졌을때 아이폰을 가지고 crash 로그를 확인하면 메모리 주소가 나와서 진짜 문제가 있는 부분을 찾기 어려운 경우가 많은데, </span><span style="background-color: transparent; font-size: 14.44444465637207px; line-height: 32.22222137451172px;">crashlytics은 비교적 정확히 문제를 찾아 준다는 점이다. </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;"> </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;"> 일단 개별적으로 구축할 수도 있겠지만 몇 개 안되는 앱을 개발하는 과정에서 사실 큰 공수가 아닐 수 없기 때문에 사용하게 되었다. </span>
 
 <span style="font-size: 11pt;">**가입 방법**</span>

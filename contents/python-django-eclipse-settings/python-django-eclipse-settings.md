@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-12-23'
 description: '일단 장고(Django) 의 개념이나 필요성에 대해서는 필자도 아직 초급자이므로 애기하지 않고 차후에 본 블로그를 통해서 해당 부분에 대해서 자세히 소개 하도록 하겠습니다. 그래두 일단 장고(Django) 를 설치해 보고, 유난히 파이썬(python) 관련된 쪽이 개발환경(IDE)가 잘 마련되어 있지 않은데, 장고(Djan'
 featured_image: ''
-tags: ['dev', 'Django', 'Eclipse', 'pydev', 'Python', '이클립스', '장고', '파이썬']
+tags: ['dev', 'Django', 'Eclipse', 'pydev', 'Python', '이클립스', '장고']
 ---
-
-
 <div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">일단 장고(Django) 의 개념이나 필요성에 대해서는 필자도 아직 초급자이므로 애기하지 않고 차후에 본 블로그를 통해서 해당 부분에 대해서 자세히 소개 하도록 하겠습니다. 그래두 일단 장고(Django) 를 설치해 보고, 유난히 파이썬(python) 관련된 쪽이 개발환경(IDE)가 잘 마련되어 있지 않은데, 장고(Django) 설치와 함께 이클립스에서 관련 프로젝트 세팅하는 법까지 설명드리겠습니다. 그리고 </span></span><font color="#5c7fb0">**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">윈도우 개발 환경 위주</span></span>**</font><span style="font-size: 11pt; "><span style="font-family: Dotum; ">로 설명하도록 하겠습니다. </span></span></div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; ">**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">1. 일단 파이썬 설치 </span></span>**</div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
  – 파이썬은 유난히 여러가지 버전이 있지만, 필자의 생각으로는  2.6 혹은 2.7을 쓰는게 좋습니다. 3.2 까지 나온것으로 알고 있지만, 사실 파이루씬(pylucene)이나 그런 것들은 주로 3.x 버전을 아직은 지원하지 않는 부분이 있어서 너무 최상위 버전을 쓰지 않는것이 좋습니다. </span></span><span style="font-size: 11pt; "><span style="font-family: Dotum; "> </span></span>
 

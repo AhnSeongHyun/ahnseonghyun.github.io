@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-12-16'
 description: '[Daum Open API](http://dna.daum.net/apis/dashboard) 중에서 데이터형 API 를 쉽게 쓸 수 있는 Python 라이브러리를 만들어서 pypi 에 등록을 하였다. 이미 Daum 쪽에서 python 으로 api를 호출할 수 있는 예제코드를 제공하고 있는데, 만들게된 계기는 아래와 같다.'
 featured_image: ''
-tags: ['daum open api python', 'daum_openapi', 'dev', 'Python', 'requests', 'travis-ci', 'xmltodict']
+tags: ['Python', 'daum_openapi', 'dev', 'requests', 'travis-ci', 'xmltodict']
 ---
-
-
 <span style="font-size: 11pt;">[Daum Open API](http://dna.daum.net/apis/dashboard) 중에서 데이터형 API 를 쉽게 쓸 수 있는 Python 라이브러리를 만들어서 pypi</span><span style="font-size: 11pt;"> 에 등록을 하였다. 이미 Daum 쪽에서 python 으로 api를 호출할 수 있는 예제코드를 제공하고 있는데, 만들게된 계기는 아래와 같다. </span>
 
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; line-height: 2;"><span style="font-size: 11pt;">1. daum, naver api를 자주 사용하는 편인데, 매번 만들때 마다 새롭게 만들기 귀찮아서.</span>

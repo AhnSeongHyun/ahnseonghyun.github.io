@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-02-18'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile25.uf.153F470D4B7C8D265ECACC.jpg)'
 featured_image: ''
-tags: ['An Seong Hyun', 'Dom perignon', 'Moet Chandon', '내가사랑하는 샴페인', '돔페리뇽', '모엣 샹동', '베네딕트 수도원', '샴페인', '샴페인중의 샴페인', '안성현']
+tags: ['안성현', 'Dom perignon', 'Moet Chandon', '내가사랑하는 샴페인', '돔페리뇽', '모엣 샹동', '베네딕트 수도원', '샴페인', '샴페인중의 샴페인']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="font-size:10pt;">![](http://ash84.net/wp-content/uploads/1/cfile25.uf.153F470D4B7C8D265ECACC.jpg)
 
 </span></span></span></div><div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><font face="Dotum" size="3"><span style="LINE-HEIGHT: 2; FONT-SIZE: 13px">  

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-09-03'
 description: '유니코드와 폰트와의 관계 그리고 폰트 제작에 대해서 이전 포스팅에서 알아 보았습니다.'
 featured_image: ''
-tags: ['c#', 'Font Class', 'FontCollection', 'InstalledFontCollection', 'PrivateFontCollection', '윈도우 폰트', '폰트 개발', '폰트 적용']
+tags: ['C#', 'Font Class', 'FontCollection', 'InstalledFontCollection', 'PrivateFontCollection', '윈도우 폰트', '폰트 개발', '폰트 적용']
 ---
-
-
 <span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">유니코드와 폰트와의 관계 그리고 폰트 제작에 대해서 이전 포스팅에서 알아 보았습니다</span></span><span><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">. </span></span></span><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">링크는 아래의 링크를 참고하시면 됩니다</span></span><span><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">. </span></span></span>
 
 <span style="font-size: 11pt; ">  

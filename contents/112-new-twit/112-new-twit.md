@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-01-12'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile29.uf.1460A9534D2DB864032E49.png)'
 featured_image: ''
-tags: ['Ahn Seong Hyun', 'MomoTwit', '모모트윗', '아이폰앱']
+tags: ['안성현', 'MomoTwit', '모모트윗', 'iOS']
 ---
-
-
 <div style="text-align: justify; line-height: 2;"><span style="font-size: 10pt;"><span style="font-family: Dotum;"><span style="font-size: 10pt;">  
 <figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile29.uf.1460A9534D2DB864032E49.png)<figcaption class="wp-caption-text">First App - MomoTwit.</figcaption></figure></span></span></span><span style="font-size: 10pt;"><span style="font-family: Dotum;"><span style="font-size: 10pt;">첫 번째로 개발한 앱. 솔직히 많이 부족하다. 타임라인도 없고, 그냥 텍스트 트윗을 목적으로 했기에. 그냥.. 팔로워가 2000명인(많지도 적지도 않은..). 나는 화장실에 앉아서 타임라인이 읽어들여지는 동안에 내 손가락은 아이폰 키보드를 누르는 데 텍스트 창에는 아무것도 나오지 않아서 짜증났다. 그래서 과감히 타임라인을 없애버렸다. 그냥 보낼수만 있고 또 내가 원하는 트윗당(해쉬태그로 표시되어지는..) 혹은 특정 사람에게 메시지를 쓰고 싶을때 빨리 추가해서 쓸수 있는 기능을 넣었다. 물론 수동이다. 자세한 애기는 애플의 깐깐한 심사를 통과한후 정식으로 쓰겠다.
 

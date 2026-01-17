@@ -10,9 +10,8 @@ GPS 시리얼 포트를 통해서 받는 법이라던지, NEMA 프로토콜 자�
 
 [NEMA 프로토콜]('
 featured_image: ''
-tags: ['c#', 'dev', 'GPS', 'GPS 시간정보 가져오기', 'GPS 위도경도', 'Latitude', 'Longitude']
+tags: ['C#', 'dev', 'GPS', 'GPS 시간정보 가져오기', 'GPS 위도경도', 'Latitude', 'Longitude']
 ---
-
 이번시간에는 GPS 정보를 가져오는 부분을 다루려고 합니다. 다들 알다시피 GPS는 보통 시리얼 통신을 통해서 Com Port로 들어오게 됩니다. 그런데 GPS라고 해서 Latitude와 Longitude가 바로 들어오는 것이 아니라 GPS NEMA 프로토콜의 형태로 들어오게 되고 그 프로토콜을 해석해서 Application에서 필요한 정보를 우리가 취득하면 되는것이겠지요.
 
 

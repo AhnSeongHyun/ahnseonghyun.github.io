@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-03-18'
 description: ''
 featured_image: ''
-tags: ['An Seong Hyun', 'c#', 'dev', 'getting started', 'Windows Phone 7', 'Windows Phone Developer Tools CTP', '안성현', '윈도우 폰 개발', '윈도우폰']
+tags: ['안성현', 'C#', 'dev', 'getting started', 'Windows Phone 7', 'developer', '윈도우 폰 개발', '윈도우폰']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"></div><div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><div class="txc-textbox" style="BORDER-BOTTOM: #cbcbcb 1px solid; BORDER-LEFT: #cbcbcb 1px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #cbcbcb 1px solid; BORDER-RIGHT: #cbcbcb 1px solid; PADDING-TOP: 10px"><div style="TEXT-ALIGN: center"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">URL : </span></span>[<font color="#193da9"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">http://developer.windowsphone.com/windows-phone-7-series/</span></span></font>](http://developer.windowsphone.com/windows-phone-7-series/)</div></div></div><div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
 <span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">위의 링크에 들어가시면, 윈도우 폰 7 개발에 대한 설명이 자세히 나와 있습니다. 아래와 같은 화면이 뜨게 되는데요. 하나하나 살펴 보도록 하겠습니다. </span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">![](http://ash84.net/wp-content/uploads/1/cfile2.uf.193A8E054BA171E24E1374.jpg)</span></span>
 

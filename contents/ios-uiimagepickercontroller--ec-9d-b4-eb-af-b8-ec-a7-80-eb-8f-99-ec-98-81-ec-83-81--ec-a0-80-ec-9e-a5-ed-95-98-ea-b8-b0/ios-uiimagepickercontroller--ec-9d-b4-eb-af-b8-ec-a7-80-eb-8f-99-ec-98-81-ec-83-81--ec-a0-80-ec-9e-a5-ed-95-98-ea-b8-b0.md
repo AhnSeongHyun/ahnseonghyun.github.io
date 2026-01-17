@@ -12,10 +12,8 @@ description: '매번 찾아서 쓰던건데 너무 귀찮아서 정리한다. �
 
 중요한 점은 카메라가 있는지 체크하는 부분이다. 아이팟이나 일부 애플기기의 경우 카메라가 없을수 있기 때문에 체크해'
 featured_image: ''
-tags: ['dev', 'IOS', 'save image to photo album', 'UIImagePickerController', '동영상 저장', '이미지 저장', '이미지 포토앨범에 저장']
+tags: ['dev', 'iOS', 'save image to photo album', 'UIImagePickerController', '동영상 저장', '이미지 저장', '이미지 포토앨범에 저장']
 ---
-
-
 매번 찾아서 쓰던건데 너무 귀찮아서 정리한다. 카메라나 동영상의 간단한 뷰를 띄우기 위해서 UIImagePickerController 를 사용하는데 사진을 찍는 방법, 동영상을 찍는 방법 및 아이폰 내장 포토 앨범에 저장하는 방법은 아래와 같다. 
   
 #### 1. 띄우기

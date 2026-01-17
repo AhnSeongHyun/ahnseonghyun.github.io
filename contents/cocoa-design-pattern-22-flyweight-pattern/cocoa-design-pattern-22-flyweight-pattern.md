@@ -14,10 +14,8 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile24.uf.122D734C4E1C0
 
 – 비 – 객체 데이터를 캡슐화하여 객체가 필요한 컨텍'
 featured_image: ''
-tags: ['cocoa design pattern', 'dev', 'Flyweight', 'IOS', 'ios dev', 'pattern', '아이폰 앱 개발']
+tags: ['cocoa design pattern', 'dev', 'Flyweight', 'iOS', 'ios dev', 'pattern']
 ---
-
-
 <div></div><div style="line-height: 2; ">![](http://ash84.net/wp-content/uploads/1/cfile24.uf.122D734C4E1C04261DF168.jpg)
 
 **22. 플라이 웨이트 패턴 **

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-01-28'
 description: '아이폰을 구입한지도 어언 3주정도 됐네요. 순정상태에서 쓰다가 이제는 해킹을 해서 사용하고 있습니다. 아이폰은 기존의 폰 보다 분명히 혁신적이고 보다 유저에게 친숙하고 친절한 폰입니다(굳이 스마트 폰이라는 말은 붙이지 않겠습니다)![](http://ash84.net/wp-content/uploads/1/'
 featured_image: ''
-tags: ['An Seong Hyun', 'dev', 'iPhone', 'iphone's disadvantages', '불편한것들', '아이폰', '안성현']
+tags: ['안성현', 'dev', 'iOS', '불편한것들']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
 <span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">아이폰을 구입한지도 어언 3주정도 됐네요. 순정상태에서 쓰다가 이제는 해킹을 해서 사용하고 있습니다. 아이폰은 기존의 폰 보다 분명히 혁신적이고 보다 유저에게 친숙하고 친절한 폰입니다(굳이 스마트 폰이라는 말은 붙이지 않겠습니다)</span></span>![](http://ash84.net/wp-content/uploads/1/cfile2.uf.19314C174B60F00F67EA49.jpg)<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">아이폰이 혁신적이고 편리한 제품임에는 분명하지만, 몇가지 불편한 부분에 대해서 말씀드리겠습니다. 제가 사용하는데 있어서 불편한 부분이기 때문에 지극히 주관적입니다. </span></span>
 

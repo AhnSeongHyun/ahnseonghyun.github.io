@@ -11,10 +11,8 @@ description: 'NSNotification은 아이폰 프로그래밍에서 빠질수 없는
 
 – 등록하는 코드는 다음과 같다. NSNotificationCent'
 featured_image: ''
-tags: ['dev', 'IOS', 'Notification', 'notificationcenter', 'NSNotification', 'NSNotificationCenter', 'postNotificationName', '알림']
+tags: ['dev', 'iOS', 'Notification', 'notificationcenter', 'NSNotification', 'NSNotificationCenter', 'postNotificationName', '알림']
 ---
-
-
 <span style="font-size: 11pt;">NSNotification은 아이폰 프로그래밍에서 빠질수 없는 것인데, 굳이 함수 호출이 아니여도 메시지를 미리 등록하고 연결된 함수를 정의해두면 해당 메시지를 보냈을때 위치에 상관없이 연결된 함수가 호출되는 편리한 구조이다. </span>
 
 <span style="font-size: 11pt;">  

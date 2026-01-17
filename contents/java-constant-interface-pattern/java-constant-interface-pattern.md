@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2013-02-06'
 description: ''
 featured_image: ''
-tags: ['dev', 'Interface', 'Java', '디자인 패턴', '상수 인터페이스 패턴', '안티 패턴', '인터페이스']
+tags: ['dev', 'Interface', 'Java', 'design-pattern', '상수 인터페이스 패턴', '안티 패턴', '인터페이스']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

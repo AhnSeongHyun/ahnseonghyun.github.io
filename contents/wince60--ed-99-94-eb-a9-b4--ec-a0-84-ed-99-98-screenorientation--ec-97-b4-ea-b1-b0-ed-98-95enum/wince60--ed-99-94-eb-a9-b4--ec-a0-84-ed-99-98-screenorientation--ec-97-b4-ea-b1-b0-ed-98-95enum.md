@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-01-04'
 description: '**ScreenOrientation 열거형(enum)**'
 featured_image: ''
-tags: ['An Seong Hyun', 'dev', 'ScreenOrientation', 'SystemSettings.ScreenOrientation', 'Wince', 'WINCE6.0', '안성현', '화면 전환', '화면 회전']
+tags: ['안성현', 'dev', 'ScreenOrientation', 'SystemSettings.ScreenOrientation', 'Wince', 'WINCE6.0', '화면 전환', '화면 회전']
 ---
-
-
 <div style="LINE-HEIGHT: 2"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">**ScreenOrientation 열거형(enum)**</span></span><div>  
 <div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div>  
 <div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font></span></span><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">이 속성은 Wince 내에서의 화면 전환을 돕는 속성입니다. Default는 세로방향으로 되어 있으며, 0도, 90도, 180도 270도 화면 자체를 회전 시킬수가 있게 하는 속성입니다.</span></span></div></div></div>  

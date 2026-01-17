@@ -6,10 +6,8 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile23.uf.1614B13450B2B
 
 일단 github에 가입을 하고 [github for mac](http://mac.github.com/) 을 설치했다는 가정하에 시작을 하겠다.'
 featured_image: ''
-tags: ['github', 'github 소스 올리기', 'github 연동', 'github 저장소 만들기']
+tags: ['GitHub', 'github 소스 올리기', 'github 연동', 'github 저장소 만들기']
 ---
-
-
 <div>![](http://ash84.net/wp-content/uploads/1/cfile23.uf.1614B13450B2B45A2F0F75.PNG)
 
 </div><div></div><span style="font-size: 11pt;">일단 github에 가입을 하고 [github for mac](http://mac.github.com/) 을 설치했다는 가정하에 시작을 하겠다. </span>

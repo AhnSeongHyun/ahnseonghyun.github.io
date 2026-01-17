@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-01-09'
 description: 'github 의 가장 큰 특징중 하나는 저장소에 README.MD 를 읽어서 저장소의 가장 처음에 보여준다는 것이다. 이것은 마치 README.txt 와 같은 것인데, 특유의 마크업을 사용한다. 자세한 사항은 [여기](http://daringfireball.net/projects/markdown/syntax)를 살펴보면 된다.'
 featured_image: ''
-tags: ['github', 'github README.MD', 'github upload image']
+tags: ['GitHub', 'github README.MD', 'github upload image']
 ---
-
-
 <span style="font-size: 11pt;">github 의 가장 큰 특징중 하나는 저장소에 README.MD 를 읽어서 저장소의 가장 처음에 보여준다는 것이다. 이것은 마치</span><span style="font-size: 11pt;"> README.txt </span><span style="font-size: 11pt;">와 같은 것인데, 특유의 마크업을 사용한다. 자세한 사항은 [여기](http://daringfireball.net/projects/markdown/syntax)를 살펴보면 된다. </span>
 
 <span style="font-size: 11pt;">그런데, README.MD에 이미지 혹은 스크린 샷을 첨부하고 싶을때가 있다. 예를들어, iOS 컨트롤을 만들어서 올리거나 티스토리 스킨을 만들어서 올릴경우에는 백마디 워딩보다 스크린샷 하나가 더 이해를 빠르게 만들수 있다. 찾아본 결과 github에서도 제공하고 있다. 코드는 아래와 같다. </span>

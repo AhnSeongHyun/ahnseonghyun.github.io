@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2013-05-28'
 description: ''
 featured_image: ''
-tags: ['dev', 'Java', 'java rss parser rome', 'rss', 'RSS JAVA Library', 'RSS 파싱', '자바']
+tags: ['dev', 'Java', 'rss', 'RSS 파싱']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

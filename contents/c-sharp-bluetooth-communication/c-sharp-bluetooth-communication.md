@@ -9,10 +9,8 @@ description: '블랙잭 폰에서(블랙잭 1) 블루투스를 이용한 프로�
 
 **라이브러리 : InTheHa'
 featured_image: ''
-tags: ['bluetooth', 'c#', 'dev', 'Serial Port', '블랙잭', '블랙잭에서 블루투스 이용하기', '블루투스', '윈도우 모바일', '윈도우 모바일 5', '프로그래밍', '프로그램개발']
+tags: ['bluetooth', 'C#', 'dev', 'Serial Port', '블랙잭', '블랙잭에서 블루투스 이용하기', '블루투스', 'mobile', 'programming', '프로그램개발']
 ---
-
-
 <font color="#105738"></font><font color="#193da9"></font>
 
  블랙잭 폰에서(블랙잭 1) 블루투스를 이용한 프로그램 개발.

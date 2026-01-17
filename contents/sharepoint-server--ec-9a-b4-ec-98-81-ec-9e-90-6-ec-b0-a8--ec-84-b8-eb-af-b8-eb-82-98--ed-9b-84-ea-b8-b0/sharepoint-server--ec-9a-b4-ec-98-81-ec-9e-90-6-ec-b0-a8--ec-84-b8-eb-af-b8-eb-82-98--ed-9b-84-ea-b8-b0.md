@@ -8,10 +8,8 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile23.uf.194249474EEFC
 
 **세션 3 디자이너 +'
 featured_image: ''
-tags: ['dev', 'Microsoft', 'SharePoint Server']
+tags: ['dev', 'Microsoft', 'server']
 ---
-
-
 <div><font class="Apple-style-span" color="#000000" face="'lucida grande', tahoma, verdana, arial, sans-serif"><span class="Apple-style-span" style="font-size: 11px; line-height: 16px;">![](http://ash84.net/wp-content/uploads/1/cfile23.uf.194249474EEFCB5910C9D2.png)
 
  

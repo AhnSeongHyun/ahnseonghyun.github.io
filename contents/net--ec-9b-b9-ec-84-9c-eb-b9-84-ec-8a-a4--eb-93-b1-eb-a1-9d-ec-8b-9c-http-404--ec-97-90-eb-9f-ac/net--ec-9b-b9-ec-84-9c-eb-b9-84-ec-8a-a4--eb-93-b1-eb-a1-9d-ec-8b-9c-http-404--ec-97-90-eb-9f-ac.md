@@ -10,10 +10,8 @@ description: 'C# 으로 만든 웹서비스를 서버에 등록해서 테스트 
   
 **H'
 featured_image: ''
-tags: ['Active Server Pages', 'dev', 'http404 에러', 'IIS', '웹서비스', '웹서비스 등록', '윈도우 서버 2003']
+tags: ['server', 'dev', 'http404 에러', 'IIS', '웹서비스', '웹서비스 등록']
 ---
-
-
 <span style="font-size: 11pt;">C# 으로 만든 웹서비스를 서버에 등록해서 테스트 해야 하는 경우가 많은데</span>  
 <span style="font-size: 11pt;">  
 </span>  

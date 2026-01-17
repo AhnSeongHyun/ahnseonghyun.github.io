@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-11-16'
 description: '**개발자에게 잉여력이란 무엇일까? **그리고 왜 필요한 것일까 하는 생각을 해 보았다. 최근에 필자는 새로운 회사에'
 featured_image: ''
-tags: ['dev', 'Make', '개발자', '잉여력', '프로그래머']
+tags: ['dev', 'Make', 'developer', '잉여력', '프로그래머']
 ---
-
-
 <div style="text-align: justify; line-height: 2; "><span style="font-family: Gulim; "><span style="font-size: 10pt; ">  
 <span style="font-size: 11pt; ">  
 </span>**<span style="font-size: 11pt; ">개발자에게 잉여력이란 무엇일까? </span>**<span style="font-size: 11pt; ">그리고 왜 필요한 것일까 하는 생각을 해 보았다. 최근에 필자는 새로운 회사에서 가서 일을 시작했다. 그 전 회사에서는 2년이 조금 넘는 시간을 보냈는데 사실 업무가 익숙해 지는 1년이 지난 시점 부터 뭔가 다른것을 해 보고 싶다는 생각을 가지게 되었다. 그리고 때마침 아이폰 앱 개발 열풍과 맞물리면서 아이폰개발에 대한 관심을 가지게 되었고 실제로 어플 개발에 대한 체험아닌 체험을 해 볼 수가 있었다. </span>  

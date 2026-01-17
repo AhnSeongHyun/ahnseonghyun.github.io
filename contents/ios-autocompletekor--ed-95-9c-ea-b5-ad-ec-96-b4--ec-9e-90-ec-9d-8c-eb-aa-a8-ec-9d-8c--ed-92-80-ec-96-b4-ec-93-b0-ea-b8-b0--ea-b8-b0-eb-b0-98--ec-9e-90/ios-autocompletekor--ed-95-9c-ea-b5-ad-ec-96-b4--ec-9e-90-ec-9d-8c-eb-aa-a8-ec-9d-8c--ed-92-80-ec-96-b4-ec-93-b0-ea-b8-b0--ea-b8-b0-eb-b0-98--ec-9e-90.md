@@ -6,10 +6,8 @@ description: '간간히 자동완성이 필요한 경우가 있다. 어떤 정�
 **풀어쓰기가 필요한 이유.** 
 한국어가 완성자가 아닌 조합자이기 때문에 풀어'
 featured_image: ''
-tags: ['autocomplete', 'AutoCompleteKeyword', 'IOS', 'iOS AutoComplete', '자동완성', '자동완성 한국어']
+tags: ['autocomplete', 'AutoCompleteKeyword', 'iOS', 'iOS AutoComplete', '자동완성', '자동완성 한국어']
 ---
-
-
 <span style="font-size: 11pt;">간간히 자동완성이 필요한 경우가 있다. 어떤 정보를 검색할 때가 그러한 경우라고 볼수가 있는데, 사실 자동완성이라고 하는 범위는 너무 넓다보니 하나의 커다란 서버가 필요하기도 하는데, 여기서는 iOS 상에서 한국어 풀어쓰기 기반의 자동완성을 소개하려고 한다. </span>
 
 <span style="font-size: 11pt;">**풀어쓰기가 필요한 이유.** </span>

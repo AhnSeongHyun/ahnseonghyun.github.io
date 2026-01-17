@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-06-16'
 description: '처음 프로그래밍 언어를 접할때가 생각이 난다.'
 featured_image: ''
-tags: ['언어에 종속되면', '유연성', '프로그래밍', '행복한 프로그래머']
+tags: ['언어에 종속되면', '유연성', 'programming', '행복한 프로그래머']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="font-size: 11pt; ">  
 </span></div><span style="font-size: 11pt; ">  
 </span>

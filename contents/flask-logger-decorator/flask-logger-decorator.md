@@ -11,9 +11,8 @@ description: '###기본로그 세팅하기###
 
 - RotatingFileHandler – 로그메시지를 파일에 남기고, 특정수 이상이면 다음파일로 넘겨서 로그를 만드는 핸들러, maxByt'
 featured_image: ''
-tags: ['Decorator', 'dev', 'FLASK', 'Logger', 'Python', 'flask 웹서버']
+tags: ['Decorator', 'dev', 'Flask', 'Logger', 'Python']
 ---
-
 ###기본로그 세팅하기###
 
 

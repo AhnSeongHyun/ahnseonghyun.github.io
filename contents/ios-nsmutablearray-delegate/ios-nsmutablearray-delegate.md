@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-12-06'
 description: '별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 `NSMutableArray` 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의  `NSMutableArray` 를 감싸서(wrapping) 사용하는데 주로 singlet'
 featured_image: ''
-tags: ['delegate', 'dev', 'IOS', 'NSMutableArray', 'Objective-C', '요청 큐']
+tags: ['delegate', 'dev', 'iOS', 'NSMutableArray', 'Objective-C', '요청 큐']
 ---
-
-
 <span style="font-size: 11pt;">별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 `NSMutableArray` 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의 </span><span style="background-color: transparent; font-size: 11pt; line-height:2;"> `NSMutableArray` 를 감싸서(wrapping) 사용하는데 주로 singleton 과 delegate 를 결합해서 사용한다. 단연 이점이라면 하나의 아이폰 앱내에 하나의 객체만을 가지고 add, remove, get 하는 식으로 어떤 요청객체 들을 넣고 관리 할수 있다는것이 장점이다. 내부적으로 `NSMutableArray` 객체를 하나를 가지고 그에 접근할수 있는 add, remove, get 등의 함수를 만들고 그 함수에서 어떤 처리를 했을때, 등록된 delegate를 호출하게 되는 방식이다. 그렇게 되면 add 를 하는 객체는 add 를 하고 다음 로직을 진행하고 add가 되었다는 것을 알게된 다른 처리 클래스는 delegate 가 발생되었을때 그에따른 처리를 할 수 있다. </span>
 
 <span style="background-color: transparent; font-size: 9pt; line-height: 2;">  

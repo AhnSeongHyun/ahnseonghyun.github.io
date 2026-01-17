@@ -6,9 +6,8 @@ description: 'https://github.com/h2oai/h2o/wiki/Installing-python-2.7-on-centos-
 
 위의 링크가 가장 확실한것 같다. CentOS 를 회사에서 기본 리눅스 서버로 사용하는데 2.6 버전이 설치되어서 나온다. 근데 우분투에서 처럼 다른 곳에서 파이썬 2.7을 받아서 설치하면 끝인줄알았는데 그떄 부터가 지옥 시작이다. 이유는 **CentOS 에서는 yum 이라는 리눅스 패키지 관리 툴/프로그램을 이'
 featured_image: ''
-tags: ['centos', 'dev', '리눅스', 'python2.7']
+tags: ['centos', 'dev', '리눅스', 'Python']
 ---
-
 https://github.com/h2oai/h2o/wiki/Installing-python-2.7-on-centos-6.3.-Follow-this-sequence-exactly-for-centos-machine-only
 
 위의 링크가 가장 확실한것 같다. CentOS 를 회사에서 기본 리눅스 서버로 사용하는데 2.6 버전이 설치되어서 나온다. 근데 우분투에서 처럼 다른 곳에서 파이썬 2.7을 받아서 설치하면 끝인줄알았는데 그떄 부터가 지옥 시작이다. 이유는 **CentOS 에서는 yum 이라는 리눅스 패키지 관리 툴/프로그램을 이용하게 되는데 그것이 python 2.6과 매우 밀접한 연관이 있어서 마구잡이로 2.7로 업그레이드하게 되면 yum을 사용하지 못하는 문제가 생긴다.**

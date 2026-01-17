@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-05-20'
 description: ''
 featured_image: ''
-tags: ['dev', 'IOS', 'ios md5 hash string', 'MD5', 'Objective-C']
+tags: ['dev', 'iOS', 'ios md5 hash string', 'MD5', 'Objective-C']
 ---
-
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

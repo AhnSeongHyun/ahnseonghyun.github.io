@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-04-14'
 description: ''
 featured_image: ''
-tags: ['c#', 'dev', 'Image Fade in', 'Wince', '윈ce', '윈도우 모바일']
+tags: ['C#', 'dev', 'Image Fade in', 'Wince', '윈ce', 'mobile']
 ---
-
-
 <div style="text-align: justify; line-height: 2; "><font class="Apple-style-span" face="Dotum" size="3"><span class="Apple-style-span" style="font-size: 13px; line-height: 26px;">  
 </span></font></div><div style="text-align: justify; line-height: 2; "><font class="Apple-style-span" face="Dotum" size="3"><span class="Apple-style-span" style="font-size: 13px; line-height: 26px;">  
 </span></font></div><div style="text-align: justify; line-height: 2; "><font class="Apple-style-span" face="Dotum" size="3"><span class="Apple-style-span" style="font-size: 13px; line-height: 26px;">제가 만든 소스코드가 아니기 때문에 특별한 설명은 올리지 않겠습니다.  </span></font></div><div style="text-align: justify; line-height: 2; "><font class="Apple-style-span" face="Dotum" size="3"><span class="Apple-style-span" style="font-size: 13px; line-height: 26px;">  

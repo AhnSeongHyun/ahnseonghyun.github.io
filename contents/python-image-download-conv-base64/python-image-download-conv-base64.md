@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-08-28'
 description: 'base64로 변환을 해야하는 이유부터 설명하자면 간단하다. 이미지의 경우, 파일서버에 저장하는 것이 최고의 방법이긴 하지만 다들 알다시피 서버의 용량 문제가 있어서 OpenAPI를 이용해서 데이터를 가져오게 되는'
 featured_image: ''
-tags: ['BASE64', 'dev', 'image download', 'Open API', 'Python']
+tags: ['BASE64', 'dev', 'image download', 'API', 'Python']
 ---
-
-
 <script src="https://gist.github.com/AhnSeongHyun/6372346.js"></script>
 
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">base64로 변환을 해야하는 이유부터 설명하자면 간단하다. 이미지의 경우, 파일서버에 저장하는 것이 최고의 방법이긴 하지만 다들 알다시피 서버의 용량 문제가 있어서 OpenAPI를 이용해서 데이터를 가져오게 되는게 자바스크립트 크로스도메인 문제 혹은 이미지 자체를 다른쪽에서 쓰는 것을 금지하는 경우들이 있다.(자바스크립트에 넣어서 호출하는 경우가 아니라도 말이다.) </span>

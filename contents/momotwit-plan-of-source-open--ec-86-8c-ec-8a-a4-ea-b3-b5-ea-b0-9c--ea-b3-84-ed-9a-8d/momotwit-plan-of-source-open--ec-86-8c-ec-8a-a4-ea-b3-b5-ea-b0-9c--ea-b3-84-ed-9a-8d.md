@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-01-18'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile9.uf.1540533D4D34E1F62BAFFE.PNG)'
 featured_image: ''
-tags: ['MAKE ICON', 'MomoTwit', 'OAConsumer', 'PUBLISH APP', 'Twitter', 'twitter api', '소스코드공개', '아이폰 강의', '트위터 API']
+tags: ['MAKE ICON', 'MomoTwit', 'OAConsumer', 'PUBLISH APP', 'Twitter', 'twitter api', '소스코드공개', 'iOS', '트위터 API']
 ---
-
-
 <div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "><div style="text-align: center;">![](http://ash84.net/wp-content/uploads/1/cfile9.uf.1540533D4D34E1F62BAFFE.PNG)</div></span></span></div><div style="text-align: justify; line-height: 2; "><font class="Apple-style-span" face="Dotum" size="3"><span class="Apple-style-span" style="font-size: 13px; line-height: 26px;">  
 </span></font></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">오늘부터 오른쪽 메뉴의 MomoTwit을 통해서 현재까지 개발되었던 MomoTwit 에 대한 소스 공개를 하도록 하겠습니다. 별것 아닌 소스긴 하지만, 사실 처음 개발하시는 개발자 분들에게는 좋은 자료가 될수 있을 것이라는 생각이 듭니다. 현재 MomoTwits 0.9 버전이 Apple 앱 스토어 심사를 받고 있습니다. 1/16일에 심사를 어찌어찌 해서 제출했습니다. </span></span></div><div style="text-align: justify; line-height: 2; "></div><div style="text-align: justify; line-height: 2; ">**<span class="Apple-style-span" style="font-weight: normal;">  
 </span>**</div><div style="text-align: justify; line-height: 2; ">**<span style="font-size: 10pt; "><span style="font-family: Dotum; ">Table Of Contents</span></span>**</div><div style="text-align: justify; line-height: 2; ">**  

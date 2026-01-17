@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-07-06'
 description: '최근에 하는 프로젝트 때문에 Bi-Direction 이라는 것에 대해서 알게 되었다. Bi-Direction 이라는 것은 글씨를 쓰는 방향이 원래 서양 혹은 우리나라와 같은 왼쪽에서 오른쪽으로 향하는 방향이 아닌 반대 방향을 의미하는 것이다. 왜 이게 필요한가? 라는 의문을 던지기 전에 사실, Bi-'
 featured_image: ''
-tags: ['Bi-Direction TextBox', 'c#', 'dev', 'RightToLeft 속성', '아랍어', '히브리어']
+tags: ['Bi-Direction TextBox', 'C#', 'dev', 'RightToLeft 속성', '아랍어', '히브리어']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-SIZE: 10pt"><span style="font-family: Dotum; font-size: 11pt; ">최근에 하는 프로젝트 때문에 Bi-Direction 이라는 것에 대해서 알게 되었다. Bi-Direction 이라는 것은 글씨를 쓰는 방향이 원래 서양 혹은 우리나라와 같은 왼쪽에서 오른쪽으로 향하는 방향이 아닌 반대 방향을 의미하는 것이다. 왜 이게 필요한가? 라는 의문을 던지기 전에 사실, Bi-Directional 에 대해서 알게된 계기는 이번 프로젝트에서 아랍어와 히브리어에 대해서 알게되면서 부터 였다. 즉, 이 두 언어들은 우리나라와는 다르게 오른쪽에서 왼쪽으로 글자를 써간다는 것이다. </span></span></div><span style="font-size: 11pt; ">  
 </span>
 

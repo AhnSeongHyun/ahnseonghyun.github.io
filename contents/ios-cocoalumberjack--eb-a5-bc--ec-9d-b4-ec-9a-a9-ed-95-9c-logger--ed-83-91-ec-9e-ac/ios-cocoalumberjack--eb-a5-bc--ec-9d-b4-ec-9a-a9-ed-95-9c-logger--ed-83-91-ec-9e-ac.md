@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-10-18'
 description: 'NSLog 의 지겨움을 느끼던 차에 로거가 필요하다는 생각은 늘 하고 있었지만 문제는 언제 도입하느냐였는데 만들고 있는 것이 블루투스 앱인지라, 로그를 세세하게 받아야 하는 급박한 상황이 생겨서 로거를 넣자는 생각을 하였다. stackoverflow, [OSXDEV](http://osxdev.org/forum/index.php?threads/logger-%EC%B6%94%EC%B2%9C%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94.279/) 등에 문의를 한'
 featured_image: ''
-tags: ['cocoalumberjack', 'dev', 'IOS', 'Log4J', 'objective-c logger']
+tags: ['cocoalumberjack', 'dev', 'iOS', 'Log4J', 'objective-c logger']
 ---
-
-
 <span style="font-size: 11pt;">NSLog 의 지겨움을 느끼던 차에 로거가 필요하다는 생각은 늘 하고 있었지만 문제는 언제 도입하느냐였는데 만들고 있는 것이 블루투스 앱인지라, 로그를 세세하게 받아야 하는 급박한 상황이 생겨서 로거를 넣자는 생각을 하였다. stackoverflow, [OSXDEV](http://osxdev.org/forum/index.php?threads/logger-%EC%B6%94%EC%B2%9C%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94.279/) 등에 문의를 한 결과 몇가지의 로거가 있었는데 그 중에 내가 선택한것은 cocoalumberjack 이다. </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;">제약조건은:</span>
 
 <span style="background-color: transparent; font-size: 11pt; line-height: 2;"> </span>

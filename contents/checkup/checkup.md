@@ -6,9 +6,8 @@ description: 'health check 를 할 수 있는 오픈소스에 대해서 찾아�
 
 [https://github.com/sourcegraph/checkup](https://github.com/sourcegraph/c'
 featured_image: ''
-tags: ['checkup', 'health checking', 'msa', 'Opensource']
+tags: ['checkup', 'health checking', 'msa', 'open-source']
 ---
-
 health check 를 할 수 있는 오픈소스에 대해서 찾아보다가 checkup 이라는 sourcegraph 에서 go 언어로 만든 것을  찾게 되었다. 생각보다 이런 오픈 소스가 없다는 게 신기하긴 한데, 요즘에는 k8s 를 많이 써서 그 안에서 해주기도 하고 이전에는 cron 이나 jenkins 를 이용해서 health checking 작업을 하거나 자체 구축해서 쓰는 경우가 많았던 것 같다. 
 
 [https://github.com/sourcegraph/checkup](https://github.com/sourcegraph/checkup) 

@@ -11,10 +11,8 @@ description: '별거 없다. 파이썬 기준으로 설명
 
 #### 1. 기본 연동'
 featured_image: ''
-tags: ['dev', 'Python', 'travis-ci', '파이썬']
+tags: ['dev', 'Python', 'travis-ci']
 ---
-
-
 <span style="font-size: 11pt;">별거 없다. 파이썬 기준으로 설명  
 </span>
  

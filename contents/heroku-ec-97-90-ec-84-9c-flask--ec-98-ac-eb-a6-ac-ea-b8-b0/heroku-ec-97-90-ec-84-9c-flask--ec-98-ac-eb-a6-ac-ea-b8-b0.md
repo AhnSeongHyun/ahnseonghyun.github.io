@@ -6,10 +6,8 @@ description: 'heroku 를 아주 간단히 설명하자면 마치 서버를 가�
 
 가입을 하'
 featured_image: ''
-tags: ['dev', 'FLASK', 'heroku', 'heroku with flask']
+tags: ['dev', 'Flask', 'heroku', 'heroku with flask']
 ---
-
-
 heroku 를 아주 간단히 설명하자면 마치 서버를 가지고 있는것 처럼 웹의 공간을 대행해주는 업체인데, 클라우드 어플리케이션 플랫폼이라고한다. 특이하게 git 을통해서 올리고 내리고 함으로써 소스를 서버에 반영할 수 가 있다. heroku 에서는 python 부분은 기본적으로 django를 기본으로 하고 있는데 **[heroku에서 제공하는 flask 가이드](https://devcenter.heroku.com/articles/getting-started-with-python-o)**를 기본으로 해서 설명하겠다.  
 
 가입을 하고나서 toolbelt 라는것을 설치해야 한다. toolbelt 의 역할은 heroku 관련 명령어를 처리하는 역할을 한다. 아래의 링크에 가면 각 플랫폼 별로 설치할수 있는데 필자의 경우 ubuntu 버전으로 설치를 하였다.

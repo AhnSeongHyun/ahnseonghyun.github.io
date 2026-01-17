@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-01-15'
 description: '<'
 featured_image: ''
-tags: ['basic mail clients', 'c#', 'c# 메일 보내기', 'call basic mail clients', 'dev', 'mapi', 'MAPI Wrapper', 'mapi32', '메일 보내기']
+tags: ['basic mail clients', 'C#', 'c# 메일 보내기', 'call basic mail clients', 'dev', 'mapi', 'MAPI Wrapper', 'mapi32', '메일 보내기']
 ---
-
-
 <div style="LINE-HEIGHT: 2">  
 <div>  
 <div style="LINE-HEIGHT: 1.7">  

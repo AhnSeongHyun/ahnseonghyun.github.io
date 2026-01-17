@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-07-16'
 description: '사실 [오픈그래프](http://ogp.me)라는 것에 대해서 알게 된것은 [전 포스팅](http://ash84.tistory.com/1000)에서 말했지만 우연한 기회였다. 난 그때만 해도 여전히 오픈그래프에 대해서 신기해하고 있던 터라 구글 검색을 해보았는데 파이썬 기반 오픈'
 featured_image: ''
-tags: ['dev', 'ExtendedOpenGraph', 'opengraph', 'pypi', 'Python', '오픈그래프', '파이썬']
+tags: ['dev', 'ExtendedOpenGraph', 'opengraph', 'pypi', 'Python', '오픈그래프']
 ---
-
-
 <span style="text-align: justify; font-size: 11pt; line-height: 2;">사실 [오픈그래프](http://ogp.me)라는 것에 대해서 알게 된것은 </span>[전 포스팅](http://ash84.tistory.com/1000)<span style="text-align: justify; font-size: 11pt; line-height: 2;">에서 말했지만 우연한 기회였다. 난 그때만 해도 여전히 오픈그래프에 대해서 신기해하고 있던 터라 구글 검색을 해보았는데 파이썬 기반 오픈그래프 파싱 라이브러리가 있었고 분석했던 내용을 소개하고자 한다. </span>
 
 <span style="font-size: 11pt;">인스톨은 아래와 같이 하면 되고 </span>

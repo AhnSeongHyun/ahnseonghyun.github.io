@@ -12,9 +12,8 @@ description: '시간의 흐름, 나이의 듦
 
 결국 그걸 지향해야하지 않을까.'
 featured_image: ''
-tags: [' ', 'essay']
+tags: ['essay']
 ---
-
 시간의 흐름, 나이의 듦
 
 추억을 가져야 한다. 

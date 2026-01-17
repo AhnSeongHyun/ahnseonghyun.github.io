@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-01-09'
 description: '대학원에 있을때나, 혹은 회사를 다니면서 느낀것 중 하나는 프로그래머가 아닌 사람들은 결과에'
 featured_image: ''
-tags: ['An Seong Hyun', 'Programming', '안성현', '알고리즘', '어떻게 프로그래밍하는가?', '차분하게 프로그래밍 하라']
+tags: ['안성현', 'programming', 'algorithm']
 ---
-
-
 <div style="LINE-HEIGHT: 2; TEXT-ALIGN: justify"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"></span></span> </div>  
 <div style="LINE-HEIGHT: 2; TEXT-ALIGN: justify"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">대학원에 있을때나, 혹은 회사를 다니면서 느낀것 중 하나는 프로그래머가 아닌 사람들은 결과에 집착한다는 사실입니다. 저는 거의 매일 **<u>“어디까지 됐어?”</u>** 라는 말을 듣습니다. 때로는 정말 짜증나기도 하지만, 모르는 사람이니까 그럴수 있다고 여기고 있어요. 그런데, 재촉하면 자꾸만 빨리 빨리 해야할것 같아서 프로그래밍을 빨리 하다 보니 차분히 프로그래밍 하는 습관이 필요하구나. 라는 생각이 들더라구요.<figure class="wp-caption aligncenter" style="width: 331px">![](http://ash84.net/wp-content/uploads/1/cfile1.uf.18532C0D4B48FFDE47EEBC.jpg)<figcaption class="wp-caption-text">정말 저러고 싶을때가 많습니다.</figcaption></figure>
 

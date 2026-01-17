@@ -8,9 +8,8 @@ description: '큰맘 먹고 맥북 프로를 샀습니다. 사실 저는 윈도�
 
 IT업계에 있으면서 가장 두려운 일은 사실 새로운 언어를 배우는 일인 것 같습니다. 더더욱 다른 사람보다 새로운 언어를 배우는 일이 쉽지가 않고 점점더 나이가 들수록 그런 것 같더라고요. 트'
 featured_image: 'https://store.storeimages.cdn-apple.com/8749/as-images.apple.com/is/image/AppleInc/aos/published/images/s/eg/segment/bb/segment-bb-education-201508?wid=1440&hei=689&fmt=jpeg&qlt=80&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=1Tqkh2'
-tags: ['AOC', 'apple on campus', 'dev', 'mac', 'MAC Book Pro', '맥 교육할인', '맥북프로', '아이폰 개발']
+tags: ['AOC', 'apple on campus', 'dev', 'mac', 'MAC Book Pro', '맥 교육할인', '맥북프로', 'iOS']
 ---
-
 큰맘 먹고 맥북 프로를 샀습니다. 사실 저는 윈도우 프로그래밍을 주로 하고 있고 애플빠도 아니고, 스티븐 잡스 형을 좋아하기 보다는 빌 게이츠를 더 좋아합니다. 그럼에도 불구하고 맥북 프로를 구입했습니다. 여러 가지 이유가 있겠지만, 몇 가지 나열해 보면 다음과 같습니다.
 
 **1.     새로운 것에 적응하는 능력을 길러야 할 때.**   

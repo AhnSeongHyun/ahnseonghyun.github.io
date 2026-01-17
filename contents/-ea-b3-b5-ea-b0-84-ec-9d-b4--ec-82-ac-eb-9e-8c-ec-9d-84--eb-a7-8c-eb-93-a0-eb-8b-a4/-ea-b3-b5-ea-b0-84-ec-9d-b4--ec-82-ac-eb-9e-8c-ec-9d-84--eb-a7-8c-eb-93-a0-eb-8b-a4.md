@@ -5,10 +5,8 @@ pub_date: '2010-07-06'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile4.uf.183BC8234C32E10F5C949A.jpg)  
 공간이 사람을 만든다.<'
 featured_image: ''
-tags: ['Ahn Seong Hyun', '개발자', '공간이 사람을 만든다', '인테리어']
+tags: ['안성현', 'developer', '공간이 사람을 만든다', '인테리어']
 ---
-
-
 <div style="TEXT-ALIGN: justify">  
 </div>  
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">![](http://ash84.net/wp-content/uploads/1/cfile4.uf.183BC8234C32E10F5C949A.jpg)  

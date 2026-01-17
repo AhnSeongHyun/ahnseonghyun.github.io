@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2014-02-12'
 description: '웹 서비스 부하테스트를 해야하는 작업이 있었는데 예전에 컨퍼런스에 가서 들었던 [ngrinder](http://www.nhnopensource.org/ngrinder/) 라는 툴이 생각나서 이번 기회에 익히면서 써보기로 하였다. 기본적인 설명이나 컨셉들은 본 글의 제일 하단에 Reference 부분을 참고하면 될것 같다.'
 featured_image: ''
-tags: ['ngrinder', '모니터링', '웹서버 성능', '웹서비스 성능측정']
+tags: ['ngrinder', '모니터링', 'server', '웹서비스 성능측정']
 ---
-
-
 <span style="font-size: 11pt;">웹 서비스 부하테스트를 해야하는 작업이 있었는데 예전에 컨퍼런스에 가서 들었던 </span>[<span style="font-size: 11pt;">ngrinder</span>](http://www.nhnopensource.org/ngrinder/)<span style="font-size: 11pt;"> 라는 툴이 생각나서 이번 기회에 익히면서 써보기로 하였다. 기본적인 설명이나 컨셉들은 본 글의 제일 하단에 Reference 부분을 참고하면 될것 같다. </span>
 
 <span style="font-size: 11pt;">설치법은 사실은 대부분 </span>[<span style="font-size: 11pt;">ngrinder 개발자 분이 운영하시는 블로그</span>](http://junoyoon.tistory.com/entry/nGrinder-%EC%84%A4%EC%B9%98%EB%B0%A9%EB%B2%95)<span style="font-size: 11pt;">를 참고를 했다. 들어가면 굉장히 많은 정보를 찾을수가 있는데 필자의 경우 윈도우나 리눅스가 아닌 맥북에어에서 설치해서 사용해야하기 때문에 그 관련된 부분에 대해서 몇가지 추가할 내용을 언급하겠다. </span>

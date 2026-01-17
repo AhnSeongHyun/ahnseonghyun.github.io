@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2014-02-11'
 description: ''
 featured_image: ''
-tags: ['category', 'dev', 'IOS', '상속', '카테고리 기능']
+tags: ['category', 'dev', 'iOS', '상속', '카테고리 기능']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

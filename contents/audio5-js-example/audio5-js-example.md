@@ -10,9 +10,8 @@ http://zohararad.github.io/audio5js/
 
 좀더 위의 링크에 들어가서 보면 세세한 조절을 할 수가 있도록 제공하고 있다. 예를 들면, `seek` 기'
 featured_image: ''
-tags: ['JS', 'audio', 'audio5.js']
+tags: ['JavaScript', 'audio', 'audio5.js']
 ---
-
 이번 프로젝트 하면서, 주문이 들어왔을 때 웹상에서 특정 소리로 사용자에게 알려줘야하는 부분이 있었는데, 음원 재생관련 라이브러리를 찾아 보다가 괜찮은 것이 있어서 예제코드를 남긴다. 
 
 http://zohararad.github.io/audio5js/

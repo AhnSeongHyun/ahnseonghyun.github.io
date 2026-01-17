@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-11-18'
 description: '원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면'
 featured_image: ''
-tags: ['c#', 'dev', 'winform', '안성현', '윈폼', '윈폼 이동', '최대화', '최소화', '컨트롤박스']
+tags: ['C#', 'dev', 'winform', '안성현', '윈폼', '윈폼 이동', '최대화', '최소화', '컨트롤박스']
 ---
-
-
 <div style="text-align: justify; line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; color: rgb(200, 5, 106); font-family: Dotum; line-height: 2; ">원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면 출처표시 해 드리겠습니다. </span></div><span style="font-size: 11pt; ">  
 </span>
 

@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2013-01-14'
 description: ''
 featured_image: ''
-tags: ['collection', 'dev', 'SortedSet', 'TreeSet', '자바']
+tags: ['collection', 'dev', 'SortedSet', 'TreeSet', 'Java']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

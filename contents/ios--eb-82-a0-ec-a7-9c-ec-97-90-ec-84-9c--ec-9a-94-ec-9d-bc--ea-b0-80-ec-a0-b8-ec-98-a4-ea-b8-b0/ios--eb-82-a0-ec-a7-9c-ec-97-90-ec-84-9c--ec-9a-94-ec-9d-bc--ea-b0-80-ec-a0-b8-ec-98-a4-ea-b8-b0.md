@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2013-05-20'
 description: ''
 featured_image: ''
-tags: ['dev', 'IOS', 'NSDAT', 'NSDate 변환', '날짜 계산 Objective-c', '날짜 요일']
+tags: ['dev', 'iOS', 'NSDAT', 'NSDate 변환', '날짜 계산 Objective-c', '날짜 요일']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

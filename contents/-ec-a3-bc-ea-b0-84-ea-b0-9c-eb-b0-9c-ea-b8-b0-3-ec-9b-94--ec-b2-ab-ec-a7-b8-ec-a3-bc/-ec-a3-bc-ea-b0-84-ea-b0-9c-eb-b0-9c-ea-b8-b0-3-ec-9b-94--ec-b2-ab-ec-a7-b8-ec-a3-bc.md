@@ -5,10 +5,8 @@ pub_date: '2013-03-09'
 description: '**exs4j**
 – DB에 OpenAPI를 이용한 검색 결과를 저장하는 것은 되었고, 저장된 검색 결과의 빠른 검색을 위해서 [exs4j](https://github.com/AhnSeongHyun/exs4j) 내에 올려서 유지할 인덱스를 만드는 작업을 하였다. 기존의 [espressoOtr](https://github.com/AhnSeongHyun/espressoOtr) 라이브러리 내에 Canister/S'
 featured_image: ''
-tags: ['espressoOtr', 'exs4j', 'INDF', '개발자', '아이폰 앱', '오픈소스', '주간개발기']
+tags: ['espressoOtr', 'exs4j', 'INDF', 'developer', 'iOS', '오픈소스', '주간개발기']
 ---
-
-
 <span style="font-size: 11pt;">**exs4j**</span>
 
 <span style="font-size: 11pt;">– DB에 OpenAPI를 이용한 검색 결과를 저장하는 것은 되었고, 저장된 검색 결과의 빠른 검색을 위해서 [exs4j](https://github.com/AhnSeongHyun/exs4j) 내에 올려서 유지할 인덱스를 만드는 작업을 하였다. 기존의 [espressoOtr](https://github.com/AhnSeongHyun/espressoOtr) 라이브러리 내에 Canister/Shelfer 를 통해서 구현하려고 했는데, 약간 기능이 미흡한 부분이 있어서, Shelfer+Map<String,List> 형태로 인덱스 구조를 잡았다. 그렇게 해서 하나의 검색 결과에 대한 requestCode(유일하게 구분되는 검색 요청 코드)와 검색어를 저장하는 부분까지는 되었다. 해당 부분을 Barista 라고 하는 싱글턴 클래스로 감싸면서 Barista 클래스를 통해서 검색어와 requestCode 를 넣고 빼오는 작업을 할 예정이다.</span>

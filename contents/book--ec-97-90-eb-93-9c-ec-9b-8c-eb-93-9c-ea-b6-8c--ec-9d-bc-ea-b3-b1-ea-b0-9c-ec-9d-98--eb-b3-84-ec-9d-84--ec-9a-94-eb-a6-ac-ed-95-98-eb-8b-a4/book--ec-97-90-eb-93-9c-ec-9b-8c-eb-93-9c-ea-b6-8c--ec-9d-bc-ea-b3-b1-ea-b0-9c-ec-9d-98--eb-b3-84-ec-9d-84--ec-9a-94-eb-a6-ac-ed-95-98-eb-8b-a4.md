@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-02-11'
 description: '원체 먹는 것에 관심이 많은터라, 요리사에도 점점 관심이 가던차에 에드워드 권이라는 분에 대해서 알게 되었습니다. 백지영의 피플 인사이드(people inside)를 우연히 보면서 더 관심이 가게 되던중, 그가 쓴 자서전 격의 책.'
 featured_image: ''
-tags: ['An Seong Hyun', 'Yes chef', '권영민', '버즈알아람 수석총괄주방장', '안성현', '에드워드권', '에디스까페', '일곱개의 별을요리하다']
+tags: ['안성현', 'Yes chef', '권영민', '버즈알아람 수석총괄주방장', '에드워드권', '에디스까페', '일곱개의 별을요리하다']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">  
  원체 먹는 것에 관심이 많은터라, 요리사에도 점점 관심이 가던차에 에드워드 권이라는 분에 대해서 알게 되었습니다. 백지영의 피플 인사이드(people inside)를 우연히 보면서 더 관심이 가게 되던중, 그가 쓴 자서전 격의 책. </span><font class="Apple-style-span" color="#c8056a">**<span style="FONT-SIZE: 10pt">“일곱개의 별을 요리하다.”</span>**</font><span style="FONT-SIZE: 10pt"> 라는 책을 접하게 되었다. </span></span></span></div>  
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  

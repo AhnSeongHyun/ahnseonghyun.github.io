@@ -9,9 +9,8 @@ flask-sqlalchemy 에서 기본적으로 `SQLALCHEMY_DATABASE_URI` 설정을 통�
 ```python 
 app.config['SQLALCH'
 featured_image: ''
-tags: ['dev', 'FLASK', 'Python', 'sqlalchemy', 'multidb', 'multiple database']
+tags: ['dev', 'Flask', 'Python', 'sqlalchemy', 'multidb', 'database']
 ---
-
 ### **사용하기**
 
 flask-sqlalchemy 에서 기본적으로 `SQLALCHEMY_DATABASE_URI` 설정을 통해서 mapping class 에 정의된 테이블들이 DB와 연결되게 된다. 그런데 1개 이상의 DB와 연결해야하는 경우가 생긴다. 기존의 회원정보를 같이 쓰는 다른 서비스의 경우가 대표적인 케이스이다. 이럴경우, flask-sqlalchemy 에서는 `SQLALCHEMY_BINDS` 를 통해서 여러 데이터베이스 URI를 지정할 수 있게 해주고 있다. 

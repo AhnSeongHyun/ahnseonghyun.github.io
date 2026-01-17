@@ -6,10 +6,8 @@ description: '포켓 피씨라는 제품군을 처음 접한건 2005년 즈음�
 
 ![](http://ash84.net/wp-'
 featured_image: ''
-tags: ['dev', '아이4G', '아이폰', '포켓피씨']
+tags: ['dev', '아이4G', 'iOS', '포켓피씨']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">포켓 피씨라는 제품군을 처음 접한건 2005년 즈음이었던것 같다. 때마침 폰을 잃어버렸던 차였고 아는 형이 PDA 관련된 프로젝트를 진행하는 것을 보면서 자연스럽게 포켓피씨라는 제품군에 눈길이 가기 시작했다. 우리는 그것을 포켓피씨 또는 PDA 폰이라고 불렀다. </span></span>
 
 ![](http://ash84.net/wp-content/uploads/1/cfile5.uf.112A8B204BBFCE4E62706A.jpg)

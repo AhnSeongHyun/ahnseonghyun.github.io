@@ -5,10 +5,8 @@ pub_date: '2011-06-04'
 description: '최근 개발하고 있는 프로젝트에 겪었던 기 현상을 먼저 이야기 하자면 이렇다.   
 <'
 featured_image: ''
-tags: ['dev', 'IOS', 'UIImagePicker', 'ViewDidLoad', 'ViewDidUnload', '메모리경고']
+tags: ['dev', 'iOS', 'UIImagePicker', 'ViewDidLoad', 'ViewDidUnload', '메모리경고']
 ---
-
-
 <div style="line-height: 2;"></div><div style="line-height: 2; "><div style="line-height: 2; text-align: justify; "><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">최근 개발하고 있는 프로젝트에 겪었던 기 현상을 먼저 이야기 하자면 이렇다. </span></span></div><span style="font-size: 11pt; ">  
 </span>
 

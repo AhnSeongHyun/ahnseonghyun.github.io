@@ -5,10 +5,8 @@ pub_date: '2009-11-09'
 description: '[![Day 308: X](http://farm3.static.flickr.com/2537/4076648343_767c69a46e.jpg)](http://www.flickr.com/photos/91252560@N00/4076648343 "Day 308: X")  
 Day 308: X by [theogeo](http://www.flickr.com/photos/91252560@N00)[![저작자 표시](http://cfs.tist'
 featured_image: ''
-tags: ['데이터', '보정필터', '성급한 일반화의 오류', '펌웨어', '프로그래밍']
+tags: ['데이터', '보정필터', '성급한 일반화의 오류', '펌웨어', 'programming']
 ---
-
-
 <table class="flickrImgSearch"><tbody><tr><td>[![Day 308: X](http://farm3.static.flickr.com/2537/4076648343_767c69a46e.jpg)](http://www.flickr.com/photos/91252560@N00/4076648343 "Day 308: X")  
 <span>Day 308: X by [theogeo](http://www.flickr.com/photos/91252560@N00)</span>[![저작자 표시](http://cfs.tistory.com/static/admin/editor/ccl_black01.png)](http://creativecommons.org/licenses/by/2.0/kr/)</td></tr></tbody></table><div style="TEXT-ALIGN: justify"> 성급한 일반화의 오류란, 몇가지의 부분을 보고 전체를 일반화 시켜서 판단하는 오류를 말한다.   
  예를 들면,   

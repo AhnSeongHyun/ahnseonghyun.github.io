@@ -24,10 +24,8 @@ python setup.py sdist upload
 
 ** 주의'
 featured_image: ''
-tags: ['dev', 'pypi 올리기', 'Python', 'upload pypi', '파이썬']
+tags: ['dev', 'pypi 올리기', 'Python', 'upload pypi']
 ---
-
-
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;">올릴때 마다 고생하는데 간단 정리 </span>
 
 **<span style="font-size: 11pt;"></span>**

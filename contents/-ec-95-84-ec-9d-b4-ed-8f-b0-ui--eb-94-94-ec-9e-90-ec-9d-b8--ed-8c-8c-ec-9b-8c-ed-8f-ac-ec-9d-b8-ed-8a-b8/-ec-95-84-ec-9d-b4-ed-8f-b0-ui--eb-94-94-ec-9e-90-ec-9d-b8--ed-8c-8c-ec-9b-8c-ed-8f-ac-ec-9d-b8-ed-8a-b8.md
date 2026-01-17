@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-01-13'
 description: ''
 featured_image: ''
-tags: ['dev', 'iPhone GUI', 'make iphone ui', 'mock app', '아이폰 개발']
+tags: ['dev', 'iOS', 'mock app']
 ---
-
-
 <center>  
 <object height="344" width="425"><param name="movie" value="http://www.youtube.com/v/KZGPU7LgY44&color1=0xb1b1b1&color2=0xcfcfcf&hl=en_US&feature=player_embedded&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed allowfullscreen="true" allowscriptaccess="always" height="344" src="http://www.youtube.com/v/KZGPU7LgY44&color1=0xb1b1b1&color2=0xcfcfcf&hl=en_US&feature=player_embedded&fs=1" type="application/x-shockwave-flash" width="425"></embed></object>  
 </center><center>  

@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2013-01-26'
 description: ''
 featured_image: ''
-tags: ['dev', 'html file uiwebview', 'html string uiwebview', 'IOS', 'UIWebView']
+tags: ['dev', 'html file uiwebview', 'html string uiwebview', 'iOS', 'UIWebView']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

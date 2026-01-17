@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-07-10'
 description: '원래는 이것을 찾으려고 한게 아니고, 웹 페이지에서 여러가지 정보를 가져오는 스크립트를 찾던중에 찾은 재밌는 일종의 툴인데, **파이썬 기반으로 지정한 웹 페이지의 스크린샷을 뜨는 작업**을 해준다.'
 featured_image: ''
-tags: ['dev', 'Python', 'screenshot python', 'webkit2png', 'webpage screenshot', '파이썬']
+tags: ['dev', 'Python', 'webkit2png', 'webpage screenshot']
 ---
-
-
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">원래는 이것을 찾으려고 한게 아니고, 웹 페이지에서 여러가지 정보를 가져오는 스크립트를 찾던중에 찾은 재밌는 일종의 툴인데, **파이썬 기반으로 지정한 웹 페이지의 스크린샷을 뜨는 작업**을 해준다. </span>
 
 <span style="font-size: 11pt;">  

@@ -8,10 +8,8 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile24.uf.197B32224B60F
  
 일요일은 사실 여자친구와 놀기 바쁘다.'
 featured_image: ''
-tags: ['An Seong Hyun', 'Take Urban', '안성현', '테이크얼반']
+tags: ['안성현', 'Take Urban', '테이크얼반']
 ---
-
-
 <center>![](http://ash84.net/wp-content/uploads/1/cfile24.uf.197B32224B60FC5C12937B.jpg)![](http://ash84.net/wp-content/uploads/1/cfile7.uf.117B32224B60FC5D13ABC6.jpg)</center>  
 <center> </center>  
 <center>어머니와 함께 테이크어반에서. </center>  

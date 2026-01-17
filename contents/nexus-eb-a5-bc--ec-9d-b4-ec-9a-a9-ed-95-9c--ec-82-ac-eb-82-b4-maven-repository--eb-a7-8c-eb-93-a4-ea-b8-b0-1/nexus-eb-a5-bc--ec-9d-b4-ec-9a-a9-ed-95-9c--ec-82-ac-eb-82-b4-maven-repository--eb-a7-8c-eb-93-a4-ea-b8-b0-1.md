@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2012-12-20'
 description: '앞서 이클립스에 maven을 설치하는 과정에 대해서 설명했는데, 이번 장에는 사내 maven Repository를 구성하는 방법에 대해서 알아보자. 일단 사내 Repository를 구성해야 하는 가장 큰 이유는 매번 참조하고 있는 라이브러리를 가져와야 하는 불편함도 있겠지만, 솔직히 필자에게 더 필요한건 사내에서 만들어진 라이브러리를 Repository에 올려놓고 다른 동료개발자분들이 쉽게 찾아서 쓸수 있게 하는것이 더 중요했다.'
 featured_image: ''
-tags: ['dev', 'maven', 'Nexus', '사내 repository', '자바', '저장소 연경']
+tags: ['dev', 'maven', 'Nexus', '사내 repository', 'Java', '저장소 연경']
 ---
-
-
 <span style="font-size: 11pt;">앞서 이클립스에 maven을 설치하는 과정에 대해서 설명했는데, 이번 장에는 사내 maven Repository를 구성하는 방법에 대해서 알아보자. 일단 사내 Repository를 구성해야 하는 가장 큰 이유는 매번 참조하고 있는 라이브러리를 가져와야 하는 불편함도 있겠지만, 솔직히 필자에게 더 필요한건 사내에서 만들어진 라이브러리를 Repository에 올려놓고 다른 동료개발자분들이 쉽게 찾아서 쓸수 있게 하는것이 더 중요했다. </span>
 
 <span style="font-size: 11pt;">자, 이제 Nexus의 세계로 떠나보자. </span>

@@ -10,9 +10,8 @@ description: '퇴사들을 보면서 나도 많이 퇴사를 해봤기에 여러
 
 ###'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/things-to-keep-in-mind-about-the-exit-process/20200402152847.png'
-tags: [' ', 'eassy']
+tags: ['eassy']
 ---
-
 퇴사들을 보면서 나도 많이 퇴사를 해봤기에 여러가지 생각들이 든다. 몇가지 내가 퇴사를 할때의 원칙들을 적어본다. 
 
 ### 박수칠 때, 떠날 것 

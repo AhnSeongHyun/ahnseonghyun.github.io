@@ -6,10 +6,8 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile6.uf.18544C044AFCAF
 
 최근에'
 featured_image: ''
-tags: ['An Seong Hyun', 'LG아트센터', '류정한', '뮤지컬 영웅', '안성현', '안중근', '안중근 의사', '안중근 의사 서거 100주년', '영웅', '정성화']
+tags: ['안성현', 'LG아트센터', '류정한', '뮤지컬 영웅', '안중근', '안중근 의사', '안중근 의사 서거 100주년', '영웅', '정성화']
 ---
-
-
 <div style="TEXT-ALIGN: justify">![](http://ash84.net/wp-content/uploads/1/cfile6.uf.18544C044AFCAF2E4586B4.jpg)
 
 </div><div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "><span style="font-family: Dotum; ">최근에</span></span><font color="#5c7fb0"><span style="font-size: 11pt; "><span style="font-family: Dotum; "> 뮤지컬 “영웅”</span></span></font><span style="font-size: 11pt; "><span style="font-family: Dotum; ">을 봤다. 사실 처음본 뮤지컬은 아니였지만, 어린이 뮤지컬 외에 처음본 대형 뮤지컬이라 그런지 많이 낯설었던 것 같다. 사실 나는 연극을 더 좋아한다. 처음연극을 접한것은 대학교때 국어국문학과 연극 </span></span><font color="#c8056a"><span style="font-size: 11pt; "><span style="font-family: Dotum; ">” 불좀 꺼주세요 “</span></span></font><span style="font-size: 11pt; "><span style="font-family: Dotum; "> 라는 연극을 본후, 매료되어 다수의 연극을 보았다. </span></span><font color="#0686a8"><span style="font-size: 11pt; "><span style="font-family: Dotum; ">연극이 좋은 이유는 실제 생활과 매우 비슷하기 때문이다. 우리의 실제 현실세계에서는 위기의 순간, 사랑의 순간 등의 순간마다 실제로는 음악이 귓가에 들리지 않기 때문이다. 그래서 연극이 더 재밌게 느껴지는것 같다. </span></span>  

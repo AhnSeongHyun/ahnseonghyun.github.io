@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-05-08'
 description: 'HTML 파싱에 관한 부분은 한우찾기 1.0 및 2.0 에 걸쳐서 가장 핵심적인 부분이라고 할 수 있다. 총 2'
 featured_image: ''
-tags: ['dev', 'HTML Parsing', 'HTML 파싱', 'IOS', 'Java Script', 'UIWebView', '한우찾기']
+tags: ['dev', 'HTML Parsing', 'HTML 파싱', 'iOS', 'JavaScript', 'UIWebView', '한우찾기']
 ---
-
-
 <div style="background-color: transparent; text-align: justify; line-height: 2; "><span style="font-family: Dotum; font-size: 11pt; "><span style="color: rgb(0, 0, 0); ">HTML 파싱에 관한 부분은 한우찾기 1.0 및 2.0 에 걸쳐서 가장 핵심적인 부분이라고 할 수 있</span><span style="color: rgb(0, 0, 0); ">다. 총 2</span><span style="color: rgb(0, 0, 0); ">가지 방법을 사용해서 웹 사이트에 있는 HTML 데이터를 파싱해서 가져오고 있</span><span style="color: rgb(0, 0, 0); ">다. (2.4버전 이후에는 HTMLParser 를 사용할 예정)</span></span></div><span style="color: rgb(0, 0, 0); ">  
 </span>
 

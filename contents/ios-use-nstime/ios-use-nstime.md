@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-11-22'
 description: '개인적으로 타이머를 그렇게 좋아하진 않는다.(다들 개인적으로 좋아하지 않는 프로그래밍의 한 부분이 있을것이라 생각됨.) 사실 어떤 이벤트가 발생했다는 것을 타이머를 통해서 감지하거나 하는 경우가 있는데 그런 부분에서 잘 사용하진 않는다. 이유는 Objective-C 에는 delegate 라는 막강한 놈이 있고, 그게 아니라면 `NSNotificiation` 을 사용하는 것도 나쁘진 않다.'
 featured_image: ''
-tags: ['dev', 'IOS', 'NSTimer', 'scheduledTimerWithTimeInterval']
+tags: ['dev', 'iOS', 'NSTimer', 'scheduledTimerWithTimeInterval']
 ---
-
-
 <span style="font-size: 11pt;">개인적으로 타이머를 그렇게 좋아하진 않는다.(다들 개인적으로 좋아하지 않는 프로그래밍의 한 부분이 있을것이라 생각됨.) 사실 어떤 이벤트가 발생했다는 것을 타이머를 통해서 감지하거나 하는 경우가 있는데 그런 부분에서 잘 사용하진 않는다. 이유는 Objective-C 에는 delegate 라는 막강한 놈이 있고, 그게 아니라면 `NSNotificiation` 을 사용하는 것도 나쁘진 않다. </span>
 
 <span style="font-size: 11pt;">  

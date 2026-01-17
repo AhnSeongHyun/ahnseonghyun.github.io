@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2007-08-19'
 description: 'C#을 공부한지도 한 2개월 정도 되어 가는 것 같다. 문법적인 부분에 대해서 익히는건, 오래 걸리지 않았다. (원래, C/C++,JAVA를 해봐서). 대신 오래 걸렸던 것은 C#의 여러기능을 잘 이용해서 프로그래밍 하는 것이었다. 자꾸만 주먹구구식의 C++하던 식으로 해서 그런지, 적절한 C'
 featured_image: ''
-tags: ['수학', '프로그래밍']
+tags: ['수학', 'programming']
 ---
-
-
 <div style="padding: 10px; background-color: rgb(201, 237, 255); line-height: 2;"><font color="#003366"><span style="font-size: 11pt;">C#을 공부한지도 한 2개월 정도 되어 가는 것 같다. 문법적인 부분에 대해서 익히는건, 오래 걸리지 않았다. (원래, C/C++,JAVA를 해봐서). 대신 오래 걸렸던 것은 C#의 여러기능을 잘 이용해서 프로그래밍 하는 것이었다. 자꾸만 주먹구구식의 C++하던 식으로 해서 그런지, 적절한 Class Member의 사용이 쉽지 않았다.</span></font></div><span style="font-size: 11pt;">  
 </span>
 

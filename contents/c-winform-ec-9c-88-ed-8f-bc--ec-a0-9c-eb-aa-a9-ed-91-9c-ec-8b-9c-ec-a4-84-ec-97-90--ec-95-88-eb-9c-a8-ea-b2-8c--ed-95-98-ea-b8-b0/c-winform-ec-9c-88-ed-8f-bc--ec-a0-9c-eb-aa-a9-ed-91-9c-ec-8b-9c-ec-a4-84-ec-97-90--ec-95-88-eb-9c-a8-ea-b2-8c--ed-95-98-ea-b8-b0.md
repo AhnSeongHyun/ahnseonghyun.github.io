@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2009-11-24'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile29.uf.134855014B0BEAB21F9F39.jpg)Form1과 Form'
 featured_image: ''
-tags: ['An Seong Hyun', 'c#', 'dev', 'ShowTaskbar', 'Windows Application', 'winform', '속성', '안성현', '윈폼', '제목표시줄', '제목표시줄 표시', '프로그래밍']
+tags: ['안성현', 'C#', 'dev', 'ShowTaskbar', 'Windows Application', 'winform', '속성', '윈폼', '제목표시줄', '제목표시줄 표시', 'programming']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><figure class="wp-caption aligncenter" style="width: 484px">![](http://ash84.net/wp-content/uploads/1/cfile29.uf.134855014B0BEAB21F9F39.jpg)<figcaption class="wp-caption-text">Form1과 Form2가 모두 표시됨.</figcaption></figure></span></span>
 
 <span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt">C# Windows Application(윈도우즈 어플리케이션)을 개발 하다보면 자연스럽게 많은 메시지 창 및 자식창을 생성하게 됩니다. MessageBox(메시지박스)역시 하나의 자식 윈폼이라고 볼수 있겠지요. 그런데 메시지 박스를 뛰운 경우에는 하나의 어플리케이션 이름만 TaskBar(제목표시줄)에 표시되지만, Form2를 띄운 경우에는 TaskBar(제목표시줄)에 Form2의 이름이 같이 보여지게 됩니다. 사실상 메인 프로그램 폼 만이 제목표시줄에 보여져야 하는데, 그렇다면 과연 이럴땐 어떻게 해야 할까요?</span></span></span>

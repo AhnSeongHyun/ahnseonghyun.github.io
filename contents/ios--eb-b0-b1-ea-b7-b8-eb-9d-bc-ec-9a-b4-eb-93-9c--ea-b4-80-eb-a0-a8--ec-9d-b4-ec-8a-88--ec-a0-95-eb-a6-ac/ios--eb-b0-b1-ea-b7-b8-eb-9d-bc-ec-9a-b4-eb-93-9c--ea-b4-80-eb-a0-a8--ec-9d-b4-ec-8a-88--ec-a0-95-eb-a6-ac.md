@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-10-09'
 description: '블루투스와 연결되어서 동작되는 앱을 어떻게 백그라운드에서 유지 시킬것인가 하는 것에 대한 물음이 있었고 여러가지 문제가 있었다. 이 글은 그에대한 여러가지 시도의 방법 그리고 해결방법(도움이 될지)에 대한 내용의 정리이다.'
 featured_image: ''
-tags: ['App crash', 'Background', 'background fetch', 'dev', 'IOS', 'NSTimeInterval', '백그라운드', '블루투스']
+tags: ['App crash', 'Background', 'background fetch', 'dev', 'iOS', 'NSTimeInterval', '백그라운드', '블루투스']
 ---
-
-
 <span style="font-size: 11pt;">블루투스와 연결되어서 동작되는 앱을 어떻게 백그라운드에서 유지 시킬것인가 하는 것에 대한 물음이 있었고 여러가지 문제가 있었다. 이 글은 그에대한 여러가지 시도의 방법 그리고 해결방법(도움이 될지)에 대한 내용의 정리이다. </span>
 
 <div style="text-align: justify; line-height: 2;"></div><div class="txc-textbox" style="border: 1px solid #cbcbcb; background-color: #ffffff; padding: 10px;"><div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">문제점 </span><span style="background-color: transparent; font-size: 11pt;">: 블루투스와 통신을 하는 앱이 백그라운드로 들어갔을때, </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;">불규칙하게 앱이 꺼지거나 블루투스가 끊어지는 문제 </span></div></div><div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;"> </span></div><div style="text-align: justify; line-height: 2;">**<span style="font-size: 11pt;">[applicationWillTerminate</span><span style="font-size: 11pt;">:메소드에 대한 진실]</span>**</div><div style="text-align: justify; line-height: 2;"></div><div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">일단 로그를 살펴보았고 아쉽게도 UIApplication 클래스의 applicationWillTerminate:</span><span style="font-size: 11pt;"> 메소드는 발생되지 않았다. 사실 이 함수의 발동에 대해서 여러의견이 분분한데 내가 테스트 해봤을때 이 함수의 동작은 “백그라운드 상태에서 앱이 사용자 혹은 iOS 가 메모리 부족으로 앱을 종료시킬때 발생되는 함수” 이다. 그런데 여기서 주의해야할 부분이 이 함수는 백그라운드 상태에서만 동작한다는 것이다. 그런데 백그라운드 상태에서는 중지된(Suspended) 라는 상태가 있다. 이 상태로 앱이 들어가게 되면 발생되지 않는다. 레퍼런스 문서를 읽어보시면 알겠지만 중지된(Suspended)상태로 들어가는 것은 감지할수가 없다. </span></div><div style="text-align: justify; line-height: 2;"></div><div style="text-align: justify; line-height: 2;"></div><div style="text-align: justify;"><span style="font-size: 11pt;">**[Fetch는 타이머가 아니기에] **</span>

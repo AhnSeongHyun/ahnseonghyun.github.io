@@ -5,10 +5,8 @@ pub_date: '2009-11-25'
 description: '**
 ****Motto?**'
 featured_image: ''
-tags: ['2010 모토', '2010년', 'An Seong Hyun', 'Keep going', 'Motto', '결심', '그래도 계속 가라', '모토', '안성현', '좌우명']
+tags: ['2010 모토', '2010년', '안성현', 'Keep going', 'Motto', '결심', '그래도 계속 가라', '모토', '좌우명']
 ---
-
-
 <div style="text-align: justify;"><span class="Apple-style-span" style="line-height: 48px;">**<span class="Apple-style-span" style="font-weight: normal; line-height: 18px;">  
 </span>**</span></div><div style="text-align: justify;">**<span style="font-size: 24pt; ">Motto?</span>**</div><div style="text-align: justify;">**<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; ">*A ****motto**** (*[*Italian*](http://en.wikipedia.org/wiki/Italian_language "Italian language")* for pledge, sentence; *[*plural*](http://en.wikipedia.org/wiki/Plural "Plural")*: motti) is a phrase meant to formally describe the general motivation or intention of a social group or organization. A motto may be in any language, but *[*Latin*](http://en.wikipedia.org/wiki/Latin "Latin")* is the most used. The local language is usual in the mottos of *[*governments*](http://en.wikipedia.org/wiki/Government "Government")*.*</div>**
 

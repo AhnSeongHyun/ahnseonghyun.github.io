@@ -5,10 +5,8 @@ pub_date: '2012-10-25'
 description: '개인적으로 github를 가장 좋아하는 서비스로 뽑고 있고, 필자 역시 github 에 무엇인가를 올리는 작업을 좋아한다. 여타의 코드 저장소 및 커뮤니티와 다른 점이라면 단연 소셜적인 기능을 통해서 다른 사람들과 좀더 친밀하게 뭔가를 할수 있다는 점이겠다. 이러한 이유로 인해서 github는 개발자들 외 여타의 다른 분들도 많이들 쓰신다. 
 거두절미 하고. 내가 **[github_reader](https:'
 featured_image: ''
-tags: ['github', 'github 블로그', 'github 연동', 'github_reader', 'public activity', '블로그와 연동']
+tags: ['GitHub', 'github 블로그', 'github 연동', 'github_reader', 'public activity', '블로그와 연동']
 ---
-
-
 <span style="font-size: 12pt;">개인적으로 github를 가장 좋아하는 서비스로 뽑고 있고, 필자 역시 github 에 무엇인가를 올리는 작업을 좋아한다. 여타의 코드 저장소 및 커뮤니티와 다른 점이라면 단연 소셜적인 기능을 통해서 다른 사람들과 좀더 친밀하게 뭔가를 할수 있다는 점이겠다. 이러한 이유로 인해서 github는 개발자들 외 여타의 다른 분들도 많이들 쓰신다. </span>
 
 <span style="font-size: 12pt;">거두절미 하고. 내가 **[github_reader](https://github.com/AhnSeongHyun/github_reader) 를 만든 이유는 블로그에서 나의 github 활동을 보여주고 싶어서** 였다. 단지 그 이유때문에 만든것인데, 가서 보면 되지 않냐고 하지만, 다들 알다시피 web 상에서의 1depth는 매우 접근성 차이가 난다. **때문에 블로그의 첫 화면에서 보여주겠다는 것이 가장 큰 목표였다. **</span>

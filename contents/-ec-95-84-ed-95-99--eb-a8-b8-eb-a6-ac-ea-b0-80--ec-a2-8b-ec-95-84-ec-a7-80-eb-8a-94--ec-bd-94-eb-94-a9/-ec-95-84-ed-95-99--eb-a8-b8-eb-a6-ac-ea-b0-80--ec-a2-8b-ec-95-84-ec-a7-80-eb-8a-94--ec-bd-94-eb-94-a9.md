@@ -5,10 +5,8 @@ pub_date: '2007-10-16'
 description: '[![Hello World](http://farm1.static.flickr.com/125/359320246_ddad1ceef1.jpg)](http://www.flickr.com/photos/55835038@N00/359320246 "Hello World")  
 Hello World by [Aristocrat](http://www.flickr.com/photos/55835038@N00)[![저작자 표시](http://cfs.t'
 featured_image: ''
-tags: ['12시간 코딩', 'An Seong Hyun', 'coding', '안성현', '코딩']
+tags: ['12시간 코딩', '안성현', 'coding', '코딩']
 ---
-
-
 <table class="flickrImgSearch"><tbody><tr><td>[![Hello World](http://farm1.static.flickr.com/125/359320246_ddad1ceef1.jpg)](http://www.flickr.com/photos/55835038@N00/359320246 "Hello World")  
 <span>Hello World by [Aristocrat](http://www.flickr.com/photos/55835038@N00)</span>[![저작자 표시](http://cfs.tistory.com/static/admin/editor/ccl_black01.png)![비영리](http://cfs.tistory.com/static/admin/editor/ccl_black02.png)![변경 금지](http://cfs.tistory.com/static/admin/editor/ccl_black04.png)](http://creativecommons.org/licenses/by-nc-nd/2.0/kr/)</td></tr></tbody></table><span style="font-size: 11pt; ">c# 스터디 2달의 마지막 주. </span>
 

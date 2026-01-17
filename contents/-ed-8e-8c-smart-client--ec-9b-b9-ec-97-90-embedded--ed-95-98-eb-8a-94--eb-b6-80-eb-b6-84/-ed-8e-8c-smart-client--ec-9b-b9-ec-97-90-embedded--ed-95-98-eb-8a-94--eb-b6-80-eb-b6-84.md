@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2008-04-25'
 description: ''
 featured_image: ''
-tags: ['c#', 'dev', 'smart client .net']
+tags: ['C#', 'dev', 'smart client .net']
 ---
-
-
 <div id="Lecture_Source">  
 <table border="0" cellpadding="5" cellspacing="1" id="Table1" name="Table1" width="100%">  
 <tbody>  

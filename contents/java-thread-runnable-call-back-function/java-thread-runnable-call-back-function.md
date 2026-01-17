@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-05-29'
 description: '최근에 [자바 네트워크 관련 책](http://book.naver.com/bookdb/book_detail.nhn?bid=1583597)을 보고 있는데(조금 옛날책) 스레드에 관련된 내용이 나와서 정리한다. [이전에 ExcutorService 에 대해서 썼을때](http://ash84.tistory.com/933)는 Runnable 의 run()함수가 void 형을 리턴하도록 되어 있기 때문에 결과 값을 받을수 없다고 설명했었는데, 이 책에서는 콜백 함수를 이용해서 각 스레드'
 featured_image: ''
-tags: ['dev', 'Java', 'java thread runnable callback', 'Runnable', '스레드', '스레드 결과', '스레드 콜백함수', '콜백함수']
+tags: ['dev', 'Java', 'Runnable', '스레드', '스레드 결과', '스레드 콜백함수', '콜백함수']
 ---
-
-
 <span style="font-size: 11pt;">최근에 [자바 네트워크 관련 책](http://book.naver.com/bookdb/book_detail.nhn?bid=1583597)을 보고 있는데(조금 옛날책) 스레드에 관련된 내용이 나와서 정리한다. [이전에 ExcutorService 에 대해서 썼을때](http://ash84.tistory.com/933)는 Runnable 의 run()함수가 void 형을 리턴하도록 되어 있기 때문에 결과 값을 받을수 없다고 설명했었는데, 이 책에서는 콜백 함수를 이용해서 각 스레드의 결과를 받을수 있다고 설명하고 있다. </span>
 
 <span style="font-size: 11pt;">그전에 폴링(polling) 방식에 대해서 설명을 하자면, 이건 스레드내 어떤 플래그를 두고 그 플래그를 스레드 내에서 처리가 완료가 되면 변경해 주고 스레드 밖에서는 그것을 계속 체크해서 변경되면 값을 가져오는 방식이다. 다들 알다시피 이 방식의 문제점은 필요이상의 일을 너무 많이 한다는 것이다. </span>

@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2015-03-18'
 description: '서버 단에서 해도 되겠지만, 프론트 단에서 괜찮은 라이브러리가 있어서 소개한다. 3자리마다 금액 숫자에서 쉼표를 찍는 라이브러리인데 쓰기가 쉬워서 메모해 놓는다.'
 featured_image: ''
-tags: ['3자리 금액 자바스크립트', 'dev', 'jQuery', 'jquery-number', 'JS', '통화']
+tags: ['JavaScript', 'dev', 'jQuery', 'jquery-number', '통화']
 ---
-
 서버 단에서 해도 되겠지만, 프론트 단에서 괜찮은 라이브러리가 있어서 소개한다. 3자리마다 금액 숫자에서 쉼표를 찍는 라이브러리인데 쓰기가 쉬워서 메모해 놓는다.
 
 <div style="text-align: justify; line-height: 2;"></div><div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); padding: 10px; background-color: rgb(255, 255, 255);"><div style="text-align: justify; line-height: 2;">[<span style="font-size: 11pt;">https://github.com/customd/jquery-number</span>](https://github.com/customd/jquery-number)<span style="font-size: 11pt;"></span></div></div><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span>

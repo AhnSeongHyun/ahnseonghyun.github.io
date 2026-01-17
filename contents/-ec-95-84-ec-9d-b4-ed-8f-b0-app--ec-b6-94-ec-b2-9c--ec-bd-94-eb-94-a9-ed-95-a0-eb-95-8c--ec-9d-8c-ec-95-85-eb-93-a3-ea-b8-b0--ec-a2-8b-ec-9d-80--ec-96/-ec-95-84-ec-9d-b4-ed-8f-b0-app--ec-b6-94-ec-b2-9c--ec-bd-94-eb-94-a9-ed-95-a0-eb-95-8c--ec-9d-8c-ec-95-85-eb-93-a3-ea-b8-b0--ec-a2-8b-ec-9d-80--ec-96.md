@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-01-19'
 description: '원래 다른 블로그들 보면서, 뭘 그리 어플들을 추천하나, 자기가 좋아서 쓰면 그만이지라는 주의 였는데, 저도 여러 어플을 쓰면서 다른 분들께 (혹시 모르는 분들이 있을까바서 ㅋㅋ) 추천해 주고 싶은 마음이 있어서 이렇게 적'
 featured_image: ''
-tags: ['An Seong Hyun', 'dev', 'iPhone', 'moodagent', '무드에이저트', '무료어플', '아이폰', '아이폰 음악 어플', '안성현', '음악선곡 어플']
+tags: ['안성현', 'dev', 'iOS', 'moodagent', '무드에이저트', '무료어플', '음악선곡 어플']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">원래 다른 블로그들 보면서, 뭘 그리 어플들을 추천하나, 자기가 좋아서 쓰면 그만이지라는 주의 였는데, 저도 여러 어플을 쓰면서 다른 분들께 (혹시 모르는 분들이 있을까바서 ㅋㅋ) 추천해 주고 싶은 마음이 있어서 이렇게 적게 되었습니다. </span></span></span></span><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 11pt">**<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">당신에 기분에 따라 선곡해 드립니다. moodAgent</span></span>**</span></span>
 
 <div>  

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-01-11'
 description: '﻿'
 featured_image: ''
-tags: ['An Seong Hyun', 'Wedding Singer', '드류배리모어', '박건형', '아담샌들러', '안성현', '웨딩싱어', '충무아트홀', '황정민']
+tags: ['안성현', 'Wedding Singer', '드류배리모어', '박건형', '아담샌들러', '웨딩싱어', '충무아트홀', '황정민']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt">﻿</span></span>  
 </div>  
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><font class="Apple-style-span" size="4"><span class="Apple-style-span" style="LINE-HEIGHT: 29px; FONT-SIZE: 15px"><figure class="wp-caption aligncenter" style="width: 605px">![](http://ash84.net/wp-content/uploads/1/cfile30.uf.2053BD034B490DD539F23A.jpg)<figcaption class="wp-caption-text">2010년 1월 31일 까지 한데요^^</figcaption></figure>  

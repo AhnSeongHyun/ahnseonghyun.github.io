@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-05-06'
 description: ''
 featured_image: ''
-tags: ['dev', 'IOS', 'UIActivityIndicatorView', 'UIAlertView', '로딩뷰']
+tags: ['dev', 'iOS', 'UIActivityIndicatorView', 'UIAlertView', '로딩뷰']
 ---
-
-
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta>  
 <meta content="text/css" http-equiv="Content-Style-Type"></meta>
 

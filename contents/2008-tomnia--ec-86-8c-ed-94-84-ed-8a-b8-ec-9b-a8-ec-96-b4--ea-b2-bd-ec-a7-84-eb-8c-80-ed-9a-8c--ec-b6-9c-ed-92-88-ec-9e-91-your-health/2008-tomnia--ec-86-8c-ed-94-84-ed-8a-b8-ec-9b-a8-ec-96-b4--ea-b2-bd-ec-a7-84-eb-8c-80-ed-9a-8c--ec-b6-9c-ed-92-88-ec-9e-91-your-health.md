@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2009-03-10'
 description: '[](http://ash84.net/wp-content/uploads/1/cfile5.uf.1566E70C49B63C7F2AFDC3.bmp)cfile5.uf.1566E70C49B63C7F2AFDC3.bmp'
 featured_image: ''
-tags: ['dev', 'FIND HOSPITAL', 'TOMNIA 소프트웨어 경진대회', 'YOUR HEALTH', '경진대회', '모바일 프로그램', '병원 찾기', '소프트웨어 개발', '진료기록 관리']
+tags: ['dev', 'FIND HOSPITAL', 'TOMNIA 소프트웨어 경진대회', 'YOUR HEALTH', '경진대회', 'mobile', '병원 찾기', '소프트웨어 개발', '진료기록 관리']
 ---
-
-
 <div style="TEXT-ALIGN: center">[](http://ash84.net/wp-content/uploads/1/cfile5.uf.1566E70C49B63C7F2AFDC3.bmp)cfile5.uf.1566E70C49B63C7F2AFDC3.bmp  
 </div>  
 <div style="TEXT-ALIGN: justify"><div class="txc-textbox" style="BORDER-RIGHT: #cbcbcb 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #cbcbcb 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: #cbcbcb 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #cbcbcb 1px solid; BACKGROUND-COLOR: #ffffff">본 프로그램는 사용자가 잘 모르는 곳에 가서 갑자기 아팠을때, 혹은 갑자기 병원을 가야할 때, 사용자 근처에 있는 병원 혹은 특정 주소지 내에 있는 병원을 찾아주는 프로그램입니다. 찾은 병원으로 전화 할수 있으며, 자신의 일정에 추가할수 있고, 또한 다녀온 병원과 진료에 대해서 자신의 모바일폰에 기록함으로 자신의 건강에 주의할수 있습니다. 현재 서비스 지역은 **서울**로 한정됩니다.   

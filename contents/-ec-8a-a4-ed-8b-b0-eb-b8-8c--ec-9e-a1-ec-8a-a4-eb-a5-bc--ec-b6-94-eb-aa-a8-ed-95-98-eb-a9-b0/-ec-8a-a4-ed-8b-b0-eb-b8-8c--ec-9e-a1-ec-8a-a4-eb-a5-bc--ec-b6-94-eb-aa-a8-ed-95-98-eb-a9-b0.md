@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-10-08'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile1.uf.12445E444E8FE501189270.png)'
 featured_image: ''
-tags: ['Apple', 'iPhone4', 'iPhone4S', 'steve jobs', '스티브잡스', '아이폰', '애플', '앱', '영향', '죽음']
+tags: ['Apple', 'iOS', 'steve jobs', '스티브잡스', '애플', '앱', '영향', '죽음']
 ---
-
-
 <span style="font-size: 11pt;">  
 </span>
 

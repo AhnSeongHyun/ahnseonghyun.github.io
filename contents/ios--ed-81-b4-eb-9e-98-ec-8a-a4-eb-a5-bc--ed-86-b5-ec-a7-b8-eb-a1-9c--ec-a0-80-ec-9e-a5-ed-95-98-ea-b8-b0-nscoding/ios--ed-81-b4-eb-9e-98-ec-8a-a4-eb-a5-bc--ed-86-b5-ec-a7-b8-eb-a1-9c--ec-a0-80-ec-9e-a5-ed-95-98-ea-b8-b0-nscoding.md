@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-05-03'
 description: '단순히 문자열을 저장하는 것만으로 앱내 데이터 저장에는 확실히 한계가 있다. 그리고 문자열을 저장하고 읽어올때 다시 파싱을해서 읽어오는 방식은 그리 달갑지도 않고 빠른 앱 개발 방식에도 한계가 있다. 그래서 Objective-c 에서는 [NSCoding](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSCoding_Protocol/Reference/Refer'
 featured_image: ''
-tags: ['dev', 'IOS', 'NSCoding', 'objective-c nscoding protocol', '객체 저장', '클래스 저장', '파일 저장']
+tags: ['dev', 'iOS', 'NSCoding', 'objective-c nscoding protocol', '객체 저장', '클래스 저장', '파일 저장']
 ---
-
-
 <span style="font-size: 11pt;">단순히 문자열을 저장하는 것만으로 앱내 데이터 저장에는 확실히 한계가 있다. 그리고 문자열을 저장하고 읽어올때 다시 파싱을해서 읽어오는 방식은 그리 달갑지도 않고 빠른 앱 개발 방식에도 한계가 있다. 그래서 Objective-c 에서는 [NSCoding](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSCoding_Protocol/Reference/Reference.html) 프로토콜을 준수하면 [NSKeyedArchiver](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSKeyedArchiver_Class/Reference/Reference.html)를 이용해서 객체내 데이터를 쉽게 저장할수 있는 방법을 제시하고 있다. </span>
 
 <span style="font-size: 11pt;">일단 아래와 같이 [NSCoding](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSCoding_Protocol/Reference/Reference.html) 프로토콜을 준수하는 코드를 만든다. 간단하게, 아래의 두 함수를 구현하면 된다. </span>

@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2010-07-19'
 description: ''
 featured_image: ''
-tags: ['c#', 'dev', 'Unicod', 'Unicode to String', 'UTF-8']
+tags: ['C#', 'dev', 'Unicod', 'Unicode to String', 'UTF-8']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

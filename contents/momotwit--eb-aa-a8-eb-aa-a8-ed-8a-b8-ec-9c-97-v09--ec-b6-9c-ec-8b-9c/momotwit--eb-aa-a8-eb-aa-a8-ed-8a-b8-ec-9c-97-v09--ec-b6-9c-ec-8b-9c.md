@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-01-22'
 description: ''
 featured_image: ''
-tags: ['app', 'appstore', 'devMomo', 'facebook', 'iPhone', 'MomoTwit', '모모트윗', '아이폰', '트위터', '트윗당 지원 어플']
+tags: ['app', 'appstore', 'devMomo', 'facebook', 'iOS', 'MomoTwit', '모모트윗', '트위터', '트윗당 지원 어플']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span class="Apple-style-span" style="LINE-HEIGHT: 26px; FONT-FAMILY: Dotum; FONT-SIZE: 13px">  
 </span></div>  
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span class="Apple-style-span" style="LINE-HEIGHT: 26px; FONT-FAMILY: Dotum; FONT-SIZE: 13px">안녕하세요. 추운 겨울 인사드립니다 꾸벅(.  .)  

@@ -5,10 +5,8 @@ pub_date: '2013-04-09'
 description: '자주 사용하지는 않지만 문제가 터지면 반드시 사용해야 하는 두개의 툴인데 사실 cppCheck는 그렇게 많이 사용하지는 않고, 문제 터지면 valgrind 부터 돌려보는 편이라. 그래도 어떤때 사용하게 되는 툴들이라 정리해 둔다. 
 **cppCheck **'
 featured_image: ''
-tags: ['c#', 'cppCheck', 'dev', 'valgrind', '동적검사', '메모리 검사', '정적검사']
+tags: ['C#', 'cppCheck', 'dev', 'valgrind', '동적검사', '메모리 검사', '정적검사']
 ---
-
-
 <span style="font-size: 11pt;">자주 사용하지는 않지만 문제가 터지면 반드시 사용해야 하는 두개의 툴인데 사실 cppCheck는 그렇게 많이 사용하지는 않고, 문제 터지면 valgrind 부터 돌려보는 편이라. 그래도 어떤때 사용하게 되는 툴들이라 정리해 둔다. </span>
 
 <span style="font-size: 11pt;">**<span style="font-size: 11pt;">cppCheck </span>**</span>

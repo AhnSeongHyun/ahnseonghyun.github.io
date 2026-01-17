@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2017-07-12'
 description: ''
 featured_image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/2000px-Tensorflow_logo.svg.png'
-tags: ['ML', 'mnist', 'tensorflow', 'tensorboard']
+tags: ['machine-learning', 'mnist', 'tensorflow', 'tensorboard']
 ---
-
 <center>
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/1uUu4gP454eV2K" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/sh84ahn/cnn-mnist-tensorboard" title="실용주의 머신러닝 CNN MNIST TENSORBOARD" target="_blank">실용주의 머신러닝 CNN MNIST TENSORBOARD</a> </strong> from <strong><a target="_blank" href="https://www.slideshare.net/sh84ahn">SeongHyun Ahn</a></strong> </div>
 </center>

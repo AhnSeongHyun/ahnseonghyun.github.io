@@ -7,10 +7,8 @@ description: '이미지 다음으로 많이 신경쓰는 부분이 바로 폰트
 
 ![](http://ash84.net/wp-content/uploads/'
 featured_image: ''
-tags: ['dev', 'IOS', '내장폰트', '아이폰 개발', '웹 사이트', '폰트']
+tags: ['dev', 'iOS', '내장폰트', '웹 사이트', '폰트']
 ---
-
-
 <span style="font-size: 11pt;">이미지 다음으로 많이 신경쓰는 부분이 바로 폰트 부분인데, 외부 폰트는 형태를 알고 쓰는 경우가 많은데 내장 폰트의 종류와 크기, 그리고 텍스트를 입력했을때의 느낌을 볼수 있는 사이트가 있다. 아래의 사이트인데 개발시에 유용함. 참고하시길. </span>
 
 <span style="font-size: 11pt;">[http://iosfonts.com/](http://iosfonts.com/)</span>

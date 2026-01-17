@@ -6,10 +6,8 @@ description: '안티패턴임에도 불구하고, 자주 쓰게 되는 패턴중
 
 <'
 featured_image: ''
-tags: ['dev', 'Java', 'Single ton', '디자인패턴', '싱글톤패턴']
+tags: ['dev', 'Java', 'Single ton', 'design-pattern', '싱글톤패턴']
 ---
-
-
 <span style="font-size: 11pt; ">안티패턴임에도 불구하고, 자주 쓰게 되는 패턴중 하나가 싱글턴 패턴인데, 멀티스레드에 취약하다는 문제점을 가지고 있으면서도 선택된 데이터나 현재 데이터만을 표현할때 좋은것 같다. 이전 포스팅에서도 [H](http://ash84.tistory.com/762) [ashtable 을 이용한 로컬 캐쉬 소스](http://ash84.tistory.com/762)에서도 싱글턴을 썼는데 이번에 이펙티브 자바를 읽으면서 싱글톤에 대한 이야기가 나와서 정리하고자 한다. </span>
 
 <span style="font-size: 11pt; ">가장 기본적인 형태이다. </span>

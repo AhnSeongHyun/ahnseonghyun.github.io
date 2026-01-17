@@ -9,10 +9,8 @@ description: 'Django 프로젝트를 만들려고 하는데 pip install django �
  APTANA STUDIO3 에서 preference 에 들어가서 pydev=> interpreter-python 에 들어가면  
  아래의 화면을 볼수 있다'
 featured_image: ''
-tags: ['Aptana Studio3', 'dev', 'Django', 'Python', '파이썬']
+tags: ['Aptana Studio3', 'dev', 'Django', 'Python']
 ---
-
-
 <span style="font-size: 11pt;">Django 프로젝트를 만들려고 하는데 pip install django 로 django를 설치했음에도 불구하고  
  Django not found 라는 오류창과 함께 프로젝트가 생성되지 않는다. </span>
 

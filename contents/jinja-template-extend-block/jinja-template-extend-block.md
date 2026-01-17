@@ -6,9 +6,8 @@ description: '기존에는 `{%include "head.html" %}` 이런식으로 html 내 �
 
 그런데 최근에 body 에서 navigation bar 와 footer (상단, 하단)만 두고 가운데의 컨텐츠 부분만 상단 혹은 하단의 링크에 따라서 바꿔서 보여줘야 하는 요구사항이 있었는데 생'
 featured_image: 'http://www.pocoo.org/_images/jinja-logo.png'
-tags: ['dev', 'FLASK', 'jinja', 'template']
+tags: ['dev', 'Flask', 'jinja', 'template']
 ---
-
 기존에는 `{%include "head.html" %}` 이런식으로 html 내 특정 부분, 즉 자주 사용하는 부분을 모든 페이지에 붙여서, `include` 지시자를 이용해서 가져오는 방식을 사용해 왔었다. 작은 프로젝트에서는 head.html 을 따로 두고 그 안에서 css 및 기타 `` 부분에 들어가는 코드를 작성해서 재활용 했었다.
 
 그런데 최근에 body 에서 navigation bar 와 footer (상단, 하단)만 두고 가운데의 컨텐츠 부분만 상단 혹은 하단의 링크에 따라서 바꿔서 보여줘야 하는 요구사항이 있었는데 생각보다 페이지가 많았고, 상단, 하단에 대한 html 코드 부분도 상당했다. 이전과 같은 방법으로 사용한다면 n 개의 페이지를 만들고 그 안에 include 를 상단 include, 하단 include 이런식으로 만들어 줘야만 해서 뭔가 불편한것 같아서 jinja template 레퍼런스를 참고 하니, 하나의 부모 템플릿을 만들고 그 안에 block 을 지정해두고, 해당 템플릿을 활용 하는 다른 페이지들은 block 부분만 필요하다면 구현해 주면 된다.

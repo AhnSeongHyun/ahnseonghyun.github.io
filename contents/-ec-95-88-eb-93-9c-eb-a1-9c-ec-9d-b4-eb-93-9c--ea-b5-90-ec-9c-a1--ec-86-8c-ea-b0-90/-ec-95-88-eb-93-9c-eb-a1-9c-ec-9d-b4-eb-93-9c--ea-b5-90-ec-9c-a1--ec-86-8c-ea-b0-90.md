@@ -5,10 +5,8 @@ pub_date: '2009-12-11'
 description: '**  
 ****안드로이드 교육 5일차.**'
 featured_image: ''
-tags: ['An Seong Hyun', 'Android', 'dev', 'KOCCA', '안드로이드 교육', '안성현', '한국문화컨텐츠진흥원']
+tags: ['안성현', 'Android', 'dev', 'KOCCA', '한국문화컨텐츠진흥원']
 ---
-
-
 <div style="LINE-HEIGHT: 2">**  
 **</div><div style="LINE-HEIGHT: 2; TEXT-ALIGN: justify">**<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">안드로이드 교육 5일차.</span></span>**</div><div style="LINE-HEIGHT: 2"></div><div style="LINE-HEIGHT: 2; TEXT-ALIGN: justify"></div><div style="LINE-HEIGHT: 2; TEXT-ALIGN: justify"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">안드로이드에 대한 나의 소감은 생각보다 개발 진입 자체가 어렵지 않다는 것이다. 필자는 C# 위주로 해와서 그런지 확실히 자바의 문법에는 익숙하지는 않지만, 대부분 같은 맥락에서 이루어 지는 것이라 그렇게 어렵지는 않다는 생각이 들었다. </span></span></div><div style="LINE-HEIGHT: 2"></div><div style="LINE-HEIGHT: 2; TEXT-ALIGN: justify"></div><center><div style="LINE-HEIGHT: 2; TEXT-ALIGN: justify"><table class="flickrImgSearch"><tbody><tr><td>[<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">![Open Handset Alliance](http://farm3.static.flickr.com/2006/1876552468_35424e607f.jpg)</span></span>](http://www.flickr.com/photos/26286356@N00/1876552468 "Open Handset Alliance")  
 <span><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">Open Handset Alliance by </span></span>[<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">dannysullivan</span></span>](http://www.flickr.com/photos/26286356@N00)</span><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"></span></span>[<span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">![저작자 표시](http://cfs.tistory.com/static/admin/editor/ccl_black01.png)</span></span>](http://creativecommons.org/licenses/by/2.0/kr/)</td></tr></tbody></table>**  

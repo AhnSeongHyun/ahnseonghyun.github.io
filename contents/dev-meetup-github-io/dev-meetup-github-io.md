@@ -6,9 +6,8 @@ description: '개발자 세미나는 예전보다 훨씬 많이 자주 열리고
 
 [dev-meetup.github.io](https://dev-meetup.github.io) 는 컨퍼런스보다 작은 단위의 세미나나'
 featured_image: 'https://c1.staticflickr.com/4/3720/33589679996_9be27b3415_b.jpg'
-tags: ['dev', 'dev-meetup.github.io', 'github', 'travis-ci']
+tags: ['dev', 'dev-meetup.github.io', 'GitHub', 'travis-ci']
 ---
-
 개발자 세미나는 예전보다 훨씬 많이 자주 열리고 있다. 컨퍼런스 단위는 사실 1년에 많이 열리진 않지만, 어떤 단체나 회사에서 주도하기 때문에 홍보가 잘되고 많은 사람들이 참여하기 마련이다. 그렇지만, 밋업이나 세미나 그런 단위는 커뮤니티안에서만 주로 공유가 되고 외부 개발자가 알기가 어려웠다. 물론 찾는 노력을 하면 되지만, 모든 커뮤니티/사이트에 대한 워치독(watchdog)이 될 수는 없다. 
 
 [dev-meetup.github.io](https://dev-meetup.github.io) 는 컨퍼런스보다 작은 단위의 세미나나 밋업에 대해서 모아서 보여주기 위해서 만들었다. 처음에는 별도의 서버에 올리려고 생각했고, 익숙한 파이썬을 사용하는 방향으로, python3.6 + japronto 를 이용해서 개발하려고 했다. 그런데 문득 이런 생각이 들었다. 

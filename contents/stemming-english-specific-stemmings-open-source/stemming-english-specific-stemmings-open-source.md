@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2012-04-19'
 description: '최근에 회사에서 아카데미라고 사내 교육 프로그램을 진행하는데 Information Retrieve 에 대한 내용이었다. 그 중에'
 featured_image: ''
-tags: ['github', 'Open Source', 'Stemming']
+tags: ['GitHub', 'open-source', 'Stemming']
 ---
-
-
 <span style="font-family: Dotum, 돋움; "><span style="font-size: 11pt; font-family: Dotum, 돋움; ">최근에 회사에서 아카데미라고 사내 교육 프로그램을 진행하는데 Information </span></span><span style="font-size: 11pt; font-family: Dotum, 돋움; ">Retrieve</span><span style="font-size: 11pt; font-family: Dotum, 돋움; "> 에 대한 내용이었다. 그 중에서 하나의 작게는 문장 아니면 어절</span><span style="font-size: 11pt; font-family: Dotum, 돋움; ">에서 유의미한 단어를 추출해</span><span style="font-size: 11pt; font-family: Dotum, 돋움; ">내는 과정에서 한글은 주로 형태소 분석을 사용하는데 반해서 영어는 형태소의 개념 자체가 없기 때문에 Stmming 이라는 과정을 거친다고 한다. </span>
 
 <span style="font-size: 11pt; font-family: Dotum, 돋움; ">한 마디로 말하자면, 특정 단어 뒤에 붙는 접미사들을 분리해 내는 작업이라고 볼수 있다. 처음 이 내용을 들었을때는 </span><span style="font-size: 11pt; font-family: Dotum, 돋움; ">이전에 우리나라 영단어집 중에 우선순위와 버금가는 “과학적 암기비결” 이라는 책에 보면 그러한 어근과 접미사를 바탕으로 외우는 방식이 생각났다. </span>

@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2011-11-30'
 description: ''
 featured_image: ''
-tags: ['An Seong Hyun', 'Cache', 'dev', 'Hashtable', 'Java', 'local cache', 'MD5', '안성현', '자바', '캐쉬', '프로그래밍', '해쉬테이블']
+tags: ['안성현', 'Cache', 'dev', 'Hashtable', 'Java', 'local cache', 'MD5', '캐쉬', 'programming', '해쉬테이블']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

@@ -22,10 +22,8 @@ $ pip install uwsgi
 uwsgi –http 127.0.0.1:3031 –wsgi-file ./myflaskapp.py –callable app –processes 4 –threads 2 –stats 127.0.0.1:9191
 ````'
 featured_image: ''
-tags: ['dev', 'FLASK', 'INI', 'uWSGI', 'uwsgi usage', 'uwsgi 사용법']
+tags: ['dev', 'Flask', 'INI', 'uWSGI', 'uwsgi usage', 'uwsgi 사용법']
 ---
-
-
 ### 개요
 
 - WAS 서버의 일종, 현재 파이썬 서버 중 가장 좋은 성능으로 알려져 있다. 

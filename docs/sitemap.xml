@@ -4651,12 +4651,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/모바일플랫폼/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/프리젠테이션/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -4693,12 +4687,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/모바일 개발 교육/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/주경준기사/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -4723,19 +4711,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰어플/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/분석/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/machine learning/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -4760,12 +4736,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/친절한 미용사/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/iPhone dev/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -4897,7 +4867,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/FLASK/</loc>
+    <loc>https://ash84.io/tags/Flask/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -5024,12 +4994,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/Wedding Singer/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/모바일/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -5287,6 +5251,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ash84.io/tags/database/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ash84.io/tags/프로토타입/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -5300,12 +5270,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/시내/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/파이썬 코리아 격월 세미나/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -5408,12 +5372,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/안중근 의사 서거 100주년/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/java thread runnable callback/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -5527,12 +5485,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/서버구축/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/파티/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -5546,6 +5498,12 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/UIActivityIndicatorView/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ash84.io/tags/clean-code/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -5653,7 +5611,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/Developer/</loc>
+    <loc>https://ash84.io/tags/developer/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -5696,12 +5654,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/병역특례/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/iPhone GUI/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -6037,12 +5989,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/jQuery Mobile/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/이민석/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -6134,12 +6080,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/폴더 생성/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/python celery settings/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -6403,7 +6343,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/docker/</loc>
+    <loc>https://ash84.io/tags/Docker/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -6685,12 +6625,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 앱 개발/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/포스팅하고파/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -6799,12 +6733,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/모바일 게이트웨이/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/논문/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -6818,12 +6746,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/blog.newrelic.com/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/모바일 플랫폼/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -6901,12 +6823,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/jquery mobile force reload current page/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/대체복무/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -6914,12 +6830,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/소셜네트워크/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/python shell/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -7105,12 +7015,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/웹서버/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/pdf 만들기/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -7166,18 +7070,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/develper/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/python3/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/screenshot python/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -7255,12 +7147,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 고장/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/autocomplete/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -7274,12 +7160,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/Cache/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/서버/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -7369,6 +7249,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ash84.io/tags/open-source/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ash84.io/tags/애플/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -7405,12 +7291,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/IT Innovation Conference 2008/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -7442,12 +7322,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/postNotificationName/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/mobile platform/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -7490,12 +7364,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/Google Book Search Service/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/윈도우 서버 2003/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -7568,12 +7436,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/travis-ci/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/윈도우 모바일/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -7687,12 +7549,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/바다 모바일플랫폼/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/Knight&amp;amp;Day/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -7730,12 +7586,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/모션센서/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/~-Library-Application Support-iPhone Simulator-/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -8006,12 +7856,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/pydev/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/Ahn Seong Hyun/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -8647,12 +8491,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/JS/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/nginx uwsgi 연동하기/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -8749,12 +8587,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/윈도우 모바일 5/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/무드에이저트/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -8767,12 +8599,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/iphone directory/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/SessionStorage/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -8780,12 +8606,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/TSL/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/프로그래밍/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -8911,12 +8731,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/개발자모임/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/넥슨/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -8947,12 +8761,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/java 인코딩/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/Hanwoo/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -8972,12 +8780,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/except/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/아이폰 카메라/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -9109,12 +8911,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/계산기 알고리즘/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/png mfc/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -9152,12 +8948,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/스레드 리턴/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/aws python/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -9260,12 +9050,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/쿠키/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/java redis 연동하기/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -9427,7 +9211,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/c#/</loc>
+    <loc>https://ash84.io/tags/C#/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -9475,12 +9259,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/Windows Phone Developer Tools CTP/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/맨오브라만차/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -9500,12 +9278,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/It/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/자바 파일 인코딩/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -9547,12 +9319,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/알고리즘/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/제품백로그/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -9577,12 +9343,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 탈옥/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/MD5 자릿수/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -9596,12 +9356,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/스타일시트/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/자바 라이브러리/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -9673,18 +9427,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/Open API/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/자바 디렉토리 추출/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/경진대회/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -9704,12 +9446,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/github README.MD/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/파이썬 마을/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -9818,12 +9554,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/OnInitalUpdate/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/로딩화면 아이폰/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -9961,12 +9691,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 폴더/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/uwsgi 사용법/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -10040,12 +9764,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/autocommit/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/개발자 회의/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -10147,12 +9865,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/모바일 개발자/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/2009년/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -10165,18 +9877,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/python function argument type/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/iPhone4S/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/github 소스 올리기/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -10184,12 +9884,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/손예진/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/다음 개발자 행사/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -10309,12 +10003,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 음악 어플/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/retrospective/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -10334,12 +10022,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/한우찾기 어플/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/flask 웹서버/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -10448,12 +10130,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/mod-sample/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/성현/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -10777,12 +10453,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/안성현.회고/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/AssistiveTouch/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -10849,12 +10519,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/자바 빌드/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/이스라엘/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -10868,12 +10532,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/아이유콘서트/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/아이폰 배경화면/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -10951,12 +10609,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 강의/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/vertx logging.properties/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -11029,12 +10681,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/SKTE 모바일 오픈마켓/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/QR코드/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -11054,18 +10700,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/c# DLL 등록/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/모바일헬스케어/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/python3.6/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -11113,19 +10747,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/Design Pattern/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/Click Once/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/아이폰 바코드 인식/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -11228,12 +10850,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/99콘/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/iPhone 시뮬레이터 경로/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -11479,7 +11095,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/Effective Java/</loc>
+    <loc>https://ash84.io/tags/algorithm/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -11594,12 +11210,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/만장굴/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/OpenAPI/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -11905,7 +11515,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/IOS/</loc>
+    <loc>https://ash84.io/tags/iOS/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -11918,12 +11528,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/vert.x settings/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/자바 스레드/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -11990,12 +11594,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/mac mysql 설치/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/디자인패턴/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -12109,12 +11707,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/python get user home path/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/fast-fail 방식/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -12223,12 +11815,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/Windows Mobile 5.0/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/LENA/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -12236,12 +11822,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/open graph/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/아이폰 개발/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -12439,12 +12019,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/RSS JAVA Library/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/우버 이용기/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -12595,12 +12169,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 4s/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/대림 미술관/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -12722,12 +12290,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/Chubby/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/아이폰 멀티태스킹/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -12890,12 +12452,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/powerline/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/java rss parser rome/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -13501,12 +13057,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/개발자 세미나/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/TistoryTalk/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -13592,12 +13142,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/소프트웨어 개발/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/iPhone4/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -13735,18 +13279,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/차분하게 프로그래밍 하라/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/python 2.7 centos/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/가로수길/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -13765,7 +13297,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/github/</loc>
+    <loc>https://ash84.io/tags/GitHub/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -13861,18 +13393,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/자바/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/Opensource/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/경력지도/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -13951,12 +13471,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/Open Source/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/StringBuilder/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -13976,12 +13490,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/osx mysql delete/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/파이썬/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -14215,12 +13723,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 음악재생/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/DEVIEW2012/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -14240,12 +13742,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/부첼라/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/ML/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -14276,12 +13772,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/오페하이머/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/아이폰 설정/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -14365,12 +13855,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 OS/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/how to change tabbar selected color/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -14413,7 +13897,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/Programming/</loc>
+    <loc>https://ash84.io/tags/programming/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -14473,12 +13957,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 앱/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/초콜릿/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -14486,12 +13964,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/3항연산자/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/Cleancode/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -14845,12 +14317,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/Java Script/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/BIOMOBIUS/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -15169,12 +14635,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰앱/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/웹페이지 요약/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -15272,12 +14732,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/제너럴 닥터/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/sqlite3 python 연동하기/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -15446,12 +14900,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/당뇨병/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/파이썬 이미지 라이브러리/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -15631,12 +15079,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/아이폰 터치의 귀찮음/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/나사/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -15685,12 +15127,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/mobile gateway/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/미완성 프로젝트/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -15733,7 +15169,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/api/</loc>
+    <loc>https://ash84.io/tags/API/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -15782,12 +15218,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/화면모드/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/아이폰 앱 디자인/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -15949,12 +15379,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/모바일 프로그램/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/광복절/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -16033,12 +15457,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/python2.7/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/contribution/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -16058,12 +15476,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/정렬/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/리눅스 서버정보/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -16273,12 +15685,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/iphone UI/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/local cache/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -16291,7 +15697,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/aws/</loc>
+    <loc>https://ash84.io/tags/AWS/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -16507,12 +15913,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/iPhone/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/PIL jpeg/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -16549,12 +15949,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/웹서버 성능/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/사이트속도/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -16568,12 +15962,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/구글 맵/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/Windows Mobile 6.0/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -16663,18 +16051,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/Active Server Pages/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/자바 MD5 자릿수/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/쏘냐/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -16706,12 +16082,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/FREDNS/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/AhnSeongHyun/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -16813,12 +16183,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/자바 컬렉션 계층구조/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/font/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -16838,12 +16202,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/NSTimer/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/ZBAR iPhone5s/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -17018,12 +16376,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/한남동/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/데이터베이스 학회/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -17323,12 +16675,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/An Seong Hyun/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/자동화도구/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -17449,19 +16795,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/안드로이드/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/블로그 마케팅/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/데이터베이스/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -17528,12 +16862,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/글/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/윈도우 모바일6.5/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -17641,12 +16969,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/compare iphone to nexus one/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/아이콘 찾기/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -17666,12 +16988,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/sada9/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/daum open api python/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -17743,12 +17059,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/서버정보/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/tidy-first/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -17785,13 +17095,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/multiple database/</loc>
+    <loc>https://ash84.io/tags/찜질방/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/찜질방/</loc>
+    <loc>https://ash84.io/tags/machine-learning/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -17894,12 +17204,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/nginx uwsgi connection/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/make iphone ui/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -18037,12 +17341,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/어떻게 프로그래밍하는가?/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/inside paul smith/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -18073,12 +17371,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/개발자 창업과 아이디어/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/restore/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -18086,12 +17378,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/트리플/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/algorithm bubble sort/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -18170,12 +17456,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/Thread/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/Web Server/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -18260,12 +17540,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/선입선출/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/3자리 금액 자바스크립트/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -18427,12 +17701,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/정렬 알고리즘/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/UIImagePicker/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -18529,7 +17797,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/react/</loc>
+    <loc>https://ash84.io/tags/React/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -18685,12 +17953,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/iphone's disadvantages/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/apt-get/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -18775,6 +18037,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ash84.io/tags/design-pattern/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ash84.io/tags/장고 페이징/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -18812,18 +18080,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/start.sh/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/안드로이드 교육/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/clean code/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -18895,12 +18151,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/python performance tips/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/바코드 인식 라이브러리/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -18962,12 +18212,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/ExecutorService/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/개발자/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19064,12 +18308,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/User Interface/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/python nginx/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19303,12 +18541,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/데이터베이스 연동/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/ECG Display/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -19339,19 +18571,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/ /</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/DM_DEFAULT_ENCODING/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/자바스크립트/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19418,12 +18638,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/aix/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/linux server info/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19525,12 +18739,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/이펙티브 자바/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/프로그램 디자인/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -19579,12 +18787,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ash84.io/tags/개발자를 위한 까페/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ash84.io/tags/모토/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -19598,12 +18800,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/company/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/SharePoint Server/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19730,12 +18926,6 @@
   </url>
   <url>
     <loc>https://ash84.io/tags/YOUR HEALTH/</loc>
-    <lastmod>2026-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ash84.io/tags/디자인 패턴/</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-03-09'
 description: ''
 featured_image: ''
-tags: ['An Seong Hyun', '안군', '안성현', '주저리주저리', '회사이사']
+tags: ['안성현', '안군', '주저리주저리', '회사이사']
 ---
-
-
 <div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "><span style="font-family: Dotum; "><span style="font-size: 10pt; ">  
 </span></span></span></span></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "><span style="font-family: Dotum; "><span style="font-size: 10pt; ">  
 </span></span></span></span></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; "><span style="font-family: Dotum; "><span style="font-size: 10pt; ">회사가 이사했습니다. 원래 포이동에서 근무 했었는데, 양재동쪽으로 이사를 갔습니다. 뭐 사실 거리는 거기서 </span></span><span style="font-family: Dotum; "><span style="font-size: 10pt; ">거기 인것같습니다. 다만, 좀더 조용하지만 술집이나 먹을곳이 많은 집으로 이사했습니다. 나쁘지는 않은것 같습니다. </span></span></span></span></div><div style="line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; ">  

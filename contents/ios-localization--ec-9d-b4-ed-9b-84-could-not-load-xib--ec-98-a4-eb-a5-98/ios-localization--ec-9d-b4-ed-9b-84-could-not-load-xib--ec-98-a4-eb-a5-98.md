@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-12-19'
 description: '일단 이 문제의 전제는 처음에 언어가 en 으로 설정되어 있었다는 가정하에 출발을 한다. 필자가 겪은 상황은 이렇다. en으로 되어 있는 상황에서 한국어, 일본어 등이 추가된다. 그래서 나는 Localized.strings 파일을 만든다. 이 파일의 역할을 지역화를 하는데 있어서 키-값을 저장하는 역할을 한다. 즉, “NAME”=”NAME”; 이라고 저장을 하면 기존의 @”NAME” 을 그대로 넣었던 것에서 @”NAME”을 키로 해서 값을 가져와서 넣는방식으로 한다. 그리고'
 featured_image: ''
-tags: ['could not load XIB', 'dev', 'IOS', 'localization', '지역화']
+tags: ['could not load XIB', 'dev', 'iOS', 'localization', '지역화']
 ---
-
-
 <span style="font-size: 11pt;">일단 이 문제의 전제는 처음에 언어가 en 으로 설정되어 있었다는 가정하에 출발을 한다. 필자가 겪은 상황은 이렇다. en으로 되어 있는 상황에서 한국어, 일본어 등이 추가된다. 그래서 나는 Localized.strings 파일을 만든다. 이 파일의 역할을 지역화를 하는데 있어서 키-값을 저장하는 역할을 한다. 즉, “NAME”=”NAME”; 이라고 저장을 하면 기존의 @”NAME” 을 그대로 넣었던 것에서 @”NAME”을 키로 해서 값을 가져와서 넣는방식으로 한다. 그리고 나서 지역화를 위해서 한국어와 일본어를 추가하였다. 원래는 `viewController` 자체도 지역화를 할수 있는데 하지 않는다고 빼고, 모든문자열에 대한 지역화는 Localized.strings 에서 담당을 하도록 하였다. 앞서 한국어와 일본어를 추가했기 때문에 </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;">Localized.strings 에도 한국어와 일본어를 추가할 수 있다. 추가하고 “NAME” = “이름”;  이런식으로 지정하면 지역화가 완료된다. </span>
 
 <span style="background-color: transparent; font-size: 9pt; line-height: 2;">  

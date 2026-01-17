@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2012-06-24'
 description: '최근에 약 4개월간 참여해 왔던 스터디를 정리했다. 이 글을 쓰는 이유는 이번 스터디에 대한 개인적인 정리와 함께 그동안 활동하면서 느낀점 그리고 앞으로는 어떻게 참여하고, 진행해 나갈 것 인지에 대해서 생각해 보고자 한다.'
 featured_image: ''
-tags: ['디자인패턴', '스터디', '코드프래프트']
+tags: ['design-pattern', '스터디', '코드프래프트']
 ---
-
-
 <span style="font-size: 11pt; "><span style="font-size: 11pt; ">최근에 약 4개월간 참여해 왔던 스터디를 정리했다. 이 글을 쓰는 이유는 이번 스터디에 대한 개인적인 정리와 함께 그동안 활동하면서 느낀점 그리고 앞으로는 어떻게 참여하고, 진행해 나갈 것 인지에 대해서 생각해 보고자 한다. </span></span>
 
 <div class="txc-info" id="txc_book_detail_KOR9788979145144" point="" style="font-size: 9pt; line-height: 1.5; margin: 0px; padding: 0px; border: medium none; background-image: none; background-attachment: scroll; background-color: transparent; width: 530px; background-position: 0px 0px; background-repeat: repeat repeat; ">- - - - - -

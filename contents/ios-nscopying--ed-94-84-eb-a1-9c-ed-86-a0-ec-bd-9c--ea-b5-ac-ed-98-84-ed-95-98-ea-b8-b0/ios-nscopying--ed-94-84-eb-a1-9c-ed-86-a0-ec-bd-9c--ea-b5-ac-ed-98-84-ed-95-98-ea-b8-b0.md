@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-11-21'
 description: '어떤 사용자 정의 클래스의 객체 자체를 copy 해야하는 경우가 있다. 그럴때 사용하는 것이 `NSCopying` 프로토콜이다. 객체를 복사할때는 `'
 featured_image: ''
-tags: ['deepcopy', 'dev', 'IOS', 'NSCopying', 'NSZONE']
+tags: ['deepcopy', 'dev', 'iOS', 'NSCopying', 'NSZONE']
 ---
-
-
 <span style="font-size: 11pt;">어떤 사용자 정의 클래스의 객체 자체를 copy 해야하는 경우가 있다. 그럴때 사용하는 것이 </span>`<code style="font-size: 9pt; line-height: 1.5;"><span style="font-size: 11pt;">NSCopying</span>`<span style="font-size: 11pt;"> 프로토콜이다. 객체를 복사할때는 </span>`<code style="font-size: 9pt; line-height: 1.5;"><span style="font-size: 11pt;">copy</span>`<span style="font-size: 11pt;"> 메소드를 사용하면 되는데, 실제로 </span>`<code style="font-size: 9pt; line-height: 1.5;"><span style="font-size: 11pt;">copy</span>`<span style="font-size: 11pt;"> 메소드가 복사를 수행하는 것이 아니라 </span><copy style="font-size: 9pt; line-height: 1.5;"><span style="font-size: 11pt;">`copywithzone:`</span></copy><span style="font-size: 11pt;"> 메소드가 수행하는 것이다. </span>
 
 <div style="text-align: justify; line-height: 2;"></div><div style="text-align: justify; line-height: 2;"><span style="font-size: 11pt;">cocoa 프레임워크에서 제공하는 클래스들을 보면 NSCopying 프로토콜을 구현하고 있는 것을 레퍼런스 문서를 보면 알수가 있다. 아래의 그림은 </span>`<span style="font-size: 11pt;">NSDictionary</span>`<span style="font-size: 11pt;">, </span>`<span style="font-size: 11pt;">NSString</span>`<span style="font-size: 11pt;"> 의 레퍼런스 문서의 첫 부분인데, 모두 `NSCopying` 프로토콜을 내부적으로 따르고 있다고 설명하고 있다.</span></div>![](http://ash84.net/wp-content/uploads/1/cfile5.uf.231FBA44528DAAED034C20.png)

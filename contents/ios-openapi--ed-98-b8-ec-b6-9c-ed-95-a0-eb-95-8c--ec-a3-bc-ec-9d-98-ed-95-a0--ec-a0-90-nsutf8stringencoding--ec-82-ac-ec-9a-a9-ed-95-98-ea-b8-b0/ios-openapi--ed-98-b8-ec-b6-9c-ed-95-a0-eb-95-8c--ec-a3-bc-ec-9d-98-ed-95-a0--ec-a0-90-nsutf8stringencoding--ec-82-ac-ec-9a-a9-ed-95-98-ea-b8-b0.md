@@ -5,10 +5,8 @@ pub_date: '2012-12-26'
 description: '올해 한우찾기 v2.3.5 버전을 개발하면서 새로 넣은 기능이 바로 뉴스검색 기능이었다. 간단히 네이버 OpenAPI 검색 기능을 이용해서 한우관련 뉴스를 사용자가 직접 검색할 수 있도록 제공하는 기능이었는데 만드는 과정에서 특별한 문제가 있어서 이렇게 디버그 포스팅을 한다. 
 보통 OpenAPI는 URL을 이용해서 값을 전달하는 방식을 이용한다. 예를들어 아래와 같은 URL과 같은 형식이다.'
 featured_image: ''
-tags: ['dev', 'IOS', 'Objective-C', 'OpenAPI', 'url encoding', '네이버 검색 API']
+tags: ['dev', 'iOS', 'Objective-C', 'API', 'url encoding', '네이버 검색 API']
 ---
-
-
 <span style="font-size: 11pt;">올해 한우찾기 v2.3.5 버전을 개발하면서 새로 넣은 기능이 바로 뉴스검색 기능이었다. 간단히 네이버 OpenAPI 검색 기능을 이용해서 한우관련 뉴스를 사용자가 직접 검색할 수 있도록 제공하는 기능이었는데 만드는 과정에서 특별한 문제가 있어서 이렇게 디버그 포스팅을 한다. </span>
 
 <span style="font-size: 11pt;">보통 OpenAPI는 URL을 이용해서 값을 전달하는 방식을 이용한다. 예를들어 아래와 같은 URL과 같은 형식이다. </span>

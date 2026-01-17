@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2008-12-16'
 description: 'ECG Realtime Display는 윈도우 폼과 그리고 웹에서 가능하다. 그러나 본 포스팅에서는 윈도우 폼에서 디스플레이 하는 부분에 대해서만 다루도록 하겠다. 왜냐하면, 디스플레이하는 방식은 똑같기 때문에 웹 상에 실시간 디스플레이 할수 있는 기술(실버라이트, 스마트 폼)을 이용해서 구성하면 웹 상에서도 디스플레이를 할 수가 있다. 본 포'
 featured_image: ''
-tags: ['c#', 'dev', 'ECG', 'ECG Display', 'ECG Graph', 'Realtime graph', '실시간 그래프', '심전도 그래프', '심전도 그리기', '심전도 디스플레이', '프로그래밍']
+tags: ['C#', 'dev', 'ECG', 'ECG Display', 'ECG Graph', 'Realtime graph', '실시간 그래프', '심전도 그래프', '심전도 그리기', '심전도 디스플레이', 'programming']
 ---
-
-
 <div style="TEXT-ALIGN: justify"><span style="font-family:Arial;">ECG Realtime Display는 윈도우 폼과 그리고 웹에서 가능하다. 그러나 본 포스팅에서는 윈도우 폼에서 디스플레이 하는 부분에 대해서만 다루도록 하겠다. 왜냐하면, 디스플레이하는 방식은 똑같기 때문에 웹 상에 실시간 디스플레이 할수 있는 기술(실버라이트, 스마트 폼)을 이용해서 구성하면 웹 상에서도 디스플레이를 할 수가 있다. </span><span style="font-family:Arial;">본 포스팅에서는, C# with .NET Framework로 개발한 것을 기본으로 설명하도록 하겠다. </span>  
 <font face="굴림"><span style="LINE-HEIGHT: 20px"><span style="LINE-HEIGHT: 18px"></span></span></font>  
 **<span style="FONT-SIZE: 12pt"><span style="font-family:Arial;">1. UI 구성하기 </span></span>**

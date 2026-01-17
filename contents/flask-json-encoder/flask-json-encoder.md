@@ -6,9 +6,8 @@ description: 'API 상에서 JSON 으로 응답을 내보내기 위해서는 데�
 
 flask 에서도 `json.dumps`'
 featured_image: ''
-tags: ['FLASK', 'dev', 'Python', 'JSON', 'json_encoder']
+tags: ['Flask', 'dev', 'Python', 'JSON', 'json_encoder']
 ---
-
 API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 `json.dumps()`를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 `cls` 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다. 
 
 flask 에서도 `json.dumps` 를 사용해서 json 문자열을 응답으로 내보낼 수도 있지만, `jsonify()` 를 이미 제공하고 있다. json 을 내보낼때 결국 어떤 객체에서 데이터를 가져오게 된다.  객체 내 형을 변환하거나 추가적으로 같은 내용의 다른 형의 변수를 두는 것도 한 방법이지만, 낭비라는 생각이 들었다. 또한 이런 클래스가 많은 경우 그런 클래스 각각 혹은 몇개의 상위 클래스에 `to_json`을 만들어서 따로 직렬화를 위한 작업을 해줄 수도 있겠지만, 

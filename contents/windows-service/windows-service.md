@@ -8,9 +8,8 @@ description: 'Windows Service
   
 ![사용자 삽입 이미지](http://ash84.'
 featured_image: ''
-tags: ['c#', 'dev', 'Installtutil', 'System.ComponentModel', 'System.Configuration.Install', 'System.ServiceProcess', 'Windows Service', '서비스등록']
+tags: ['C#', 'dev', 'Installtutil', 'System.ComponentModel', 'System.Configuration.Install', 'System.ServiceProcess', 'Windows Service', '서비스등록']
 ---
-
 Windows Service  \!\[사용자 삽입 이미지\]\(http://ash84.net/wp-content/uploads/1/el123.JPG\) 
 
 \*\*Windows Service 란?\*\* – 여러 응용프로그램을 백그라운드 프로세스로 운영하는 것 – exe, dll이 아니라 os가 내부적으로 실행 – 구성요소의 서비스 목록에 나열되어 있음

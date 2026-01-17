@@ -5,10 +5,8 @@ pub_date: '2009-12-18'
 description: '**Samsung bada OS Presentation  
 **'
 featured_image: ''
-tags: ['An Seong Hyun', 'bada', 'dev', 'mobile platform', 'samsung', '모바일플랫폼', '바다 모바일플랫폼', '삼성전자', '안성현']
+tags: ['안성현', 'bada', 'dev', 'mobile', 'samsung', '삼성전자']
 ---
-
-
 <div style="LINE-HEIGHT: 2">  
 **<span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">Samsung bada OS Presentation</span></span></span></span>  
 **</div>  

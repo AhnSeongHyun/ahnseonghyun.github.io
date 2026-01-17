@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-11-17'
 description: '새삼스럽게 무슨 아이폰4s 사용기냐고 반문하시는 분들이 있겠지만, 꽤 오랫동안 3GS를 사용해 왔던 나에겐 이 새로운 스마트폰은 스마트폰의 새로운 지평을 열였다고 생각한다. 그리고 몇가지 느낌을 간략하게나마 정리해 보았다. <'
 featured_image: ''
-tags: ['AssistiveTouch', 'dev', 'iPhone4S', 'Siri', '사용기', '시리', '아이폰 4s', '카메라']
+tags: ['AssistiveTouch', 'dev', 'iOS', 'Siri', '사용기', '시리', '카메라']
 ---
-
-
 <div style="background-color: transparent; text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">새삼스럽게 무슨 아이폰4s 사용기냐고 반문하시는 분들이 있겠지만, 꽤 오랫동안 3GS를 사용해 왔던 나에겐 이 새로운 스마트폰은 스마트폰의 새로운 지평을 열였다고 생각한다. 그리고 몇가지 느낌을 간략하게나마 정리해 보았다. </span></span></div><span style="font-size: 11pt; ">  
 </span>
 

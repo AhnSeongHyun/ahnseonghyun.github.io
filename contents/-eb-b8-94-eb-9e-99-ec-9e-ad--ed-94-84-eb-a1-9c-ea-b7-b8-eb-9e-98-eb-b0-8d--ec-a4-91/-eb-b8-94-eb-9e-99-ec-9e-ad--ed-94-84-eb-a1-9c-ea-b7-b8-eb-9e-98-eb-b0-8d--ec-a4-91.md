@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2008-10-21'
 description: ''
 featured_image: ''
-tags: ['Windows Mobile 5.0', '개발', '블랙잭', '블루투스', '윈도우 모바일 5']
+tags: ['mobile', '개발', '블랙잭', '블루투스']
 ---
-
-
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span>  
 <span style="font-size: 11pt;">  
   </span>

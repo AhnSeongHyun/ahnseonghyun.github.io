@@ -6,10 +6,8 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile1.uf.111CE2494E1D5B
 
 **'
 featured_image: ''
-tags: ['bundle', 'cocoa design pattern', 'dev', 'IOS', 'iPhone dev', '디자인패턴', '번들', '아이폰 개발']
+tags: ['bundle', 'cocoa design pattern', 'dev', 'iOS', 'design-pattern', '번들']
 ---
-
-
 <div style="LINE-HEIGHT: 2"></div>  
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
 <span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">![](http://ash84.net/wp-content/uploads/1/cfile1.uf.111CE2494E1D5B1024A668.jpg)</span></span>

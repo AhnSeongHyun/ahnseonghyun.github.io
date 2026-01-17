@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-07-13'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile23.uf.205946374E1D407127DB25.jpg)'
 featured_image: ''
-tags: ['cocoa design pattern', 'Composition', 'Decorator', 'dev', 'has-a', 'IOS', 'is-a', '데코레이터', '코코아 디자인 패턴']
+tags: ['cocoa design pattern', 'Composition', 'Decorator', 'dev', 'has-a', 'iOS', 'is-a', '데코레이터', '코코아 디자인 패턴']
 ---
-
-
 <div style="LINE-HEIGHT: 2"></div>  
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
 <span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">![](http://ash84.net/wp-content/uploads/1/cfile23.uf.205946374E1D407127DB25.jpg)</span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"> </span></span>

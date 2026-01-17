@@ -5,10 +5,8 @@ pub_date: '2013-02-28'
 description: 'Daum DevDay2013에 참가 했었는데, 해당 내용과 링크입니다. 제가 속한 INDF팀에 대한 평가를 너무 잘 해주셨네요^^
 INDF Blog :'
 featured_image: ''
-tags: ['Daum', 'Daum DevDay2013', '다음', '다음 개발자 행사', '티스토리톡']
+tags: ['Daum', 'Daum DevDay2013', '다음', 'developer', '티스토리톡']
 ---
-
-
 <span style="font-size:11pt;">Daum DevDay2013에 참가 했었는데, 해당 내용과 링크입니다. 제가 속한 INDF팀에 대한 평가를 너무 잘 해주셨네요^^</span>
 
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">INDF Blog : </span><span style="font-size: 10pt;">[<span style="font-size: 11pt;">http://indf.tistory.com/</span>](http://indf.tistory.com/)</span>

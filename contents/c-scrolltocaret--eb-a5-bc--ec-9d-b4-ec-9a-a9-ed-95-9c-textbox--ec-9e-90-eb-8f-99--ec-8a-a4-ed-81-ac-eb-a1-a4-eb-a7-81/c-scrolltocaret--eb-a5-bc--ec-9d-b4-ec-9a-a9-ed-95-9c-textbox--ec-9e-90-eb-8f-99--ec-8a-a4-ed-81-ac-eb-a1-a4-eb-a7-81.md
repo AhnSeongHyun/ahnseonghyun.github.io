@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-02-20'
 description: 'TextBox는 본래, 사용자의 데이터 입력을 받아 들이는 기능을 주로 하지만, 때때로 데이터를 보기위해서 쓰이기도 합니다. 특히, 저는 시리얼 포트를 통해서 들어오는 데이터를 한눈에 보기 위해서 자주 사용하는데요,'
 featured_image: ''
-tags: ['An Seong Hyun', 'c#', 'dev', 'ScrollToCaret', 'TextBox', '안성현', '자동스크롤링']
+tags: ['안성현', 'C#', 'dev', 'ScrollToCaret', 'TextBox', '자동스크롤링']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">  
 <span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">TextBox는 본래, 사용자의 데이터 입력을 받아 들이는 기능을 주로 하지만, 때때로 데이터를 보기위해서 쓰이기도 합니다. 특히, 저는 시리얼 포트를 통해서 들어오는 데이터를 한눈에 보기 위해서 자주 사용하는데요, 이런 실시간 데이터를 받아와서 TextBox로 보여줄때 처리해줘야 하는 부분에 대해서 알려드리도록 하겠습니다. </span></span></span></span></div>  
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"><span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">  

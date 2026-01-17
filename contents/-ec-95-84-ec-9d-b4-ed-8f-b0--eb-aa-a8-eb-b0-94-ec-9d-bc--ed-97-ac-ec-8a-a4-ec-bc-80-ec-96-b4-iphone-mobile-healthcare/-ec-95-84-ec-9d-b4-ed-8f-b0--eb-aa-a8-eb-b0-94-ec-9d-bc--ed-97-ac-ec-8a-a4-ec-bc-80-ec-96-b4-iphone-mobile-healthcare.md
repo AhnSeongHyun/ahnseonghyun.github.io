@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2008-09-30'
 description: ''
 featured_image: ''
-tags: ['healthcare', 'iPhone', '모바일헬스케어', '아이팟', '아이폰', '애플', '헬스케어']
+tags: ['healthcare', 'iOS', 'mobile', '아이팟', '애플', '헬스케어']
 ---
-
-
 <span style="font-size: 11pt;"></span>
 
 <div style="text-align: center; line-height: 2;"><object height="360" width="335"><param name="movie" value="http://www.cnet.com/av/video/flv/newPlayers/universal.swf"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><param name="FlashVars" value="playerType=embedded&value=32458"></param><embed allowfullscreen="true" flashvars="playerType=embedded&value=32458" height="360" src="http://www.cnet.com/av/video/flv/newPlayers/universal.swf" type="application/x-shockwave-flash" width="335" wmode="transparent"></embed></object></div><span style="font-size: 11pt;">  

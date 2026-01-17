@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2009-11-14'
 description: ''
 featured_image: ''
-tags: ['An Seong Hyun', 'Skinny Bitch', '다이어트', '로리 프리드먼', '스키니비치', '안성현', '채식', '채식주의', '킴바누인']
+tags: ['안성현', 'Skinny Bitch', '다이어트', '로리 프리드먼', '스키니비치', '채식', '채식주의', '킴바누인']
 ---
-
-
 <div style="text-align: justify; line-height: 2; "><font class="Apple-style-span" color="#000000" face="Gulim, gulim, tahoma, sans-serif" size="3"><span class="Apple-style-span" style="FONT-SIZE: 13px; LINE-HEIGHT: 16px">  
 </span></font></div><div style="line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><font class="Apple-style-span" color="#000000" face="Gulim, gulim, tahoma, sans-serif" size="3"><span class="Apple-style-span" style="FONT-SIZE: 13px; LINE-HEIGHT: 16px"><span style="font-size: 11pt; "><span style="font-family: Dotum; ">![](http://ash84.net/wp-content/uploads/1/cfile6.uf.155C140C4AFE12B41B2A66.jpg)</span></span></span></font><font class="Apple-style-span" color="#000000" face="Gulim, gulim, tahoma, sans-serif" size="3"><span class="Apple-style-span" style="FONT-SIZE: 13px; LINE-HEIGHT: 16px">  
 </span></font></div><div style="line-height: 2; "></div><div style="text-align: justify; line-height: 2; "><span class="Apple-style-span" style="FONT-SIZE: 13px; COLOR: rgb(0,0,0); LINE-HEIGHT: 16px; FONT-FAMILY: Gulim, gulim, tahoma, sans-serif">  

@@ -5,10 +5,8 @@ pub_date: '2010-01-26'
 description: '***  
  CSS란?***'
 featured_image: ''
-tags: ['An Seong Hyun', 'Analysis CSS', 'Bonesofr.css.dll', 'c#', 'css', 'CSS분석', 'dev', 'EBOOK READER 개발', 'html', '안성현']
+tags: ['안성현', 'Analysis CSS', 'Bonesofr.css.dll', 'C#', 'css', 'CSS분석', 'dev', 'EBOOK READER 개발', 'html']
 ---
-
-
 <span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">*<span style="FONT-SIZE: 14pt">**  
  CSS란?**</span>*</span></span>  
 <span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">  

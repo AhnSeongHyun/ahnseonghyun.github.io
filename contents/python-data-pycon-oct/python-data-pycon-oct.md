@@ -17,9 +17,8 @@ http://blog.pycon.kr/2017/10/21/python-seminar/
 - 학식알리미(python + flask) : 로그의 그래프화 matplotlib 라이브러리, `plt.xkcd()`
 - 어'
 featured_image: ''
-tags: ['conference', 'Python', '파이썬', 'data', 'pandas']
+tags: ['conference', 'Python', 'data', 'pandas']
 ---
-
 파이콘에서 주최하는 세미나가 있어서 참석하게 되었다. 역삼동에 있는 페이스북 코리아에서 열리게 되었고 간단하게 들었던 부분을 남겨본다. 
 
 http://blog.pycon.kr/2017/10/21/python-seminar/

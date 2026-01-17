@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2012-12-27'
 description: '클린코드등의 책을 보면서, 인터페이스에 맞춰서 프로그래밍 하라는 이야기를 많이 들었고, C#의 ArrayList가 익숙해서 그런지 주로 자바에서 사용하는 Collection중 하나가 아래와 같은 List 이다.'
 featured_image: ''
-tags: ['ArrayList', 'dev', 'Java', 'LinkedList', '자바']
+tags: ['ArrayList', 'dev', 'Java', 'LinkedList']
 ---
-
-
 <span style="font-size: 11pt;">클린코드등의 책을 보면서, </span><span style="font-size: 11pt;">인터페이스에 맞춰서 프로그래밍 하라는 이야기를 많이 들었고, C#의 ArrayList가 익숙해서 그런지 주로 자바에서 사용하는 Collection중 하나가 아래와 같은 List 이다. </span>
 
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; line-height: 2; text-align: justify;"><span style="font-size: 11pt;">List<String> strList = new ArrayList<String>(); </span>

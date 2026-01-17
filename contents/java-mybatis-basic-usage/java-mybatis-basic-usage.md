@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2013-02-18'
 description: ''
 featured_image: ''
-tags: ['dev', 'Java', 'mybatis', '데이터베이스 연동']
+tags: ['dev', 'Java', 'mybatis', 'database']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

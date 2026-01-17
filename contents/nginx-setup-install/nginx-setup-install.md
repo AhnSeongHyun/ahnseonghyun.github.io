@@ -8,10 +8,8 @@ description: '### 개요
 
 – Nginx는 요청에 응답하기 위해 비동기 이벤트 기반 구조를 가진다. 이것은 아파치 HTTP 서버의 스레드/프로세스 기반 구조를 가지는 것과는 대조적이다. 이러한 구조는 서버에'
 featured_image: ''
-tags: ['dev', 'nginx', 'Nginx 설치', 'python nginx', 'uwsgi nginx', 'nginx 설정']
+tags: ['dev', 'nginx', 'Nginx 설치', 'Python', 'uwsgi nginx', 'nginx 설정']
 ---
-
-
 ### 개요
 
 – 웹 서버 소프트웨어로, 가벼움과 높은 성능을 목표로 한다. 웹 서버, 리버스 프록시 및 메일 프록시 기능을 가진다. Netcraft의 2011년 1월 웹서버 설문조사에 따르면, nginx는 전체 도메인에서 4번째(7.50%)로 많이 쓰이는 웹서버이며, 활성화된 웹 사이트에 대한 통계에서도 역시 4번째(8.23%)로 많이 사용된다. 

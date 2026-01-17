@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-01-20'
 description: '필자는 요즘 회사에서 Microsoft Ink 관련 Applicat'
 featured_image: ''
-tags: ['c#', 'change cursor', 'dev', 'InkOverlay curosr', 'Ink상에서의 커서변화', 'Microsoft.Ink', 'MS INK', '커서변화']
+tags: ['C#', 'change cursor', 'dev', 'InkOverlay curosr', 'Ink상에서의 커서변화', 'Microsoft.Ink', 'MS INK', '커서변화']
 ---
-
-
 <div style="TEXT-ALIGN: justify"><span id="tx_beforestart_mark"></span>  
 <span style="TEXT-ALIGN: justify; FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum">  
 <span style="FONT-SIZE: 11pt"><span style="FONT-FAMILY: Dotum"><span id="tx_beforestart_mark"></span>필자는 요즘 회사에서 Microsoft Ink 관련 Application을 유지보수 하고 있습니다. 생각보다 복잡한 구조로 되어 있더라구요. 그 와중에 발견한 팁이 하나 있어서 올립니다. </span></span>

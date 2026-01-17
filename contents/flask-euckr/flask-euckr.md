@@ -9,10 +9,8 @@ description: '### **파이썬에서의 unicode와 str**
 
 [![image2015-6-25 16 29 58](https://farm1.staticflickr.com/353/19544431756_5af01e9694_z.jpg'
 featured_image: ''
-tags: ['dev', 'euc-kr', 'euckr', 'FLASK', 'flask euc-kr', 'Python']
+tags: ['dev', 'euc-kr', 'euckr', 'Flask', 'flask euc-kr', 'Python']
 ---
-
-
 ### **파이썬에서의 unicode와 str**
 
 - 유니코드는 평문이고, str은 암호화된 유니코드라고 생각하자.

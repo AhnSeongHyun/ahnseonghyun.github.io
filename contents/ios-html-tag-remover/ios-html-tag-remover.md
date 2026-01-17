@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2012-11-19'
 description: ''
 featured_image: ''
-tags: ['dev', 'IOS', '개발', '아이폰 앱 개발', '어플', '한우찾기']
+tags: ['dev', 'iOS', '개발', '어플', '한우찾기']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

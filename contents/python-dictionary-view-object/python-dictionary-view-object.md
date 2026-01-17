@@ -17,10 +17,8 @@ description: '`dict.keys()`, `values()`, `items()` 과 기존의 python2 와는 
     >>> items
     [('a''
 featured_image: ''
-tags: ['Python', 'python3', 'dict', 'view object']
+tags: ['Python', 'dict', 'view object']
 ---
-
-
 `dict.keys()`, `values()`, `items()` 과 기존의 python2 와는 다르게 변경 되었다. 기존은 아래와 같이 리스트형을 반환한다. 
 
 ```python

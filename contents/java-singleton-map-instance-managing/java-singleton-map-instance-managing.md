@@ -4,9 +4,8 @@ author: 'ash84'
 pub_date: '2013-02-08'
 description: ''
 featured_image: ''
-tags: ['dev', 'Java', '객체 관리', '싱글톤', '자바']
+tags: ['dev', 'Java', '객체 관리', '싱글톤']
 ---
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->
 <ins class="adsbygoogle"

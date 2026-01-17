@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-04-22'
 description: 'WinCE 6.0 환경에서는 보통 키보드와 마우스가 제공되지 않는 환경입니다. 때문에 터치스크린이 마우스를 대체하고 키보드는 SIP 즉, 가상키보드가 그 역할을 대체합니다. 때문에 대부분의 WinCE는 포팅과정에서 가상 키보드'
 featured_image: ''
-tags: ['c#', 'dev', 'inputpanel', 'SIP', 'Wince', '가상키보드', '위치지정']
+tags: ['C#', 'dev', 'inputpanel', 'SIP', 'Wince', '가상키보드', '위치지정']
 ---
-
-
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2"></div>  
 <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
 <span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">WinCE 6.0 환경에서는 보통 키보드와 마우스가 제공되지 않는 환경입니다. 때문에 터치스크린이 마우스를 대체하고 키보드는 SIP 즉, 가상키보드가 그 역할을 대체합니다. 때문에 대부분의 WinCE는 포팅과정에서 가상 키보드를 넣어주고 있습니다. </span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">C# 개발 환경에서 개발 할 프로그램에서 가상 키보드(SIP)를 호출하기 위해서는 <font color="#5c7fb0">도구상자(ToolBox)</font>에서 InputPanel을 폼에 추가해줘야 합니다. InputPanel을 폼에 추가하면 자동적으로 객체가  생겨나게 됩니다. 그리고 호출은 다음과 같이 하면 됩니다. </span></span>
