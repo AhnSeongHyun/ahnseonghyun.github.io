@@ -136,12 +136,14 @@ def generate_tag_pages(tags_dict):
             post_count=len(sorted_posts)
         )
 
-        # Write to file with sanitized filename
+        # Create directory for tag and write index.html
         safe_filename = sanitize_filename(tag)
-        tag_file = tags_dir / f"{safe_filename}.html"
+        tag_dir = tags_dir / safe_filename
+        tag_dir.mkdir(parents=True, exist_ok=True)
+        tag_file = tag_dir / "index.html"
         tag_file.write_text(html, encoding='utf-8')
 
-        print(f"  ✓ Created {safe_filename}.html ({len(sorted_posts)} posts)")
+        print(f"  ✓ Created {safe_filename}/index.html ({len(sorted_posts)} posts)")
 
     return len(tags_dict)
 
