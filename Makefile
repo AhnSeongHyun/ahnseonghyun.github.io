@@ -4,8 +4,10 @@
 
 
 # Build the static site
-build: 
+build:
 	zvc build
+	.venv/bin/python scripts/generate_sitemap.py
+	.venv/bin/python scripts/generate_robots.py
 	echo "ash84.io" > ./docs/CNAME
 	echo "google.com, pub-8699046198561974, DIRECT, f08c47fec0942fa0" > ./docs/ads.txt
 
