@@ -22,13 +22,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:site_name" content="ASH84"/>
     <meta property="og:title" content="ASH84 - 인텔 맥북 개발서버로 세팅하기 | Setting Up an Intel MacBook as a Development Server"/>
-    <meta property="og:description" content="처치 곤란의 인텔 맥북을 개발서버로 쓸 수 있도록 변경했습니다."/>
+    <meta property="og:description" content="지금은 M1 맥북에어가 사실상 주력기기로 사용하고 있는데, 이전에는 인텔 맥북프로를 주로 사용했었다. 자세히 모델은 기억나지"/>
     <meta property="og:url" content="https://ash84.io/docs/2025/10/12/intel-mac-ssh-server"/>
     <meta property="og:image" content="https://ash84.io/docs/2025/10/12/intel-mac-ssh-server/"/> 
     <meta property="og:type" content="article"/>
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
     <title>인텔 맥북 개발서버로 세팅하기 | Setting Up an Intel MacBook as a Development Server</title>
-    <meta name="description" content="처치 곤란의 인텔 맥북을 개발서버로 쓸 수 있도록 변경했습니다." />
+    <meta name="description" content="지금은 M1 맥북에어가 사실상 주력기기로 사용하고 있는데, 이전에는 인텔 맥북프로를 주로 사용했었다. 자세히 모델은 기억나지" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
@@ -105,17 +105,17 @@ Storage:
 </ul>
 <pre><code class="language-shell"># 인텔 맥북에서 수행 
 
-# 키 발급 
+## 키 발급 
 openssl genpkey -algorithm RSA -out key.pem -pkeyopt rsa_keygen_bits:4096
 chmod 400 key.pem
 ssh-keygen -y -f key.pem &gt; key.pub
 
-# 키 등록 
+## 키 등록 
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 touch ~/.ssh/authorized_keys
 
-# 공개키(한 줄)를 붙여넣고 저장
+## 공개키(한 줄)를 붙여넣고 저장
 chmod 600 ~/.ssh/authorized_keys
 </code></pre>
 <ul>
@@ -127,7 +127,7 @@ chmod 600 ~/.ssh/authorized_keys
 <p>brew로 설치한 경우 이상하게 UI가 깨지는 문제가 있어서 삭제하고 tailscale 홈페이지에서 다시 받아서 설치 했다. 설치하고 가입하고 로그인을 양쪽 2개의 컴퓨터에하면 아래와 같은 화면을 볼 수 있다. </p>
 <p><img alt="sc1.png" src="sc1.png" /></p>
 <p>여기에서 저 IP를 쓰거나 혹은 다른 이름으로 접속할 수 있다. </p>
-<pre><code class="language-shell"># 맥북에어 - 접속 클라이언트
+<pre><code class="language-shell">## 맥북에어 - 접속 클라이언트
 ssh -i key.pem ash84@100.x.x.x
 ssh -i key.pem ash84@ash84-macbookpro
 </code></pre>
@@ -144,25 +144,15 @@ UI에서 들어가는 방법은 맥에서 설정 &gt; 공유(sharing)으로 들�
 <p>제일 중요한건 크롬쉘모드, 즉 인텔맥북을 닫아두고 전원을 연결해둔 상태에서 인터넷이 연결이 되고 tailscale이 동작해야 내가 접속을 할 수 있다. 이게 안되면 사용하기 전에 다시 열고, 켜주고하는 작업을 해야하는데 엄청 귀찮게 된다.</p>
 <p>아래의 명령어를 쓰면 슬립모드로 안들어간다고 한다. <br />
 될지 안될지 몰라서 수행해봤는데 약 12시간 정도 지났는데 문제 없이 동작을 한다. </p>
-<pre><code class="language-shell"># 절대 슬립 방지 (sudo 권한 필요)
+<pre><code class="language-shell">## 절대 슬립 방지 (sudo 권한 필요)
 sudo pmset -a disablesleep 1
-# 변경사항 확인
+## 변경사항 확인
 pmset -g
 </code></pre>
 <hr />
 <p>인텔맥북 활용도를 높이고 싶어서 진행한 부분인데, 생각보다 만족스럽긴하다. 아직 pyenv 설치하는 정도밖엔 셋업을 하지 않았다. 여러 인터넷에 있는 다양한 자료들을 찾아보면서, 느낀점은 생각보다 맥북이 오래 쓰지 못하는것 같다는 생각이 들었다. 그리고 체감상으로는 인텔맥북이 느렸지만 그렇다고 아예 못쓸 정도는 아니여서 집에 만약 나 말고 다른 개발을 안하지만 맥을 쓰는 사람이 있다면 그냥 쓰게 했을것 같다는 생각이 들었다. </p>
     </div>
     <div>
-        
-            #인텔 맥북&nbsp;
-        
-            #맥북활용&nbsp;
-        
-            #인텔맥북&nbsp;
-        
-            #개발서버&nbsp;
-        
-            #Setting Up an Intel MacBook as a Development Server&nbsp;
         
     </div> 
     <footer>

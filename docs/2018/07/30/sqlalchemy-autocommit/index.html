@@ -105,12 +105,12 @@ except:
     raise
 </code></pre>
 <p>위의 코드는 context manager 를 이용해서 좀 더 간결하게 만들수 있다. </p>
-<pre><code class="language-python"># runs a transaction
+<pre><code class="language-python">## runs a transaction
 with engine.begin() as connection:
     r1 = connection.execute(table1.select())
     connection.execute(table1.insert(), col1=7, col2='this is some data')
 
-# or 
+## or 
 with connection.begin() as trans:
     r1 = connection.execute(table1.select())
     connection.execute(table1.insert(), col1=7, col2='this is some data')
@@ -119,7 +119,7 @@ with connection.begin() as trans:
 <li><a href="http://docs.sqlalchemy.org/en/latest/core/connections.html#nesting-of-transaction-blocks">Nesting of Transaction Blocks</a></li>
 </ul>
 <p><code>Transaction</code> 객체는 가장 바깥쪽 begin/commit 의 쌍을 추적해서 중첩(nested)된 동작을 처리한다. 아래의 코드에서 보면 가장 바같쪽의 method_a() 에 대한 커밋만 수행된다.  </p>
-<pre><code class="language-python"># method_a starts a transaction and calls method_b
+<pre><code class="language-python">## method_a starts a transaction and calls method_b
 def method_a(connection):
     trans = connection.begin()  # open a transaction
     try:
@@ -130,7 +130,7 @@ def method_a(connection):
         raise
 
 
-# method_b also starts a transaction
+## method_b also starts a transaction
 def method_b(connection):
     trans = connection.begin()  # open a transaction - this runs in the context of method_a's transaction
     try:
@@ -142,7 +142,7 @@ def method_b(connection):
         raise
 
 
-# open a Connection and call method_a
+## open a Connection and call method_a
 conn = engine.connect()
 method_a(conn)
 conn.close()
@@ -212,7 +212,7 @@ session.close()
 <pre><code class="language-python">engine = create_engine(&quot;...&quot;)
 Session = sessionmaker(bind=engine)
 
-# new session.   no connections are in use.
+## new session.   no connections are in use.
 session = Session()
 try:
     # first query.  a Connection is acquired
@@ -311,7 +311,7 @@ with session.begin():
 <p>서브트랜잭션은 <code>Session.begin()</code> 메소드의 <code>subtransactions=True</code> 플래그 사용과 연관이 있다. 이것은  <code>begin ()</code> 및 <code>commit ()</code> 호출의 중첩을 허용하는 비트랜잭션(non-transactional), 구분 구조를 생성한다. 서브트랜잭션의 목적은 트랜잭션을 시작한 외부 코드와 트랜잭션을 이미 구분 한 블록 내에서 독립적으로 트랜잭션 내에서 작동 할 수있는 코드를 구성 할 수있게하는 것이다.(?)</p>
 <p><code>substrancactions=True</code> 는 일반적으로 오직 autocommit 과 연관이 있는 경우에 유용한데 이것은 중첩트랜잭션블록(Nesting of Transaction Blocks) 패턴과 동일하다. </p>
 <pre><code class="language-python">
-# method_a starts a transaction and calls method_b
+## method_a starts a transaction and calls method_b
 def method_a(session):
     session.begin(subtransactions=True)
     try:
@@ -322,9 +322,9 @@ def method_a(session):
         raise
 
 
-# method_b also starts a transaction, but when
-# called from method_a participates in the ongoing
-# transaction.
+## method_b also starts a transaction, but when
+## called from method_a participates in the ongoing
+## transaction.
 def method_b(session):
     session.begin(subtransactions=True)
     try:
@@ -336,7 +336,7 @@ def method_b(session):
         raise
 
 
-# create a Session and call method_a
+## create a Session and call method_a
 session = Session(autocommit=True)
 method_a(session)
 session.close()

@@ -81,7 +81,7 @@ import paho.mqtt.publish as publish
 publish.single(&quot;test&quot;, &quot;boo&quot;, hostname=&quot;localhost&quot;, port=1883)
 </code></pre>
 <p>publish 를 하는 부분에서는 별다른 차이는 없다. topic 인 test 로 boo 라는 메시지를 보내고 있다. 받는 쪽에서 subscribe 지정 할 때 topic 에 $share/<group>/<topic> 혹은 $queue/<topic> 이런식으로 구성해줘야한다. $share 와 $queue 의 차이는 별도의 그룹명을 지정하느냐의 여부이다. $queue 로 구독할 경우, 별도의 그룹구분 없이 하나의 그룹에서 shared subscription 이 된다고 보면 된다. </p>
-<pre><code class="language-python"># subscribe 
+<pre><code class="language-python">## subscribe 
 import paho.mqtt.subscribe as subscribe
 
 topics = ['['$share/g1/test']

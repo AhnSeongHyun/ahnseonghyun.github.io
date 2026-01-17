@@ -77,8 +77,8 @@
 flake8 --count --exclude ./tests,./docs --ignore E501,F401
 
 # --count : 위반 개수 표시
-# --exclue : 특정 디렉토리 제외, 쉼표로 구분
-# --ignore : 무시 규칙 명시, 쉼표로 구분
+## --exclue : 특정 디렉토리 제외, 쉼표로 구분
+## --ignore : 무시 규칙 명시, 쉼표로 구분
 </code></pre>
 <p>프로제트 디렉토리 상에서 <code>flake8</code> 명령어를 통해서 위와 같이 입력하고 수행하며 되는데, 특정 규칙을 제외하거나 특정 디렉토리를 제외할 수 있다. 특정 규칙을 제외할 때는 <code>--ignore</code> 옵션으로 규칙코드를 지정하거나 특정 디렉토리를 제외할 떄는 <code>--exclude</code> 옵션을 사용하면 된다. <strong>주의할 점은 여러개를 지정할때는 공백없이 쉼표(,)로 구분해서 지정해야한다.</strong> </p>
 <pre><code class="language-yaml">before_script:
