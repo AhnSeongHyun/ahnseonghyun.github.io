@@ -94,15 +94,15 @@ print A.x, B.x, C.x // 3 2 3
 </code></pre>
 <p><code>A.x</code> 만 변경했는데 왜 <code>C.x</code> 가 변경되었을까? 파이썬에서, 클래스 변수는 내부적으로 dictionary 로 처리되고  <a href="http://python-history.blogspot.kr/2010/06/method-resolution-order.html">Method Resolution Order(MRO) </a>규칙을 따른다. 위의 코드에서, C 클래스에 x 가 없기 때문에, base 클래스에서 찾아진다(Python 이 다중상속을 지원하더라도 오직 A). 다시 말하자면, C 클래스는 A 클래스와 별개로 x 를 자기자신이 가지고 있지 않다. 그러므로 <code>C.x</code> 의 레퍼런스는 <code>A.x</code> 이다. 이것을 제대로 처리 하지 않으면 문제가 발생한다. <a href="https://www.toptal.com/python/python-class-attributes-an-overly-thorough-guide">class attributes in Python</a>를 좀 더 살펴보도록 하자. </p>
     </div>
-    <div>
+    <div class="post-tags">
         
-            <a href="/tags/dev/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#dev</a>
+            <a href="/tags/dev/" class="post-tag">#dev</a>
         
-            <a href="/tags/Python/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#Python</a>
+            <a href="/tags/Python/" class="post-tag">#Python</a>
         
-            <a href="/tags/class variable/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#class variable</a>
+            <a href="/tags/class variable/" class="post-tag">#class variable</a>
         
-            <a href="/tags/toptal/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#toptal</a>
+            <a href="/tags/toptal/" class="post-tag">#toptal</a>
         
     </div> 
     <footer>

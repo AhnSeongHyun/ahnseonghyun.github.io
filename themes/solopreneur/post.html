@@ -75,9 +75,9 @@
     <div class="blog-post">
         {{post.html | safe}}
     </div>
-    <div>
+    <div class="post-tags">
         {% for tag in tag_list %}
-            <a href="/tags/{{ tag | replace('/', '-') | replace('\\', '-') | replace(':', '-') }}/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#{{ tag }}</a>
+            <a href="/tags/{{ tag | replace('/', '-') | replace('\\', '-') | replace(':', '-') }}/" class="post-tag">#{{ tag }}</a>
         {% endfor %}
     </div> 
     {% include '/themes/solopreneur/footer.html' %}

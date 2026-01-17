@@ -101,19 +101,19 @@
 </div></div></div>
 <div style="line-height: 2; "><div class="tbody m-tcol-c" id="tbody" style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 20px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; clear: both; width: 743px; position: relative; overflow-y: hidden; overflow-x: auto !important; "><font color="#000000" face="dotum"><div style="text-align: justify; line-height: 2; "><span style="line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">이렇다고 하</span></span><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">네요, 결과적으로는 카메라 호출로 인해서 생기는 “메모리 경고”로 인한 ViewDidLoad의 문제 였습니다. 확인해 본 결과 실제로 카메라 혹은 포토라이브러리 호출로 인한 </span></span><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">메모리 경고시에는 해당 뷰가 ViewUnload가 호출되고 dismissModal 후 ViewLoad가 다시 호출되는 것을 확인하였습니다. </span></span></span><span style="font-family: Dotum; font-size: 11pt; line-height: 2; ">때문에 한번만 호출된다는 개념을 가지고 접근해서 코드를 ViewDidLoad 에 작성해서는 안될것 같습니다. 그리고 이런 호출이 있는 경우를 잘 체크해서 코드를 작성해야 할것 같습니다.  </span></div></font></div></div>
     </div>
-    <div>
+    <div class="post-tags">
         
-            <a href="/tags/dev/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#dev</a>
+            <a href="/tags/dev/" class="post-tag">#dev</a>
         
-            <a href="/tags/iOS/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#iOS</a>
+            <a href="/tags/iOS/" class="post-tag">#iOS</a>
         
-            <a href="/tags/UIImagePicker/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#UIImagePicker</a>
+            <a href="/tags/UIImagePicker/" class="post-tag">#UIImagePicker</a>
         
-            <a href="/tags/ViewDidLoad/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#ViewDidLoad</a>
+            <a href="/tags/ViewDidLoad/" class="post-tag">#ViewDidLoad</a>
         
-            <a href="/tags/ViewDidUnload/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#ViewDidUnload</a>
+            <a href="/tags/ViewDidUnload/" class="post-tag">#ViewDidUnload</a>
         
-            <a href="/tags/메모리경고/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#메모리경고</a>
+            <a href="/tags/메모리경고/" class="post-tag">#메모리경고</a>
         
     </div> 
     <footer>

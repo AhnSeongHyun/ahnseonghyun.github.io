@@ -120,19 +120,19 @@
 <p>decode 전 데이터는 <code>request.get_data()</code> 를 통해서 가져올수 있는데, 대신에 파싱을 통해서 데이터를 추출 해야한다. decode_raw_data 함수는 query string 형식의 데이터를 dict 객체에 담고나서, urldecode 를 수행하고, 그 데이터를 다시 decode(charset) 하고 있는 코드이다. 즉, 기존의 flask 에서 해줬던 부분을 개발자가 코드에서 직접 해주어야 한다. 이렇게 되면 euc-kr 데이터를 받아서 decode 를 해서 unicode의 형태로 파이썬내에서 사용할 수가 있다. </p>
 <p>실제로 국내의 경우 아직도 euc-kr을 사용하는 경우가 많기 때문에 그런 사이트와의 연동 작업에서는 euc-kr을 default로 하는 것이 기본이다. 물론 utf-8을 사용하는 것이 좋다. 그렇지만 중요한 것은 content-type 같이 일반적으로 charset 정보를 전달하는 곳에 명시하는게 가장 베스트라는 생각이 들고 개인적으로 POST 나 GET 요청시에 파라미터로 charset 값을 전달하는 것은 비추해야 한다고 생각한다.</p>
     </div>
-    <div>
+    <div class="post-tags">
         
-            <a href="/tags/dev/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#dev</a>
+            <a href="/tags/dev/" class="post-tag">#dev</a>
         
-            <a href="/tags/euc-kr/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#euc-kr</a>
+            <a href="/tags/euc-kr/" class="post-tag">#euc-kr</a>
         
-            <a href="/tags/euckr/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#euckr</a>
+            <a href="/tags/euckr/" class="post-tag">#euckr</a>
         
-            <a href="/tags/Flask/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#Flask</a>
+            <a href="/tags/Flask/" class="post-tag">#Flask</a>
         
-            <a href="/tags/flask euc-kr/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#flask euc-kr</a>
+            <a href="/tags/flask euc-kr/" class="post-tag">#flask euc-kr</a>
         
-            <a href="/tags/Python/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#Python</a>
+            <a href="/tags/Python/" class="post-tag">#Python</a>
         
     </div> 
     <footer>

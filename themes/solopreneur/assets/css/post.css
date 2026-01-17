@@ -128,3 +128,18 @@ footer{
     font-size: 0.8em;
     color: #666;
 }
+
+.post-tags {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.post-tag {
+    color: var(--link-color);
+    text-decoration: none;
+    margin-right: 0.5rem;
+}
+
+.post-tag:hover {
+    text-decoration: underline;
+}

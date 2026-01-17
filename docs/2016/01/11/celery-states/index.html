@@ -88,15 +88,15 @@
  – Task is waiting for retry.</p>
 <p>참고로 <a href="https://github.com/mher/flower">flower</a>는 그 자체로 모니터링이 가능한 UI를 제공하고 있는 동시에, <a href="http://flower.readthedocs.org/en/latest/api.html">몇개의 API</a>를 제공하고 있는데 미약한편이다. tasks 들은 어떤 실행하는 명령을 delay 나 apply_aync 함수를 통해서 받게되면, <a href="http://docs.celeryproject.org/en/latest/reference/celery.result.html#celery.result.AsyncResult.id">AsyncResult</a> 를 반환하는데 각각의 task 들을 구분하는 UUID가 그 안에 들어 있다.(정확히는 AsyncResult.id) 이 UUID 를 기반으로 한 task의 상태와 정보를 알수 있도록 구성해 놓은것이 flower이다. 아쉽게도 아직은 flower API에서 UUID 별로 정보를 주는 API를 지원하지는 않는데, <a href="https://github.com/mher/flower/pull/505">다음버전</a>에 들어갈 것 같다.</p>
     </div>
-    <div>
+    <div class="post-tags">
         
-            <a href="/tags/Celery/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#Celery</a>
+            <a href="/tags/Celery/" class="post-tag">#Celery</a>
         
-            <a href="/tags/dev/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#dev</a>
+            <a href="/tags/dev/" class="post-tag">#dev</a>
         
-            <a href="/tags/Python/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#Python</a>
+            <a href="/tags/Python/" class="post-tag">#Python</a>
         
-            <a href="/tags/state/" style="text-decoration: none; color: #666; margin-right: 0.5rem;">#state</a>
+            <a href="/tags/state/" class="post-tag">#state</a>
         
     </div> 
     <footer>
