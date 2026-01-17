@@ -6,10 +6,8 @@ description: '프로그램을 개발한다는 것은 언제 부터인가 협업�
 
 ![](http://ash84.net/wp-content/uploads/1/cfile29'
 featured_image: ''
-tags: ['dev', 'It', 'programmer', '프로그래머', '프로그램을 만든다는 것']
+tags: ['dev', 'It', 'programmer', '프로그램을 만든다는 것']
 ---
-
-
 <span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">프로그램을 개발한다는 것은 언제 부터인가 협업이라는 개념에 대해서 생각하지 않을수 없었다. 단순히 한 개인이 하나의 프로그램을 개발하는 시대가 저물면서, 아니 어쩌면 너무나 큰 시스템들을, 너무나 빠르게 요구하는 시대일 지도 모른다. </span></span></span>
 
 ![](http://ash84.net/wp-content/uploads/1/cfile29.uf.14107E194BF9506F281C78.jpg)

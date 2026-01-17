@@ -8,7 +8,7 @@ description: '완결성
 
 어쨋든 스타트업에서 일을 하다보면 A를 하다가 B를 뛰어가야하고, C에서는 헤엄도 쳐야한다. 그러다보면 이전 작업에 대한 완결성이 떨어지게 되고 `MVP, 스타트업, 데이터 의사결정` 같은 여러 스타트업스러운 단어들로 스스로를 변호한채 완결성의 내부레벨'
 featured_image: ''
-tags: ['스타트업', 'essay', 'startup', 'completeness', '완결성', 'developer']
+tags: ['startup', 'essay', 'completeness', '완결성', 'developer']
 ---
 완결성
 

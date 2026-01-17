@@ -12,10 +12,8 @@ description: '미국대학의 의료정보 관련 학과에서 가르치는 주�
 >  – algorithm and representation for melecular biology  
 >  – medical imaging'
 featured_image: ''
-tags: ['MYCIN', 'STANDFORD', '스탠포드', '의료정보학']
+tags: ['MYCIN', 'STANDFORD', '스탠포드', 'medical-informatics']
 ---
-
-
 미국대학의 의료정보 관련 학과에서 가르치는 주요 분야를   
  나열하면 다음과 같다.
 

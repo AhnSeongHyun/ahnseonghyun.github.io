@@ -7,10 +7,8 @@ description: '<메디게이트>
 **  
 송도 외국병원, 국내 파트너 선정 물밑접촉 **'
 featured_image: ''
-tags: ['기회', '송도', '외국병원', '의공학']
+tags: ['기회', '송도', '외국병원', 'medical-informatics']
 ---
-
-
 <font face="'Batang', 'Serif'"> </font> <메디게이트>
 
 <span style="FONT-SIZE: 10pt; COLOR: #000000; LINE-HEIGHT: 21px; FONT-FAMILY: '바탕'; LETTER-SPACING: 0px; TEXT-ALIGN: justify"><font color="#666699" face="'Batang', 'Serif'">**  

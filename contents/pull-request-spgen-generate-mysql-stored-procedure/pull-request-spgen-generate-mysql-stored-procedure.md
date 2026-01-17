@@ -8,10 +8,8 @@ description: '#### **앞서서, 프로시저에 대한 이야기**
 
 현재 회사에서는 모든 데이터베이스 관련된 로직은 저장 프로시저(Stored Procedure) 방식으로 구현되고 있다. 개인적으로 이전 회사에서는 이런식으로 작업을 하지 않았고, ORM을'
 featured_image: ''
-tags: ['dev', 'generate stored procedure', 'MySQL', 'sp', 'spgen', 'stored procedure']
+tags: ['dev', 'generate stored procedure', 'MySQL', 'sp', 'spgen', 'stored-procedure']
 ---
-
-
 #### **앞서서, 프로시저에 대한 이야기**
 
  ORM 이 추세이긴 하지만 여전히 사용하는 곳이 있다. 물론 로직이 숨어 있다는 문제, 가독성이 떨어지는 문제가 있지만 여전히 성능면에서는 최고의 방법이 아닌가 싶다.(이견이 있으시다면 댓글로,, <del datetime="2015-07-20T23:36:34+00:00">댓글구걸</del>)

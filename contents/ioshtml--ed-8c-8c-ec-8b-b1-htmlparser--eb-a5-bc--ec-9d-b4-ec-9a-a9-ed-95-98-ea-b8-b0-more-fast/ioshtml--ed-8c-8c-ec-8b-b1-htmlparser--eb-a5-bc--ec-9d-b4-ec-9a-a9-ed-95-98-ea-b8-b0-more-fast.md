@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2012-09-24'
 description: '한우찾기 관련 포스트에서 밝힌적이 있듯이, HTML 파싱을 핵심으로 하고 있는 한우찾기의 라이브러리화 작업이 한창 진행중이다. 이전의[ HTML 파싱 포스팅](http://ash84.tistory.com/697)'
 featured_image: ''
-tags: ['dev', 'html', 'HTML Parsing', 'HTMLNode', 'HtmlParser', 'ios html parsing', 'iOS', '파싱']
+tags: ['dev', 'html', 'HTML Parsing', 'HTMLNode', 'HtmlParser', 'ios html parsing', 'iOS', 'parsing']
 ---
 <span style="font-size: 11pt; "><span style="color: rgb(0, 0, 0); ">한우찾기 관련 포스트에서 밝힌적이 있듯이, HTML 파싱을 핵심으로 하고 있는 한우찾기의 라이</span><span style="color: rgb(0, 0, 0); ">브러리화 작업이 한창 진행중이다. 이전의</span>[<span style="color: rgb(0, 0, 0); "> HTML 파싱 포스팅</span>](http://ash84.tistory.com/697)<span style="color: rgb(0, 0, 0); ">에서 기존의 잘 알려진 </span>[<span style="color: rgb(0, 0, 0); ">TFHpple 을 이용하는 방식(XPath)</span>](http://printf.egloos.com/1930529)<span style="color: rgb(0, 0, 0); "> 외에도 자바 스크립트와 UIWebView를 이용하는 방식을 사용했다고 밝힌 적이 있다. </span></span>
 

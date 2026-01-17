@@ -7,7 +7,7 @@ description: '마치 주간보고 쓰는 느낌이긴 한데, 꼭 에버노트�
 
 **'
 featured_image: ''
-tags: ['안성현', 'developer', '주간개발기', '코딩중독', '코중이']
+tags: ['안성현', 'developer', 'weekly-dev', '코딩중독', '코중이']
 ---
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">마치 주간보고 쓰는 느낌이긴 한데, 꼭 에버노트에 스크립한 내용, 내가 몰라서 찾아 보았던 내용들을 매주 금요일 간단하게 나마 정리해 보는 것도 나중에 좋을것 같아서. 언제 끝이 날지 모르겠지만. </span>
 

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-01-02'
 description: ''
 featured_image: ''
-tags: ['채드 파울러', '책', '프로그래머 열정을 말하다', 'book']
+tags: ['채드 파울러', '책', 'programmer', 'book']
 ---
-
-
 <span style="font-size: 11pt;">  
 </span>
 

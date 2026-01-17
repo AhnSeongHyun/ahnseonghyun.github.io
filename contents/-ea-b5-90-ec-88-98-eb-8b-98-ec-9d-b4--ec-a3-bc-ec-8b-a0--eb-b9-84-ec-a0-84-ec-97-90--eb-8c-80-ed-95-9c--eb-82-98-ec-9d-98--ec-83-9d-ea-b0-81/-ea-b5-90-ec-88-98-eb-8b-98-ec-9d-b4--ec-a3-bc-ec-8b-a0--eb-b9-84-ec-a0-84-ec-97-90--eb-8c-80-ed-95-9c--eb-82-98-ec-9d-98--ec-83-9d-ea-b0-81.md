@@ -12,10 +12,8 @@ description: '저저번주, 첫 랩미팅을 가졌다.
 > **  
 > – 이미'
 featured_image: ''
-tags: ['HL7', 'mobile', 'PDA', '당뇨병', '랩', '랩미팅', '병원정보시스템', '연구실', '의료정보', '핸드폰']
+tags: ['HL7', 'mobile', 'PDA', '당뇨병', '랩', '랩미팅', '병원정보시스템', '연구실', 'medical-informatics', '핸드폰']
 ---
-
-
 저저번주, 첫 랩미팅을 가졌다.
 
 <font color="#d41a01">**LOMIIO(Lab of Medical instrumentation & informatics optimization)  

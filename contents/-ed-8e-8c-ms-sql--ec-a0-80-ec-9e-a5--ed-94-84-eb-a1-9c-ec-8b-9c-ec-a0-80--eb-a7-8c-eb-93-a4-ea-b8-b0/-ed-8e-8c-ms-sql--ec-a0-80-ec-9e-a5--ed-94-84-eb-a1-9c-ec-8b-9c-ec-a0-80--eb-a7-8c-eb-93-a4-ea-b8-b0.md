@@ -15,10 +15,8 @@ description: '출처 : [http://cafe.naver.com/hackertime/397](http://cafe.naver.
   
 사용법)'
 featured_image: ''
-tags: ['dev', 'MSSQL', '저장프로시저']
+tags: ['dev', 'MSSQL', 'stored-procedure']
 ---
-
-
 출처 : [http://cafe.naver.com/hackertime/397](http://cafe.naver.com/hackertime/397)
 
   

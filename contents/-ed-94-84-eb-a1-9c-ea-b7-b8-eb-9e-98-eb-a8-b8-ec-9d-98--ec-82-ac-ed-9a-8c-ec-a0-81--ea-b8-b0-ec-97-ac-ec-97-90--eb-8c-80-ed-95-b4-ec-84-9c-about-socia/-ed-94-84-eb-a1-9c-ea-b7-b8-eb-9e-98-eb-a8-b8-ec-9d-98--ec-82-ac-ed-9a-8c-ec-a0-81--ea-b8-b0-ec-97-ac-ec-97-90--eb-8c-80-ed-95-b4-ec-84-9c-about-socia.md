@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-10-17'
 description: ''
 featured_image: ''
-tags: ['Apple', 'dev', 'Medical Design', 'ted', '사회적 기여', '스마트폰', '앱', '제너럴닥터', '프로그래머']
+tags: ['Apple', 'dev', 'Medical Design', 'ted', '사회적 기여', '스마트폰', 'app', '제너럴닥터', 'programmer']
 ---
-
-
 <div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; "></span>  
 <span style="font-size: 11pt; ">  
 </span></div><span style="font-size: 11pt; ">  

@@ -9,9 +9,8 @@ description: '# 건강
 - 여전히 혈압약, 통풍약을 먹고 있다. 올해 추석쯤 통풍 발작이 왔었는데 다행히 미리 받아놓은 응급약으로 대응을 할 수 있었다. 
 - 작년보다 나아진 점은 `예전보다 많이 자고 있다.` 예전에는 5시간 남짓 잤던것 같은데 5시 배포가 많아서 아예 9-5로 자는 시간 변경을 해서 8시간 정도 수면시간을 확보했'
 featured_image: 'https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/2024-retrospective/featured.jpeg'
-tags: ['회고', 'retrospective']
+tags: ['retrospective']
 ---
-
 # 건강 
 
 - 달리기를 좀 했었다. 자주라기 보다는 정신적으로 힘들어서 달라기를 했었는데 길게는 못하고 1시간 뛰다 걷다 하면 그래도 나아지더라.

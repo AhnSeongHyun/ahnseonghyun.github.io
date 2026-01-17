@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-09-25'
 description: '이 책을 접하게 된것은 SNS 에서 책이 나오기 전에 나왔던 홍보 덕분이었던것 같다. 사실 이런 책들, <뉴욕의 프로그래머>'
 featured_image: ''
-tags: ['로드북', '임백준', '프로그래머', '프로그래머 그 다음 이야기']
+tags: ['로드북', '임백준', 'programmer', '프로그래머 그 다음 이야기']
 ---
-
-
 <div style="text-align: justify; "><span style="line-height: 2; font-size: 10pt; "><span style="font-family: Dotum;"><span style="font-size: 11pt; ">이 책을 접하게 된것은 SNS 에서 책이 나오기 전에 나왔던 홍보 덕분이었던것 같다. 사실 이런 책들, </span><span style="color: rgb(16, 87, 56); font-size: 11pt; "><뉴욕의 프로그래머> </span><span style="font-size: 11pt; ">같은 책들은 일반 서점에 가서 컴퓨터 책 분야에서 찾기 힘들다. 때론 에세이나 때론 컴퓨터 일반 분야 이렇게 분류 되어 있기 때문일 것이다. 어찌보면, 그 만큼 이런 류의 책들이 많이 나오지 않았기 때문에 출판사 관계자 혹은 서점 관계자 분들이 분류를 제대로 하지 못하는 것은 아닐까 하는 생각이 들곤 한다. 책을 사러 갈때마다. </span></span></span>  
 <span style="font-size: 11pt; ">  
 </span>  

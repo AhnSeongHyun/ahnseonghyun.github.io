@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2013-04-28'
 description: ''
 featured_image: ''
-tags: ['dev', 'developer', '엔지니어', '폴그레이험', '프로그래머', '해커']
+tags: ['dev', 'developer', '엔지니어', '폴그레이험', 'programmer', '해커']
 ---
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SKQyVC7-Ahk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

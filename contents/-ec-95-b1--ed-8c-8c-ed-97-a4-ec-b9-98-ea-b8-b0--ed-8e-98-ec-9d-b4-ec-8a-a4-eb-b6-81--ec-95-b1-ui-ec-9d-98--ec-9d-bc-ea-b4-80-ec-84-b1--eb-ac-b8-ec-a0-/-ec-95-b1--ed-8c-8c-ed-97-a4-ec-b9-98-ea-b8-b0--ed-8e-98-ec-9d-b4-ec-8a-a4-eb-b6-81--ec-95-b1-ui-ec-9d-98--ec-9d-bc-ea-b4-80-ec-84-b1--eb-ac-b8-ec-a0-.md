@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2011-04-11'
 description: '가장 많이 다운을 받는다는 페이스북 아이폰 앱. 최근에 업데이트가 되었는데요. 저 역시 많이 사용하고 있고, 기존의 웹 에서 사용하는 페이스북 과 비슷한 형태여서 마음에 들더라구요. 최근에 업데이트가 된 사항을 보면 라이브피드 상에서 하나의 글에 대한 동작, 즉 + 를 눌렀을때 나오는 UI 가 기존의 경우에는 TableCell 이 왼쪽으로 밀리면서 [좋아요] [댓글] 이 나왔는데 현재는 그 부분이 작은 뷰로 나오게 되었습니다. <'
 featured_image: ''
-tags: ['dev', 'iOS', '앱', '앱파헤치기', '페이스북앱']
+tags: ['dev', 'iOS', 'app', '앱파헤치기', '페이스북앱']
 ---
 <div><div style="text-align: justify; line-height: 2; "> 가장 많이 다운을 받는다는 페이스북 아이폰 앱. 최근에 업데이트가 되었는데요. 저 역시 많이 사용하고 있고, 기존의 웹 에서 사용하는 페이스북 과 비슷한 형태여서 마음에 들더라구요. 최근에 업데이트가 된 사항을 보면 라이브피드 상에서 하나의 글에 대한 동작, 즉 + 를 눌렀을때 나오는 UI 가 기존의 경우에는 TableCell 이 왼쪽으로 밀리면서 [좋아요] [댓글] 이 나왔는데 현재는 그 부분이 작은 뷰로 나오게 되었습니다. </div><div style="text-align: justify;"><span class="Apple-style-span" style="line-height: 24px;">  
 </span></div><span class="Apple-style-span" style="line-height: 2;"><figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile23.uf.141CFE494DA2891215483E.PNG)<figcaption class="wp-caption-text">새로운 형태의 + 에 대한 UI  

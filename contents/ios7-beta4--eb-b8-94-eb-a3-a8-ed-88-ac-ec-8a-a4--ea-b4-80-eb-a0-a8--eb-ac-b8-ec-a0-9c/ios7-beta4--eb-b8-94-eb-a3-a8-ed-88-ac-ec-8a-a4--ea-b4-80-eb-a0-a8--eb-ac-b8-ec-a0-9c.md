@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2013-08-04'
 description: '최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을'
 featured_image: ''
-tags: ['CBCentralManager', 'CoreBluetooth', 'dev', 'ios6', '블루투스', '코어 블루투스']
+tags: ['CBCentralManager', 'CoreBluetooth', 'dev', 'ios6', 'bluetooth', '코어 블루투스']
 ---
-
-
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을 보내는데 그 다음에 unknown 에러가 발생하는 것이다. </span>
 
 <span style="font-size: 11pt;">이 부분에 대해서 가장 큰 문제는 현재 iOS6 에서는 발생이 안된다는 점이고, pre-release 도큐먼트를 확인해 보면 몇가지 core bluetooth 부분에 추가되는 클래스나 함수 그리고  deprecated 되는 변수화 함수가 있는것 같은데, 그 부분과 내부적으로 영향을 미치는 지는 알수가 없으니 답답하다. </span>

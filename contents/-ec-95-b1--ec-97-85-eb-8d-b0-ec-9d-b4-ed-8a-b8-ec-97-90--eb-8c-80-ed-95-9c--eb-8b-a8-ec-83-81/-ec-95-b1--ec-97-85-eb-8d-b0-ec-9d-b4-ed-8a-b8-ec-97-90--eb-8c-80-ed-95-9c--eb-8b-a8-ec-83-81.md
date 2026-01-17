@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2011-07-18'
 description: '몇개의 앱을 개발하지도 않고 이런 애기를 하는게 웃기긴 하지만, 주변의 다른 앱 개발자 들의 말을 들어보아도 앱 업데이트에 대한 깊은 생각이 필요하다는 공감대가 형성되곤 하는것 같다.'
 featured_image: ''
-tags: ['developer', '서울버스앱', '앱 개발', '앱 업데이트', '한우찾기']
+tags: ['developer', '서울버스앱', 'app', '앱 업데이트', '한우찾기']
 ---
 <div style="text-align: justify; line-height: 2; "><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">몇개의 앱을 개발하지도 않고 이런 애기를 하는게 웃기긴 하지만, 주변의 다른 앱 개발자 들의 말을 들어보아도 앱 업데이트에 대한 깊은 생각이 필요하다는 공감대가 형성되곤 하는것 같다. </span></span><span style="font-family: Dotum; font-size: 11pt; ">어제 하나의 메일이 왔다. 그리고 오늘 혹시나 하는 마음에 “</span>[<span style="font-size: 11pt; ">한우찾기</span>](http://ash84.tistory.com/category/Projects/%ED%95%9C%EC%9A%B0%EC%9D%B4%EB%A0%A5%EC%B6%94%EC%A0%81%EC%A1%B0%ED%9A%8C "[http://ash84.tistory.com/category/Projects/%ED%95%9C%EC%9A%B0%EC%9D%B4%EB%A0%A5%EC%B6%94%EC%A0%81%EC%A1%B0%ED%9A%8C]로 이동합니다.")<span style="font-family: Dotum; font-size: 11pt; ">” 리뷰를 확인해서 내용을 종합해 보면, </span></div><span style="font-size: 11pt; ">  
 </span>

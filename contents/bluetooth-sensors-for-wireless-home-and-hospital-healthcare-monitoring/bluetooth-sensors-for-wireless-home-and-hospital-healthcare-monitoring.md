@@ -5,10 +5,8 @@ pub_date: '2008-09-23'
 description: '[](http://ash84.net/wp-content/uploads/1/48d8566ad8b188U.pdf)48d8566ad8b188U.pdf  
  중요한 부분'
 featured_image: ''
-tags: ['bluetooth', 'healthcare system', 'openxdf', 'thesis', '블루투스']
+tags: ['bluetooth', 'healthcare system', 'openxdf', 'thesis']
 ---
-
-
 [](http://ash84.net/wp-content/uploads/1/48d8566ad8b188U.pdf)48d8566ad8b188U.pdf  
  중요한 부분
 

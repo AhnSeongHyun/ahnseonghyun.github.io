@@ -6,10 +6,8 @@ description: '**인텔, 향후 미래 프로젝트 및 컴퓨팅 전망 발표**
 
 K모바일  박동민기자'
 featured_image: ''
-tags: ['인텔', '헬스케어']
+tags: ['인텔', 'healthcare']
 ---
-
-
 <table border="0" cellpadding="0" cellspacing="0" width="100%">  
 <tbody>  
 <tr>  

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2007-06-07'
 description: '![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/fk64.jpg) 인텔에서 헬스케어 PC를 만들었다는 소식을 접했다. 교수님을 통해서 였지만, 실제 네이버 뉴스에서 이 기사와 그림을 봤을때는 인텔에서 이정도로 헬스케어 산업에 관심을 가지고 있는 줄은 몰랐다. 단지 하나의 타블렛 단말기로 보기보다는 헬스케어 산업의 부흥으로 봐야 하지 않을까 싶다. 실제로 우리나라에서도 U'
 featured_image: ''
-tags: ['Healcare Service', 'healthcare', 'intel', 'MS', '부흥', '인텔', '타블렛PC', '헬스케어']
+tags: ['Healcare Service', 'healthcare', 'intel', 'MS', '부흥', '인텔', '타블렛PC']
 ---
-
-
 <div style="line-height: 2; ">![사용자 삽입 이미지](http://ash84.net/wp-content/uploads/1/fk64.jpg)</div><div style="line-height: 2; "> 인텔에서 헬스케어 PC를 만들었다는 소식을 접했다. 교수님을 통해서 였지만, 실제 네이버 뉴스에서 이 기사와 그림을 봤을때는 인텔에서 이정도로 헬스케어 산업에 관심을 가지고 있는 줄은 몰랐다. 단지 하나의 타블렛 단말기로 보기보다는 헬스케어 산업의 부흥으로 봐야 하지 않을까 싶다. 실제로 우리나라에서도 U-healthcare 산업에 대해서 많은 시범사업과 논의가 있었다. 우리나라 굴지의 IT 업체인 삼성SDS나  LGCNS에서도 대학이나 병원과 함께 시범사업을 한것으로 알고 있다. 그러나 아직 U-Healthcare 사업에 대한 비지니스 모델의 확립이 미흡한것은 분명하다. 그러나 하나 분명한것은 점점 헬스케어 산업이 부가가치를 발휘 할수 있다는 점이다. 여러가지 요인이 있을수 있겠지만, 3가지 요인으로 압축할수 있다.
 
 </div><div style="padding-right: 10px; padding-left: 10px; padding-bottom: 10px; padding-top: 10px; background-color: rgb(250, 255, 169); line-height: 2; ">**1. 노인인구의 증가와 고령화**<div style="text-align: justify;">  : 이번년도부터 태어나는 아이들은 150세를 살수 있다고 한다. 현재, 일본의 경우는 고령화 사회로 이미 접어 들면서 그에 따른 사회문제가 많이 발생하고 있다. 특히, 고독사 같은 경우에는 IT기술을 이용하면, 어느정도 예방할수 있는 것으로 알고 있다. 우리나라 역시 얼마있지 않아서 고령화 사회로 접어 들것이고 이것은 고령에 따른 다양한 건강문제를 유발하게 될것이다. 의료비 증가와 더불어서 U-Healthcare 산업의 발전은 필수 적일수 밖에 없다. </div></div><div><div style="text-align: justify;"><span class="Apple-style-span" style="line-height: 24px;">  

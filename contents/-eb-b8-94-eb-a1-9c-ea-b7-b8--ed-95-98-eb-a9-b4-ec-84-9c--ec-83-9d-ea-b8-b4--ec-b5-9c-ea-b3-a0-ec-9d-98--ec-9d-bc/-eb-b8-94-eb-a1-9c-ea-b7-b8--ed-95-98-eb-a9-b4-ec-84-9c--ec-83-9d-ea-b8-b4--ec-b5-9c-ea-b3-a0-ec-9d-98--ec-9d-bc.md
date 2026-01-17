@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-06-21'
 description: '블로그를 시작한 지, 벌써 4년여 정도 된 것 같습니다. 2006년도에 처음 테터툴즈를 발견하고 자료를 정리하려는 수단으로 처음 블로그를 시작했습니다. 호스팅 비용이 만만치 않아서 지금의 티스토리로 옮기면서'
 featured_image: ''
-tags: ['dev', '블로그', '블로그 기회', '블로그 수익', '블로그로 프로젝트 하다.', '수익']
+tags: ['dev', 'blog', '블로그 기회', '블로그 수익', '블로그로 프로젝트 하다.', '수익']
 ---
-
-
 <span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum"><span style="FONT-SIZE: 18pt"></span></span></span> 
 
   

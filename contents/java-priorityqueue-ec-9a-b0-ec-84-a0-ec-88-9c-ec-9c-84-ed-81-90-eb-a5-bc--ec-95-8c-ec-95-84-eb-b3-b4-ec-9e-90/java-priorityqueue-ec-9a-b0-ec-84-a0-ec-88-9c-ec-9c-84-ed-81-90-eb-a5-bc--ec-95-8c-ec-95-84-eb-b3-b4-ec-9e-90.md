@@ -10,9 +10,8 @@ PriorityQueue는 내부적으로 Natural Ordering 에 따라서 정렬하는 큐
 
 또 다른 예를 보자'
 featured_image: ''
-tags: ['dev', 'Java', 'PriorityQueue', 'queue', '우선순위 큐', '태그를 입력해 주세요.']
+tags: ['dev', 'Java', 'PriorityQueue', 'queue', '우선순위 큐']
 ---
-
 일반적인 큐(Queue)는 선입선출(FIFO)의 구조를 가진다는 것은 다들 아시고 있을 것이라고 생각된다. 그렇다면 PriorityQueue 는 일반적인 큐와 어떻게 다를까? 
 
 PriorityQueue는 내부적으로 Natural Ordering 에 따라서 정렬하는 큐이다. 그래서 다음의 코드를 테스트 해보면 당연히 10이라는 숫자가 나와야 하는데, 실제로는 1이라는 숫자가 나오는 것을 확인 할수 있다. 

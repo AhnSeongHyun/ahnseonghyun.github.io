@@ -17,9 +17,8 @@ MODEL-DRIVEN DESIGN(모델 주도의 설계)
 - 복잡한 대응은 이해가 어렵고 유지보수가 어렵다. 
 - 도메인 모델을 설계와 밀접하게 연관시키는 원칙을 강제시, 모델 중 유용한 것을 선택하는 또 하나의 기준이 된다.'
 featured_image: 'https://c1.staticflickr.com/5/4197/35042157346_3b66b0bd9b_z.jpg'
-tags: ['book', 'DDD', '도메인주도의설계', '에릭에반스']
+tags: ['book', 'DDD', '에릭에반스']
 ---
-
 링크 - http://yimay.kr/t499o6dfsz 
 
 ###03 모델과 구현의 연계

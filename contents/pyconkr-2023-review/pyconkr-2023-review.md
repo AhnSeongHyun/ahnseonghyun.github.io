@@ -10,9 +10,8 @@ description: '## 후원사로의 후기
 
 가장 어려웠던 것은 아무래'
 featured_image: ''
-tags: ['pyconkr', '파이콘']
+tags: ['pyconkr', 'pycon']
 ---
-
 ## 후원사로의 후기
 
 ![](https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/pyconkr2023/IMG_3787.jpg)

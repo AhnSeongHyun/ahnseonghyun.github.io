@@ -188,6 +188,89 @@ CONSOLIDATION_RULES = {
         '딥러닝', '딥 러닝'
     ],
 
+    # Additional technical terms (Korean → English)
+    'programmer': [
+        'programmer', '프로그래머', '프로그래머 열정을 말하다'
+    ],
+
+    'blog': [
+        'blog', 'Blog', '블로그', '블로그에 코드입력하기'
+    ],
+
+    'app': [
+        'app', 'App', '앱', '앱 개발'
+    ],
+
+    'bluetooth': [
+        'bluetooth', 'Bluetooth', '블루투스'
+    ],
+
+    'search-engine': [
+        'search engine', 'search-engine', '검색엔진'
+    ],
+
+    'maven': [
+        'maven', 'Maven', '메이븐'
+    ],
+
+    'thread': [
+        'thread', 'Thread', '스레드'
+    ],
+
+    'test': [
+        'test', 'Test', 'testing', '테스트'
+    ],
+
+    'deploy': [
+        'deploy', 'Deploy', 'deployment', '배포'
+    ],
+
+    'parsing': [
+        'parsing', 'Parsing', '파싱', 'HTML 파싱', '문자열 파싱'
+    ],
+
+    'library': [
+        'library', 'Library', '라이브러리', 'django 라이브러리'
+    ],
+
+    'healthcare': [
+        'healthcare', 'Healthcare', 'Health Care', '헬스케어',
+        '헬스케어 서비스', 'U-헬스케어 포괄 업무제휴'
+    ],
+
+    'medical-informatics': [
+        'medical informatics', 'Medical Informatics',
+        '의료정보', '의료정보학', '의공학', '대한의료정보학회'
+    ],
+
+    'stored-procedure': [
+        'stored procedure', 'stored-procedure', '저장프로시저'
+    ],
+
+    'pycon': [
+        'pycon', 'Pycon', 'PyCon', '파이콘'
+    ],
+
+    'weekly-dev': [
+        'weekly-dev', '주간개발기'
+    ],
+
+    'code-input': [
+        'code-input', '코드입력'
+    ],
+
+    'retrospective': [
+        'retrospective', 'Retrospective', '회고'
+    ],
+
+    'startup': [
+        'startup', 'Startup', 'startups', '스타트업'
+    ],
+
+    'DDD': [
+        'DDD', 'domain-driven-design', '도메인주도의설계'
+    ],
+
     # Personal branding - keep Korean
     '안성현': [
         '안성현', 'An Seong Hyun', 'Ahn Seong Hyun', 'AhnSeongHyun',
@@ -195,7 +278,7 @@ CONSOLIDATION_RULES = {
     ],
 
     # Remove empty/problematic tags
-    None: [' ', '', '  ', '   ']
+    None: [' ', '', '  ', '   ', '태그를 입력해 주세요.']
 }
 
 # Create reverse lookup: variant → target

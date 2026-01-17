@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2011-03-14'
 description: '2월 어플이 상당히 많이 늦어지고 있는데, 그만큼 1월에 비해서 공을 많이 들이게 되는것 같습니다. 예전에 언급한것 처럼 한우이력조회를 할 수 있는 어플이 될것같습니다. 이제 거의 코드정리 및'
 featured_image: ''
-tags: ['dev', 'loading', 'UIAlterView', '검은뷰', '로딩화면', 'iOS', '애플', '앱']
+tags: ['dev', 'loading', 'UIAlterView', '검은뷰', '로딩화면', 'iOS', '애플', 'app']
 ---
 <div style="text-align: justify; line-height: 2; color: rgb(51, 51, 51); "><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; font-size: 11pt; ">2월 어플이 상당히 많이 늦어지고 있는데, 그만큼 1월에 비해서 공을 많이 들이게 되는것 같습니다. 예전에 언급한것 처럼 한우이력조회를 할 수 있는 어플이 될것같습니다. 이제 거의 코드정리 및 메모리 릭 관리 부분만 남아 있는 상황이라서, 끝까지 화이팅 해 보렵니다. </span></span></font></div><div style="text-align: justify; line-height: 2; color: rgb(51, 51, 51); "><font color="#333333" face="굴림"><span style="font-size: 10pt; "><span style="font-family: Dotum; "><span style="font-size: 11pt; ">  
 </span></span></span></font></div><span style="font-size: 11pt; ">  

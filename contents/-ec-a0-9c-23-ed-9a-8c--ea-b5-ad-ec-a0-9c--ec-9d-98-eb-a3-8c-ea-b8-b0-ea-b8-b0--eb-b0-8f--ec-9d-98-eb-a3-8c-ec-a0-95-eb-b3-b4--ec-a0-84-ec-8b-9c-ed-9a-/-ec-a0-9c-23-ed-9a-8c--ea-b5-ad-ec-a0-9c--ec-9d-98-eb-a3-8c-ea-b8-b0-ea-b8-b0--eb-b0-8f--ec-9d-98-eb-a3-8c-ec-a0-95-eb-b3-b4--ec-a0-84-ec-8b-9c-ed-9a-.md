@@ -10,10 +10,8 @@ description: '**KIMES**
 
 ![사용자 삽입 이미지](http'
 featured_image: ''
-tags: ['KIMES', '의공학', '의료기기', '의료정보']
+tags: ['KIMES', 'medical-informatics', '의료기기']
 ---
-
-
 **<font color="#666699">KIMES</font>**
 
 23rd Korea International medical & hospital equipment show  

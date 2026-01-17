@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2013-10-09'
 description: '블루투스와 연결되어서 동작되는 앱을 어떻게 백그라운드에서 유지 시킬것인가 하는 것에 대한 물음이 있었고 여러가지 문제가 있었다. 이 글은 그에대한 여러가지 시도의 방법 그리고 해결방법(도움이 될지)에 대한 내용의 정리이다.'
 featured_image: ''
-tags: ['App crash', 'Background', 'background fetch', 'dev', 'iOS', 'NSTimeInterval', '백그라운드', '블루투스']
+tags: ['App crash', 'Background', 'background fetch', 'dev', 'iOS', 'NSTimeInterval', '백그라운드', 'bluetooth']
 ---
 <span style="font-size: 11pt;">블루투스와 연결되어서 동작되는 앱을 어떻게 백그라운드에서 유지 시킬것인가 하는 것에 대한 물음이 있었고 여러가지 문제가 있었다. 이 글은 그에대한 여러가지 시도의 방법 그리고 해결방법(도움이 될지)에 대한 내용의 정리이다. </span>
 

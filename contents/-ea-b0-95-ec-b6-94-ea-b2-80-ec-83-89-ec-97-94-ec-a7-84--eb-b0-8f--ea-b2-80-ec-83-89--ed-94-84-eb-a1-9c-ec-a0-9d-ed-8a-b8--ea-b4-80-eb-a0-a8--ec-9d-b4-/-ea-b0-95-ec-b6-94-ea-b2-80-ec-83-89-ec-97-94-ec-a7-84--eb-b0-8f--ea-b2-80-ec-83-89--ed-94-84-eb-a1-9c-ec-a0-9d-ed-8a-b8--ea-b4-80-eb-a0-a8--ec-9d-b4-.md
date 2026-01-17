@@ -7,10 +7,8 @@ description: '필자가 쓴 글은 아니지만 지인분께서(검색엔진 및
 
 ![](http://a'
 featured_image: ''
-tags: ['NGram', 'Stemming', '검색 기술', '검색엔진', '구글', '구글 엔진', '정선생', '프로젝트 이야기', '형태소분석']
+tags: ['NGram', 'Stemming', '검색 기술', 'search-engine', '구글', '구글 엔진', '정선생', '프로젝트 이야기', '형태소분석']
 ---
-
-
 <span style="font-size: 11pt;">필자가 쓴 글은 아니지만 지인분께서</span><span style="font-size: 11pt;">(검색엔진 및 관련 검색 프로젝트 유경험자) 재밌게 쓰신 검색엔진 및 관련 프로젝트에 대한 이야기가 있어서 추천하고자 한다.(제목에 링크가 달려 있습니다.)</span>
 
 <span style="font-size: 11pt;">  

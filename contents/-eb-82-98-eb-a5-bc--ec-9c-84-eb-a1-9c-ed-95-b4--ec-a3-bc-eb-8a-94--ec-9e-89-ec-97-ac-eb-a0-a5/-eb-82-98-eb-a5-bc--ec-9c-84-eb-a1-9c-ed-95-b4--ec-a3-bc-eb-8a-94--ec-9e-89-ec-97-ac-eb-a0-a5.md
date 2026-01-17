@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2011-11-16'
 description: '**개발자에게 잉여력이란 무엇일까? **그리고 왜 필요한 것일까 하는 생각을 해 보았다. 최근에 필자는 새로운 회사에'
 featured_image: ''
-tags: ['dev', 'Make', 'developer', '잉여력', '프로그래머']
+tags: ['dev', 'Make', 'developer', '잉여력', 'programmer']
 ---
 <div style="text-align: justify; line-height: 2; "><span style="font-family: Gulim; "><span style="font-size: 10pt; ">  
 <span style="font-size: 11pt; ">  

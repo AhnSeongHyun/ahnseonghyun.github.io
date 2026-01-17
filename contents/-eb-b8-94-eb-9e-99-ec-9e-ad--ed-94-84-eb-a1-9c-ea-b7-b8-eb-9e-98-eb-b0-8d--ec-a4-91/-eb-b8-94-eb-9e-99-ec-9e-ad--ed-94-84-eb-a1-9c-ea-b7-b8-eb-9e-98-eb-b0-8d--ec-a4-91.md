@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2008-10-21'
 description: ''
 featured_image: ''
-tags: ['mobile', '개발', '블랙잭', '블루투스']
+tags: ['mobile', '개발', '블랙잭', 'bluetooth']
 ---
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span>  
 <span style="font-size: 11pt;">  

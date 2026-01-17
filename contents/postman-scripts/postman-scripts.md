@@ -3,7 +3,7 @@ title: 'Postman에서 pre-request와 post-response 활용하기'
 author: 'ash84'
 pub_date: '2026-01-10'
 description: 'Postman을 사용하다 보면 특정 변수를 매번 변경해서 요청을 보내거나, 이전 응답값을 다음 요청에 넘겨서 테스트해야 하는 경우가 있다. 이럴 때 pre-request와 post-response 스크립트를 활용하면 편리하다.'
-tags: ['dev', 'postman', 'API', 'testing']
+tags: ['dev', 'postman', 'API', 'test']
 ---
 # Postman에서 pre-request와 post-response 활용하기
 

@@ -8,7 +8,7 @@ description: '신청할때는 갈지말지 일말의 여지가 없었지만, 문
 
 도착은 8시 반쯤이었는데 이미 파란옷을 입으신 분들이 계셨다. 젬마홀인지 몰랐을때는 다'
 featured_image: ''
-tags: ['dev', 'pycon', 'pyconkr', 'Python', '파이콘', 'conference']
+tags: ['dev', 'pycon', 'pyconkr', 'Python', 'conference']
 ---
 신청할때는 갈지말지 일말의 여지가 없었지만, 문제는 그주에 여러가지 행사 예를들면 영종도에가서 드림카를 타본다는 등의 행사등이 있었지만 내가 선택한건 pyconkr 이었다.
 

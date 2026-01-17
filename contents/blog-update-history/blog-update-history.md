@@ -10,10 +10,8 @@ description: '### History
 ### ToBe
 - TOC 기능, 목차를 모아서 상단 혹은 우측 사이드바쪽에 보여주는 식의 구성'
 featured_image: ''
-tags: ['dev', 'Blog']
+tags: ['dev', 'blog']
 ---
-
-
 ### History
 - 2023.01.21 공지사항 기능 추가, 댓글 기능 추가 
 - 2023.03.04 랜덤 포스트 단축키 추가, created_at, update_at 추가

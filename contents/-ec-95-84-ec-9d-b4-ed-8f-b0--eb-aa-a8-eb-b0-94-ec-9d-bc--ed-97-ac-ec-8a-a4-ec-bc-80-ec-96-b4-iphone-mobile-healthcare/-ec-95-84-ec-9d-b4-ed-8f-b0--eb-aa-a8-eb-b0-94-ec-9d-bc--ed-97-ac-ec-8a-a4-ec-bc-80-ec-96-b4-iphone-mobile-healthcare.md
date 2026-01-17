@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2008-09-30'
 description: ''
 featured_image: ''
-tags: ['healthcare', 'iOS', 'mobile', '아이팟', '애플', '헬스케어']
+tags: ['healthcare', 'iOS', 'mobile', '아이팟', '애플']
 ---
 <span style="font-size: 11pt;"></span>
 

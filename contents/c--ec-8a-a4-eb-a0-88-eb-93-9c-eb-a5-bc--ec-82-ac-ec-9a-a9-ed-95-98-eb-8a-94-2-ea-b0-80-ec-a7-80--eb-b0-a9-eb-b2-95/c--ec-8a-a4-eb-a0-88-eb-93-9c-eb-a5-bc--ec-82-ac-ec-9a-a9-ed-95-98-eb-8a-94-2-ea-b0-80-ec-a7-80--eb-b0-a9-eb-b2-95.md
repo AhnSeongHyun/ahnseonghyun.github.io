@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2010-01-21'
 description: '프로세스와 스레드에 대한 개념은 어떤 프로그래밍 언어라 하더라두 공통으로 적용이 되는 부분입니다. C#에서 스레드를 사용하는 방식은 파라미터(Parameter)가 있냐 없냐에 따라서 달라집니다.'
 featured_image: ''
-tags: ['안성현', 'C#', 'dev', 'ParameterizedThread', 'Thread', 'ThreadStart', '스레드', '파라미터가 있는 스레드']
+tags: ['안성현', 'C#', 'dev', 'ParameterizedThread', 'thread', 'ThreadStart', '파라미터가 있는 스레드']
 ---
 <div style="text-align: justify; line-height: 2; "><span style="font-size: 11pt; ">프로세스와 스레드에 대한 개념은 어떤 프로그래밍 언어라 하더라두 공통으로 적용이 되는 부분입니다. C#에서 스레드를 사용하는 방식은 파라미터(Parameter)가 있냐 없냐에 따라서 달라집니다. </span></div><span style="font-size: 11pt; ">  
 </span>

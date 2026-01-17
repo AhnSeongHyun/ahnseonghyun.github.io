@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2015-03-04'
 description: '> 원문 : [http://blog.newrelic.com/2015/01/21/python-performance-tips/?utm_source=Python+Weekly+Newsletter&utm_campaign=c403fa901e-Python_Weekly_Issue_175_January_22_2015&utm_medium=email&utm_term=0_9e26887fc5-c403fa901e-312692397](http://blog.newrelic.com/2015/01/21/python-performance-tips/?utm_sourc'
 featured_image: 'https://images.unsplash.com/photo-1523655223303-4e9ef5234587?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fab1861116d5fe59fecdcf19356718ff&auto=format&fit=crop&w=1353&q=80'
-tags: ['blog.newrelic.com', 'dev', 'Performance', 'Python', '번역', '성능', '태그를 입력해 주세요.']
+tags: ['blog.newrelic.com', 'dev', 'Performance', 'Python', '번역', '성능']
 ---
 > 원문 : [http://blog.newrelic.com/2015/01/21/python-performance-tips/?utm_source=Python+Weekly+Newsletter&utm_campaign=c403fa901e-Python_Weekly_Issue_175_January_22_2015&utm_medium=email&utm_term=0_9e26887fc5-c403fa901e-312692397](http://blog.newrelic.com/2015/01/21/python-performance-tips/?utm_source=Python+Weekly+Newsletter&utm_campaign=c403fa901e-Python_Weekly_Issue_175_January_22_2015&utm_medium=email&utm_term=0_9e26887fc5-c403fa901e-312692397)
 

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2007-01-20'
 description: '경북대학교 의과대학 의료정보학교실 조 훈 교수 (학회 국제협력이사)'
 featured_image: ''
-tags: ['의료정보학', '의료정보학 교육현황']
+tags: ['medical-informatics', '의료정보학 교육현황']
 ---
-
-
 <font face="arial,helvetica,sans-serif" size="2"> </font>
 
 <font face="arial,helvetica,sans-serif"><span style="TEXT-ALIGN: justify; LINE-HEIGHT: 21px; FONT-FAMILY: '바탕'; LETTER-SPACING: 0px; COLOR: #000000; FONT-SIZE: 10pt">경북대학교 의과대학 의료정보학교실 조 훈 교수 (학회 국제협력이사)</span></font>

@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2010-07-29'
 description: '![](http://ash84.net/wp-content/uploads/1/cfile27.uf.162CA5024C50E9752018C1.jpg)'
 featured_image: ''
-tags: ['dev', '블로그', '블로그 레이아웃', '에스콰이어', '포스팅 레이아웃']
+tags: ['dev', 'blog', '블로그 레이아웃', '에스콰이어', '포스팅 레이아웃']
 ---
-
-
 <font face="Dotum" size="3"><span style="line-height: 26px; font-size: 11pt;"> </span></font>
 
 <font face="Dotum" size="3"><figure class="wp-caption aligncenter" style="width: 320px">![](http://ash84.net/wp-content/uploads/1/cfile27.uf.162CA5024C50E9752018C1.jpg)<figcaption class="wp-caption-text">안젤리나졸리</figcaption></figure></font>

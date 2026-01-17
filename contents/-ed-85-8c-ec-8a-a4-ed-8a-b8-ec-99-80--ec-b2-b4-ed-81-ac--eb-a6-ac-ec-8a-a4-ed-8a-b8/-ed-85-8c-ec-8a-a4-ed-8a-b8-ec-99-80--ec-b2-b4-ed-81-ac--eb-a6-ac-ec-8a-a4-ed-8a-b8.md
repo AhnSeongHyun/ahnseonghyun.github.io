@@ -4,10 +4,8 @@ author: 'ash84'
 pub_date: '2011-11-06'
 description: '새로 들어간 회사에서 주로 하는 일은 모듈을 분석하고 개선하는 일을 맡고 있는데, 특히 우리 팀의 가장 큰 업무중의 하나는 바로 JIRA라는 시스템을 통해서 질의해오는 기술적인 문제들에 대해서 답을 해 주는 것이다. 매우 어려운 기술적인 문제도 있지만, 사실은 설정 하나만을 잘 모르거나 잘못사용해서 발생'
 featured_image: ''
-tags: ['dev', '변인통제', '자동화도구', '체크리스트', '테스트', '통제변인']
+tags: ['dev', '변인통제', '자동화도구', '체크리스트', 'test', '통제변인']
 ---
-
-
 <div style="line-height: 2; text-align: left;"><span style="font-size: 10pt;"><span style="font-family: Dotum; font-size: 11pt;">새로 들어간 회사에서 주로 하는 일은 모듈을 분석하고 개선하는 일을 맡고 있는데, 특히 우리 팀의 가장 큰 업무중의 하나는 바로 JIRA라는 시스템을 통해서 질의해오는 기술적인 문제들에 대해서 답을 해 주는 것이다. 매우 어려운 기술적인 문제도 있지만, 사실은 설정 하나만을 잘 모르거나 잘못사용해서 발생하는 문제들도 있는 것이 사실이다. </span></span></div><span style="font-size: 11pt;">  
 </span><span style="font-family: Dotum; font-size: 11pt; line-height: 26px;">이러한 문제들을 처리하면서 느낀것이 2가지가 있다. 사실 이제 고작 몇개를 처리했을까.. 하는 신입아닌 신입인 내가 이런 글을 쓴다는 것이 웃기긴 하지만, 말이다.</span><span style="font-size: 11pt;">  
 </span>
