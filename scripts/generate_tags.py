@@ -118,11 +118,15 @@ def generate_tag_pages(tags_dict):
 
     # Setup Jinja2 environment
     env = Environment(loader=FileSystemLoader('.'))
-    template = env.get_template('themes/solopreneur/tag.html')
+    tag_template = env.get_template('themes/solopreneur/tag.html')
+    index_template = env.get_template('themes/solopreneur/tags-index.html')
 
     # Create tags directory
     tags_dir = Path('docs/tags')
     tags_dir.mkdir(parents=True, exist_ok=True)
+
+    # Prepare tag list for index page
+    tag_list = []
 
     # Generate page for each tag
     for tag, posts in tags_dict.items():
@@ -130,7 +134,7 @@ def generate_tag_pages(tags_dict):
         sorted_posts = sort_posts_by_date(posts)
 
         # Render template
-        html = template.render(
+        html = tag_template.render(
             tag=tag,
             posts=sorted_posts,
             post_count=len(sorted_posts)
@@ -144,6 +148,25 @@ def generate_tag_pages(tags_dict):
         tag_file.write_text(html, encoding='utf-8')
 
         print(f"  ✓ Created {safe_filename}/index.html ({len(sorted_posts)} posts)")
+
+        # Add to tag list
+        tag_list.append({
+            'name': tag,
+            'safe_name': safe_filename,
+            'count': len(sorted_posts)
+        })
+
+    # Sort tag list by post count (descending), then by name
+    tag_list_sorted = sorted(tag_list, key=lambda x: (-x['count'], x['name']))
+
+    # Generate tags index page
+    index_html = index_template.render(
+        tags=tag_list_sorted,
+        tag_count=len(tag_list_sorted)
+    )
+    index_file = tags_dir / "index.html"
+    index_file.write_text(index_html, encoding='utf-8')
+    print(f"\n  ✓ Created tags index page with {len(tag_list_sorted)} tags")
 
     return len(tags_dict)
 
