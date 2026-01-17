@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2012-03-17'
 description: 'CleanCode의 신봉자로서 맨 처음 여러분께 소개해드릴 내용을 그리 거창한 것도, 특별한 디자인패턴을 요하는 기술도 아니지만 개인적으로 CleanCode라는 책을 읽고 가장 많이 사용하는 부분을 가장 먼저 소개해 드릴려고 합니다.'
 featured_image: ''
-tags: ['clean-code', 'G28', '조건문을 캡슐화하라', '클린코드']
+tags: ['clean-code', 'G28', '조건문을 캡슐화하라']
 ---
 <div style="color: rgb(51, 51, 51); font-family: 굴림; text-align: justify; font-size: 9pt; line-height: 2; "><span style="font-size: 15px; line-height: 2; ">CleanCode의 신봉자로서 맨 처음 여러분께 소개해드릴 내용을 그리 거창한 것도, 특별한 디자인패턴을 요하는 기술도 아니지만 개인적으로 CleanCode라는 책을 읽고 가장 많이 사용하는 부분을 가장 먼저 소개해 드릴려고 합니다. </span></div><div style="text-align: justify; line-height: 2; "><font color="#333333" face="굴림">  
 </font></div><div style="text-align: justify; line-height: 2; "><span style="color: rgb(51, 51, 51); font-family: 굴림; font-size: 15px; line-height: 2; ">**<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; ">조건문의 캡슐화를 하자. 

@@ -175,7 +175,8 @@ CONSOLIDATION_RULES = {
     ],
 
     'clean-code': [
-        'cleancode', 'Cleancode', 'clean code', 'Clean Code', 'CleanCode'
+        'cleancode', 'Cleancode', 'clean code', 'Clean Code', 'CleanCode',
+        '클린코드'
     ],
 
     'machine-learning': [
@@ -295,6 +296,15 @@ CONSOLIDATION_RULES = {
     'paul-smith': [
         'Paul Smith', 'paul smith', 'inside paul smith',
         '폴 스미스', '폴스미스'
+    ],
+
+    'beer': [
+        'beer', 'Beer', '맥주'
+    ],
+
+    'background': [
+        'background', 'Background', '백그라운드',
+        'background fetch', 'pattern background'
     ],
 
     # Remove empty/problematic tags

@@ -5,10 +5,8 @@ pub_date: '2009-05-17'
 description: '[![A la terrasse du café](http://farm1.static.flickr.com/106/309662133_fadf37f064.jpg)](http://www.flickr.com/photos/40869403@N00/309662133 "A la terrasse du café")  
 A la terrasse du café by [Yann G](http://www.flickr.com/photos/40869403'
 featured_image: ''
-tags: ['까페', '맥주', '유희열의 스케치북', '윤종신', '일요일', '파스타']
+tags: ['까페', 'beer', '유희열의 스케치북', '윤종신', '일요일', '파스타']
 ---
-
-
 <table class="flickrImgSearch">  
 <tbody>  
 <tr>  

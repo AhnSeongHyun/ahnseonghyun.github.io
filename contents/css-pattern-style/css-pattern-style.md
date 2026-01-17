@@ -7,10 +7,8 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile23.uf.2168AA3E5251D
 패턴 관련 CSS 관련 자료를 찾다가 발견한 링크들. 나중에 사이트 만들때 활용하면 좋을듯. 
 <'
 featured_image: ''
-tags: ['css', 'dev', 'html', 'pattern', 'pattern background']
+tags: ['css', 'dev', 'html', 'pattern', 'background']
 ---
-
-
 ![](http://ash84.net/wp-content/uploads/1/cfile23.uf.2168AA3E5251DD0433ED45.png)
 
 <span style="font-size: 11pt;">패턴 관련 CSS 관련 자료를 찾다가 발견한 링크들. 나중에 사이트 만들때 활용하면 좋을듯. </span>
