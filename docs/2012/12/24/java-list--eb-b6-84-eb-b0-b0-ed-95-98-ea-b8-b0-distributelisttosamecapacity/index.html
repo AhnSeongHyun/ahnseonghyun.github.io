@@ -1,101 +1,144 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>[Java] List 분배하기, distributeListToSameCapacity() - ASH84</title>
+    <meta name="description" content="앞의 포스트에서는 [하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()](http://ash84.tistory.com/874) 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2012/12/24/java-list--eb-b6-84-eb-b0-b0-ed-95-98-ea-b8-b0-distributelisttosamecapacity/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[Java] List 분배하기, distributeListToSameCapacity()"/>
+    <meta property="og:description" content="앞의 포스트에서는 [하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()](http://ash84.tistory.com/874) 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함"/>
+    <meta property="og:url" content="https://ash84.io/2012/12/24/java-list--eb-b6-84-eb-b0-b0-ed-95-98-ea-b8-b0-distributelisttosamecapacity/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="distributeListToSameCapacity" />
+    
+    <meta property="article:tag" content="distributeListToSubList" />
+    
+    <meta property="article:tag" content="Java" />
+    
+    <meta property="article:tag" content="리스트 분배" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="[Java] List 분배하기, distributeListToSameCapacity()"/>
+    <meta name="twitter:description" content="앞의 포스트에서는 [하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()](http://ash84.tistory.com/874) 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함"/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Java] List 분배하기, distributeListToSameCapacity()",
+        "description": "앞의 포스트에서는 [하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()](http://ash84.tistory.com/874) 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2012/12/24/java-list--eb-b6-84-eb-b0-b0-ed-95-98-ea-b8-b0-distributelisttosamecapacity"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - [Java] List 분배하기, distributeListToSameCapacity()"/>
-    <meta property="og:description" content="앞의 포스트에서는 [하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()](http://ash84.tistory.com/874) 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함"/>
-    <meta property="og:url" content="https://ash84.io/docs/2012/12/24/java-list--eb-b6-84-eb-b0-b0-ed-95-98-ea-b8-b0-distributelisttosamecapacity"/>
-    <meta property="og:image" content="https://ash84.io/docs/2012/12/24/java-list--eb-b6-84-eb-b0-b0-ed-95-98-ea-b8-b0-distributelisttosamecapacity/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>[Java] List 분배하기, distributeListToSameCapacity()</title>
-    <meta name="description" content="앞의 포스트에서는 [하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()](http://ash84.tistory.com/874) 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">[Java] List 분배하기, distributeListToSameCapacity()</h1>
-    <div class="blog-post-meta"> 
-        <small>  2012-12-24</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2012-12-24</time>
+            <h1 class="post-title">[Java] List 분배하기, distributeListToSameCapacity()</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/distributeListToSameCapacity/" class="tag">distributeListToSameCapacity</a>
+                
+                <a href="/tags/distributeListToSubList/" class="tag">distributeListToSubList</a>
+                
+                <a href="/tags/Java/" class="tag">Java</a>
+                
+                <a href="/tags/리스트 분배/" class="tag">리스트 분배</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <p><span style="font-size: 11pt;">앞의 포스트에서는 <a href="http://ash84.tistory.com/874">하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()</a> 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함수는 통제하는 부분이 각 리스트당 아이템의 개수이다. </span></p>
+        
+
+        <div class="post-content">
+            <p><span style="font-size: 11pt;">앞의 포스트에서는 <a href="http://ash84.tistory.com/874">하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()</a> 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함수는 통제하는 부분이 각 리스트당 아이템의 개수이다. </span></p>
 <p><span style="font-size: 11pt;">예를 들어, 한 리스트가 10개의 아이템을 가지고 있다고 가정하자. 나는 2개의 아이템을 가지는 리스트들로 분배하고 싶다. 그렇다면 subList는 총 5개가 생길것이다. 만약 3개의 아이템을 가지는 리스트로 분배 한다면 어떻게 될까? 총 4개의 subList가 생기는데, 0, 1, 2번까지의 subList는 3개의 아이템을 가지고 있지만, 마지막 3번의 subList 는 1개의 아이템을 가지고 있을 것이다. </span></p>
 <script src="https://gist.github.com/4357028.js"></script>
 
 <p><span style="font-size: 11pt;">한 가지, 기존의 리스트에서</span><span style="font-size: 11pt;"> subList() 함수를 이용해서 아이템을 가져올때 new를 함으로써 새로 생성해서 만들어지는 subList에 넣어주었다. 이유는 잘 생각해보시길. </span></p>
 <p><span style="font-size: 11pt;"></span></p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/distributeListToSameCapacity/" class="post-tag">#distributeListToSameCapacity</a>
-        
-            <a href="/tags/distributeListToSubList/" class="post-tag">#distributeListToSubList</a>
-        
-            <a href="/tags/Java/" class="post-tag">#Java</a>
-        
-            <a href="/tags/리스트 분배/" class="post-tag">#리스트 분배</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,77 +1,132 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>[Java] LinkedHashSet, 이건 멀까? - ASH84</title>
+    <meta name="description" content="Set 인터페이스 관련 3번째 포스팅, 지난번 [HashSet](http://ash84.tistory.com/898)에 이어서 LinkedHashSet이다. 기본적으로 Set 인터페이스에서 제공하는 함수를 가지고 있고, **null은 허용**된다.  일단 내부 코드를 보자." />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2013/01/10/java-linkedhashset-example/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[Java] LinkedHashSet, 이건 멀까?"/>
+    <meta property="og:description" content="Set 인터페이스 관련 3번째 포스팅, 지난번 [HashSet](http://ash84.tistory.com/898)에 이어서 LinkedHashSet이다. 기본적으로 Set 인터페이스에서 제공하는 함수를 가지고 있고, **null은 허용**된다.  일단 내부 코드를 보자."/>
+    <meta property="og:url" content="https://ash84.io/2013/01/10/java-linkedhashset-example/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="HastSet 정렬" />
+    
+    <meta property="article:tag" content="LinkedHashSet" />
+    
+    <meta property="article:tag" content="LinkedHashSet 분석" />
+    
+    <meta property="article:tag" content="LinkedHashSet 성능" />
+    
+    <meta property="article:tag" content="set interface" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="[Java] LinkedHashSet, 이건 멀까?"/>
+    <meta name="twitter:description" content="Set 인터페이스 관련 3번째 포스팅, 지난번 [HashSet](http://ash84.tistory.com/898)에 이어서 LinkedHashSet이다. 기본적으로 Set 인터페이스에서 제공하는 함수를 가지고 있고, **null은 허용**된다.  일단 내부 코드를 보자."/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Java] LinkedHashSet, 이건 멀까?",
+        "description": "Set 인터페이스 관련 3번째 포스팅, 지난번 [HashSet](http://ash84.tistory.com/898)에 이어서 LinkedHashSet이다. 기본적으로 Set 인터페이스에서 제공하는 함수를 가지고 있고, **null은 허용**된다.  일단 내부 코드를 보자.",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/01/10/java-linkedhashset-example"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - [Java] LinkedHashSet, 이건 멀까?"/>
-    <meta property="og:description" content="Set 인터페이스 관련 3번째 포스팅, 지난번 [HashSet](http://ash84.tistory.com/898)에 이어서 LinkedHashSet이다. 기본적으로 Set 인터페이스에서 제공하는 함수를 가지고 있고, **null은 허용**된다.  일단 내부 코드를 보자."/>
-    <meta property="og:url" content="https://ash84.io/docs/2013/01/10/java-linkedhashset-example"/>
-    <meta property="og:image" content="https://ash84.io/docs/2013/01/10/java-linkedhashset-example/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>[Java] LinkedHashSet, 이건 멀까?</title>
-    <meta name="description" content="Set 인터페이스 관련 3번째 포스팅, 지난번 [HashSet](http://ash84.tistory.com/898)에 이어서 LinkedHashSet이다. 기본적으로 Set 인터페이스에서 제공하는 함수를 가지고 있고, **null은 허용**된다.  일단 내부 코드를 보자." />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">[Java] LinkedHashSet, 이건 멀까?</h1>
-    <div class="blog-post-meta"> 
-        <small>  2013-01-10</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2013-01-10</time>
+            <h1 class="post-title">[Java] LinkedHashSet, 이건 멀까?</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/HastSet 정렬/" class="tag">HastSet 정렬</a>
+                
+                <a href="/tags/LinkedHashSet/" class="tag">LinkedHashSet</a>
+                
+                <a href="/tags/LinkedHashSet 분석/" class="tag">LinkedHashSet 분석</a>
+                
+                <a href="/tags/LinkedHashSet 성능/" class="tag">LinkedHashSet 성능</a>
+                
+                <a href="/tags/set interface/" class="tag">set interface</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <p><span style="font-size: 11pt;">Set 인터페이스 관련 3번째 포스팅, 지난번 <a href="http://ash84.tistory.com/898">HashSet</a>에 이어서 LinkedHashSet이다. 기본적으로 Set 인터페이스에서 제공하는 함수를 가지고 있</span><span style="font-size: 11pt;">고, <strong>null은 허용</strong>된다. </span><span style="font-size: 11pt;"> 일단 내부 코드를 보자. </span></p>
+        
+
+        <div class="post-content">
+            <p><span style="font-size: 11pt;">Set 인터페이스 관련 3번째 포스팅, 지난번 <a href="http://ash84.tistory.com/898">HashSet</a>에 이어서 LinkedHashSet이다. 기본적으로 Set 인터페이스에서 제공하는 함수를 가지고 있</span><span style="font-size: 11pt;">고, <strong>null은 허용</strong>된다. </span><span style="font-size: 11pt;"> 일단 내부 코드를 보자. </span></p>
 <p><span style="font-size: 11pt;">  </p>
 <script src="https://gist.github.com/4480561.js"></script>
 <p></span></p>
@@ -121,27 +176,17 @@
 <div></div>
 <div><span style="font-size: 11pt;">**Iterator**</span></div>
 <div><span style="font-size: 11pt;">Iterator는 fail-fast 방식이다. fail-fast에 대해서는 [HashSet ](http://ash84.tistory.com/898)을 참고하면 된다.   </span></div>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/HastSet 정렬/" class="post-tag">#HastSet 정렬</a>
-        
-            <a href="/tags/LinkedHashSet/" class="post-tag">#LinkedHashSet</a>
-        
-            <a href="/tags/LinkedHashSet 분석/" class="post-tag">#LinkedHashSet 분석</a>
-        
-            <a href="/tags/LinkedHashSet 성능/" class="post-tag">#LinkedHashSet 성능</a>
-        
-            <a href="/tags/set interface/" class="post-tag">#set interface</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

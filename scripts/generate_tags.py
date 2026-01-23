@@ -84,7 +84,7 @@ def collect_posts_by_tag():
                 'title': title,
                 'pub_date': pub_date,
                 'description': description,
-                'url': post_url
+                'link': post_url
             }
 
             # Add post to each tag
@@ -118,8 +118,8 @@ def generate_tag_pages(tags_dict):
 
     # Setup Jinja2 environment
     env = Environment(loader=FileSystemLoader('.'))
-    tag_template = env.get_template('themes/solopreneur/tag.html')
-    index_template = env.get_template('themes/solopreneur/tags-index.html')
+    tag_template = env.get_template('themes/chronicle/tag.html')
+    index_template = env.get_template('themes/chronicle/tags-index.html')
 
     # Create tags directory
     tags_dir = Path('docs/tags')
@@ -135,9 +135,8 @@ def generate_tag_pages(tags_dict):
 
         # Render template
         html = tag_template.render(
-            tag=tag,
-            posts=sorted_posts,
-            post_count=len(sorted_posts)
+            tag_info={'name': tag, 'count': len(sorted_posts)},
+            posts=sorted_posts
         )
 
         # Create directory for tag and write index.html
@@ -161,8 +160,7 @@ def generate_tag_pages(tags_dict):
 
     # Generate tags index page
     index_html = index_template.render(
-        tags=tag_list_sorted,
-        tag_count=len(tag_list_sorted)
+        all_tags=tag_list_sorted
     )
     index_file = tags_dir / "index.html"
     index_file.write_text(index_html, encoding='utf-8')

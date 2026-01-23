@@ -1,100 +1,141 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>오픈소스에서 활동하기 - 이희승 - - ASH84</title>
+    <meta name="description" content="오픈소스를 활용하는 것과 활동하는 것은 엄연히 다르다고 생각한다. 아직까지 참여는 하지 않지만(분석이 귀찮아서..) 그래두 github를 통해서 만든것을 자꾸 공유하려고 하고 있다. 2013년에는 참여도 하고 공유도하는 그런 한해가 되길 바라며, 개인적으로 존경하는 netty의 개발자 이희승의 강연을 올린다." />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2012/12/31/-ec-98-a4-ed-94-88-ec-86-8c-ec-8a-a4-ec-97-90-ec-84-9c--ed-99-9c-eb-8f-99-ed-95-98-ea-b8-b0--ec-9d-b4-ed-9d-ac-ec-8a-b9/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="오픈소스에서 활동하기 - 이희승 -"/>
+    <meta property="og:description" content="오픈소스를 활용하는 것과 활동하는 것은 엄연히 다르다고 생각한다. 아직까지 참여는 하지 않지만(분석이 귀찮아서..) 그래두 github를 통해서 만든것을 자꾸 공유하려고 하고 있다. 2013년에는 참여도 하고 공유도하는 그런 한해가 되길 바라며, 개인적으로 존경하는 netty의 개발자 이희승의 강연을 올린다."/>
+    <meta property="og:url" content="https://ash84.io/2012/12/31/-ec-98-a4-ed-94-88-ec-86-8c-ec-8a-a4-ec-97-90-ec-84-9c--ed-99-9c-eb-8f-99-ed-95-98-ea-b8-b0--ec-9d-b4-ed-9d-ac-ec-8a-b9/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="open-source" />
+    
+    <meta property="article:tag" content="오픈소스" />
+    
+    <meta property="article:tag" content="오픈소스에서 활동하기" />
+    
+    <meta property="article:tag" content="이희승" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="오픈소스에서 활동하기 - 이희승 -"/>
+    <meta name="twitter:description" content="오픈소스를 활용하는 것과 활동하는 것은 엄연히 다르다고 생각한다. 아직까지 참여는 하지 않지만(분석이 귀찮아서..) 그래두 github를 통해서 만든것을 자꾸 공유하려고 하고 있다. 2013년에는 참여도 하고 공유도하는 그런 한해가 되길 바라며, 개인적으로 존경하는 netty의 개발자 이희승의 강연을 올린다."/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "오픈소스에서 활동하기 - 이희승 -",
+        "description": "오픈소스를 활용하는 것과 활동하는 것은 엄연히 다르다고 생각한다. 아직까지 참여는 하지 않지만(분석이 귀찮아서..) 그래두 github를 통해서 만든것을 자꾸 공유하려고 하고 있다. 2013년에는 참여도 하고 공유도하는 그런 한해가 되길 바라며, 개인적으로 존경하는 netty의 개발자 이희승의 강연을 올린다.",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2012/12/31/-ec-98-a4-ed-94-88-ec-86-8c-ec-8a-a4-ec-97-90-ec-84-9c--ed-99-9c-eb-8f-99-ed-95-98-ea-b8-b0--ec-9d-b4-ed-9d-ac-ec-8a-b9"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - 오픈소스에서 활동하기 - 이희승 -"/>
-    <meta property="og:description" content="오픈소스를 활용하는 것과 활동하는 것은 엄연히 다르다고 생각한다. 아직까지 참여는 하지 않지만(분석이 귀찮아서..) 그래두 github를 통해서 만든것을 자꾸 공유하려고 하고 있다. 2013년에는 참여도 하고 공유도하는 그런 한해가 되길 바라며, 개인적으로 존경하는 netty의 개발자 이희승의 강연을 올린다."/>
-    <meta property="og:url" content="https://ash84.io/docs/2012/12/31/-ec-98-a4-ed-94-88-ec-86-8c-ec-8a-a4-ec-97-90-ec-84-9c--ed-99-9c-eb-8f-99-ed-95-98-ea-b8-b0--ec-9d-b4-ed-9d-ac-ec-8a-b9"/>
-    <meta property="og:image" content="https://ash84.io/docs/2012/12/31/-ec-98-a4-ed-94-88-ec-86-8c-ec-8a-a4-ec-97-90-ec-84-9c--ed-99-9c-eb-8f-99-ed-95-98-ea-b8-b0--ec-9d-b4-ed-9d-ac-ec-8a-b9/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>오픈소스에서 활동하기 - 이희승 -</title>
-    <meta name="description" content="오픈소스를 활용하는 것과 활동하는 것은 엄연히 다르다고 생각한다. 아직까지 참여는 하지 않지만(분석이 귀찮아서..) 그래두 github를 통해서 만든것을 자꾸 공유하려고 하고 있다. 2013년에는 참여도 하고 공유도하는 그런 한해가 되길 바라며, 개인적으로 존경하는 netty의 개발자 이희승의 강연을 올린다." />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">오픈소스에서 활동하기 - 이희승 -</h1>
-    <div class="blog-post-meta"> 
-        <small>  2012-12-31</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2012-12-31</time>
+            <h1 class="post-title">오픈소스에서 활동하기 - 이희승 -</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/open-source/" class="tag">open-source</a>
+                
+                <a href="/tags/오픈소스/" class="tag">오픈소스</a>
+                
+                <a href="/tags/오픈소스에서 활동하기/" class="tag">오픈소스에서 활동하기</a>
+                
+                <a href="/tags/이희승/" class="tag">이희승</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <p><span style="font-size: 15px; line-height: 29px; text-align: justify;">오픈소스를 활용하는 것과 활동하는 것은 엄연히 다르다고 생각한다. 아직까지 참여는 하지 않지만(분석이 귀찮아서..) 그래두 github를 통해서 만든것을 자꾸 공유하려고 하고 있다. 2013년에는 참여도 하고 공유도하는 그런 한해가 되길 바라며, 개인적으로 존경하는 netty의 개발자 이희승의 강연을 올린다.</span></p>
+        
+
+        <div class="post-content">
+            <p><span style="font-size: 15px; line-height: 29px; text-align: justify;">오픈소스를 활용하는 것과 활동하는 것은 엄연히 다르다고 생각한다. 아직까지 참여는 하지 않지만(분석이 귀찮아서..) 그래두 github를 통해서 만든것을 자꾸 공유하려고 하고 있다. 2013년에는 참여도 하고 공유도하는 그런 한해가 되길 바라며, 개인적으로 존경하는 netty의 개발자 이희승의 강연을 올린다.</span></p>
 <center>  
 
 <center>  
 <iframe frameborder="no" height="293" marginheight="0" marginwidth="0" scrolling="no" src="http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=2468C507D663EC3C695B2B75D72F6AF5930C&outKey=V1234b2762c1179cb6c22a1f9c4b3f1cb39964543e38cc2fc9163a1f9c4b3f1cb3996&width=512&height=293&controlBarMovable=true&jsCallable=true&skinName=tvcast_black" style="width:512px; height:293px;" width="512"></iframe><iframe frameborder="no" height="293" marginheight="0" marginwidth="0" scrolling="no" src="http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35C2149F08E852188981231E17F531B10E29&outKey=V121233e3b0d54cac35f86dbc84eb3cb650372247b4df67c67d2a6dbc84eb3cb65037&width=512&height=293&controlBarMovable=true&jsCallable=true&skinName=tvcast_black" style="width:512px; height:293px;" width="512"></iframe>
 
 </center></center>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/open-source/" class="post-tag">#open-source</a>
-        
-            <a href="/tags/오픈소스/" class="post-tag">#오픈소스</a>
-        
-            <a href="/tags/오픈소스에서 활동하기/" class="post-tag">#오픈소스에서 활동하기</a>
-        
-            <a href="/tags/이희승/" class="post-tag">#이희승</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

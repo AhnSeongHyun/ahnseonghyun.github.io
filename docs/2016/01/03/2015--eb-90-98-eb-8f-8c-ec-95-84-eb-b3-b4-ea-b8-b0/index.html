@@ -1,79 +1,144 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>2015 되돌아보기 - ASH84</title>
+    <meta name="description" content="잘 한해를 정리하는 편이 아니다. 어느새부터 뭔가 그런건 낯간지럽기도 하고. 그런데 점점 더 나이가 들면 들수록 더 그렇게 되는것 같아서 의식적으로라도 글을 쓰면서 정리하고자 한다. 지극히 개인적이고, 나를 되돌아보는 글임을 밝힌다." />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2016/01/03/2015--eb-90-98-eb-8f-8c-ec-95-84-eb-b3-b4-ea-b8-b0/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="2015 되돌아보기"/>
+    <meta property="og:description" content="잘 한해를 정리하는 편이 아니다. 어느새부터 뭔가 그런건 낯간지럽기도 하고. 그런데 점점 더 나이가 들면 들수록 더 그렇게 되는것 같아서 의식적으로라도 글을 쓰면서 정리하고자 한다. 지극히 개인적이고, 나를 되돌아보는 글임을 밝힌다."/>
+    <meta property="og:url" content="https://ash84.io/2016/01/03/2015--eb-90-98-eb-8f-8c-ec-95-84-eb-b3-b4-ea-b8-b0/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="2015" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="open-source" />
+    
+    <meta property="article:tag" content="project-showcase" />
+    
+    <meta property="article:tag" content="python" />
+    
+    <meta property="article:tag" content="안성현" />
+    
+    
+        
+    <meta property="og:image" content="https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4814b1a523df63b0acb73e69c5304b5e&auto=format&fit=crop&w=727&q=80"/>
+        
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="2015 되돌아보기"/>
+    <meta name="twitter:description" content="잘 한해를 정리하는 편이 아니다. 어느새부터 뭔가 그런건 낯간지럽기도 하고. 그런데 점점 더 나이가 들면 들수록 더 그렇게 되는것 같아서 의식적으로라도 글을 쓰면서 정리하고자 한다. 지극히 개인적이고, 나를 되돌아보는 글임을 밝힌다."/>
+    
+        
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4814b1a523df63b0acb73e69c5304b5e&auto=format&fit=crop&w=727&q=80"/>
+        
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "2015 되돌아보기",
+        "description": "잘 한해를 정리하는 편이 아니다. 어느새부터 뭔가 그런건 낯간지럽기도 하고. 그런데 점점 더 나이가 들면 들수록 더 그렇게 되는것 같아서 의식적으로라도 글을 쓰면서 정리하고자 한다. 지극히 개인적이고, 나를 되돌아보는 글임을 밝힌다.",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2016/01/03/2015--eb-90-98-eb-8f-8c-ec-95-84-eb-b3-b4-ea-b8-b0"
+        },
+        
+            
+        "image": "https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4814b1a523df63b0acb73e69c5304b5e&auto=format&fit=crop&w=727&q=80",
+            
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - 2015 되돌아보기"/>
-    <meta property="og:description" content="잘 한해를 정리하는 편이 아니다. 어느새부터 뭔가 그런건 낯간지럽기도 하고. 그런데 점점 더 나이가 들면 들수록 더 그렇게 되는것 같아서 의식적으로라도 글을 쓰면서 정리하고자 한다. 지극히 개인적이고, 나를 되돌아보는 글임을 밝힌다."/>
-    <meta property="og:url" content="https://ash84.io/docs/2016/01/03/2015--eb-90-98-eb-8f-8c-ec-95-84-eb-b3-b4-ea-b8-b0"/>
-    <meta property="og:image" content="https://ash84.io/docs/2016/01/03/2015--eb-90-98-eb-8f-8c-ec-95-84-eb-b3-b4-ea-b8-b0/https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4814b1a523df63b0acb73e69c5304b5e&auto=format&fit=crop&w=727&q=80"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>2015 되돌아보기</title>
-    <meta name="description" content="잘 한해를 정리하는 편이 아니다. 어느새부터 뭔가 그런건 낯간지럽기도 하고. 그런데 점점 더 나이가 들면 들수록 더 그렇게 되는것 같아서 의식적으로라도 글을 쓰면서 정리하고자 한다. 지극히 개인적이고, 나를 되돌아보는 글임을 밝힌다." />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">2015 되돌아보기</h1>
-    <div class="blog-post-meta"> 
-        <small>  2016-01-03</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2016-01-03</time>
+            <h1 class="post-title">2015 되돌아보기</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/2015/" class="tag">2015</a>
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/open-source/" class="tag">open-source</a>
+                
+                <a href="/tags/project-showcase/" class="tag">project-showcase</a>
+                
+                <a href="/tags/python/" class="tag">python</a>
+                
+                <a href="/tags/안성현/" class="tag">안성현</a>
+                
+            </div>
+            
+        </header>
 
-    
-        <img src="https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4814b1a523df63b0acb73e69c5304b5e&auto=format&fit=crop&w=727&q=80" alt="">
-    
-    <div class="blog-post">
-        <p>잘 한해를 정리하는 편이 아니다. 어느새부터 뭔가 그런건 낯간지럽기도 하고. 그런데 점점 더 나이가 들면 들수록 더 그렇게 되는것 같아서 의식적으로라도 글을 쓰면서 정리하고자 한다. 지극히 개인적이고, 나를 되돌아보는 글임을 밝힌다.</p>
+        
+        <figure class="post-image">
+            <img src="https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4814b1a523df63b0acb73e69c5304b5e&auto=format&fit=crop&w=727&q=80" alt="2015 되돌아보기">
+        </figure>
+        
+
+        <div class="post-content">
+            <p>잘 한해를 정리하는 편이 아니다. 어느새부터 뭔가 그런건 낯간지럽기도 하고. 그런데 점점 더 나이가 들면 들수록 더 그렇게 되는것 같아서 의식적으로라도 글을 쓰면서 정리하고자 한다. 지극히 개인적이고, 나를 되돌아보는 글임을 밝힌다.</p>
 <h3>회사일</h3>
 <p>결제 관련 회사에 다니고 있고, 올해는 무난하면서도 결제관련 흐름에 대해서 조금 적응하게 된 시기가 아닌가 싶다. 하반기 프로젝트를 하면서 조금 답답하고 힘든 일이 있었지만, 개인적으로 되돌아봤을 때 하반기의 프로젝트들을 통해서 내가 회사에서 개발하는 일에 대한 템플릿화를 하게 되었다. 뭔가 같은 일을 반복하기 싫고, 코드를 쉽게 재사용 할 수 있게 모듈화를 할 수 있게된 계기가 된 것 같다. 정확히 밝히긴 어렵지만, 그 프로젝트는 지속적인 업무가 되어 2016년에도 계속하게 될 것 같다. 약간 지루해하고 있긴 한데, <a href="http://m.blog.naver.com/ksc12545/220578602698">회사로부터의 동기부여는 프로답지 않다는 글</a>을 보고 난후로, 개인적인 성장을 위해서 회사일을 잘 이용해 볼 생각을 가지고 있다.</p>
 <h3>프로젝트</h3>
@@ -94,27 +159,17 @@
 <p>그리고 <a href="http://onoffmix.com/event/55258">나는 프로그래머다 오프라인 세미나</a>에 참가하였다. 올한해 나는 프로그래머다 팟캐스트의 애청자로서 직접 가서 보고 싶기도 했고, 세미나 주제들도 맘에 들어서 참가하게 되었다. 연차를 내서 참석 할만하다는 생각이 들었고 책도 2권 사왔다.</p>
 <h3>블로그 &amp; 책</h3>
 <p>블로그는 그동안의 티스토리, 텀블러의 방황을 끝내고 워드프레스로 이사를 왔다. 정착한지는 얼마 되지 않아서 제대로 글이 집계가 되지 않는것 같다. 내년에는 좀더 활발하게 글을 써나가야 겠다는 생각이 들고, 내년의 되돌아보기 글에서는 가장많이 읽은 글 등의 통계도 소개할 수 있었으면 좋겠다. 책은 제로투원, <a href="https://ash84.io/2015/12/05/monk-and-the-riddle/">승려와 수수께기</a>, 리모트, <a href="https://ash84.io/2015/04/24/-ec-b1-85--eb-b0-94-ec-a7-80-eb-b2-97-ea-b3-a0--ec-9d-bc-ed-95-98-eb-a9-b4--ec-95-88-eb-90-98-eb-82-98-ec-9a-94/">바지벗고 일하면 안되나요?</a> 등등의 책들을 재밌게 읽었다.</p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/2015/" class="post-tag">#2015</a>
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/open-source/" class="post-tag">#open-source</a>
-        
-            <a href="/tags/project-showcase/" class="post-tag">#project-showcase</a>
-        
-            <a href="/tags/python/" class="post-tag">#python</a>
-        
-            <a href="/tags/안성현/" class="post-tag">#안성현</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

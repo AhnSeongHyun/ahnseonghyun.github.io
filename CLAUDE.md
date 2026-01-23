@@ -1,127 +1,78 @@
-# 블로그 개선 프로젝트 - 컨텍스트 문서
+# CLAUDE.md
 
-## 📊 블로그 현황 분석 (2026-01-17)
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-### 기본 정보
-- **총 포스트**: 963개
-- **2020년 이후**: 72개 (7.5%)
-- **빌드 시스템**: zvc (직접 제작한 정적 사이트 생성기)
-- **배포**: GitHub Pages
-- **도메인**: https://ash84.io
+## Build Commands
 
-### 연도별 포스팅 추이
-```
-2020년: 14개
-2021년: 3개  (CTO 취임 후 바쁜 시기)
-2022년: 9개
-2023년: 18개 ✅ (급증)
-2024년: 18개 ✅ (유지)
-2025년: 9개
-2026년: 2개 (최신)
-```
-
-## 🏗️ 현재 시스템 구조
-
-### 디렉토리 구조
-```
-ahnseonghyun.github.io/
-├── contents/          # 마크다운 원본
-│   └── {post-name}/
-│       └── {post-name}.md
-├── docs/             # 빌드된 HTML (GitHub Pages 서빙)
-│   └── {year}/
-│       └── {post-name}/
-│           └── index.html
-├── themes/
-│   └── solopreneur/
-│       ├── index.html   # 메인 페이지
-│       ├── post.html    # 포스트 템플릿
-│       └── footer.html
-└── Makefile
-```
-
-### 빌드 프로세스
 ```bash
-make build
-  → zvc build (마크다운 → HTML 변환)
-  → CNAME 파일 생성
-  → ads.txt 생성
+make build    # Full build: zvc + tags + sitemap + robots.txt + CNAME + ads.txt
+make clean    # Remove generated files in docs/
+make run      # Build and serve locally at http://localhost:8000
+make tags     # Generate tag pages only
+make new NAME=post-name   # Create new post at contents/post-name/post-name.md
 ```
 
-### 마크다운 Frontmatter 형식
+Package manager: `uv` (Python UV). All Python commands run via `uv run`.
+
+## Architecture
+
+This is a personal tech blog (ash84.io) built with **zvc** (custom static site generator, v0.1.5).
+
+### Directory Structure
+
+- `contents/` - Markdown source files, each in its own directory: `contents/{post-name}/{post-name}.md`
+- `docs/` - Generated HTML (served by GitHub Pages). URL structure: `/YYYY/MM/DD/{post-name}/`
+- `themes/solopreneur/` - Jinja2 templates (`index.html`, `post.html`, `tag.html`, `tags-index.html`, `footer.html`)
+- `scripts/` - Build utilities (sitemap, tags, robots.txt generation)
+
+### Build Pipeline
+
+1. `zvc build` - Parses frontmatter, converts markdown to HTML using `themes/solopreneur/post.html`
+2. `generate_tags.py` - Creates `/docs/tags/{tag}/index.html` pages
+3. `generate_sitemap.py` - Creates `/docs/sitemap.xml`
+4. `generate_robots.py` - Creates `/docs/robots.txt`
+5. CNAME and ads.txt files written for GitHub Pages
+
+### Frontmatter Format
+
 ```yaml
 ---
-title: '포스트 제목'
+title: 'Post Title'
 author: 'ash84'
 pub_date: '2026-01-10'
-description: '포스트 설명'
-featured_image: 'image.jpg'  # 선택사항
+description: 'Post description for SEO and listings'
+featured_image: 'image.jpg'  # optional
 tags: ['dev', 'essay', 'cto']
 ---
 ```
 
-## 💎 블로그 컨텐츠 강점
+The `pub_date` determines the output URL path (`/YYYY/MM/DD/post-name/`).
 
-### 1. 진정성 있는 개인 내러티브
-- 대학원 고민, 블로그로 프로젝트 수주 경험
-- 시골 포도나무 가꾸기 같은 일상 이야기
-- 기술과 삶의 균형을 담은 이야기
+### Template Variables
 
-### 2. 실무 경험 기반 구체성
-- CTO로서 조직 운영 경험 (2020-2024)
-- 시리즈 C까지 경험한 스타트업 성장 과정
-- 구체적인 수치와 Before/After 포함
+In `post.html`: `post` object with `title`, `author`, `pub_date`, `description`, `featured_image`, `path`, `content`; `tag_list` array; `settings` from config.yaml.
 
-### 3. 대표 콘텐츠 카테고리
+## Configuration
 
-**CTO/리더십 회고록**
-- 월간 회고 (2024년 시작)
-- 연간 회고 (2021 CTO 회고 등)
-- 1on1, 데일리 스크럼, 의사결정 회의 시스템 소개
+- `config.yaml` - Site settings (theme name, blog title/description/author, publication path)
+- `pyproject.toml` - Python 3.12+, depends on `zvc==0.1.5`
 
-**실무 개발 노하우**
-- Postman pre-request/post-response 활용
-- Flask logger & decorator
-- Ground Rule 문서화
-- 라이브 코딩 테스트 팁
+## Deployment
 
-**스타트업 성장 경험담**
-- "MVP의 늪" - 제품 개발의 딜레마
-- 채용, 조직 확장, 기술 부채 관리
-- 개발자 면접 100명 보며 배운 것
+Push to `main` branch triggers GitHub Pages deployment from `docs/` directory. Domain: ash84.io
 
-## ✅ 잘 되어 있는 것
+---
 
-1. Google Analytics 연동 (UA-71946262-1)
-2. Google Adsense 연동 (pub-8699046198561974)
-3. 기본 메타 태그 (title, description)
-4. Open Graph 태그
-5. 모바일 반응형 디자인
-6. 코드 하이라이팅 (highlight.js)
-7. Pretendard 폰트 적용
+## SEO Improvement Plan
 
-## ⚠️ 개선이 필요한 것
+### Current Status (2026-01-17)
+- **Total posts**: 963
+- **Implemented**: Google Analytics, AdSense, meta tags, OG tags, responsive design, code highlighting, sitemap.xml, tag pages
+- **Pending**: Schema.org structured data, RSS feed, related posts, series feature
 
-### SEO 측면
-- [ ] 구조화된 데이터 (Schema.org) 없음
-- [ ] sitemap.xml 자동 생성 안됨
-- [ ] RSS feed 없음
-- [ ] 태그별 페이지 없음
-- [ ] 시리즈/카테고리 구조 없음
-- [ ] 관련 포스트 추천 없음
+### Priority Tasks
 
-### 콘텐츠 측면
-- [ ] 제목에 검색 키워드 최적화 부족
-- [ ] 메타 description이 포스트 첫 줄로 자동 생성됨
-- [ ] 태그가 링크가 아닌 텍스트
-- [ ] 내부 링크 구조 약함
-
-## 🎯 SEO 개선 우선순위
-
-### Phase 1: 즉시 효과 (1시간 이내)
-
-#### 1. post.html에 구조화된 데이터 추가
-위치: `themes/solopreneur/post.html` 30번째 줄 `<title>` 뒤
+**Phase 1 - Add structured data to `post.html`:**
 ```html
 <script type="application/ld+json">
 {
@@ -129,184 +80,12 @@ tags: ['dev', 'essay', 'cto']
   "@type": "BlogPosting",
   "headline": "{{ post.title }}",
   "description": "{{ post.description | clean }}",
-  "author": {
-    "@type": "Person",
-    "name": "{{ post.author }}",
-    "url": "https://ash84.io"
-  },
-  "datePublished": "{{ post.pub_date }}",
-  "dateModified": "{{ post.pub_date }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ash84.io/{{ post.path }}"
-  },
-  {% if post.featured_image %}
-  "image": "https://ash84.io/{{ post.path }}/{{ post.featured_image }}",
-  {% endif %}
-  "publisher": {
-    "@type": "Organization",
-    "name": "ASH84",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ash84.io/assets/logo.png"
-    }
-  }
+  "author": { "@type": "Person", "name": "{{ post.author }}" },
+  "datePublished": "{{ post.pub_date }}"
 }
 </script>
-
-<meta property="article:published_time" content="{{ post.pub_date }}" />
-<meta property="article:author" content="{{ post.author }}" />
-{% for tag in tag_list %}
-<meta property="article:tag" content="{{ tag }}" />
-{% endfor %}
 ```
 
-#### 2. sitemap.xml 자동 생성
-파일: `scripts/generate_sitemap.py` 생성 필요
-Makefile의 build 타겟에 추가 필요
+**Phase 2 - RSS feed generation** (requires new script and template)
 
-#### 3. Google Search Console에 sitemap 제출
-URL: https://search.google.com/search-console
-
-### Phase 2: 반나절 작업
-
-#### 4. RSS feed 생성
-- `themes/solopreneur/rss.xml` 템플릿 생성
-- zvc에서 RSS 생성 기능 추가
-- index.html에 RSS 링크 추가
-
-#### 5. 태그 페이지 기능
-- zvc에 태그별 페이지 생성 기능 추가
-- `themes/solopreneur/tag.html` 템플릿 생성
-- post.html의 태그를 링크로 변경
-
-#### 6. 기존 인기글 메타 description 개선
-대상 글:
-- "2021 회고 : CTO로서 1년"
-- "MVP의 늪"
-- "라이브 코딩 테스트를 위한 조언"
-- "블로그 하면서 생긴 최고의 일"
-- "그라운드 룰"
-
-### Phase 3: 1-2주 기능 확장
-
-#### 7. 관련 포스트 추천
-- 같은 태그를 가진 글 추천
-- post.html에 관련 글 섹션 추가
-
-#### 8. 시리즈 기능
-frontmatter에 추가:
-```yaml
-series: 'CTO 회고록'
-series_order: 1
-```
-
-#### 9. 태그별/시리즈별 OG 이미지 자동 생성
-
-## 📝 즉시 작성 가능한 포스팅 주제 (SEO 친화적)
-
-1. "스타트업 CTO가 Datadog에 월 XXX만원 쓰는 이유"
-2. "주니어 개발자 면접 100명 보고 배운 것들"
-3. "코파운더 CTO로 5년, 솔직한 연봉과 스톡옵션 이야기"
-4. "1인 개발자 → 20명 조직장까지, 놓쳤던 것들"
-5. "Github Flow로 배포 에러율 줄이기: 6개월 실험 결과"
-6. "개발자 채용 바를 낮추지 말아야 하는 이유 (데이터 포함)"
-7. "시리즈C 스타트업의 기술 부채 관리법"
-8. "CTO의 번아웃: 환청을 듣고 배운 것"
-9. "병역특례 개발자 채용 A to Z (실전 가이드)"
-10. "주간보고 회의 → 노션 문서로, 7시간을 아낀 방법"
-
-## 🚀 실행 가능한 개선 예시
-
-### 제목 개선 Before/After
-
-```yaml
-# Before
-title: '2021 회고 : CTO로서 1년'
-description: '- **2020년 12월 TechAssemble 진행**...'
-
-# After
-title: '스타트업 CTO 1년 회고 - 조직 5배 성장시키며 배운 것들'
-description: '초보 CTO가 1년간 개발 조직을 2명→10명으로 성장시키며 겪은 시행착오. 1on1, 배포 프로세스, 면접 시스템 구축 실전 경험 공유'
-```
-
-```yaml
-# Before
-title: 'MVP의 늪'
-description: '두번째 스타트업을 다니면서...'
-
-# After
-title: 'MVP의 늪 - 스타트업이 계속 신제품 만들다 망하는 이유'
-description: '시리즈C까지 성장하며 겪은 MVP 전략의 3가지 함정. 운영 이슈, 리소스 분산, 개발자 이탈까지. 실전 사례와 해결책 공유'
-```
-
-## 🔧 zvc 수정이 필요한 부분
-
-1. **sitemap.xml 생성**
-   - 모든 포스트 URL 수집
-   - XML 형식으로 출력
-
-2. **RSS feed 생성**
-   - 최신 20개 포스트 수집
-   - RSS 2.0 형식으로 출력
-
-3. **태그 페이지 생성**
-   - 태그별로 포스트 그룹핑
-   - `/tags/{tag-name}/index.html` 생성
-
-4. **관련 포스트 추천**
-   - 같은 태그를 가진 글 찾기
-   - post 변수에 related_posts 전달
-
-5. **시리즈 기능**
-   - frontmatter에서 series, series_order 파싱
-   - 같은 시리즈의 이전/다음 글 찾기
-   - post 변수에 prev_in_series, next_in_series 전달
-
-## 📈 성공 지표
-
-### 단기 (1-3개월)
-- Google Search Console 노출수 2배 증가
-- 평균 검색 순위 10위권 진입 키워드 5개 이상
-- 직접 유입(Direct) 대비 검색 유입 비율 증가
-
-### 중기 (3-6개월)
-- 월간 방문자 1,000명 달성
-- 핵심 키워드("CTO 회고", "스타트업 개발 조직") 1페이지 노출
-- 외부 사이트에서 백링크 10개 이상
-
-### 장기 (6-12개월)
-- 월간 방문자 5,000명 달성
-- 기술 블로그 커뮤니티에서 자주 인용
-- 컨퍼런스/팟캐스트 초대
-
-## 💡 핵심 전략
-
-> **당신의 가장 큰 자산: "진솔함"과 "구체성"**
->
-> 많은 기술 블로그가 튜토리얼 수준인데, 이 블로그는:
-> - 실제 돈을 벌고 조직을 키운 경험
-> - 실패와 고민을 숨기지 않는 솔직함
-> - 숫자와 사례가 있는 구체성
->
-> 이 DNA를 유지하면서 **검색 가능성**만 높이면 됨
-
-## 📚 참고 자료
-
-### 현재 사용 중인 도구
-- zvc 0.1.5 (정적 사이트 생성기)
-- Python 3.12+
-- Jinja2 템플릿
-- Pygments (코드 하이라이팅)
-- highlight.js (프론트엔드 하이라이팅)
-
-### 유용한 링크
-- Google Search Console: https://search.google.com/search-console
-- Schema.org BlogPosting: https://schema.org/BlogPosting
-- RSS 2.0 Spec: https://www.rssboard.org/rss-specification
-- Sitemap Protocol: https://www.sitemaps.org/protocol.html
-
----
-
-**마지막 업데이트**: 2026-01-17
-**분석자**: Claude (Sonnet 4.5)
+**Phase 3 - Related posts and series features** (requires zvc modifications)

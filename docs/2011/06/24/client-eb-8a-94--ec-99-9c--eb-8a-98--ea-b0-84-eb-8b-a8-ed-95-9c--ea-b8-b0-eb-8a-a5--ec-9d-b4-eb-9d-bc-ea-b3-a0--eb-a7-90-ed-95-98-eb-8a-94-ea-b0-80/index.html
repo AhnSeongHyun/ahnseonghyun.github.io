@@ -1,77 +1,128 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>Client는 왜 늘 "간단한 기능" 이라고 말하는가? - ASH84</title>
+    <meta name="description" content="자체 제작하는 프로그램 혹은 내부 하드웨어 제품을 개발하기 위한 프로그램이 아닌 이상에는 대부분 프로그램 개발에는 클라이언트라는 사람들이 존재한다. 속된말로 “갑” 혹은 물주, 발주처, 돈을 주는 사람 이런 사람들로 불리우는 사람들 말이다. 프로그램 외주 일을 몇번 하면서 몇명의 클라이언트들을 만나 보았다. 사장님도 있었고, 발명가도 있었고, 교수님도 있었는데, 그들의 공통점은 첫 마디가" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2011/06/24/client-eb-8a-94--ec-99-9c--eb-8a-98--ea-b0-84-eb-8b-a8-ed-95-9c--ea-b8-b0-eb-8a-a5--ec-9d-b4-eb-9d-bc-ea-b3-a0--eb-a7-90-ed-95-98-eb-8a-94-ea-b0-80/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="Client는 왜 늘 "간단한 기능" 이라고 말하는가?"/>
+    <meta property="og:description" content="자체 제작하는 프로그램 혹은 내부 하드웨어 제품을 개발하기 위한 프로그램이 아닌 이상에는 대부분 프로그램 개발에는 클라이언트라는 사람들이 존재한다. 속된말로 “갑” 혹은 물주, 발주처, 돈을 주는 사람 이런 사람들로 불리우는 사람들 말이다. 프로그램 외주 일을 몇번 하면서 몇명의 클라이언트들을 만나 보았다. 사장님도 있었고, 발명가도 있었고, 교수님도 있었는데, 그들의 공통점은 첫 마디가"/>
+    <meta property="og:url" content="https://ash84.io/2011/06/24/client-eb-8a-94--ec-99-9c--eb-8a-98--ea-b0-84-eb-8b-a8-ed-95-9c--ea-b8-b0-eb-8a-a5--ec-9d-b4-eb-9d-bc-ea-b3-a0--eb-a7-90-ed-95-98-eb-8a-94-ea-b0-80/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="간단한 기능" />
+    
+    <meta property="article:tag" content="소프트웨어 공학" />
+    
+    <meta property="article:tag" content="요구사항" />
+    
+    <meta property="article:tag" content="programmer" />
+    
+    <meta property="article:tag" content="essay" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="Client는 왜 늘 "간단한 기능" 이라고 말하는가?"/>
+    <meta name="twitter:description" content="자체 제작하는 프로그램 혹은 내부 하드웨어 제품을 개발하기 위한 프로그램이 아닌 이상에는 대부분 프로그램 개발에는 클라이언트라는 사람들이 존재한다. 속된말로 “갑” 혹은 물주, 발주처, 돈을 주는 사람 이런 사람들로 불리우는 사람들 말이다. 프로그램 외주 일을 몇번 하면서 몇명의 클라이언트들을 만나 보았다. 사장님도 있었고, 발명가도 있었고, 교수님도 있었는데, 그들의 공통점은 첫 마디가"/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Client는 왜 늘 "간단한 기능" 이라고 말하는가?",
+        "description": "자체 제작하는 프로그램 혹은 내부 하드웨어 제품을 개발하기 위한 프로그램이 아닌 이상에는 대부분 프로그램 개발에는 클라이언트라는 사람들이 존재한다. 속된말로 “갑” 혹은 물주, 발주처, 돈을 주는 사람 이런 사람들로 불리우는 사람들 말이다. 프로그램 외주 일을 몇번 하면서 몇명의 클라이언트들을 만나 보았다. 사장님도 있었고, 발명가도 있었고, 교수님도 있었는데, 그들의 공통점은 첫 마디가",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2011/06/24/client-eb-8a-94--ec-99-9c--eb-8a-98--ea-b0-84-eb-8b-a8-ed-95-9c--ea-b8-b0-eb-8a-a5--ec-9d-b4-eb-9d-bc-ea-b3-a0--eb-a7-90-ed-95-98-eb-8a-94-ea-b0-80"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - Client는 왜 늘 "간단한 기능" 이라고 말하는가?"/>
-    <meta property="og:description" content="자체 제작하는 프로그램 혹은 내부 하드웨어 제품을 개발하기 위한 프로그램이 아닌 이상에는 대부분 프로그램 개발에는 클라이언트라는 사람들이 존재한다. 속된말로 “갑” 혹은 물주, 발주처, 돈을 주는 사람 이런 사람들로 불리우는 사람들 말이다. 프로그램 외주 일을 몇번 하면서 몇명의 클라이언트들을 만나 보았다. 사장님도 있었고, 발명가도 있었고, 교수님도 있었는데, 그들의 공통점은 첫 마디가"/>
-    <meta property="og:url" content="https://ash84.io/docs/2011/06/24/client-eb-8a-94--ec-99-9c--eb-8a-98--ea-b0-84-eb-8b-a8-ed-95-9c--ea-b8-b0-eb-8a-a5--ec-9d-b4-eb-9d-bc-ea-b3-a0--eb-a7-90-ed-95-98-eb-8a-94-ea-b0-80"/>
-    <meta property="og:image" content="https://ash84.io/docs/2011/06/24/client-eb-8a-94--ec-99-9c--eb-8a-98--ea-b0-84-eb-8b-a8-ed-95-9c--ea-b8-b0-eb-8a-a5--ec-9d-b4-eb-9d-bc-ea-b3-a0--eb-a7-90-ed-95-98-eb-8a-94-ea-b0-80/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>Client는 왜 늘 "간단한 기능" 이라고 말하는가?</title>
-    <meta name="description" content="자체 제작하는 프로그램 혹은 내부 하드웨어 제품을 개발하기 위한 프로그램이 아닌 이상에는 대부분 프로그램 개발에는 클라이언트라는 사람들이 존재한다. 속된말로 “갑” 혹은 물주, 발주처, 돈을 주는 사람 이런 사람들로 불리우는 사람들 말이다. 프로그램 외주 일을 몇번 하면서 몇명의 클라이언트들을 만나 보았다. 사장님도 있었고, 발명가도 있었고, 교수님도 있었는데, 그들의 공통점은 첫 마디가" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">Client는 왜 늘 "간단한 기능" 이라고 말하는가?</h1>
-    <div class="blog-post-meta"> 
-        <small>  2011-06-24</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2011-06-24</time>
+            <h1 class="post-title">Client는 왜 늘 "간단한 기능" 이라고 말하는가?</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/간단한 기능/" class="tag">간단한 기능</a>
+                
+                <a href="/tags/소프트웨어 공학/" class="tag">소프트웨어 공학</a>
+                
+                <a href="/tags/요구사항/" class="tag">요구사항</a>
+                
+                <a href="/tags/programmer/" class="tag">programmer</a>
+                
+                <a href="/tags/essay/" class="tag">essay</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <p>자체 제작하는 프로그램 혹은 내부 하드웨어 제품을 개발하기 위한 프로그램이 아닌 이상에는 대부분 프로그램 개발에는 클라이언트라는 사람들이 존재한다. 속된말로 “갑” 혹은 물주, 발주처, 돈을 주는 사람 이런 사람들로 불리우는 사람들 말이다. 프로그램 외주 일을 몇번 하면서 몇명의 클라이언트들을 만나 보았다. 사장님도 있었고, 발명가도 있었고, 교수님도 있었는데, 그들의 공통점은 첫 마디가 </p>
+        
+
+        <div class="post-content">
+            <p>자체 제작하는 프로그램 혹은 내부 하드웨어 제품을 개발하기 위한 프로그램이 아닌 이상에는 대부분 프로그램 개발에는 클라이언트라는 사람들이 존재한다. 속된말로 “갑” 혹은 물주, 발주처, 돈을 주는 사람 이런 사람들로 불리우는 사람들 말이다. 프로그램 외주 일을 몇번 하면서 몇명의 클라이언트들을 만나 보았다. 사장님도 있었고, 발명가도 있었고, 교수님도 있었는데, 그들의 공통점은 첫 마디가 </p>
 <p>**“아주 간단한 거야”  **</p>
 <p>라는 것이다. 처음에 들으면 간단하다. 이리저리 옮길수 있었으면 좋겠고, 사진에 손가락을 누르면 그냥 쫙 넘어가면돼요 등등등. 그들의 설명을 들으면 굉장히 원하는 것은 단순하다. 그리고 나서 얼마가 걸릴지, 어느 정도의 비용이 소요될지를 내게 물어보면, 사실 그 자리에서 확답을 드릴수 없는 것이 현실이다. </p>
 <p>외주 일을 하면서, 가장 중요한 것은 바로 그 시점에 절대 비용과 시간에 대한 애기를 해서는 안된다는 것이다. 그것은 마치 고객이 프로그래머에게 마케팅의 주문을 거는 시점이라고 볼 수 있다. 이건 쉬운거니까, 금방 될거다 라고 말이다. 실제로 필자 역시 그 자리에서 확답을 주었다가 나중에 기간을 연장한적도 있다. 이상하게도 그 자리에서는 프로그램을 개발하는 나 역시 그 기능을 가진 앱이나 프로그램이 별거 아니라고 생각해 버린다. </p>
@@ -83,25 +134,17 @@
 해결해야 하는것일지도 모른다. 때론 고객의 간단한 기능에 대해서 왜 어렵고 쉽지 않은지에 대해서 반론을 제기하는것도 나쁘지 않다고 생각한다. 물론 알아 들을지 모르겠지만. <br />
 결론은 이세상엔 간단한 기능이란 없다는 것이다. 적어도 프로그래머에겐 말이다. 그러므로 절대 고객들의 ‘간단한 기능’이라는 말에 속지 말자. 정말 간단한 기능이라고 치부해 버린다면, 싸게 측정된 비용만큼이나 싼 프로그램 된다고 생각하면, 우리가 MSDN 뒤져가면서 고생하며 공부했던 시간들이 아깝지 않은가. 나에게 미안해 진다. </p>
 <p>PS) 두서없이 썼네요. 주저리주저리. 그래두 간단한 기능은 없습니다.   </p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/간단한 기능/" class="post-tag">#간단한 기능</a>
-        
-            <a href="/tags/소프트웨어 공학/" class="post-tag">#소프트웨어 공학</a>
-        
-            <a href="/tags/요구사항/" class="post-tag">#요구사항</a>
-        
-            <a href="/tags/programmer/" class="post-tag">#programmer</a>
-        
-            <a href="/tags/essay/" class="post-tag">#essay</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

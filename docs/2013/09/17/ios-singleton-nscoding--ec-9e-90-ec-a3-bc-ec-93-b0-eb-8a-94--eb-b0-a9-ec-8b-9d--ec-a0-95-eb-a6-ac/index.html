@@ -1,101 +1,146 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>(iOS) Singleton + NSCoding 자주쓰는 방식 정리 - ASH84</title>
+    <meta name="description" content="자주쓰는 나만의 방식(?) 이라서 정리하는 것인데, Singleton 을 이용하는 이유는 여러 클래스에서 하나의 객체로 접근하고 싶을때 사용하고 NSCoding 라이브러리를 이용해서 encoding, decoding 을 해서 save, load 함수에서는 사실상 아이폰 앱내 설정 `NSUserDefault` 를 이용해서 저장하고 읽어오면 편하" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2013/09/17/ios-singleton-nscoding--ec-9e-90-ec-a3-bc-ec-93-b0-eb-8a-94--eb-b0-a9-ec-8b-9d--ec-a0-95-eb-a6-ac/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) Singleton + NSCoding 자주쓰는 방식 정리"/>
+    <meta property="og:description" content="자주쓰는 나만의 방식(?) 이라서 정리하는 것인데, Singleton 을 이용하는 이유는 여러 클래스에서 하나의 객체로 접근하고 싶을때 사용하고 NSCoding 라이브러리를 이용해서 encoding, decoding 을 해서 save, load 함수에서는 사실상 아이폰 앱내 설정 `NSUserDefault` 를 이용해서 저장하고 읽어오면 편하"/>
+    <meta property="og:url" content="https://ash84.io/2013/09/17/ios-singleton-nscoding--ec-9e-90-ec-a3-bc-ec-93-b0-eb-8a-94--eb-b0-a9-ec-8b-9d--ec-a0-95-eb-a6-ac/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="NSCoding" />
+    
+    <meta property="article:tag" content="NSDictionary" />
+    
+    <meta property="article:tag" content="NSUserDefault" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="ios-development" />
+    
+    <meta property="article:tag" content="singleton" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="(iOS) Singleton + NSCoding 자주쓰는 방식 정리"/>
+    <meta name="twitter:description" content="자주쓰는 나만의 방식(?) 이라서 정리하는 것인데, Singleton 을 이용하는 이유는 여러 클래스에서 하나의 객체로 접근하고 싶을때 사용하고 NSCoding 라이브러리를 이용해서 encoding, decoding 을 해서 save, load 함수에서는 사실상 아이폰 앱내 설정 `NSUserDefault` 를 이용해서 저장하고 읽어오면 편하"/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(iOS) Singleton + NSCoding 자주쓰는 방식 정리",
+        "description": "자주쓰는 나만의 방식(?) 이라서 정리하는 것인데, Singleton 을 이용하는 이유는 여러 클래스에서 하나의 객체로 접근하고 싶을때 사용하고 NSCoding 라이브러리를 이용해서 encoding, decoding 을 해서 save, load 함수에서는 사실상 아이폰 앱내 설정 `NSUserDefault` 를 이용해서 저장하고 읽어오면 편하",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/09/17/ios-singleton-nscoding--ec-9e-90-ec-a3-bc-ec-93-b0-eb-8a-94--eb-b0-a9-ec-8b-9d--ec-a0-95-eb-a6-ac"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - (iOS) Singleton + NSCoding 자주쓰는 방식 정리"/>
-    <meta property="og:description" content="자주쓰는 나만의 방식(?) 이라서 정리하는 것인데, Singleton 을 이용하는 이유는 여러 클래스에서 하나의 객체로 접근하고 싶을때 사용하고 NSCoding 라이브러리를 이용해서 encoding, decoding 을 해서 save, load 함수에서는 사실상 아이폰 앱내 설정 `NSUserDefault` 를 이용해서 저장하고 읽어오면 편하"/>
-    <meta property="og:url" content="https://ash84.io/docs/2013/09/17/ios-singleton-nscoding--ec-9e-90-ec-a3-bc-ec-93-b0-eb-8a-94--eb-b0-a9-ec-8b-9d--ec-a0-95-eb-a6-ac"/>
-    <meta property="og:image" content="https://ash84.io/docs/2013/09/17/ios-singleton-nscoding--ec-9e-90-ec-a3-bc-ec-93-b0-eb-8a-94--eb-b0-a9-ec-8b-9d--ec-a0-95-eb-a6-ac/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>(iOS) Singleton + NSCoding 자주쓰는 방식 정리</title>
-    <meta name="description" content="자주쓰는 나만의 방식(?) 이라서 정리하는 것인데, Singleton 을 이용하는 이유는 여러 클래스에서 하나의 객체로 접근하고 싶을때 사용하고 NSCoding 라이브러리를 이용해서 encoding, decoding 을 해서 save, load 함수에서는 사실상 아이폰 앱내 설정 `NSUserDefault` 를 이용해서 저장하고 읽어오면 편하" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">(iOS) Singleton + NSCoding 자주쓰는 방식 정리</h1>
-    <div class="blog-post-meta"> 
-        <small>  2013-09-17</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2013-09-17</time>
+            <h1 class="post-title">(iOS) Singleton + NSCoding 자주쓰는 방식 정리</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/NSCoding/" class="tag">NSCoding</a>
+                
+                <a href="/tags/NSDictionary/" class="tag">NSDictionary</a>
+                
+                <a href="/tags/NSUserDefault/" class="tag">NSUserDefault</a>
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/ios-development/" class="tag">ios-development</a>
+                
+                <a href="/tags/singleton/" class="tag">singleton</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <script src="https://gist.github.com/AhnSeongHyun/6595420.js"></script>
+        
+
+        <div class="post-content">
+            <script src="https://gist.github.com/AhnSeongHyun/6595420.js"></script>
 
 <p><span style="font-size: 11pt;">자주쓰는 나만의 방식(?) 이라서 정리하는 것인데, Singleton 을 이용하는 이유는 여러 클래스에서 하나의 객체로 접근하고 싶을때 사용하고 NSCoding 라이브러리를 이용해서 encoding, decoding 을 해서 save, load 함수에서는 사실상 아이폰 앱내 설정 <code>NSUserDefault</code> 를 이용해서 저장하고 읽어오면 편하기 때문이다. </span></p>
 <p><span style="font-size: 11pt;">그외의 함수는 실제 가져오는 대상이 <code>NSArray</code>, <code>NSDictionary</code> 냐에 따라 다르긴 한데 함수의 대부분은 사실 이러한 객체들이 가지고 있는 함수명과 비슷하게 쓰는 편이다. 그래야 좀더 구현할때 쉽게 하나의 Objective-C 의 자료구조로 인식하게 되는것 같다. 보통 AppDelegate 에서 처음 앱이 시작할때 Singleton 객체를 생성을 하고 load함수로 저장되어 있는 것을 읽어오면서 시작한다. 그리고 <code>save</code>는 그때그때 다른데 보통 <code>add</code>, <code>remove</code> 이후 하거나 하면 된다. </span></p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/NSCoding/" class="post-tag">#NSCoding</a>
-        
-            <a href="/tags/NSDictionary/" class="post-tag">#NSDictionary</a>
-        
-            <a href="/tags/NSUserDefault/" class="post-tag">#NSUserDefault</a>
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/ios-development/" class="post-tag">#ios-development</a>
-        
-            <a href="/tags/singleton/" class="post-tag">#singleton</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

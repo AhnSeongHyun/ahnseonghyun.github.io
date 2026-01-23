@@ -1,77 +1,104 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>2023 1분기 회고 - ASH84</title>
+    <meta name="description" content="매년 연말회고를 했었는데 시간이 참 빠르게 가는것 같아서 분기별 회고를 올해부터는 해보려고 한다. 지극히 개인적인 내용들일것" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2023/04/23/retrospective-2023-1-quarter/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="2023 1분기 회고"/>
+    <meta property="og:description" content="매년 연말회고를 했었는데 시간이 참 빠르게 가는것 같아서 분기별 회고를 올해부터는 해보려고 한다. 지극히 개인적인 내용들일것"/>
+    <meta property="og:url" content="https://ash84.io/2023/04/23/retrospective-2023-1-quarter/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="2023 1분기 회고"/>
+    <meta name="twitter:description" content="매년 연말회고를 했었는데 시간이 참 빠르게 가는것 같아서 분기별 회고를 올해부터는 해보려고 한다. 지극히 개인적인 내용들일것"/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "2023 1분기 회고",
+        "description": "매년 연말회고를 했었는데 시간이 참 빠르게 가는것 같아서 분기별 회고를 올해부터는 해보려고 한다. 지극히 개인적인 내용들일것",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2023/04/23/retrospective-2023-1-quarter"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - 2023 1분기 회고"/>
-    <meta property="og:description" content="매년 연말회고를 했었는데 시간이 참 빠르게 가는것 같아서 분기별 회고를 올해부터는 해보려고 한다. 지극히 개인적인 내용들일것"/>
-    <meta property="og:url" content="https://ash84.io/docs/2023/04/23/retrospective-2023-1-quarter"/>
-    <meta property="og:image" content="https://ash84.io/docs/2023/04/23/retrospective-2023-1-quarter/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>2023 1분기 회고</title>
-    <meta name="description" content="매년 연말회고를 했었는데 시간이 참 빠르게 가는것 같아서 분기별 회고를 올해부터는 해보려고 한다. 지극히 개인적인 내용들일것" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">2023 1분기 회고</h1>
-    <div class="blog-post-meta"> 
-        <small>  2023-04-23</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2023-04-23</time>
+            <h1 class="post-title">2023 1분기 회고</h1>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <p>매년 연말회고를 했었는데 시간이 참 빠르게 가는것 같아서 분기별 회고를 올해부터는 해보려고 한다. 지극히 개인적인 내용들일것 같긴한데, 이런 과정들을 통해서 좀 더 나은 내가되기를 기대한다. 참고로 나의 목표는 내가 되는것이다. </p>
+        
+
+        <div class="post-content">
+            <p>매년 연말회고를 했었는데 시간이 참 빠르게 가는것 같아서 분기별 회고를 올해부터는 해보려고 한다. 지극히 개인적인 내용들일것 같긴한데, 이런 과정들을 통해서 좀 더 나은 내가되기를 기대한다. 참고로 나의 목표는 내가 되는것이다. </p>
 <h3>코드와 사람</h3>
 <p>코드 작업이 눈에 띄게 줄어들고 있다. CTO가 코딩을 해야하는가에 대한 다른 분들의 글들을 보면 대체적으로 스타트업의 성숙단계에 따라 다르다는 의견이 지배적이다. 다만, 회사가 성장하는 스트림의 한가운데에서 그 변곡지점을 찾기란 쉽지 않은것 같다. 내가 코드를 놓는다고, 심지어 이게 마지막이다 라고 몇번을 선언했지만 실질적으로 잘 되진 않았다. </p>
 <p>그럼에도 불구하고 3월부터는 코드를 쓰는것 그리고 코드를 읽는것이 눈에띄게 줄고 있다. Github의 통계가 이를 증명하고 있다. 회고를 해보자면 그 계기는 사람에 대한 진심어린 관심 그리고 채용과 채용 프로세스 전반에 뛰어들고 부터 시작된 것 같다. </p>
@@ -95,15 +122,17 @@
 <p>생각하고, 고민하고, 처리하기 위한 몰입의 시간이 필요하다. 토막난 4개의 1시간보다느 4시간을 통으로 확보하려고하고 있다. 일을 버려라의 책의 영향인지는 모르겠지만 나의 몰입시간을 챙기려고 하다보니 자연스럽게 다른 사람의 몰입의 시간, 개발자가 마음놓고 개발할 수 있는 환경, 그런 조직의 구조, 프로세스에 대해서 고민하게 되는 것 같다. 예전과 다르게 운영계에서 바로 이슈가 있지 않는 이상에는 최대한 주말에 구성원들을 잘 태그하려고 하지도 않고, 회의전에 무조건 문서로 공유하고, 30분 단위의 회의들을 만들어서 활용하려고 하고 있다. </p>
 <p>-- </p>
 <p>2023년의 1분기가 지났다. 나는 뭘 했나? 라고 반문을 해본다면 조금 더 진심으로 사람에 대해서 신경을 많이 쓰게 된 것 같다는 생각이 든다. 여전히 코딩을 하는게 좋지만 새로운 영역에서 임팩트를 내는것도 재밌는것 같다. 2분기가 기다려진다.</p>
-    </div>
-    <div class="post-tags">
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

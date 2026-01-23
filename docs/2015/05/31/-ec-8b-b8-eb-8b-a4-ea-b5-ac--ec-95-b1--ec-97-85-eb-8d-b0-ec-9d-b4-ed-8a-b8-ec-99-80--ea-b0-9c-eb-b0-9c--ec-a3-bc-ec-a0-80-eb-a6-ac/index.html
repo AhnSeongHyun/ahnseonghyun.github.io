@@ -1,77 +1,120 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>싸다구 앱 업데이트와 개발 주저리 - ASH84</title>
+    <meta name="description" content="[새버전](https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8)에서 어떤 기능이 있는지 여기에서 설명하기 보다는 [INDF(IDEAN AND DOGFOOT)팀 블로그](http://blog.indf.net/)에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2015/05/31/-ec-8b-b8-eb-8b-a4-ea-b5-ac--ec-95-b1--ec-97-85-eb-8d-b0-ec-9d-b4-ed-8a-b8-ec-99-80--ea-b0-9c-eb-b0-9c--ec-a3-bc-ec-a0-80-eb-a6-ac/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="싸다구 앱 업데이트와 개발 주저리"/>
+    <meta property="og:description" content="[새버전](https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8)에서 어떤 기능이 있는지 여기에서 설명하기 보다는 [INDF(IDEAN AND DOGFOOT)팀 블로그](http://blog.indf.net/)에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모"/>
+    <meta property="og:url" content="https://ash84.io/2015/05/31/-ec-8b-b8-eb-8b-a4-ea-b5-ac--ec-95-b1--ec-97-85-eb-8d-b0-ec-9d-b4-ed-8a-b8-ec-99-80--ea-b0-9c-eb-b0-9c--ec-a3-bc-ec-a0-80-eb-a6-ac/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="sada9" />
+    
+    <meta property="article:tag" content="싸다구" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="싸다구 앱 업데이트와 개발 주저리"/>
+    <meta name="twitter:description" content="[새버전](https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8)에서 어떤 기능이 있는지 여기에서 설명하기 보다는 [INDF(IDEAN AND DOGFOOT)팀 블로그](http://blog.indf.net/)에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모"/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "싸다구 앱 업데이트와 개발 주저리",
+        "description": "[새버전](https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8)에서 어떤 기능이 있는지 여기에서 설명하기 보다는 [INDF(IDEAN AND DOGFOOT)팀 블로그](http://blog.indf.net/)에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2015/05/31/-ec-8b-b8-eb-8b-a4-ea-b5-ac--ec-95-b1--ec-97-85-eb-8d-b0-ec-9d-b4-ed-8a-b8-ec-99-80--ea-b0-9c-eb-b0-9c--ec-a3-bc-ec-a0-80-eb-a6-ac"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - 싸다구 앱 업데이트와 개발 주저리"/>
-    <meta property="og:description" content="[새버전](https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8)에서 어떤 기능이 있는지 여기에서 설명하기 보다는 [INDF(IDEAN AND DOGFOOT)팀 블로그](http://blog.indf.net/)에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모"/>
-    <meta property="og:url" content="https://ash84.io/docs/2015/05/31/-ec-8b-b8-eb-8b-a4-ea-b5-ac--ec-95-b1--ec-97-85-eb-8d-b0-ec-9d-b4-ed-8a-b8-ec-99-80--ea-b0-9c-eb-b0-9c--ec-a3-bc-ec-a0-80-eb-a6-ac"/>
-    <meta property="og:image" content="https://ash84.io/docs/2015/05/31/-ec-8b-b8-eb-8b-a4-ea-b5-ac--ec-95-b1--ec-97-85-eb-8d-b0-ec-9d-b4-ed-8a-b8-ec-99-80--ea-b0-9c-eb-b0-9c--ec-a3-bc-ec-a0-80-eb-a6-ac/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>싸다구 앱 업데이트와 개발 주저리</title>
-    <meta name="description" content="[새버전](https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8)에서 어떤 기능이 있는지 여기에서 설명하기 보다는 [INDF(IDEAN AND DOGFOOT)팀 블로그](http://blog.indf.net/)에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">싸다구 앱 업데이트와 개발 주저리</h1>
-    <div class="blog-post-meta"> 
-        <small>  2015-05-31</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2015-05-31</time>
+            <h1 class="post-title">싸다구 앱 업데이트와 개발 주저리</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/sada9/" class="tag">sada9</a>
+                
+                <a href="/tags/싸다구/" class="tag">싸다구</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <p><a href="https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8">새버전</a>에서 어떤 기능이 있는지 여기에서 설명하기 보다는 <a href="http://blog.indf.net/">INDF(IDEAN AND DOGFOOT)팀 블로그</a>에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모았고, 워크샵을 가서 개발회의를 할 정도로 의욕에 차 있었다. 그럼에도 불구하고 1.1.3 버전이 거의 1년 가까이 시간이 걸려버렸다. 몇가지 간단하게 적어보면 문제점은 아래와 같았다.</p>
+        
+
+        <div class="post-content">
+            <p><a href="https://itunes.apple.com/kr/app/ssadagu-imateu-hompeulleoseu/id903061010?mt=8">새버전</a>에서 어떤 기능이 있는지 여기에서 설명하기 보다는 <a href="http://blog.indf.net/">INDF(IDEAN AND DOGFOOT)팀 블로그</a>에 게시될 글을 보면 될것 같다. 여기에서는 개발기라기 보다는, 지극히 개인적으로 느낀점을 적었다. 정말 지극히 개인적임을 미리 알린다. 작년에 버전 1.0 출시이후, 싸다구 앱은 꽤 많은 사용자(우리가 생각하기엔, 근데 서버는 멀쩡)를 모았고, 워크샵을 가서 개발회의를 할 정도로 의욕에 차 있었다. 그럼에도 불구하고 1.1.3 버전이 거의 1년 가까이 시간이 걸려버렸다. 몇가지 간단하게 적어보면 문제점은 아래와 같았다.</p>
 <h2><strong>원격 작업의 문제점</strong></h2>
 <p>– 일정이 맞지가 않았다. 원격작업의 문제점이라기 보다는 팀의 성격이 모호하기도 하고, 스터디와 스타트업도 아닌, 그리고 각자의 회사에서의 작업이 있는지라 사실 일정 맞추기가 쉽지 않았다. 릴리즈 일정만을 못 박는정도? 사실 그 마저도 지켜지지 않았다.</p>
 <p>– 회의를 하고 돌아서면 약간씩 다른 내용을 기억. 이것도 문제이긴 한데, 진도가 나가지 않으니까 오프라인에서 모임을 가졌는데 사실상 그렇게 효율적이진 않았던것같다. 스타트업 얼라이언스 서버 신청 등등, 싸다구 기능을 위한 모임을 해도 회의내용을 적어도 상세 내용을 못박지 않으면 잘 기억이 나지 않더라.</p>
@@ -94,21 +137,17 @@
 <h2><strong>줄이며..</strong></h2>
 <p>주저리 주저리 쓰고 있는 이 밤에도 나는 싸다구의 버그를 고치고 있고, 새로운 기능을 테스트하면서, 주말의 선선한 밤을 보내고 있다. 처음에 출시하기 전에는 ‘이게될까?’ 라고 생각했던 불안감처럼, 지금은 또 다른 불안감에 쌓여져 있다. 어떤 방향으로 나아가야 할지, 우리가 처음에 생각한 방향이 이게 맞는지 등등. 일단 지금은 ‘잘개 쪼개서 업데이트’를 하면서 일단 나부터 먼저 페이스를 찾아가려고 한다. 그리고 사용자의 데이터에 집중하고, 데이터를 해석하는 것도 능력이지만, 좀더 우리가 원하는 것에 집중에서 다음 작업의 우선순위를 정해야하지 않을까? 하는 생각이 든다. 그래도 가만히 있는것 보다는 만들면서 경험하는게 중요하기에.</p>
 <p>ps) 업데이트 할때마다 보통 기능 위주로 쓰는데, 너무 오랜만에 업데이트를 했던거라서 이제서야 이 글을 쓰게되었는데, 주저리 성인것 같다. 쩝.ㅎㅎ 다음엔 좀더 재밌고 활기찬 글을 쓸수 있었으면 하는 바램.</p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/sada9/" class="post-tag">#sada9</a>
-        
-            <a href="/tags/싸다구/" class="post-tag">#싸다구</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

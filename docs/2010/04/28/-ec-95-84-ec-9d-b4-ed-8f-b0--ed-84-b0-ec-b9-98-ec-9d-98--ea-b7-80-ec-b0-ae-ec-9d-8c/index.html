@@ -1,77 +1,128 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title># 아이폰 터치의 귀찮음. - ASH84</title>
+    <meta name="description" content="아이폰을 사용한지도 벌써 근 4개월이 다 되어간다. 탈옥도 해보고 각종 해킹 어플들도 심어보면서 사용하기도 했다. 우연히, 3.13 으로 업그레이드 된 새벽에 모르고 복원 눌러서 지금은 순정을 쓰면서 각종 어플을 사서 쓰고 있지만, 아이폰에 대한 나의 반응은 상당히 만족스럽다.(하지만 요금은 늘 부담. ㅠ)" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2010/04/28/-ec-95-84-ec-9d-b4-ed-8f-b0--ed-84-b0-ec-b9-98-ec-9d-98--ea-b7-80-ec-b0-ae-ec-9d-8c/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="# 아이폰 터치의 귀찮음."/>
+    <meta property="og:description" content="아이폰을 사용한지도 벌써 근 4개월이 다 되어간다. 탈옥도 해보고 각종 해킹 어플들도 심어보면서 사용하기도 했다. 우연히, 3.13 으로 업그레이드 된 새벽에 모르고 복원 눌러서 지금은 순정을 쓰면서 각종 어플을 사서 쓰고 있지만, 아이폰에 대한 나의 반응은 상당히 만족스럽다.(하지만 요금은 늘 부담. ㅠ)"/>
+    <meta property="og:url" content="https://ash84.io/2010/04/28/-ec-95-84-ec-9d-b4-ed-8f-b0--ed-84-b0-ec-b9-98-ec-9d-98--ea-b7-80-ec-b0-ae-ec-9d-8c/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="iOS" />
+    
+    <meta property="article:tag" content="lockinfo" />
+    
+    <meta property="article:tag" content="배경화면" />
+    
+    <meta property="article:tag" content="탈옥" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="# 아이폰 터치의 귀찮음."/>
+    <meta name="twitter:description" content="아이폰을 사용한지도 벌써 근 4개월이 다 되어간다. 탈옥도 해보고 각종 해킹 어플들도 심어보면서 사용하기도 했다. 우연히, 3.13 으로 업그레이드 된 새벽에 모르고 복원 눌러서 지금은 순정을 쓰면서 각종 어플을 사서 쓰고 있지만, 아이폰에 대한 나의 반응은 상당히 만족스럽다.(하지만 요금은 늘 부담. ㅠ)"/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "# 아이폰 터치의 귀찮음.",
+        "description": "아이폰을 사용한지도 벌써 근 4개월이 다 되어간다. 탈옥도 해보고 각종 해킹 어플들도 심어보면서 사용하기도 했다. 우연히, 3.13 으로 업그레이드 된 새벽에 모르고 복원 눌러서 지금은 순정을 쓰면서 각종 어플을 사서 쓰고 있지만, 아이폰에 대한 나의 반응은 상당히 만족스럽다.(하지만 요금은 늘 부담. ㅠ)",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2010/04/28/-ec-95-84-ec-9d-b4-ed-8f-b0--ed-84-b0-ec-b9-98-ec-9d-98--ea-b7-80-ec-b0-ae-ec-9d-8c"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - # 아이폰 터치의 귀찮음."/>
-    <meta property="og:description" content="아이폰을 사용한지도 벌써 근 4개월이 다 되어간다. 탈옥도 해보고 각종 해킹 어플들도 심어보면서 사용하기도 했다. 우연히, 3.13 으로 업그레이드 된 새벽에 모르고 복원 눌러서 지금은 순정을 쓰면서 각종 어플을 사서 쓰고 있지만, 아이폰에 대한 나의 반응은 상당히 만족스럽다.(하지만 요금은 늘 부담. ㅠ)"/>
-    <meta property="og:url" content="https://ash84.io/docs/2010/04/28/-ec-95-84-ec-9d-b4-ed-8f-b0--ed-84-b0-ec-b9-98-ec-9d-98--ea-b7-80-ec-b0-ae-ec-9d-8c"/>
-    <meta property="og:image" content="https://ash84.io/docs/2010/04/28/-ec-95-84-ec-9d-b4-ed-8f-b0--ed-84-b0-ec-b9-98-ec-9d-98--ea-b7-80-ec-b0-ae-ec-9d-8c/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title># 아이폰 터치의 귀찮음.</title>
-    <meta name="description" content="아이폰을 사용한지도 벌써 근 4개월이 다 되어간다. 탈옥도 해보고 각종 해킹 어플들도 심어보면서 사용하기도 했다. 우연히, 3.13 으로 업그레이드 된 새벽에 모르고 복원 눌러서 지금은 순정을 쓰면서 각종 어플을 사서 쓰고 있지만, 아이폰에 대한 나의 반응은 상당히 만족스럽다.(하지만 요금은 늘 부담. ㅠ)" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title"># 아이폰 터치의 귀찮음.</h1>
-    <div class="blog-post-meta"> 
-        <small>  2010-04-28</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2010-04-28</time>
+            <h1 class="post-title"># 아이폰 터치의 귀찮음.</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/iOS/" class="tag">iOS</a>
+                
+                <a href="/tags/lockinfo/" class="tag">lockinfo</a>
+                
+                <a href="/tags/배경화면/" class="tag">배경화면</a>
+                
+                <a href="/tags/탈옥/" class="tag">탈옥</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
+        
+
+        <div class="post-content">
+            <div style="TEXT-ALIGN: justify; LINE-HEIGHT: 2">  
 <span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">아이폰을 사용한지도 벌써 근 4개월이 다 되어간다. 탈옥도 해보고 각종 해킹 어플들도 심어보면서 사용하기도 했다. 우연히, 3.13 으로 업그레이드 된 새벽에 모르고 복원 눌러서 지금은 순정을 쓰면서 각종 어플을 사서 쓰고 있지만, 아이폰에 대한 나의 반응은 상당히 만족스럽다.(하지만 요금은 늘 부담. ㅠ)</span></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">아이폰을 사용하면서, 아니 좀더 정확하게 말하자면 아이폰 순정폰을 사용하면서 가장 불편하게 느낀점을 이번 글에 쓰려고 한다. 무슨 불편한게 있을까? 싶긴 하지만, 최고의 스마트 폰인 아이폰도 불편하게 없을수는 없다. </span></span>
 
 <span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">배터리 문제, A/S 등등 하드웨어나 정책적인 부분에 대한 불평불만은 늘어놓고 싶지 않다. 어차피 그걸 알고 구매했고, 그걸알고도 나는 아이폰에 10점 만점에 9점을 주고 싶다. 내가 생각하는 아이폰의 가장 큰 문제점은 바로 이것이다. </span></span>
@@ -101,25 +152,17 @@
 </font></div>  
 </font></span><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Dotum">알림 이라는 아이폰의 고유 기능이 있긴 하지만, 아이폰 위에 숫자를 표시하는 것으로는 부족하다고 생각한다. 스마트폰은 스마트 해야한다. 사람들은 지금 아이폰이 스마트 폰이라고 생각할 지도 모르지만, 5년 후에는 그렇지 않을수도 있다. 때문에 사람들이 원하고, 갈망하는 기능에 대해서는 애플에서 좀더 주목해야한다고 생각한다. 그러한 갈망이 결국 탈옥 폰이라는 것을 탄생시킨것 처럼 말이다. </span></span>  
 </div></div>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/iOS/" class="post-tag">#iOS</a>
-        
-            <a href="/tags/lockinfo/" class="post-tag">#lockinfo</a>
-        
-            <a href="/tags/배경화면/" class="post-tag">#배경화면</a>
-        
-            <a href="/tags/탈옥/" class="post-tag">#탈옥</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

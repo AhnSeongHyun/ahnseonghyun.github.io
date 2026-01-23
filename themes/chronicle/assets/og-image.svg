@@ -1,0 +1,26 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000"/>
+
+  <!-- Main Text -->
+  <text x="60" y="180" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="90" font-weight="700" fill="#FFFFFF" letter-spacing="-3">
+    I WRITE CODE,
+  </text>
+  <text x="60" y="280" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="90" font-weight="700" fill="#FFFFFF" letter-spacing="-3">
+    MAKE THINGS,
+  </text>
+  <text x="60" y="380" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="90" font-weight="700" fill="#FFFFFF" letter-spacing="-3">
+    &amp; LEARN FROM
+  </text>
+  <text x="60" y="480" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="90" font-weight="700" fill="#FFFFFF" letter-spacing="-3">
+    FAILURE.
+  </text>
+
+  <!-- Logo/Name -->
+  <text x="60" y="580" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="24" font-weight="500" fill="#666666" letter-spacing="2">
+    ASH84.IO
+  </text>
+
+  <!-- Decorative line -->
+  <rect x="1140" y="60" width="4" height="510" fill="#FFFFFF"/>
+</svg>

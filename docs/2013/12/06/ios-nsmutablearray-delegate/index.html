@@ -1,77 +1,136 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>(iOS) NSMutableArray + Delegate - ASH84</title>
+    <meta name="description" content="별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 `NSMutableArray` 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의  `NSMutableArray` 를 감싸서(wrapping) 사용하는데 주로 singlet" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2013/12/06/ios-nsmutablearray-delegate/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) NSMutableArray + Delegate"/>
+    <meta property="og:description" content="별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 `NSMutableArray` 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의  `NSMutableArray` 를 감싸서(wrapping) 사용하는데 주로 singlet"/>
+    <meta property="og:url" content="https://ash84.io/2013/12/06/ios-nsmutablearray-delegate/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="NSMutableArray" />
+    
+    <meta property="article:tag" content="Objective-C" />
+    
+    <meta property="article:tag" content="delegate" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="iOS" />
+    
+    <meta property="article:tag" content="ios-development" />
+    
+    <meta property="article:tag" content="요청 큐" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="(iOS) NSMutableArray + Delegate"/>
+    <meta name="twitter:description" content="별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 `NSMutableArray` 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의  `NSMutableArray` 를 감싸서(wrapping) 사용하는데 주로 singlet"/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(iOS) NSMutableArray + Delegate",
+        "description": "별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 `NSMutableArray` 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의  `NSMutableArray` 를 감싸서(wrapping) 사용하는데 주로 singlet",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/12/06/ios-nsmutablearray-delegate"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - (iOS) NSMutableArray + Delegate"/>
-    <meta property="og:description" content="별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 `NSMutableArray` 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의  `NSMutableArray` 를 감싸서(wrapping) 사용하는데 주로 singlet"/>
-    <meta property="og:url" content="https://ash84.io/docs/2013/12/06/ios-nsmutablearray-delegate"/>
-    <meta property="og:image" content="https://ash84.io/docs/2013/12/06/ios-nsmutablearray-delegate/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>(iOS) NSMutableArray + Delegate</title>
-    <meta name="description" content="별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 `NSMutableArray` 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의  `NSMutableArray` 를 감싸서(wrapping) 사용하는데 주로 singlet" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">(iOS) NSMutableArray + Delegate</h1>
-    <div class="blog-post-meta"> 
-        <small>  2013-12-06</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2013-12-06</time>
+            <h1 class="post-title">(iOS) NSMutableArray + Delegate</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/NSMutableArray/" class="tag">NSMutableArray</a>
+                
+                <a href="/tags/Objective-C/" class="tag">Objective-C</a>
+                
+                <a href="/tags/delegate/" class="tag">delegate</a>
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/iOS/" class="tag">iOS</a>
+                
+                <a href="/tags/ios-development/" class="tag">ios-development</a>
+                
+                <a href="/tags/요청 큐/" class="tag">요청 큐</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <p><span style="font-size: 11pt;">별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 <code>NSMutableArray</code> 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의 </span><span style="background-color: transparent; font-size: 11pt; line-height:2;"> <code>NSMutableArray</code> 를 감싸서(wrapping) 사용하는데 주로 singleton 과 delegate 를 결합해서 사용한다. 단연 이점이라면 하나의 아이폰 앱내에 하나의 객체만을 가지고 add, remove, get 하는 식으로 어떤 요청객체 들을 넣고 관리 할수 있다는것이 장점이다. 내부적으로 <code>NSMutableArray</code> 객체를 하나를 가지고 그에 접근할수 있는 add, remove, get 등의 함수를 만들고 그 함수에서 어떤 처리를 했을때, 등록된 delegate를 호출하게 되는 방식이다. 그렇게 되면 add 를 하는 객체는 add 를 하고 다음 로직을 진행하고 add가 되었다는 것을 알게된 다른 처리 클래스는 delegate 가 발생되었을때 그에따른 처리를 할 수 있다. </span></p>
+        
+
+        <div class="post-content">
+            <p><span style="font-size: 11pt;">별 다른건 아니고 Objective-C 에서 데이터를 관리할때 사용하는 자료구조인 <code>NSMutableArray</code> 를 자주 사용하는데 네트워크 요청이나 위치 서비스 요청을 위한 큐(Queue)를 만들때 최근에 주로 사용해 왔다. 특히 하나의 </span><span style="background-color: transparent; font-size: 11pt; line-height:2;"> <code>NSMutableArray</code> 를 감싸서(wrapping) 사용하는데 주로 singleton 과 delegate 를 결합해서 사용한다. 단연 이점이라면 하나의 아이폰 앱내에 하나의 객체만을 가지고 add, remove, get 하는 식으로 어떤 요청객체 들을 넣고 관리 할수 있다는것이 장점이다. 내부적으로 <code>NSMutableArray</code> 객체를 하나를 가지고 그에 접근할수 있는 add, remove, get 등의 함수를 만들고 그 함수에서 어떤 처리를 했을때, 등록된 delegate를 호출하게 되는 방식이다. 그렇게 되면 add 를 하는 객체는 add 를 하고 다음 로직을 진행하고 add가 되었다는 것을 알게된 다른 처리 클래스는 delegate 가 발생되었을때 그에따른 처리를 할 수 있다. </span></p>
 <p><span style="background-color: transparent; font-size: 9pt; line-height: 2;"><br />
 </span></p>
 <script src="https://gist.github.com/AhnSeongHyun/7818716.js"></script>
@@ -83,29 +142,17 @@
 </span></p>
 <p><img alt="" src="http://ash84.net/wp-content/uploads/1/cfile1.uf.217CE44D52A178491DFA82.png" /></p>
 <p><span style="line-height: 29px; font-size: 15px; text-align: justify;">위의 그림을 보면, 어떤 객체에서 실시간 위치 정보를 받아서 서버에 전송하는 부분을 개발한다고 했을때, 위치정보의 업데이트가 언제 될지 모르기 때문에 어떤 함수를 호출하고 기다리는 것 이 아니라면 위와 같이 어떤 요청 큐에 넣으면 알아서 위치정보를 가져와서 전송해 주는 부분을 개발할 수 있다. (전송결과를 기다리냐 안기다리느냐의 차이가 있을수는 있다.) 그림에서 <code>NotificationRequestList</code> 를 </span><span style="background-color: transparent; font-size: 15px; line-height: 29px;"><code>NSMutableArray + Delegate</code> 방법으로 구현하였고, 그에 따른 delegate 수신을 requestor 클래스에서 받아서 처리하도록 하였다. </span><span style="line-height: 29px; font-size: 15px; background-color: transparent;">같은 방법으로 </span><code>&lt;code style="line-height: 29px; font-size: 15px; background-color: transparent;"&gt;NSMutableDicionary + delegate</code><span style="line-height: 29px; font-size: 15px; background-color: transparent;"> 의 조합도 활용할 수 있을 것이다. </span></p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/NSMutableArray/" class="post-tag">#NSMutableArray</a>
-        
-            <a href="/tags/Objective-C/" class="post-tag">#Objective-C</a>
-        
-            <a href="/tags/delegate/" class="post-tag">#delegate</a>
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/iOS/" class="post-tag">#iOS</a>
-        
-            <a href="/tags/ios-development/" class="post-tag">#ios-development</a>
-        
-            <a href="/tags/요청 큐/" class="post-tag">#요청 큐</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

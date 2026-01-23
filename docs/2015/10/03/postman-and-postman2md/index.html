@@ -1,79 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>postman and postman2md - ASH84</title>
+    <meta name="description" content="## **postman**" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2015/10/03/postman-and-postman2md/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="postman and postman2md"/>
+    <meta property="og:description" content="## **postman**"/>
+    <meta property="og:url" content="https://ash84.io/2015/10/03/postman-and-postman2md/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="postman" />
+    
+    <meta property="article:tag" content="postman to markdown" />
+    
+    <meta property="article:tag" content="python" />
+    
+    <meta property="article:tag" content="tutorial" />
+    
+    
+        
+    <meta property="og:image" content="https://farm1.staticflickr.com/694/21682297821_bf00b22e44_o.png"/>
+        
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="postman and postman2md"/>
+    <meta name="twitter:description" content="## **postman**"/>
+    
+        
+    <meta name="twitter:image" content="https://farm1.staticflickr.com/694/21682297821_bf00b22e44_o.png"/>
+        
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "postman and postman2md",
+        "description": "## **postman**",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2015/10/03/postman-and-postman2md"
+        },
+        
+            
+        "image": "https://farm1.staticflickr.com/694/21682297821_bf00b22e44_o.png",
+            
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - postman and postman2md"/>
-    <meta property="og:description" content="## **postman**"/>
-    <meta property="og:url" content="https://ash84.io/docs/2015/10/03/postman-and-postman2md"/>
-    <meta property="og:image" content="https://ash84.io/docs/2015/10/03/postman-and-postman2md/https://farm1.staticflickr.com/694/21682297821_bf00b22e44_o.png"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>postman and postman2md</title>
-    <meta name="description" content="## **postman**" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">postman and postman2md</h1>
-    <div class="blog-post-meta"> 
-        <small>  2015-10-03</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2015-10-03</time>
+            <h1 class="post-title">postman and postman2md</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/postman/" class="tag">postman</a>
+                
+                <a href="/tags/postman to markdown/" class="tag">postman to markdown</a>
+                
+                <a href="/tags/python/" class="tag">python</a>
+                
+                <a href="/tags/tutorial/" class="tag">tutorial</a>
+                
+            </div>
+            
+        </header>
 
-    
-        <img src="https://farm1.staticflickr.com/694/21682297821_bf00b22e44_o.png" alt="">
-    
-    <div class="blog-post">
-        <h2><strong>postman</strong></h2>
+        
+        <figure class="post-image">
+            <img src="https://farm1.staticflickr.com/694/21682297821_bf00b22e44_o.png" alt="postman and postman2md">
+        </figure>
+        
+
+        <div class="post-content">
+            <h2><strong>postman</strong></h2>
 <p><br/><br />
 <br />
  API 작업을 할때 테스트할수 있는 툴이 필요한데, 쉽게 테스트 할수 있는 <a href="https://www.getpostman.com/">postman</a> 이라는 툴이 있다. 로그인도 필요없고 쉽게 GET, POST 등의 HTTP 기반의 API들을 테스트할수 있다. <strong>특히 history 기능이 있어서 매우 좋은데 언제 들어가더라도 이전에 내가 테스트했던 내역들을 볼 수가 있다.</strong> postman 이 2.0 으로 버전업을 하면서 로그인을 할 수가 있고 collection 이라는 개념을 도입했다. collection 은 기존의 테스트 내역에 대한 집합개념인데, 내가 테스트 했던 것들을 묶어서 관리 할 수가 있다. 그래서 여러 collection 을 만들수 있는데, 특별한 기능중 하나는 collection 즉, 테스트 항목의 집합들을 json 형태로 다운 받는 기능을 제공하고 있다.  <br />
@@ -99,25 +160,17 @@
 <p><img alt="postman9" src="https://farm1.staticflickr.com/714/21682297691_cb9bf4bec2_o.png" /><br />
 <br />
 <img alt="postman11" src="https://farm6.staticflickr.com/5737/21052116343_6d5db1527c_o.png" /></p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/postman/" class="post-tag">#postman</a>
-        
-            <a href="/tags/postman to markdown/" class="post-tag">#postman to markdown</a>
-        
-            <a href="/tags/python/" class="post-tag">#python</a>
-        
-            <a href="/tags/tutorial/" class="post-tag">#tutorial</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

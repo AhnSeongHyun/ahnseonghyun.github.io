@@ -1,79 +1,116 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다. - ASH84</title>
+    <meta name="description" content="몇일 전에 Notion API를 이용해서 노션의 글을 블로그에 자동으로 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2025/07/08/move-to-markdown-based-blog/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다."/>
+    <meta property="og:description" content="몇일 전에 Notion API를 이용해서 노션의 글을 블로그에 자동으로 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고"/>
+    <meta property="og:url" content="https://ash84.io/2025/07/08/move-to-markdown-based-blog/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    
+        
+    <meta property="og:image" content="https://ash84.io/2025/07/08/move-to-markdown-based-blog/image.png"/>
+        
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다."/>
+    <meta name="twitter:description" content="몇일 전에 Notion API를 이용해서 노션의 글을 블로그에 자동으로 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고"/>
+    
+        
+    <meta name="twitter:image" content="https://ash84.io/2025/07/08/move-to-markdown-based-blog/image.png"/>
+        
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다.",
+        "description": "몇일 전에 Notion API를 이용해서 노션의 글을 블로그에 자동으로 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2025/07/08/move-to-markdown-based-blog"
+        },
+        
+            
+        "image": "https://ash84.io/2025/07/08/move-to-markdown-based-blog/image.png",
+            
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - 이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다."/>
-    <meta property="og:description" content="몇일 전에 Notion API를 이용해서 노션의 글을 블로그에 자동으로 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고"/>
-    <meta property="og:url" content="https://ash84.io/docs/2025/07/08/move-to-markdown-based-blog"/>
-    <meta property="og:image" content="https://ash84.io/docs/2025/07/08/move-to-markdown-based-blog/image.png"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다.</title>
-    <meta name="description" content="몇일 전에 Notion API를 이용해서 노션의 글을 블로그에 자동으로 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다.</h1>
-    <div class="blog-post-meta"> 
-        <small>  2025-07-08</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2025-07-08</time>
+            <h1 class="post-title">이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다.</h1>
+            
+        </header>
 
-    
-        <img src="image.png" alt="">
-    
-    <div class="blog-post">
-        <p>몇일 전에 Notion API를 이용해서 노션의 글을 블로그에 자동으로 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고 싶은 생각이 들었다. 그동안 나는 개인적으로 2018년부터 meier 툴라는 자체 제작 블로그 툴을 backend는 flask, frontend는 TOAST UI를 이용해서 admin/backoffice도 같이 만들었고 약 7년간 그것을 통해서 블로그 글을 써왔다. 그렇지만 아쉬웠던 것은 처음 만든 이후에 노션과 옵시디언이 나오면서 더 이상 글을 admin에서 쓰지 않고 노션에서 쓰고 markdown 파일을 다운로드 받아서 그 텍스트를 다시 admin에 옮겨서 저장하는 식으로 작업을 해왔다. 물론 admin에는 draft, private 같은 기능들이 있었다. 이건 wordpress, tistory, ghost 등의 블로그 플랫폼에 있는 기능들을 구현한 것이었다. 그렇지만 노션이나 옵시디언 자체가 별도의 CMS이자 글쓰기 도구로 쓰고 있는 상황에서 이걸 굳이 유지해야 하는가에 대한 생각이 들었다.</p>
+        
+        <figure class="post-image">
+            <img src="image.png" alt="이 블로그는 마크다운 기반 정적 블로그로 전환되었습니다.">
+        </figure>
+        
+
+        <div class="post-content">
+            <p>몇일 전에 Notion API를 이용해서 노션의 글을 블로그에 자동으로 연동하는 얘기가 나와서 찾아보다가, 개인 블로그를 개편하고 싶은 생각이 들었다. 그동안 나는 개인적으로 2018년부터 meier 툴라는 자체 제작 블로그 툴을 backend는 flask, frontend는 TOAST UI를 이용해서 admin/backoffice도 같이 만들었고 약 7년간 그것을 통해서 블로그 글을 써왔다. 그렇지만 아쉬웠던 것은 처음 만든 이후에 노션과 옵시디언이 나오면서 더 이상 글을 admin에서 쓰지 않고 노션에서 쓰고 markdown 파일을 다운로드 받아서 그 텍스트를 다시 admin에 옮겨서 저장하는 식으로 작업을 해왔다. 물론 admin에는 draft, private 같은 기능들이 있었다. 이건 wordpress, tistory, ghost 등의 블로그 플랫폼에 있는 기능들을 구현한 것이었다. 그렇지만 노션이나 옵시디언 자체가 별도의 CMS이자 글쓰기 도구로 쓰고 있는 상황에서 이걸 굳이 유지해야 하는가에 대한 생각이 들었다.</p>
 <h2>지속가능성에 대한 고민</h2>
 <p>또 다른 생각은 지속 가능한가? 라는 관점에서의 고민이 있었다. 개발자를 그만두더라도, 다른 일을 하더라도 블로그는 계속할 것 같은데, 물론 블로그를 운영하는 게 개발적으로 어려운 일은 아니지만 AWS 나 다른 플랫폼에 의존하는것도 귀찮고 언젠가 내가 돈을 못 내면 서버가 내려가고 내 글이 인터넷상에서 사라지지 않을까? 상대적으로 GitHub 그리고 markdown 파일이 더 오래 살아남지 않을까 하는 생각이 들었다. 만약 GitHub가 대체되더라도 markdown 파일만은 나에게 남을 테니. 그런 고민들을 하다가 결국 markdown 기반으로 돌아서기로 했다.</p>
 <h2>도구의 선택</h2>
@@ -128,15 +165,17 @@ publication:
 <li><a href="/2020/01/15/support-emoji">내 블로그에 emoji 를 구해줘😱</a></li>
 <li><a href="/2018/05/31/renew-blog">블로그 툴 이사</a></li>
 </ul>
-    </div>
-    <div class="post-tags">
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

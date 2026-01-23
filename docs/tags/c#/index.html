@@ -1,318 +1,264 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>C# — ASH84</title>
+    <meta name="description" content="C# 태그가 붙은 39개의 글" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/tags/C#/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="C# — ASH84"/>
+    <meta property="og:description" content="C# 태그가 붙은 39개의 글"/>
+    <meta property="og:url" content="https://ash84.io/tags/C#/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:title" content="C# — ASH84"/>
+    <meta name="twitter:description" content="C# 태그가 붙은 39개의 글"/>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-71946262-1');
     </script>
 
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - #C#"/>
-    <meta property="og:description" content="C# 태그가 있는 모든 포스트"/>
-    <meta property="og:url" content="https://ash84.io/tags/C#.html"/>
-    <meta property="og:type" content="website"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>#C# - ASH84</title>
-    <meta name="description" content="C# 태그가 있는 모든 포스트" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
-    <script>hljs.highlightAll();</script>
-
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
 </head>
-<body class="font">
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
-    </header>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="/" class="logo">ASH84</a>
+            <nav class="nav">
+                <a href="/tags/">Archive</a>
+            </nav>
+        </header>
 
-<div class="content">
-    <h1 class="blog-post-title">#C#</h1>
-    <div class="blog-post-meta">
-        <small>39개의 포스트</small>
+        <section class="hero" style="padding: 80px 0 60px;">
+            <h1 class="hero-text" style="font-size: clamp(36px, 8vw, 80px);">#C#</h1>
+            <div class="hero-meta">
+                <span>39 Posts</span>
+            </div>
+        </section>
+
+        <section class="latest">
+            <div class="posts">
+                
+                <a href="/2013/04/09/c--ec-a0-95-ec-a0-81--ea-b2-80-ec-82-ac--eb-b0-8f--eb-a9-94-eb-aa-a8-eb-a6-ac--ea-b2-80-ec-82-ac--ed-88-b4/" class="post-item">
+                    <span class="post-date">2013-04-09</span>
+                    <span class="post-title">(C++) 정적 검사 및 메모리 검사 툴</span>
+                </a>
+                
+                <a href="/2012/03/22/c-runtime-opereating-time/" class="post-item">
+                    <span class="post-date">2012-03-22</span>
+                    <span class="post-title">[C#] 실행시간/동작시간 측정하기</span>
+                </a>
+                
+                <a href="/2012/03/03/c-wmi-eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c--ed-98-84-ec-9e-ac--eb-a9-94-eb-aa-a8-eb-a6-ac--ec-82-ac-ec-9a-a9-eb-9f-89--ea-b5-ac-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2012-03-03</span>
+                    <span class="post-title">[C#] WMI를 이용한 현재 메모리 사용량 구하기</span>
+                </a>
+                
+                <a href="/2011/11/15/cc--ed-98-84-ec-9e-ac--ec-8b-9c-ea-b0-84--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2011-11-15</span>
+                    <span class="post-title">[C/C++] 현재 시간 가져오기</span>
+                </a>
+                
+                <a href="/2011/10/29/cc-strlen--ea-b3-bc-string--ed-81-b4-eb-9e-98-ec-8a-a4-ec-9d-98-length-ed-95-a8-ec-88-98-ec-9d-98--ec-b0-a8-ec-9d-b4-ec-a0-90/" class="post-item">
+                    <span class="post-date">2011-10-29</span>
+                    <span class="post-title">[C/C++] strlen() 과 String 클래스의 length()함수의 차이점.</span>
+                </a>
+                
+                <a href="/2011/10/28/cc-strlwr--ed-95-a8-ec-88-98-ea-b0-80--eb-a8-b9-ed-9e-88-ec-a7-80--ec-95-8a-ec-9d-84-eb-95-8c--eb-8c-80-eb-ac-b8-ec-9e-90-eb-a5-bc--ec-86-8c-eb-ac-b8-/" class="post-item">
+                    <span class="post-date">2011-10-28</span>
+                    <span class="post-title">[C/C++] strlwr() 함수가 먹히지 않을때? 대문자를 소문자로.</span>
+                </a>
+                
+                <a href="/2011/02/24/c-click-once--eb-b0-b0-ed-8f-ac-ec-98-a4-eb-a5-98-fileloadexception-ec-97-90--eb-8c-80-ed-95-b4-ec-84-9c/" class="post-item">
+                    <span class="post-date">2011-02-24</span>
+                    <span class="post-title">[C#] Click Once 배포오류 fileloadException에 대해서.</span>
+                </a>
+                
+                <a href="/2010/11/18/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a/" class="post-item">
+                    <span class="post-date">2010-11-18</span>
+                    <span class="post-title">[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동.</span>
+                </a>
+                
+                <a href="/2010/09/03/-ed-8f-b0-ed-8a-b8--ea-b4-80-eb-a0-a8--ed-8a-b9-ec-a7-91-3--ec-a0-9c-ec-9e-91-ed-95-9c--ed-8f-b0-ed-8a-b8-eb-a5-bc--ec-9d-91-ec-9a-a9-ed-94-84-eb-a1-9/" class="post-item">
+                    <span class="post-date">2010-09-03</span>
+                    <span class="post-title">[폰트 관련 특집] 3. 제작한 폰트를 응용프로그램에 적용하자.</span>
+                </a>
+                
+                <a href="/2010/07/19/c-unicode-to-string/" class="post-item">
+                    <span class="post-date">2010-07-19</span>
+                    <span class="post-title">[C#] Unicode To String</span>
+                </a>
+                
+                <a href="/2010/07/06/c-bi-direction-textbox/" class="post-item">
+                    <span class="post-date">2010-07-06</span>
+                    <span class="post-title">[C#] Bi-Direction TextBox</span>
+                </a>
+                
+                <a href="/2010/04/22/c-wince-inputpanel-ea-b0-80-ec-83-81--ed-82-a4-eb-b3-b4-eb-93-9c--ec-9c-84-ec-b9-98--ec-a1-b0-ec-a0-95-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2010-04-22</span>
+                    <span class="post-title">[C#] WinCE InputPanel(가상 키보드) 위치 조정하기</span>
+                </a>
+                
+                <a href="/2010/04/20/c-gps--eb-8d-b0-ec-9d-b4-ed-84-b0-parsing--ec-8b-9c-ea-b0-84-ea-b3-bc--ec-9c-84-eb-8f-84--ea-b2-bd-eb-8f-84--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2010-04-20</span>
+                    <span class="post-title">[C#] GPS 데이터 Parsing 시간과 위도 경도 가져오기</span>
+                </a>
+                
+                <a href="/2010/04/14/c--ec-9d-b4-eb-af-b8-ec-a7-80-fade-in--ed-95-98-eb-a9-b0--eb-b3-b4-ec-97-ac-ec-a3-bc-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2010-04-14</span>
+                    <span class="post-title">[C#] 이미지 Fade in 하며 보여주기</span>
+                </a>
+                
+                <a href="/2010/03/19/windows-phone7-code-sample-mini-browser-sample--eb-b6-84-ec-84-9d/" class="post-item">
+                    <span class="post-date">2010-03-19</span>
+                    <span class="post-title">[Windows Phone7]  mini Browser Sample 분석</span>
+                </a>
+                
+                <a href="/2010/03/18/windows-phone-7--ec-9c-88-eb-8f-84-ec-9a-b0--ed-8f-b0-7--ea-b0-9c-eb-b0-9c-getting-started/" class="post-item">
+                    <span class="post-date">2010-03-18</span>
+                    <span class="post-title">[Windows Phone 7] 윈도우 폰 7 개발 Getting Started</span>
+                </a>
+                
+                <a href="/2010/03/17/c-gps-nema-protocol--ec-9e-90-eb-a3-8c/" class="post-item">
+                    <span class="post-date">2010-03-17</span>
+                    <span class="post-title">[C#] GPS NEMA Protocol 자료</span>
+                </a>
+                
+                <a href="/2010/03/16/microsoftink-isfink-serialization-format-ec-97-90--ea-b4-80-ed-95-9c--ec-9e-90-eb-a3-8c/" class="post-item">
+                    <span class="post-date">2010-03-16</span>
+                    <span class="post-title">[Microsoft.Ink] ISF(Ink Serialization Format)에 관한 자료</span>
+                </a>
+                
+                <a href="/2010/03/01/c-hippo-chart--ec-82-ac-ec-9a-a9-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2010-03-01</span>
+                    <span class="post-title">[C#] Hippo Chart 사용하기</span>
+                </a>
+                
+                <a href="/2010/02/20/c-scrolltocaret--eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c-textbox--ec-9e-90-eb-8f-99--ec-8a-a4-ed-81-ac-eb-a1-a4-eb-a7-81/" class="post-item">
+                    <span class="post-date">2010-02-20</span>
+                    <span class="post-title">[C#] ScrollToCaret 를 이용한 TextBox 자동 스크롤링</span>
+                </a>
+                
+                <a href="/2010/02/05/c-eb-a7-a4-ed-8b-80-eb-9e-a9-ea-b3-bc--eb-8b-b7-eb-84-b7-c--ec-97-b0-ea-b2-b0-ed-95-98-ea-b8-b0connect-matlab-to-net-c/" class="post-item">
+                    <span class="post-date">2010-02-05</span>
+                    <span class="post-title">[C#]매틀랩과 닷넷 C# 연결하기(Connect Matlab to .NET C#)</span>
+                </a>
+                
+                <a href="/2010/01/26/c-css--eb-b6-84-ec-84-9d-ec-9d-80--ec-9d-b4-ec-a0-9c--eb-82-b4-ea-b2-8c--eb-a7-a1-ea-b2-a8-eb-9d-bc-bonesoftcssdll/" class="post-item">
+                    <span class="post-date">2010-01-26</span>
+                    <span class="post-title">[C#] CSS 분석은 이제 내게 맡겨라. Bonesoft.CSS.dll</span>
+                </a>
+                
+                <a href="/2010/01/21/c--ec-8a-a4-eb-a0-88-eb-93-9c-eb-a5-bc--ec-82-ac-ec-9a-a9-ed-95-98-eb-8a-94-2-ea-b0-80-ec-a7-80--eb-b0-a9-eb-b2-95/" class="post-item">
+                    <span class="post-date">2010-01-21</span>
+                    <span class="post-title">[C#] 스레드를 사용하는 2가지 방법</span>
+                </a>
+                
+                <a href="/2010/01/20/microsoft-ink-inkoveray--ec-9c-84-ec-97-90-ec-84-9c--ec-bb-a4-ec-84-9c-eb-aa-a8-ec-96-91--eb-b0-94-ea-be-b8-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2010-01-20</span>
+                    <span class="post-title">[Microsoft Ink] InkOveray 위에서 커서모양 바꾸기</span>
+                </a>
+                
+                <a href="/2010/01/15/c--ea-b8-b0-eb-b3-b8--eb-a9-94-ec-9d-bc--ed-81-b4-eb-9d-bc-ec-9d-b4-ec-96-b8-ed-8a-b8--ec-97-b4-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2010-01-15</span>
+                    <span class="post-title">[C#] 기본 메일 클라이언트 열기</span>
+                </a>
+                
+                <a href="/2009/12/03/c--ea-b0-80-ec-83-81--ed-82-a4key--ec-9d-b4-eb-b2-a4-ed-8a-b8--eb-b3-b4-eb-82-b4-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2009-12-03</span>
+                    <span class="post-title">[C#] 가상 키(Key) 이벤트 보내기</span>
+                </a>
+                
+                <a href="/2009/11/24/c-winform-ec-9c-88-ed-8f-bc--ec-a0-9c-eb-aa-a9-ed-91-9c-ec-8b-9c-ec-a4-84-ec-97-90--ec-95-88-eb-9c-a8-ea-b2-8c--ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2009-11-24</span>
+                    <span class="post-title">[C#] Winform(윈폼) 제목표시줄에 안뜨게 하기</span>
+                </a>
+                
+                <a href="/2009/11/20/c-serial-port--ea-b5-ac-eb-b6-84-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2009-11-20</span>
+                    <span class="post-title">[C#] Serial Port 구분하기.</span>
+                </a>
+                
+                <a href="/2009/09/25/c-image-eb-93-a4-ec-9d-84-pdf-eb-a1-9c--ec-a0-80-ec-9e-a5-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2009-09-25</span>
+                    <span class="post-title">[C#] Image들을 PDF로 저장하기</span>
+                </a>
+                
+                <a href="/2009/01/14/c-openapi-remove-b-tag/" class="post-item">
+                    <span class="post-date">2009-01-14</span>
+                    <span class="post-title">[C#] 네이버 지역검색 오픈 API 검색결과 <b> 태그제거</span>
+                </a>
+                
+                <a href="/2008/12/22/c-sharp-bluetooth-communication/" class="post-item">
+                    <span class="post-date">2008-12-22</span>
+                    <span class="post-title">[C#] Bluetooth Communication in Black Jack phone(블랙잭에서 블루투스 이용)</span>
+                </a>
+                
+                <a href="/2008/12/16/c-ecg-realtime-display-ec-8b-ac-ec-a0-84-eb-8f-84--ec-8b-a4-ec-8b-9c-ea-b0-84--ec-a0-84-ec-86-a1/" class="post-item">
+                    <span class="post-date">2008-12-16</span>
+                    <span class="post-title">[C#] ECG  Realtime Display(심전도 실시간 전송)</span>
+                </a>
+                
+                <a href="/2008/10/07/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2008-10-07</span>
+                    <span class="post-title">[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기</span>
+                </a>
+                
+                <a href="/2008/08/13/c-hl7-validation--ec-8b-9c--ec-a3-bc-ec-9d-98-ec-a0-90/" class="post-item">
+                    <span class="post-date">2008-08-13</span>
+                    <span class="post-title">[C#] HL7 Validation 시, 주의점.</span>
+                </a>
+                
+                <a href="/2008/04/25/-ed-8e-8c-smart-client--ec-9b-b9-ec-97-90-embedded--ed-95-98-eb-8a-94--eb-b6-80-eb-b6-84/" class="post-item">
+                    <span class="post-date">2008-04-25</span>
+                    <span class="post-title">[펌]  Smart Client 웹에 embedded 하는 부분.</span>
+                </a>
+                
+                <a href="/2007/10/05/windows-service/" class="post-item">
+                    <span class="post-date">2007-10-05</span>
+                    <span class="post-title">Windows Service</span>
+                </a>
+                
+                <a href="/2007/08/13/c-systemcollectionsqueue/" class="post-item">
+                    <span class="post-date">2007-08-13</span>
+                    <span class="post-title">[C#] System.Collections.Queue</span>
+                </a>
+                
+                <a href="/2007/08/13/c-systemcollectionsstack/" class="post-item">
+                    <span class="post-date">2007-08-13</span>
+                    <span class="post-title">[C#] System.Collections.Stack</span>
+                </a>
+                
+                <a href="/2007/08/04/-ea-b3-84-ec-82-b0-ea-b8-b0--ec-86-8c-ec-8a-a4--ec-95-8c-ea-b3-a0-eb-a6-ac-ec-a6-98-v-09/" class="post-item">
+                    <span class="post-date">2007-08-04</span>
+                    <span class="post-title">계산기 소스 알고리즘 V 0.9</span>
+                </a>
+                
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <span>© 2007—<script>document.write(new Date().getFullYear())</script></span>
+            </div>
+            <div class="footer-right">
+                <a href="/">Home</a>
+            </div>
+        </footer>
     </div>
-
-    <div class="pre-blog-post"></div>
-
-    <div class="blog-post">
-        <ul style="list-style: none; padding: 0;">
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-04-09</div>
-                    <a href="/2013/04/09/c--ec-a0-95-ec-a0-81--ea-b2-80-ec-82-ac--eb-b0-8f--eb-a9-94-eb-aa-a8-eb-a6-ac--ea-b2-80-ec-82-ac--ed-88-b4/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(C++) 정적 검사 및 메모리 검사 툴</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">자주 사용하지는 않지만 문제가 터지면 반드시 사용해야 하는 두개의 툴인데 사실 cppCheck는 그렇게 많이 사용하지는 않고, 문제 터지면 valgrind 부터 돌려보는 편이라. 그래도 어떤때 사용하게 되는 툴들이라 정리해 둔다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-03-22</div>
-                    <a href="/2012/03/22/c-runtime-opereating-time/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] 실행시간/동작시간 측정하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-03-03</div>
-                    <a href="/2012/03/03/c-wmi-eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c--ed-98-84-ec-9e-ac--eb-a9-94-eb-aa-a8-eb-a6-ac--ec-82-ac-ec-9a-a9-eb-9f-89--ea-b5-ac-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] WMI를 이용한 현재 메모리 사용량 구하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2011-11-15</div>
-                    <a href="/2011/11/15/cc--ed-98-84-ec-9e-ac--ec-8b-9c-ea-b0-84--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C/C++] 현재 시간 가져오기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">현재 시간을 가져오는 소스코드. 물론 시간관련 헤더파일이 **#include **가 추가 되어 있어야 한다. 좀더 유용하게 쓰기 위해서 현</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2011-10-29</div>
-                    <a href="/2011/10/29/cc-strlen--ea-b3-bc-string--ed-81-b4-eb-9e-98-ec-8a-a4-ec-9d-98-length-ed-95-a8-ec-88-98-ec-9d-98--ec-b0-a8-ec-9d-b4-ec-a0-90/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C/C++] strlen() 과 String 클래스의 length()함수의 차이점.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">문자열의 갯수를 구하는 함수만큼 공통적으로 여러 언어에서 구현되어 있는 기능도 드문것 같습니다. 오늘 소개할 내용은 C++ 의  내에 있는 char * 형의 문자열의 갯수를 세어주는 `strlen()` 함수에 대해서 이야기 하려고 합니다. 제목처럼 일반적인 객체지향의 언어 자바나 C#의 String 클래스에서 사용하는 length() 함수와 어떻게 다른지 이야기 하려고 합니다. 물론 아시는 분들도 있겠지만.^^</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2011-10-28</div>
-                    <a href="/2011/10/28/cc-strlwr--ed-95-a8-ec-88-98-ea-b0-80--eb-a8-b9-ed-9e-88-ec-a7-80--ec-95-8a-ec-9d-84-eb-95-8c--eb-8c-80-eb-ac-b8-ec-9e-90-eb-a5-bc--ec-86-8c-eb-ac-b8-/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C/C++] strlwr() 함수가 먹히지 않을때? 대문자를 소문자로.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2011-02-24</div>
-                    <a href="/2011/02/24/c-click-once--eb-b0-b0-ed-8f-ac-ec-98-a4-eb-a5-98-fileloadexception-ec-97-90--eb-8c-80-ed-95-b4-ec-84-9c/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] Click Once 배포오류 fileloadException에 대해서.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">요즘 계속 배포작업을 하고 있습니다. 처음 배포 한 msi 파일이 배포오류가 생겼었는데, 그 오류를 자세히 들여가 보면 fileloadException 에 의해서 발생된 오류였다. 처음에는 기본적으로 ini 파일이나, 폰트파일 혹은 외부 dll 파일을 못 읽어서 문제가 생겼나 해서 예외처리를 한 상태에서 해 봤더니, 걸리지</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-11-18</div>
-                    <a href="/2010/11/18/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-09-03</div>
-                    <a href="/2010/09/03/-ed-8f-b0-ed-8a-b8--ea-b4-80-eb-a0-a8--ed-8a-b9-ec-a7-91-3--ec-a0-9c-ec-9e-91-ed-95-9c--ed-8f-b0-ed-8a-b8-eb-a5-bc--ec-9d-91-ec-9a-a9-ed-94-84-eb-a1-9/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[폰트 관련 특집] 3. 제작한 폰트를 응용프로그램에 적용하자.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">유니코드와 폰트와의 관계 그리고 폰트 제작에 대해서 이전 포스팅에서 알아 보았습니다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-07-19</div>
-                    <a href="/2010/07/19/c-unicode-to-string/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] Unicode To String</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-07-06</div>
-                    <a href="/2010/07/06/c-bi-direction-textbox/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] Bi-Direction TextBox</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">최근에 하는 프로젝트 때문에 Bi-Direction 이라는 것에 대해서 알게 되었다. Bi-Direction 이라는 것은 글씨를 쓰는 방향이 원래 서양 혹은 우리나라와 같은 왼쪽에서 오른쪽으로 향하는 방향이 아닌 반대 방향을 의미하는 것이다. 왜 이게 필요한가? 라는 의문을 던지기 전에 사실, Bi-</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-04-22</div>
-                    <a href="/2010/04/22/c-wince-inputpanel-ea-b0-80-ec-83-81--ed-82-a4-eb-b3-b4-eb-93-9c--ec-9c-84-ec-b9-98--ec-a1-b0-ec-a0-95-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] WinCE InputPanel(가상 키보드) 위치 조정하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">WinCE 6.0 환경에서는 보통 키보드와 마우스가 제공되지 않는 환경입니다. 때문에 터치스크린이 마우스를 대체하고 키보드는 SIP 즉, 가상키보드가 그 역할을 대체합니다. 때문에 대부분의 WinCE는 포팅과정에서 가상 키보드</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-04-20</div>
-                    <a href="/2010/04/20/c-gps--eb-8d-b0-ec-9d-b4-ed-84-b0-parsing--ec-8b-9c-ea-b0-84-ea-b3-bc--ec-9c-84-eb-8f-84--ea-b2-bd-eb-8f-84--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] GPS 데이터 Parsing 시간과 위도 경도 가져오기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">이번시간에는 GPS 정보를 가져오는 부분을 다루려고 합니다. 다들 알다시피 GPS는 보통 시리얼 통신을 통해서 Com Port로 들어오게 됩니다. 그런데 GPS라고 해서 Latitude와 Longitude가 바로 들어오는 것이 아니라 GPS NEMA 프로토콜의 형태로 들어오게 되고 그 프로토콜을 해석해서 Application에서 필요한 정보를 우리가 취득하면 되는것이겠지요.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-04-14</div>
-                    <a href="/2010/04/14/c--ec-9d-b4-eb-af-b8-ec-a7-80-fade-in--ed-95-98-eb-a9-b0--eb-b3-b4-ec-97-ac-ec-a3-bc-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] 이미지 Fade in 하며 보여주기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-03-19</div>
-                    <a href="/2010/03/19/windows-phone7-code-sample-mini-browser-sample--eb-b6-84-ec-84-9d/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[Windows Phone7]  mini Browser Sample 분석</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">Windows Phone 7 코드 샘플 4가지를 분석해 보는 시간을 갖도록 하겠습니다. 총 4가지의 샘플을 분석하는</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-03-18</div>
-                    <a href="/2010/03/18/windows-phone-7--ec-9c-88-eb-8f-84-ec-9a-b0--ed-8f-b0-7--ea-b0-9c-eb-b0-9c-getting-started/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[Windows Phone 7] 윈도우 폰 7 개발 Getting Started</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-03-17</div>
-                    <a href="/2010/03/17/c-gps-nema-protocol--ec-9e-90-eb-a3-8c/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] GPS NEMA Protocol 자료</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-03-16</div>
-                    <a href="/2010/03/16/microsoftink-isfink-serialization-format-ec-97-90--ea-b4-80-ed-95-9c--ec-9e-90-eb-a3-8c/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[Microsoft.Ink] ISF(Ink Serialization Format)에 관한 자료</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">﻿[](http://ash84.net/wp-content/uploads/1/cfile28.uf.18411F124B9EE055055250.pdf)cfile28.uf.18411F124B9EE055055250.pdf</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-03-01</div>
-                    <a href="/2010/03/01/c-hippo-chart--ec-82-ac-ec-9a-a9-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] Hippo Chart 사용하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-02-20</div>
-                    <a href="/2010/02/20/c-scrolltocaret--eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c-textbox--ec-9e-90-eb-8f-99--ec-8a-a4-ed-81-ac-eb-a1-a4-eb-a7-81/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] ScrollToCaret 를 이용한 TextBox 자동 스크롤링</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">TextBox는 본래, 사용자의 데이터 입력을 받아 들이는 기능을 주로 하지만, 때때로 데이터를 보기위해서 쓰이기도 합니다. 특히, 저는 시리얼 포트를 통해서 들어오는 데이터를 한눈에 보기 위해서 자주 사용하는데요,</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-02-05</div>
-                    <a href="/2010/02/05/c-eb-a7-a4-ed-8b-80-eb-9e-a9-ea-b3-bc--eb-8b-b7-eb-84-b7-c--ec-97-b0-ea-b2-b0-ed-95-98-ea-b8-b0connect-matlab-to-net-c/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#]매틀랩과 닷넷 C# 연결하기(Connect Matlab to .NET C#)</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">매틀랩과 C 혹은 C++ 과 연결하는 방법에 대해서 이미 다른 블로거 분들이 올렸는데, 실질적으로 .NET 라이브러리화되어서 연동시켜서 매틀랩의 함수들을 사용하는 방식에 대해서는 안 나와 있어서 이렇게 올리게 되었습니다. 일단. 아래의 링크에 가셔서 기본적인 절차를 숙지 하셔</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-01-26</div>
-                    <a href="/2010/01/26/c-css--eb-b6-84-ec-84-9d-ec-9d-80--ec-9d-b4-ec-a0-9c--eb-82-b4-ea-b2-8c--eb-a7-a1-ea-b2-a8-eb-9d-bc-bonesoftcssdll/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] CSS 분석은 이제 내게 맡겨라. Bonesoft.CSS.dll</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">***</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-01-21</div>
-                    <a href="/2010/01/21/c--ec-8a-a4-eb-a0-88-eb-93-9c-eb-a5-bc--ec-82-ac-ec-9a-a9-ed-95-98-eb-8a-94-2-ea-b0-80-ec-a7-80--eb-b0-a9-eb-b2-95/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] 스레드를 사용하는 2가지 방법</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">프로세스와 스레드에 대한 개념은 어떤 프로그래밍 언어라 하더라두 공통으로 적용이 되는 부분입니다. C#에서 스레드를 사용하는 방식은 파라미터(Parameter)가 있냐 없냐에 따라서 달라집니다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-01-20</div>
-                    <a href="/2010/01/20/microsoft-ink-inkoveray--ec-9c-84-ec-97-90-ec-84-9c--ec-bb-a4-ec-84-9c-eb-aa-a8-ec-96-91--eb-b0-94-ea-be-b8-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[Microsoft Ink] InkOveray 위에서 커서모양 바꾸기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">필자는 요즘 회사에서 Microsoft Ink 관련 Applicat</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-01-15</div>
-                    <a href="/2010/01/15/c--ea-b8-b0-eb-b3-b8--eb-a9-94-ec-9d-bc--ed-81-b4-eb-9d-bc-ec-9d-b4-ec-96-b8-ed-8a-b8--ec-97-b4-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] 기본 메일 클라이언트 열기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"><</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2009-12-03</div>
-                    <a href="/2009/12/03/c--ea-b0-80-ec-83-81--ed-82-a4key--ec-9d-b4-eb-b2-a4-ed-8a-b8--eb-b3-b4-eb-82-b4-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] 가상 키(Key) 이벤트 보내기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">[</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2009-11-24</div>
-                    <a href="/2009/11/24/c-winform-ec-9c-88-ed-8f-bc--ec-a0-9c-eb-aa-a9-ed-91-9c-ec-8b-9c-ec-a4-84-ec-97-90--ec-95-88-eb-9c-a8-ea-b2-8c--ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] Winform(윈폼) 제목표시줄에 안뜨게 하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">![](http://ash84.net/wp-content/uploads/1/cfile29.uf.134855014B0BEAB21F9F39.jpg)Form1과 Form</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2009-11-20</div>
-                    <a href="/2009/11/20/c-serial-port--ea-b5-ac-eb-b6-84-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] Serial Port 구분하기.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">![](http://ash84.net/wp-content/uploads/1/cfile29.uf.1460001B4B0654F75990D2.PNG)</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2009-09-25</div>
-                    <a href="/2009/09/25/c-image-eb-93-a4-ec-9d-84-pdf-eb-a1-9c--ec-a0-80-ec-9e-a5-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] Image들을 PDF로 저장하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">**</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2009-01-14</div>
-                    <a href="/2009/01/14/c-openapi-remove-b-tag/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] 네이버 지역검색 오픈 API 검색결과 <b> 태그제거</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">네이버 지역검색 오픈 API를 사용해서 검색한 결과는 RSS로 볼수도 있지만,  XML의 형식으로 볼수도 있다. 특히  안에 있는 부분이 그러하다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2008-12-22</div>
-                    <a href="/2008/12/22/c-sharp-bluetooth-communication/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] Bluetooth Communication in Black Jack phone(블랙잭에서 블루투스 이용)</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">블랙잭 폰에서(블랙잭 1) 블루투스를 이용한 프로그램 개발.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2008-12-16</div>
-                    <a href="/2008/12/16/c-ecg-realtime-display-ec-8b-ac-ec-a0-84-eb-8f-84--ec-8b-a4-ec-8b-9c-ea-b0-84--ec-a0-84-ec-86-a1/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] ECG  Realtime Display(심전도 실시간 전송)</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">ECG Realtime Display는 윈도우 폼과 그리고 웹에서 가능하다. 그러나 본 포스팅에서는 윈도우 폼에서 디스플레이 하는 부분에 대해서만 다루도록 하겠다. 왜냐하면, 디스플레이하는 방식은 똑같기 때문에 웹 상에 실시간 디스플레이 할수 있는 기술(실버라이트, 스마트 폼)을 이용해서 구성하면 웹 상에서도 디스플레이를 할 수가 있다. 본 포</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2008-10-07</div>
-                    <a href="/2008/10/07/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2008-08-13</div>
-                    <a href="/2008/08/13/c-hl7-validation--ec-8b-9c--ec-a3-bc-ec-9d-98-ec-a0-90/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] HL7 Validation 시, 주의점.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">HL7 Validation 시 주의점, 대부분의 XML의 Validation은 별 문제가 없었지만, HL7 같은 경우는 다음과 같은 예외가 발생했다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2008-04-25</div>
-                    <a href="/2008/04/25/-ed-8e-8c-smart-client--ec-9b-b9-ec-97-90-embedded--ed-95-98-eb-8a-94--eb-b6-80-eb-b6-84/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[펌]  Smart Client 웹에 embedded 하는 부분.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2007-10-05</div>
-                    <a href="/2007/10/05/windows-service/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">Windows Service</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">Windows Service</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2007-08-13</div>
-                    <a href="/2007/08/13/c-systemcollectionsqueue/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] System.Collections.Queue</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2007-08-13</div>
-                    <a href="/2007/08/13/c-systemcollectionsstack/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] System.Collections.Stack</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2007-08-04</div>
-                    <a href="/2007/08/04/-ea-b3-84-ec-82-b0-ea-b8-b0--ec-86-8c-ec-8a-a4--ec-95-8c-ea-b3-a0-eb-a6-ac-ec-a6-98-v-09/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">계산기 소스 알고리즘 V 0.9</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">계산기 프로그램은 어찌보면, 매우 간단하다고 생각 할수 있다. 그건, 기능 자체를 간단하다고 간주해 버리면 간단해 진다. 즉, 두수에 대한 사칙연산 만을 지원하는 경우에는 매우 간단하며, 정말 기초적인 부분(함수)으로 구현할수 있다.(물론 한 함수에 통으로 짤 수도 있다.)</div>
-                </li>
-            
-        </ul>
-    </div>
-
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
 </body>
 </html>

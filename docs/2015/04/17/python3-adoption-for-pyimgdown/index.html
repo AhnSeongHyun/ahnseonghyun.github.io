@@ -1,77 +1,124 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>Python3 adoption for pyimgdown - ASH84</title>
+    <meta name="description" content="[pyimgdown](https://github.com/AhnSeongHyun/pyimgdown) 이라는 wand 를 이용한 이미지를 다운받고 썸네일을 만드는 라이브러리를 파이썬2 버전으로 pypi에 올린적이 있었는데, 사실 그전에 이미지 땡겨와서 썸네일 할때 만든 라이브러리였다. 올해 목표중에 하나가 Python3 를 사용해 보는것이었고 아직 회사에서는 Python2 를 사용하지만 몇개의 개인프로젝트들을 일단 바꿔 보기로 했다." />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2015/04/17/python3-adoption-for-pyimgdown/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="Python3 adoption for pyimgdown"/>
+    <meta property="og:description" content="[pyimgdown](https://github.com/AhnSeongHyun/pyimgdown) 이라는 wand 를 이용한 이미지를 다운받고 썸네일을 만드는 라이브러리를 파이썬2 버전으로 pypi에 올린적이 있었는데, 사실 그전에 이미지 땡겨와서 썸네일 할때 만든 라이브러리였다. 올해 목표중에 하나가 Python3 를 사용해 보는것이었고 아직 회사에서는 Python2 를 사용하지만 몇개의 개인프로젝트들을 일단 바꿔 보기로 했다."/>
+    <meta property="og:url" content="https://ash84.io/2015/04/17/python3-adoption-for-pyimgdown/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="image download" />
+    
+    <meta property="article:tag" content="pyimgdown" />
+    
+    <meta property="article:tag" content="Python" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="Python3 adoption for pyimgdown"/>
+    <meta name="twitter:description" content="[pyimgdown](https://github.com/AhnSeongHyun/pyimgdown) 이라는 wand 를 이용한 이미지를 다운받고 썸네일을 만드는 라이브러리를 파이썬2 버전으로 pypi에 올린적이 있었는데, 사실 그전에 이미지 땡겨와서 썸네일 할때 만든 라이브러리였다. 올해 목표중에 하나가 Python3 를 사용해 보는것이었고 아직 회사에서는 Python2 를 사용하지만 몇개의 개인프로젝트들을 일단 바꿔 보기로 했다."/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Python3 adoption for pyimgdown",
+        "description": "[pyimgdown](https://github.com/AhnSeongHyun/pyimgdown) 이라는 wand 를 이용한 이미지를 다운받고 썸네일을 만드는 라이브러리를 파이썬2 버전으로 pypi에 올린적이 있었는데, 사실 그전에 이미지 땡겨와서 썸네일 할때 만든 라이브러리였다. 올해 목표중에 하나가 Python3 를 사용해 보는것이었고 아직 회사에서는 Python2 를 사용하지만 몇개의 개인프로젝트들을 일단 바꿔 보기로 했다.",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2015/04/17/python3-adoption-for-pyimgdown"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - Python3 adoption for pyimgdown"/>
-    <meta property="og:description" content="[pyimgdown](https://github.com/AhnSeongHyun/pyimgdown) 이라는 wand 를 이용한 이미지를 다운받고 썸네일을 만드는 라이브러리를 파이썬2 버전으로 pypi에 올린적이 있었는데, 사실 그전에 이미지 땡겨와서 썸네일 할때 만든 라이브러리였다. 올해 목표중에 하나가 Python3 를 사용해 보는것이었고 아직 회사에서는 Python2 를 사용하지만 몇개의 개인프로젝트들을 일단 바꿔 보기로 했다."/>
-    <meta property="og:url" content="https://ash84.io/docs/2015/04/17/python3-adoption-for-pyimgdown"/>
-    <meta property="og:image" content="https://ash84.io/docs/2015/04/17/python3-adoption-for-pyimgdown/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>Python3 adoption for pyimgdown</title>
-    <meta name="description" content="[pyimgdown](https://github.com/AhnSeongHyun/pyimgdown) 이라는 wand 를 이용한 이미지를 다운받고 썸네일을 만드는 라이브러리를 파이썬2 버전으로 pypi에 올린적이 있었는데, 사실 그전에 이미지 땡겨와서 썸네일 할때 만든 라이브러리였다. 올해 목표중에 하나가 Python3 를 사용해 보는것이었고 아직 회사에서는 Python2 를 사용하지만 몇개의 개인프로젝트들을 일단 바꿔 보기로 했다." />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">Python3 adoption for pyimgdown</h1>
-    <div class="blog-post-meta"> 
-        <small>  2015-04-17</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2015-04-17</time>
+            <h1 class="post-title">Python3 adoption for pyimgdown</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/image download/" class="tag">image download</a>
+                
+                <a href="/tags/pyimgdown/" class="tag">pyimgdown</a>
+                
+                <a href="/tags/Python/" class="tag">Python</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <p><a href="https://github.com/AhnSeongHyun/pyimgdown">pyimgdown</a> 이라는 wand 를 이용한 이미지를 다운받고 썸네일을 만드는 라이브러리를 파이썬2 버전으로 pypi에 올린적이 있었는데, 사실 그전에 이미지 땡겨와서 썸네일 할때 만든 라이브러리였다. 올해 목표중에 하나가 Python3 를 사용해 보는것이었고 아직 회사에서는 Python2 를 사용하지만 몇개의 개인프로젝트들을 일단 바꿔 보기로 했다.</p>
+        
+
+        <div class="post-content">
+            <p><a href="https://github.com/AhnSeongHyun/pyimgdown">pyimgdown</a> 이라는 wand 를 이용한 이미지를 다운받고 썸네일을 만드는 라이브러리를 파이썬2 버전으로 pypi에 올린적이 있었는데, 사실 그전에 이미지 땡겨와서 썸네일 할때 만든 라이브러리였다. 올해 목표중에 하나가 Python3 를 사용해 보는것이었고 아직 회사에서는 Python2 를 사용하지만 몇개의 개인프로젝트들을 일단 바꿔 보기로 했다.</p>
 <p><strong>환경 구성</strong></p>
 <p>기존의 2.x 버전의 파이썬이 있지만 서버에 3.4 버전을 설치하고 명시적으로 호출해서 쓸수 있도록 구성했다. 단번에 다 3 버전으로 올리고 싶었지만, 2.x 버전도 지원해야할 일이 생길수 있어서 별도로 두었다. (여전히 3 버전은 무섭다.)</p>
 <p>python =&gt; python2.7 python3.4 =&gt; python3.4</p>
@@ -87,23 +134,17 @@
 <p>보면 알겠지만, 별거 없긴 한데, 모듈이 이전되었거나 하는 부분은 찾아서 해야하는 것 같다. 보다 좋은 방법이 있으면 좋지만. 로컬테스트를 마치고 나서는 travis-ci 에서는 python3 에 대한 테스팅을 추가해서 2.7 버전과 3.4 을 테스트 하도록 설정하였다.(.travis.yml)</p>
 <p>language: python python: - "2.7" - "3.4" install: - python setup.py install script: - python ./pyimgdown/test.py</p>
 <p>비교적 간단하게 처리되었지만, 좀더 크거나 복잡한 시스템의 경우에는 쉽지 않을것 같다는 생각이 들면서도 재밌었다. 가지고 있는 몇개의 프로젝트 및 코드들을 python3 로 바꾸면서 감을 익혀나가야 겠다는 생각이 들었다.</p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/image download/" class="post-tag">#image download</a>
-        
-            <a href="/tags/pyimgdown/" class="post-tag">#pyimgdown</a>
-        
-            <a href="/tags/Python/" class="post-tag">#Python</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

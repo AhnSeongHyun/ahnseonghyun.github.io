@@ -1,77 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>(iOS) 애플맵 길찾기(navigation) 기능 호출하기 - ASH84</title>
+    <meta name="description" content="다양한 지도 어플들이 있고 그러한 지도 어플 업체나 플랫폼 업체에서 sdk 를 제공하긴 하지만 사실 약간의 문제들이 있다. 예를 들면, 전세계를 대상으로 앱을 만든다고 하면 우리에게 친숙한 네이버나 다음같은 앱을 이용해서 길찾기나 외부 지도앱을 불러올수가 있다. 설령 해당 사용자의 아이폰에 설치가 되어 있다고 해도 해당 지역의 경우 지원이 안될수가 있기 때문에. 무적의 구글맵이 있긴 하지만, 아이폰에서 사용자가 다운을 받아놔야 한다는 단점이 있는데, 애플맵은 기본 설치된 상태" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2013/11/13/ios--ec-95-a0-ed-94-8c-eb-a7-b5--ea-b8-b8-ec-b0-be-ea-b8-b0navigation--ea-b8-b0-eb-8a-a5--ed-98-b8-ec-b6-9c-ed-95-98-ea-b8-b0/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="(iOS) 애플맵 길찾기(navigation) 기능 호출하기"/>
+    <meta property="og:description" content="다양한 지도 어플들이 있고 그러한 지도 어플 업체나 플랫폼 업체에서 sdk 를 제공하긴 하지만 사실 약간의 문제들이 있다. 예를 들면, 전세계를 대상으로 앱을 만든다고 하면 우리에게 친숙한 네이버나 다음같은 앱을 이용해서 길찾기나 외부 지도앱을 불러올수가 있다. 설령 해당 사용자의 아이폰에 설치가 되어 있다고 해도 해당 지역의 경우 지원이 안될수가 있기 때문에. 무적의 구글맵이 있긴 하지만, 아이폰에서 사용자가 다운을 받아놔야 한다는 단점이 있는데, 애플맵은 기본 설치된 상태"/>
+    <meta property="og:url" content="https://ash84.io/2013/11/13/ios--ec-95-a0-ed-94-8c-eb-a7-b5--ea-b8-b8-ec-b0-be-ea-b8-b0navigation--ea-b8-b0-eb-8a-a5--ed-98-b8-ec-b6-9c-ed-95-98-ea-b8-b0/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="iOS" />
+    
+    <meta property="article:tag" content="navigation" />
+    
+    <meta property="article:tag" content="길찾기" />
+    
+    <meta property="article:tag" content="길찾기 구현" />
+    
+    <meta property="article:tag" content="네이버 맵" />
+    
+    <meta property="article:tag" content="다음 맵" />
+    
+    <meta property="article:tag" content="애플" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="(iOS) 애플맵 길찾기(navigation) 기능 호출하기"/>
+    <meta name="twitter:description" content="다양한 지도 어플들이 있고 그러한 지도 어플 업체나 플랫폼 업체에서 sdk 를 제공하긴 하지만 사실 약간의 문제들이 있다. 예를 들면, 전세계를 대상으로 앱을 만든다고 하면 우리에게 친숙한 네이버나 다음같은 앱을 이용해서 길찾기나 외부 지도앱을 불러올수가 있다. 설령 해당 사용자의 아이폰에 설치가 되어 있다고 해도 해당 지역의 경우 지원이 안될수가 있기 때문에. 무적의 구글맵이 있긴 하지만, 아이폰에서 사용자가 다운을 받아놔야 한다는 단점이 있는데, 애플맵은 기본 설치된 상태"/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(iOS) 애플맵 길찾기(navigation) 기능 호출하기",
+        "description": "다양한 지도 어플들이 있고 그러한 지도 어플 업체나 플랫폼 업체에서 sdk 를 제공하긴 하지만 사실 약간의 문제들이 있다. 예를 들면, 전세계를 대상으로 앱을 만든다고 하면 우리에게 친숙한 네이버나 다음같은 앱을 이용해서 길찾기나 외부 지도앱을 불러올수가 있다. 설령 해당 사용자의 아이폰에 설치가 되어 있다고 해도 해당 지역의 경우 지원이 안될수가 있기 때문에. 무적의 구글맵이 있긴 하지만, 아이폰에서 사용자가 다운을 받아놔야 한다는 단점이 있는데, 애플맵은 기본 설치된 상태",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/11/13/ios--ec-95-a0-ed-94-8c-eb-a7-b5--ea-b8-b8-ec-b0-be-ea-b8-b0navigation--ea-b8-b0-eb-8a-a5--ed-98-b8-ec-b6-9c-ed-95-98-ea-b8-b0"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - (iOS) 애플맵 길찾기(navigation) 기능 호출하기"/>
-    <meta property="og:description" content="다양한 지도 어플들이 있고 그러한 지도 어플 업체나 플랫폼 업체에서 sdk 를 제공하긴 하지만 사실 약간의 문제들이 있다. 예를 들면, 전세계를 대상으로 앱을 만든다고 하면 우리에게 친숙한 네이버나 다음같은 앱을 이용해서 길찾기나 외부 지도앱을 불러올수가 있다. 설령 해당 사용자의 아이폰에 설치가 되어 있다고 해도 해당 지역의 경우 지원이 안될수가 있기 때문에. 무적의 구글맵이 있긴 하지만, 아이폰에서 사용자가 다운을 받아놔야 한다는 단점이 있는데, 애플맵은 기본 설치된 상태"/>
-    <meta property="og:url" content="https://ash84.io/docs/2013/11/13/ios--ec-95-a0-ed-94-8c-eb-a7-b5--ea-b8-b8-ec-b0-be-ea-b8-b0navigation--ea-b8-b0-eb-8a-a5--ed-98-b8-ec-b6-9c-ed-95-98-ea-b8-b0"/>
-    <meta property="og:image" content="https://ash84.io/docs/2013/11/13/ios--ec-95-a0-ed-94-8c-eb-a7-b5--ea-b8-b8-ec-b0-be-ea-b8-b0navigation--ea-b8-b0-eb-8a-a5--ed-98-b8-ec-b6-9c-ed-95-98-ea-b8-b0/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>(iOS) 애플맵 길찾기(navigation) 기능 호출하기</title>
-    <meta name="description" content="다양한 지도 어플들이 있고 그러한 지도 어플 업체나 플랫폼 업체에서 sdk 를 제공하긴 하지만 사실 약간의 문제들이 있다. 예를 들면, 전세계를 대상으로 앱을 만든다고 하면 우리에게 친숙한 네이버나 다음같은 앱을 이용해서 길찾기나 외부 지도앱을 불러올수가 있다. 설령 해당 사용자의 아이폰에 설치가 되어 있다고 해도 해당 지역의 경우 지원이 안될수가 있기 때문에. 무적의 구글맵이 있긴 하지만, 아이폰에서 사용자가 다운을 받아놔야 한다는 단점이 있는데, 애플맵은 기본 설치된 상태" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">(iOS) 애플맵 길찾기(navigation) 기능 호출하기</h1>
-    <div class="blog-post-meta"> 
-        <small>  2013-11-13</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2013-11-13</time>
+            <h1 class="post-title">(iOS) 애플맵 길찾기(navigation) 기능 호출하기</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/iOS/" class="tag">iOS</a>
+                
+                <a href="/tags/navigation/" class="tag">navigation</a>
+                
+                <a href="/tags/길찾기/" class="tag">길찾기</a>
+                
+                <a href="/tags/길찾기 구현/" class="tag">길찾기 구현</a>
+                
+                <a href="/tags/네이버 맵/" class="tag">네이버 맵</a>
+                
+                <a href="/tags/다음 맵/" class="tag">다음 맵</a>
+                
+                <a href="/tags/애플/" class="tag">애플</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <p><span style="font-size: 11pt;">다양한 지도 어플들이 있고 그러한 지도 어플 업체나 플랫폼 업체에서 sdk 를 제공하긴 하지만 사실 약간의 문제들이 있다. 예를 들면, 전세계를 대상으로 앱을 만든다고 하면 우리에게 친숙한 네이버나 다음같은 앱을 이용해서 길찾기나 외부 지도앱을 불러올수가 있다. 설령 해당 사용자의 아이폰에 설치가 되어 있다고 해도 해당 지역의 경우 지원이 안될수가 있기 때문에. 무적의 구글맵이 있긴 하지만, 아이폰에서 사용자가 다운을 받아놔야 한다는 단점이 있는데, 애플맵은 기본 설치된 상태로 출고가 되고, 잘 안되는 지역이 있긴 하지만 지울수 없다는 장점도 있다. </span></p>
+        
+
+        <div class="post-content">
+            <p><span style="font-size: 11pt;">다양한 지도 어플들이 있고 그러한 지도 어플 업체나 플랫폼 업체에서 sdk 를 제공하긴 하지만 사실 약간의 문제들이 있다. 예를 들면, 전세계를 대상으로 앱을 만든다고 하면 우리에게 친숙한 네이버나 다음같은 앱을 이용해서 길찾기나 외부 지도앱을 불러올수가 있다. 설령 해당 사용자의 아이폰에 설치가 되어 있다고 해도 해당 지역의 경우 지원이 안될수가 있기 때문에. 무적의 구글맵이 있긴 하지만, 아이폰에서 사용자가 다운을 받아놔야 한다는 단점이 있는데, 애플맵은 기본 설치된 상태로 출고가 되고, 잘 안되는 지역이 있긴 하지만 지울수 없다는 장점도 있다. </span></p>
 <p><span style="font-size: 11pt;">구현하고 싶은 기능은 내가 만든앱에서 위치정보를 가지고 있다고 할때, 애플 맵의 길찾기 기능을 실행시키는 것이다. 예전에 다음맵에서도 이 작업을 한적이 있는데 다음맵에서는 URL 스키마를 이용해서 작업해 주면 된다. </span></p>
 <script src="https://gist.github.com/AhnSeongHyun/7440757.js"></script>
 
@@ -87,31 +150,17 @@
 <p><strong><span style="font-size: 11pt;">2013.11.18 addressDictionary</span><span style="font-size: 11pt;"> 추가 관련</span></strong></p>
 <p><span style="font-size: 11pt;">– 추가하는 부분으로 위의 ‘알수 없는위치’ 부분을 주소로 지정을 하려면 단순히 주소 문자열을 대입시키는 것인 아니라 <code>NSDictionary</code> 로 만들어서 <code>MKPlaceMark</code> 생성시 전달해 줘야 한다. 이 부분에서 키로 들어가야 하는 부분은 아이폰 주소록 관련 부분에서 ‘Address propery’ 에 키 부분을 참고해야 하는데, 해당 지정시, 아래와 같이 지정하면 된다. 모든 키를 다 지정할 필요는 없고 그 중에서 하나만 지정하면 된다. 필자의 경우에는 street 으로해서 역지오코딩된 값을 전달해 주었다. </span></p>
 <script src="https://gist.github.com/AhnSeongHyun/7523451.js"></script>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/iOS/" class="post-tag">#iOS</a>
-        
-            <a href="/tags/navigation/" class="post-tag">#navigation</a>
-        
-            <a href="/tags/길찾기/" class="post-tag">#길찾기</a>
-        
-            <a href="/tags/길찾기 구현/" class="post-tag">#길찾기 구현</a>
-        
-            <a href="/tags/네이버 맵/" class="post-tag">#네이버 맵</a>
-        
-            <a href="/tags/다음 맵/" class="post-tag">#다음 맵</a>
-        
-            <a href="/tags/애플/" class="post-tag">#애플</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

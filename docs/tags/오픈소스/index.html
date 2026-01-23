@@ -1,114 +1,94 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>오픈소스 — ASH84</title>
+    <meta name="description" content="오픈소스 태그가 붙은 5개의 글" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/tags/오픈소스/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="오픈소스 — ASH84"/>
+    <meta property="og:description" content="오픈소스 태그가 붙은 5개의 글"/>
+    <meta property="og:url" content="https://ash84.io/tags/오픈소스/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:title" content="오픈소스 — ASH84"/>
+    <meta name="twitter:description" content="오픈소스 태그가 붙은 5개의 글"/>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-71946262-1');
     </script>
 
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - #오픈소스"/>
-    <meta property="og:description" content="오픈소스 태그가 있는 모든 포스트"/>
-    <meta property="og:url" content="https://ash84.io/tags/오픈소스.html"/>
-    <meta property="og:type" content="website"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>#오픈소스 - ASH84</title>
-    <meta name="description" content="오픈소스 태그가 있는 모든 포스트" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
-    <script>hljs.highlightAll();</script>
-
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
 </head>
-<body class="font">
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
-    </header>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="/" class="logo">ASH84</a>
+            <nav class="nav">
+                <a href="/tags/">Archive</a>
+            </nav>
+        </header>
 
-<div class="content">
-    <h1 class="blog-post-title">#오픈소스</h1>
-    <div class="blog-post-meta">
-        <small>5개의 포스트</small>
+        <section class="hero" style="padding: 80px 0 60px;">
+            <h1 class="hero-text" style="font-size: clamp(36px, 8vw, 80px);">#오픈소스</h1>
+            <div class="hero-meta">
+                <span>5 Posts</span>
+            </div>
+        </section>
+
+        <section class="latest">
+            <div class="posts">
+                
+                <a href="/2015/04/28/about-pull-request/" class="post-item">
+                    <span class="post-date">2015-04-28</span>
+                    <span class="post-title">주워먹기 Pull Request 에 대해서</span>
+                </a>
+                
+                <a href="/2013/03/09/-ec-a3-bc-ea-b0-84-ea-b0-9c-eb-b0-9c-ea-b8-b0-3-ec-9b-94--ec-b2-ab-ec-a7-b8-ec-a3-bc/" class="post-item">
+                    <span class="post-date">2013-03-09</span>
+                    <span class="post-title">#주간개발기, 3월 첫째주</span>
+                </a>
+                
+                <a href="/2013/02/13/-ec-98-a4-ed-94-88-ec-86-8c-ec-8a-a4-basicuiwebviewcontroller/" class="post-item">
+                    <span class="post-date">2013-02-13</span>
+                    <span class="post-title">(오픈소스) BasicUIWebViewController</span>
+                </a>
+                
+                <a href="/2012/12/31/-ec-98-a4-ed-94-88-ec-86-8c-ec-8a-a4-ec-97-90-ec-84-9c--ed-99-9c-eb-8f-99-ed-95-98-ea-b8-b0--ec-9d-b4-ed-9d-ac-ec-8a-b9/" class="post-item">
+                    <span class="post-date">2012-12-31</span>
+                    <span class="post-title">오픈소스에서 활동하기 - 이희승 -</span>
+                </a>
+                
+                <a href="/2012/09/05/documentextractor--ec-9d-98--ea-b8-b0-eb-b3-b8--ea-b5-ac-ec-a1-b0/" class="post-item">
+                    <span class="post-date">2012-09-05</span>
+                    <span class="post-title">DocumentExtractor 의 기본 구조</span>
+                </a>
+                
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <span>© 2007—<script>document.write(new Date().getFullYear())</script></span>
+            </div>
+            <div class="footer-right">
+                <a href="/">Home</a>
+            </div>
+        </footer>
     </div>
-
-    <div class="pre-blog-post"></div>
-
-    <div class="blog-post">
-        <ul style="list-style: none; padding: 0;">
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-04-28</div>
-                    <a href="/2015/04/28/about-pull-request/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">주워먹기 Pull Request 에 대해서</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">> [@krazyeom](https://twitter.com/krazyeom) 그게 말처럼 주워먹기 힘든 프로젝트였습니다 ㅠㅜㅜ [http://t.co/RkgntLz2uT](http://t.co/RkgntLz2uT) @dalinaum</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-03-09</div>
-                    <a href="/2013/03/09/-ec-a3-bc-ea-b0-84-ea-b0-9c-eb-b0-9c-ea-b8-b0-3-ec-9b-94--ec-b2-ab-ec-a7-b8-ec-a3-bc/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">#주간개발기, 3월 첫째주</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">**exs4j**</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-02-13</div>
-                    <a href="/2013/02/13/-ec-98-a4-ed-94-88-ec-86-8c-ec-8a-a4-basicuiwebviewcontroller/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(오픈소스) BasicUIWebViewController</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">앱을 만들다 보면 주로 Naver, Daum Open API와 연동하는 경우가 많은데, 데이터를 가져오더라도 상세 데이터를 보려면 UIWebView를 쓸수 밖에 없다. BasicUIWebViewController 는 ViewController 에 웹 컨텐츠를 보여줄 수 있는 UIWebView 를 붙이고 해당 웹 컨텐츠가 로딩 될때의 진행상황을 표시해주기 위해서 UIProgressBar 를 붙였다. 또한 해당 웹 페이지의 타이틀(document.title)을 가져와서 제일 상단</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-12-31</div>
-                    <a href="/2012/12/31/-ec-98-a4-ed-94-88-ec-86-8c-ec-8a-a4-ec-97-90-ec-84-9c--ed-99-9c-eb-8f-99-ed-95-98-ea-b8-b0--ec-9d-b4-ed-9d-ac-ec-8a-b9/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">오픈소스에서 활동하기 - 이희승 -</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">오픈소스를 활용하는 것과 활동하는 것은 엄연히 다르다고 생각한다. 아직까지 참여는 하지 않지만(분석이 귀찮아서..) 그래두 github를 통해서 만든것을 자꾸 공유하려고 하고 있다. 2013년에는 참여도 하고 공유도하는 그런 한해가 되길 바라며, 개인적으로 존경하는 netty의 개발자 이희승의 강연을 올린다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-09-05</div>
-                    <a href="/2012/09/05/documentextractor--ec-9d-98--ea-b8-b0-eb-b3-b8--ea-b5-ac-ec-a1-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">DocumentExtractor 의 기본 구조</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">국내 유명 업체의 문서추출기가 있겠지만, 굳이 hwp를 사용하지 않는다면 이용할 필요가 없다. 문서추출기(Document Extractor)에 대한 오픈소스가 많이 있지만 여기서 소개할 것은 Apache POI를 이용해서 좀더 쓰기 쉽게 만든 자바(java) 기반의 문서추출기인 [Document](https://github.com/AhnSeongHyun/DocumentExtractor)</div>
-                </li>
-            
-        </ul>
-    </div>
-
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
 </body>
 </html>

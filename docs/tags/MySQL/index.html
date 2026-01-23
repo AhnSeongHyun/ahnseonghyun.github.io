@@ -1,162 +1,134 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MySQL — ASH84</title>
+    <meta name="description" content="MySQL 태그가 붙은 13개의 글" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/tags/MySQL/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="MySQL — ASH84"/>
+    <meta property="og:description" content="MySQL 태그가 붙은 13개의 글"/>
+    <meta property="og:url" content="https://ash84.io/tags/MySQL/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:title" content="MySQL — ASH84"/>
+    <meta name="twitter:description" content="MySQL 태그가 붙은 13개의 글"/>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-71946262-1');
     </script>
 
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - #MySQL"/>
-    <meta property="og:description" content="MySQL 태그가 있는 모든 포스트"/>
-    <meta property="og:url" content="https://ash84.io/tags/MySQL.html"/>
-    <meta property="og:type" content="website"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>#MySQL - ASH84</title>
-    <meta name="description" content="MySQL 태그가 있는 모든 포스트" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
-    <script>hljs.highlightAll();</script>
-
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
 </head>
-<body class="font">
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
-    </header>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="/" class="logo">ASH84</a>
+            <nav class="nav">
+                <a href="/tags/">Archive</a>
+            </nav>
+        </header>
 
-<div class="content">
-    <h1 class="blog-post-title">#MySQL</h1>
-    <div class="blog-post-meta">
-        <small>13개의 포스트</small>
+        <section class="hero" style="padding: 80px 0 60px;">
+            <h1 class="hero-text" style="font-size: clamp(36px, 8vw, 80px);">#MySQL</h1>
+            <div class="hero-meta">
+                <span>13 Posts</span>
+            </div>
+        </section>
+
+        <section class="latest">
+            <div class="posts">
+                
+                <a href="/2017/10/26/beaker_session-mysql-server-has-gone-away/" class="post-item">
+                    <span class="post-date">2017-10-26</span>
+                    <span class="post-title">beaker_session MySQL server has gone away</span>
+                </a>
+                
+                <a href="/2016/06/03/mysql_config-not-found/" class="post-item">
+                    <span class="post-date">2016-06-03</span>
+                    <span class="post-title">[python] MySQL-Python 설치오류, mysql_config not found</span>
+                </a>
+                
+                <a href="/2015/08/31/mysqldump-dump-restore/" class="post-item">
+                    <span class="post-date">2015-08-31</span>
+                    <span class="post-title">mysqldump - dump & restore</span>
+                </a>
+                
+                <a href="/2015/07/23/pull-request-spgen-generate-mysql-stored-procedure/" class="post-item">
+                    <span class="post-date">2015-07-23</span>
+                    <span class="post-title">[pull request] spgen, generate mysql stored procedure</span>
+                </a>
+                
+                <a href="/2015/03/02/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac/" class="post-item">
+                    <span class="post-date">2015-03-02</span>
+                    <span class="post-title">[DB] mysql 덤프 및 복구</span>
+                </a>
+                
+                <a href="/2015/01/29/python-mysqldb-dictcursor--ec-9d-b4-ec-9a-a9-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2015-01-29</span>
+                    <span class="post-title">python mysqldb DictCursor 이용하기</span>
+                </a>
+                
+                <a href="/2013/07/08/stackoverflow-how-to-improve-select-performance-in-mysql/" class="post-item">
+                    <span class="post-date">2013-07-08</span>
+                    <span class="post-title">(stackoverflow) how to improve select performance in mysql?</span>
+                </a>
+                
+                <a href="/2013/07/06/sql-distinct--ec-a4-91-eb-b3-b5-ec-a0-9c-ea-b1-b0/" class="post-item">
+                    <span class="post-date">2013-07-06</span>
+                    <span class="post-title">(sql) Distinct 중복제거</span>
+                </a>
+                
+                <a href="/2013/07/04/mysql-mysqldump--ec-9d-84--ec-9d-b4-ec-9a-a9-ed-95-9c--eb-b0-b1-ec-97-85--ec-8a-a4-ed-81-ac-eb-a6-bd-ed-8a-b8/" class="post-item">
+                    <span class="post-date">2013-07-04</span>
+                    <span class="post-title">(mysql) mysqldump 을 이용한 백업 스크립트</span>
+                </a>
+                
+                <a href="/2013/06/28/mysql-insert--ec-8b-9c-ea-b0-84--ec-9e-90-eb-8f-99--ec-b6-94-ea-b0-80-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2013-06-28</span>
+                    <span class="post-title">(mysql) insert 시간 자동 추가하기</span>
+                </a>
+                
+                <a href="/2013/06/26/mysql-data-truncation-data-too-long-for-column-xxx-at-row-1/" class="post-item">
+                    <span class="post-date">2013-06-26</span>
+                    <span class="post-title">(mysql) Data truncation: Data too long for column 'xxx' at row 1</span>
+                </a>
+                
+                <a href="/2012/11/07/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4/" class="post-item">
+                    <span class="post-date">2012-11-07</span>
+                    <span class="post-title">(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다.</span>
+                </a>
+                
+                <a href="/2012/10/30/mac-ec-97-90-mysql--ec-84-a4-ec-b9-98--ea-b4-80-eb-a0-a8--eb-a7-81-ed-81-ac--ec-a0-95-eb-a6-ac--ec-9d-b4-ea-b2-83-eb-a7-8c--ec-95-8c-eb-a9-b4-eb-8f-bc/" class="post-item">
+                    <span class="post-date">2012-10-30</span>
+                    <span class="post-title">mac에 mysql 설치 관련 링크 정리, 이것만 알면돼!!</span>
+                </a>
+                
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <span>© 2007—<script>document.write(new Date().getFullYear())</script></span>
+            </div>
+            <div class="footer-right">
+                <a href="/">Home</a>
+            </div>
+        </footer>
     </div>
-
-    <div class="pre-blog-post"></div>
-
-    <div class="blog-post">
-        <ul style="list-style: none; padding: 0;">
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2017-10-26</div>
-                    <a href="/2017/10/26/beaker_session-mysql-server-has-gone-away/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">beaker_session MySQL server has gone away</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">매일 아침 와서 현재 개발중인 백오피스를 켜면 Internal Server Error 발생. 로그를 보니 아래와 같은 오류 발생</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2016-06-03</div>
-                    <a href="/2016/06/03/mysql_config-not-found/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[python] MySQL-Python 설치오류, mysql_config not found</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-08-31</div>
-                    <a href="/2015/08/31/mysqldump-dump-restore/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">mysqldump - dump & restore</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">**mysqldump 덤프뜨기**</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-07-23</div>
-                    <a href="/2015/07/23/pull-request-spgen-generate-mysql-stored-procedure/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[pull request] spgen, generate mysql stored procedure</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">#### **앞서서, 프로시저에 대한 이야기**</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-03-02</div>
-                    <a href="/2015/03/02/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[DB] mysql 덤프 및 복구</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-01-29</div>
-                    <a href="/2015/01/29/python-mysqldb-dictcursor--ec-9d-b4-ec-9a-a9-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">python mysqldb DictCursor 이용하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">아무래도 제일많이 사용하는게 mysql 이고 python 으로 연동하기 위해서 MySQLdb 를 사용하는데 맨날 기존 cursor를 이용해서 데이터를 가져오곤 했다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-07-08</div>
-                    <a href="/2013/07/08/stackoverflow-how-to-improve-select-performance-in-mysql/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(stackoverflow) how to improve select performance in mysql?</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">StackOverflow 를 자주 이용해 오진 않았지만 최근에는 다른 개발자들의 이야기를 들어 보기 위해서 내가 해결한 어떤 문제라고 할지라도 올려서 물어보고 있다. 영어 공부가 된다고 생각하지는 않지만 물어보기 영어 레벨은 올라갈듯. 결국 검색도 실력.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-07-06</div>
-                    <a href="/2013/07/06/sql-distinct--ec-a4-91-eb-b3-b5-ec-a0-9c-ea-b1-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(sql) Distinct 중복제거</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">SQL 쪽 공부를 최근에 벼락치기로 했는데, Distinct 에 대해서 약간의 이해가 안되서 정리할겸 올린다. 용어를 찾아보면 중복제거라고 하는데, 말 그대로다. 반대로 all 이라는 것이 있는데 이건 select 문에서 아무것도 지정하지 않아도 되는 것이다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-07-04</div>
-                    <a href="/2013/07/04/mysql-mysqldump--ec-9d-84--ec-9d-b4-ec-9a-a9-ed-95-9c--eb-b0-b1-ec-97-85--ec-8a-a4-ed-81-ac-eb-a6-bd-ed-8a-b8/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(mysql) mysqldump 을 이용한 백업 스크립트</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">mysql 에 데이터가 쌓이다 보면 확실히 정해야 하는것중 하나가 백업 정책인것 같다. 특히 스타트업이나 개인 프로젝트에서 서버를 임대해서 사용하는 경우, 서버용량에 제한이 있다보니 어느정도 데이터가 쌓이다 보면 백업에 대해서 고려하지 않을수가 없다. 내가 세운 백업정책은 1일 1백업, 즉 일일백업인데, 사실 아직은 데이터가 많지 않은 상황에서 할수 있는 무식한 방법이다. 아래는 mysqldump를 사용한 백업 스크립트인데, 매일 오전 12시30분에 실행이 되도록 cronta</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-06-28</div>
-                    <a href="/2013/06/28/mysql-insert--ec-8b-9c-ea-b0-84--ec-9e-90-eb-8f-99--ec-b6-94-ea-b0-80-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(mysql) insert 시간 자동 추가하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">데이터베이스 입력 시간이 중요할때가 있다. 예를 들면, 어떤 데이터를 수집한다고 할때, 일별 혹은 시간별 데이터를 뽑기 위해서는 입력시간 컬럼을 넣어주는 것이 필요하다. 프로그램상에서 Date 형으로 넣어 줄수도 있겠지만, SQL 은 짧으면 좋다고, INSERT OR UPDATE 시 자동으로 시간을 추가하는 방법을 사용하면 더 좋은것 같다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-06-26</div>
-                    <a href="/2013/06/26/mysql-data-truncation-data-too-long-for-column-xxx-at-row-1/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(mysql) Data truncation: Data too long for column 'xxx' at row 1</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-11-07</div>
-                    <a href="/2012/11/07/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-10-30</div>
-                    <a href="/2012/10/30/mac-ec-97-90-mysql--ec-84-a4-ec-b9-98--ea-b4-80-eb-a0-a8--eb-a7-81-ed-81-ac--ec-a0-95-eb-a6-ac--ec-9d-b4-ea-b2-83-eb-a7-8c--ec-95-8c-eb-a9-b4-eb-8f-bc/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">mac에 mysql 설치 관련 링크 정리, 이것만 알면돼!!</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">mac(osx) 에서 mysql 설치하기 위해서 참고했던 링크들이다. 다른 분들도 도움이 되시길.</div>
-                </li>
-            
-        </ul>
-    </div>
-
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
 </body>
 </html>

@@ -1,79 +1,132 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>서비스와 데이터 - ASH84</title>
+    <meta name="description" content="세상의 모든 것이 SaaS(Software as a Service) 형태로 변화하고 있다. 문서 작성, 디자인, 개발, 데이터 저장, 심지어는 개인 블로그와 글쓰기 툴들까지도 SaaS 기반 서비스들이 대세를 이루고 있다. SaaS의 장점은 분명하다. 설치할 필요 없이 즉시 사용할 수 있고, 유지보수를 신경 쓸 필요 없이 최신 기능을 누릴 수 있다. 하지만 이와 동시에 우리가 만든 데이터와 서비스의 소유권이 우리 손을 떠나는 문제도 존재한다." />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2025/02/07/service-data/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="서비스와 데이터"/>
+    <meta property="og:description" content="세상의 모든 것이 SaaS(Software as a Service) 형태로 변화하고 있다. 문서 작성, 디자인, 개발, 데이터 저장, 심지어는 개인 블로그와 글쓰기 툴들까지도 SaaS 기반 서비스들이 대세를 이루고 있다. SaaS의 장점은 분명하다. 설치할 필요 없이 즉시 사용할 수 있고, 유지보수를 신경 쓸 필요 없이 최신 기능을 누릴 수 있다. 하지만 이와 동시에 우리가 만든 데이터와 서비스의 소유권이 우리 손을 떠나는 문제도 존재한다."/>
+    <meta property="og:url" content="https://ash84.io/2025/02/07/service-data/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="essay" />
+    
+    <meta property="article:tag" content="service" />
+    
+    <meta property="article:tag" content="data" />
+    
+    
+        
+    <meta property="og:image" content="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/service-data/saas.png"/>
+        
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="서비스와 데이터"/>
+    <meta name="twitter:description" content="세상의 모든 것이 SaaS(Software as a Service) 형태로 변화하고 있다. 문서 작성, 디자인, 개발, 데이터 저장, 심지어는 개인 블로그와 글쓰기 툴들까지도 SaaS 기반 서비스들이 대세를 이루고 있다. SaaS의 장점은 분명하다. 설치할 필요 없이 즉시 사용할 수 있고, 유지보수를 신경 쓸 필요 없이 최신 기능을 누릴 수 있다. 하지만 이와 동시에 우리가 만든 데이터와 서비스의 소유권이 우리 손을 떠나는 문제도 존재한다."/>
+    
+        
+    <meta name="twitter:image" content="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/service-data/saas.png"/>
+        
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "서비스와 데이터",
+        "description": "세상의 모든 것이 SaaS(Software as a Service) 형태로 변화하고 있다. 문서 작성, 디자인, 개발, 데이터 저장, 심지어는 개인 블로그와 글쓰기 툴들까지도 SaaS 기반 서비스들이 대세를 이루고 있다. SaaS의 장점은 분명하다. 설치할 필요 없이 즉시 사용할 수 있고, 유지보수를 신경 쓸 필요 없이 최신 기능을 누릴 수 있다. 하지만 이와 동시에 우리가 만든 데이터와 서비스의 소유권이 우리 손을 떠나는 문제도 존재한다.",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2025/02/07/service-data"
+        },
+        
+            
+        "image": "https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/service-data/saas.png",
+            
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - 서비스와 데이터"/>
-    <meta property="og:description" content="세상의 모든 것이 SaaS(Software as a Service) 형태로 변화하고 있다. 문서 작성, 디자인, 개발, 데이터 저장, 심지어는 개인 블로그와 글쓰기 툴들까지도 SaaS 기반 서비스들이 대세를 이루고 있다. SaaS의 장점은 분명하다. 설치할 필요 없이 즉시 사용할 수 있고, 유지보수를 신경 쓸 필요 없이 최신 기능을 누릴 수 있다. 하지만 이와 동시에 우리가 만든 데이터와 서비스의 소유권이 우리 손을 떠나는 문제도 존재한다."/>
-    <meta property="og:url" content="https://ash84.io/docs/2025/02/07/service-data"/>
-    <meta property="og:image" content="https://ash84.io/docs/2025/02/07/service-data/https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/service-data/saas.png"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>서비스와 데이터</title>
-    <meta name="description" content="세상의 모든 것이 SaaS(Software as a Service) 형태로 변화하고 있다. 문서 작성, 디자인, 개발, 데이터 저장, 심지어는 개인 블로그와 글쓰기 툴들까지도 SaaS 기반 서비스들이 대세를 이루고 있다. SaaS의 장점은 분명하다. 설치할 필요 없이 즉시 사용할 수 있고, 유지보수를 신경 쓸 필요 없이 최신 기능을 누릴 수 있다. 하지만 이와 동시에 우리가 만든 데이터와 서비스의 소유권이 우리 손을 떠나는 문제도 존재한다." />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">서비스와 데이터</h1>
-    <div class="blog-post-meta"> 
-        <small>  2025-02-07</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2025-02-07</time>
+            <h1 class="post-title">서비스와 데이터</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/essay/" class="tag">essay</a>
+                
+                <a href="/tags/service/" class="tag">service</a>
+                
+                <a href="/tags/data/" class="tag">data</a>
+                
+            </div>
+            
+        </header>
 
-    
-        <img src="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/service-data/saas.png" alt="">
-    
-    <div class="blog-post">
-        <p>세상의 모든 것이 SaaS(Software as a Service) 형태로 변화하고 있다. 문서 작성, 디자인, 개발, 데이터 저장, 심지어는 개인 블로그와 글쓰기 툴들까지도 SaaS 기반 서비스들이 대세를 이루고 있다. SaaS의 장점은 분명하다. 설치할 필요 없이 즉시 사용할 수 있고, 유지보수를 신경 쓸 필요 없이 최신 기능을 누릴 수 있다. 하지만 이와 동시에 우리가 만든 데이터와 서비스의 소유권이 우리 손을 떠나는 문제도 존재한다.</p>
+        
+        <figure class="post-image">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/service-data/saas.png" alt="서비스와 데이터">
+        </figure>
+        
+
+        <div class="post-content">
+            <p>세상의 모든 것이 SaaS(Software as a Service) 형태로 변화하고 있다. 문서 작성, 디자인, 개발, 데이터 저장, 심지어는 개인 블로그와 글쓰기 툴들까지도 SaaS 기반 서비스들이 대세를 이루고 있다. SaaS의 장점은 분명하다. 설치할 필요 없이 즉시 사용할 수 있고, 유지보수를 신경 쓸 필요 없이 최신 기능을 누릴 수 있다. 하지만 이와 동시에 우리가 만든 데이터와 서비스의 소유권이 우리 손을 떠나는 문제도 존재한다.</p>
 <h1>편리함 하지만 불안함</h1>
 <p>블로그를 예로 들어보자. 나는 처음에는 테터툴즈에서 시작해서, 네이버 블로그, 티스토리, 워드프레스, 고스트 같은 서비스를 썼었다. 그런데 서비스가 종료되거나, 유지보수가 어렵게 되면 그때부터 써왔던 글, 데이터들이 문제가 된다. 여러가지 이유로 우리가 작성한 수많은 글과 데이터는 사라질 위기에 놓인다. SaaS 기반의 플랫폼은 본질적으로 그 생명이 서비스 제공자의 운영 여부에 달려 있기 때문이다.</p>
 <p>설령 백업이 되더라도 그 형태는 그 서비스에서 만든 형태이고, 그런것들이 다른 플랫폼으로의 이전이 쉽지는 않다. 결국 누군가를 importer를 만들어주기 전까지는 그저 텍스트 파일일뿐이다. (알아볼수 있는 형태면 다행일지도 모른다.)</p>
@@ -87,21 +140,17 @@
 <h2>하지만, 결국 다 없어지는게 아닌가?</h2>
 <p>자체 구축을 하더라도 결국 나라는 사람이 죽게 되면 서버는 내려가게 되고 글들은 안보이고 데이터를 지워질것인데 이런 노력이 필요할까? 하는 염세주의적 생각을 하게 되기도 한다. 돌이켜보면 세상의 모든것들이 그런것 같지만서도, 우리가 보는 책이나 글이나 그런것들이 꽤 오래 된것도 있고, 오래된 비석이나 돌에 새겨놓은것들은 몇천년이 지난 우리가 보고 있는것도 현실이다. 반대로 생각하면 그만큼 없어진것이 더 많은것도 사실이고. </p>
 <p>그렇지만 어딘가에 이런 글들, 자료가 유지되면 좋겠다는 생각이 든다. 사진, 책, 비석 같은것들이 어떻게 보면 영속성 장치였던것이고, 인터넷 시대에는 그런 시도들이 어떻게 이어질지 궁금하다. 아니면 이건 그냥 인간의 욕심일수도 있고.</p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/essay/" class="post-tag">#essay</a>
-        
-            <a href="/tags/service/" class="post-tag">#service</a>
-        
-            <a href="/tags/data/" class="post-tag">#data</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

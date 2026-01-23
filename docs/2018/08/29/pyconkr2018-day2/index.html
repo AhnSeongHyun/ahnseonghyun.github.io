@@ -1,79 +1,148 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>PyconKR 2018 후기 2일차  - ASH84</title>
+    <meta name="description" content="# 2일차 후기" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2018/08/29/pyconkr2018-day2/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="PyconKR 2018 후기 2일차 "/>
+    <meta property="og:description" content="# 2일차 후기"/>
+    <meta property="og:url" content="https://ash84.io/2018/08/29/pyconkr2018-day2/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="Python" />
+    
+    <meta property="article:tag" content="conference" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="open-source" />
+    
+    <meta property="article:tag" content="pycon" />
+    
+    <meta property="article:tag" content="pyconkr" />
+    
+    <meta property="article:tag" content="tutorial" />
+    
+    
+        
+    <meta property="og:image" content="https://farm2.staticflickr.com/1811/43258544405_dfd2752d6a_b.jpg"/>
+        
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="PyconKR 2018 후기 2일차 "/>
+    <meta name="twitter:description" content="# 2일차 후기"/>
+    
+        
+    <meta name="twitter:image" content="https://farm2.staticflickr.com/1811/43258544405_dfd2752d6a_b.jpg"/>
+        
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "PyconKR 2018 후기 2일차 ",
+        "description": "# 2일차 후기",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2018/08/29/pyconkr2018-day2"
+        },
+        
+            
+        "image": "https://farm2.staticflickr.com/1811/43258544405_dfd2752d6a_b.jpg",
+            
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - PyconKR 2018 후기 2일차 "/>
-    <meta property="og:description" content="# 2일차 후기"/>
-    <meta property="og:url" content="https://ash84.io/docs/2018/08/29/pyconkr2018-day2"/>
-    <meta property="og:image" content="https://ash84.io/docs/2018/08/29/pyconkr2018-day2/https://farm2.staticflickr.com/1811/43258544405_dfd2752d6a_b.jpg"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>PyconKR 2018 후기 2일차 </title>
-    <meta name="description" content="# 2일차 후기" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">PyconKR 2018 후기 2일차 </h1>
-    <div class="blog-post-meta"> 
-        <small>  2018-08-29</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2018-08-29</time>
+            <h1 class="post-title">PyconKR 2018 후기 2일차 </h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/Python/" class="tag">Python</a>
+                
+                <a href="/tags/conference/" class="tag">conference</a>
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/open-source/" class="tag">open-source</a>
+                
+                <a href="/tags/pycon/" class="tag">pycon</a>
+                
+                <a href="/tags/pyconkr/" class="tag">pyconkr</a>
+                
+                <a href="/tags/tutorial/" class="tag">tutorial</a>
+                
+            </div>
+            
+        </header>
 
-    
-        <img src="https://farm2.staticflickr.com/1811/43258544405_dfd2752d6a_b.jpg" alt="">
-    
-    <div class="blog-post">
-        <h1>2일차 후기</h1>
+        
+        <figure class="post-image">
+            <img src="https://farm2.staticflickr.com/1811/43258544405_dfd2752d6a_b.jpg" alt="PyconKR 2018 후기 2일차 ">
+        </figure>
+        
+
+        <div class="post-content">
+            <h1>2일차 후기</h1>
 <hr />
 <p><a href="https://ash84.net/2018/08/21/pyconkr2018-day1/">1일차 후기 보러가기</a></p>
 <hr />
@@ -93,29 +162,17 @@
 <p>이번 파이콘은 개인적으로 작년보다 머신러닝에 대한 비중은 줄어들었고, 굉장히 고르게 주제가 분포되었다고 생각이 든다. 그렇지만 <strong>MSA, 비동기, SANIC 쪽이 새롭게 보이는 소재가 아니였나 싶다.</strong></p>
 <p><strong>CoC, 키노트에 대한 이슈가 있었지만, 이것 역시 파이콘이 더 건강하게 발전할 수 있는 계기라는 생각이 든다.</strong> </p>
 <p><strong>언제까지 파이콘을 가게 될까?</strong> 2-3년 전만해도 친구들이 많이 보였던것 같은데 이제는 아는 사람들 찾기는 쉽지 않을것 같다. 내년에는 아이돌봄을 이용할 수도 있을것 같고, 만약 기회가 된다면 부스로 나오고 싶다는 생각도 들었다. <strong>작은 파이썬 세미나(신천토즈였던것 같은데)에서 여기까지 왔다. 어떻게 될지는 모르지만, 좀 더 파이썬 생태계와 커뮤니티에 내가 할 수 있는 지원을 하고 싶다는 생각이 든다.</strong></p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/Python/" class="post-tag">#Python</a>
-        
-            <a href="/tags/conference/" class="post-tag">#conference</a>
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/open-source/" class="post-tag">#open-source</a>
-        
-            <a href="/tags/pycon/" class="post-tag">#pycon</a>
-        
-            <a href="/tags/pyconkr/" class="post-tag">#pyconkr</a>
-        
-            <a href="/tags/tutorial/" class="post-tag">#tutorial</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

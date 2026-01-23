@@ -1,77 +1,144 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>프로그래머를 위한 까페는 없는걸까? - ASH84</title>
+    <meta name="description" content="﻿바야흐로 까페 전성시대다. 스타벅스에서 시작한 우리나라의 까페 문화는 이제는 골목골목마다 커피와 와플을 파는 까페로 가득 차 버렸다. 단순히 음료와 음식을 파는 까페는 이제는 무선인터넷을 지원해주고, 공부할수" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2009/11/23/-ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-98-eb-a8-b8-eb-a5-bc--ec-9c-84-ed-95-9c--ea-b9-8c-ed-8e-98-eb-8a-94--ec-97-86-eb-8a-94-ea-b1-b8-ea-b9-8c/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="프로그래머를 위한 까페는 없는걸까?"/>
+    <meta property="og:description" content="﻿바야흐로 까페 전성시대다. 스타벅스에서 시작한 우리나라의 까페 문화는 이제는 골목골목마다 커피와 와플을 파는 까페로 가득 차 버렸다. 단순히 음료와 음식을 파는 까페는 이제는 무선인터넷을 지원해주고, 공부할수"/>
+    <meta property="og:url" content="https://ash84.io/2009/11/23/-ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-98-eb-a8-b8-eb-a5-bc--ec-9c-84-ed-95-9c--ea-b9-8c-ed-8e-98-eb-8a-94--ec-97-86-eb-8a-94-ea-b1-b8-ea-b9-8c/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="안성현" />
+    
+    <meta property="article:tag" content="CAFE" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="programmer's cafe" />
+    
+    <meta property="article:tag" content="developer" />
+    
+    <meta property="article:tag" content="까페" />
+    
+    <meta property="article:tag" content="마이크로소프트웨어" />
+    
+    <meta property="article:tag" content="스타벅스" />
+    
+    <meta property="article:tag" content="프로그래머를 위한 까페" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="프로그래머를 위한 까페는 없는걸까?"/>
+    <meta name="twitter:description" content="﻿바야흐로 까페 전성시대다. 스타벅스에서 시작한 우리나라의 까페 문화는 이제는 골목골목마다 커피와 와플을 파는 까페로 가득 차 버렸다. 단순히 음료와 음식을 파는 까페는 이제는 무선인터넷을 지원해주고, 공부할수"/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "프로그래머를 위한 까페는 없는걸까?",
+        "description": "﻿바야흐로 까페 전성시대다. 스타벅스에서 시작한 우리나라의 까페 문화는 이제는 골목골목마다 커피와 와플을 파는 까페로 가득 차 버렸다. 단순히 음료와 음식을 파는 까페는 이제는 무선인터넷을 지원해주고, 공부할수",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2009/11/23/-ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-98-eb-a8-b8-eb-a5-bc--ec-9c-84-ed-95-9c--ea-b9-8c-ed-8e-98-eb-8a-94--ec-97-86-eb-8a-94-ea-b1-b8-ea-b9-8c"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - 프로그래머를 위한 까페는 없는걸까?"/>
-    <meta property="og:description" content="﻿바야흐로 까페 전성시대다. 스타벅스에서 시작한 우리나라의 까페 문화는 이제는 골목골목마다 커피와 와플을 파는 까페로 가득 차 버렸다. 단순히 음료와 음식을 파는 까페는 이제는 무선인터넷을 지원해주고, 공부할수"/>
-    <meta property="og:url" content="https://ash84.io/docs/2009/11/23/-ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-98-eb-a8-b8-eb-a5-bc--ec-9c-84-ed-95-9c--ea-b9-8c-ed-8e-98-eb-8a-94--ec-97-86-eb-8a-94-ea-b1-b8-ea-b9-8c"/>
-    <meta property="og:image" content="https://ash84.io/docs/2009/11/23/-ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-98-eb-a8-b8-eb-a5-bc--ec-9c-84-ed-95-9c--ea-b9-8c-ed-8e-98-eb-8a-94--ec-97-86-eb-8a-94-ea-b1-b8-ea-b9-8c/"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>프로그래머를 위한 까페는 없는걸까?</title>
-    <meta name="description" content="﻿바야흐로 까페 전성시대다. 스타벅스에서 시작한 우리나라의 까페 문화는 이제는 골목골목마다 커피와 와플을 파는 까페로 가득 차 버렸다. 단순히 음료와 음식을 파는 까페는 이제는 무선인터넷을 지원해주고, 공부할수" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">프로그래머를 위한 까페는 없는걸까?</h1>
-    <div class="blog-post-meta"> 
-        <small>  2009-11-23</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2009-11-23</time>
+            <h1 class="post-title">프로그래머를 위한 까페는 없는걸까?</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/안성현/" class="tag">안성현</a>
+                
+                <a href="/tags/CAFE/" class="tag">CAFE</a>
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/programmer's cafe/" class="tag">programmer's cafe</a>
+                
+                <a href="/tags/developer/" class="tag">developer</a>
+                
+                <a href="/tags/까페/" class="tag">까페</a>
+                
+                <a href="/tags/마이크로소프트웨어/" class="tag">마이크로소프트웨어</a>
+                
+                <a href="/tags/스타벅스/" class="tag">스타벅스</a>
+                
+                <a href="/tags/프로그래머를 위한 까페/" class="tag">프로그래머를 위한 까페</a>
+                
+            </div>
+            
+        </header>
 
-    
-    <div class="blog-post">
-        <div style="line-height: 2; "><span style="font-family: Dotum; "><span style="font-family: Dotum; ">﻿</span></span><span style="font-size: 11pt; "><span style="font-family: Dotum; ">바야흐로 까페 전성시대다. 스타벅스에서 시작한 우리나라의 까페 문화는 이제는 골목골목마다 커피와 와플을 파는 까페로 가득 차 버렸다. 단순히 음료와 음식을 파는 까페는 이제는 무선인터넷을 지원해주고, 공부할수 있는 자리를 마련해 주고, 볼 수 있는 책을 제공해 주면서 소비자를 1분 1초라도 더 까페 속에서 있게 하려는 전략들로 까페전쟁이라고 해도 과언이 아니다. 그러던 중 드는 생각.</span></span></div>
+        
+
+        <div class="post-content">
+            <div style="line-height: 2; "><span style="font-family: Dotum; "><span style="font-family: Dotum; ">﻿</span></span><span style="font-size: 11pt; "><span style="font-family: Dotum; ">바야흐로 까페 전성시대다. 스타벅스에서 시작한 우리나라의 까페 문화는 이제는 골목골목마다 커피와 와플을 파는 까페로 가득 차 버렸다. 단순히 음료와 음식을 파는 까페는 이제는 무선인터넷을 지원해주고, 공부할수 있는 자리를 마련해 주고, 볼 수 있는 책을 제공해 주면서 소비자를 1분 1초라도 더 까페 속에서 있게 하려는 전략들로 까페전쟁이라고 해도 과언이 아니다. 그러던 중 드는 생각.</span></span></div>
 <div style="text-align: justify;"></div>
 <div><div style="text-align: justify;"></div><div style="text-align: justify;">**<span style="font-size: 11pt; "><span style="font-family: Dotum; ">왜 프로그래머를 위한 까페는 없는 걸까?</span></span>**</div></div>
 <div style="text-align: justify;border-left-color: rgb(0, 0, 0); border-left-width: 200px; border-left-style: solid; padding-bottom: 3px; background-color: rgb(232, 232, 232); padding-left: 6px; width: 690px; padding-right: 6px; font: normal normal bold 1pt/1 나눔고딕, sans-serif; margin-bottom: 10px; height: 1px; color: rgb(255, 255, 255); padding-top: 3px; "></div>
@@ -117,33 +184,17 @@
 <span>Impossibles Entrance by [/^)ichael](http://www.flickr.com/photos/13940402@N08)</span>[![저작자 표시](http://cfs.tistory.com/static/admin/editor/ccl_black01.png)![비영리](http://cfs.tistory.com/static/admin/editor/ccl_black02.png)![변경 금지](http://cfs.tistory.com/static/admin/editor/ccl_black04.png)](http://creativecommons.org/licenses/by-nc-nd/2.0/kr/)</td></tr></tbody></table></div>
 <div style="text-align: justify; line-height: 2; "></div>
 <div style="text-align: justify; line-height: 2; "><span style="font-family: Dotum; "><span style="font-size: 11pt; ">사실 필자는 까페에 많이 가는 편입니다. 그래서 위와 같은 생각을 하게 된건지도 모르겠습니다. 어떻게 보면 수익적인 측면은 많이 고려하지 않았던것 같습니다. 수익적인 측면을 고려한다면 불가능한 꿈일지도 모르겠다는 생각이 들었습니다. 그래도 나중에 만약 돈을 정말 많이 벌어서 제 빌딩을 산다면 1층에는 프로그래머를 위한 까페를 만들고 싶습니다. </span></span></div>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/안성현/" class="post-tag">#안성현</a>
-        
-            <a href="/tags/CAFE/" class="post-tag">#CAFE</a>
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/programmer's cafe/" class="post-tag">#programmer's cafe</a>
-        
-            <a href="/tags/developer/" class="post-tag">#developer</a>
-        
-            <a href="/tags/까페/" class="post-tag">#까페</a>
-        
-            <a href="/tags/마이크로소프트웨어/" class="post-tag">#마이크로소프트웨어</a>
-        
-            <a href="/tags/스타벅스/" class="post-tag">#스타벅스</a>
-        
-            <a href="/tags/프로그래머를 위한 까페/" class="post-tag">#프로그래머를 위한 까페</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

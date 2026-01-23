@@ -1,396 +1,329 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>tutorial — ASH84</title>
+    <meta name="description" content="tutorial 태그가 붙은 52개의 글" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/tags/tutorial/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="tutorial — ASH84"/>
+    <meta property="og:description" content="tutorial 태그가 붙은 52개의 글"/>
+    <meta property="og:url" content="https://ash84.io/tags/tutorial/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:title" content="tutorial — ASH84"/>
+    <meta name="twitter:description" content="tutorial 태그가 붙은 52개의 글"/>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-71946262-1');
     </script>
 
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - #tutorial"/>
-    <meta property="og:description" content="tutorial 태그가 있는 모든 포스트"/>
-    <meta property="og:url" content="https://ash84.io/tags/tutorial.html"/>
-    <meta property="og:type" content="website"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>#tutorial - ASH84</title>
-    <meta name="description" content="tutorial 태그가 있는 모든 포스트" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
-    <script>hljs.highlightAll();</script>
-
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
 </head>
-<body class="font">
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
-    </header>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="/" class="logo">ASH84</a>
+            <nav class="nav">
+                <a href="/tags/">Archive</a>
+            </nav>
+        </header>
 
-<div class="content">
-    <h1 class="blog-post-title">#tutorial</h1>
-    <div class="blog-post-meta">
-        <small>52개의 포스트</small>
+        <section class="hero" style="padding: 80px 0 60px;">
+            <h1 class="hero-text" style="font-size: clamp(36px, 8vw, 80px);">#tutorial</h1>
+            <div class="hero-meta">
+                <span>52 Posts</span>
+            </div>
+        </section>
+
+        <section class="latest">
+            <div class="posts">
+                
+                <a href="/2019/06/15/reason-for-selection-tech/" class="post-item">
+                    <span class="post-date">2019-06-15</span>
+                    <span class="post-title">기술 선택의 이유</span>
+                </a>
+                
+                <a href="/2019/01/26/k8s-statefulsets-mongodb/" class="post-item">
+                    <span class="post-date">2019-01-26</span>
+                    <span class="post-title">Running a MongoDB Database in Kubernetes with StatefulSets</span>
+                </a>
+                
+                <a href="/2018/09/04/sqlalchemy-join-one-to-one/" class="post-item">
+                    <span class="post-date">2018-09-04</span>
+                    <span class="post-title">SQLAlchemy Join #3 One to One</span>
+                </a>
+                
+                <a href="/2018/08/29/pyconkr2018-day2/" class="post-item">
+                    <span class="post-date">2018-08-29</span>
+                    <span class="post-title">PyconKR 2018 후기 2일차 </span>
+                </a>
+                
+                <a href="/2018/08/21/pyconkr2018-day1/" class="post-item">
+                    <span class="post-date">2018-08-21</span>
+                    <span class="post-title">PyconKR 2018 후기 1일차 </span>
+                </a>
+                
+                <a href="/2018/07/13/chainmap-usage/" class="post-item">
+                    <span class="post-date">2018-07-13</span>
+                    <span class="post-title"> ChainMap 사용법 정리</span>
+                </a>
+                
+                <a href="/2018/05/11/renew-blog/" class="post-item">
+                    <span class="post-date">2018-05-11</span>
+                    <span class="post-title">블로그 툴 이사</span>
+                </a>
+                
+                <a href="/2018/02/23/pyinstaller-usage/" class="post-item">
+                    <span class="post-date">2018-02-23</span>
+                    <span class="post-title">pyinstaller 로 실행파일 만들기</span>
+                </a>
+                
+                <a href="/2018/01/29/flask-mqtt-subscribe-qos-pull-request/" class="post-item">
+                    <span class="post-date">2018-01-29</span>
+                    <span class="post-title">flask-mqtt : subscribe 시 qos 설정 이슈 수정하기</span>
+                </a>
+                
+                <a href="/2017/11/03/react-native-app-getting-started/" class="post-item">
+                    <span class="post-date">2017-11-03</span>
+                    <span class="post-title">React Native App 시작하기</span>
+                </a>
+                
+                <a href="/2017/08/28/python-sorted-internal/" class="post-item">
+                    <span class="post-date">2017-08-28</span>
+                    <span class="post-title">python sorted 에 대해서.</span>
+                </a>
+                
+                <a href="/2016/08/08/api-documentation-based-on-markdown/" class="post-item">
+                    <span class="post-date">2016-08-08</span>
+                    <span class="post-title">마크다운 문서화 도입기</span>
+                </a>
+                
+                <a href="/2016/06/11/celery-supervisord-2/" class="post-item">
+                    <span class="post-date">2016-06-11</span>
+                    <span class="post-title">celery + supervisord</span>
+                </a>
+                
+                <a href="/2016/03/29/tailon-logfile-to-web/" class="post-item">
+                    <span class="post-date">2016-03-29</span>
+                    <span class="post-title">tailon 으로 로그파일 웹에서 보기</span>
+                </a>
+                
+                <a href="/2016/01/24/polyfill-modernizr/" class="post-item">
+                    <span class="post-date">2016-01-24</span>
+                    <span class="post-title">polyfill & modernizr</span>
+                </a>
+                
+                <a href="/2015/12/25/-ec-9d-b4-ec-83-81-ed-95-9c-eb-aa-a8-ec-9e-84-2015--ec-97-b0-eb-a7-90-ec-a0-95-ec-82-b0/" class="post-item">
+                    <span class="post-date">2015-12-25</span>
+                    <span class="post-title">이상한모임 2015 연말정산</span>
+                </a>
+                
+                <a href="/2015/11/05/rotatelogs--ec-82-ac-ec-9a-a9-eb-b2-95/" class="post-item">
+                    <span class="post-date">2015-11-05</span>
+                    <span class="post-title">rotatelogs 사용법</span>
+                </a>
+                
+                <a href="/2015/10/03/postman-and-postman2md/" class="post-item">
+                    <span class="post-date">2015-10-03</span>
+                    <span class="post-title">postman and postman2md</span>
+                </a>
+                
+                <a href="/2015/07/09/ab-test-post/" class="post-item">
+                    <span class="post-date">2015-07-09</span>
+                    <span class="post-title">A/B Test Post 요청하기</span>
+                </a>
+                
+                <a href="/2015/07/07/jmeter-non-gui-mode/" class="post-item">
+                    <span class="post-date">2015-07-07</span>
+                    <span class="post-title">jmeter non GUI mode</span>
+                </a>
+                
+                <a href="/2015/03/24/jquery-jquerytimeagojs--eb-aa-87-ec-b4-88-ec-a0-84--eb-aa-87-ec-9d-bc-ec-a0-84--ea-b3-84-ec-82-b0-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2015-03-24</span>
+                    <span class="post-title">[jquery] jquery.timeago.js 몇초전, 몇일전 계산하기</span>
+                </a>
+                
+                <a href="/2015/03/19/nginx-config-optimization/" class="post-item">
+                    <span class="post-date">2015-03-19</span>
+                    <span class="post-title">[번역] How To Optimize Nginx Configuration(Nginx 의 설정 최적화)</span>
+                </a>
+                
+                <a href="/2015/03/10/uwsgi--ea-b8-b0-eb-b3-b8--ec-82-ac-ec-9a-a9-eb-b2-95--ec-a0-95-eb-a6-ac/" class="post-item">
+                    <span class="post-date">2015-03-10</span>
+                    <span class="post-title">uwsgi 기본 사용법 정리</span>
+                </a>
+                
+                <a href="/2015/03/09/jinja-length-substring/" class="post-item">
+                    <span class="post-date">2015-03-09</span>
+                    <span class="post-title">jinja template length , substring</span>
+                </a>
+                
+                <a href="/2015/02/27/2014--ec-9d-b4-ec-83-81-ed-95-9c--eb-aa-a8-ec-9e-84--ec-97-b0-eb-a7-90-ec-a0-95-ec-82-b0--eb-92-a4-eb-8a-a6-ec-9d-80--ed-9b-84-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2015-02-27</span>
+                    <span class="post-title">2014 이상한 모임 연말정산 뒤늦은 후기</span>
+                </a>
+                
+                <a href="/2015/01/21/python--ec-97-91-ec-85-80--eb-a7-8c-eb-93-a4-ea-b8-b0--ec-8b-9c-ed-8a-b8-ec-b6-94-ea-b0-80/" class="post-item">
+                    <span class="post-date">2015-01-21</span>
+                    <span class="post-title">python create excel, add sheet</span>
+                </a>
+                
+                <a href="/2014/11/28/-ea-b8-b0-eb-b3-b8-uirefreshcontrol--eb-b0-8f-custom--eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac--ec-86-8c-ea-b0-9c/" class="post-item">
+                    <span class="post-date">2014-11-28</span>
+                    <span class="post-title">기본 UIRefreshControl 및 Custom 라이브러리 소개</span>
+                </a>
+                
+                <a href="/2014/11/25/818-pprint-data-pretty-printer-python-278-documentation/" class="post-item">
+                    <span class="post-date">2014-11-25</span>
+                    <span class="post-title">8.18. pprint — Data pretty printer — Python 2.7.8 documentation</span>
+                </a>
+                
+                <a href="/2014/10/07/python-weekly-159/" class="post-item">
+                    <span class="post-date">2014-10-07</span>
+                    <span class="post-title">Python Weekly 159</span>
+                </a>
+                
+                <a href="/2014/02/11/ios-category-about/" class="post-item">
+                    <span class="post-date">2014-02-11</span>
+                    <span class="post-title">(iOS) Category 란?</span>
+                </a>
+                
+                <a href="/2013/12/28/ios-svprogresshud-nstimer/" class="post-item">
+                    <span class="post-date">2013-12-28</span>
+                    <span class="post-title">(iOS) SVProgressHUD + NSTimer</span>
+                </a>
+                
+                <a href="/2013/12/19/ios-testflight--ec-82-ac-ec-9a-a9-ed-95-b4-ec-84-9c-ipa--eb-b0-b0-ed-8f-ac-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2013-12-19</span>
+                    <span class="post-title">(iOS) TestFlight 사용해서 ipa 배포하기</span>
+                </a>
+                
+                <a href="/2013/11/04/python-logging--ec-82-ac-ec-9a-a9-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2013-11-04</span>
+                    <span class="post-title">(python) usage logging</span>
+                </a>
+                
+                <a href="/2013/09/21/ios-svprogresshud--eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c--ed-8c-9d-ec-97-85--eb-b3-b4-ec-97-ac-ec-a3-bc-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2013-09-21</span>
+                    <span class="post-title">(iOS) SVProgressHUD 를 이용한 팝업 보여주기</span>
+                </a>
+                
+                <a href="/2013/09/20/ios--eb-b0-94-ec-bd-94-eb-93-9c--ec-9d-b8-ec-8b-9d--eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac-zbar--ec-82-ac-ec-9a-a9-eb-b2-95/" class="post-item">
+                    <span class="post-date">2013-09-20</span>
+                    <span class="post-title">(iOS) 바코드 인식 라이브러리 ZBar 사용법</span>
+                </a>
+                
+                <a href="/2013/07/10/python-webkit2png-webpage-screenshot/" class="post-item">
+                    <span class="post-date">2013-07-10</span>
+                    <span class="post-title">(python) webkit2png, webpage screenshot</span>
+                </a>
+                
+                <a href="/2013/07/08/-ec-95-8c-ea-b3-a0-eb-a6-ac-ec-a6-98--ec-8b-9c-ea-b0-84--eb-b3-b5-ec-9e-a1-eb-8f-84/" class="post-item">
+                    <span class="post-date">2013-07-08</span>
+                    <span class="post-title">(알고리즘) 시간 복잡도</span>
+                </a>
+                
+                <a href="/2013/07/08/stackoverflow-how-to-improve-select-performance-in-mysql/" class="post-item">
+                    <span class="post-date">2013-07-08</span>
+                    <span class="post-title">(stackoverflow) how to improve select performance in mysql?</span>
+                </a>
+                
+                <a href="/2013/05/16/vertx-mod-sample--eb-94-b0-eb-9d-bc-ed-95-98-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2013-05-16</span>
+                    <span class="post-title">(vert.x) mod-sample 따라하기</span>
+                </a>
+                
+                <a href="/2013/04/09/c--ec-a0-95-ec-a0-81--ea-b2-80-ec-82-ac--eb-b0-8f--eb-a9-94-eb-aa-a8-eb-a6-ac--ea-b2-80-ec-82-ac--ed-88-b4/" class="post-item">
+                    <span class="post-date">2013-04-09</span>
+                    <span class="post-title">(C++) 정적 검사 및 메모리 검사 툴</span>
+                </a>
+                
+                <a href="/2013/03/08/exs4j-netty-channelpipeline--ec-97-90--eb-8c-80-ed-95-9c--ec-9d-b4-ed-95-b4/" class="post-item">
+                    <span class="post-date">2013-03-08</span>
+                    <span class="post-title">(exs4j) Netty ChannelPipeline 에 대한 이해.</span>
+                </a>
+                
+                <a href="/2013/02/15/java-executorservice-thread--eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c--ec-8a-a4-eb-a0-88-eb-93-9c--ec-82-ac-ec-9a-a9/" class="post-item">
+                    <span class="post-date">2013-02-15</span>
+                    <span class="post-title">(Java) ExecutorService, Thread 를 이용한 스레드 사용</span>
+                </a>
+                
+                <a href="/2013/01/11/java-gson-wrapping/" class="post-item">
+                    <span class="post-date">2013-01-11</span>
+                    <span class="post-title">[Java] 간단 gson wrapping 하기</span>
+                </a>
+                
+                <a href="/2012/11/27/java-args/" class="post-item">
+                    <span class="post-date">2012-11-27</span>
+                    <span class="post-title">[JAVA] 약간은 낯설은 가변인자 사용법.</span>
+                </a>
+                
+                <a href="/2012/09/03/java-redis-jedis/" class="post-item">
+                    <span class="post-date">2012-09-03</span>
+                    <span class="post-title">[JAVA] jedis를 이용한 Redis 와 연동하기</span>
+                </a>
+                
+                <a href="/2012/08/22/syntaxhighlighter--ec-97-90-ec-84-9c-gist--ea-b9-8c-ec-a7-80--ea-b7-b8-eb-a6-ac-ea-b3-a0--ec-9b-8c-eb-93-9c-ed-94-84-eb-a0-88-ec-8a-a4-ec-97-90-ec-84-/" class="post-item">
+                    <span class="post-date">2012-08-22</span>
+                    <span class="post-title">SyntaxHighlighter 에서 gist 까지, 그리고 워드프레스에서의 사용법</span>
+                </a>
+                
+                <a href="/2012/07/28/c-register-dll-regsvr32/" class="post-item">
+                    <span class="post-date">2012-07-28</span>
+                    <span class="post-title">[C#] DLL 등록하기 regsvr32.exe</span>
+                </a>
+                
+                <a href="/2012/04/08/-ec-98-a8-eb-9d-bc-ec-9d-b8--ec-9d-bc-ec-a0-95-ea-b4-80-eb-a6-ac--ed-88-b4-trellocom--ec-82-ac-ec-9a-a9--ed-9b-84-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2012-04-08</span>
+                    <span class="post-title">온라인 일정관리 툴, trello.com 사용 후기</span>
+                </a>
+                
+                <a href="/2011/01/18/momotwit-plan-of-source-open--ec-86-8c-ec-8a-a4-ea-b3-b5-ea-b0-9c--ea-b3-84-ed-9a-8d/" class="post-item">
+                    <span class="post-date">2011-01-18</span>
+                    <span class="post-title">[MomoTwit] Plan Of Source Open (소스공개 계획)</span>
+                </a>
+                
+                <a href="/2010/03/18/windows-phone-7--ec-9c-88-eb-8f-84-ec-9a-b0--ed-8f-b0-7--ea-b0-9c-eb-b0-9c-getting-started/" class="post-item">
+                    <span class="post-date">2010-03-18</span>
+                    <span class="post-title">[Windows Phone 7] 윈도우 폰 7 개발 Getting Started</span>
+                </a>
+                
+                <a href="/2009/05/07/user-interface--ea-b7-b8-eb-a6-ac-ea-b8-b0--ec-a2-8b-ec-9d-80--ed-88-b4-balsamiq-mockups/" class="post-item">
+                    <span class="post-date">2009-05-07</span>
+                    <span class="post-title">User Interface 그리기 좋은 툴 - Balsamiq Mockups</span>
+                </a>
+                
+                <a href="/2008/05/22/-ed-8e-8c-ms-sql--ec-a0-80-ec-9e-a5--ed-94-84-eb-a1-9c-ec-8b-9c-ec-a0-80--eb-a7-8c-eb-93-a4-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2008-05-22</span>
+                    <span class="post-title">[펌] MS-SQL : 저장 프로시저 만들기</span>
+                </a>
+                
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <span>© 2007—<script>document.write(new Date().getFullYear())</script></span>
+            </div>
+            <div class="footer-right">
+                <a href="/">Home</a>
+            </div>
+        </footer>
     </div>
-
-    <div class="pre-blog-post"></div>
-
-    <div class="blog-post">
-        <ul style="list-style: none; padding: 0;">
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2019-06-15</div>
-                    <a href="/2019/06/15/reason-for-selection-tech/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">기술 선택의 이유</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">되게 오랜만에 글을 쓴다. 이직하고 나서 너무 정신없이 살다 보니, 글을 쓰는 행위 자체를 잊어버린 것만 같았다. 다시 글을 쓰는 이유는 그냥 글을 쓰고 싶어졌다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2019-01-26</div>
-                    <a href="/2019/01/26/k8s-statefulsets-mongodb/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">Running a MongoDB Database in Kubernetes with StatefulSets</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">본 포스팅은 Qwiklabs 의 [Kubernetes in the Google Cloud](https://www.qwiklabs.com/quests/29)</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2018-09-04</div>
-                    <a href="/2018/09/04/sqlalchemy-join-one-to-one/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">SQLAlchemy Join #3 One to One</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">**[One To One](http://docs.sqlalchemy.org/en/latest/orm/basic_relationships.html#one-to-one)**</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2018-08-29</div>
-                    <a href="/2018/08/29/pyconkr2018-day2/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">PyconKR 2018 후기 2일차 </a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"># 2일차 후기</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2018-08-21</div>
-                    <a href="/2018/08/21/pyconkr2018-day1/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">PyconKR 2018 후기 1일차 </a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">몇년째인지 모르겠지만 참여하고 있다. 나이가 들어서 그런지 점점 같이 갔던 분들이 보이지 않거나 하는것 같은데 이 역시 개발자의 숙명이 아닐까 하는 생각이 든다. 나는 아내가 파이콘 가는것을 1년에 한번이기때문에 뭐라고 하지 않지만, 주말2일 평일1일을 세미나에 쓴다는 건은 솔직히 쉽지 않다. 아쉽게도 올해는 라이트닝 토크는 함께하지 못했다. 내년에는 아이가 둘이라서 한 아이를 아이돌봄에 맡기고 봐야할 것 같다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2018-07-13</div>
-                    <a href="/2018/07/13/chainmap-usage/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;"> ChainMap 사용법 정리</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">Python3.3 에서 처음 나온  ChainMap 은 익히 잘 알고 있는 collections 모듈에 위치해 있다. 3.3 에 나왔지만, 생각보다 많이 알려지지 않은 이유는 기존의 다른 방식의 코딩으로 대체가능한 영역이라서 인것 같다. ChainMap의 기본적인 역할은 quickly linking a number of mappings 이라고 소개하고 있다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2018-05-11</div>
-                    <a href="/2018/05/11/renew-blog/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">블로그 툴 이사</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">블로그를 개편했다. 아니 정확히는 블로그 툴을 바꿨다는게 맞는것 같다. 블로그에 대한 나의 편력(?)은 대단한 편이다. 처음에 테터툴즈로 시작했고, 티스토리, 네이버를 거쳐서 워드프레스([Startig wordpress](https://ash84.net/2015/04/14/starting-wordpress/)) 그리고 ghost까지. 그리고 지금은 직접 개발하고 있는 블로그 툴을 사용하고 있다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2018-02-23</div>
-                    <a href="/2018/02/23/pyinstaller-usage/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">pyinstaller 로 실행파일 만들기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">암복호화 프로그램을 만들 일이 있었는데, 파이썬으로 작업을 하게 되면 *.py 파일 안에 암복화키가 보여지기 때문에 리눅스 실행파일로 만들수 있는 방법을 찾게 되었다. C/C++ 을 이용해서 실행파일을 만들까 싶다가 pyinstaller 가 있길래 사용해 봤는데, 사용법이 너무 간단하다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2018-01-29</div>
-                    <a href="/2018/01/29/flask-mqtt-subscribe-qos-pull-request/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">flask-mqtt : subscribe 시 qos 설정 이슈 수정하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">이번 프로젝트를 하면서 주문관련 부분을 기존의 폴링(polling) 을 하던 방식에서 중간에 브로커서버를 두고 주문하는 쪽에서 주문을 보내면 브로커 서버의 특정 topic 을 구독하고 있는 구독자가 해당 주문을 받는 형태로 구성을 했다. 그 과정에서 mqtt 를 이용했고, [emqtt](https://emqtt.io) 브로커 서버를 선택해서 사용하고 있다. 주문을 하는 쪽에서는 flask 로 구성되어 있어서 별도의 [paho client](https://pypi.python.org/pypi/paho-mqtt/1.2) 라이브러리를 띄</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2017-11-03</div>
-                    <a href="/2017/11/03/react-native-app-getting-started/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">React Native App 시작하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">이 글은  [React Native Getting Started](https://facebook.github.io/react-native/docs/getting-started.html) 에 대한 삽질기입니다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2017-08-28</div>
-                    <a href="/2017/08/28/python-sorted-internal/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">python sorted 에 대해서.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">sorted 에 대해서 질문을 받았고 잘 대답을 하지 못해서 복기차원에서 이 글을 쓴다. 대부분의 내용은 [Sorting HOW TO](https://docs.python.org/3/howto/sorting.html) 라는 글에서 가져왔음을 밝힌다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2016-08-08</div>
-                    <a href="/2016/08/08/api-documentation-based-on-markdown/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">마크다운 문서화 도입기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">최근에 신규 프로젝트를 들어가면서 DB와 API 설계를 담당하고 있는데 일반적으로 DB 설계는 설계 후 산출물을 가지고 검토를 받고, API는 설계 산출물을 가지고 클라이언트 개발자(앱과 웹) 전달해서 연동할 때 사용하도록 하는 식으로 진행이 된다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2016-06-11</div>
-                    <a href="/2016/06/11/celery-supervisord-2/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">celery + supervisord</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">celery 를 데몬방식으로 실행해야할 경우, [몇 가지 방법](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2016-03-29</div>
-                    <a href="/2016/03/29/tailon-logfile-to-web/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">tailon 으로 로그파일 웹에서 보기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">서버에 있는 로그를 웹상의 타인에게 보여줘야 할 경우가 있는데(가급적 이런 경우는 좋지 않은 상황인 경우이다.) 어떻게 할까 찾아보다가 python 으로 된 tailon 이라는 쉽게 커맨드 명령어로 띄울 수 있는 툴이 있어서 소개한다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2016-01-24</div>
-                    <a href="/2016/01/24/polyfill-modernizr/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">polyfill & modernizr</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-12-25</div>
-                    <a href="/2015/12/25/-ec-9d-b4-ec-83-81-ed-95-9c-eb-aa-a8-ec-9e-84-2015--ec-97-b0-eb-a7-90-ec-a0-95-ec-82-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">이상한모임 2015 연말정산</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">[작년에 이어서](http://ash84.net/2015/02/27/2014-%EC%9D%B4%EC%83%81%ED%95%9C-%EB%AA%A8%EC%9E%84-%EC%97%B0%EB%A7%90%EC%A0%95%EC%82%B0-%EB%92%A4%EB%8A%A6%EC%9D%80-%ED%9B%84%EA%B8%B0/) 2번째 이상한 모임의 연말정산을 갔다. 작년에 개인적으로 너무 좋아서 이번에도 당연히 믿고 가는 이상한 모임 2015 연말정산이었다. 혹자는 가격이 너무 비싼게 아니냐고 생각할 수도 있지만, 이 모임을 통해서 여러가지 다</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-11-05</div>
-                    <a href="/2015/11/05/rotatelogs--ec-82-ac-ec-9a-a9-eb-b2-95/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">rotatelogs 사용법</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">링크 : [https://httpd.apache.org/docs/2.2/ko/programs/rotatelogs.html](https://httpd.apache.org/docs/2.2/ko/programs/rotatelogs.html)</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-10-03</div>
-                    <a href="/2015/10/03/postman-and-postman2md/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">postman and postman2md</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">## **postman**</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-07-09</div>
-                    <a href="/2015/07/09/ab-test-post/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">A/B Test Post 요청하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">ab 는 [apache bechmark testing](http://httpd.apache.org/docs/2.2/ko/programs/ab.html) 이라는 일종의 툴 인데, apache httpd를 설치하면 ./bin 디렉토리 내에 존재한다. 대략적인 사용법은 다음과 같다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-07-07</div>
-                    <a href="/2015/07/07/jmeter-non-gui-mode/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">jmeter non GUI mode</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">[apache jmeter](http://jmeter.apache.org/) 라고 서버 Load Testing 툴인데, [사용법](http://codeigniter-kr.org/lecture/view/289/page/1)은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-03-24</div>
-                    <a href="/2015/03/24/jquery-jquerytimeagojs--eb-aa-87-ec-b4-88-ec-a0-84--eb-aa-87-ec-9d-bc-ec-a0-84--ea-b3-84-ec-82-b0-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[jquery] jquery.timeago.js 몇초전, 몇일전 계산하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">페이스북이나 최근에 SNS 및 뉴스에서는 특정 일자를 알려주기 보다는 과거의 상대성으로 시간을 표시한다. 예를들면 3일전, 2시간전 이렇게 말이다. 개발자가 일일히 보여지는 날짜 데이터에 대해서 계산해서 만들어 내야하는데 jquery.timeago.js 에서 이 기능을 지원해 준다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-03-19</div>
-                    <a href="/2015/03/19/nginx-config-optimization/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[번역] How To Optimize Nginx Configuration(Nginx 의 설정 최적화)</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">Nginx 에 대해서 몇가지 관심을 갖다가 설정에 따른 성능향상, 영향에 대해서 쓴 글을 보게 되었는데 공부할겸 정리해 둔다. 거창하게 제목에 번역이라고 달았지만, 그냥 아는단어를 한글화 했다고 보면 된다. 아래의 링크는 원문링크이다. 오류가 있다면 댓글로!</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-03-10</div>
-                    <a href="/2015/03/10/uwsgi--ea-b8-b0-eb-b3-b8--ec-82-ac-ec-9a-a9-eb-b2-95--ec-a0-95-eb-a6-ac/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">uwsgi 기본 사용법 정리</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">### 개요</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-03-09</div>
-                    <a href="/2015/03/09/jinja-length-substring/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">jinja template length , substring</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">때론 프론트 단에서 처리하는게 편리한게 있기에. 기억하고자 적어둔다. flask 에서 `render_template` 해야 하지만, length 와 substring 은 아래와 같이 쓴다. 그나마 substring은 비슷한데 length 사용법이 파이썬과는 다르다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-02-27</div>
-                    <a href="/2015/02/27/2014--ec-9d-b4-ec-83-81-ed-95-9c--eb-aa-a8-ec-9e-84--ec-97-b0-eb-a7-90-ec-a0-95-ec-82-b0--eb-92-a4-eb-8a-a6-ec-9d-80--ed-9b-84-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">2014 이상한 모임 연말정산 뒤늦은 후기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2015-01-21</div>
-                    <a href="/2015/01/21/python--ec-97-91-ec-85-80--eb-a7-8c-eb-93-a4-ea-b8-b0--ec-8b-9c-ed-8a-b8-ec-b6-94-ea-b0-80/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">python create excel, add sheet</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">파이썬에서 엑셀(csv 형식이 아닌) 파일을 만들고 시트를 추가하는 코드인데 openpyxl 을 사용하는 코드이다. 파라미터로 전송되는 구조에 종속적인 함수이긴 한데, 간단하게 사용법을 적어두는 목적이기에. 좀 애매한 부분들중 하나는 첫 시트를 지우지 않으면 시트 추가시 Sheet 라는 이름의 첫 시트가 남아 있는 문제가 있</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2014-11-28</div>
-                    <a href="/2014/11/28/-ea-b8-b0-eb-b3-b8-uirefreshcontrol--eb-b0-8f-custom--eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac--ec-86-8c-ea-b0-9c/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">기본 UIRefreshControl 및 Custom 라이브러리 소개</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">기본적인 UIRefreshControl 에 대한 사용법이다. UITableView에 addSubView:  하는것만으로도 쉽게 사용할 수 있다. spinner 의 색은 setTintColor 를 이용해서 설정할 수가 있고, backgroundColor 을 지정하면 끌어 당겼을 때의 배경색을 지정할 수가 있다. selector 로 지정한 함수에서 웹서비스를  호출하는 함수를 지정해</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2014-11-25</div>
-                    <a href="/2014/11/25/818-pprint-data-pretty-printer-python-278-documentation/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">8.18. pprint — Data pretty printer — Python 2.7.8 documentation</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"># [8.18. pprint — Data pretty printer — Python 2.7.8 documentation](https://docs.python.org/2/library/pprint.html)</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2014-10-07</div>
-                    <a href="/2014/10/07/python-weekly-159/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">Python Weekly 159</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">파이썬 위클리에서 개인적으로 관심있는것들만 정리하였음.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2014-02-11</div>
-                    <a href="/2014/02/11/ios-category-about/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(iOS) Category 란?</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-12-28</div>
-                    <a href="/2013/12/28/ios-svprogresshud-nstimer/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(iOS) SVProgressHUD + NSTimer</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">[cocoapods](http://beta.cocoapods.org/?q=) 를 연동하면서 자주 사용하는 라이브러리에 대한 사용법을 정리해서 [github](https://github.com/AhnSeongHyun/Objective_Factory/tree/master/SVProgressHUDExample)에 올리고 있는데, 그 중에서도 단연 [SVProgressHUD](https://github.com/samvermette/SVProgressHUD) 는 네트워크 전송 혹은 앱</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-12-19</div>
-                    <a href="/2013/12/19/ios-testflight--ec-82-ac-ec-9a-a9-ed-95-b4-ec-84-9c-ipa--eb-b0-b0-ed-8f-ac-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(iOS) TestFlight 사용해서 ipa 배포하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-11-04</div>
-                    <a href="/2013/11/04/python-logging--ec-82-ac-ec-9a-a9-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(python) usage logging</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">flask 관련 작업을 하면서 로깅을 어떻게 할까 하는 생각이 있었는데 python 에 기본적으로 logging을 탑재하고 있어서 이렇게 사용법을 올린다. 별 다른 건 없고, basicConfig 라는 것을 통해서 filename, filemode, level 을 설정할수 있는데 file 관련 설정을 하지 않으면 stdout 으로 출력되게 된다. 자세한 사항은 [http://docs.python.org/2/library/logging.html](http://docs.pytho</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-09-21</div>
-                    <a href="/2013/09/21/ios-svprogresshud--eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c--ed-8c-9d-ec-97-85--eb-b3-b4-ec-97-ac-ec-a3-bc-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(iOS) SVProgressHUD 를 이용한 팝업 보여주기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">UIAlertViewController를 이용할수도 있겠지만 좀더 세련된 앱을 만들려면 조금이라도 이쁜 모냥새를 보워주는 것이 필수적이다. 그래서 SVProgressHUD 를 주로 팝업이나 로딩시 이용한다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-09-20</div>
-                    <a href="/2013/09/20/ios--eb-b0-94-ec-bd-94-eb-93-9c--ec-9d-b8-ec-8b-9d--eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac-zbar--ec-82-ac-ec-9a-a9-eb-b2-95/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(iOS) 바코드 인식 라이브러리 ZBar 사용법</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">한우찾기 앱은 처음부터 ZBAR 라이브러리를 사용해 왔었는데 그동안 정리할 기회가 없었는데 이번 기회에 사용법에 대한 부분을 정리하는 포스팅을 하려고 한다. 나두 자꾸 까먹어서리.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-07-10</div>
-                    <a href="/2013/07/10/python-webkit2png-webpage-screenshot/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(python) webkit2png, webpage screenshot</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">원래는 이것을 찾으려고 한게 아니고, 웹 페이지에서 여러가지 정보를 가져오는 스크립트를 찾던중에 찾은 재밌는 일종의 툴인데, **파이썬 기반으로 지정한 웹 페이지의 스크린샷을 뜨는 작업**을 해준다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-07-08</div>
-                    <a href="/2013/07/08/-ec-95-8c-ea-b3-a0-eb-a6-ac-ec-a6-98--ec-8b-9c-ea-b0-84--eb-b3-b5-ec-9e-a1-eb-8f-84/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(알고리즘) 시간 복잡도</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">오랫동안 비 전공자인 나를 괴롭혔던 문제들인데 인제 좀 정리를 하려고 한다. **시간복잡도와 공간복잡도 문제는 알고리즘을 측정하는 계산법이다. **생활코딩도 있고 code academy 도 프로그래밍에 대해서 알려주지만 이건 어쩌면 기본적인 프로그래밍을 배우고 나서 언젠가 마주해야할 문제중 하나라는 생각이 든다. (잡설시작) 나 역시 프로그래밍을 사용법 위주로 해왔지만 어느 순간 데이터와 마주하게 되면서 더이상 for 문의 순차 비교만으로는 원하는 성능이 나오지 않는다. 나는</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-07-08</div>
-                    <a href="/2013/07/08/stackoverflow-how-to-improve-select-performance-in-mysql/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(stackoverflow) how to improve select performance in mysql?</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">StackOverflow 를 자주 이용해 오진 않았지만 최근에는 다른 개발자들의 이야기를 들어 보기 위해서 내가 해결한 어떤 문제라고 할지라도 올려서 물어보고 있다. 영어 공부가 된다고 생각하지는 않지만 물어보기 영어 레벨은 올라갈듯. 결국 검색도 실력.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-05-16</div>
-                    <a href="/2013/05/16/vertx-mod-sample--eb-94-b0-eb-9d-bc-ed-95-98-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(vert.x) mod-sample 따라하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">아직까지 vert.x에 대한 자료가 많지는 않은데, 설치 이후에 실제 서버를 돌려보기 위해서는 mod 라는 것을 만들어야 하는데 gradle로 되어 있어서 개발 환경 꾸미기도 쉽지 않은것 같다. 그래도 [h](http://helloworld.naver.com) [elloworld.naver.com](http://helloworld.naver.com)에서 vert.x 에 대해서 보고 (최근에 다른 글이 하나 더 올라왔다.) 글 쓰신 분이 운영하시는 블로그에서 [mod-sampl</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-04-09</div>
-                    <a href="/2013/04/09/c--ec-a0-95-ec-a0-81--ea-b2-80-ec-82-ac--eb-b0-8f--eb-a9-94-eb-aa-a8-eb-a6-ac--ea-b2-80-ec-82-ac--ed-88-b4/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(C++) 정적 검사 및 메모리 검사 툴</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">자주 사용하지는 않지만 문제가 터지면 반드시 사용해야 하는 두개의 툴인데 사실 cppCheck는 그렇게 많이 사용하지는 않고, 문제 터지면 valgrind 부터 돌려보는 편이라. 그래도 어떤때 사용하게 되는 툴들이라 정리해 둔다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-03-08</div>
-                    <a href="/2013/03/08/exs4j-netty-channelpipeline--ec-97-90--eb-8c-80-ed-95-9c--ec-9d-b4-ed-95-b4/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(exs4j) Netty ChannelPipeline 에 대한 이해.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">현재 개발하고 있는 [exs4j](https://github.com/AhnSeongHyun/exs4j) 에서는 네트워크 파트는 전적으로 [Netty](http://netty.io)가 담당하고 있다. 이유는 여러가지가 있겠지만 쉽게  서버를 구성할 수 있고 pipeline을 변경함에 따라 HTTP 통신 방식도 지원할 수 있기 때문이다.(v1.6 지원예정) [Netty ](http://netty.io)에서 여러가지 예제를 제공하고 있기 때문에 쉽게 따라 할수 있는데 필자 역시 따</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-02-15</div>
-                    <a href="/2013/02/15/java-executorservice-thread--eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-9c--ec-8a-a4-eb-a0-88-eb-93-9c--ec-82-ac-ec-9a-a9/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(Java) ExecutorService, Thread 를 이용한 스레드 사용</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">자바 프로그래밍을 하면서 스레드를 자주 사용하는 편인데, 아무래도 속도가 안나오면 데이터를 많이 처리하는 부분에서 병렬처리를 하는 것이 가장 첫 번째로 생각할 수 있는 처리속도의 향상 방법이라고 할수 있겠다. **Thread 객체를 사용하는 방법과 ExecutorService를 사용하는 방법이 있는데, 필자는 주로 각각 다른 작업을 병렬로 해야하는 경우에는 Thread-Runnable 조합을 이용하고, 같은 작업을 여러개로 나눠서 처리한 뒤 결과를 모아서 정렬, 처리 등을 하는 작업의 경우 ExecutorService-Callab</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-01-11</div>
-                    <a href="/2013/01/11/java-gson-wrapping/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[Java] 간단 gson wrapping 하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-11-27</div>
-                    <a href="/2012/11/27/java-args/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[JAVA] 약간은 낯설은 가변인자 사용법.</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">개인적으로 가변인자 사용을 그리 추천하지는 않지만, 어쩔수 없이 사용할때가 있다. List나 Hashtable을 사용하는것도 하나의 방법이겠지만, 간단하게는 가변인자를 활용하는것도 좋은 예라는 생각이 든다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-09-03</div>
-                    <a href="/2012/09/03/java-redis-jedis/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[JAVA] jedis를 이용한 Redis 와 연동하기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-08-22</div>
-                    <a href="/2012/08/22/syntaxhighlighter--ec-97-90-ec-84-9c-gist--ea-b9-8c-ec-a7-80--ea-b7-b8-eb-a6-ac-ea-b3-a0--ec-9b-8c-eb-93-9c-ed-94-84-eb-a0-88-ec-8a-a4-ec-97-90-ec-84-/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">SyntaxHighlighter 에서 gist 까지, 그리고 워드프레스에서의 사용법</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">예전에 블로그에 소스코드를 처음에 넣을때에는 주로 박스 안에 코드를 넣는 작업을 했었다. 그런데 이 작업의 가장 큰 단점은 언어별 syntax 하이라이팅을 보여주지 않는 다는 점이다. 말 그대로 텍스트니까. 그리고 나온것이 [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/) 인데 자바스크립트를 이용해서  태그 속성에 class 이름</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-07-28</div>
-                    <a href="/2012/07/28/c-register-dll-regsvr32/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[C#] DLL 등록하기 regsvr32.exe</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2012-04-08</div>
-                    <a href="/2012/04/08/-ec-98-a8-eb-9d-bc-ec-9d-b8--ec-9d-bc-ec-a0-95-ea-b4-80-eb-a6-ac--ed-88-b4-trellocom--ec-82-ac-ec-9a-a9--ed-9b-84-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">온라인 일정관리 툴, trello.com 사용 후기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">이전 부터 알고 있는 서비스이긴 했지만, 같이 자바 스터디를 는 분 중에 상급 개발자분께서 추천해준 툴인 trello.com. 일단 구글 계정을 기반으로 로그인을 할수 있다는게 편하고, 만약 회사에서 사용한다면 따로 이메일을 넣어서 가입을 하던지 해서 사용해야 겠지만.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2011-01-18</div>
-                    <a href="/2011/01/18/momotwit-plan-of-source-open--ec-86-8c-ec-8a-a4-ea-b3-b5-ea-b0-9c--ea-b3-84-ed-9a-8d/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[MomoTwit] Plan Of Source Open (소스공개 계획)</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">![](http://ash84.net/wp-content/uploads/1/cfile9.uf.1540533D4D34E1F62BAFFE.PNG)</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2010-03-18</div>
-                    <a href="/2010/03/18/windows-phone-7--ec-9c-88-eb-8f-84-ec-9a-b0--ed-8f-b0-7--ea-b0-9c-eb-b0-9c-getting-started/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[Windows Phone 7] 윈도우 폰 7 개발 Getting Started</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"></div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2009-05-07</div>
-                    <a href="/2009/05/07/user-interface--ea-b7-b8-eb-a6-ac-ea-b8-b0--ec-a2-8b-ec-9d-80--ed-88-b4-balsamiq-mockups/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">User Interface 그리기 좋은 툴 - Balsamiq Mockups</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">작업 초기에 유저인터페이스를 먼저 개발하고 그에 대해서 고객과 UI 에 대해서 이야기를 해야하는 경우가 많다. 물론 VS2008 롤 각종 컨트롤을 가져다가 구성하는 것이 어려운 일은 아니지만, 고객과의 상담결과가 늘 그렇듯 내가 만든 UI를 많이 바뀌게 만든다. 그래서 어차피 고쳐야 하기 때문에 사실상 실제 컨트롤을 구현한 화면을 가지고 미팅을 한다는건 상당히 귀찮은 일이다.(안귀찮을지도 모르지만.)</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2008-05-22</div>
-                    <a href="/2008/05/22/-ed-8e-8c-ms-sql--ec-a0-80-ec-9e-a5--ed-94-84-eb-a1-9c-ec-8b-9c-ec-a0-80--eb-a7-8c-eb-93-a4-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[펌] MS-SQL : 저장 프로시저 만들기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">출처 : [http://cafe.naver.com/hackertime/397](http://cafe.naver.com/hackertime/397)</div>
-                </li>
-            
-        </ul>
-    </div>
-
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
 </body>
 </html>

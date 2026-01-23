@@ -1,120 +1,99 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Django — ASH84</title>
+    <meta name="description" content="Django 태그가 붙은 6개의 글" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/tags/Django/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="Django — ASH84"/>
+    <meta property="og:description" content="Django 태그가 붙은 6개의 글"/>
+    <meta property="og:url" content="https://ash84.io/tags/Django/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:title" content="Django — ASH84"/>
+    <meta name="twitter:description" content="Django 태그가 붙은 6개의 글"/>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-71946262-1');
     </script>
 
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - #Django"/>
-    <meta property="og:description" content="Django 태그가 있는 모든 포스트"/>
-    <meta property="og:url" content="https://ash84.io/tags/Django.html"/>
-    <meta property="og:type" content="website"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>#Django - ASH84</title>
-    <meta name="description" content="Django 태그가 있는 모든 포스트" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
-    <script>hljs.highlightAll();</script>
-
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
 </head>
-<body class="font">
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
-    </header>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="/" class="logo">ASH84</a>
+            <nav class="nav">
+                <a href="/tags/">Archive</a>
+            </nav>
+        </header>
 
-<div class="content">
-    <h1 class="blog-post-title">#Django</h1>
-    <div class="blog-post-meta">
-        <small>6개의 포스트</small>
+        <section class="hero" style="padding: 80px 0 60px;">
+            <h1 class="hero-text" style="font-size: clamp(36px, 8vw, 80px);">#Django</h1>
+            <div class="hero-meta">
+                <span>6 Posts</span>
+            </div>
+        </section>
+
+        <section class="latest">
+            <div class="posts">
+                
+                <a href="/2014/01/22/django-endless-pagination/" class="post-item">
+                    <span class="post-date">2014-01-22</span>
+                    <span class="post-title">django-endless-pagination 을 이용한 페이징구현</span>
+                </a>
+                
+                <a href="/2014/01/13/django-djangopackagecom--ec-a2-8b-ec-9d-80--eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac--ea-b3-a8-eb-9d-bc-ec-93-b0-ec-9e-90/" class="post-item">
+                    <span class="post-date">2014-01-13</span>
+                    <span class="post-title">(django) djangopackage.com</span>
+                </a>
+                
+                <a href="/2014/01/06/django-inspectdb--ea-b8-b0-ec-a1-b4--ed-85-8c-ec-9d-b4-eb-b8-94-ec-9d-84-modelspy--eb-a1-9c--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/" class="post-item">
+                    <span class="post-date">2014-01-06</span>
+                    <span class="post-title">(django) inspectdb, 기존 테이블을 models.py 로 가져오기</span>
+                </a>
+                
+                <a href="/2013/12/17/aptana-studio3-django-not-found/" class="post-item">
+                    <span class="post-date">2013-12-17</span>
+                    <span class="post-title">(Django) Aptana Studio3 Django Not found 오류 해결법</span>
+                </a>
+                
+                <a href="/2013/08/08/flask-helloworldpy/" class="post-item">
+                    <span class="post-date">2013-08-08</span>
+                    <span class="post-title">(flask) helloworld.py</span>
+                </a>
+                
+                <a href="/2011/12/23/python-django-eclipse-settings/" class="post-item">
+                    <span class="post-date">2011-12-23</span>
+                    <span class="post-title">[Python] 장고(Django) 설치 및 이클립스(eclipse) 세팅</span>
+                </a>
+                
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <span>© 2007—<script>document.write(new Date().getFullYear())</script></span>
+            </div>
+            <div class="footer-right">
+                <a href="/">Home</a>
+            </div>
+        </footer>
     </div>
-
-    <div class="pre-blog-post"></div>
-
-    <div class="blog-post">
-        <ul style="list-style: none; padding: 0;">
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2014-01-22</div>
-                    <a href="/2014/01/22/django-endless-pagination/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">django-endless-pagination 을 이용한 페이징구현</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">페이징 기능은 사실 게시판에 있어서 필수적인 기능인데 구현하는데 있어서 겁을 먹게 되는것 같다. (나같은 초보 웹쟁이는 더 그렇지) django 에서 페이징 기능을 쉽게 추가할수 있는것이 있을까 싶어서 [djangopackages](https://www.djangopackages.com/) 에서 찾아 봤는데 pagination 이라는 단어로 검색했을때 search weight 가 78%인 [django-endless-pagination](http://django-endless-pagination.readthedocs.org/) 를</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2014-01-13</div>
-                    <a href="/2014/01/13/django-djangopackagecom--ec-a2-8b-ec-9d-80--eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac--ea-b3-a8-eb-9d-bc-ec-93-b0-ec-9e-90/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(django) djangopackage.com</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">![](http://ash84.net/wp-content/uploads/1/cfile30.uf.257F4C5052D3A44C267839.png)</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2014-01-06</div>
-                    <a href="/2014/01/06/django-inspectdb--ea-b8-b0-ec-a1-b4--ed-85-8c-ec-9d-b4-eb-b8-94-ec-9d-84-modelspy--eb-a1-9c--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(django) inspectdb, 기존 테이블을 models.py 로 가져오기</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">많은 장고(Django) 예제에서 models.py 를 먼저 만들고 syncdb 를 통해서 실제 데이터베이스에 구조를 잡게 되는데 사실은 실제 데이터베이스에 이미 데이터나 구조가 있는 경우가 더 많은것같다. 그럴경우 일일히 models.py에서 데이터 모델들을 잡아주는것이 번거로운데(테이블이 많으니까) 장고에서는 inspectdb 라는 기능을 통해서 settings.py에 연결되어 있는 데이터베이스에 대한 models.py의 내용을 가져올 수 있도록 해준다.</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-12-17</div>
-                    <a href="/2013/12/17/aptana-studio3-django-not-found/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(Django) Aptana Studio3 Django Not found 오류 해결법</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">Django 프로젝트를 만들려고 하는데 pip install django 로 django를 설치했음에도 불구하고</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2013-08-08</div>
-                    <a href="/2013/08/08/flask-helloworldpy/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">(flask) helloworld.py</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">pip install flask</div>
-                </li>
-            
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2011-12-23</div>
-                    <a href="/2011/12/23/python-django-eclipse-settings/" style="font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #000;">[Python] 장고(Django) 설치 및 이클립스(eclipse) 세팅</a>
-                    <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">일단 장고(Django) 의 개념이나 필요성에 대해서는 필자도 아직 초급자이므로 애기하지 않고 차후에 본 블로그를 통해서 해당 부분에 대해서 자세히 소개 하도록 하겠습니다. 그래두 일단 장고(Django) 를 설치해 보고, 유난히 파이썬(python) 관련된 쪽이 개발환경(IDE)가 잘 마련되어 있지 않은데, 장고(Djan</div>
-                </li>
-            
-        </ul>
-    </div>
-
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
 </body>
 </html>

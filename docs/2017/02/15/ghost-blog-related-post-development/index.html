@@ -1,79 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>[Ghost] 블로그 연관포스트 기능 추가하기 - ASH84</title>
+    <meta name="description" content="ghost 블로그 툴을 선택해서 사용한지도 꽤 되어 가는데, 마크다운(markdown)을 이용한 글쓰기 툴을 제공한다는 점 그리고 서비스와 설치형이 모두 있다는 점에서 선택했지만, 기존에 사용했던 티스토리, 워드프레스에 비해서 몇몇 기능이 없는 것은 사실이다. 카테고리를 지정하거나, 사이드바에 있는 다양한 기능들은 사실상 ghost 블로그에서는 찾아 보긴 힘들다.(서비스 형에서는 어떤지 모르겠다.)" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2017/02/15/ghost-blog-related-post-development/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[Ghost] 블로그 연관포스트 기능 추가하기"/>
+    <meta property="og:description" content="ghost 블로그 툴을 선택해서 사용한지도 꽤 되어 가는데, 마크다운(markdown)을 이용한 글쓰기 툴을 제공한다는 점 그리고 서비스와 설치형이 모두 있다는 점에서 선택했지만, 기존에 사용했던 티스토리, 워드프레스에 비해서 몇몇 기능이 없는 것은 사실이다. 카테고리를 지정하거나, 사이드바에 있는 다양한 기능들은 사실상 ghost 블로그에서는 찾아 보긴 힘들다.(서비스 형에서는 어떤지 모르겠다.)"/>
+    <meta property="og:url" content="https://ash84.io/2017/02/15/ghost-blog-related-post-development/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="blog" />
+    
+    <meta property="article:tag" content="연관포스트" />
+    
+    <meta property="article:tag" content="사이드바" />
+    
+    <meta property="article:tag" content="ghost" />
+    
+    
+        
+    <meta property="og:image" content="https://c1.staticflickr.com/6/5601/14986371364_0db6f0aeb2.jpg"/>
+        
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="[Ghost] 블로그 연관포스트 기능 추가하기"/>
+    <meta name="twitter:description" content="ghost 블로그 툴을 선택해서 사용한지도 꽤 되어 가는데, 마크다운(markdown)을 이용한 글쓰기 툴을 제공한다는 점 그리고 서비스와 설치형이 모두 있다는 점에서 선택했지만, 기존에 사용했던 티스토리, 워드프레스에 비해서 몇몇 기능이 없는 것은 사실이다. 카테고리를 지정하거나, 사이드바에 있는 다양한 기능들은 사실상 ghost 블로그에서는 찾아 보긴 힘들다.(서비스 형에서는 어떤지 모르겠다.)"/>
+    
+        
+    <meta name="twitter:image" content="https://c1.staticflickr.com/6/5601/14986371364_0db6f0aeb2.jpg"/>
+        
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Ghost] 블로그 연관포스트 기능 추가하기",
+        "description": "ghost 블로그 툴을 선택해서 사용한지도 꽤 되어 가는데, 마크다운(markdown)을 이용한 글쓰기 툴을 제공한다는 점 그리고 서비스와 설치형이 모두 있다는 점에서 선택했지만, 기존에 사용했던 티스토리, 워드프레스에 비해서 몇몇 기능이 없는 것은 사실이다. 카테고리를 지정하거나, 사이드바에 있는 다양한 기능들은 사실상 ghost 블로그에서는 찾아 보긴 힘들다.(서비스 형에서는 어떤지 모르겠다.)",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2017/02/15/ghost-blog-related-post-development"
+        },
+        
+            
+        "image": "https://c1.staticflickr.com/6/5601/14986371364_0db6f0aeb2.jpg",
+            
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'UA-71946262-1');
     </script>
-    
-    <!-- google adsense -->
-    <script data-ad-client="ca-pub-8699046198561974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-    
-    </script>
-    <!-- //google adsense -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="ASH84 - [Ghost] 블로그 연관포스트 기능 추가하기"/>
-    <meta property="og:description" content="ghost 블로그 툴을 선택해서 사용한지도 꽤 되어 가는데, 마크다운(markdown)을 이용한 글쓰기 툴을 제공한다는 점 그리고 서비스와 설치형이 모두 있다는 점에서 선택했지만, 기존에 사용했던 티스토리, 워드프레스에 비해서 몇몇 기능이 없는 것은 사실이다. 카테고리를 지정하거나, 사이드바에 있는 다양한 기능들은 사실상 ghost 블로그에서는 찾아 보긴 힘들다.(서비스 형에서는 어떤지 모르겠다.)"/>
-    <meta property="og:url" content="https://ash84.io/docs/2017/02/15/ghost-blog-related-post-development"/>
-    <meta property="og:image" content="https://ash84.io/docs/2017/02/15/ghost-blog-related-post-development/https://c1.staticflickr.com/6/5601/14986371364_0db6f0aeb2.jpg"/> 
-    <meta property="og:type" content="article"/>
-    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ" />
-    <title>[Ghost] 블로그 연관포스트 기능 추가하기</title>
-    <meta name="description" content="ghost 블로그 툴을 선택해서 사용한지도 꽤 되어 가는데, 마크다운(markdown)을 이용한 글쓰기 툴을 제공한다는 점 그리고 서비스와 설치형이 모두 있다는 점에서 선택했지만, 기존에 사용했던 티스토리, 워드프레스에 비해서 몇몇 기능이 없는 것은 사실이다. 카테고리를 지정하거나, 사이드바에 있는 다양한 기능들은 사실상 ghost 블로그에서는 찾아 보긴 힘들다.(서비스 형에서는 어떤지 모르겠다.)" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
-    <!--  code highlight -->
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/github-dark.css"/>
-    <link rel="stylesheet" type="text/css" href="/../../assets/css/post.css"/>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-     
 </head>
-<body class="font"> 
-    <header>
-        <div class="blog-post-back">
-            <a href="/">
-                <svg fill="#000000" height="35px" width="35px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 219.151 219.151" xml:space="preserve">
-    <g>
-        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
-            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
-            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
-        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
-            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
-            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
-            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
-    </g>
-        </svg></a>
-        </div>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
     </header>
-    
-<div class="content">
-    <h1 class="blog-post-title">[Ghost] 블로그 연관포스트 기능 추가하기</h1>
-    <div class="blog-post-meta"> 
-        <small>  2017-02-15</small> 
-    </div> 
 
-    <div class="pre-blog-post"></div>
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2017-02-15</time>
+            <h1 class="post-title">[Ghost] 블로그 연관포스트 기능 추가하기</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/blog/" class="tag">blog</a>
+                
+                <a href="/tags/연관포스트/" class="tag">연관포스트</a>
+                
+                <a href="/tags/사이드바/" class="tag">사이드바</a>
+                
+                <a href="/tags/ghost/" class="tag">ghost</a>
+                
+            </div>
+            
+        </header>
 
-    
-        <img src="https://c1.staticflickr.com/6/5601/14986371364_0db6f0aeb2.jpg" alt="">
-    
-    <div class="blog-post">
-        <p>ghost 블로그 툴을 선택해서 사용한지도 꽤 되어 가는데, 마크다운(markdown)을 이용한 글쓰기 툴을 제공한다는 점 그리고 서비스와 설치형이 모두 있다는 점에서 선택했지만, 기존에 사용했던 티스토리, 워드프레스에 비해서 몇몇 기능이 없는 것은 사실이다. 카테고리를 지정하거나, 사이드바에 있는 다양한 기능들은 사실상 ghost 블로그에서는 찾아 보긴 힘들다.(서비스 형에서는 어떤지 모르겠다.)</p>
+        
+        <figure class="post-image">
+            <img src="https://c1.staticflickr.com/6/5601/14986371364_0db6f0aeb2.jpg" alt="[Ghost] 블로그 연관포스트 기능 추가하기">
+        </figure>
+        
+
+        <div class="post-content">
+            <p>ghost 블로그 툴을 선택해서 사용한지도 꽤 되어 가는데, 마크다운(markdown)을 이용한 글쓰기 툴을 제공한다는 점 그리고 서비스와 설치형이 모두 있다는 점에서 선택했지만, 기존에 사용했던 티스토리, 워드프레스에 비해서 몇몇 기능이 없는 것은 사실이다. 카테고리를 지정하거나, 사이드바에 있는 다양한 기능들은 사실상 ghost 블로그에서는 찾아 보긴 힘들다.(서비스 형에서는 어떤지 모르겠다.)</p>
 <p>이번에 블로그에 추가한 기능은 해당 포스트와 연관이 있는 글을 찾아서 사이드바에 5개를 보여주는 기능이다. 일명 <strong>연관 포스트 기능</strong>. 만들계 된 계기는 대부분 검색을 통해서 들어 올텐데 관련된 다른 포스트를 볼 수 있다면 좋지 않을까 하는 막연한 생각에 시작하게 되었다. </p>
 <h3><strong>1. 데이터베이스 파악하기</strong></h3>
 <p>ghost 설치형에서는 많은 데이터베이스를 지원해주고 있지만, 개인적으로 sqlite3를 선호한다. 파일의 형태로 나중에 백업시에도 유용하다고 생각해서 애초에 설치할 때 sqlite3를 선택해서 사용했다. 맥(mac)에서 <a href="http://sqlitebrowser.org/">DB Browser for SQLite</a> 툴을 이용해서 로컬로 가져온 블로그 DB를 열어서 확인해 보았다. 어떤 식으로 구현을 할까 생각하기 전에 일단 어떤 정보들을 ghost에서 어떻게 저장하고 있는지에 대한 파악이 필요했다. </p>
@@ -170,25 +231,17 @@
 
 <h2>정리</h2>
 <p>심심해서 만들어본것인데 생각보다 재밌었던것 같다. 여전히 아쉬움은 남는다. 몇몇 포스트들의 연관글을 보면 왜 이게 나왔지 싶은 것들도 있다. 한동안 운영해보고 질리면 좀 더 업그레이드 해 보고 싶은 생각은 있다. 이 글을 마무리 하는 시점에서 이 글에 어떤 태그를 달아야 할지 고민이 된다.</p>
-    </div>
-    <div class="post-tags">
-        
-            <a href="/tags/dev/" class="post-tag">#dev</a>
-        
-            <a href="/tags/blog/" class="post-tag">#blog</a>
-        
-            <a href="/tags/연관포스트/" class="post-tag">#연관포스트</a>
-        
-            <a href="/tags/사이드바/" class="post-tag">#사이드바</a>
-        
-            <a href="/tags/ghost/" class="post-tag">#ghost</a>
-        
-    </div> 
-    <footer>
-    <div style="text-align: center;">
-        Copyright © <script>document.write(new Date().getFullYear());</script> ash84.io All rights reserved.
-    </div>
-</footer>
-</div>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

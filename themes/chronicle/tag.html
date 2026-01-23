@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{{ tag_info.name }} — ASH84</title>
+    <meta name="description" content="{{ tag_info.name }} 태그가 붙은 {{ tag_info.count }}개의 글" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/tags/{{ tag_info.name }}/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="{{ tag_info.name }} — ASH84"/>
+    <meta property="og:description" content="{{ tag_info.name }} 태그가 붙은 {{ tag_info.count }}개의 글"/>
+    <meta property="og:url" content="https://ash84.io/tags/{{ tag_info.name }}/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:title" content="{{ tag_info.name }} — ASH84"/>
+    <meta name="twitter:description" content="{{ tag_info.name }} 태그가 붙은 {{ tag_info.count }}개의 글"/>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-71946262-1');
+    </script>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="/" class="logo">ASH84</a>
+            <nav class="nav">
+                <a href="/tags/">Archive</a>
+            </nav>
+        </header>
+
+        <section class="hero" style="padding: 80px 0 60px;">
+            <h1 class="hero-text" style="font-size: clamp(36px, 8vw, 80px);">#{{ tag_info.name }}</h1>
+            <div class="hero-meta">
+                <span>{{ tag_info.count }} Posts</span>
+            </div>
+        </section>
+
+        <section class="latest">
+            <div class="posts">
+                {% for post in posts %}
+                <a href="{{ post.link }}" class="post-item">
+                    <span class="post-date">{{ post.pub_date }}</span>
+                    <span class="post-title">{{ post.title }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <span>© 2007—<script>document.write(new Date().getFullYear())</script></span>
+            </div>
+            <div class="footer-right">
+                <a href="/">Home</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
