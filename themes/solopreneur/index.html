@@ -86,7 +86,7 @@
 
             {% for post in post_list %}
                 <li class="blog-list-item">
-                    <div class="blog-date">{{ post.pub_date }}</div>
+                    <div class="blog-date" data-date="{{ post.pub_date }}">{{ post.pub_date }}</div>
                     <a href="{{ post.link }}" class="blog-title-item">{{ post.title }}</a>
                     <div class="blog-summary">{{ post.description | clean }}</div>
                 </li>
@@ -94,5 +94,21 @@
         </ul>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const today = new Date();
+        const oneWeekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+        document.querySelectorAll('.blog-date[data-date]').forEach(function(el) {
+            const postDate = new Date(el.dataset.date);
+            if (postDate >= oneWeekAgo) {
+                const badge = document.createElement('span');
+                badge.className = 'new-badge';
+                badge.textContent = 'NEW';
+                el.appendChild(badge);
+            }
+        });
+    });
+</script>
 </body>
 </html>

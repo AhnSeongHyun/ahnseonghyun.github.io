@@ -136,6 +136,18 @@ body {
     margin-bottom: 5px;
 }
 
+.new-badge {
+    display: inline-block;
+    background-color: #ff4757;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
 .blog-title-item {
     font-size: 18px;
     color: #1A1A1A;

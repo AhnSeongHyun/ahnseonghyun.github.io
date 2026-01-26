@@ -167,7 +167,7 @@
 
             <div class="posts">
                 {% for post in post_list %}
-                <a href="{{ post.link }}" class="post-item">
+                <a href="{{ post.link }}" class="post-item" data-date="{{ post.pub_date }}">
                     <span class="post-date">{{ post.pub_date }}</span>
                     <span class="post-title">{{ post.title }}</span>
                 </a>
@@ -187,5 +187,21 @@
             </div>
         </footer>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const oneWeekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+            document.querySelectorAll('.post-item[data-date]').forEach(function(el) {
+                const postDate = new Date(el.dataset.date);
+                if (postDate >= oneWeekAgo) {
+                    const badge = document.createElement('span');
+                    badge.className = 'new-badge';
+                    badge.textContent = 'NEW';
+                    el.querySelector('.post-title').appendChild(badge);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
