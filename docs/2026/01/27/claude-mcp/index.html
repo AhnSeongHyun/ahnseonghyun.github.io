@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>claude code mcp 정리 - ASH84</title>
+    <meta name="description" content="자주 사용하는 몇개의 MCP들을 정리해봤다. " />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2026/01/27/claude-mcp/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="claude code mcp 정리"/>
+    <meta property="og:description" content="자주 사용하는 몇개의 MCP들을 정리해봤다. "/>
+    <meta property="og:url" content="https://ash84.io/2026/01/27/claude-mcp/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="claude" />
+    
+    <meta property="article:tag" content="mcp" />
+    
+    <meta property="article:tag" content="claude code" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="claude code mcp 정리"/>
+    <meta name="twitter:description" content="자주 사용하는 몇개의 MCP들을 정리해봤다. "/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "claude code mcp 정리",
+        "description": "자주 사용하는 몇개의 MCP들을 정리해봤다. ",
+        "author": {
+            "@type": "Person",
+            "name": "",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2026/01/27/claude-mcp"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-71946262-1');
+    </script>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
+    </header>
+
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2026-01-27</time>
+            <h1 class="post-title">claude code mcp 정리</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/claude/" class="tag">claude</a>
+                
+                <a href="/tags/mcp/" class="tag">mcp</a>
+                
+                <a href="/tags/claude code/" class="tag">claude code</a>
+                
+            </div>
+            
+        </header>
+
+        
+
+        <div class="post-content">
+            <p>자주 사용하는 MCP 관련 정리했다. 몇개 더 추가될 예정.</p>
+<h2><code>-s</code> (scope) 옵션</h2>
+<p><code>claude mcp add</code> 명령어에서 <code>-s</code> 옵션은 MCP 서버의 설정 범위를 지정한다.</p>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-s user</code></td>
+<td>사용자 레벨 설정. 모든 프로젝트에서 사용 가능. <code>~/.claude/</code> 디렉토리에 저장</td>
+</tr>
+<tr>
+<td><code>-s project</code></td>
+<td>프로젝트 레벨 설정. 현재 프로젝트에서만 사용. <code>.claude/</code> 디렉토리에 저장</td>
+</tr>
+</tbody>
+</table>
+<p>대부분의 경우 <code>-s user</code>를 사용하면 된다.</p>
+<h2>개발 관련</h2>
+<h3>JIRA</h3>
+<pre><code class="language-shell">claude mcp add jira -s user \
+  --env JIRA_HOST=https://my.atlassian.net \
+  --env JIRA_USERNAME=ash84@xxx.com \
+  --env JIRA_API_TOKEN={{ JIRA API TOKEN}} \
+  -- npx -y @modelcontextprotocol/server-atlassian
+</code></pre>
+<h3>Slack</h3>
+<pre><code class="language-shell">claude mcp add slack -s user \
+  -e SLACK_BOT_TOKEN={{ SLACK_BOT_TOKEN }} \
+  -e SLACK_TEAM_ID={{ SLACK_TEAM_ID }} \
+  -- npx -y @modelcontextprotocol/server-slack
+</code></pre>
+<h2>Data 관련</h2>
+<h3>Redash</h3>
+<pre><code class="language-shell">claude mcp add redash -s user \
+  -e REDASH_URL={{ REDASH_URL }} \
+  -e REDASH_API_KEY={{ REDASH_API_KEY }} \
+  -- npx -y @suthio/redash-mcp
+</code></pre>
+<h3>MongoDB</h3>
+<pre><code class="language-shell">claude mcp add mongodb -s user \
+  -e MDB_MCP_CONNECTION_STRING=&quot;{{ MONGODB_CONNECTION_STRING }}&quot; \
+  -e MDB_MCP_READ_ONLY=true \
+  -- npx -y mongodb-mcp-server
+</code></pre>
+<h3>MySQL</h3>
+<pre><code class="language-shell">claude mcp add mysql -s user \
+  -e MYSQL_HOST='{{ MYSQL_HOST }}' \
+  -e MYSQL_PORT='3306' \
+  -e MYSQL_USER='{{ MYSQL_USER }}' \
+  -e MYSQL_PASS='{{ MYSQL_PASS }}' \
+  -e MYSQL_DB='{{ MYSQL_DB }}' \
+  -e ALLOW_INSERT_OPERATION='false' \
+  -e ALLOW_UPDATE_OPERATION='false' \
+  -e ALLOW_DELETE_OPERATION='false' \
+  -- /opt/homebrew/bin/node ~/workspace/mcp-server-mysql/dist/index.js 
+</code></pre>
+<ul>
+<li>https://github.com/benborla/mcp-server-mysql</li>
+<li>마지막줄에 <code>-- npx -y @benborber/mcp-server-mysql</code> 를 넣으면 되는게 잘 안되서 릴리즈를 로컬에 다운로드 받고 그걸 빌드해서 나온 dist/index.js를 사용하는 방식으로 쓰고 있음. </li>
+</ul>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
+</body>
+</html>
