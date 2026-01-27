@@ -192,17 +192,17 @@ a:hover {
 .post-content pre {
     margin: 32px 0;
     padding: 24px;
-    background: var(--black);
-    color: var(--white);
+    border-radius: 8px;
     overflow-x: auto;
+    background: #0d1117;
 }
 
 .post-content pre code {
-    background: none;
+    background: transparent;
     padding: 0;
     font-size: 14px;
     line-height: 1.6;
-    color: var(--white);
+    color: #c9d1d9;
 }
 
 /* Tables */
