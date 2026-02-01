@@ -4,16 +4,16 @@
 
   <!-- Main Text -->
   <text x="60" y="180" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="90" font-weight="700" fill="#FFFFFF" letter-spacing="-3">
-    I WRITE CODE,
+    I WRITE CODE
   </text>
   <text x="60" y="280" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="90" font-weight="700" fill="#FFFFFF" letter-spacing="-3">
-    MAKE THINGS,
+    MAKE THINGS
   </text>
   <text x="60" y="380" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="90" font-weight="700" fill="#FFFFFF" letter-spacing="-3">
-    &amp; LEARN FROM
+    LEARN FROM
   </text>
   <text x="60" y="480" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="90" font-weight="700" fill="#FFFFFF" letter-spacing="-3">
-    FAILURE.
+    FAILURE
   </text>
 
   <!-- Logo/Name -->
