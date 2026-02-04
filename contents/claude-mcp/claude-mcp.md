@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2026-01-27'
 description: '자주 사용하는 몇개의 MCP들을 정리해봤다. '
 featured_image: ''
-tags: ['claude', 'mcp', 'claude code']
+tags: ['claude', 'mcp', 'claude code',  'ai', '클로드코드']
 ---
 
 자주 사용하는 MCP 관련 정리했다. 몇개 더 추가될 예정.
