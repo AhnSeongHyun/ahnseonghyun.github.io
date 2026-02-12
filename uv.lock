@@ -14,7 +14,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "pillow", specifier = ">=12.1.0" },
-    { name = "zvc", specifier = "==0.1.5" },
+    { name = "zvc", specifier = "==0.1.8" },
 ]
 
 [[package]]
@@ -435,7 +435,7 @@ wheels = [
 
 [[package]]
 name = "zvc"
-version = "0.1.5"
+version = "0.1.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -448,7 +448,7 @@ dependencies = [
     { name = "ruff" },
     { name = "typer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b3/04/9be0566b263561de875e0326ac24747992b5626ea0ca3e776ba7bd8884ae/zvc-0.1.5.tar.gz", hash = "sha256:4afac4de8bf95f75fc702bed9cd44255cb711a884a17d9003b82c1cfa3a5f3a0", size = 7276, upload-time = "2025-07-25T21:58:54.147Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/49/2c/8d535d72d35d04a2a27f5b70c794b86d9aa03a4d2e1afe3d2b98a159d249/zvc-0.1.8.tar.gz", hash = "sha256:c9f3615057fb8f729ce89d32dae20b9ae9742e3b32b745f52cc62d3f8ff700ba", size = 8674, upload-time = "2026-02-12T00:47:55.544Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/da/9c/fe7b9f6e918cd2d8e9e22beb73babc42a2b24aacd56b0ccf04fd23e6995f/zvc-0.1.5-py3-none-any.whl", hash = "sha256:5f66828885cdd510bf606ac4682b5ab976933d63dd12039c5a18fbddc6fa8bb9", size = 6851, upload-time = "2025-07-25T21:58:52.947Z" },
+    { url = "https://files.pythonhosted.org/packages/e4/a3/7ee8b7a3c042bbee51ea9d1bf5aa80936db6a43c4fdc12c579316f798313/zvc-0.1.8-py3-none-any.whl", hash = "sha256:6a013238f39da739ff0569e657b5436e2c9afec64069b58b0c075fb6afbc6988", size = 7517, upload-time = "2026-02-12T00:47:54.528Z" },
 ]

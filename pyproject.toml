@@ -6,5 +6,5 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "pillow>=12.1.0",
-    "zvc==0.1.5",
+    "zvc==0.1.8",
 ]
