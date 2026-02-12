@@ -16,7 +16,7 @@ def get_last_modified(file_path):
     try:
         mtime = os.path.getmtime(file_path)
         return datetime.fromtimestamp(mtime).strftime('%Y-%m-%d')
-    except:
+    except Exception:
         return datetime.now().strftime('%Y-%m-%d')
 
 
@@ -80,7 +80,7 @@ def generate_sitemap():
     tree.write(sitemap_path, encoding='utf-8', xml_declaration=True)
 
     # Print summary
-    print(f"✅ sitemap.xml generated successfully!")
+    print("✅ sitemap.xml generated successfully!")
     print(f"📍 Location: {sitemap_path}")
     print(f"📊 Total URLs: {len(urls_added) + 1}")  # +1 for homepage
     print(f"🌐 Homepage + {len(urls_added)} blog posts")

@@ -62,7 +62,7 @@ def collect_all_tags():
                 if tag:  # Skip empty tags
                     tags_counter[tag] += 1
 
-        except Exception as e:
+        except Exception:
             continue
 
     return tags_counter
@@ -256,7 +256,7 @@ def main():
         for suggestion in suggestions:
             print(f"\n  Consolidate to: #{suggestion['canonical']}")
             print(f"  Total posts: {suggestion['total_posts']}")
-            print(f"  Variants to merge:")
+            print("  Variants to merge:")
             for variant, count in suggestion['variants']:
                 print(f"    #{variant:<30} {count:>4} posts")
         print()

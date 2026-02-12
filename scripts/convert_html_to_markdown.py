@@ -114,7 +114,7 @@ class HTMLToMarkdownConverter:
             frontmatter, body = self.parse_frontmatter(content)
 
             if frontmatter is None:
-                print(f"  ⚠️  Frontmatter 없음 - 전체 변환")
+                print("  ⚠️  Frontmatter 없음 - 전체 변환")
                 frontmatter_section = ""
                 body_to_convert = content
             else:
@@ -128,18 +128,18 @@ class HTMLToMarkdownConverter:
             new_content = frontmatter_section + markdown_body
 
             if self.dry_run:
-                print(f"  🔍 [DRY RUN] 변환 완료 (실제 저장 안함)")
+                print("  🔍 [DRY RUN] 변환 완료 (실제 저장 안함)")
                 print(f"  변환 전 길이: {len(content)} -> 변환 후 길이: {len(new_content)}")
                 return True
 
             # 백업 생성
-            backup_path = self.backup_file(filepath)
+            self.backup_file(filepath)
 
             # 변환된 내용 저장
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(new_content)
 
-            print(f"  ✅ 변환 완료")
+            print("  ✅ 변환 완료")
             print(f"  변환 전 길이: {len(content)} -> 변환 후 길이: {len(new_content)}")
 
             return True
@@ -164,7 +164,7 @@ class HTMLToMarkdownConverter:
         md_files = [f for f in md_files if not f.stem.endswith('_bak')]
 
         print(f"\n{'='*60}")
-        print(f"HTML → 마크다운 변환")
+        print("HTML → 마크다운 변환")
         print(f"{'='*60}")
         print(f"대상 디렉토리: {directory}")
         print(f"마크다운 파일: {len(md_files)}개")
@@ -172,7 +172,7 @@ class HTMLToMarkdownConverter:
         if max_files:
             print(f"최대 변환 파일: {max_files}개")
         if self.dry_run:
-            print(f"⚠️  DRY RUN 모드 (실제 저장 안함)")
+            print("⚠️  DRY RUN 모드 (실제 저장 안함)")
         print(f"{'='*60}\n")
 
         converted = 0
@@ -195,7 +195,7 @@ class HTMLToMarkdownConverter:
 
         # 결과 요약
         print(f"\n{'='*60}")
-        print(f"변환 완료")
+        print("변환 완료")
         print(f"{'='*60}")
         print(f"✅ 변환 성공: {converted}개")
         print(f"⏭️  건너뛴 파일: {skipped}개")

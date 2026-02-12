@@ -186,7 +186,7 @@ class FrontmatterImprover:
                 print(f"  • {change}")
 
             if self.dry_run:
-                print(f"  🔍 [DRY RUN] 변경사항 미저장")
+                print("  🔍 [DRY RUN] 변경사항 미저장")
                 return True
 
             # Backup original file
@@ -204,7 +204,7 @@ class FrontmatterImprover:
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(new_content)
 
-            print(f"  ✅ 저장 완료")
+            print("  ✅ 저장 완료")
             return True
 
         except Exception as e:
@@ -239,12 +239,12 @@ class FrontmatterImprover:
                         year = int(pub_date.split('-')[0])
                         if year >= year_filter:
                             filtered_files.append(filepath)
-                except:
+                except Exception:
                     continue
             md_files = filtered_files
 
         print(f"\n{'='*60}")
-        print(f"Frontmatter 자동 개선")
+        print("Frontmatter 자동 개선")
         print(f"{'='*60}")
         print(f"대상 디렉토리: {directory}")
         print(f"마크다운 파일: {len(md_files)}개")
@@ -252,7 +252,7 @@ class FrontmatterImprover:
         if max_files:
             print(f"최대 처리 파일: {max_files}개")
         if self.dry_run:
-            print(f"⚠️  DRY RUN 모드 (실제 저장 안함)")
+            print("⚠️  DRY RUN 모드 (실제 저장 안함)")
         print(f"{'='*60}\n")
 
         improved = 0
@@ -275,7 +275,7 @@ class FrontmatterImprover:
 
         # Summary
         print(f"\n{'='*60}")
-        print(f"개선 완료")
+        print("개선 완료")
         print(f"{'='*60}")
         print(f"✅ 개선 완료: {improved}개")
         print(f"⏭️  건너뛴 파일: {skipped}개")
@@ -300,7 +300,7 @@ def main():
     args = parser.parse_args()
 
     try:
-        import yaml
+        import yaml  # noqa: F401
     except ImportError:
         print("❌ PyYAML not installed. Installing...")
         os.system("uv pip install pyyaml")

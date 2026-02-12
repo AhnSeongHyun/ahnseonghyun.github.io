@@ -6,11 +6,9 @@ Generates tag pages from all blog posts.
 Each tag gets its own page listing all posts with that tag.
 """
 
-import os
 import re
 from pathlib import Path
 from collections import defaultdict
-from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -183,12 +181,12 @@ def main():
     # Generate tag pages
     tag_count = generate_tag_pages(tags_dict)
 
-    print(f"\n✅ Tag pages generated successfully!")
+    print("\n✅ Tag pages generated successfully!")
     print(f"📊 Total tags: {tag_count}")
-    print(f"📍 Location: docs/tags/")
+    print("📍 Location: docs/tags/")
 
     # Show sample tags
-    print(f"\n📝 Sample tags:")
+    print("\n📝 Sample tags:")
     for tag in sorted(tags_dict.keys())[:10]:
         print(f"   - {tag} ({len(tags_dict[tag])} posts)")
 

@@ -464,10 +464,10 @@ def main():
             print(f"  {change:<50} {count:>4} times")
         print()
 
-    print(f"💡 Next steps:")
-    print(f"  1. Run: make build")
-    print(f"  2. Check: docs/tags/")
-    print(f"  3. Commit changes")
+    print("💡 Next steps:")
+    print("  1. Run: make build")
+    print("  2. Check: docs/tags/")
+    print("  3. Commit changes")
 
 
 if __name__ == '__main__':

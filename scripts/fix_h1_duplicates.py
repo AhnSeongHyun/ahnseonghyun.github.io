@@ -113,7 +113,7 @@ class H1DuplicateFixer:
             print(f"  변경: {fixes}개 H1 → H2 변환")
 
             if self.dry_run:
-                print(f"  🔍 [DRY RUN] 변경사항 미저장")
+                print("  🔍 [DRY RUN] 변경사항 미저장")
                 return True
 
             # Backup original file
@@ -129,7 +129,7 @@ class H1DuplicateFixer:
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(new_content)
 
-            print(f"  ✅ 저장 완료")
+            print("  ✅ 저장 완료")
             return True
 
         except Exception as e:
@@ -162,21 +162,21 @@ class H1DuplicateFixer:
 
                 if h1_count >= 2:
                     files_to_fix.append((filepath, h1_count))
-            except:
+            except Exception:
                 continue
 
         # Sort by H1 count (descending)
         files_to_fix.sort(key=lambda x: x[1], reverse=True)
 
         print(f"\n{'='*60}")
-        print(f"H1 중복 제거")
+        print("H1 중복 제거")
         print(f"{'='*60}")
         print(f"대상 디렉토리: {directory}")
         print(f"H1 중복 파일: {len(files_to_fix)}개")
         if max_files:
             print(f"최대 처리 파일: {max_files}개")
         if self.dry_run:
-            print(f"⚠️  DRY RUN 모드 (실제 저장 안함)")
+            print("⚠️  DRY RUN 모드 (실제 저장 안함)")
         print(f"{'='*60}\n")
 
         if files_to_fix:
@@ -207,7 +207,7 @@ class H1DuplicateFixer:
 
         # Summary
         print(f"\n{'='*60}")
-        print(f"수정 완료")
+        print("수정 완료")
         print(f"{'='*60}")
         print(f"✅ 수정 완료: {fixed}개")
         print(f"⏭️  건너뛴 파일: {skipped}개")
