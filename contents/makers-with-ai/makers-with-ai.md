@@ -1,5 +1,5 @@
 ---
-title: 'AI사용과 함께 변한 삶에 대한 이야기'
+title: 'AI오 함께 변한 삶'
 author: 'ash84'
 pub_date: '2026-03-10'
 description: 'ChatGPT에서 Claude Code까지, AI와 함께 만드는 즐거움과 개발자로서 달라진 일상에 대한 이야기'
