@@ -1,0 +1,9 @@
+# ash84.io robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ash84.io/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
