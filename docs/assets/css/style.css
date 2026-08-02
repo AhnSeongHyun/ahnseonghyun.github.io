@@ -113,9 +113,20 @@ a {
 .section-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     padding: 40px 0 30px;
     border-bottom: 1px solid var(--light-gray);
+}
+
+.section-header[data-toggle] {
+    cursor: pointer;
+    user-select: none;
+}
+
+.section-header-left {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
 }
 
 .section-header h2 {
@@ -130,6 +141,28 @@ a {
     color: var(--gray);
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1;
+    color: var(--black);
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    flex-shrink: 0;
+}
+
+.experience.is-collapsed,
+.selected.is-collapsed {
+    padding-bottom: 0;
+}
+
+.is-collapsed .collapsible-content {
+    display: none;
 }
 
 /* Experience */

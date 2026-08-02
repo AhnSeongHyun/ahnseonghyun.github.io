@@ -80,10 +80,20 @@
 
       <!-- Experience -->
       <section class="experience">
-        <div class="section-header">
-          <h2>Experience</h2>
+        <div class="section-header" data-toggle="experience">
+          <div class="section-header-left">
+            <h2>Experience</h2>
+          </div>
+          <button
+            class="toggle-btn"
+            type="button"
+            aria-expanded="true"
+            aria-controls="experience-content"
+          >
+            −
+          </button>
         </div>
-        <div class="exp-grid">
+        <div class="exp-grid collapsible-content" id="experience-content">
           <div class="exp-item">
             <span class="exp-year">2024—</span>
             <span class="exp-role">Head of Technology</span>
@@ -109,12 +119,22 @@
 
       <!-- Selected (newest first) -->
       <section class="selected">
-        <div class="section-header">
-          <h2>Selected</h2>
-          <span class="section-count">13 essays</span>
+        <div class="section-header" data-toggle="selected">
+          <div class="section-header-left">
+            <h2>Selected</h2>
+            <span class="section-count">13 essays</span>
+          </div>
+          <button
+            class="toggle-btn"
+            type="button"
+            aria-expanded="true"
+            aria-controls="selected-content"
+          >
+            −
+          </button>
         </div>
 
-        <div class="works">
+        <div class="works collapsible-content" id="selected-content">
           <a href="/2026/06/02/2026-self-proof/" class="work-item">
             <span class="work-title">자기증명</span>
             <span class="work-tag">Career</span>
@@ -8929,6 +8949,18 @@
               badge.textContent = "NEW";
               el.querySelector(".post-title").appendChild(badge);
             }
+          });
+
+        document
+          .querySelectorAll(".section-header[data-toggle]")
+          .forEach(function (header) {
+            header.addEventListener("click", function () {
+              const section = header.closest("section");
+              const btn = header.querySelector(".toggle-btn");
+              const isCollapsed = section.classList.toggle("is-collapsed");
+              btn.textContent = isCollapsed ? "+" : "−";
+              btn.setAttribute("aria-expanded", String(!isCollapsed));
+            });
           });
       });
     </script>
