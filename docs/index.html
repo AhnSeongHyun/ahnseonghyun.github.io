@@ -79,7 +79,7 @@
       </header>
 
       <!-- Experience -->
-      <section class="experience">
+      <section class="experience is-collapsed">
         <div class="section-header" data-toggle="experience">
           <div class="section-header-left">
             <h2>Experience</h2>
@@ -87,10 +87,10 @@
           <button
             class="toggle-btn"
             type="button"
-            aria-expanded="true"
+            aria-expanded="false"
             aria-controls="experience-content"
           >
-            −
+            +
           </button>
         </div>
         <div class="exp-grid collapsible-content" id="experience-content">
@@ -118,7 +118,7 @@
       </section>
 
       <!-- Selected (newest first) -->
-      <section class="selected">
+      <section class="selected is-collapsed">
         <div class="section-header" data-toggle="selected">
           <div class="section-header-left">
             <h2>Selected</h2>
@@ -127,10 +127,10 @@
           <button
             class="toggle-btn"
             type="button"
-            aria-expanded="true"
+            aria-expanded="false"
             aria-controls="selected-content"
           >
-            −
+            +
           </button>
         </div>
 
@@ -196,8 +196,10 @@
       <!-- Latest -->
       <section class="latest">
         <div class="section-header">
-          <h2>Latest</h2>
-          <span class="section-count">960+ posts</span>
+          <div class="section-header-left">
+            <h2>Latest</h2>
+            <span class="section-count">960+ posts</span>
+          </div>
         </div>
 
         <div class="posts">
