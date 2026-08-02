@@ -41,7 +41,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
-    border-bottom: 2px solid var(--black);
+    border-bottom: 2px dashed var(--black);
 }
 
 .logo {
@@ -135,7 +135,7 @@ a {
 /* Experience */
 .experience {
     padding-bottom: 40px;
-    border-bottom: 2px solid var(--black);
+    border-bottom: 2px dashed var(--black);
 }
 
 .exp-grid {
