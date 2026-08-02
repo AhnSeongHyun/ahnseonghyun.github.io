@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>[findbugs] FileWriter, FileReader DM_DEFAULT_ENCODING 처리하기 - ASH84</title>
+    <meta name="description" content="findbugs를 통해서 잠재적 위험 검사를 할때, 일반적으로 텍스트 파일을 읽거나 쓰는 코드에서 DM_DEFAULT_ENCODING 경고가 뜬다." />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2012/04/14/findbugs-filewriter-filereader-dmdefaultencoding--ec-b2-98-eb-a6-ac-ed-95-98-ea-b8-b0/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="[findbugs] FileWriter, FileReader DM_DEFAULT_ENCODING 처리하기"/>
+    <meta property="og:description" content="findbugs를 통해서 잠재적 위험 검사를 할때, 일반적으로 텍스트 파일을 읽거나 쓰는 코드에서 DM_DEFAULT_ENCODING 경고가 뜬다."/>
+    <meta property="og:url" content="https://ash84.io/2012/04/14/findbugs-filewriter-filereader-dmdefaultencoding--ec-b2-98-eb-a6-ac-ed-95-98-ea-b8-b0/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="DM_DEFAULT_ENCODING" />
+    
+    <meta property="article:tag" content="encoding" />
+    
+    <meta property="article:tag" content="FindBugs" />
+    
+    <meta property="article:tag" content="Found reliance on default encoding" />
+    
+    <meta property="article:tag" content="정적분석툴" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="[findbugs] FileWriter, FileReader DM_DEFAULT_ENCODING 처리하기"/>
+    <meta name="twitter:description" content="findbugs를 통해서 잠재적 위험 검사를 할때, 일반적으로 텍스트 파일을 읽거나 쓰는 코드에서 DM_DEFAULT_ENCODING 경고가 뜬다."/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[findbugs] FileWriter, FileReader DM_DEFAULT_ENCODING 처리하기",
+        "description": "findbugs를 통해서 잠재적 위험 검사를 할때, 일반적으로 텍스트 파일을 읽거나 쓰는 코드에서 DM_DEFAULT_ENCODING 경고가 뜬다.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2012/04/14/findbugs-filewriter-filereader-dmdefaultencoding--ec-b2-98-eb-a6-ac-ed-95-98-ea-b8-b0"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-71946262-1');
+    </script>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+</head>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
+    </header>
+
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2012-04-14</time>
+            <h1 class="post-title">[findbugs] FileWriter, FileReader DM_DEFAULT_ENCODING 처리하기</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/DM_DEFAULT_ENCODING/" class="tag">DM_DEFAULT_ENCODING</a>
+                
+                <a href="/tags/encoding/" class="tag">encoding</a>
+                
+                <a href="/tags/FindBugs/" class="tag">FindBugs</a>
+                
+                <a href="/tags/Found reliance on default encoding/" class="tag">Found reliance on default encoding</a>
+                
+                <a href="/tags/정적분석툴/" class="tag">정적분석툴</a>
+                
+            </div>
+            
+        </header>
+
+        
+
+        <div class="post-content">
+            <p><span style="color: rgb(51, 51, 51); "><span style="font-size: 11pt; ">findbugs를 통해서 잠재적 위험 검사를 할때, 일반적으로 텍스트 파일을 읽거나 쓰는 코드에서 DM_DEFAULT_ENCODING 경고가 뜬다. </span></span></p>
+<p><span style="color: rgb(51, 51, 51); "><span style="font-size: 11pt; "><br />
+</span></span></p>
+<script src="https://gist.github.com/3372046.js"></script>
+
+<p><span style="color: rgb(51, 51, 51); font-size: 11pt; ">해당 잠재적 위험에 대한 내용을 살펴보면,</span></p>
+<p><span style="color: rgb(51, 51, 51); font-size: 11pt; "><br />
+</span></p>
+<div class="txc-textbox" style="border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-color: rgb(203, 203, 203); border-right-color: rgb(203, 203, 203); border-bottom-color: rgb(203, 203, 203); border-left-color: rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; ">**<span style="color: rgb(51, 51, 51); "><span style="font-size: 10pt; ">Bug</span></span>**<span style="color: rgb(51, 51, 51); font-size: 10pt; ">: </span>
+
+<span style="color: rgb(51, 51, 51); font-size: 10pt; ">Found reliance on default encoding </span><span style="color: rgb(51, 51, 51); font-size: 10pt; ">in com.logamg.analysis.LogAnalysis.analysisLog(String): new java.io.FileReader(File) </span><span style="color: rgb(51, 51, 51); font-size: 10pt; line-height: 2; ">Found a call to a method which will perform a byte to String (or String to byte) conversion, and will assume that the default platform encoding is suitable. This will cause the application behaviour to vary between platforms. Use an alternative API and specify a charset name or Charset object explicitly.</span>
+
+<span style="color: rgb(51, 51, 51); font-size: 11pt; ">  
+</span>
+
+**<span style="color: rgb(51, 51, 51); font-size: 10pt; ">Confidence</span>**<span style="color: rgb(51, 51, 51); font-size: 10pt; ">: High,</span><span style="color: rgb(51, 51, 51); font-size: 10pt; "> </span>**<span style="color: rgb(51, 51, 51); font-size: 10pt; ">Rank</span>**<span style="color: rgb(51, 51, 51); font-size: 10pt; ">: Of Concern (19)</span>  
+**<span style="color: rgb(51, 51, 51); font-size: 10pt; ">Pattern</span>**<span style="color: rgb(51, 51, 51); font-size: 10pt; ">: DM_DEFAULT_ENCODING</span><span style="color: rgb(51, 51, 51); font-size: 10pt; "> </span>  
+**<span style="color: rgb(51, 51, 51); font-size: 10pt; ">Type</span>**<span style="color: rgb(51, 51, 51); font-size: 10pt; ">: Dm,</span><span style="color: rgb(51, 51, 51); font-size: 10pt; "> </span>**<span style="color: rgb(51, 51, 51); font-size: 10pt; ">Category</span>**<span style="color: rgb(51, 51, 51); "><span style="font-size: 10pt; ">: I18N (Internationalization</span></span>
+
+</div>
+<p><span style="color: rgb(51, 51, 51); "><span style="font-size: 11pt; "><br />
+</span></span></p>
+<p><span style="font-size: 15px;"> </span></p>
+<p><span style="color: rgb(51, 51, 51); font-size: 11pt; ">즉, 인코딩 지정에 대한 문제이다. 사실 위의 코드의 부분에서의 문제가 아니라, FileReader 나 FileWriter 를 BufferedReader, BufferedWriter 쓸때 문제가 생긴다. 즉, 이런식으로 말이다. </span></p>
+<script src="https://gist.github.com/3372052.js"></script>
+
+<p><span style="color: rgb(51, 51, 51); font-size: 11pt; "><br />
+</span></p>
+<p><span style="font-size: 11pt; ">인코딩 문제라는것은 알았는데, 대안 API(Alternative API)를 쓰라고만 나와서 약간 막막했는데, </span></p>
+<p><span style="font-size: 11pt; ">다음과 같이 수정하면 된다. </span></p>
+<p><span style="font-size: 15px; line-height: 22px;"><br />
+</span></p>
+<p><span style="font-size: 15px; line-height: 22px;"><br />
+</span></p>
+<script src="https://gist.github.com/3372056.js?file=gistfile1.java"></script>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>flask HTTP 에러 따로 메일로 받기 - ASH84</title>
+    <meta name="description" content="200 OK외에 다른 부분에 대해서 메일로 에러를 받아야 하는 경우가 있다. 물론 500 Server Internal Error 의 경우에는 로그를 보는게 제일 빠르지만, 저렇게 메일로 남기는 이유는 어떤 ip 에서 잘못된 접근을 하는지 보기 위해서 이다. 아래의 코드는 별다른 메일 서버 없이 리눅스 자체에 있는 sendmail 바이너리를 이용해서 호출하는 소스이다. 오히려 s" />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2014/12/10/flask-http-error-mail/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="flask HTTP 에러 따로 메일로 받기"/>
+    <meta property="og:description" content="200 OK외에 다른 부분에 대해서 메일로 에러를 받아야 하는 경우가 있다. 물론 500 Server Internal Error 의 경우에는 로그를 보는게 제일 빠르지만, 저렇게 메일로 남기는 이유는 어떤 ip 에서 잘못된 접근을 하는지 보기 위해서 이다. 아래의 코드는 별다른 메일 서버 없이 리눅스 자체에 있는 sendmail 바이너리를 이용해서 호출하는 소스이다. 오히려 s"/>
+    <meta property="og:url" content="https://ash84.io/2014/12/10/flask-http-error-mail/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="Flask" />
+    
+    <meta property="article:tag" content="Sendmail" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="http" />
+    
+    <meta property="article:tag" content="python" />
+    
+    <meta property="article:tag" content="간단 메일 보내기" />
+    
+    <meta property="article:tag" content="메일" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="flask HTTP 에러 따로 메일로 받기"/>
+    <meta name="twitter:description" content="200 OK외에 다른 부분에 대해서 메일로 에러를 받아야 하는 경우가 있다. 물론 500 Server Internal Error 의 경우에는 로그를 보는게 제일 빠르지만, 저렇게 메일로 남기는 이유는 어떤 ip 에서 잘못된 접근을 하는지 보기 위해서 이다. 아래의 코드는 별다른 메일 서버 없이 리눅스 자체에 있는 sendmail 바이너리를 이용해서 호출하는 소스이다. 오히려 s"/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "flask HTTP 에러 따로 메일로 받기",
+        "description": "200 OK외에 다른 부분에 대해서 메일로 에러를 받아야 하는 경우가 있다. 물론 500 Server Internal Error 의 경우에는 로그를 보는게 제일 빠르지만, 저렇게 메일로 남기는 이유는 어떤 ip 에서 잘못된 접근을 하는지 보기 위해서 이다. 아래의 코드는 별다른 메일 서버 없이 리눅스 자체에 있는 sendmail 바이너리를 이용해서 호출하는 소스이다. 오히려 s",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2014/12/10/flask-http-error-mail"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-71946262-1');
+    </script>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+</head>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
+    </header>
+
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2014-12-10</time>
+            <h1 class="post-title">flask HTTP 에러 따로 메일로 받기</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/Flask/" class="tag">Flask</a>
+                
+                <a href="/tags/Sendmail/" class="tag">Sendmail</a>
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/http/" class="tag">http</a>
+                
+                <a href="/tags/python/" class="tag">python</a>
+                
+                <a href="/tags/간단 메일 보내기/" class="tag">간단 메일 보내기</a>
+                
+                <a href="/tags/메일/" class="tag">메일</a>
+                
+            </div>
+            
+        </header>
+
+        
+
+        <div class="post-content">
+            <script src="https://gist.github.com/AhnSeongHyun/c8ec7952d3874eaf9a57.js"></script>
+
+<p>200 OK외에 다른 부분에 대해서 메일로 에러를 받아야 하는 경우가 있다. 물론 500 Server Internal Error 의 경우에는 로그를 보는게 제일 빠르지만, 저렇게 메일로 남기는 이유는 어떤 ip 에서 잘못된 접근을 하는지 보기 위해서 이다. 아래의 코드는 별다른 메일 서버 없이 리눅스 자체에 있는 sendmail 바이너리를 이용해서 호출하는 소스이다. 오히려 smpt 서버 설정하고 그런것 보다 이렇게 간단하게 관리자용 메일링을 쓸때에는 sendmail 이 더 나은것 같다. </p>
+<script src="https://gist.github.com/AhnSeongHyun/8643e89b82cd2ca01469.js"></script>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

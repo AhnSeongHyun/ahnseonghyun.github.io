@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>Python - 예외처리 블록에 대한 잘못된 파라미터 지정 - ASH84</title>
+    <meta name="description" content="본 글은 Toptal에 올라온 [Buggy Python Code: The 10 Most Common Mistakes That Python Developers Make](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) 글을 보고 공부하면서 쓴 글이다. 번역 + 개인의 공부내용이라고 생각하면 될 것 같다." />
+    <meta name="author" content="ASH84" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ash84.io/2017/05/25/python-specifying-parameters-incorrectly-for-an-exception-block/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84"/>
+    <meta property="og:title" content="Python - 예외처리 블록에 대한 잘못된 파라미터 지정"/>
+    <meta property="og:description" content="본 글은 Toptal에 올라온 [Buggy Python Code: The 10 Most Common Mistakes That Python Developers Make](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) 글을 보고 공부하면서 쓴 글이다. 번역 + 개인의 공부내용이라고 생각하면 될 것 같다."/>
+    <meta property="og:url" content="https://ash84.io/2017/05/25/python-specifying-parameters-incorrectly-for-an-exception-block/"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="" />
+    <meta property="article:author" content="https://ash84.io/" />
+    
+    <meta property="article:tag" content="dev" />
+    
+    <meta property="article:tag" content="Python" />
+    
+    <meta property="article:tag" content="toptal" />
+    
+    <meta property="article:tag" content="except" />
+    
+    <meta property="article:tag" content="try except" />
+    
+    <meta property="article:tag" content="multiple exception" />
+    
+    
+    <meta property="og:image" content="https://ash84.io/assets/og-image.png"/>
+    
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@sh84ahn"/>
+    <meta name="twitter:creator" content="@sh84ahn"/>
+    <meta name="twitter:title" content="Python - 예외처리 블록에 대한 잘못된 파라미터 지정"/>
+    <meta name="twitter:description" content="본 글은 Toptal에 올라온 [Buggy Python Code: The 10 Most Common Mistakes That Python Developers Make](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) 글을 보고 공부하면서 쓴 글이다. 번역 + 개인의 공부내용이라고 생각하면 될 것 같다."/>
+    
+    <meta name="twitter:image" content="https://ash84.io/assets/og-image.png"/>
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Python - 예외처리 블록에 대한 잘못된 파라미터 지정",
+        "description": "본 글은 Toptal에 올라온 [Buggy Python Code: The 10 Most Common Mistakes That Python Developers Make](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) 글을 보고 공부하면서 쓴 글이다. 번역 + 개인의 공부내용이라고 생각하면 될 것 같다.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2017/05/25/python-specifying-parameters-incorrectly-for-an-exception-block"
+        },
+        
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-71946262-1');
+    </script>
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+</head>
+<body>
+    <header class="post-header">
+        <nav class="nav">
+            <a href="/" class="nav-home">← ASH84</a>
+        </nav>
+    </header>
+
+    <article class="post">
+        <header class="post-meta">
+            <time class="post-date">2017-05-25</time>
+            <h1 class="post-title">Python - 예외처리 블록에 대한 잘못된 파라미터 지정</h1>
+            
+            <div class="post-tags">
+                
+                <a href="/tags/dev/" class="tag">dev</a>
+                
+                <a href="/tags/Python/" class="tag">Python</a>
+                
+                <a href="/tags/toptal/" class="tag">toptal</a>
+                
+                <a href="/tags/except/" class="tag">except</a>
+                
+                <a href="/tags/try except/" class="tag">try except</a>
+                
+                <a href="/tags/multiple exception/" class="tag">multiple exception</a>
+                
+            </div>
+            
+        </header>
+
+        
+
+        <div class="post-content">
+            <p>본 글은 Toptal에 올라온 <a href="https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make">Buggy Python Code: The 10 Most Common Mistakes That Python Developers Make</a> 글을 보고 공부하면서 쓴 글이다. 번역 + 개인의 공부내용이라고 생각하면 될 것 같다.</p>
+<hr/>
+<p><strong>Common Mistake #3: Specifying parameters incorrectly for an exception block</strong></p>
+<p><strong>예외처리 블록에 대한 잘못된 파라미터 지정</strong></p>
+<pre><code class="language-python">try:
+    l = [&quot;a&quot;, &quot;b&quot;]
+    int(l[2])
+except ValueError, IndexError: # To catch both exceptions, right?
+    pass
+</code></pre>
+<p>위의 코드에서의 문제는 <code>except</code> 단계에서 리스트 관련 예외처리가 걸려들지 않는다.(역자 : <code>IndexError</code> 에 <code>l[2]</code> 가 걸려질것이라고 생각하고 코드를 구현했기에.) Python2.x 상에서 <code>except Exception, e</code> 구문은 예외처리를 위해서 사용되어 지는데 추가적인 조사가 가능하게 하기 위해서 옵션인 두번째 파라미터를 지정한다(<code>e</code>)</p>
+<p>결과적으로, 위의 코드에서 <code>IndexError</code> 예외는 <code>except</code> 에 걸리지 않는다; 대신에 <code>IndexError</code>은 매개변수에 바인딩이 된다. (역자 : ValueError as IndexError 가 되는것으로 IndexError 가 변수로 바인딩 된다.</p>
+<p>예를 들어, 아래의 코드를 보면</p>
+<pre><code class="language-python">try:
+    l = [&quot;a&quot;, &quot;b&quot;]
+    int(l[2])
+except IndexError, ValueError :
+    print ValueError
+    pass
+</code></pre>
+<p><code>IndexError</code>가 <code>except</code>에서 잡혀지는데, ValueError 를 print 해보면, list index out of range<br />
+라고 나온다. 즉 IndexError, ValueError 는 IndexError, e 에서 e 대신에 ValueError가 변수로 바인딩 된 것이다.) </p>
+<p><code>except</code> 구문에서 다중 예외처리를 하는 적절한 방법은 첫번째 파라미터를 모든 예외가 포함된 <code>tuple</code>로 지정하는 것이다. 또한, 높은 이식성을 위해서 <code>as</code> 키워드를 사용하면 Python2 와 Python3을 모두 지원할 수 있다:</p>
+<pre><code class="language-python">try:
+    l = [&quot;a&quot;, &quot;b&quot;]
+    int(l[2])
+except (IndexError, ValueError) as e:
+    pass
+</code></pre>
+        </div>
+    </article>
+
+    <footer class="post-footer">
+        <div class="footer-content">
+            <p class="footer-author">Written by <a href="/">ASH84</a></p>
+            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
