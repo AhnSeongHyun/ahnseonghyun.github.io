@@ -120,7 +120,7 @@ a {
 
 .section-header h2 {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -170,7 +170,7 @@ a {
 /* Selected Works */
 .selected {
     padding-bottom: 60px;
-    border-bottom: 2px solid var(--black);
+    border-bottom: 1px dashed var(--light-gray);
 }
 
 .works {
