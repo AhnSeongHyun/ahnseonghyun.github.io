@@ -1,10 +1,10 @@
 ---
-title: '영화 오디세이를 보고'
+title: '영화 오디세이 - 그리스판 레버넌트'
 author: 'ash84'
 pub_date: '2026-08-08'
 description: '크리스토퍼 놀란 감독의 <오디세이>를 IMAX로 보고 남긴 감상. 좋았던 연출과 아쉬웠던 부분들'
 featured_image: 'odyssey-poster.jpg'
-tags: ['영화', '오디세이', '크리스토퍼놀란', 'essay']
+tags: ['영화', '오디세이', '크리스토퍼놀란', 'movie', 'odyssey', 'christopher-nolan', 'essay']
 ---
 
 > 오디세이 스포일러가 아주 많이 포함되어 있습니다.
