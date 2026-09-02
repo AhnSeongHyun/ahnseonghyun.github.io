@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2010-07-23'
 description: ''
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

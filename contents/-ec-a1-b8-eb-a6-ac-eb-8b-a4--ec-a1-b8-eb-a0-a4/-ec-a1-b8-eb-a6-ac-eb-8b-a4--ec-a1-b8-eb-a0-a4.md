@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2010-11-23'
 description: '졸리다. 졸려.  자자. 성현아.'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

@@ -9,7 +9,7 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile27.uf.1768383F4E1B0
 웃는 모습도. 가만히 있어도.  
  보고싶다.'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

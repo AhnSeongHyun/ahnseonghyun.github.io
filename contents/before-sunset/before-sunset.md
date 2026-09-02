@@ -7,7 +7,7 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile10.uf.1103FB434E1B0
 제주도. 몇번 안된 가족여행
 나는 사진을 찍으러 갔다. 정작 내 사진은 몇개 없다.'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

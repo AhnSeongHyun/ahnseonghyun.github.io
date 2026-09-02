@@ -7,7 +7,7 @@ description: '[![family travel](http://farm1.staticflickr.com/55/182763318_2f960
 간간히 글을 썼는데 너무 기술적인 글만 쓰는것 같아서. 
 퇴근엔 말 보다 행동'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

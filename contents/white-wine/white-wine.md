@@ -7,7 +7,7 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile3.uf.2051E43A4E1751
   
  개인적으로 화이트 와인을 좋아한다.'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

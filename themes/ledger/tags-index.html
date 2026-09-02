@@ -23,7 +23,7 @@
 
     <nav class="tagcloud" aria-label="태그 목록">
 {% for tag in all_tags %}
-        <a href="/tags/{{ tag.safe_name }}/">{{ tag.name }}<span>{{ tag.count }}</span></a>
+        <a href="/tags/{{ tag.safe_name | e }}/">{{ tag.name | e }}<span>{{ tag.count }}</span></a>
 {% endfor %}
     </nav>
 </div>

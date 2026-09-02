@@ -6,7 +6,7 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile29.uf.171EAB354E175
 
 멍하니 하늘을 바라볼때 하늘에 걸쳐있는 나무를 자주 찍곤 하는데'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

@@ -9,7 +9,7 @@ description: '2008 년이 얼마 남지 않았다는 사실에 조금은 당황 
 
 어렸을때는, 날짜와 시간에 어떤 의미를'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

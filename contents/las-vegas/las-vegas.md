@@ -10,7 +10,7 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile22.uf.1464063F4E1B0
 
 신혼여행중 들리고 싶은 곳중 한곳^^'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

@@ -69,6 +69,13 @@ def find_tags_section(frontmatter: str) -> TagsSection | None:
     return TagsSection(tags, start, end)
 
 
+def strip_markup(tag: str) -> str:
+    """'<b>태그' -> 'b태그', '<hr/>' -> 'hr'. Tag names must not carry HTML angle brackets."""
+    if "<" not in tag and ">" not in tag:
+        return tag
+    return tag.replace("<", "").replace(">", "").rstrip("/").strip()
+
+
 def expand_hashtags(tag: str) -> list[str]:
     if not tag.startswith("#"):
         return [tag]
@@ -78,7 +85,7 @@ def expand_hashtags(tag: str) -> list[str]:
 def normalize_tags(tags: list[str]) -> list[str]:
     expanded: list[str] = []
     for tag in tags:
-        expanded.extend(expand_hashtags(html.unescape(tag).strip()))
+        expanded.extend(expand_hashtags(strip_markup(html.unescape(tag).strip())))
     non_empty = [tag for tag in expanded if tag]
     return consolidate_tags.consolidate_tags(non_empty)
 
@@ -88,6 +95,7 @@ def quote(tag: str) -> str:
 
 
 def format_inline(tags: list[str]) -> str:
+    """Empty input renders `tags: []` so a stray `['']` no longer yields an empty tag."""
     return "tags: [" + ", ".join(quote(tag) for tag in tags) + "]"
 
 
@@ -101,8 +109,6 @@ def rewrite(content: str) -> str | None:
     if section is None:
         return None
     normalized = normalize_tags(section.tags)
-    if not normalized:
-        return None
     current_text = frontmatter[section.start : section.end]
     new_text = format_inline(normalized)
     if current_text == new_text:

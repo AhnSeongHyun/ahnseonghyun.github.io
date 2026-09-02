@@ -77,7 +77,7 @@
 {% endif %}
                 <a class="row" href="{{ post.link }}">
                     <time datetime="{{ post.pub_date }}">{{ post.pub_date }}</time>
-                    <div><span class="t">{{ post.title }}</span>{% if post.description %}<div class="d">{{ post.description | e }}</div>{% endif %}</div>
+                    <div><span class="t">{{ post.title | e }}</span>{% if post.description %}<div class="d">{{ post.description | e }}</div>{% endif %}</div>
                 </a>
 {% if loop.last %}
             </div>

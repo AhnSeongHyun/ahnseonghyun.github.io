@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2010-11-14'
 description: '**#1. 스킨 바꾸기기는 이제 그만~ **'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

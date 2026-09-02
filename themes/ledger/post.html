@@ -5,14 +5,14 @@
 {% set url_path = post.path | replace('docs/', '') %}
 {% set parts = url_path.split('/') %}
 {% set slug = parts[-1] %}
-    <title>{{ post.title }} - ASH84</title>
+    <title>{{ post.title | e }} - ASH84</title>
     <meta name="description" content="{{ post.description | e }}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://ash84.io/{{ url_path }}/">
 
     <!-- Open Graph -->
     <meta property="og:site_name" content="ASH84">
-    <meta property="og:title" content="{{ post.title }}">
+    <meta property="og:title" content="{{ post.title | e }}">
     <meta property="og:description" content="{{ post.description | e }}">
     <meta property="og:url" content="https://ash84.io/{{ url_path }}/">
     <meta property="og:locale" content="ko_KR">
@@ -20,7 +20,7 @@
     <meta property="article:published_time" content="{{ post.created_at }}">
     <meta property="article:author" content="https://ash84.io/">
 {% for tag in tag_list %}
-    <meta property="article:tag" content="{{ tag }}">
+    <meta property="article:tag" content="{{ tag | e }}">
 {% endfor %}
 {% if post.featured_image %}
 {% if post.featured_image.startswith('http') %}
@@ -36,7 +36,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@sh84ahn">
     <meta name="twitter:creator" content="@sh84ahn">
-    <meta name="twitter:title" content="{{ post.title }}">
+    <meta name="twitter:title" content="{{ post.title | e }}">
     <meta name="twitter:description" content="{{ post.description | e }}">
 {% if post.featured_image %}
 {% if post.featured_image.startswith('http') %}
@@ -92,16 +92,16 @@
     <div class="post-grid">
         <article data-slug="{{ slug }}">
             <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
-<span class="k">title</span>: <span class="v">'{{ post.title }}'</span>
+<span class="k">title</span>: <span class="v">'{{ post.title | e }}'</span>
 <span class="k">author</span>: <span class="v">'{{ post.author }}'</span>
 <span class="k">pub_date</span>: <span class="v">'{{ post.created_at }}'</span>
-{% if post.description %}<span class="k">description</span>: <span class="v">'{{ post.description | e }}'</span>
-{% endif %}{% if tag_list %}<span class="k">tags</span>: [{% for tag in tag_list %}<a class="v" href="/tags/{{ tag | replace('/', '-') | replace('\\', '-') | replace(':', '-') }}/">'{{ tag }}'</a>{% if not loop.last %}, {% endif %}{% endfor %}]
+{% if post.description %}<span class="k">description</span>: <span class="v">'{{ post.description | truncate(140, True) | e }}'</span>
+{% endif %}{% if tag_list %}<span class="k">tags</span>: [{% for tag in tag_list %}<a class="v" href="/tags/{{ tag | replace('/', '-') | replace('\\', '-') | replace(':', '-') | e }}/">'{{ tag | e }}'</a>{% if not loop.last %}, {% endif %}{% endfor %}]
 {% endif %}<span class="d">---</span></pre>
 
-            <h1 class="post-title">{{ post.title }}</h1>
+            <h1 class="post-title">{{ post.title | e }}</h1>
 {% if post.featured_image %}
-            <figure class="post-image"><img src="{{ post.featured_image }}" alt="{{ post.title }}"></figure>
+            <figure class="post-image"><img src="{{ post.featured_image | e }}" alt="{{ post.title | e }}"></figure>
 {% endif %}
             <div class="post-content" data-pagefind-body>
 {{ post.html | safe }}

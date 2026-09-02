@@ -18,7 +18,7 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile26.uf.122A892B4ADD0
 
 iPod 에서 작성된 글입니다.'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

@@ -2,8 +2,8 @@
 <html lang="ko">
 <head>
 {% include 'themes/ledger/partials/head-common.html' %}
-    <title>#{{ tag_info.name }} - ASH84</title>
-    <meta name="description" content="#{{ tag_info.name }} 태그의 글 {{ tag_info.count }}편">
+    <title>#{{ tag_info.name | e }} - ASH84</title>
+    <meta name="description" content="#{{ tag_info.name | e }} 태그의 글 {{ tag_info.count }}편">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
@@ -13,11 +13,11 @@
 {% include 'themes/ledger/partials/header.html' %}
 
     <nav class="crumb" aria-label="경로">
-        <a href="/">ash84.io</a><span>/</span><a href="/tags/">tags</a><span>/</span><span class="cur">{{ tag_info.name }}</span>
+        <a href="/">ash84.io</a><span>/</span><a href="/tags/">tags</a><span>/</span><span class="cur">{{ tag_info.name | e }}</span>
     </nav>
 
     <section class="head head--tag">
-        <h1>#{{ tag_info.name }}</h1>
+        <h1>#{{ tag_info.name | e }}</h1>
         <p>{{ tag_info.count }} posts</p>
     </section>
 
@@ -27,7 +27,7 @@
 {% for post in posts %}
                 <a class="row" href="{{ post.link }}">
                     <time datetime="{{ post.pub_date }}">{{ post.pub_date }}</time>
-                    <div><span class="t">{{ post.title }}</span>{% if post.description %}<div class="d">{{ post.description | e }}</div>{% endif %}</div>
+                    <div><span class="t">{{ post.title | e }}</span>{% if post.description %}<div class="d">{{ post.description | e }}</div>{% endif %}</div>
                 </a>
 {% endfor %}
             </div>
@@ -36,7 +36,7 @@
 </div>
 
 <div class="status">
-    <span class="path">~/tags/{{ tag_info.name }} · {{ tag_info.count }} posts</span>
+    <span class="path">~/tags/{{ tag_info.name | e }} · {{ tag_info.count }} posts</span>
     <span class="sp"></span>
     <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
     <button type="button" data-action="theme"><kbd>t</kbd>theme</button>

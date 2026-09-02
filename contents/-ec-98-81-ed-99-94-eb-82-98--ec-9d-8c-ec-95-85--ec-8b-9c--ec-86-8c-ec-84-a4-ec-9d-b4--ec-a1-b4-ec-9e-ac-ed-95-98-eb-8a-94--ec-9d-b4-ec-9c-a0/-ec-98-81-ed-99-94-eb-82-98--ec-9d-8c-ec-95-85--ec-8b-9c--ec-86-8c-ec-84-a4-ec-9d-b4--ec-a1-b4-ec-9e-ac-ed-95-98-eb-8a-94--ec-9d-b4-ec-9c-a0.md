@@ -5,7 +5,7 @@ pub_date: '2009-03-16'
 description: '[![summer soundtrack](http://farm1.static.flickr.com/60/170218920_7ae2f8d310.jpg)](http://www.flickr.com/photos/10756861@N00/170218920 "summer soundtrack")  
 summer soundtrack by [Oliver Lavery](http://www.flickr.com/photos/10756861@N00)<'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

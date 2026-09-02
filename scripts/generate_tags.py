@@ -78,7 +78,7 @@ def collect_posts_by_tag():
             metadata = parse_frontmatter(frontmatter_text)
 
             # Get tags
-            tags = metadata.get("tags", [])
+            tags = [tag for tag in metadata.get("tags", []) if tag]  # drop tags: ['']
             if not tags:
                 continue
 

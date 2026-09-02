@@ -10,7 +10,7 @@ description: '![](http://ash84.net/wp-content/uploads/1/cfile25.uf.1470F0374F8FE
 
 이런게 센스인듯. ^^'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

@@ -5,7 +5,7 @@ pub_date: '2009-04-26'
 description: '[![2 Parole 5 Lettere](http://farm3.static.flickr.com/2384/2195276010_585584fc4e.jpg)](http://www.flickr.com/photos/52494613@N00/2195276010 "2 Parole 5 Lettere")  
 2 Parole 5 Lettere by [FotoRita [Allstar maniac]](http://www.flickr.com/ph'
 featured_image: ''
-tags: ['']
+tags: []
 ---
 
 

@@ -35,10 +35,21 @@ def test_empty_tags_dropped_and_entities_decoded():
     assert result == doc("tags: ['moet&chandon', 'dev']")
 
 
+def test_angle_brackets_are_removed_from_tag_names():
+    result = normalize_tags.rewrite(doc("tags: ['&lt;b&gt;태그', '&lt;hr/&gt;', 'css']"))
+
+    assert result == doc("tags: ['b태그', 'hr', 'css']")
+
+
 def test_consolidation_rules_and_duplicates():
     result = normalize_tags.rewrite(doc("tags: ['python', 'Python', 'dev']"))
 
     assert result == doc("tags: ['Python', 'dev']")
+
+
+def test_only_empty_tags_becomes_empty_list():
+    assert normalize_tags.rewrite(doc("tags: ['']")) == doc("tags: []")
+    assert normalize_tags.rewrite(doc("tags: []")) is None
 
 
 def test_unchanged_document_returns_none():
