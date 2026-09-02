@@ -14,7 +14,7 @@ description: '본 포스팅은 Qwiklabs 의 [Kubernetes in the Google Cloud](htt
     
     # S'
 featured_image: ''
-tags: ['Docker', 'deployment', 'k8s', 'python']
+tags: ['Docker', 'deploy', 'k8s', 'Python']
 ---
 본 포스팅은 Qwiklabs 의 [Kubernetes in the Google Cloud](https://www.qwiklabs.com/quests/29)
 를 기반으로 하고 있습니다. 

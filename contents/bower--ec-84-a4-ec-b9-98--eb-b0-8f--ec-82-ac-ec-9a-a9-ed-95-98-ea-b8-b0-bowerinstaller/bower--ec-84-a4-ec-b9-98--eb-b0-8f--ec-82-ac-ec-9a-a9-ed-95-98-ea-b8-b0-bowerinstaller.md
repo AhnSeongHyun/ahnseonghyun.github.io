@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2015-03-23'
 description: ''
 featured_image: ''
-tags: ['JavaScript', 'Node.js', 'bower', 'brower-installer', 'dev', 'grunt', 'java', 'npm', 'python', '패키지관리']
+tags: ['JavaScript', 'Node.js', 'bower', 'brower-installer', 'dev', 'grunt', 'Java', 'npm', 'Python', '패키지관리']
 ---
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->

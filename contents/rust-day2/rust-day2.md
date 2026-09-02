@@ -6,11 +6,7 @@ description: 'TestCase 를 작성해보자. #2 - 원래 프로젝트는 대략�
   ├── Cargo.toml ├── Makefile ├── README.md ├── resource │ └── host.yaml └── src ├──
   arg.rs ├── config.rs ├── main.rs'
 featured_image: ''
-tags:
-- rust
-- 100DaysOfRust
-- panic
-- testcase
+tags: ['rust', '100DaysOfRust', 'panic', 'testcase']
 ---
 
 **TestCase 를 작성해보자.  [#2](https://github.com/AhnSeongHyun/sun/pull/2)**

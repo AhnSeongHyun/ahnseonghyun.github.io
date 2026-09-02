@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2026-02-04'
 description: '지하철에서 코딩을 하고 싶다.'
 featured_image: 'terminus.jpeg'
-tags: ['claude', 'mcp', 'claude code',  'AI', '클로드 코드']
+tags: ['claude', 'mcp', 'claude code', 'AI', '클로드 코드']
 ---
 
 Claude Code에 중독이 되어 버렸다. 창조의 도파민 같은 느낌인데, 거의 유잏하게 클로드 코드를 하루에 안 쓰는 시간이 자는 시간과 지하철에서 이동하는 시간이다. 자는 시간에 활용할 수 있는 방법은 다음 글에서 진행할 예정이고 지하철에서 이동중에 할 수 있는 방법을 찾아서 공유한다. 

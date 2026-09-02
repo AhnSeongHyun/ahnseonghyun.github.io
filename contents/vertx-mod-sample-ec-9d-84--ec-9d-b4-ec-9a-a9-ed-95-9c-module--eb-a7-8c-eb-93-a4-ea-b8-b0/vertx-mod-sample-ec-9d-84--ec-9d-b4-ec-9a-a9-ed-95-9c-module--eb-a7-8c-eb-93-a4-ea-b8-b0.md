@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2013-05-22'
 description: '[지난 포스팅](http://ash84.tistory.com/969)에서 vert.x module을 mod-sample 이라는 잘 만들어진 어떤 것을 이용해서 간단하게 나마 테스트 해보는 시간을 가졌었다. 여러가지 설정을 해야하는데 gradle(나중에 따로 다뤄야 할듯) 등등 그런 작업들을 쉽게 할수 있도록 구성 된것으로 이'
 featured_image: ''
-tags: ['java', 'modulle 만들기', 'runmod', 'vert.x', 'vert.x mod']
+tags: ['Java', 'modulle 만들기', 'runmod', 'vert.x', 'vert.x mod']
 ---
 <span style="color: rgb(51, 51, 51); font-size: 11pt;">[지난 포스팅](http://ash84.tistory.com/969)에서 vert.x module을 mod-sample 이라는 잘 만들어진 어떤 것을 이용해서 간단하게 나마 테스트 해보는 시간을 가졌었다. 여러가지 설정을 해야하는데 gradle(나중에 따로 다뤄야 할듯)</span><span style="color: rgb(51, 51, 51); font-size: 11pt;"> 등등 그런 작업들을 쉽게 할수 있도록 구성 된것으로 이번에는 실제로 간단한 모듈을 만드는 작업을 해보았다. </span>
 

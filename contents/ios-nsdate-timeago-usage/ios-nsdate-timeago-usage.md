@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2015-04-16'
 description: ''
 featured_image: ''
-tags: ['NSDATE', 'dev', 'iOS', 'javascript', 'timeago']
+tags: ['NSDATE', 'dev', 'iOS', 'JavaScript', 'timeago']
 ---
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->

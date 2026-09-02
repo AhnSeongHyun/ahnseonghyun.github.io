@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2010-06-29'
 description: ''
 featured_image: ''
-tags: ['Knight&amp;Day', '나잇앤데이', '영화', '카메론 디아즈', '탐크루즈']
+tags: ['Knight&Day', '나잇앤데이', '영화', '카메론 디아즈', '탐크루즈']
 ---
 
 

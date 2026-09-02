@@ -6,11 +6,7 @@ description: 발단 애들이 마인크래프트를 좋아하는데 iOS 기기�
   하거나 아니면 Realm 이라는것을 통해서 같이 할 수 있는것 같다. 근데 이건 유료인것 같고. 근데 내가 알기론 마인크래프트는 서버를 운영할
   수 있다고 들었고 좀 더 찾아보니 java edition과 bedrock...
 featured_image: image.png
-tags:
-- 마인크래프트
-- minecraft
-- docker
-- 마인크래프트 서버띄우기
+tags: ['마인크래프트', 'minecraft', 'Docker', '마인크래프트 서버띄우기']
 ---
 
 ## 발단 

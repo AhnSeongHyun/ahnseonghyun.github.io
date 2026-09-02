@@ -7,13 +7,7 @@ description: 올해도 어김없이 회고를 쓴다. 사실 회고를 쓰는 �
   나머지는 엔지니어/개발 문화에 대한 부분이었다. 앞에 2개는 했지만 마지막 문화에 대한 부분은 아쉽게도 잘 하지 못했다. 나름대로 한다고 했지만
   특정 팀에 국한된 것 같기도 하고 원하는 모습까지는 안되는것 같다. 돌이켜보면 조금 조급했던 것 같기도
 featured_image: https://s3.ap-northeast-2.amazonaws.com/static.ash84.io/images/blog/2023-retrospective/2023_retrospective.jpeg
-tags:
-- '#ash84 #회고 #2023 #essay'
-- retrospective
-- engineering
-- cto
-- aws
-- api
+tags: ['ash84', 'retrospective', '2023', 'essay', 'engineering', 'cto', 'AWS', 'API']
 ---
 
 올해도 어김없이 회고를 쓴다. 사실 회고를 쓰는 이 12/17일에 여러가지 부분에서 회복이 많이 되진 않았고, 지침과 힘듦이 조금 남아 있다. 

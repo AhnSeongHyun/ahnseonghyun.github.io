@@ -22,7 +22,7 @@ $ npm install -g grunt-cl
 ```javascript
 $ npm install -'
 featured_image: ''
-tags: ['Node.js', 'bower', 'dev', 'grunt', 'grunt-contrib-concat', 'grunt-contrib-jshint', 'grunt-contrib-uglify', 'javascript', 'jshint', 'npm']
+tags: ['Node.js', 'bower', 'dev', 'grunt', 'grunt-contrib-concat', 'grunt-contrib-jshint', 'grunt-contrib-uglify', 'JavaScript', 'jshint', 'npm']
 ---
 #### 개요
 

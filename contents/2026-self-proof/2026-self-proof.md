@@ -4,9 +4,7 @@ author: ash84
 pub_date: '2026-06-02'
 description: 
 featured_image: 
-tags:
-- 자기증명
-- 커리어
+tags: ['자기증명', '커리어']
 
 ---
 

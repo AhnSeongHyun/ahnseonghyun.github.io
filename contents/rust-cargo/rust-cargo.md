@@ -26,7 +26,7 @@ description: '## cargo 명령어 정리
 - `cargo new` : 프로젝트 생성 
 - `cargo init` : 프로젝트 생성('
 featured_image: ''
-tags: ['cargo', 'dev', 'python', 'rust']
+tags: ['cargo', 'dev', 'Python', 'rust']
 ---
 ## cargo 명령어 정리 
 

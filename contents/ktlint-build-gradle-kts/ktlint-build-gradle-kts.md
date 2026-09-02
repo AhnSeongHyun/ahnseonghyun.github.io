@@ -8,7 +8,7 @@ description: 'kotlin lint 를 검색하면 [ktlint](https://ktlint.github.io/#ge
 
 [https://github.com/jeremymailen/kotlinter-gradle](https://github.com/jere'
 featured_image: ''
-tags: ['formatter', 'gradle', 'java', 'kotlin', 'lint']
+tags: ['formatter', 'gradle', 'Java', 'kotlin', 'lint']
 ---
 kotlin lint 를 검색하면 [ktlint](https://ktlint.github.io/#getting-started) 를 찾을 수 있다. 그런데 gradle 로 적용하려면 총 3개의 repository 를 추천해주고 있다. 
 

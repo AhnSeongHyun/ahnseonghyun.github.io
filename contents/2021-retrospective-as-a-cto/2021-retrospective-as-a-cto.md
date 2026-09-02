@@ -7,12 +7,7 @@ description: '- 2020년 12월 TechAssemble 진행 - TechAssemble이라는 Tech�
   Github Flow로 통일했다. - 단순히 코딩을 한다는 것보다는 제품(product)/서비스를 만들고 가치를 만들어내는 중요한 역할을 하는
   것이 우리의 역할이라고 상기시켰다. - 2021년 3월에 다시 TechAssemble을'
 featured_image: https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80
-tags:
-- essay
-- 회고
-- retrospective
-- '2021'
-- cto
+tags: ['essay', 'retrospective', '2021', 'cto']
 ---
 
 - **2020년 12월 TechAssemble 진행**

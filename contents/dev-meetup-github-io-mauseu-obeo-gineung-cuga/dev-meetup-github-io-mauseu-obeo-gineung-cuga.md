@@ -6,7 +6,7 @@ description: '![https://farm5.staticflickr.com/4429/36158285423_93e18791f4_z.jpg
 
 [작은 기능을 추가했다.](https://github.com/dev-meetup) 데스트탑 환경에서는 현재 월 캘린더 형태로 보여주고 있는데, 위의 사진과 같이 `시간 제목` 으로 표시하다 보니 세부내용을 확인하려면 일일이 들어가서 봐야하는 불편함이 있었다. 그래서 캘린더 상에서는 마우스 오버를'
 featured_image: ''
-tags: ['conference', 'dev-meetup.github.io', 'javascript']
+tags: ['conference', 'dev-meetup.github.io', 'JavaScript']
 ---
 ![https://farm5.staticflickr.com/4429/36158285423_93e18791f4_z.jpg](https://farm5.staticflickr.com/4429/36158285423_93e18791f4_z.jpg)
 

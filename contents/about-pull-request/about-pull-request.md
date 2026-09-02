@@ -6,7 +6,7 @@ description: '> [@krazyeom](https://twitter.com/krazyeom) 그게 말처럼 주�
 > 
 > — 용균 (@haruair) [April 1, 2015](https://twitter.com/haruair/status/583402323977773056)'
 featured_image: ''
-tags: ['Git', 'GitHub', 'javascript', 'open-source', 'pull request', '오픈소스']
+tags: ['Git', 'GitHub', 'JavaScript', 'open-source', 'pull request', '오픈소스']
 ---
 <center><div class="jetpack-video-wrapper">> [@krazyeom](https://twitter.com/krazyeom) 그게 말처럼 주워먹기 힘든 프로젝트였습니다 ㅠㅜㅜ [http://t.co/RkgntLz2uT](http://t.co/RkgntLz2uT) @dalinaum
 > 

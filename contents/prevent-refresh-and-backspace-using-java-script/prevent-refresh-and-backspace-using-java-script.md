@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2015-10-07'
 description: ''
 featured_image: ''
-tags: ['dev', 'java']
+tags: ['dev', 'Java']
 ---
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->

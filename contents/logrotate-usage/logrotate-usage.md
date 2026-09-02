@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2015-11-04'
 description: ''
 featured_image: ''
-tags: ['dev', 'log', 'logrotate', 'python', '로그', '로그 분할', '로그 일별 분할']
+tags: ['dev', 'log', 'logrotate', 'Python', '로그', '로그 분할', '로그 일별 분할']
 ---
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 페이지내_긴_배너 -->

@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2012-12-28'
 description: 'maven 빌드 환경을 세팅하고 기존의 Junit 단위테스트 클래스를 maven 의 test (src/test/java)에 넣어서 빌드를 하니 빌드시(package), 이상하게 Junit 에서는 정상적으로 작동하는 maven 빌드에서만 이상하게 fail 이 발생하는 것을 볼수 있었다.'
 featured_image: ''
-tags: ['dev', 'java', 'junit4', 'maven']
+tags: ['dev', 'Java', 'junit4', 'maven']
 ---
 <span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">maven 빌드 환경을 세팅하고 기존의 Junit 단위테스트 클래스를 maven 의 test (src/test/java)에 넣어서 빌드를 하니 빌드시(package), 이상하게 Junit 에서는 정상적으로 작동하는 maven 빌드에서만 이상하게 fail 이 발생하는 것을 볼수 있었다. </span>
 

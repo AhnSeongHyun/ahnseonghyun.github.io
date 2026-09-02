@@ -4,7 +4,7 @@ author: 'ash84'
 pub_date: '2013-01-04'
 description: 'java -jar lib.jar 이런식으로 jar를 직접실행하는 경우가 있다. 이런 경우 maven의 pom.xml에 main class를 지정해 주지 않으면 실행할 경우, 다음과 같은 에러가 발생 할 수 있다.'
 featured_image: ''
-tags: ['dev', 'java', 'main class error', 'main class nor found', 'maven']
+tags: ['dev', 'Java', 'main class error', 'main class nor found', 'maven']
 ---
 <span style="font-size: 11pt;">java -jar lib.jar 이런식으로 jar를 직접실행하는 경우가 있다. 이런 경우 maven의 pom.xml에 main class를 지정해 주지 않으면 실행할 경우, 다음과 같은 에러가 발생 할 수 있다. </span>
 

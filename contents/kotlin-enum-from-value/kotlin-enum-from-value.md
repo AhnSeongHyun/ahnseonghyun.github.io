@@ -8,7 +8,7 @@ enum 값에서 enum 형식으로 변환이 어렵다. 이게 왜 필요�
 
 ```kotlin'
 featured_image: ''
-tags: ['enum', 'kotlin', 'python']
+tags: ['enum', 'kotlin', 'Python']
 ---
 **Enum 은 소중하다. 왜냐하면 문자열 데이터에 대한 유효성 검증을 해주기도 하고 enum 의 이름 자체로 의미를 부여하기 때문이다.** 최근에 kotlin 으로 서버를 개발하던 중에 kotlin  xnum 관련해서 불편한 부분을 겪었다. 아래의 코드 같은 부분인데:
 
