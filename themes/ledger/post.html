@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+{% include 'themes/ledger/partials/head-common.html' %}
+{% set url_path = post.path | replace('docs/', '') %}
+{% set parts = url_path.split('/') %}
+{% set slug = parts[-1] %}
+    <title>{{ post.title }} - ASH84</title>
+    <meta name="description" content="{{ post.description | e }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/{{ url_path }}/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="{{ post.title }}">
+    <meta property="og:description" content="{{ post.description | e }}">
+    <meta property="og:url" content="https://ash84.io/{{ url_path }}/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="{{ post.created_at }}">
+    <meta property="article:author" content="https://ash84.io/">
+{% for tag in tag_list %}
+    <meta property="article:tag" content="{{ tag }}">
+{% endfor %}
+{% if post.featured_image %}
+{% if post.featured_image.startswith('http') %}
+    <meta property="og:image" content="{{ post.featured_image }}">
+{% else %}
+    <meta property="og:image" content="https://ash84.io/{{ url_path }}/{{ post.featured_image }}">
+{% endif %}
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+{% endif %}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="{{ post.title }}">
+    <meta name="twitter:description" content="{{ post.description | e }}">
+{% if post.featured_image %}
+{% if post.featured_image.startswith('http') %}
+    <meta name="twitter:image" content="{{ post.featured_image }}">
+{% else %}
+    <meta name="twitter:image" content="https://ash84.io/{{ url_path }}/{{ post.featured_image }}">
+{% endif %}
+{% endif %}
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ post.title | tojson }},
+        "description": {{ post.description | tojson }},
+        "author": {
+            "@type": "Person",
+            "name": {{ post.author | tojson }},
+            "url": "https://ash84.io"
+        },
+        "datePublished": "{{ post.created_at }}",
+        "dateModified": "{{ post.created_at }}",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/{{ url_path }}/"
+        },
+{% if post.featured_image %}
+{% if post.featured_image.startswith('http') %}
+        "image": "{{ post.featured_image }}",
+{% else %}
+        "image": "https://ash84.io/{{ url_path }}/{{ post.featured_image }}",
+{% endif %}
+{% endif %}
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+</head>
+<body>
+{% set nav = 'writing' %}
+<div class="wrap">
+{% include 'themes/ledger/partials/header.html' %}
+
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y{{ parts[0] }}">{{ parts[0] }}</a><span>/</span><span>{{ parts[1] }}</span><span>/</span><span>{{ parts[2] }}</span><span>/</span><span class="cur">{{ slug }}/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="{{ slug }}">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'{{ post.title }}'</span>
+<span class="k">author</span>: <span class="v">'{{ post.author }}'</span>
+<span class="k">pub_date</span>: <span class="v">'{{ post.created_at }}'</span>
+{% if post.description %}<span class="k">description</span>: <span class="v">'{{ post.description | e }}'</span>
+{% endif %}{% if tag_list %}<span class="k">tags</span>: [{% for tag in tag_list %}<a class="v" href="/tags/{{ tag | replace('/', '-') | replace('\\', '-') | replace(':', '-') }}/">'{{ tag }}'</a>{% if not loop.last %}, {% endif %}{% endfor %}]
+{% endif %}<span class="d">---</span></pre>
+
+            <h1 class="post-title">{{ post.title }}</h1>
+{% if post.featured_image %}
+            <figure class="post-image"><img src="{{ post.featured_image }}" alt="{{ post.title }}"></figure>
+{% endif %}
+            <div class="post-content" data-pagefind-body>
+{{ post.html | safe }}
+            </div>
+
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/{{ slug }}/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+{% include 'themes/ledger/partials/links.html' %}
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
+
+<div class="status">
+    <span class="path">contents/{{ slug }}/{{ slug }}.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+{% include 'themes/ledger/partials/search.html' %}
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
+</body>
+</html>

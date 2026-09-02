@@ -11,10 +11,28 @@ from pathlib import Path
 from collections import defaultdict
 from jinja2 import Environment, FileSystemLoader
 
+DEFAULT_THEME = "chronicle"
+
+
+def read_theme_name(config_path="config.yaml"):
+    """Read theme.name from config.yaml so tag pages follow the active theme."""
+    try:
+        content = Path(config_path).read_text(encoding="utf-8")
+    except OSError:
+        return DEFAULT_THEME
+    in_theme = False
+    for line in content.splitlines():
+        if not line.startswith(" "):
+            in_theme = line.strip().startswith("theme:")
+            continue
+        if in_theme and line.strip().startswith("name:"):
+            return line.split(":", 1)[1].strip().strip("'\"") or DEFAULT_THEME
+    return DEFAULT_THEME
+
 
 def extract_frontmatter(content):
     """Extract frontmatter from markdown content."""
-    pattern = r'^---\s*\n(.*?)\n---\s*\n'
+    pattern = r"^---\s*\n(.*?)\n---\s*\n"
     match = re.match(pattern, content, re.DOTALL)
     if match:
         return match.group(1)
@@ -24,17 +42,17 @@ def extract_frontmatter(content):
 def parse_frontmatter(frontmatter_text):
     """Parse frontmatter text into a dictionary."""
     data = {}
-    for line in frontmatter_text.split('\n'):
-        if ':' in line:
-            key, value = line.split(':', 1)
+    for line in frontmatter_text.split("\n"):
+        if ":" in line:
+            key, value = line.split(":", 1)
             key = key.strip()
             value = value.strip()
 
             # Handle lists (tags)
-            if value.startswith('[') and value.endswith(']'):
+            if value.startswith("[") and value.endswith("]"):
                 # Remove brackets and quotes, split by comma
                 value = value[1:-1]  # Remove [ ]
-                items = [item.strip().strip("'\"") for item in value.split(',')]
+                items = [item.strip().strip("'\"") for item in value.split(",")]
                 data[key] = items
             else:
                 # Remove quotes
@@ -46,12 +64,12 @@ def parse_frontmatter(frontmatter_text):
 def collect_posts_by_tag():
     """Collect all posts and group them by tags."""
     tags_dict = defaultdict(list)
-    contents_path = Path('contents')
+    contents_path = Path("contents")
 
     # Find all markdown files
-    for md_file in contents_path.rglob('*.md'):
+    for md_file in contents_path.rglob("*.md"):
         try:
-            content = md_file.read_text(encoding='utf-8')
+            content = md_file.read_text(encoding="utf-8")
             frontmatter_text = extract_frontmatter(content)
 
             if not frontmatter_text:
@@ -60,29 +78,29 @@ def collect_posts_by_tag():
             metadata = parse_frontmatter(frontmatter_text)
 
             # Get tags
-            tags = metadata.get('tags', [])
+            tags = metadata.get("tags", [])
             if not tags:
                 continue
 
             # Get post info
-            title = metadata.get('title', 'Untitled')
-            pub_date = metadata.get('pub_date', '')
-            description = metadata.get('description', '')
+            title = metadata.get("title", "Untitled")
+            pub_date = metadata.get("pub_date", "")
+            description = metadata.get("description", "")
 
             # Generate post URL from pub_date and directory name
             # pub_date format: '2026-01-10' -> /2026/01/10/post-name/
             if pub_date:
-                year, month, day = pub_date.split('-')
+                year, month, day = pub_date.split("-")
                 post_name = md_file.parent.name
                 post_url = f"/{year}/{month}/{day}/{post_name}/"
             else:
                 continue
 
             post_data = {
-                'title': title,
-                'pub_date': pub_date,
-                'description': description,
-                'link': post_url
+                "title": title,
+                "pub_date": pub_date,
+                "description": description,
+                "link": post_url,
             }
 
             # Add post to each tag
@@ -98,16 +116,16 @@ def collect_posts_by_tag():
 
 def sort_posts_by_date(posts):
     """Sort posts by publication date (newest first)."""
-    return sorted(posts, key=lambda x: x['pub_date'], reverse=True)
+    return sorted(posts, key=lambda x: x["pub_date"], reverse=True)
 
 
 def sanitize_filename(tag):
     """Convert tag name to safe filename."""
     # Replace / with - to avoid directory issues
-    safe_name = tag.replace('/', '-')
+    safe_name = tag.replace("/", "-")
     # Replace other problematic characters
-    safe_name = safe_name.replace('\\', '-')
-    safe_name = safe_name.replace(':', '-')
+    safe_name = safe_name.replace("\\", "-")
+    safe_name = safe_name.replace(":", "-")
     return safe_name
 
 
@@ -115,12 +133,13 @@ def generate_tag_pages(tags_dict):
     """Generate HTML pages for each tag."""
 
     # Setup Jinja2 environment
-    env = Environment(loader=FileSystemLoader('.'))
-    tag_template = env.get_template('themes/chronicle/tag.html')
-    index_template = env.get_template('themes/chronicle/tags-index.html')
+    env = Environment(loader=FileSystemLoader("."))
+    theme = read_theme_name()
+    tag_template = env.get_template(f"themes/{theme}/tag.html")
+    index_template = env.get_template(f"themes/{theme}/tags-index.html")
 
     # Create tags directory
-    tags_dir = Path('docs/tags')
+    tags_dir = Path("docs/tags")
     tags_dir.mkdir(parents=True, exist_ok=True)
 
     # Prepare tag list for index page
@@ -133,8 +152,7 @@ def generate_tag_pages(tags_dict):
 
         # Render template
         html = tag_template.render(
-            tag_info={'name': tag, 'count': len(sorted_posts)},
-            posts=sorted_posts
+            tag_info={"name": tag, "count": len(sorted_posts)}, posts=sorted_posts
         )
 
         # Create directory for tag and write index.html
@@ -142,26 +160,20 @@ def generate_tag_pages(tags_dict):
         tag_dir = tags_dir / safe_filename
         tag_dir.mkdir(parents=True, exist_ok=True)
         tag_file = tag_dir / "index.html"
-        tag_file.write_text(html, encoding='utf-8')
+        tag_file.write_text(html, encoding="utf-8")
 
         print(f"  ✓ Created {safe_filename}/index.html ({len(sorted_posts)} posts)")
 
         # Add to tag list
-        tag_list.append({
-            'name': tag,
-            'safe_name': safe_filename,
-            'count': len(sorted_posts)
-        })
+        tag_list.append({"name": tag, "safe_name": safe_filename, "count": len(sorted_posts)})
 
     # Sort tag list by post count (descending), then by name
-    tag_list_sorted = sorted(tag_list, key=lambda x: (-x['count'], x['name']))
+    tag_list_sorted = sorted(tag_list, key=lambda x: (-x["count"], x["name"]))
 
     # Generate tags index page
-    index_html = index_template.render(
-        all_tags=tag_list_sorted
-    )
+    index_html = index_template.render(all_tags=tag_list_sorted)
     index_file = tags_dir / "index.html"
-    index_file.write_text(index_html, encoding='utf-8')
+    index_file.write_text(index_html, encoding="utf-8")
     print(f"\n  ✓ Created tags index page with {len(tag_list_sorted)} tags")
 
     return len(tags_dict)
@@ -194,5 +206,5 @@ def main():
         print(f"   ... and {len(tags_dict) - 10} more")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

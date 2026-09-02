@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+{% include 'themes/ledger/partials/head-common.html' %}
+    <title>ASH84 - Engineering, Leadership, Life</title>
+    <meta name="description" content="{{ settings.blog_desc }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/">
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="ASH84 - Engineering, Leadership, Life">
+    <meta property="og:description" content="{{ settings.blog_desc }}">
+    <meta property="og:url" content="https://ash84.io/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="ASH84 - Engineering, Leadership, Life">
+    <meta name="twitter:description" content="{{ settings.blog_desc }}">
+    <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+{% set nav = 'writing' %}
+<div class="wrap">
+{% include 'themes/ledger/partials/header.html' %}
+
+    <section class="head">
+        <div>
+            <h1>소프트웨어를 만들고 팀을 이끕니다. <mark>배운 것은 여기에 적어 둡니다.</mark></h1>
+            <p>Payhere Head of Technology (전 CTO·공동창업자), 전 뱅크샐러드 테크리드. 개발 노트와 회고, 그리고 에세이와 삶.</p>
+{% include 'themes/ledger/partials/links.html' %}
+        </div>
+        <div>
+            <dl class="ledger">
+                <div><dt>posts</dt><dd>{{ post_list | length }}</dd></div>
+                <div><dt>since</dt><dd>2007</dd></div>
+                <div><dt>commits</dt><dd data-commits>—</dd></div>
+                <div><dt>last write</dt><dd>{% if post_list %}{{ post_list[0].pub_date }}{% else %}—{% endif %}</dd></div>
+            </dl>
+            <div class="cl" data-changelog hidden>
+                <div class="cl-h">changelog <span>git log -3 -- contents/</span></div>
+                <div class="cl-rows"></div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="filters" aria-label="태그 필터">
+        <span class="fl">--tag</span>
+        <a class="on" href="/">all</a>
+        <a href="/tags/dev/">dev</a>
+        <a href="/tags/essay/">essay</a>
+        <a href="/tags/ai/">ai</a>
+        <a href="/tags/career/">career</a>
+        <a href="/tags/retrospective/">retrospective</a>
+        <a href="/tags/">…</a>
+    </nav>
+
+    <section class="archive" id="latest">
+{% set ns = namespace(collapsed=false) %}
+{% for post in post_list %}
+{% set year = post.pub_date[:4] %}
+{% if loop.changed(year) %}
+{% if not loop.first %}
+            </div>
+        {% if ns.collapsed %}</details>{% else %}</div>{% endif %}
+{% endif %}
+{% set ns.collapsed = year < '2023' %}
+{% if ns.collapsed %}
+        <details class="year-group" id="y{{ year }}">
+            <summary class="yr"><span>{{ year }}/</span><span data-count></span></summary>
+{% else %}
+        <div class="year-group" id="y{{ year }}">
+            <div class="yr"><span>{{ year }}/</span><span data-count></span></div>
+{% endif %}
+            <div class="rows">
+{% endif %}
+                <a class="row" href="{{ post.link }}">
+                    <time datetime="{{ post.pub_date }}">{{ post.pub_date }}</time>
+                    <div><span class="t">{{ post.title }}</span>{% if post.description %}<div class="d">{{ post.description | e }}</div>{% endif %}</div>
+                </a>
+{% if loop.last %}
+            </div>
+        {% if ns.collapsed %}</details>{% else %}</div>{% endif %}
+{% endif %}
+{% endfor %}
+    </section>
+</div>
+
+<div class="status">
+    <span class="path">~/contents · {{ post_list | length }} posts · since 2007</span>
+    <span class="hide-m">zvc · GitHub Pages</span>
+    <span class="hide-m">© 2007–<span data-year>2026</span></span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+{% include 'themes/ledger/partials/search.html' %}
+</body>
+</html>

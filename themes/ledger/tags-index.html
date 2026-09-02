@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+{% include 'themes/ledger/partials/head-common.html' %}
+    <title>tags - ASH84</title>
+    <meta name="description" content="ASH84 블로그의 태그 {{ all_tags | length }}개">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+{% set nav = 'tags' %}
+<div class="wrap">
+{% include 'themes/ledger/partials/header.html' %}
+
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><span class="cur">tags</span>
+    </nav>
+
+    <section class="head head--tag">
+        <h1>--tags</h1>
+        <p>{{ all_tags | length }} tags · 글 수 순</p>
+    </section>
+
+    <nav class="tagcloud" aria-label="태그 목록">
+{% for tag in all_tags %}
+        <a href="/tags/{{ tag.safe_name }}/">{{ tag.name }}<span>{{ tag.count }}</span></a>
+{% endfor %}
+    </nav>
+</div>
+
+<div class="status">
+    <span class="path">~/tags · {{ all_tags | length }} tags</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+{% include 'themes/ledger/partials/search.html' %}
+</body>
+</html>

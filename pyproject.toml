@@ -8,3 +8,16 @@ dependencies = [
     "pillow>=12.1.0",
     "zvc==0.1.8",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0",
+    "ruff>=0.12",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
