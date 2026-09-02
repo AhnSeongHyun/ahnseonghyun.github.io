@@ -91,15 +91,9 @@
 
     <div class="post-grid">
         <article data-slug="{{ slug }}">
-            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
-<span class="k">title</span>: <span class="v">'{{ post.title | e }}'</span>
-<span class="k">author</span>: <span class="v">'{{ post.author }}'</span>
-<span class="k">pub_date</span>: <span class="v">'{{ post.created_at }}'</span>
-{% if post.description %}<span class="k">description</span>: <span class="v">'{{ post.description | truncate(140, True) | e }}'</span>
-{% endif %}{% if tag_list %}<span class="k">tags</span>: [{% for tag in tag_list %}<a class="v" href="/tags/{{ tag | replace('/', '-') | replace('\\', '-') | replace(':', '-') | e }}/">'{{ tag | e }}'</a>{% if not loop.last %}, {% endif %}{% endfor %}]
-{% endif %}<span class="d">---</span></pre>
 
             <h1 class="post-title">{{ post.title | e }}</h1>
+            <div class="post-meta"><time datetime="{{ post.created_at }}">{{ post.created_at }}</time>{% for tag in tag_list %}<a href="/tags/{{ tag | replace('/', '-') | replace('\\', '-') | replace(':', '-') | e }}/">#{{ tag | e }}</a>{% endfor %}</div>
 {% if post.featured_image %}
             <figure class="post-image"><img src="{{ post.featured_image | e }}" alt="{{ post.title | e }}"></figure>
 {% endif %}
