@@ -103,3 +103,15 @@ Ledger 테마 구현(plan-ledger-theme-2026-09-02) 후 남긴 후속 후보와, 
 - 테스트 기대값 1건 수정: `'#ash84 #회고 …'` 분리 후 `회고`가 consolidate 룰로 `retrospective`에 병합되어 4개가 됨(룰 준수, 의도된 동작)
 - `tags:` 값이 비어 있고 항목도 없는 파일 1건은 그대로 둠(태그 없음과 동일)
 - macOS 케이스 무시 파일시스템 때문에 로컬 `docs/tags/python`은 `Python` 디렉터리와 동일. GitHub Pages(Linux)에서는 `Python`만 존재
+
+## 9. 배포 후 핫픽스 (2026-09-03, 라이브 피드백)
+
+| 증상 | 원인 | 조치 | 커밋 |
+|---|---|---|---|
+| /tags/ 중간부터 전체 볼드 | 태그 `&lt;b&gt;태그`가 정규화의 `html.unescape`로 `<b>태그`가 되어 미이스케이프 출력 | 템플릿 태그명·제목 `e` 필터, 정규화에서 `<` `>` 제거(`b태그`, `hr`), 빈 태그 `['']` 37편 → `[]`, generate_tags 빈 태그 무시 | 41c7be52 |
+| 긴 슬러그에서 HISTORY 라벨 글자 단위 꺾임 | `.cl-h` flex 자식에 `overflow-wrap: anywhere` 적용 | `.cl-h { white-space: nowrap }`, span `min-width: 0` | 41c7be52 |
+| 상태바 `t theme` → 해/달 아이콘 + 단축키 요청 | — | `partials/theme-button.html` SVG 2종, `data-mode`를 JS가 동기화(토글·OS 변경) | 38165079 |
+| 프론트매터 블록 노출 원치 않음 | — | 블록 제거, 제목 아래 `날짜 · #태그` 한 줄(`.post-meta`) | 845a3e18 |
+| CI Ruff Lint 실패 63건 | CI가 최신 ruff(0.16.5) 설치, 기본 룰셋 확대(I/UP/BLE/S…) | `[tool.ruff.lint] select = E F W I UP B SIM`, `--fix`(+unsafe: B007·SIM118) 적용, 워크플로 Python 3.12 + `ruff format --check` + pytest. 통과 확인 | 09ee0cc5 |
+
+검증: 라이브 /tags/ `<b>` 0건, 검색 "자기증명" 결과 하이라이트 동작, 다크 모드 3페이지 정상, 390px 가로 스크롤 없음, 죽은 이미지 호스트(ash84.net) 글은 원본 콘텐츠 문제로 범위 외.
