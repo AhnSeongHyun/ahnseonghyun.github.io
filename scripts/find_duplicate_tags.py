@@ -10,7 +10,7 @@ from collections import defaultdict, Counter
 
 def extract_frontmatter(content):
     """Extract frontmatter from markdown content."""
-    pattern = r'^---\s*\n(.*?)\n---\s*\n'
+    pattern = r"^---\s*\n(.*?)\n---\s*\n"
     match = re.match(pattern, content, re.DOTALL)
     if match:
         return match.group(1)
@@ -20,16 +20,16 @@ def extract_frontmatter(content):
 def parse_frontmatter(frontmatter_text):
     """Parse frontmatter text into a dictionary."""
     data = {}
-    for line in frontmatter_text.split('\n'):
-        if ':' in line:
-            key, value = line.split(':', 1)
+    for line in frontmatter_text.split("\n"):
+        if ":" in line:
+            key, value = line.split(":", 1)
             key = key.strip()
             value = value.strip()
 
             # Handle lists (tags)
-            if value.startswith('[') and value.endswith(']'):
+            if value.startswith("[") and value.endswith("]"):
                 value = value[1:-1]
-                items = [item.strip().strip("'\"") for item in value.split(',')]
+                items = [item.strip().strip("'\"") for item in value.split(",")]
                 data[key] = items
             else:
                 data[key] = value.strip("'\"")
@@ -40,18 +40,18 @@ def parse_frontmatter(frontmatter_text):
 def collect_all_tags():
     """Collect all tags with their usage count."""
     tags_counter = Counter()
-    contents_path = Path('contents')
+    contents_path = Path("contents")
 
-    for md_file in contents_path.rglob('*.md'):
+    for md_file in contents_path.rglob("*.md"):
         try:
-            content = md_file.read_text(encoding='utf-8')
+            content = md_file.read_text(encoding="utf-8")
             frontmatter_text = extract_frontmatter(content)
 
             if not frontmatter_text:
                 continue
 
             metadata = parse_frontmatter(frontmatter_text)
-            tags = metadata.get('tags', [])
+            tags = metadata.get("tags", [])
 
             for tag in tags:
                 if tag:
@@ -68,25 +68,25 @@ def find_korean_english_pairs(tags_counter):
 
     # Common known pairs
     known_pairs = {
-        '파이썬': 'Python',
-        '자바': 'Java',
-        '개발자': 'developer',
-        '프로그래밍': 'programming',
-        '아이폰': 'iPhone',
-        '안드로이드': 'Android',
-        '데이터베이스': 'database',
-        '알고리즘': 'algorithm',
-        '머신러닝': 'machine learning',
-        '딥러닝': 'deep learning',
-        '인공지능': 'AI',
-        '백엔드': 'backend',
-        '프론트엔드': 'frontend',
-        '웹개발': 'web development',
-        '모바일': 'mobile',
-        '서버': 'server',
-        '클라우드': 'cloud',
-        '도커': 'docker',
-        '쿠버네티스': 'kubernetes',
+        "파이썬": "Python",
+        "자바": "Java",
+        "개발자": "developer",
+        "프로그래밍": "programming",
+        "아이폰": "iPhone",
+        "안드로이드": "Android",
+        "데이터베이스": "database",
+        "알고리즘": "algorithm",
+        "머신러닝": "machine learning",
+        "딥러닝": "deep learning",
+        "인공지능": "AI",
+        "백엔드": "backend",
+        "프론트엔드": "frontend",
+        "웹개발": "web development",
+        "모바일": "mobile",
+        "서버": "server",
+        "클라우드": "cloud",
+        "도커": "docker",
+        "쿠버네티스": "kubernetes",
     }
 
     pairs = []
@@ -99,13 +99,15 @@ def find_korean_english_pairs(tags_counter):
             english_count = sum(tags_counter[e] for e in english_variants)
 
             if korean_count > 0 or english_count > 0:
-                pairs.append({
-                    'korean': korean_variants,
-                    'english': english_variants,
-                    'korean_count': korean_count,
-                    'english_count': english_count,
-                    'canonical': english
-                })
+                pairs.append(
+                    {
+                        "korean": korean_variants,
+                        "english": english_variants,
+                        "korean_count": korean_count,
+                        "english_count": english_count,
+                        "canonical": english,
+                    }
+                )
 
     return pairs
 
@@ -118,7 +120,7 @@ def find_similar_tags(tags_counter):
     # Group by normalized form
     for tag in tags_counter.keys():
         # Normalize: lowercase, remove spaces/hyphens/underscores
-        normalized = tag.lower().replace(' ', '').replace('-', '').replace('_', '')
+        normalized = tag.lower().replace(" ", "").replace("-", "").replace("_", "")
         similar_groups[normalized].append(tag)
 
     # Filter to only show groups with multiple tags
@@ -139,19 +141,19 @@ def main():
     print("-" * 80)
 
     pairs = find_korean_english_pairs(tags_counter)
-    for pair in sorted(pairs, key=lambda x: -(x['korean_count'] + x['english_count'])):
-        if pair['korean_count'] > 0 or pair['english_count'] > 0:
-            total = pair['korean_count'] + pair['english_count']
+    for pair in sorted(pairs, key=lambda x: -(x["korean_count"] + x["english_count"])):
+        if pair["korean_count"] > 0 or pair["english_count"] > 0:
+            total = pair["korean_count"] + pair["english_count"]
             print(f"\n  Canonical: #{pair['canonical']} (Total: {total} posts)")
 
-            if pair['korean']:
+            if pair["korean"]:
                 print(f"  Korean variants ({pair['korean_count']} posts):")
-                for tag in pair['korean']:
+                for tag in pair["korean"]:
                     print(f"    #{tag:<30} {tags_counter[tag]:>4} posts")
 
-            if pair['english']:
+            if pair["english"]:
                 print(f"  English variants ({pair['english_count']} posts):")
-                for tag in pair['english']:
+                for tag in pair["english"]:
                     print(f"    #{tag:<30} {tags_counter[tag]:>4} posts")
 
     print("\n")
@@ -161,8 +163,9 @@ def main():
     print("-" * 80)
 
     similar = find_similar_tags(tags_counter)
-    for normalized, variants in sorted(similar.items(),
-                                      key=lambda x: -sum(tags_counter[v] for v in x[1]))[:30]:
+    for normalized, variants in sorted(
+        similar.items(), key=lambda x: -sum(tags_counter[v] for v in x[1])
+    )[:30]:
         total = sum(tags_counter[v] for v in variants)
         if total >= 3:  # Only show if total usage >= 3
             print(f"\n  Total: {total} posts")
@@ -174,7 +177,7 @@ def main():
     print("⚠️  Problematic Tags:")
     print("-" * 80)
 
-    empty_tags = [tag for tag in tags_counter.keys() if not tag.strip() or tag == ' ']
+    empty_tags = [tag for tag in tags_counter.keys() if not tag.strip() or tag == " "]
     if empty_tags:
         print(f"\n  Empty/whitespace tags: {len(empty_tags)}")
         for tag in empty_tags:
@@ -187,5 +190,5 @@ def main():
             print(f"    #{tag:<10} {tags_counter[tag]:>4} posts")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

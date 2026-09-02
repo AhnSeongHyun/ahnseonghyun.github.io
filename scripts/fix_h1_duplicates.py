@@ -23,7 +23,7 @@ class H1DuplicateFixer:
         Returns:
             (frontmatter, body) tuple
         """
-        pattern = r'^---\s*\n(.*?)\n---\s*\n(.*)$'
+        pattern = r"^---\s*\n(.*?)\n---\s*\n(.*)$"
         match = re.match(pattern, content, re.DOTALL)
 
         if match:
@@ -36,7 +36,7 @@ class H1DuplicateFixer:
     def count_h1_headings(self, text: str) -> int:
         """Count H1 headings in markdown text"""
         # Match lines that start with exactly one # followed by a space
-        pattern = r'^# [^\n]+'
+        pattern = r"^# [^\n]+"
         matches = re.findall(pattern, text, re.MULTILINE)
         return len(matches)
 
@@ -47,14 +47,14 @@ class H1DuplicateFixer:
         Returns:
             (fixed_body, number_of_fixes)
         """
-        lines = body.split('\n')
+        lines = body.split("\n")
         fixed_lines = []
         h1_count = 0
         fixes = 0
 
         for line in lines:
             # Check if line is an H1 heading (starts with # but not ##)
-            if re.match(r'^# [^\n]+', line):
+            if re.match(r"^# [^\n]+", line):
                 h1_count += 1
 
                 if h1_count == 1:
@@ -62,12 +62,12 @@ class H1DuplicateFixer:
                     fixed_lines.append(line)
                 else:
                     # Convert to H2
-                    fixed_lines.append('#' + line)
+                    fixed_lines.append("#" + line)
                     fixes += 1
             else:
                 fixed_lines.append(line)
 
-        return '\n'.join(fixed_lines), fixes
+        return "\n".join(fixed_lines), fixes
 
     def backup_file(self, filepath: Path) -> Path:
         """Create backup file"""
@@ -93,7 +93,7 @@ class H1DuplicateFixer:
             True if changes were made, False otherwise
         """
         try:
-            with open(filepath, 'r', encoding='utf-8') as f:
+            with open(filepath, "r", encoding="utf-8") as f:
                 content = f.read()
 
             frontmatter_section, body = self.parse_frontmatter(content)
@@ -126,7 +126,7 @@ class H1DuplicateFixer:
                 new_content = fixed_body
 
             # Save fixed version
-            with open(filepath, 'w', encoding='utf-8') as f:
+            with open(filepath, "w", encoding="utf-8") as f:
                 f.write(new_content)
 
             print("  ✅ 저장 완료")
@@ -136,8 +136,9 @@ class H1DuplicateFixer:
             print(f"  ❌ 오류: {str(e)}")
             return False
 
-    def fix_directory(self, directory: Path, year_filter: int = 2020,
-                     max_files: Optional[int] = None):
+    def fix_directory(
+        self, directory: Path, year_filter: int = 2020, max_files: Optional[int] = None
+    ):
         """
         Fix H1 duplicates in all markdown files in directory
 
@@ -146,16 +147,16 @@ class H1DuplicateFixer:
             year_filter: Only process files from this year onwards
             max_files: Maximum number of files to process
         """
-        md_files = list(directory.glob('**/*.md'))
+        md_files = list(directory.glob("**/*.md"))
 
         # Exclude _bak.md files
-        md_files = [f for f in md_files if not f.stem.endswith('_bak')]
+        md_files = [f for f in md_files if not f.stem.endswith("_bak")]
 
         # Filter by H1 count
         files_to_fix = []
         for filepath in md_files:
             try:
-                with open(filepath, 'r', encoding='utf-8') as f:
+                with open(filepath, "r", encoding="utf-8") as f:
                     content = f.read()
                 _, body = self.parse_frontmatter(content)
                 h1_count = self.count_h1_headings(body)
@@ -168,16 +169,16 @@ class H1DuplicateFixer:
         # Sort by H1 count (descending)
         files_to_fix.sort(key=lambda x: x[1], reverse=True)
 
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print("H1 중복 제거")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         print(f"대상 디렉토리: {directory}")
         print(f"H1 중복 파일: {len(files_to_fix)}개")
         if max_files:
             print(f"최대 처리 파일: {max_files}개")
         if self.dry_run:
             print("⚠️  DRY RUN 모드 (실제 저장 안함)")
-        print(f"{'='*60}\n")
+        print(f"{'=' * 60}\n")
 
         if files_to_fix:
             print("파일 목록:")
@@ -206,38 +207,36 @@ class H1DuplicateFixer:
                 failed += 1
 
         # Summary
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print("수정 완료")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         print(f"✅ 수정 완료: {fixed}개")
         print(f"⏭️  건너뛴 파일: {skipped}개")
         if failed > 0:
             print(f"❌ 실패: {failed}개")
-        print(f"{'='*60}\n")
+        print(f"{'=' * 60}\n")
 
 
 def main():
     import argparse
 
-    parser = argparse.ArgumentParser(description='H1 중복 제거')
-    parser.add_argument('--year', type=int, default=2020,
-                       help='이 년도 이후 파일만 처리 (기본: 2020)')
-    parser.add_argument('--max-files', type=int, default=None,
-                       help='최대 처리 파일 수')
-    parser.add_argument('--dry-run', action='store_true',
-                       help='실제 변환하지 않고 테스트만')
-    parser.add_argument('--directory', type=str, default='contents',
-                       help='대상 디렉토리 (기본: contents)')
+    parser = argparse.ArgumentParser(description="H1 중복 제거")
+    parser.add_argument(
+        "--year", type=int, default=2020, help="이 년도 이후 파일만 처리 (기본: 2020)"
+    )
+    parser.add_argument("--max-files", type=int, default=None, help="최대 처리 파일 수")
+    parser.add_argument("--dry-run", action="store_true", help="실제 변환하지 않고 테스트만")
+    parser.add_argument(
+        "--directory", type=str, default="contents", help="대상 디렉토리 (기본: contents)"
+    )
 
     args = parser.parse_args()
 
     fixer = H1DuplicateFixer(dry_run=args.dry_run)
     fixer.fix_directory(
-        directory=Path(args.directory),
-        year_filter=args.year,
-        max_files=args.max_files
+        directory=Path(args.directory), year_filter=args.year, max_files=args.max_files
     )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -18,12 +18,12 @@ Sitemap: https://ash84.io/sitemap.xml
 Crawl-delay: 1
 """
 
-    with open('docs/robots.txt', 'w') as f:
+    with open("docs/robots.txt", "w") as f:
         f.write(content)
 
     print("✅ robots.txt generated successfully!")
     print("📍 Location: docs/robots.txt")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     generate_robots()

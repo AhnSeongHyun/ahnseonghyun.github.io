@@ -41,7 +41,7 @@ class HTMLToMarkdownConverter:
             (frontmatter, body) tuple
         """
         # frontmatter 패턴: ---로 시작하고 ---로 끝남
-        pattern = r'^---\s*\n(.*?)\n---\s*\n(.*)$'
+        pattern = r"^---\s*\n(.*?)\n---\s*\n(.*)$"
         match = re.match(pattern, content, re.DOTALL)
 
         if match:
@@ -53,14 +53,14 @@ class HTMLToMarkdownConverter:
 
     def count_html_tags(self, text: str) -> int:
         """HTML 태그 개수 세기"""
-        return len(re.findall(r'<[^>]+>', text))
+        return len(re.findall(r"<[^>]+>", text))
 
     def convert_to_markdown(self, html_content: str) -> str:
         """HTML을 마크다운으로 변환"""
         markdown = self.h2t.handle(html_content)
 
         # 후처리: 불필요한 공백 정리
-        markdown = re.sub(r'\n{3,}', '\n\n', markdown)  # 3개 이상 줄바꿈 -> 2개
+        markdown = re.sub(r"\n{3,}", "\n\n", markdown)  # 3개 이상 줄바꿈 -> 2개
         markdown = markdown.strip()
 
         return markdown
@@ -97,14 +97,16 @@ class HTMLToMarkdownConverter:
         """
         try:
             # 파일 읽기
-            with open(filepath, 'r', encoding='utf-8') as f:
+            with open(filepath, "r", encoding="utf-8") as f:
                 content = f.read()
 
             # HTML 태그 개수 확인
             html_tag_count = self.count_html_tags(content)
 
             if html_tag_count < min_html_tags:
-                print(f"⏭️  건너뛰기: {filepath.name} (HTML 태그 {html_tag_count}개 < {min_html_tags})")
+                print(
+                    f"⏭️  건너뛰기: {filepath.name} (HTML 태그 {html_tag_count}개 < {min_html_tags})"
+                )
                 return False
 
             print(f"\n📄 변환 중: {filepath.name}")
@@ -136,7 +138,7 @@ class HTMLToMarkdownConverter:
             self.backup_file(filepath)
 
             # 변환된 내용 저장
-            with open(filepath, 'w', encoding='utf-8') as f:
+            with open(filepath, "w", encoding="utf-8") as f:
                 f.write(new_content)
 
             print("  ✅ 변환 완료")
@@ -148,8 +150,9 @@ class HTMLToMarkdownConverter:
             print(f"  ❌ 오류: {str(e)}")
             return False
 
-    def convert_directory(self, directory: Path, min_html_tags: int = 100,
-                         max_files: Optional[int] = None):
+    def convert_directory(
+        self, directory: Path, min_html_tags: int = 100, max_files: Optional[int] = None
+    ):
         """
         디렉토리 내 모든 마크다운 파일 변환
 
@@ -158,14 +161,14 @@ class HTMLToMarkdownConverter:
             min_html_tags: 최소 HTML 태그 개수
             max_files: 최대 변환 파일 수 (None이면 전체)
         """
-        md_files = list(directory.glob('**/*.md'))
+        md_files = list(directory.glob("**/*.md"))
 
         # _bak.md 파일 제외
-        md_files = [f for f in md_files if not f.stem.endswith('_bak')]
+        md_files = [f for f in md_files if not f.stem.endswith("_bak")]
 
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print("HTML → 마크다운 변환")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         print(f"대상 디렉토리: {directory}")
         print(f"마크다운 파일: {len(md_files)}개")
         print(f"최소 HTML 태그: {min_html_tags}개")
@@ -173,7 +176,7 @@ class HTMLToMarkdownConverter:
             print(f"최대 변환 파일: {max_files}개")
         if self.dry_run:
             print("⚠️  DRY RUN 모드 (실제 저장 안함)")
-        print(f"{'='*60}\n")
+        print(f"{'=' * 60}\n")
 
         converted = 0
         skipped = 0
@@ -194,38 +197,34 @@ class HTMLToMarkdownConverter:
                 failed += 1
 
         # 결과 요약
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print("변환 완료")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         print(f"✅ 변환 성공: {converted}개")
         print(f"⏭️  건너뛴 파일: {skipped}개")
         if failed > 0:
             print(f"❌ 실패: {failed}개")
-        print(f"{'='*60}\n")
+        print(f"{'=' * 60}\n")
 
 
 def main():
     import argparse
 
-    parser = argparse.ArgumentParser(description='HTML을 마크다운으로 변환')
-    parser.add_argument('--min-tags', type=int, default=100,
-                       help='최소 HTML 태그 개수 (기본: 100)')
-    parser.add_argument('--max-files', type=int, default=None,
-                       help='최대 변환 파일 수')
-    parser.add_argument('--dry-run', action='store_true',
-                       help='실제 변환하지 않고 테스트만')
-    parser.add_argument('--directory', type=str, default='contents',
-                       help='대상 디렉토리 (기본: contents)')
+    parser = argparse.ArgumentParser(description="HTML을 마크다운으로 변환")
+    parser.add_argument("--min-tags", type=int, default=100, help="최소 HTML 태그 개수 (기본: 100)")
+    parser.add_argument("--max-files", type=int, default=None, help="최대 변환 파일 수")
+    parser.add_argument("--dry-run", action="store_true", help="실제 변환하지 않고 테스트만")
+    parser.add_argument(
+        "--directory", type=str, default="contents", help="대상 디렉토리 (기본: contents)"
+    )
 
     args = parser.parse_args()
 
     converter = HTMLToMarkdownConverter(dry_run=args.dry_run)
     converter.convert_directory(
-        directory=Path(args.directory),
-        min_html_tags=args.min_tags,
-        max_files=args.max_files
+        directory=Path(args.directory), min_html_tags=args.min_tags, max_files=args.max_files
     )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

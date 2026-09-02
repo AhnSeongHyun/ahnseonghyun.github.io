@@ -12,7 +12,7 @@ from collections import defaultdict, Counter
 
 def extract_frontmatter(content):
     """Extract frontmatter from markdown content."""
-    pattern = r'^---\s*\n(.*?)\n---\s*\n'
+    pattern = r"^---\s*\n(.*?)\n---\s*\n"
     match = re.match(pattern, content, re.DOTALL)
     if match:
         return match.group(1)
@@ -22,17 +22,17 @@ def extract_frontmatter(content):
 def parse_frontmatter(frontmatter_text):
     """Parse frontmatter text into a dictionary."""
     data = {}
-    for line in frontmatter_text.split('\n'):
-        if ':' in line:
-            key, value = line.split(':', 1)
+    for line in frontmatter_text.split("\n"):
+        if ":" in line:
+            key, value = line.split(":", 1)
             key = key.strip()
             value = value.strip()
 
             # Handle lists (tags)
-            if value.startswith('[') and value.endswith(']'):
+            if value.startswith("[") and value.endswith("]"):
                 # Remove brackets and quotes, split by comma
                 value = value[1:-1]  # Remove [ ]
-                items = [item.strip().strip("'\"") for item in value.split(',')]
+                items = [item.strip().strip("'\"") for item in value.split(",")]
                 data[key] = items
             else:
                 # Remove quotes
@@ -44,19 +44,19 @@ def parse_frontmatter(frontmatter_text):
 def collect_all_tags():
     """Collect all tags with their usage count."""
     tags_counter = Counter()
-    contents_path = Path('contents')
+    contents_path = Path("contents")
 
     # Find all markdown files
-    for md_file in contents_path.rglob('*.md'):
+    for md_file in contents_path.rglob("*.md"):
         try:
-            content = md_file.read_text(encoding='utf-8')
+            content = md_file.read_text(encoding="utf-8")
             frontmatter_text = extract_frontmatter(content)
 
             if not frontmatter_text:
                 continue
 
             metadata = parse_frontmatter(frontmatter_text)
-            tags = metadata.get('tags', [])
+            tags = metadata.get("tags", [])
 
             for tag in tags:
                 if tag:  # Skip empty tags
@@ -72,35 +72,78 @@ def categorize_tags(tags_counter):
     """Categorize tags into different groups."""
 
     categories = {
-        'programming_languages': [],
-        'frameworks_libraries': [],
-        'tools_platforms': [],
-        'korean_duplicates': [],
-        'english_duplicates': [],
-        'single_use': [],
-        'popular': [],
-        'case_variants': defaultdict(list),
-        'spacing_variants': defaultdict(list),
+        "programming_languages": [],
+        "frameworks_libraries": [],
+        "tools_platforms": [],
+        "korean_duplicates": [],
+        "english_duplicates": [],
+        "single_use": [],
+        "popular": [],
+        "case_variants": defaultdict(list),
+        "spacing_variants": defaultdict(list),
     }
 
     # Programming languages
     prog_langs = {
-        'python', 'java', 'javascript', 'c#', 'c++', 'go', 'rust', 'ruby', 'php',
-        'swift', 'kotlin', 'typescript', 'scala', 'r', 'matlab', 'objective-c',
-        'objective c', 'c', 'js', 'ts'
+        "python",
+        "java",
+        "javascript",
+        "c#",
+        "c++",
+        "go",
+        "rust",
+        "ruby",
+        "php",
+        "swift",
+        "kotlin",
+        "typescript",
+        "scala",
+        "r",
+        "matlab",
+        "objective-c",
+        "objective c",
+        "c",
+        "js",
+        "ts",
     }
 
     # Common frameworks/libraries
     frameworks = {
-        'react', 'vue', 'angular', 'django', 'flask', 'spring', 'express',
-        'nextjs', 'nuxt', 'fastapi', 'rails', 'laravel', 'vert.x', 'jquery'
+        "react",
+        "vue",
+        "angular",
+        "django",
+        "flask",
+        "spring",
+        "express",
+        "nextjs",
+        "nuxt",
+        "fastapi",
+        "rails",
+        "laravel",
+        "vert.x",
+        "jquery",
     }
 
     # Tools and platforms
     tools = {
-        'git', 'github', 'docker', 'kubernetes', 'aws', 'azure', 'gcp',
-        'vscode', 'xcode', 'intellij', 'postman', 'nginx', 'redis', 'mongodb',
-        'postgresql', 'mysql', 'elasticsearch'
+        "git",
+        "github",
+        "docker",
+        "kubernetes",
+        "aws",
+        "azure",
+        "gcp",
+        "vscode",
+        "xcode",
+        "intellij",
+        "postman",
+        "nginx",
+        "redis",
+        "mongodb",
+        "postgresql",
+        "mysql",
+        "elasticsearch",
     }
 
     for tag, count in tags_counter.items():
@@ -108,30 +151,34 @@ def categorize_tags(tags_counter):
 
         # Categorize by type
         if tag_lower in prog_langs:
-            categories['programming_languages'].append((tag, count))
+            categories["programming_languages"].append((tag, count))
         elif tag_lower in frameworks:
-            categories['frameworks_libraries'].append((tag, count))
+            categories["frameworks_libraries"].append((tag, count))
         elif tag_lower in tools:
-            categories['tools_platforms'].append((tag, count))
+            categories["tools_platforms"].append((tag, count))
 
         # Single use tags
         if count == 1:
-            categories['single_use'].append((tag, count))
+            categories["single_use"].append((tag, count))
 
         # Popular tags (>= 10 posts)
         if count >= 10:
-            categories['popular'].append((tag, count))
+            categories["popular"].append((tag, count))
 
         # Case variants (same tag, different case)
-        categories['case_variants'][tag_lower].append((tag, count))
+        categories["case_variants"][tag_lower].append((tag, count))
 
         # Spacing variants
-        normalized = tag_lower.replace(' ', '').replace('-', '').replace('_', '')
-        categories['spacing_variants'][normalized].append((tag, count))
+        normalized = tag_lower.replace(" ", "").replace("-", "").replace("_", "")
+        categories["spacing_variants"][normalized].append((tag, count))
 
     # Filter to only show actual duplicates
-    categories['case_variants'] = {k: v for k, v in categories['case_variants'].items() if len(v) > 1}
-    categories['spacing_variants'] = {k: v for k, v in categories['spacing_variants'].items() if len(v) > 1}
+    categories["case_variants"] = {
+        k: v for k, v in categories["case_variants"].items() if len(v) > 1
+    }
+    categories["spacing_variants"] = {
+        k: v for k, v in categories["spacing_variants"].items() if len(v) > 1
+    }
 
     return categories
 
@@ -143,12 +190,12 @@ def suggest_consolidations(tags_counter):
 
     # Language variations
     lang_groups = {
-        'Python': ['python', 'Python', 'PYTHON', 'python3', 'python2'],
-        'JavaScript': ['javascript', 'JavaScript', 'JS', 'js', 'Java Script'],
-        'iOS': ['ios', 'IOS', 'iOS', 'i os', 'i OS'],
-        'Android': ['android', 'Android', 'ANDROID'],
-        'C#': ['c#', 'C#', 'csharp', 'CSharp'],
-        'C++': ['c++', 'C++', 'cpp', 'CPP'],
+        "Python": ["python", "Python", "PYTHON", "python3", "python2"],
+        "JavaScript": ["javascript", "JavaScript", "JS", "js", "Java Script"],
+        "iOS": ["ios", "IOS", "iOS", "i os", "i OS"],
+        "Android": ["android", "Android", "ANDROID"],
+        "C#": ["c#", "C#", "csharp", "CSharp"],
+        "C++": ["c++", "C++", "cpp", "CPP"],
     }
 
     for canonical, variants in lang_groups.items():
@@ -160,19 +207,21 @@ def suggest_consolidations(tags_counter):
                 total_count += tags_counter[variant]
 
         if len(found_variants) > 1:
-            suggestions.append({
-                'type': 'language_consolidation',
-                'canonical': canonical,
-                'variants': found_variants,
-                'total_posts': total_count
-            })
+            suggestions.append(
+                {
+                    "type": "language_consolidation",
+                    "canonical": canonical,
+                    "variants": found_variants,
+                    "total_posts": total_count,
+                }
+            )
 
     # Common tech term duplicates
     tech_groups = {
-        'API': ['api', 'API', 'Api'],
-        'REST': ['rest', 'REST', 'Rest'],
-        'ML': ['ml', 'ML', 'machine learning', 'Machine Learning'],
-        'AI': ['ai', 'AI', 'artificial intelligence'],
+        "API": ["api", "API", "Api"],
+        "REST": ["rest", "REST", "Rest"],
+        "ML": ["ml", "ML", "machine learning", "Machine Learning"],
+        "AI": ["ai", "AI", "artificial intelligence"],
     }
 
     for canonical, variants in tech_groups.items():
@@ -184,12 +233,14 @@ def suggest_consolidations(tags_counter):
                 total_count += tags_counter[variant]
 
         if len(found_variants) > 1:
-            suggestions.append({
-                'type': 'tech_term_consolidation',
-                'canonical': canonical,
-                'variants': found_variants,
-                'total_posts': total_count
-            })
+            suggestions.append(
+                {
+                    "type": "tech_term_consolidation",
+                    "canonical": canonical,
+                    "variants": found_variants,
+                    "total_posts": total_count,
+                }
+            )
 
     return suggestions
 
@@ -218,17 +269,17 @@ def main():
     categories = categorize_tags(tags_counter)
 
     print(f"💻 Programming Languages: {len(categories['programming_languages'])}")
-    for tag, count in sorted(categories['programming_languages'], key=lambda x: -x[1])[:10]:
+    for tag, count in sorted(categories["programming_languages"], key=lambda x: -x[1])[:10]:
         print(f"  #{tag:<20} {count:>4} posts")
     print()
 
     print(f"🔧 Frameworks/Libraries: {len(categories['frameworks_libraries'])}")
-    for tag, count in sorted(categories['frameworks_libraries'], key=lambda x: -x[1])[:10]:
+    for tag, count in sorted(categories["frameworks_libraries"], key=lambda x: -x[1])[:10]:
         print(f"  #{tag:<20} {count:>4} posts")
     print()
 
     print(f"🛠️  Tools/Platforms: {len(categories['tools_platforms'])}")
-    for tag, count in sorted(categories['tools_platforms'], key=lambda x: -x[1])[:10]:
+    for tag, count in sorted(categories["tools_platforms"], key=lambda x: -x[1])[:10]:
         print(f"  #{tag:<20} {count:>4} posts")
     print()
 
@@ -236,11 +287,12 @@ def main():
     print()
 
     # Case variants
-    if categories['case_variants']:
+    if categories["case_variants"]:
         print(f"🔤 Case Variants (same tag, different case): {len(categories['case_variants'])}")
         print("-" * 60)
-        for normalized, variants in sorted(categories['case_variants'].items(),
-                                          key=lambda x: -sum(v[1] for v in x[1]))[:20]:
+        for normalized, variants in sorted(
+            categories["case_variants"].items(), key=lambda x: -sum(v[1] for v in x[1])
+        )[:20]:
             total = sum(v[1] for v in variants)
             print(f"  '{normalized}' -> {total} total posts")
             for tag, count in sorted(variants, key=lambda x: -x[1]):
@@ -257,7 +309,7 @@ def main():
             print(f"\n  Consolidate to: #{suggestion['canonical']}")
             print(f"  Total posts: {suggestion['total_posts']}")
             print("  Variants to merge:")
-            for variant, count in suggestion['variants']:
+            for variant, count in suggestion["variants"]:
                 print(f"    #{variant:<30} {count:>4} posts")
         print()
 
@@ -280,5 +332,5 @@ def main():
     print()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
