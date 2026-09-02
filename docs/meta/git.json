@@ -1,7 +1,12 @@
 {
-  "generated_at": "2026-09-02T20:05:00+00:00",
-  "total_commits": 102,
+  "generated_at": "2026-09-02T20:10:07+00:00",
+  "total_commits": 104,
   "changelog": [
+    {
+      "hash": "41c7be520",
+      "date": "2026-09-03",
+      "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+    },
     {
       "hash": "5e4899ea2",
       "date": "2026-09-03",
@@ -11,14 +16,687 @@
       "hash": "bbb4a2e50",
       "date": "2026-08-08",
       "message": "📝 docs: 오디세이 포스트 제목 수정 및 영어 태그 추가"
-    },
-    {
-      "hash": "a77f726f0",
-      "date": "2026-08-08",
-      "message": "💄 ui: 오디세이 포스트 featured 이미지 원본 화질로 교체"
     }
   ],
   "posts": {
+    "-ea-b0-80-eb-81-94--ea-b7-b8-eb-9f-b0--ea-bf-88-ec-9d-84--ea-be-bc-ec-a0-81-ec-9d-b4--ec-9e-88-eb-8b-a4": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-ea-b8-b8-ec-9d-b4--ec-95-84-eb-8b-88-eb-a9-b4--ea-b0-80-ec-a7-88--eb-a7-90-eb-9d-bc-ea-b3-a0--ed-96-88-eb-8b-a4": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-eb-82-98-ec-9d-98--eb-98-90--eb-8b-a4-eb-a5-b8--ec-a1-b0-ea-b0-81-eb-93-a4": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-eb-84-a4-ed-8a-b8-ec-9b-8c-ed-81-ac--ea-b8-b0-eb-b0-98--ec-a7-80-eb-8a-a5-ed-98-95--eb-a1-9c-eb-b4-87--ec-8b-9c-ec-8a-a4-ed-85-9c--ec-84-a4-ea-b3-84-": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-eb-8b-a4-ec-8b-9c--ec-8b-9c-ec-9e-91-ed-95-98-ea-b8-b0": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-eb-8b-b5-eb-8b-b5-ed-95-9c--eb-a7-88-ec-9d-8c-ec-97-90--ea-b8-80-ec-9d-84--ec-93-b0-eb-8b-a4": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-eb-af-b9-ec-8b-9c": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-eb-b8-94-eb-a1-9c-ea-b7-b8-ea-b0-80--eb-84-88-eb-ac-b4--ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-98-eb-b0-8d--ec-9c-84-ec-a3-bc-eb-9d-bc": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-ec-82-ac-eb-8a-94-ea-b2-8c--ed-9e-98-eb-93-9c-eb-84-a4": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-ec-95-8c-ec-a7-80--eb-aa-bb-ed-95-a0--ec-9d-b4-ec-95-bc-ea-b8-b0": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-ec-98-81-ed-99-94-eb-82-98--ec-9d-8c-ec-95-85--ec-8b-9c--ec-86-8c-ec-84-a4-ec-9d-b4--ec-a1-b4-ec-9e-ac-ed-95-98-eb-8a-94--ec-9d-b4-ec-9c-a0": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-ec-9d-b8-ec-83-9d-ec-9d-b4-eb-9d-bc-eb-8a-94--ec-97-ac-ec-a0-95": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-ec-a1-b8-eb-a6-ac-eb-8b-a4--ec-a1-b8-eb-a0-a4": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-ec-b5-9c-ea-b7-bc--ea-b7-bc-ed-99-a9": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-ed-95-9c-eb-b0-a4-ec-9d-98--ec-a3-bc-ec-a0-80-eb-a6-ac": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-ed-95-9c-ec-9a-b0-ec-b0-be-ea-b8-b0--ed-85-8c-ec-8a-a4-ed-8a-b8--ed-8e-98-ec-9d-b4-ec-a7-80hanwoo-test-page": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "-ed-9c-b4-ea-b0-80-eb-95-8c-ceo--eb-a7-8c--ec-b1-85-ec-9d-bd-eb-83-90": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "1": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "201112--ea-b7-bc-ed-99-a9": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "20121009": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "25-ec-97-b0-eb-8c-80-436-ea-b8-b0--ec-a0-84-eb-ac-b8-ec-97-b0-ea-b5-ac-ec-9a-94-ec-9b-90--ea-b8-b0-ec-b4-88-ea-b5-b0-ec-82-ac-ed-9b-88-eb-a0-a8--ed-9b": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "83e995cd0",
+        "date": "2026-01-17",
+        "message": "refactor: move backup files to dedicated backup directory"
+      },
+      {
+        "hash": "59ee38daa",
+        "date": "2026-01-17",
+        "message": "feat: improve blog content quality and SEO"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "27-ec-9d-bc-ec-9d-98--eb-81-84-ec-a0-81-eb-81-84-ec-a0-81": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "before-sunset": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "c-openapi-remove-b-tag": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "5e4899ea2",
+        "date": "2026-09-03",
+        "message": "♻️ refactor: 프론트매터 태그 정규화 (114편)"
+      },
+      {
+        "hash": "053f8ec0f",
+        "date": "2026-01-17",
+        "message": "feat: consolidate tags for better SEO"
+      },
+      {
+        "hash": "a47c5498c",
+        "date": "2025-07-10",
+        "message": "feat: apply"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "clientpda-server-ea-b8-b0-eb-b0-98-ec-9d-98--ec-96-bc-ea-b5-b4-ec-9d-b8-ec-8b-9d--ec-8b-9c-ec-8a-a4-ed-85-9c--ea-b0-9c-eb-b0-9c": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "css-hr--ed-83-9c-ea-b7-b8--ec-a0-90-ec-84-a0--ec-8a-a4-ed-83-80-ec-9d-bc": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "5e4899ea2",
+        "date": "2026-09-03",
+        "message": "♻️ refactor: 프론트매터 태그 정규화 (114편)"
+      },
+      {
+        "hash": "a47c5498c",
+        "date": "2025-07-10",
+        "message": "feat: apply"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "dominonotes--ec-98-a4-eb-a5-98-ec-bd-94-eb-93-9c--eb-b3-b4-eb-8a-94--ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-a8": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "getty-center": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "github--eb-a1-9c-ea-b3-a0-ec-97-90--eb-a7-88-ec-9a-b0-ec-8a-a4--ec-9a-b0-ed-81-b4-eb-a6-ad-ec-9d-84--ed-95-98-eb-a9-b4": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "las-vegas": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "now-working": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "perfect-thinking-framework": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "83e995cd0",
+        "date": "2026-01-17",
+        "message": "refactor: move backup files to dedicated backup directory"
+      },
+      {
+        "hash": "59ee38daa",
+        "date": "2026-01-17",
+        "message": "feat: improve blog content quality and SEO"
+      },
+      {
+        "hash": "2cb405602",
+        "date": "2026-01-07",
+        "message": "feat: add 2026-0107"
+      }
+    ],
+    "shopgithubcom": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "sinapi-korea-ceestation-beta": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "white-wine": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "wood": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "xfile": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "xfile-6": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
+    "you": [
+      {
+        "hash": "41c7be520",
+        "date": "2026-09-03",
+        "message": "🐛 fix: 태그명 HTML 이스케이프, 빈 태그 제거, history 라벨 줄바꿈"
+      },
+      {
+        "hash": "22b373ac4",
+        "date": "2025-07-07",
+        "message": "feat: og"
+      },
+      {
+        "hash": "5fbb32480",
+        "date": "2025-07-06",
+        "message": "feat: build"
+      }
+    ],
     "-ea-b7-b8-ea-b2-8c--ea-b7-b8-eb-a0-87-ea-b2-8c--ec-a4-91-ec-9a-94-ed-95-9c-ea-b1-b4-ec-a7-80": [
       {
         "hash": "5e4899ea2",
@@ -693,33 +1371,6 @@
         "message": "feat: build"
       }
     ],
-    "c-openapi-remove-b-tag": [
-      {
-        "hash": "5e4899ea2",
-        "date": "2026-09-03",
-        "message": "♻️ refactor: 프론트매터 태그 정규화 (114편)"
-      },
-      {
-        "hash": "053f8ec0f",
-        "date": "2026-01-17",
-        "message": "feat: consolidate tags for better SEO"
-      },
-      {
-        "hash": "a47c5498c",
-        "date": "2025-07-10",
-        "message": "feat: apply"
-      },
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "celery-install-ubuntu-centos-6-5": [
       {
         "hash": "5e4899ea2",
@@ -862,28 +1513,6 @@
         "hash": "e0ddd184f",
         "date": "2026-01-17",
         "message": "feat: add SEO-friendly English tags to 2020 and earlier posts"
-      },
-      {
-        "hash": "a47c5498c",
-        "date": "2025-07-10",
-        "message": "feat: apply"
-      },
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "css-hr--ed-83-9c-ea-b7-b8--ec-a0-90-ec-84-a0--ec-8a-a4-ed-83-80-ec-9d-bc": [
-      {
-        "hash": "5e4899ea2",
-        "date": "2026-09-03",
-        "message": "♻️ refactor: 프론트매터 태그 정규화 (114편)"
       },
       {
         "hash": "a47c5498c",
@@ -13574,28 +14203,6 @@
         "message": "feat: build"
       }
     ],
-    "25-ec-97-b0-eb-8c-80-436-ea-b8-b0--ec-a0-84-eb-ac-b8-ec-97-b0-ea-b5-ac-ec-9a-94-ec-9b-90--ea-b8-b0-ec-b4-88-ea-b5-b0-ec-82-ac-ed-9b-88-eb-a0-a8--ed-9b": [
-      {
-        "hash": "83e995cd0",
-        "date": "2026-01-17",
-        "message": "refactor: move backup files to dedicated backup directory"
-      },
-      {
-        "hash": "59ee38daa",
-        "date": "2026-01-17",
-        "message": "feat: improve blog content quality and SEO"
-      },
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "centos-apache24--ec-84-a4-ec-b9-98": [
       {
         "hash": "83e995cd0",
@@ -13697,23 +14304,6 @@
         "hash": "5fbb32480",
         "date": "2025-07-06",
         "message": "feat: build"
-      }
-    ],
-    "perfect-thinking-framework": [
-      {
-        "hash": "83e995cd0",
-        "date": "2026-01-17",
-        "message": "refactor: move backup files to dedicated backup directory"
-      },
-      {
-        "hash": "59ee38daa",
-        "date": "2026-01-17",
-        "message": "feat: improve blog content quality and SEO"
-      },
-      {
-        "hash": "2cb405602",
-        "date": "2026-01-07",
-        "message": "feat: add 2026-0107"
       }
     ],
     "python-flake8-travis-ci": [
@@ -16193,18 +16783,6 @@
         "message": "feat: build"
       }
     ],
-    "-ea-b0-80-eb-81-94--ea-b7-b8-eb-9f-b0--ea-bf-88-ec-9d-84--ea-be-bc-ec-a0-81-ec-9d-b4--ec-9e-88-eb-8b-a4": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "-ea-b3-b5-ea-b0-84-ec-9d-b4--eb-82-98-eb-a5-bc--ec-84-a4-eb-a0-88-ea-b2-8c--ed-95-9c-eb-8b-a4--ec-84-b1-eb-b6-81-eb-8f-99-take-out-drawing": [
       {
         "hash": "22b373ac4",
@@ -16229,18 +16807,6 @@
         "message": "feat: build"
       }
     ],
-    "-ea-b8-b8-ec-9d-b4--ec-95-84-eb-8b-88-eb-a9-b4--ea-b0-80-ec-a7-88--eb-a7-90-eb-9d-bc-ea-b3-a0--ed-96-88-eb-8b-a4": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "-ea-bf-88-ec-9d-84--ea-b0-80-ec-a0-b8-ec-95-bc": [
       {
         "hash": "22b373ac4",
@@ -16254,18 +16820,6 @@
       }
     ],
     "-eb-81-84-eb-81-84-ec-a0-81-ec-9e-84": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "-eb-82-98-ec-9d-98--eb-98-90--eb-8b-a4-eb-a5-b8--ec-a1-b0-ea-b0-81-eb-93-a4": [
       {
         "hash": "22b373ac4",
         "date": "2025-07-07",
@@ -16302,30 +16856,6 @@
       }
     ],
     "-eb-82-b4-ea-b0-80--ec-82-ac-eb-9e-91-ed-95-98-eb-8a-94--ec-83-b4-ed-8e-98-ec-9d-b8-1--eb-aa-a8-ec-97-a3-ec-83-b9-eb-8f-99--eb-b8-8c-eb-a5-8f--ec-9e-8": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "-eb-8b-a4-ec-8b-9c--ec-8b-9c-ec-9e-91-ed-95-98-ea-b8-b0": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "-eb-8b-b5-eb-8b-b5-ed-95-9c--eb-a7-88-ec-9d-8c-ec-97-90--ea-b8-80-ec-9d-84--ec-93-b0-eb-8b-a4": [
       {
         "hash": "22b373ac4",
         "date": "2025-07-07",
@@ -16517,18 +17047,6 @@
         "message": "feat: build"
       }
     ],
-    "-eb-af-b9-ec-8b-9c": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "-eb-b0-94-eb-82-98-eb-82-98--ec-9a-b0-ec-9c-a0--ec-86-8c-eb-85-80-ec-8b-9c-eb-8c-80--ec-88-98-ec-98-81--ec-82-ac-ec-9d-b8": [
       {
         "hash": "22b373ac4",
@@ -16625,31 +17143,7 @@
         "message": "feat: build"
       }
     ],
-    "-eb-b8-94-eb-a1-9c-ea-b7-b8-ea-b0-80--eb-84-88-eb-ac-b4--ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-98-eb-b0-8d--ec-9c-84-ec-a3-bc-eb-9d-bc": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "-ec-82-ac-ea-b3-a0--ec-8b-b6-ec-9d-80--ec-b0-a8-ea-b0-80--ec-83-9d-ea-b2-bc-eb-8b-a4--eb-8b-a4-ec-9d-b4-ed-95-98-ec-93-b0--ec-bd-94-ed-8e-9c": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "-ec-82-ac-eb-8a-94-ea-b2-8c--ed-9e-98-eb-93-9c-eb-84-a4": [
       {
         "hash": "22b373ac4",
         "date": "2025-07-07",
@@ -16853,31 +17347,7 @@
         "message": "feat: build"
       }
     ],
-    "-ec-95-8c-ec-a7-80--eb-aa-bb-ed-95-a0--ec-9d-b4-ec-95-bc-ea-b8-b0": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "-ec-97-ac-ec-9e-90-ea-b0-80--ed-95-84-ec-9a-94-ed-95-b4": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "-ec-98-81-ed-99-94-eb-82-98--ec-9d-8c-ec-95-85--ec-8b-9c--ec-86-8c-ec-84-a4-ec-9d-b4--ec-a1-b4-ec-9e-ac-ed-95-98-eb-8a-94--ec-9d-b4-ec-9c-a0": [
       {
         "hash": "22b373ac4",
         "date": "2025-07-07",
@@ -16985,18 +17455,6 @@
         "message": "feat: build"
       }
     ],
-    "-ec-9d-b8-ec-83-9d-ec-9d-b4-eb-9d-bc-eb-8a-94--ec-97-ac-ec-a0-95": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "-ec-9e-a0-ec-8b-a4-lg--eb-91-90-ec-82-b0--ea-b2-bd-ea-b8-b0--ec-9d-91-ed-98-b8-ec-99-80--ed-95-a8-eb-8f-99": [
       {
         "hash": "22b373ac4",
@@ -17022,18 +17480,6 @@
       }
     ],
     "-ec-a0-95-eb-b3-b4-eb-8a-94--ec-9a-b0-eb-a6-ac-ec-97-90-ea-b2-8c": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "-ec-a1-b8-eb-a6-ac-eb-8b-a4--ec-a1-b8-eb-a0-a4": [
       {
         "hash": "22b373ac4",
         "date": "2025-07-07",
@@ -17106,18 +17552,6 @@
       }
     ],
     "-ec-b0-bd-eb-b0-96-ec-9d-98--ed-94-84-eb-9e-91-ed-81-ac-ed-91-b8-eb-a5-b4-ed-8a-b8-ec-8b-9c-eb-82-b4": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "-ec-b5-9c-ea-b7-bc--ea-b7-bc-ed-99-a9": [
       {
         "hash": "22b373ac4",
         "date": "2025-07-07",
@@ -17333,31 +17767,7 @@
         "message": "feat: build"
       }
     ],
-    "-ed-95-9c-eb-b0-a4-ec-9d-98--ec-a3-bc-ec-a0-80-eb-a6-ac": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "-ed-95-9c-eb-b0-a4-ec-a4-91-ec-9d-98--ec-a3-bc-ec-a0-80-eb-a6-ac--ec-a3-bc-ec-a0-80-eb-a6-ac": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "-ed-95-9c-ec-9a-b0-ec-b0-be-ea-b8-b0--ed-85-8c-ec-8a-a4-ed-8a-b8--ed-8e-98-ec-9d-b4-ec-a7-80hanwoo-test-page": [
       {
         "hash": "22b373ac4",
         "date": "2025-07-07",
@@ -17561,18 +17971,6 @@
         "message": "feat: build"
       }
     ],
-    "201112--ea-b7-bc-ed-99-a9": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "2012--ec-b2-ab--ec-bd-a9-ea-b8-b0-eb-b6-80--ec-96-bc-eb-a7-88-ec-95-88-eb-90-98-ec-a7-80-eb-a7-8c": [
       {
         "hash": "22b373ac4",
@@ -17597,18 +17995,6 @@
         "message": "feat: build"
       }
     ],
-    "20121009": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "2020_retrospect": [
       {
         "hash": "22b373ac4",
@@ -17622,18 +18008,6 @@
       }
     ],
     "2024-summer-vacation": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "27-ec-9d-bc-ec-9d-98--eb-81-84-ec-a0-81-eb-81-84-ec-a0-81": [
       {
         "hash": "22b373ac4",
         "date": "2025-07-07",
@@ -17717,18 +18091,6 @@
         "message": "feat: build"
       }
     ],
-    "before-sunset": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "book--ea-bc-b4-ec-b0-8c-eb-a5-bc--ec-9d-bc-eb-93-b1-ec-9c-bc-eb-a1-9c--ea-b9-80-ec-84-b1-ea-b7-bc": [
       {
         "hash": "22b373ac4",
@@ -17801,18 +18163,6 @@
         "message": "feat: build"
       }
     ],
-    "dominonotes--ec-98-a4-eb-a5-98-ec-bd-94-eb-93-9c--eb-b3-b4-eb-8a-94--ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-a8": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "drone-io-server": [
       {
         "hash": "22b373ac4",
@@ -17849,31 +18199,7 @@
         "message": "feat: build"
       }
     ],
-    "getty-center": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "git-remote-branch-tags": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "github--eb-a1-9c-ea-b3-a0-ec-97-90--eb-a7-88-ec-9a-b0-ec-8a-a4--ec-9a-b0-ed-81-b4-eb-a6-ad-ec-9d-84--ed-95-98-eb-a9-b4": [
       {
         "hash": "22b373ac4",
         "date": "2025-07-07",
@@ -17981,18 +18307,6 @@
         "message": "feat: build"
       }
     ],
-    "las-vegas": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "letsencrypt-nginx-ssl-setting": [
       {
         "hash": "22b373ac4",
@@ -18066,18 +18380,6 @@
       }
     ],
     "notes-ldap-server-listener-failure-tcpip-port-number-389-is-already-in-use-on-this-system": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "now-working": [
       {
         "hash": "22b373ac4",
         "date": "2025-07-07",
@@ -18281,18 +18583,6 @@
         "message": "feat: build"
       }
     ],
-    "shopgithubcom": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "sk-ec-99-80-ec-9d-b4-eb-b2-88-ec-a6-88-eb-a5-bc--ec-a2-8b-ec-95-84-ed-95-98-eb-8a-94--ec-9d-b4-ec-9c-a0": [
       {
         "hash": "22b373ac4",
@@ -18461,42 +18751,6 @@
         "message": "feat: build"
       }
     ],
-    "white-wine": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "wood": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "xfile": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "xfile-1": [
       {
         "hash": "22b373ac4",
@@ -18539,37 +18793,6 @@
         "date": "2025-07-07",
         "message": "feat: og"
       },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "xfile-6": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "you": [
-      {
-        "hash": "22b373ac4",
-        "date": "2025-07-07",
-        "message": "feat: og"
-      },
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "-eb-84-a4-ed-8a-b8-ec-9b-8c-ed-81-ac--ea-b8-b0-eb-b0-98--ec-a7-80-eb-8a-a5-ed-98-95--eb-a1-9c-eb-b4-87--ec-8b-9c-ec-8a-a4-ed-85-9c--ec-84-a4-ea-b3-84-": [
       {
         "hash": "5fbb32480",
         "date": "2025-07-06",
@@ -18632,28 +18855,7 @@
         "message": "feat: build"
       }
     ],
-    "-ed-9c-b4-ea-b0-80-eb-95-8c-ceo--eb-a7-8c--ec-b1-85-ec-9d-bd-eb-83-90": [
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "1": [
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
     "2011--ec-a0-9c-ec-a3-bc-eb-8f-84--ec-97-ac-ed-96-89-1-ec-9d-bc-ec-b0-a8--ec-98-a4-ec-84-a4-eb-a1-9d-ea-b3-bc--eb-8b-90-eb-aa-a8-eb-a7-81-eb-8f-99-eb-8": [
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "clientpda-server-ea-b8-b0-eb-b0-98-ec-9d-98--ec-96-bc-ea-b5-b4-ec-9d-b8-ec-8b-9d--ec-8b-9c-ec-8a-a4-ed-85-9c--ea-b0-9c-eb-b0-9c": [
       {
         "hash": "5fbb32480",
         "date": "2025-07-06",
@@ -18675,13 +18877,6 @@
       }
     ],
     "mysql_config-not-found": [
-      {
-        "hash": "5fbb32480",
-        "date": "2025-07-06",
-        "message": "feat: build"
-      }
-    ],
-    "sinapi-korea-ceestation-beta": [
       {
         "hash": "5fbb32480",
         "date": "2025-07-06",
