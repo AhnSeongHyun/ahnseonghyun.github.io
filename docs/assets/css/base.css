@@ -145,7 +145,8 @@ kbd { font-size: 10.5px; border: 1px solid var(--line); border-radius: 3px; padd
   padding-bottom: 6px;
   border-bottom: 1px solid var(--line);
 }
-.cl-h span { text-transform: none; letter-spacing: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cl-h { white-space: nowrap; }
+.cl-h span { text-transform: none; letter-spacing: 0; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .cl-row {
   display: grid;
   grid-template-columns: 72px 88px 1fr;
