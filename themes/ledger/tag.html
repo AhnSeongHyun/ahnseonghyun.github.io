@@ -5,7 +5,7 @@
     <title>#{{ tag_info.name | e }} - ASH84</title>
     <meta name="description" content="#{{ tag_info.name | e }} 태그의 글 {{ tag_info.count }}편">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css?v={% include 'build/asset-version.html' %}">
 </head>
 <body>
 {% set nav = 'tags' %}

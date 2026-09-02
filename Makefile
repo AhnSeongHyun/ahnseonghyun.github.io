@@ -9,6 +9,7 @@ help: ## 사용 가능한 타겟
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-10s %s\n", $$1, $$2}'
 
 build: ## 전체 빌드: zvc + tags + git meta + post index + sitemap + robots + CNAME + ads.txt + pagefind
+	@mkdir -p build && printf '%s' "$$(git rev-parse --short HEAD 2>/dev/null || date +%s)" > build/asset-version.html
 	uv run zvc build
 	uv run python scripts/generate_tags.py
 	uv run python scripts/generate_git_meta.py

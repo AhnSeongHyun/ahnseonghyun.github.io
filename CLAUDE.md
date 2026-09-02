@@ -33,6 +33,7 @@ This is a personal tech blog (ash84.io) built with **zvc** (custom static site g
 
 ### Build Pipeline
 
+0. `build/asset-version.html` ← `git rev-parse --short HEAD` (gitignored). Templates append it as `?v=` to CSS/JS URLs so a deploy busts the 10-minute GitHub Pages cache
 1. `zvc build` - Parses frontmatter, converts markdown to HTML with `themes/{theme}/post.html`, copies theme `assets/` to `docs/assets/`
 2. `generate_tags.py` - Creates `/docs/tags/{tag}/index.html` pages (theme name read from `config.yaml`)
 3. `generate_git_meta.py` - `git log -- contents/` → `docs/meta/git.json` (home changelog, per-post history)
