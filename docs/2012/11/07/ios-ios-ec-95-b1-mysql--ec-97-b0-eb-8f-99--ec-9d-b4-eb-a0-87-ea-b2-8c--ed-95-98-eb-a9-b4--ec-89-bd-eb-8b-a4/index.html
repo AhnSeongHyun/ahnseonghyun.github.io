@@ -2,74 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다. - ASH84</title>
-    <meta name="description" content="mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2012/11/07/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다."/>
-    <meta property="og:description" content="mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다."/>
-    <meta property="og:url" content="https://ash84.io/2012/11/07/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="MYSQL 연동하기" />
-    
-    <meta property="article:tag" content="MySQL" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="iOS" />
-    
-    <meta property="article:tag" content="iOS DB 연동하기" />
-    
-    <meta property="article:tag" content="ios-development" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다."/>
-    <meta name="twitter:description" content="mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다.",
-        "description": "mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2012/11/07/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -78,48 +17,106 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다. - ASH84</title>
+    <meta name="description" content="mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2012/11/07/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다.">
+    <meta property="og:description" content="mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다.">
+    <meta property="og:url" content="https://ash84.io/2012/11/07/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2012-11-07">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="MYSQL 연동하기">
+
+    <meta property="article:tag" content="MySQL">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="iOS">
+
+    <meta property="article:tag" content="iOS DB 연동하기">
+
+    <meta property="article:tag" content="ios-development">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다.">
+    <meta name="twitter:description" content="mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(iOS) iOS\uc571 - mysql \uc5f0\ub3d9, \uc774\ub807\uac8c \ud558\uba74 \uc27d\ub2e4.",
+        "description": "mysql \uc11c\ubc84\ub294 \ub2e4\ub4e4 \uc544\uc2dc\ub2e4\uc2dc\ud53c \uc6cc\ub099 \ub9ce\uc774\ub4e4 \uc4f0\ub294 \ub370\uc774\ud130\ubca0\uc774\uc2a4 \uc11c\ubc84\uc774\uae30 \ub54c\ubb38\uc5d0 \uc0ac\uc2e4 \uac1c\uc778\uc774\ub098 \uc791\uc740 \ud68c\uc0ac\uc5d0\uc11c \ubb54\uac00\ub97c \ub9cc\ub4e4\ub54c \uc0ac\uc6a9\ub418\ub294 DB\uc11c\ubc84\ub294 mysql \uc774\ub77c\uace0 \ubcf4\uba74\ub41c\ub2e4. \uac1c\uc778\uc801\uc73c\ub85c \ud68c\uc0ac\uc5d0\uc11c \uba87\ubc88 \uc368\ubcf8\uc801\uc774 \uc788\uc9c0\ub9cc, \uc544\uc774\ud3f0 \uad00\ub828 \uac1c\ubc1c\uc5d0\uc11c\ub294 \uc0ac\uc2e4 \ud30c\uc77c\ub514\ube44 \ud615\ud0dc\uc778 sqlite3\ub97c \uc0ac\uc6a9\ud574 \ubcf4\uc558\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2012-11-07",
+        "dateModified": "2012-11-07",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2012/11/07/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2012-11-07</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2012">2012</a><span>/</span><span>11</span><span>/</span><span>07</span><span>/</span><span class="cur">ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다.'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2012-11-07'</span>
+<span class="k">description</span>: <span class="v">'mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/MYSQL 연동하기/">'MYSQL 연동하기'</a>, <a class="v" href="/tags/MySQL/">'MySQL'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/iOS/">'iOS'</a>, <a class="v" href="/tags/iOS DB 연동하기/">'iOS DB 연동하기'</a>, <a class="v" href="/tags/ios-development/">'ios-development'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(iOS) iOS앱 - mysql 연동, 이렇게 하면 쉽다.</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/MYSQL 연동하기/" class="tag">MYSQL 연동하기</a>
-                
-                <a href="/tags/MySQL/" class="tag">MySQL</a>
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/iOS/" class="tag">iOS</a>
-                
-                <a href="/tags/iOS DB 연동하기/" class="tag">iOS DB 연동하기</a>
-                
-                <a href="/tags/ios-development/" class="tag">ios-development</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt;">mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다. </span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt;">mysql 서버는 다들 아시다시피 워낙 많이들 쓰는 데이터베이스 서버이기 때문에 사실 개인이나 작은 회사에서 뭔가를 만들때 사용되는 DB서버는 mysql 이라고 보면된다. 개인적으로 회사에서 몇번 써본적이 있지만, 아이폰 관련 개발에서는 사실 파일디비 형태인 sqlite3를 사용해 보았다. </span></p>
 <p><span style="font-size: 11pt;">mysql 을 연동하는 포스팅을 쓰는 가장 큰 이유는 iOS의 Cocoa 프레임워크 상에서 따로 DB연결 관련 클래스나 라이브러리를 따로 제공해 주지 않기 때문이다.(아니면 아직 내가 못찾을것인지도.) 그래서 맥부기 사이트에서 찾아봐도 대부분의 사람들이 mysql에 직접 접근해서 데이터를 가져오기 보다는 중간에 미들웨어 형태로 두던지 아니면 php-mysql의 형태로 데이터를 파싱해서 읽어오는 경우도 있다. </span></p>
 <p><span style="font-size: 11pt;">보안상 사실 이 방법은 mysql 서버 접근 정도를 코드안에 심는 방식이기 때문에 불안할 수도 있지만, 중간에 서버를 두는것이 불편하거나 그럴 여유가 없는 분들을 참고하시길 바란다. </span></p>
 <p><span style="font-size: 11pt;">일단 이 방법은<a href="http://miinyx.wordpress.com/2011/08/25/mysql-and-objective-c-for-iphone-and-osx/"> MySQL and Objective-C for iPhone and OSX</a> 이라는 글을 기반으로 한다. 링크를 가서 보면 알겠지만, <a href="http://www.karlkraft.com/">http://www.karlkraft.com/</a>이라는 사이트에 올라온 자료를 토대로 만들면 된다. 필자는 링크에 있는 블로그에 올려진 것을 대상으로 작업을 해 보았으나 실패했다. 그래서 찾은 방법은, 제작자의 svn에서 직접 소스를 다운받는 방법이다. </span></p>
@@ -134,18 +131,55 @@
 // ]]></script>
 
 <p><span style="font-size: 11pt; line-height: 2;">이렇게 입력하고 나서 간단하게 데이터베이스에 있는 동네이름을 가져오는 부분은 다음과 같다.   select 부분은 아래와 같이 하면 되고 그외 다른 쿼리 부분은 <a href="http://miinyx.wordpress.com/2011/08/25/mysql-and-objective-c-for-iphone-and-osx/">이곳</a>을 참고하자.(<a href="http://miinyx.wordpress.com/2011/08/25/mysql-and-objective-c-for-iphone-and-osx/">원작자배려</a>) 참고로 select 부분에서 쿼리의 결과는 여러개가 있으면 배열로 받고, 각 배열의 내용은 컬럼명-값 형태, NSDictionary 의 형태로 되어 있다.</span></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4/ios-ios-ec-95-b1-mysql--ec-97-b0-eb-8f-99--ec-9d-b4-eb-a0-87-ea-b2-8c--ed-95-98-eb-a9-b4--ec-89-bd-eb-8b-a4.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -2,72 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>[C/C++] GetFileExtension() 파일 확장자 가져오기 - ASH84</title>
-    <meta name="description" content="지난번에 경로에서 파일이름만 추출하는 소스코드를 포스팅했었는데 이번에는 C/C++ 에서 파일이름에서 확장자만 가져오는 부분을 올린다. 중요한 포인터의 뒤에서 부터 접근한다는 점이다. 마침표(.)까지 접근해서 그 다음 포인터를 반환하는 방식이다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2012/08/28/cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="[C/C++] GetFileExtension() 파일 확장자 가져오기"/>
-    <meta property="og:description" content="지난번에 경로에서 파일이름만 추출하는 소스코드를 포스팅했었는데 이번에는 C/C++ 에서 파일이름에서 확장자만 가져오는 부분을 올린다. 중요한 포인터의 뒤에서 부터 접근한다는 점이다. 마침표(.)까지 접근해서 그 다음 포인터를 반환하는 방식이다."/>
-    <meta property="og:url" content="https://ash84.io/2012/08/28/cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="C/C++" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="File extension" />
-    
-    <meta property="article:tag" content="파일확장자" />
-    
-    <meta property="article:tag" content="확장자 추출" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="[C/C++] GetFileExtension() 파일 확장자 가져오기"/>
-    <meta name="twitter:description" content="지난번에 경로에서 파일이름만 추출하는 소스코드를 포스팅했었는데 이번에는 C/C++ 에서 파일이름에서 확장자만 가져오는 부분을 올린다. 중요한 포인터의 뒤에서 부터 접근한다는 점이다. 마침표(.)까지 접근해서 그 다음 포인터를 반환하는 방식이다."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "[C/C++] GetFileExtension() 파일 확장자 가져오기",
-        "description": "지난번에 경로에서 파일이름만 추출하는 소스코드를 포스팅했었는데 이번에는 C/C++ 에서 파일이름에서 확장자만 가져오는 부분을 올린다. 중요한 포인터의 뒤에서 부터 접근한다는 점이다. 마침표(.)까지 접근해서 그 다음 포인터를 반환하는 방식이다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2012/08/28/cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -76,63 +17,158 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>[C/C++] GetFileExtension() 파일 확장자 가져오기 - ASH84</title>
+    <meta name="description" content="지난번에 경로에서 파일이름만 추출하는 소스코드를 포스팅했었는데 이번에는 C/C++ 에서 파일이름에서 확장자만 가져오는 부분을 올린다. 중요한 포인터의 뒤에서 부터 접근한다는 점이다. 마침표(.)까지 접근해서 그 다음 포인터를 반환하는 방식이다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2012/08/28/cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="[C/C++] GetFileExtension() 파일 확장자 가져오기">
+    <meta property="og:description" content="지난번에 경로에서 파일이름만 추출하는 소스코드를 포스팅했었는데 이번에는 C/C++ 에서 파일이름에서 확장자만 가져오는 부분을 올린다. 중요한 포인터의 뒤에서 부터 접근한다는 점이다. 마침표(.)까지 접근해서 그 다음 포인터를 반환하는 방식이다.">
+    <meta property="og:url" content="https://ash84.io/2012/08/28/cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2012-08-28">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="C/C++">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="File extension">
+
+    <meta property="article:tag" content="파일확장자">
+
+    <meta property="article:tag" content="확장자 추출">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="[C/C++] GetFileExtension() 파일 확장자 가져오기">
+    <meta name="twitter:description" content="지난번에 경로에서 파일이름만 추출하는 소스코드를 포스팅했었는데 이번에는 C/C++ 에서 파일이름에서 확장자만 가져오는 부분을 올린다. 중요한 포인터의 뒤에서 부터 접근한다는 점이다. 마침표(.)까지 접근해서 그 다음 포인터를 반환하는 방식이다.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[C/C++] GetFileExtension() \ud30c\uc77c \ud655\uc7a5\uc790 \uac00\uc838\uc624\uae30",
+        "description": "\uc9c0\ub09c\ubc88\uc5d0 \uacbd\ub85c\uc5d0\uc11c \ud30c\uc77c\uc774\ub984\ub9cc \ucd94\ucd9c\ud558\ub294 \uc18c\uc2a4\ucf54\ub4dc\ub97c \ud3ec\uc2a4\ud305\ud588\uc5c8\ub294\ub370 \uc774\ubc88\uc5d0\ub294 C/C++ \uc5d0\uc11c \ud30c\uc77c\uc774\ub984\uc5d0\uc11c \ud655\uc7a5\uc790\ub9cc \uac00\uc838\uc624\ub294 \ubd80\ubd84\uc744 \uc62c\ub9b0\ub2e4. \uc911\uc694\ud55c \ud3ec\uc778\ud130\uc758 \ub4a4\uc5d0\uc11c \ubd80\ud130 \uc811\uadfc\ud55c\ub2e4\ub294 \uc810\uc774\ub2e4. \ub9c8\uce68\ud45c(.)\uae4c\uc9c0 \uc811\uadfc\ud574\uc11c \uadf8 \ub2e4\uc74c \ud3ec\uc778\ud130\ub97c \ubc18\ud658\ud558\ub294 \ubc29\uc2dd\uc774\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2012-08-28",
+        "dateModified": "2012-08-28",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2012/08/28/cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2012-08-28</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2012">2012</a><span>/</span><span>08</span><span>/</span><span>28</span><span>/</span><span class="cur">cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'[C/C++] GetFileExtension() 파일 확장자 가져오기'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2012-08-28'</span>
+<span class="k">description</span>: <span class="v">'지난번에 경로에서 파일이름만 추출하는 소스코드를 포스팅했었는데 이번에는 C/C++ 에서 파일이름에서 확장자만 가져오는 부분을 올린다. 중요한 포인터의 뒤에서 부터 접근한다는 점이다. 마침표(.)까지 접근해서 그 다음 포인터를 반환하는 방식이다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/C-C++/">'C/C++'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/File extension/">'File extension'</a>, <a class="v" href="/tags/파일확장자/">'파일확장자'</a>, <a class="v" href="/tags/확장자 추출/">'확장자 추출'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">[C/C++] GetFileExtension() 파일 확장자 가져오기</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/C/C++/" class="tag">C/C++</a>
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/File extension/" class="tag">File extension</a>
-                
-                <a href="/tags/파일확장자/" class="tag">파일확장자</a>
-                
-                <a href="/tags/확장자 추출/" class="tag">확장자 추출</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt; ">지난번에 경로에서 파일이름만 추출하는 소스코드를 포스팅했었는데 이번에는 C/C++ 에서 파일이름에서 확장자만 가져오는 부분을 올린다. 중요한 포인터의 뒤에서 부터 접근한다는 점이다. 마침표(.)까지 접근해서 그 다음 포인터를 반환하는 방식이다. </span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt; ">지난번에 경로에서 파일이름만 추출하는 소스코드를 포스팅했었는데 이번에는 C/C++ 에서 파일이름에서 확장자만 가져오는 부분을 올린다. 중요한 포인터의 뒤에서 부터 접근한다는 점이다. 마침표(.)까지 접근해서 그 다음 포인터를 반환하는 방식이다. </span></p>
 <p><span style="font-size: 11pt; "><br />
 </span></p>
 <p><span style="font-size: 11pt; "><br />
 </span></p>
 <script src="https://gist.github.com/3496641.js"></script>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/cc-getfileextension--ed-8c-8c-ec-9d-bc--ed-99-95-ec-9e-a5-ec-9e-90--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

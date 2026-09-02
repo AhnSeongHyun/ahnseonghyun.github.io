@@ -2,78 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(espressoOtr) DistributedSaver/Loader, 문자열 저장을 멀티스레드로. - ASH84</title>
-    <meta name="description" content="검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 **중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. **" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2013/03/13/espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(espressoOtr) DistributedSaver/Loader, 문자열 저장을 멀티스레드로."/>
-    <meta property="og:description" content="검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 **중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. **"/>
-    <meta property="og:url" content="https://ash84.io/2013/03/13/espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="DistributedLoader" />
-    
-    <meta property="article:tag" content="DistributedSaver" />
-    
-    <meta property="article:tag" content="espressoOtr" />
-    
-    <meta property="article:tag" content="GitHub" />
-    
-    <meta property="article:tag" content="https://github.com/AhnSeongHyun/espressoOtr" />
-    
-    <meta property="article:tag" content="search-engine" />
-    
-    <meta property="article:tag" content="문자열 저장" />
-    
-    <meta property="article:tag" content="사전 만들기" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(espressoOtr) DistributedSaver/Loader, 문자열 저장을 멀티스레드로."/>
-    <meta name="twitter:description" content="검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 **중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. **"/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(espressoOtr) DistributedSaver/Loader, 문자열 저장을 멀티스레드로.",
-        "description": "검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 **중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. **",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2013/03/13/espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -82,52 +17,110 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(espressoOtr) DistributedSaver/Loader, 문자열 저장을 멀티스레드로. - ASH84</title>
+    <meta name="description" content="검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 **중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. **">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2013/03/13/espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(espressoOtr) DistributedSaver/Loader, 문자열 저장을 멀티스레드로.">
+    <meta property="og:description" content="검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 **중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. **">
+    <meta property="og:url" content="https://ash84.io/2013/03/13/espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-03-13">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="DistributedLoader">
+
+    <meta property="article:tag" content="DistributedSaver">
+
+    <meta property="article:tag" content="espressoOtr">
+
+    <meta property="article:tag" content="GitHub">
+
+    <meta property="article:tag" content="https://github.com/AhnSeongHyun/espressoOtr">
+
+    <meta property="article:tag" content="search-engine">
+
+    <meta property="article:tag" content="문자열 저장">
+
+    <meta property="article:tag" content="사전 만들기">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(espressoOtr) DistributedSaver/Loader, 문자열 저장을 멀티스레드로.">
+    <meta name="twitter:description" content="검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 **중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. **">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(espressoOtr) DistributedSaver/Loader, \ubb38\uc790\uc5f4 \uc800\uc7a5\uc744 \uba40\ud2f0\uc2a4\ub808\ub4dc\ub85c.",
+        "description": "\uac80\uc0c9 \uc5d4\uc9c4\uad00\ub828 \ubaa8\ub4c8\uc5d0 \uc788\uc5b4\uc11c \uc0ac\uc804\uc740 \ud544\uc218\uc801\uc778 \ubd80\ubd84\uc778\ub370, \ube45 \ub370\uc774\ud130\ub77c\ub294 \ub9d0\uc774 \ub098\uc624\uba74\uc11c \uc0ac\uc804\uc758 \uc0ac\uc774\uc988\uac00 \uad49\uc7a5\ud788 \ucee4\uc9c0\ub294\uac83 \uac19\ub2e4. \uc6d0\ub798 \uc0ac\uc6a9\uc790\uac00 \uc81c\uacf5\ud558\ub294 \ud639\uc740 \uc0ac\uc6a9\uc790 \uac80\uc0c9 \ub85c\uadf8\uc5d0\uc11c \ucd94\ucd9c\ub41c \ub370\uc774\ud130\ub85c \uc0ac\uc804\uc744 \ub9cc\ub4e4\uc5b4\uc11c \uc0ac\uc6a9\ud558\ub294\ub370 \uc911\uac04\uc5d0 \ube60\ub978 \ub85c\ub529\uc744 \uc704\ud574\uc11c \uc0ac\uc804\uc744 \uc815\ub82c\ud55c \ucc44\ub85c \uc800\uc7a5\ud558\ub294 \ubc29\uc2dd\uc744 \uc0ac\uc6a9\ud558\uae30\ub3c4 \ud55c\ub2e4. \uadf8\ub7f0\ub370 **\uc911\uac04\uc5d0 \uc815\ub82c\ud558\ub294 \ubc29\uc2dd\uc740 \uc0ac\uc804\uc758 \ud06c\uae30\uc5d0 \uc601\ud5a5\uc744 \ub9ce\uc774 \ubc1b\ub294\ub2e4. \uc989, \ud06c\uae30\uac00 \ucee4\uc9c0\uba74 \uc815\ub82c\ud558\ub294\uac83\ub3c4 \uc815\ub82c \uc0ac\uc804\uc744 \ub9cc\ub4dc\ub294\uac83\ub3c4 \ub2e4\uc2dc \ub85c\ub4dc\uc2dc \uc77d\uc5b4\uc624\ub294 \uc791\uc5c5\ub3c4 \uc624\ub798 \uac78\ub9b0\ub2e4.\u00a0**",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2013-03-13",
+        "dateModified": "2013-03-13",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/03/13/espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2013-03-13</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2013">2013</a><span>/</span><span>03</span><span>/</span><span>13</span><span>/</span><span class="cur">espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(espressoOtr) DistributedSaver/Loader, 문자열 저장을 멀티스레드로.'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2013-03-13'</span>
+<span class="k">description</span>: <span class="v">'검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 **중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. **'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/DistributedLoader/">'DistributedLoader'</a>, <a class="v" href="/tags/DistributedSaver/">'DistributedSaver'</a>, <a class="v" href="/tags/espressoOtr/">'espressoOtr'</a>, <a class="v" href="/tags/GitHub/">'GitHub'</a>, <a class="v" href="/tags/https---github.com-AhnSeongHyun-espressoOtr/">'https://github.com/AhnSeongHyun/espressoOtr'</a>, <a class="v" href="/tags/search-engine/">'search-engine'</a>, <a class="v" href="/tags/문자열 저장/">'문자열 저장'</a>, <a class="v" href="/tags/사전 만들기/">'사전 만들기'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(espressoOtr) DistributedSaver/Loader, 문자열 저장을 멀티스레드로.</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/DistributedLoader/" class="tag">DistributedLoader</a>
-                
-                <a href="/tags/DistributedSaver/" class="tag">DistributedSaver</a>
-                
-                <a href="/tags/espressoOtr/" class="tag">espressoOtr</a>
-                
-                <a href="/tags/GitHub/" class="tag">GitHub</a>
-                
-                <a href="/tags/https://github.com/AhnSeongHyun/espressoOtr/" class="tag">https://github.com/AhnSeongHyun/espressoOtr</a>
-                
-                <a href="/tags/search-engine/" class="tag">search-engine</a>
-                
-                <a href="/tags/문자열 저장/" class="tag">문자열 저장</a>
-                
-                <a href="/tags/사전 만들기/" class="tag">사전 만들기</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt;">검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 <strong>중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. </strong></span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt;">검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 <strong>중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. </strong></span></p>
 <p><span style="font-size: 11pt;">이러한 문제를 극복할 수 있는 방법은 여러가지가 있지만,<strong> 파일로 저장하는 부분에 있어서 스레드를 이용해서 여러가지 파일에 나누어서 저장하는 방식을 소개하고자 한다. 멀티 스레드를 이용하게 되면 단일 스레드에서 저장하던 방식 보다는 빠르게 저장할 수 있다. 그러나 번거로운 점은 다수의 파일로 나누어서 저장한 만큼 다수의 파일에서 읽어와서 로딩해야한다는 점이다. </strong></span></p>
 <p><span style="font-size: 11pt;"><a href="https://github.com/AhnSeongHyun/espressoOtr">espressoOtr</a> 라이브러리에서는 이러한 부분은 쉽게 제공하기 위해서 <strong>DistributedSaver</strong>, <strong>DistributedLoader</strong> 클래스를 만들었다. 일단 <strong>DistributedSaver</strong>의 코드를 보자. </span></p>
 <script src="https://gist.github.com/AhnSeongHyun/5157516.js"></script>
@@ -143,18 +136,55 @@
 </span><span style="font-size: 11pt;"><br />
 </span><span style="font-size: 11pt;"><br />
 </span><span style="font-size: 11pt;"></span></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c/espressootr-distributedsaverloader--eb-ac-b8-ec-9e-90-ec-97-b4--ec-a0-80-ec-9e-a5-ec-9d-84--eb-a9-80-ed-8b-b0-ec-8a-a4-eb-a0-88-eb-93-9c-eb-a1-9c.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

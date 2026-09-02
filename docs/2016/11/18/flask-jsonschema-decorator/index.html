@@ -2,88 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(flask) jsonschema 를 이용해서 request.json 검사하기 - ASH84</title>
-    <meta name="description" content="API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2016/11/18/flask-jsonschema-decorator/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(flask) jsonschema 를 이용해서 request.json 검사하기"/>
-    <meta property="og:description" content="API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다."/>
-    <meta property="og:url" content="https://ash84.io/2016/11/18/flask-jsonschema-decorator/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="Flask" />
-    
-    <meta property="article:tag" content="Python" />
-    
-    <meta property="article:tag" content="JSON" />
-    
-    <meta property="article:tag" content="jsonschema" />
-    
-    <meta property="article:tag" content="Decorator" />
-    
-    
-        
-    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/2182898?v=3&s=200"/>
-        
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(flask) jsonschema 를 이용해서 request.json 검사하기"/>
-    <meta name="twitter:description" content="API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다."/>
-    
-        
-    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/2182898?v=3&s=200"/>
-        
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(flask) jsonschema 를 이용해서 request.json 검사하기",
-        "description": "API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2016/11/18/flask-jsonschema-decorator"
-        },
-        
-            
-        "image": "https://avatars0.githubusercontent.com/u/2182898?v=3&s=200",
-            
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -92,52 +17,122 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(flask) jsonschema 를 이용해서 request.json 검사하기 - ASH84</title>
+    <meta name="description" content="API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2016/11/18/flask-jsonschema-decorator/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(flask) jsonschema 를 이용해서 request.json 검사하기">
+    <meta property="og:description" content="API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다.">
+    <meta property="og:url" content="https://ash84.io/2016/11/18/flask-jsonschema-decorator/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2016-11-18">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="Flask">
+
+    <meta property="article:tag" content="Python">
+
+    <meta property="article:tag" content="JSON">
+
+    <meta property="article:tag" content="jsonschema">
+
+    <meta property="article:tag" content="Decorator">
+
+
+
+    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/2182898?v=3&s=200">
+
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(flask) jsonschema 를 이용해서 request.json 검사하기">
+    <meta name="twitter:description" content="API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다.">
+
+
+    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/2182898?v=3&s=200">
+
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(flask) jsonschema \ub97c \uc774\uc6a9\ud574\uc11c request.json \uac80\uc0ac\ud558\uae30",
+        "description": "API\uc5d0\uc11c \ud30c\ub77c\ubbf8\ud130\uc758 \uc720\ud6a8\uc131 \uac80\uc0ac\ub294 \ud544\uc218\uc801\uc778 \uc694\uc18c\uc774\uae34 \ud558\uc9c0\ub9cc, \uac1c\ubc1c\uc790\ub85c\uc11c \uc5ec\uac04 \uadc0\ucc2e\uc740 \uc77c\uc774 \uc544\ub2d0 \uc218 \uc5c6\ub2e4. API\uc758 \uc591\uc774 \ub9ce\uc744\uc218\ub85d \ud560 \uc77c\uc740 \ub9ce\uc544\uc9c4\ub2e4. \uc138\uc138\ud558\uac8c \uccb4\ud06c\ud560 \ubd80\ubd84\uc740 \ud574\uc57c\ud558\uc9c0\ub9cc \uae30\ubcf8\uc801\uc73c\ub85c \ud30c\ub77c\ubbf8\ud130 \uc720\ubb34, \ud30c\ub77c\ubbf8\ud130\uc758 \ub370\uc774\ud130 \ud615\uc744 \uccb4\ud06c\ud558\ub294 \ubd80\ubd84\uc774 \ud544\uc694\ud588\ub2e4. API\ub294 \uae30\ubcf8\uc801\uc73c\ub85c JSON \uc744 `POST`\ub85c \ubc1b\ub294 \uc2dd\uc73c\ub85c \uad6c\uc131\ub418\uc5b4 \uc788\uc5b4\uc11c JSON\uc744 \uac80\uc99d\ud558\ub294 \ubd80\ubd84\uc774 \ud544\uc694\ud588\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2016-11-18",
+        "dateModified": "2016-11-18",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2016/11/18/flask-jsonschema-decorator/"
+        },
+
+
+        "image": "https://avatars0.githubusercontent.com/u/2182898?v=3&s=200",
+
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2016-11-18</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2016">2016</a><span>/</span><span>11</span><span>/</span><span>18</span><span>/</span><span class="cur">flask-jsonschema-decorator/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="flask-jsonschema-decorator">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(flask) jsonschema 를 이용해서 request.json 검사하기'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2016-11-18'</span>
+<span class="k">description</span>: <span class="v">'API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/Flask/">'Flask'</a>, <a class="v" href="/tags/Python/">'Python'</a>, <a class="v" href="/tags/JSON/">'JSON'</a>, <a class="v" href="/tags/jsonschema/">'jsonschema'</a>, <a class="v" href="/tags/Decorator/">'Decorator'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(flask) jsonschema 를 이용해서 request.json 검사하기</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/Flask/" class="tag">Flask</a>
-                
-                <a href="/tags/Python/" class="tag">Python</a>
-                
-                <a href="/tags/JSON/" class="tag">JSON</a>
-                
-                <a href="/tags/jsonschema/" class="tag">jsonschema</a>
-                
-                <a href="/tags/Decorator/" class="tag">Decorator</a>
-                
-            </div>
-            
-        </header>
 
-        
-        <figure class="post-image">
-            <img src="https://avatars0.githubusercontent.com/u/2182898?v=3&s=200" alt="(flask) jsonschema 를 이용해서 request.json 검사하기">
-        </figure>
-        
+            <figure class="post-image"><img src="https://avatars0.githubusercontent.com/u/2182898?v=3&s=200" alt="(flask) jsonschema 를 이용해서 request.json 검사하기"></figure>
 
-        <div class="post-content">
-            <p>API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 <code>POST</code>로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다. </p>
+            <div class="post-content" data-pagefind-body>
+<p>API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 <code>POST</code>로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다. </p>
 <p>JSON 검증을 위해서 <a href="https://pypi.python.org/pypi/jsonschema">jsonschema</a> 를 활용할 수 있다는 것을 알았는데, 문제는 라이브러리를 써서 검증할 수 있지만, 일단 <strong>스키마가 있어야 한다는 사실</strong>이다. <a href="https://pypi.python.org/pypi/jsonschema">jsonschema</a> 라이브러리는 단순히 스키마에 대한 검증을 해주는 도구이다.</p>
 <p>스키마를 만들기 위해서 <a href="http://jsonschema.net/">jsonschema.net</a> 을 이용했다. 이 사이트는 요청하려는 JSON Payload를 넣게 되면 해당 Payload에 맞는 스키마를 추출해 주는 작업을 해준다. 예를 들어, 아래와 같이 회원가입을 하는 JSON Payload가 있다고 가정해보자. </p>
 <pre><code class="language-json">{
@@ -264,18 +259,55 @@ def json_schema(schema_name):
 <li>https://pypi.python.org/pypi/jsonschema</li>
 <li>http://jsonschema.net</li>
 </ul>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/flask-jsonschema-decorator/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/flask-jsonschema-decorator/flask-jsonschema-decorator.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -2,72 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(python) try ~ except and trace - ASH84</title>
-    <meta name="description" content="이상하게 파이썬을 빨리 빨리 뚝딱 만드는 언어로 많이 쓰는데(사실 나도 그렇게 쓴다.) 그런데 간호 pypi 에 올려서 욕을 안먹으려면 예외 처리를 해야한다. 당연한 애긴데. ㅎㅎ 아무튼 위의 소스코드를 보면 try: ~ except: 문으로 묶는 것이 기본이다. catch 에 해당하는 것이 except 라고 보면 되는데, Java 처럼 자세히 나" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2013/10/29/python-try-except-and-trace/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(python) try ~ except and trace"/>
-    <meta property="og:description" content="이상하게 파이썬을 빨리 빨리 뚝딱 만드는 언어로 많이 쓰는데(사실 나도 그렇게 쓴다.) 그런데 간호 pypi 에 올려서 욕을 안먹으려면 예외 처리를 해야한다. 당연한 애긴데. ㅎㅎ 아무튼 위의 소스코드를 보면 try: ~ except: 문으로 묶는 것이 기본이다. catch 에 해당하는 것이 except 라고 보면 되는데, Java 처럼 자세히 나"/>
-    <meta property="og:url" content="https://ash84.io/2013/10/29/python-try-except-and-trace/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="Python" />
-    
-    <meta property="article:tag" content="traceback" />
-    
-    <meta property="article:tag" content="try except" />
-    
-    <meta property="article:tag" content="예외처리" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(python) try ~ except and trace"/>
-    <meta name="twitter:description" content="이상하게 파이썬을 빨리 빨리 뚝딱 만드는 언어로 많이 쓰는데(사실 나도 그렇게 쓴다.) 그런데 간호 pypi 에 올려서 욕을 안먹으려면 예외 처리를 해야한다. 당연한 애긴데. ㅎㅎ 아무튼 위의 소스코드를 보면 try: ~ except: 문으로 묶는 것이 기본이다. catch 에 해당하는 것이 except 라고 보면 되는데, Java 처럼 자세히 나"/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(python) try ~ except and trace",
-        "description": "이상하게 파이썬을 빨리 빨리 뚝딱 만드는 언어로 많이 쓰는데(사실 나도 그렇게 쓴다.) 그런데 간호 pypi 에 올려서 욕을 안먹으려면 예외 처리를 해야한다. 당연한 애긴데. ㅎㅎ 아무튼 위의 소스코드를 보면 try: ~ except: 문으로 묶는 것이 기본이다. catch 에 해당하는 것이 except 라고 보면 되는데, Java 처럼 자세히 나",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2013/10/29/python-try-except-and-trace"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -76,63 +17,158 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(python) try ~ except and trace - ASH84</title>
+    <meta name="description" content="이상하게 파이썬을 빨리 빨리 뚝딱 만드는 언어로 많이 쓰는데(사실 나도 그렇게 쓴다.) 그런데 간호 pypi 에 올려서 욕을 안먹으려면 예외 처리를 해야한다. 당연한 애긴데. ㅎㅎ 아무튼 위의 소스코드를 보면 try: ~ except: 문으로 묶는 것이 기본이다. catch 에 해당하는 것이 except 라고 보면 되는데, Java 처럼 자세히 나">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2013/10/29/python-try-except-and-trace/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(python) try ~ except and trace">
+    <meta property="og:description" content="이상하게 파이썬을 빨리 빨리 뚝딱 만드는 언어로 많이 쓰는데(사실 나도 그렇게 쓴다.) 그런데 간호 pypi 에 올려서 욕을 안먹으려면 예외 처리를 해야한다. 당연한 애긴데. ㅎㅎ 아무튼 위의 소스코드를 보면 try: ~ except: 문으로 묶는 것이 기본이다. catch 에 해당하는 것이 except 라고 보면 되는데, Java 처럼 자세히 나">
+    <meta property="og:url" content="https://ash84.io/2013/10/29/python-try-except-and-trace/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-10-29">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="Python">
+
+    <meta property="article:tag" content="traceback">
+
+    <meta property="article:tag" content="try except">
+
+    <meta property="article:tag" content="예외처리">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(python) try ~ except and trace">
+    <meta name="twitter:description" content="이상하게 파이썬을 빨리 빨리 뚝딱 만드는 언어로 많이 쓰는데(사실 나도 그렇게 쓴다.) 그런데 간호 pypi 에 올려서 욕을 안먹으려면 예외 처리를 해야한다. 당연한 애긴데. ㅎㅎ 아무튼 위의 소스코드를 보면 try: ~ except: 문으로 묶는 것이 기본이다. catch 에 해당하는 것이 except 라고 보면 되는데, Java 처럼 자세히 나">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(python) try ~ except and trace",
+        "description": "\uc774\uc0c1\ud558\uac8c \ud30c\uc774\uc36c\uc744 \ube68\ub9ac \ube68\ub9ac \ub69d\ub531 \ub9cc\ub4dc\ub294 \uc5b8\uc5b4\ub85c \ub9ce\uc774 \uc4f0\ub294\ub370(\uc0ac\uc2e4 \ub098\ub3c4 \uadf8\ub807\uac8c \uc4f4\ub2e4.) \uadf8\ub7f0\ub370 \uac04\ud638 pypi \uc5d0 \uc62c\ub824\uc11c \uc695\uc744 \uc548\uba39\uc73c\ub824\uba74 \uc608\uc678 \ucc98\ub9ac\ub97c \ud574\uc57c\ud55c\ub2e4. \ub2f9\uc5f0\ud55c \uc560\uae34\ub370. \u314e\u314e \uc544\ubb34\ud2bc \uc704\uc758 \uc18c\uc2a4\ucf54\ub4dc\ub97c \ubcf4\uba74 try: ~ except: \ubb38\uc73c\ub85c \ubb36\ub294 \uac83\uc774 \uae30\ubcf8\uc774\ub2e4. catch \uc5d0 \ud574\ub2f9\ud558\ub294 \uac83\uc774 except \ub77c\uace0 \ubcf4\uba74 \ub418\ub294\ub370, Java\u00a0\ucc98\ub7fc \uc790\uc138\ud788 \ub098",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2013-10-29",
+        "dateModified": "2013-10-29",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/10/29/python-try-except-and-trace/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2013-10-29</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2013">2013</a><span>/</span><span>10</span><span>/</span><span>29</span><span>/</span><span class="cur">python-try-except-and-trace/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="python-try-except-and-trace">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(python) try ~ except and trace'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2013-10-29'</span>
+<span class="k">description</span>: <span class="v">'이상하게 파이썬을 빨리 빨리 뚝딱 만드는 언어로 많이 쓰는데(사실 나도 그렇게 쓴다.) 그런데 간호 pypi 에 올려서 욕을 안먹으려면 예외 처리를 해야한다. 당연한 애긴데. ㅎㅎ 아무튼 위의 소스코드를 보면 try: ~ except: 문으로 묶는 것이 기본이다. catch 에 해당하는 것이 except 라고 보면 되는데, Java 처럼 자세히 나'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/Python/">'Python'</a>, <a class="v" href="/tags/traceback/">'traceback'</a>, <a class="v" href="/tags/try except/">'try except'</a>, <a class="v" href="/tags/예외처리/">'예외처리'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(python) try ~ except and trace</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/Python/" class="tag">Python</a>
-                
-                <a href="/tags/traceback/" class="tag">traceback</a>
-                
-                <a href="/tags/try except/" class="tag">try except</a>
-                
-                <a href="/tags/예외처리/" class="tag">예외처리</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <script src="https://gist.github.com/AhnSeongHyun/7210750.js"></script>
+            <div class="post-content" data-pagefind-body>
+<script src="https://gist.github.com/AhnSeongHyun/7210750.js"></script>
 
 <p><span style="font-size: 11pt;">이상하게 파이썬을 빨리 빨리 뚝딱 만드는 언어로 많이 쓰는데(사실 나도 그렇게 쓴다.) 그런데 간호 pypi 에 올려서 욕을 안먹으려면 예외 처리를 해야한다. 당연한 애긴데. ㅎㅎ 아무튼 위의 소스코드를 보면 try: ~ except: 문으로 묶는 것이 기본이다. catch 에 해당하는 것이 except 라고 보면 되는데, Java 처럼 자세히 나오지 않기 때문에 traceback 을 추가해줘야 한다. </span><span style="background-color: transparent; font-size: 11pt; line-height: 2;">sys.stdout 을 지정해서 표준출력으로 예외가 발생한 부분을 트레이스 하고 있는데 테스트 해보면 해당 부분 라인이나 정보를 볼 수 있다. 아래와 같이 나온다. </span></p>
 <p><span style="font-size: 11pt;"><br />
 </span>  </p>
 <script src="https://gist.github.com/AhnSeongHyun/7210779.js"></script>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/python-try-except-and-trace/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/python-try-except-and-trace/python-try-except-and-trace.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

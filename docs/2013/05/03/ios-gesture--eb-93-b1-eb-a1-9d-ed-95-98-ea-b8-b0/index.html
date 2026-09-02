@@ -2,82 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(iOS) Register gesture - ASH84</title>
-    <meta name="description" content="요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2013/05/03/ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(iOS) Register gesture"/>
-    <meta property="og:description" content="요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자."/>
-    <meta property="og:url" content="https://ash84.io/2013/05/03/ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="gesture" />
-    
-    <meta property="article:tag" content="iOS" />
-    
-    <meta property="article:tag" content="objective c gesture recognizer" />
-    
-    <meta property="article:tag" content="Swipe" />
-    
-    <meta property="article:tag" content="tap" />
-    
-    <meta property="article:tag" content="UIGesture" />
-    
-    <meta property="article:tag" content="uilabel tap" />
-    
-    <meta property="article:tag" content="uilabel touchupinside" />
-    
-    <meta property="article:tag" content="제스처" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(iOS) Register gesture"/>
-    <meta name="twitter:description" content="요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(iOS) Register gesture",
-        "description": "요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2013/05/03/ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -86,56 +17,114 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(iOS) Register gesture - ASH84</title>
+    <meta name="description" content="요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2013/05/03/ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(iOS) Register gesture">
+    <meta property="og:description" content="요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자.">
+    <meta property="og:url" content="https://ash84.io/2013/05/03/ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-05-03">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="gesture">
+
+    <meta property="article:tag" content="iOS">
+
+    <meta property="article:tag" content="objective c gesture recognizer">
+
+    <meta property="article:tag" content="Swipe">
+
+    <meta property="article:tag" content="tap">
+
+    <meta property="article:tag" content="UIGesture">
+
+    <meta property="article:tag" content="uilabel tap">
+
+    <meta property="article:tag" content="uilabel touchupinside">
+
+    <meta property="article:tag" content="제스처">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(iOS) Register gesture">
+    <meta name="twitter:description" content="요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(iOS) Register gesture",
+        "description": "\uc694\uc998 \ub300\ubd80\ubd84\uc758 \uc571\ub4e4\uc740 Gesture\ub97c \uc9c0\uc6d0\ud558\ub294 \uc571\ub4e4\uc774 \ub9ce\uc740\ub370, iOS\uc758 \uac01 \ucee8\ud2b8\ub864\uc5d0 Gesture \uac1d\uccb4\ub97c \ub4f1\ub85d\ud574 \uc8fc\uba74\ub41c\ub2e4. Gesture \uac1d\uccb4\ub294 \uae30\ubcf8\uc801\uc778 \uc124\uc815\uc744 \ud574\uc8fc\uace0, \ud574\ub2f9 Gesture\uac00 \ubc1c\uc0dd\ud588\uc744\ub54c \uc218\ud589\ud560 \ud568\uc218\ub97c \uc9c0\uc815\ud574 \uc8fc\uba74 \ub41c\ub2e4. \ub108\ubb34 \uc27d\uac8c \uc124\uba85\ud588\ub294\ub370, \uc0ac\uc2e4 \uadf8\uac8c \ub2e8\ub370. \uc608\ub97c \ub4e4\uc5b4, \uc67c\ucabd\uc73c\ub85c swipe gesture\ub97c \uc900\ub2e4\uace0 \ud558\uc790.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2013-05-03",
+        "dateModified": "2013-05-03",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/05/03/ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2013-05-03</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2013">2013</a><span>/</span><span>05</span><span>/</span><span>03</span><span>/</span><span class="cur">ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(iOS) Register gesture'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2013-05-03'</span>
+<span class="k">description</span>: <span class="v">'요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/gesture/">'gesture'</a>, <a class="v" href="/tags/iOS/">'iOS'</a>, <a class="v" href="/tags/objective c gesture recognizer/">'objective c gesture recognizer'</a>, <a class="v" href="/tags/Swipe/">'Swipe'</a>, <a class="v" href="/tags/tap/">'tap'</a>, <a class="v" href="/tags/UIGesture/">'UIGesture'</a>, <a class="v" href="/tags/uilabel tap/">'uilabel tap'</a>, <a class="v" href="/tags/uilabel touchupinside/">'uilabel touchupinside'</a>, <a class="v" href="/tags/제스처/">'제스처'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(iOS) Register gesture</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/gesture/" class="tag">gesture</a>
-                
-                <a href="/tags/iOS/" class="tag">iOS</a>
-                
-                <a href="/tags/objective c gesture recognizer/" class="tag">objective c gesture recognizer</a>
-                
-                <a href="/tags/Swipe/" class="tag">Swipe</a>
-                
-                <a href="/tags/tap/" class="tag">tap</a>
-                
-                <a href="/tags/UIGesture/" class="tag">UIGesture</a>
-                
-                <a href="/tags/uilabel tap/" class="tag">uilabel tap</a>
-                
-                <a href="/tags/uilabel touchupinside/" class="tag">uilabel touchupinside</a>
-                
-                <a href="/tags/제스처/" class="tag">제스처</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt;">요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자. </span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt;">요즘 대부분의 앱들은 Gesture를 지원하는 앱들이 많은데, iOS의 각 컨트롤에 Gesture 객체를 등록해 주면된다. Gesture 객체는 기본적인 설정을 해주고, 해당 Gesture가 발생했을때 수행할 함수를 지정해 주면 된다. 너무 쉽게 설명했는데, 사실 그게 단데. 예를 들어, 왼쪽으로 swipe gesture를 준다고 하자. </span></p>
 <p><span style="font-size: 11pt;">  </p>
 <script src="https://gist.github.com/AhnSeongHyun/5508217.js"></script>
 <p></span></p>
@@ -146,18 +135,55 @@
 <p></span></p>
 <p><span style="font-size: 11pt;">위의 코드를 보면 알겠지만 Tap은 Swipe와 달리 UITapGestureRecognizer를 사용한다. 그리고 설정시에 반드시, numberOfTapsRequired를 지정함으로써 </span><span style="font-size: 11pt;">몇번 Tap을 해야 Gesture 로 인지할것인지를 지정해야 한다. 그 외에는 모두 swipe와 같다. 그런데 아쉽게도 제대로 수행되지 않는다. 그 이유는 <strong>UILabel에 UserInteractionEnabled 라는 속성때문이데, UILabel 의 경우 NO로 설정되어 있다. 때문에 제대로 된 기능을 위해서는 YES로 명시적으로 지정해 주어야한다. </strong></span></p>
 <p><span style="font-size: 11pt;">Gesture를 만들고 연결하는 작업에 대해서 알아 보았는데, 여러가지 다른 Gesture가 있기 때문에 공식문서를 보면서 확인해 보는것도 좋을것같다. 세세한 동작을 지원하기 위해서는 방향과 행위의 횟수 등의 설정들을 지정해서 사용하면 가능할것으로 본다. </span></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0/ios-gesture--eb-93-b1-eb-a1-9d-ed-95-98-ea-b8-b0.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

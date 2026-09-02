@@ -2,70 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>PyCurl 사용하기 - ASH84</title>
-    <meta name="description" content="페이스북 코리아에 [requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글](https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance)이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2017/11/14/pycurl-usage/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="PyCurl 사용하기"/>
-    <meta property="og:description" content="페이스북 코리아에 [requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글](https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance)이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다."/>
-    <meta property="og:url" content="https://ash84.io/2017/11/14/pycurl-usage/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="Python" />
-    
-    <meta property="article:tag" content="pycurl" />
-    
-    <meta property="article:tag" content="requests" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="PyCurl 사용하기"/>
-    <meta name="twitter:description" content="페이스북 코리아에 [requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글](https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance)이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "PyCurl 사용하기",
-        "description": "페이스북 코리아에 [requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글](https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance)이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2017/11/14/pycurl-usage"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -74,44 +17,102 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>PyCurl 사용하기 - ASH84</title>
+    <meta name="description" content="페이스북 코리아에 [requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글](https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance)이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2017/11/14/pycurl-usage/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="PyCurl 사용하기">
+    <meta property="og:description" content="페이스북 코리아에 [requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글](https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance)이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다.">
+    <meta property="og:url" content="https://ash84.io/2017/11/14/pycurl-usage/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2017-11-14">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="Python">
+
+    <meta property="article:tag" content="pycurl">
+
+    <meta property="article:tag" content="requests">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="PyCurl 사용하기">
+    <meta name="twitter:description" content="페이스북 코리아에 [requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글](https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance)이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "PyCurl \uc0ac\uc6a9\ud558\uae30",
+        "description": "\ud398\uc774\uc2a4\ubd81 \ucf54\ub9ac\uc544\uc5d0 [requests \ubcf4\ub2e4 pycurl \uc774 \ub354 \uc131\ub2a5\uc774 \uc88b\ub2e4\ub294 stackoverflow \uae00](https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance)\uc774 \uacf5\uc720\ub418\uc11c pycurl \uc774 \ubaac\uc9c0 requests \ucf54\ub4dc\uc640 \ube44\uad50\ud574 \ubcf4\uba74\uc11c \uc775\ud600\ubcf4\uc558\ub2e4. \uc77c\ub2e8 \uc544\ub798\uc758 \ucf54\ub4dc\ub294 \uc2e4\uc81c POST \uc694\uccad\uc744 \ubcf4\ub0b4\uace0 json \ub370\uc774\ud130\ub97c \ubc1b\ub294 API\ub97c \ud638\ucd9c\ud558\ub294 \ucf54\ub4dc\uc774\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2017-11-14",
+        "dateModified": "2017-11-14",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2017/11/14/pycurl-usage/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2017-11-14</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2017">2017</a><span>/</span><span>11</span><span>/</span><span>14</span><span>/</span><span class="cur">pycurl-usage/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="pycurl-usage">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'PyCurl 사용하기'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2017-11-14'</span>
+<span class="k">description</span>: <span class="v">'페이스북 코리아에 [requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글](https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance)이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/Python/">'Python'</a>, <a class="v" href="/tags/pycurl/">'pycurl'</a>, <a class="v" href="/tags/requests/">'requests'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">PyCurl 사용하기</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/Python/" class="tag">Python</a>
-                
-                <a href="/tags/pycurl/" class="tag">pycurl</a>
-                
-                <a href="/tags/requests/" class="tag">requests</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p>페이스북 코리아에 <a href="https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance">requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글</a>이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다. </p>
+            <div class="post-content" data-pagefind-body>
+<p>페이스북 코리아에 <a href="https://stackoverflow.com/questions/15461995/python-requests-vs-pycurl-performance">requests 보다 pycurl 이 더 성능이 좋다는 stackoverflow 글</a>이 공유되서 pycurl 이 몬지 requests 코드와 비교해 보면서 익혀보았다. 일단 아래의 코드는 실제 POST 요청을 보내고 json 데이터를 받는 API를 호출하는 코드이다. </p>
 <script src="https://gist.github.com/AhnSeongHyun/0148e88f1b1d278178fdc374d3238ef5.js"></script>
 
 <p>requests 는 홈페이지에도 써있듯이 Requests: HTTP for Humans 이라는 타이틀에 맞게 확실히 코드가 깔끔해 지는것 같다. 코드에 함수로 GET, POST 를 지정하고, 파라미터로 content-type 을 지정하는 건 확실히 편한것 같다. headers 값을 전달하기 위해서 dict 객체를 만들어서 키값으로 전달하면 된다. </p>
@@ -119,18 +120,55 @@
 
 <p>pycurl 은 말그대로 curl 이다. curl 에 대해서 익숙하지 않다면 처음에 사용하기가 번거로움이 있다. URL 설정, POST 요청이나 HEADER 의 경우 <code>setopt()</code> 함수를 이용해서 설정해야 한다. 원래 <code>CURLOPT_POST</code>, <code>CURLOPT_URL</code>, <code>CURLOPT_HTTPHEADER</code> 으로 설정해야 하는데, pycurl 에서는 <code>CURLOPT_URL</code> prefix 를 제거한 채로 제공하고 있다. 헤더값을 넣는 부분이나 response json 값이나, response header 를 가져올 때 requests 와 다르게 pycurl 은 문자열 형태로 주어지기 때문에 별도의 처리를 위해서는 작업을 해줘야 한다. </p>
 <p>API를 호출했을때에 속도는 확실히 차이는 나는것 같다. 전문적인 테스트를 해보진 않았지만 같은 API에 대한 결과를 받고 시간을 체크를 해보면 차이는 확실하게 나는 것 같다. 기존에 사용하고 있는 requests 를 코드상에서 대체할지는 개인적으로 약간 주저되긴 하는데, 성능이슈가 생기게 되면 좋은 대안이 될 것 같다. </p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/pycurl-usage/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/pycurl-usage/pycurl-usage.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

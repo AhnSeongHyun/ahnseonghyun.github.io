@@ -2,80 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동. - ASH84</title>
-    <meta name="description" content="원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2010/11/18/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동."/>
-    <meta property="og:description" content="원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면"/>
-    <meta property="og:url" content="https://ash84.io/2010/11/18/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="C#" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="winform" />
-    
-    <meta property="article:tag" content="안성현" />
-    
-    <meta property="article:tag" content="윈폼" />
-    
-    <meta property="article:tag" content="윈폼 이동" />
-    
-    <meta property="article:tag" content="최대화" />
-    
-    <meta property="article:tag" content="최소화" />
-    
-    <meta property="article:tag" content="컨트롤박스" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동."/>
-    <meta name="twitter:description" content="원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면"/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동.",
-        "description": "원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2010/11/18/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -84,54 +17,112 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동. - ASH84</title>
+    <meta name="description" content="원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2010/11/18/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동.">
+    <meta property="og:description" content="원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면">
+    <meta property="og:url" content="https://ash84.io/2010/11/18/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2010-11-18">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="C#">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="winform">
+
+    <meta property="article:tag" content="안성현">
+
+    <meta property="article:tag" content="윈폼">
+
+    <meta property="article:tag" content="윈폼 이동">
+
+    <meta property="article:tag" content="최대화">
+
+    <meta property="article:tag" content="최소화">
+
+    <meta property="article:tag" content="컨트롤박스">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동.">
+    <meta name="twitter:description" content="원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[C#] \uc708\ud3fc \ucee8\ud2b8\ub864 \ubc15\uc2a4 \uc5c6\uc774 \ub9c8\uc6b0\uc2a4 \ub4dc\ub798\uadf8\uc564 \ub4dc\ub86d\uc73c\ub85c \uc774\ub3d9.",
+        "description": "\uc6d0\ub798 \ub2e4\ub978 \ubd84 \ube14\ub85c\uadf8\uc5d0 \uc788\uc5c8\ub358 \uac83\uc778\ub370, \ud37c\uc654\uc2b5\ub2c8\ub2e4. \ucd9c\ucc98\ub97c \ud45c\uc2dc\ud574\uc57c \ud558\ub294\ub370, \ud504\ub85c\uc81d\ud2b8 \ucf54\ub4dc\uc5d0 \ub123\uc740\uc9c0 \uaf64 \ub3fc\uc11c \ucd9c\ucc98 \ucc3e\uae30\uac00 \ud798\ub4dc\ub124\uc694. \u3160 \ud639\uc2dc \ubcf4\uc2dc\ub2e4\uac00 \ubcf8\uc778\uc774 \uc4f4 \uae00\uc774\ub77c\uace0 \ud558\uc2dc\uba74",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2010-11-18",
+        "dateModified": "2010-11-18",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2010/11/18/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2010-11-18</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2010">2010</a><span>/</span><span>11</span><span>/</span><span>18</span><span>/</span><span class="cur">c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동.'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2010-11-18'</span>
+<span class="k">description</span>: <span class="v">'원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/C#/">'C#'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/winform/">'winform'</a>, <a class="v" href="/tags/안성현/">'안성현'</a>, <a class="v" href="/tags/윈폼/">'윈폼'</a>, <a class="v" href="/tags/윈폼 이동/">'윈폼 이동'</a>, <a class="v" href="/tags/최대화/">'최대화'</a>, <a class="v" href="/tags/최소화/">'최소화'</a>, <a class="v" href="/tags/컨트롤박스/">'컨트롤박스'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">[C#] 윈폼 컨트롤 박스 없이 마우스 드래그앤 드롭으로 이동.</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/C#/" class="tag">C#</a>
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/winform/" class="tag">winform</a>
-                
-                <a href="/tags/안성현/" class="tag">안성현</a>
-                
-                <a href="/tags/윈폼/" class="tag">윈폼</a>
-                
-                <a href="/tags/윈폼 이동/" class="tag">윈폼 이동</a>
-                
-                <a href="/tags/최대화/" class="tag">최대화</a>
-                
-                <a href="/tags/최소화/" class="tag">최소화</a>
-                
-                <a href="/tags/컨트롤박스/" class="tag">컨트롤박스</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <div style="text-align: justify; line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; color: rgb(200, 5, 106); font-family: Dotum; line-height: 2; ">원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면 출처표시 해 드리겠습니다. </span></div>
+            <div class="post-content" data-pagefind-body>
+<div style="text-align: justify; line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; color: rgb(200, 5, 106); font-family: Dotum; line-height: 2; ">원래 다른 분 블로그에 있었던 것인데, 퍼왔습니다. 출처를 표시해야 하는데, 프로젝트 코드에 넣은지 꽤 돼서 출처 찾기가 힘드네요. ㅠ 혹시 보시다가 본인이 쓴 글이라고 하시면 출처표시 해 드리겠습니다. </span></div>
 <p><span style="font-size: 11pt; "><br />
 </span></p>
 <div style="text-align: justify; line-height: 2; color: rgb(51, 51, 51); font-family: 굴림; font-size: 9pt; "><span style="font-size: 11pt; ">  
@@ -279,18 +270,55 @@
 <p><strong><br />
 <span style="font-size: 11pt; "><br />
 </span></strong><span style="font-size: 11pt; ">다이얼로그의 OnLButtonDoown 에서 위의 PostMessage 부분 추가해 주면 됨. 생각보다 쉽게 구현됨. </span></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a/c--ec-9c-88-ed-8f-bc--ec-bb-a8-ed-8a-b8-eb-a1-a4--eb-b0-95-ec-8a-a4--ec-97-86-ec-9d-b4--eb-a7-88-ec-9a-b0-ec-8a-a4--eb-93-9c-eb-9e-98-ea-b7-b8-ec-95-a.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

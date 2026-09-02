@@ -2,76 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>[Java] 간단 gson wrapping 하기 - ASH84</title>
-    <meta name="description" content="여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2013/01/11/java-gson-wrapping/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="[Java] 간단 gson wrapping 하기"/>
-    <meta property="og:description" content="여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to"/>
-    <meta property="og:url" content="https://ash84.io/2013/01/11/java-gson-wrapping/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="GSON" />
-    
-    <meta property="article:tag" content="JSON" />
-    
-    <meta property="article:tag" content="clean-code" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="open-source" />
-    
-    <meta property="article:tag" content="tutorial" />
-    
-    <meta property="article:tag" content="wrapping class" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="[Java] 간단 gson wrapping 하기"/>
-    <meta name="twitter:description" content="여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to"/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "[Java] 간단 gson wrapping 하기",
-        "description": "여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2013/01/11/java-gson-wrapping"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -80,64 +17,159 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>[Java] 간단 gson wrapping 하기 - ASH84</title>
+    <meta name="description" content="여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2013/01/11/java-gson-wrapping/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="[Java] 간단 gson wrapping 하기">
+    <meta property="og:description" content="여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to">
+    <meta property="og:url" content="https://ash84.io/2013/01/11/java-gson-wrapping/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-01-11">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="GSON">
+
+    <meta property="article:tag" content="JSON">
+
+    <meta property="article:tag" content="clean-code">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="open-source">
+
+    <meta property="article:tag" content="tutorial">
+
+    <meta property="article:tag" content="wrapping class">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="[Java] 간단 gson wrapping 하기">
+    <meta name="twitter:description" content="여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Java] \uac04\ub2e8 gson wrapping \ud558\uae30",
+        "description": "\uc5ec\ub7ec\uac00\uc9c0 \ub77c\uc774\ube0c\ub7ec\ub9ac\uac00 \uc788\uaca0\uc9c0\ub9cc \ub2e8\uc5f0 json \ub77c\uc774\ube0c\ub7ec\ub9ac \uc911\uc5d0 \ub0b4\uac00 \uac00\uc7a5 \uc798 \uc4f0\ub294 \uac83\uc740 [gson ](http://ash84.tistory.com/775)\uc774\ub2e4. \uc4f0\uae30 \ud3b8\ud574\uc11c \uc77c\uc218\ub3c4 \uc788\uc9c0\ub9cc, \ud568\uc218\uc774\ub984\uc774\ub098 \uadf8\ub7f0\uac83\ub4e4\uc774 \uc798 \uc9c0\uc5b4\uc838\uc788\uc5b4\uc11c \uc9c1\uad00\uc801\uc774\ub2e4. wrapping \ud074\ub798\uc2a4\ub97c \ub9cc\ub4dc\ub294 \uc774\uc720\ub294 \uc5ec\ub7ec \ud074\ub798\uc2a4\uc5d0\uc11c new \ub97c \uc774\uc6a9\ud574\uc11c Gson \uac1d\uccb4\ub97c \uc0dd\uc131\ud558\ub294\ub370, \uad73\uc774 \uadf8\ub7f4 \ud544\uc694\uac00 \uc788\uc744\uae4c \uc2f6\uc5b4\uc11c \ub9cc\ub4e4\uac8c \ub418\uc5c8\ub2e4. wrapping \ud074\ub798\uc2a4\uc5d0\ub294\u00a0toJson() \u00a0\ud568\uc218 \ubc16\uc5d0 \uc5c6\ub294\ub370 \uadf8\u00a0\uc774\uc720\ub294\u00a0class to",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2013-01-11",
+        "dateModified": "2013-01-11",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/01/11/java-gson-wrapping/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2013-01-11</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2013">2013</a><span>/</span><span>01</span><span>/</span><span>11</span><span>/</span><span class="cur">java-gson-wrapping/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="java-gson-wrapping">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'[Java] 간단 gson wrapping 하기'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2013-01-11'</span>
+<span class="k">description</span>: <span class="v">'여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/GSON/">'GSON'</a>, <a class="v" href="/tags/JSON/">'JSON'</a>, <a class="v" href="/tags/clean-code/">'clean-code'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/open-source/">'open-source'</a>, <a class="v" href="/tags/tutorial/">'tutorial'</a>, <a class="v" href="/tags/wrapping class/">'wrapping class'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">[Java] 간단 gson wrapping 하기</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/GSON/" class="tag">GSON</a>
-                
-                <a href="/tags/JSON/" class="tag">JSON</a>
-                
-                <a href="/tags/clean-code/" class="tag">clean-code</a>
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/open-source/" class="tag">open-source</a>
-                
-                <a href="/tags/tutorial/" class="tag">tutorial</a>
-                
-                <a href="/tags/wrapping class/" class="tag">wrapping class</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt;">여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 <a href="http://ash84.tistory.com/775">gson </a>이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to json String 기능만 필요로 했기 때문이다. 약 10개가 넘는 클래스에서 GSon을 객체를 만드는것 보다는 이렇게 static 으로 만들어두고 필요할때 마다 불러다 쓰는 편이 나을것으로 판단했다. </span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt;">여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 <a href="http://ash84.tistory.com/775">gson </a>이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to json String 기능만 필요로 했기 때문이다. 약 10개가 넘는 클래스에서 GSon을 객체를 만드는것 보다는 이렇게 static 으로 만들어두고 필요할때 마다 불러다 쓰는 편이 나을것으로 판단했다. </span></p>
 <p><span style="font-size: 11pt;">클린코드에서 봤는데, 어떤 라이브러리 혹은 오픈소스를 가져다 쓸때, 그대로 가져다 쓰는 것은 아무리 사용법을 잘 알더라고 권장하지는 않는다고 한다. 만들려고 하는 목적에 부합하는 기능만 따로 뽑아서 wra</span><span style="font-size: 11pt;">pper 클래스를 만들어 쓰는 습관을 들여야 겠다. </span></p>
 <script src="https://gist.github.com/4508680.js"></script>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/java-gson-wrapping/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/java-gson-wrapping/java-gson-wrapping.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

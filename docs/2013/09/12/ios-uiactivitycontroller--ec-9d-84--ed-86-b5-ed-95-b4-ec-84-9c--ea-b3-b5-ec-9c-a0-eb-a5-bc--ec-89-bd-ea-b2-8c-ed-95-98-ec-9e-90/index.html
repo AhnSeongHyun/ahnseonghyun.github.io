@@ -2,74 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(iOS) UIActivityController 을 통해서 공유를 쉽게하자. - ASH84</title>
-    <meta name="description" content="다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 `UIActivityController`를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2013/09/12/ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(iOS) UIActivityController 을 통해서 공유를 쉽게하자."/>
-    <meta property="og:description" content="다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 `UIActivityController`를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자."/>
-    <meta property="og:url" content="https://ash84.io/2013/09/12/ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="Custom UIActivity" />
-    
-    <meta property="article:tag" content="UIActivity" />
-    
-    <meta property="article:tag" content="UIActivityViewController" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="iOS" />
-    
-    <meta property="article:tag" content="open-source" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(iOS) UIActivityController 을 통해서 공유를 쉽게하자."/>
-    <meta name="twitter:description" content="다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 `UIActivityController`를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(iOS) UIActivityController 을 통해서 공유를 쉽게하자.",
-        "description": "다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 `UIActivityController`를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2013/09/12/ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -78,48 +17,106 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(iOS) UIActivityController 을 통해서 공유를 쉽게하자. - ASH84</title>
+    <meta name="description" content="다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 `UIActivityController`를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2013/09/12/ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(iOS) UIActivityController 을 통해서 공유를 쉽게하자.">
+    <meta property="og:description" content="다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 `UIActivityController`를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자.">
+    <meta property="og:url" content="https://ash84.io/2013/09/12/ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-09-12">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="Custom UIActivity">
+
+    <meta property="article:tag" content="UIActivity">
+
+    <meta property="article:tag" content="UIActivityViewController">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="iOS">
+
+    <meta property="article:tag" content="open-source">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(iOS) UIActivityController 을 통해서 공유를 쉽게하자.">
+    <meta name="twitter:description" content="다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 `UIActivityController`를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(iOS) UIActivityController \uc744 \ud1b5\ud574\uc11c \uacf5\uc720\ub97c \uc27d\uac8c\ud558\uc790.",
+        "description": "\ub2e4\uc2dc \uc571\uacfc \uc11c\ube44\uc2a4 \uac1c\ubc1c\uc5d0 \ub9e4\uc9c4\uc744 \ud558\uace0 \uc788\ub294\ub370 \ucd5c\uadfc\uc5d0 \ud55c\uc6b0\ucc3e\uae30 iOS7 \uc791\uc5c5\uc744 \uc9c4\ud589\ud558\uace0 \uc788\ub294\ub370\u00a0`UIActivityController`\ub97c \uc0ac\uc6a9\ud55c \uacbd\ud5d8\uc5d0 \ub300\ud574\uc11c \uacf5\uc720\ud558\uace0\uc790 \ud55c\ub2e4. \uc77c\ub2e8 \uc544\ub798\uc758 \ubd88\ud3b8\ud55c \uc9c4\uc2e4\uc744 \ubcf4\uace0 \uc2dc\uc791\ud558\uc790.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2013-09-12",
+        "dateModified": "2013-09-12",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/09/12/ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2013-09-12</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2013">2013</a><span>/</span><span>09</span><span>/</span><span>12</span><span>/</span><span class="cur">ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(iOS) UIActivityController 을 통해서 공유를 쉽게하자.'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2013-09-12'</span>
+<span class="k">description</span>: <span class="v">'다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 `UIActivityController`를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/Custom UIActivity/">'Custom UIActivity'</a>, <a class="v" href="/tags/UIActivity/">'UIActivity'</a>, <a class="v" href="/tags/UIActivityViewController/">'UIActivityViewController'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/iOS/">'iOS'</a>, <a class="v" href="/tags/open-source/">'open-source'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(iOS) UIActivityController 을 통해서 공유를 쉽게하자.</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/Custom UIActivity/" class="tag">Custom UIActivity</a>
-                
-                <a href="/tags/UIActivity/" class="tag">UIActivity</a>
-                
-                <a href="/tags/UIActivityViewController/" class="tag">UIActivityViewController</a>
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/iOS/" class="tag">iOS</a>
-                
-                <a href="/tags/open-source/" class="tag">open-source</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt;">다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 <code>UIActivityController</code>를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자. </span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt;">다시 앱과 서비스 개발에 매진을 하고 있는데 최근에 한우찾기 iOS7 작업을 진행하고 있는데 <code>UIActivityController</code>를 사용한 경험에 대해서 공유하고자 한다. 일단 아래의 불편한 진실을 보고 시작하자. </span></p>
 <p><span style="font-size: 11pt;"><strong>iOS7에서 깨지는것 외에도 기존의 결과 뷰에서 복사하기, 저장하기 메일로 보내기 버튼이 하단에 있는 문제점과 함께 카카오톡이나 페이스북, 메일, 라인 등으로 보낼수 없다는게 가장 큰 이슈였다.</strong> 그래서 생각한 것이 <code>UIActivityController</code> 이다. </span></p>
 <p><span style="font-size: 11pt;">이걸 사용해서 가질수 있는 <strong>가장 큰 장점은 2가지이다.</strong></span></p>
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px;"><span style="font-size: 11pt;">1. 사용자가 상단의 NavigationBar 우측 상단의 버튼을 눌러서 현재 보는 화면 하단 위에 뜨기 때문에 결과뷰의 스크롤 어디서라도 사용할 수 있다는 장점이 있다. 기존에는 반드시 아래에 가서 눌러야 했다. </span>
@@ -175,18 +172,55 @@
 <p><a href="http://ash84.tistory.com/entry/iOS-UIImagePickerController-이미지동영상-저장하기">2014/01/20 – [Programming/iOS] – (iOS) UIImagePickerController 이미지/동영상 저장하기</a></p>
 <p><a href="http://ash84.tistory.com/entry/iOS-UIAlertView-TextField-추가-및-키보드-변경">2013/09/27 – [Programming/iOS] – (iOS) UIAlertView TextField 추가 및 키보드 변경</a></p>
 <p><span style="font-size: 11pt;"></span></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90/ios-uiactivitycontroller--ec-9d-84--ed-86-b5-ed-95-b4-ec-84-9c--ea-b3-b5-ec-9c-a0-eb-a5-bc--ec-89-bd-ea-b2-8c-ed-95-98-ec-9e-90.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

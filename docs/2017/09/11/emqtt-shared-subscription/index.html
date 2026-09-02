@@ -2,88 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>emqtt shared subscription - ASH84</title>
-    <meta name="description" content="최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 **Shared Subscriptions** 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2017/09/11/emqtt-shared-subscription/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="emqtt shared subscription"/>
-    <meta property="og:description" content="최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 **Shared Subscriptions** 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을"/>
-    <meta property="og:url" content="https://ash84.io/2017/09/11/emqtt-shared-subscription/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="emqtt" />
-    
-    <meta property="article:tag" content="mqtt" />
-    
-    <meta property="article:tag" content="open-source" />
-    
-    <meta property="article:tag" content="python" />
-    
-    <meta property="article:tag" content="shared subscription" />
-    
-    
-        
-    <meta property="og:image" content="https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif"/>
-        
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="emqtt shared subscription"/>
-    <meta name="twitter:description" content="최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 **Shared Subscriptions** 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을"/>
-    
-        
-    <meta name="twitter:image" content="https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif"/>
-        
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "emqtt shared subscription",
-        "description": "최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 **Shared Subscriptions** 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2017/09/11/emqtt-shared-subscription"
-        },
-        
-            
-        "image": "https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif",
-            
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -92,52 +17,122 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>emqtt shared subscription - ASH84</title>
+    <meta name="description" content="최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 **Shared Subscriptions** 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2017/09/11/emqtt-shared-subscription/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="emqtt shared subscription">
+    <meta property="og:description" content="최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 **Shared Subscriptions** 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을">
+    <meta property="og:url" content="https://ash84.io/2017/09/11/emqtt-shared-subscription/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2017-09-11">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="emqtt">
+
+    <meta property="article:tag" content="mqtt">
+
+    <meta property="article:tag" content="open-source">
+
+    <meta property="article:tag" content="Python">
+
+    <meta property="article:tag" content="shared subscription">
+
+
+
+    <meta property="og:image" content="https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif">
+
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="emqtt shared subscription">
+    <meta name="twitter:description" content="최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 **Shared Subscriptions** 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을">
+
+
+    <meta name="twitter:image" content="https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif">
+
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "emqtt shared subscription",
+        "description": "\ucd5c\uadfc\uc5d0 \uc6b0\uc544\ud55c\ud615\uc81c\ub4e4 \uae30\uc220\ube14\ub85c\uadf8\uc5d0\uc11c mqtt \uad00\ub828 \uae00\uc774 \uc62c\ub77c\uc628\uac83\uc744 \ubd24\ub294\ub370, \ub9c8\uce68 \uc0c8 \ud504\ub85c\uc81d\ud2b8\uc5d0\uc11c mqtt \ub97c \uc0ac\uc6a9\ud560 \uacbd\uc6b0\uac00 \uc0dd\uacbc\ub2e4. mqtt\uc758 \uc5ec\ub7ec\uac00\uc9c0 \uae30\ub2a5 \uc911\uc5d0\uc11c **Shared Subscriptions** \uae30\ub2a5\uc774 \ud544\uc694\ud588\ub2e4. \uc774 \uae30\ub2a5\uc774 \ud544\uc694\ud55c \uc774\uc720\ub294 \ud558\ub098\uc758 \ud1a0\ud53d\uc744 \uc5ec\ub7ec \ud074\ub77c\uc774\uc5b8\ud2b8\uac00 \uc218\uc2e0\ud558\uace0 \uc788\ub294 \uc0c1\ud0dc\uc5d0\uc11c \uc5ec\ub7ec \ud074\ub77c\uc774\uc5b8\ud2b8 \uc911 \ud558\ub098\ub9cc \uc5b4\ub5a4 \uae30\ub2a5\uc744 \ud558\uae30 \uc704\ud574\uc11c\uc774\ub2e4. \uc608\ub97c \ub4e4\uba74, \uc8fc\ubb38\uc0c1\ud0dc\uac00 \ubcc0\uacbd\ub418\uba74 \uc54c\ub9bc\uc744 \ubc1c\uc1a1\ud574\uc57c\ud558\ub294\ub370 2\uac1c\uc758 \ud074\ub77c\uc774\uc5b8\ud2b8\uac00 \uc218\uc2e0\ud558\uace0 \uc788\ub2e4\uace0\ud560\ub54c, \ub450\ubc88 \uc54c\ub9bc\uc774 \ubc1c\uc1a1\ub418\ub294 \ubb38\uc81c\uac00 \ubc1c\uc0dd\ud558\ub294\ub370 shared subscription \uc744",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2017-09-11",
+        "dateModified": "2017-09-11",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2017/09/11/emqtt-shared-subscription/"
+        },
+
+
+        "image": "https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif",
+
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2017-09-11</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2017">2017</a><span>/</span><span>09</span><span>/</span><span>11</span><span>/</span><span class="cur">emqtt-shared-subscription/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="emqtt-shared-subscription">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'emqtt shared subscription'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2017-09-11'</span>
+<span class="k">description</span>: <span class="v">'최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 **Shared Subscriptions** 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/emqtt/">'emqtt'</a>, <a class="v" href="/tags/mqtt/">'mqtt'</a>, <a class="v" href="/tags/open-source/">'open-source'</a>, <a class="v" href="/tags/Python/">'Python'</a>, <a class="v" href="/tags/shared subscription/">'shared subscription'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">emqtt shared subscription</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/emqtt/" class="tag">emqtt</a>
-                
-                <a href="/tags/mqtt/" class="tag">mqtt</a>
-                
-                <a href="/tags/open-source/" class="tag">open-source</a>
-                
-                <a href="/tags/python/" class="tag">python</a>
-                
-                <a href="/tags/shared subscription/" class="tag">shared subscription</a>
-                
-            </div>
-            
-        </header>
 
-        
-        <figure class="post-image">
-            <img src="https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif" alt="emqtt shared subscription">
-        </figure>
-        
+            <figure class="post-image"><img src="https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif" alt="emqtt shared subscription"></figure>
 
-        <div class="post-content">
-            <p>최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 <strong>Shared Subscriptions</strong> 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을 사용하면 그 중 하나만 해당 토픽에서 온 메시지를 처리하는 기능을 하게 된다. </p>
+            <div class="post-content" data-pagefind-body>
+<p>최근에 우아한형제들 기술블로그에서 mqtt 관련 글이 올라온것을 봤는데, 마침 새 프로젝트에서 mqtt 를 사용할 경우가 생겼다. mqtt의 여러가지 기능 중에서 <strong>Shared Subscriptions</strong> 기능이 필요했다. 이 기능이 필요한 이유는 하나의 토픽을 여러 클라이언트가 수신하고 있는 상태에서 여러 클라이언트 중 하나만 어떤 기능을 하기 위해서이다. 예를 들면, 주문상태가 변경되면 알림을 발송해야하는데 2개의 클라이언트가 수신하고 있다고할때, 두번 알림이 발송되는 문제가 발생하는데 shared subscription 을 사용하면 그 중 하나만 해당 토픽에서 온 메시지를 처리하는 기능을 하게 된다. </p>
 <p><img alt="" src="https://www.hivemq.com/docs/hivemq/latest/images/shared-subscriptions/shared_subscriptions.gif" /></p>
 <p>문제는 이 기능은 모든 mqtt 브로커가 가지고 있는것이 아니라는 점이다. 유료 솔루션은 지원하고 있는것들도 있는데 오픈소스는 해당 기능을 지원하는지 살펴봐야 한다. 원래는 moquitto 를 사용하려고 했는데 지원하기 않아서 다른것을 찾다가 <a href="http://emqtt.io/">emqtt</a> 는 오픈소스이면서 해당 기능을 지원하고 대시보드 기능까지 있어서 사용하게 되었다. 브로커는 emqtt 를 사용하고 클라이언트는 paho 를 wrapping 한 flask-mqtt 를 사용하고 있다. </p>
 <pre><code class="language-python"># publish 
@@ -164,18 +159,55 @@ print(m.payload)
 <li><a href="http://woowabros.github.io/experience/2017/08/28/mqtt_stress_test.html">Mqtt Stress Test</a></li>
 <li><a href="http://woowabros.github.io/experience/2017/08/11/ost_mqtt_broker.html">MQTT 적용을 통한 중계시스템 개선</a></li>
 </ul>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/emqtt-shared-subscription/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/emqtt-shared-subscription/emqtt-shared-subscription.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

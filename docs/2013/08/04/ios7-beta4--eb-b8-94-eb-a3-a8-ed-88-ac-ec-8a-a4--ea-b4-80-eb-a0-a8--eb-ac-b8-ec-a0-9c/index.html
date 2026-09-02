@@ -2,74 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>iOS7 beta4, 블루투스 관련 문제 - ASH84</title>
-    <meta name="description" content="최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2013/08/04/ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="iOS7 beta4, 블루투스 관련 문제"/>
-    <meta property="og:description" content="최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을"/>
-    <meta property="og:url" content="https://ash84.io/2013/08/04/ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="CBCentralManager" />
-    
-    <meta property="article:tag" content="CoreBluetooth" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="ios6" />
-    
-    <meta property="article:tag" content="bluetooth" />
-    
-    <meta property="article:tag" content="코어 블루투스" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="iOS7 beta4, 블루투스 관련 문제"/>
-    <meta name="twitter:description" content="최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을"/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "iOS7 beta4, 블루투스 관련 문제",
-        "description": "최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2013/08/04/ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -78,65 +17,160 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>iOS7 beta4, 블루투스 관련 문제 - ASH84</title>
+    <meta name="description" content="최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2013/08/04/ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="iOS7 beta4, 블루투스 관련 문제">
+    <meta property="og:description" content="최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을">
+    <meta property="og:url" content="https://ash84.io/2013/08/04/ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-08-04">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="CBCentralManager">
+
+    <meta property="article:tag" content="CoreBluetooth">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="ios6">
+
+    <meta property="article:tag" content="bluetooth">
+
+    <meta property="article:tag" content="코어 블루투스">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="iOS7 beta4, 블루투스 관련 문제">
+    <meta name="twitter:description" content="최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "iOS7 beta4, \ube14\ub8e8\ud22c\uc2a4 \uad00\ub828 \ubb38\uc81c",
+        "description": "\ucd5c\uadfc\uc5d0 \uc54c\ubc14\uc2dd\uc73c\ub85c iOS7 \uc571 \ubcc0\uacbd \uc791\uc5c5\uc744 \ud558\uace0 \uc788\ub294\ub370 \ube14\ub8e8\ud22c\uc2a4 \ucabd\uc5d0\uc11c \uc880 \uc774\uc0c1\ud55c \ubd80\ubd84\uc774 \uc788\uc5b4\uc11c \uc77c\ub2e8 \ud3ec\uc2a4\ud305\uc744 \ud55c\ub2e4. \ubb38\uc81c\uc758 \ud604\uc0c1\uc740 `CBCentralManager` \uac1d\uccb4\ub97c \ud1b5\ud574\uc11c \uc8fc\ubcc0\uc758 \ube14\ub8e8\ud22c\uc2a4 \uae30\uae30\ub97c \ucc3e\uc740\ud6c4, \uc5f0\uacb0 \ud558\ub824\ub294 \uae30\uae30\uc5d0 \ub300\ud574\uc11c \uc5f0\uacb0\uc744 \ud55c\ub2e4\uc74c\uc5d0 \uae30\uae30\uc5d0 \ud574\ub2f9\ud558\ub294 \uac1d\uccb4\uc778 `CBPeripheral` \uc5d0 writeValue \ub85c \uc5b4\ub5a4 \uac12\uc744",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2013-08-04",
+        "dateModified": "2013-08-04",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/08/04/ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2013-08-04</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2013">2013</a><span>/</span><span>08</span><span>/</span><span>04</span><span>/</span><span class="cur">ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'iOS7 beta4, 블루투스 관련 문제'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2013-08-04'</span>
+<span class="k">description</span>: <span class="v">'최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 `CBCentralManager` 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 `CBPeripheral` 에 writeValue 로 어떤 값을'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/CBCentralManager/">'CBCentralManager'</a>, <a class="v" href="/tags/CoreBluetooth/">'CoreBluetooth'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/ios6/">'ios6'</a>, <a class="v" href="/tags/bluetooth/">'bluetooth'</a>, <a class="v" href="/tags/코어 블루투스/">'코어 블루투스'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">iOS7 beta4, 블루투스 관련 문제</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/CBCentralManager/" class="tag">CBCentralManager</a>
-                
-                <a href="/tags/CoreBluetooth/" class="tag">CoreBluetooth</a>
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/ios6/" class="tag">ios6</a>
-                
-                <a href="/tags/bluetooth/" class="tag">bluetooth</a>
-                
-                <a href="/tags/코어 블루투스/" class="tag">코어 블루투스</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 <code>CBCentralManager</code> 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 <code>CBPeripheral</code> 에 writeValue 로 어떤 값을 보내는데 그 다음에 unknown 에러가 발생하는 것이다. </span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt;"></span><span style="font-size: 11pt;"></span><span style="font-size: 11pt;">최근에 알바식으로 iOS7 앱 변경 작업을 하고 있는데 블루투스 쪽에서 좀 이상한 부분이 있어서 일단 포스팅을 한다. 문제의 현상은 <code>CBCentralManager</code> 객체를 통해서 주변의 블루투스 기기를 찾은후, 연결 하려는 기기에 대해서 연결을 한다음에 기기에 해당하는 객체인 <code>CBPeripheral</code> 에 writeValue 로 어떤 값을 보내는데 그 다음에 unknown 에러가 발생하는 것이다. </span></p>
 <p><span style="font-size: 11pt;">이 부분에 대해서 가장 큰 문제는 현재 iOS6 에서는 발생이 안된다는 점이고, pre-release 도큐먼트를 확인해 보면 몇가지 core bluetooth 부분에 추가되는 클래스나 함수 그리고  deprecated 되는 변수화 함수가 있는것 같은데, 그 부분과 내부적으로 영향을 미치는 지는 알수가 없으니 답답하다. </span></p>
 <p><span style="font-size: 11pt;">https://devforums.apple.com/thread/190201?tstart=0</span></p>
 <p><span style="font-size: 11pt;">Apple Developer Forums 에서도 이 부분은 확실히 버그라고 여기는 것 같다. 나 역시 같은 기기로 다은 iOS 탑재 아이폰5로 테스트 했을때 iOS6 에서는 문제가 발생되지 않는것을 확인하였다. 포럼에서는 연결된 디바이스를 아이폰 내 블루투스 설정에 들어가서 forget device를 해주어야 한다고 하는데, 좀더 테스트를 해봐야 할것 같다. </span></p>
 <p><span style="font-size: 11pt;">beta4 가 나와서 gm 버전이 곧 나올것 처럼 사람들이 애기하곤 하는데.. 글쎼다. 블루투스 쪽도 약간의 문제가 있는것 같고 iOS7 beta4 를 설치해서 사용해 보면 iOS6 보다 이상하게 터치후 액션이 느린것을 확연하게 느낄수 있다. 또한 status 바 부분 역시 맥부기의 다른 프로그래머들도 아직은 수정할 단계가 아니라고 한다. </span></p>
 <p><span style="font-size: 11pt;">좀더 지켜보자. iOS7.</span></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c/ios7-beta4--eb-b8-94-eb-a3-a8-ed-88-ac-ec-8a-a4--ea-b4-80-eb-a0-a8--eb-ac-b8-ec-a0-9c.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

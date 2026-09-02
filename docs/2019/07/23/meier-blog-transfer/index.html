@@ -2,76 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>meier 1.0.1 와 블로그 이사기 - ASH84</title>
-    <meta name="description" content="몇 주전부터 심심할 때마다 블로그 서버인 [meier](https://github.com/meier-project/meier) 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 `docker` 를 사용하도록 바꾸는 작업이었다. `docker` 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2019/07/23/meier-blog-transfer/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="meier 1.0.1 와 블로그 이사기"/>
-    <meta property="og:description" content="몇 주전부터 심심할 때마다 블로그 서버인 [meier](https://github.com/meier-project/meier) 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 `docker` 를 사용하도록 바꾸는 작업이었다. `docker` 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다."/>
-    <meta property="og:url" content="https://ash84.io/2019/07/23/meier-blog-transfer/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="AWS" />
-    
-    <meta property="article:tag" content="blog" />
-    
-    <meta property="article:tag" content="deployment" />
-    
-    <meta property="article:tag" content="lightsail" />
-    
-    <meta property="article:tag" content="medical-informatics" />
-    
-    <meta property="article:tag" content="meier" />
-    
-    <meta property="article:tag" content="project-showcase" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="meier 1.0.1 와 블로그 이사기"/>
-    <meta name="twitter:description" content="몇 주전부터 심심할 때마다 블로그 서버인 [meier](https://github.com/meier-project/meier) 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 `docker` 를 사용하도록 바꾸는 작업이었다. `docker` 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "meier 1.0.1 와 블로그 이사기",
-        "description": "몇 주전부터 심심할 때마다 블로그 서버인 [meier](https://github.com/meier-project/meier) 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 `docker` 를 사용하도록 바꾸는 작업이었다. `docker` 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2019/07/23/meier-blog-transfer"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -80,50 +17,108 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>meier 1.0.1 와 블로그 이사기 - ASH84</title>
+    <meta name="description" content="몇 주전부터 심심할 때마다 블로그 서버인 [meier](https://github.com/meier-project/meier) 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 `docker` 를 사용하도록 바꾸는 작업이었다. `docker` 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2019/07/23/meier-blog-transfer/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="meier 1.0.1 와 블로그 이사기">
+    <meta property="og:description" content="몇 주전부터 심심할 때마다 블로그 서버인 [meier](https://github.com/meier-project/meier) 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 `docker` 를 사용하도록 바꾸는 작업이었다. `docker` 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다.">
+    <meta property="og:url" content="https://ash84.io/2019/07/23/meier-blog-transfer/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-07-23">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="AWS">
+
+    <meta property="article:tag" content="blog">
+
+    <meta property="article:tag" content="deploy">
+
+    <meta property="article:tag" content="lightsail">
+
+    <meta property="article:tag" content="medical-informatics">
+
+    <meta property="article:tag" content="meier">
+
+    <meta property="article:tag" content="project-showcase">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="meier 1.0.1 와 블로그 이사기">
+    <meta name="twitter:description" content="몇 주전부터 심심할 때마다 블로그 서버인 [meier](https://github.com/meier-project/meier) 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 `docker` 를 사용하도록 바꾸는 작업이었다. `docker` 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "meier 1.0.1 \uc640 \ube14\ub85c\uadf8 \uc774\uc0ac\uae30",
+        "description": "\uba87 \uc8fc\uc804\ubd80\ud130 \uc2ec\uc2ec\ud560 \ub54c\ub9c8\ub2e4 \ube14\ub85c\uadf8 \uc11c\ubc84\uc778 [meier](https://github.com/meier-project/meier) \ub97c \uace0\uce58\ub294 \uc791\uc5c5\ub4e4\uc744 \ud558\uace0 \uc788\uc5c8\ub2e4. \ucf54\ub4dc\ub3c4 \ub0a1\uace0, \uc11c\ubc84\ub3c4 \ub0a1\uc740 \uc0c1\ud0dc\ub85c \ubc14\uafb8\uace0 \uc2f6\uc740 \ub9c8\uc74c\uc774 \uad74\ub69d \uac19\uc558\ub294\ub370 \uadf8\ub3d9\uc548 \uc5ec\uc720\uac00 \uc548\ub0ac\ub294\ub370 \uc57c\uae08\uc57c\uae08 \ubc14\uafb8\uae30 \uc2dc\uc791\ud588\ub2e4. \uc5ec\ub7ec\uac00\uc9c0\uac00 \uc788\uaca0\uc9c0\ub9cc \uadf8 \uc911\uc5d0 \uac00\uc7a5 \uc911\uc694\ud55c \uac83\uc740 `docker` \ub97c \uc0ac\uc6a9\ud558\ub3c4\ub85d \ubc14\uafb8\ub294 \uc791\uc5c5\uc774\uc5c8\ub2e4. `docker` \ub97c \uac1c\uc778\uc801\uc73c\ub85c \uc798 \uc0ac\uc6a9\ud558\uc9c0 \ubabb\ud574\uc11c \uac1c\uc778 \ud504\ub85c\uc81d\ud2b8\uc5d0\uc11c \uc0ac\uc6a9\ud574 \ubcf4\uace0 \uc2f6\uc5c8\uace0, \ub098\uc911\uc5d0 \ucee8\ud14c\uc774\ub108 \uae30\ubc18\uc73c\ub85c \ubc30\ud3ec\ub098 \uadf8\ub7f0 \uac83\uc744 \uc2e4\ud5d8\ud574 \ubcfc \uc218 \uc788\uc744\uac83 \uac19\uc558\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2019-07-23",
+        "dateModified": "2019-07-23",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2019/07/23/meier-blog-transfer/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2019-07-23</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2019">2019</a><span>/</span><span>07</span><span>/</span><span>23</span><span>/</span><span class="cur">meier-blog-transfer/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="meier-blog-transfer">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'meier 1.0.1 와 블로그 이사기'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2019-07-23'</span>
+<span class="k">description</span>: <span class="v">'몇 주전부터 심심할 때마다 블로그 서버인 [meier](https://github.com/meier-project/meier) 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 `docker` 를 사용하도록 바꾸는 작업이었다. `docker` 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/AWS/">'AWS'</a>, <a class="v" href="/tags/blog/">'blog'</a>, <a class="v" href="/tags/deploy/">'deploy'</a>, <a class="v" href="/tags/lightsail/">'lightsail'</a>, <a class="v" href="/tags/medical-informatics/">'medical-informatics'</a>, <a class="v" href="/tags/meier/">'meier'</a>, <a class="v" href="/tags/project-showcase/">'project-showcase'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">meier 1.0.1 와 블로그 이사기</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/AWS/" class="tag">AWS</a>
-                
-                <a href="/tags/blog/" class="tag">blog</a>
-                
-                <a href="/tags/deployment/" class="tag">deployment</a>
-                
-                <a href="/tags/lightsail/" class="tag">lightsail</a>
-                
-                <a href="/tags/medical-informatics/" class="tag">medical-informatics</a>
-                
-                <a href="/tags/meier/" class="tag">meier</a>
-                
-                <a href="/tags/project-showcase/" class="tag">project-showcase</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p>몇 주전부터 심심할 때마다 블로그 서버인 <a href="https://github.com/meier-project/meier">meier</a> 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 <code>docker</code> 를 사용하도록 바꾸는 작업이었다. <code>docker</code> 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다. </p>
+            <div class="post-content" data-pagefind-body>
+<p>몇 주전부터 심심할 때마다 블로그 서버인 <a href="https://github.com/meier-project/meier">meier</a> 를 고치는 작업들을 하고 있었다. 코드도 낡고, 서버도 낡은 상태로 바꾸고 싶은 마음이 굴뚝 같았는데 그동안 여유가 안났는데 야금야금 바꾸기 시작했다. 여러가지가 있겠지만 그 중에 가장 중요한 것은 <code>docker</code> 를 사용하도록 바꾸는 작업이었다. <code>docker</code> 를 개인적으로 잘 사용하지 못해서 개인 프로젝트에서 사용해 보고 싶었고, 나중에 컨테이너 기반으로 배포나 그런 것을 실험해 볼 수 있을것 같았다. </p>
 <p>그래서 Dockerfile 을 만들었고, <code>alphine</code> 으로 base image 를 쓰다가 회사 동료가 <code>slim-stretch</code> 를 알려줘서 변경했다. dokcker 로 서버로 띄우는 작업까지 완료는 했는데 한가지 문제가 생겼다. 원래 블로그 프로젝트에 테마를 넣기 위한  구조가 <code>meier &gt; templates &gt; themes &gt; custom_themes</code> 이런 구조로 있다. 그런데 테마들은 변동 가능한 부분이고, 여러 개를 가질 수 가 있어서, themes 하위에 어떤 블로그 테마를 넣을 때 마다 <code>docker build</code> 를 다시 해야 하는 이슈가 있었다. </p>
 <p>찾아보니 외부에서 volume 을 잡을 수 있는 기능이 있어서 연결해서 잘 사용하고 있다. </p>
 <pre><code class="language-docker">    -v ~/themes:/app/meier/templates/themes
@@ -139,18 +134,55 @@
 <p>ps) 누군가 그러더라, 블로그를 만들고 수정하는 것은 마치 공부하기 전에 책상 정리를 하는 것이라고.  </p>
 <p><strong>참고링크 :</strong> </p>
 <p><a href="https://serverfault.com/questions/836198/how-to-install-docker-on-aws-ec2-instance-with-ami-ce-ee-update">https://serverfault.com/questions/836198/how-to-install-docker-on-aws-ec2-instance-with-ami-ce-ee-update</a></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/meier-blog-transfer/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/meier-blog-transfer/meier-blog-transfer.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

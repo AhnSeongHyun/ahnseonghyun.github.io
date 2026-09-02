@@ -2,72 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>flask - json_encoder 지정하기 - ASH84</title>
-    <meta name="description" content="API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 `json.dumps()`를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 `cls` 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2017/06/15/flask-json-encoder/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="flask - json_encoder 지정하기"/>
-    <meta property="og:description" content="API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 `json.dumps()`를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 `cls` 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다."/>
-    <meta property="og:url" content="https://ash84.io/2017/06/15/flask-json-encoder/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="Flask" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="Python" />
-    
-    <meta property="article:tag" content="JSON" />
-    
-    <meta property="article:tag" content="json_encoder" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="flask - json_encoder 지정하기"/>
-    <meta name="twitter:description" content="API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 `json.dumps()`를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 `cls` 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "flask - json_encoder 지정하기",
-        "description": "API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 `json.dumps()`를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 `cls` 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2017/06/15/flask-json-encoder"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -76,63 +17,158 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>flask - json_encoder 지정하기 - ASH84</title>
+    <meta name="description" content="API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 `json.dumps()`를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 `cls` 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2017/06/15/flask-json-encoder/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="flask - json_encoder 지정하기">
+    <meta property="og:description" content="API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 `json.dumps()`를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 `cls` 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다.">
+    <meta property="og:url" content="https://ash84.io/2017/06/15/flask-json-encoder/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2017-06-15">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="Flask">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="Python">
+
+    <meta property="article:tag" content="JSON">
+
+    <meta property="article:tag" content="json_encoder">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="flask - json_encoder 지정하기">
+    <meta name="twitter:description" content="API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 `json.dumps()`를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 `cls` 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "flask - json_encoder \uc9c0\uc815\ud558\uae30",
+        "description": "API \uc0c1\uc5d0\uc11c JSON \uc73c\ub85c \uc751\ub2f5\uc744 \ub0b4\ubcf4\ub0b4\uae30 \uc704\ud574\uc11c\ub294 \ub370\uc774\ud130\ub97c Json Serialize(\uc9c1\ub82c\ud654)\ub97c \ud574\uc57c\ud55c\ub2e4. \uadf8\ub7f0\ub370 json \uc5d0\uc11c \ud45c\ud604\ud560 \uc218 \uc788\ub294 \ub370\uc774\ud130\ub294 \ud55c\uc815\uc774 \ub418\uc5b4 \uc788\uc5b4\uc11c \uac01 \ud504\ub85c\uadf8\ub798\ubc0d \uc5b8\uc5b4\uc5d0 \uc788\ub294 \ubaa8\ub4e0 \ud0c0\uc785\uc744 \uc9c0\uc6d0\ud558\uc9c0\ub294 \ubabb\ud55c\ub2e4. Decimal \ud615\ub3c4 \uadf8\ub7f0 \uc608 \uc911 \ud558\ub098\uc778\ub370 \ud30c\uc774\uc36c\uc5d0\uc11c\ub294 `json.dumps()`\ub97c \ud1b5\ud574\uc11c \uc8fc\ub85c \uc9c1\ub82c\ud654\ub97c \ud558\uace0 \uadf8 \ud568\uc218\uc758 \uae30\ub2a5 \uc911\uc5d0 `cls` \uc778\uc790\ub97c \ud1b5\ud574\uc11c JSONEncoder \ub97c \uad6c\ud604\ud55c \uc11c\ube0c \ud074\ub798\uc2a4\ub97c \uc9c0\uc815\ud574 \uc8fc\uba74 \ud574\ub2f9 \uc778\ucf54\ub354\ub85c json \ubb38\uc790\uc5f4\uc744 \ub9cc\ub4e0\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2017-06-15",
+        "dateModified": "2017-06-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2017/06/15/flask-json-encoder/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2017-06-15</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2017">2017</a><span>/</span><span>06</span><span>/</span><span>15</span><span>/</span><span class="cur">flask-json-encoder/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="flask-json-encoder">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'flask - json_encoder 지정하기'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2017-06-15'</span>
+<span class="k">description</span>: <span class="v">'API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 `json.dumps()`를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 `cls` 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/Flask/">'Flask'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/Python/">'Python'</a>, <a class="v" href="/tags/JSON/">'JSON'</a>, <a class="v" href="/tags/json_encoder/">'json_encoder'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">flask - json_encoder 지정하기</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/Flask/" class="tag">Flask</a>
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/Python/" class="tag">Python</a>
-                
-                <a href="/tags/JSON/" class="tag">JSON</a>
-                
-                <a href="/tags/json_encoder/" class="tag">json_encoder</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p>API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 <code>json.dumps()</code>를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 <code>cls</code> 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다. </p>
+            <div class="post-content" data-pagefind-body>
+<p>API 상에서 JSON 으로 응답을 내보내기 위해서는 데이터를 Json Serialize(직렬화)를 해야한다. 그런데 json 에서 표현할 수 있는 데이터는 한정이 되어 있어서 각 프로그래밍 언어에 있는 모든 타입을 지원하지는 못한다. Decimal 형도 그런 예 중 하나인데 파이썬에서는 <code>json.dumps()</code>를 통해서 주로 직렬화를 하고 그 함수의 기능 중에 <code>cls</code> 인자를 통해서 JSONEncoder 를 구현한 서브 클래스를 지정해 주면 해당 인코더로 json 문자열을 만든다. </p>
 <p>flask 에서도 <code>json.dumps</code> 를 사용해서 json 문자열을 응답으로 내보낼 수도 있지만, <code>jsonify()</code> 를 이미 제공하고 있다. json 을 내보낼때 결국 어떤 객체에서 데이터를 가져오게 된다.  객체 내 형을 변환하거나 추가적으로 같은 내용의 다른 형의 변수를 두는 것도 한 방법이지만, 낭비라는 생각이 들었다. 또한 이런 클래스가 많은 경우 그런 클래스 각각 혹은 몇개의 상위 클래스에 <code>to_json</code>을 만들어서 따로 직렬화를 위한 작업을 해줄 수도 있겠지만, </p>
 <p>flask 에서는 <code>app.json_encoder</code> 을 제공하고 있어서 <code>jsonify()</code> 를 통해서 응답을 보낼 경우, 지정한 인코더를 통해서 생성되도록 할 수 있다. 예를 들어, 아래의 CustomJsonEncoder 는 Decimal 형을 문자열로 치환해서 보내주고 있고, None 인 값에 대해서는 빈 문자열로 치환해서 보내주고 있다. </p>
 <script src="https://gist.github.com/AhnSeongHyun/2329e79ac451edf655789f7243077ef1.js"></script>
 
 <p>JsonEncoder 를 활용하면, 타입에 따라서 json 에서 표시할 때만 다르게 표시하는 것이 가능하다. 예를들면, datetime 형의 경우 포맷(format)을 다르게 표현할 수 있는데, 각 클래스에서 그것을 작업해주는게 아니라 json serialize 되는 시점에 일괄적으로 datetime 형은 특정 포맷으로 변경해서 내보낼 수도 있을것이다. </p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/flask-json-encoder/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/flask-json-encoder/flask-json-encoder.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -2,26 +2,14 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>flask-runner — ASH84</title>
-    <meta name="description" content="flask-runner 태그가 붙은 1개의 글" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/tags/flask-runner/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="flask-runner — ASH84"/>
-    <meta property="og:description" content="flask-runner 태그가 붙은 1개의 글"/>
-    <meta property="og:url" content="https://ash84.io/tags/flask-runner/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="website"/>
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:title" content="flask-runner — ASH84"/>
-    <meta name="twitter:description" content="flask-runner 태그가 붙은 1개의 글"/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -29,45 +17,63 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <title>#flask-runner - ASH84</title>
+    <meta name="description" content="#flask-runner 태그의 글 1편">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <a href="/" class="logo">ASH84</a>
-            <nav class="nav">
-                <a href="/tags/">Archive</a>
-            </nav>
-        </header>
 
-        <section class="hero" style="padding: 80px 0 60px;">
-            <h1 class="hero-text" style="font-size: clamp(36px, 8vw, 80px);">#flask-runner</h1>
-            <div class="hero-meta">
-                <span>1 Posts</span>
-            </div>
-        </section>
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/">--writing</a>
+            <a href="/tags/" class="on">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
+        </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
+    </header>
 
-        <section class="latest">
-            <div class="posts">
-                
-                <a href="/2016/08/03/flask-runner/" class="post-item">
-                    <span class="post-date">2016-08-03</span>
-                    <span class="post-title">flask-runner</span>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/tags/">tags</a><span>/</span><span class="cur">flask-runner</span>
+    </nav>
+
+    <section class="head head--tag">
+        <h1>#flask-runner</h1>
+        <p>1 posts</p>
+    </section>
+
+    <section class="archive">
+        <div class="year-group">
+            <div class="rows">
+
+                <a class="row" href="/2016/08/03/flask-runner/">
+                    <time datetime="2016-08-03">2016-08-03</time>
+                    <div><span class="t">flask-runner</span><div class="d">Flask 에서 개발을 할 때, Debug 옵션을 키고 app 에 기본 내장된 개발서버를 사용한다. 그런데 파일을 수정하면 재시작하는 기능은 좋은데, `host` 나 `port` 를 지정해 놓고 사용하다가 변경할때 귀찮은 부분이 있다. 특히 `port` 같은 경우 특정포트를 지정해두면 꼭 다음날에 누군가 쓰고 있어서 다시 수정해서 실행해야 하는 번거로움이 있다.</div></div>
                 </a>
-                
-            </div>
-        </section>
 
-        <footer class="footer">
-            <div class="footer-left">
-                <span>© 2007—<script>document.write(new Date().getFullYear())</script></span>
             </div>
-            <div class="footer-right">
-                <a href="/">Home</a>
-            </div>
-        </footer>
+        </div>
+    </section>
+</div>
+
+<div class="status">
+    <span class="path">~/tags/flask-runner · 1 posts</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
     </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
 </body>
 </html>

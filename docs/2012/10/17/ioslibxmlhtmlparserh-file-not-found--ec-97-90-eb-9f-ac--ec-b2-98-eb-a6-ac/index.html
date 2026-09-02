@@ -2,76 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(iOS)libxml/HTMLparser.h file not found 에러 처리 - ASH84</title>
-    <meta name="description" content="이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2012/10/17/ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(iOS)libxml/HTMLparser.h file not found 에러 처리"/>
-    <meta property="og:description" content="이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트"/>
-    <meta property="og:url" content="https://ash84.io/2012/10/17/ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="HTML Parsing" />
-    
-    <meta property="article:tag" content="parsing" />
-    
-    <meta property="article:tag" content="libxml/HTMLparser file not found" />
-    
-    <meta property="article:tag" content="libxml2" />
-    
-    <meta property="article:tag" content="iOS" />
-    
-    <meta property="article:tag" content="app" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(iOS)libxml/HTMLparser.h file not found 에러 처리"/>
-    <meta name="twitter:description" content="이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트"/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(iOS)libxml/HTMLparser.h file not found 에러 처리",
-        "description": "이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2012/10/17/ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -80,50 +17,108 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(iOS)libxml/HTMLparser.h file not found 에러 처리 - ASH84</title>
+    <meta name="description" content="이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2012/10/17/ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(iOS)libxml/HTMLparser.h file not found 에러 처리">
+    <meta property="og:description" content="이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트">
+    <meta property="og:url" content="https://ash84.io/2012/10/17/ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2012-10-17">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="HTML Parsing">
+
+    <meta property="article:tag" content="parsing">
+
+    <meta property="article:tag" content="libxml/HTMLparser file not found">
+
+    <meta property="article:tag" content="libxml2">
+
+    <meta property="article:tag" content="iOS">
+
+    <meta property="article:tag" content="app">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(iOS)libxml/HTMLparser.h file not found 에러 처리">
+    <meta name="twitter:description" content="이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(iOS)libxml/HTMLparser.h file not found \uc5d0\ub7ec \ucc98\ub9ac",
+        "description": "\uc774\uc804 \ud3ec\uc2a4\ud305\uc5d0\uc11c iOS \u00a0App \u00a0\uac1c\ubc1c\uc2dc, \uac01\uc885 HTML \ud30c\uc11c\ub4e4\uc744 \uc5f0\ub3d9\ud558\ub294 \ubc29\ubc95\ub4e4\uc744 \uc18c\uac1c\ud588\ub294\ub370 \uadf8\ub7ec\ud55c \ub77c\uc774\ube0c\ub7ec\ub9ac\uc5d0 \uc0ac\uc6a9\ud558\ub294 \uac83\uc911 \ud558\ub098\uac00 libxml2 \ub77c\uc774\ube0c\ub7ec\ub9ac\uc774\ub2e4. \uae30\ubcf8\uc801\uc73c\ub85c \ud504\ub85c\uc81d\ud2b8",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2012-10-17",
+        "dateModified": "2012-10-17",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2012/10/17/ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2012-10-17</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2012">2012</a><span>/</span><span>10</span><span>/</span><span>17</span><span>/</span><span class="cur">ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(iOS)libxml/HTMLparser.h file not found 에러 처리'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2012-10-17'</span>
+<span class="k">description</span>: <span class="v">'이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/HTML Parsing/">'HTML Parsing'</a>, <a class="v" href="/tags/parsing/">'parsing'</a>, <a class="v" href="/tags/libxml-HTMLparser file not found/">'libxml/HTMLparser file not found'</a>, <a class="v" href="/tags/libxml2/">'libxml2'</a>, <a class="v" href="/tags/iOS/">'iOS'</a>, <a class="v" href="/tags/app/">'app'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(iOS)libxml/HTMLparser.h file not found 에러 처리</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/HTML Parsing/" class="tag">HTML Parsing</a>
-                
-                <a href="/tags/parsing/" class="tag">parsing</a>
-                
-                <a href="/tags/libxml/HTMLparser file not found/" class="tag">libxml/HTMLparser file not found</a>
-                
-                <a href="/tags/libxml2/" class="tag">libxml2</a>
-                
-                <a href="/tags/iOS/" class="tag">iOS</a>
-                
-                <a href="/tags/app/" class="tag">app</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 10pt; color: rgb(0, 0, 0); "><span style="font-size: 11pt; "><span style="font-size: 11pt; "></span><span style="font-size: 11pt; "></span><span style="font-size: 11pt; ">이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트 세팅에 가서 </span></span><span style="font-size: 11pt; ">다음과 같이 해주면된다. </span></span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 10pt; color: rgb(0, 0, 0); "><span style="font-size: 11pt; "><span style="font-size: 11pt; "></span><span style="font-size: 11pt; "></span><span style="font-size: 11pt; ">이전 포스팅에서 iOS  App  개발시, 각종 HTML 파서들을 연동하는 방법들을 소개했는데 그러한 라이브러리에 사용하는 것중 하나가 libxml2 라이브러리이다. 기본적으로 프로젝트 세팅에 가서 </span></span><span style="font-size: 11pt; ">다음과 같이 해주면된다. </span></span></p>
 <div class="txc-textbox" style="border: 1px solid rgb(203, 203, 203); background-color: rgb(255, 255, 255); padding: 10px; line-height: 2; "><span style="font-size: 11pt; color: rgb(0, 0, 0); "><span style="font-size: 11pt; ">Header Search Paths </span></span>
 
 <span style="font-size: 11pt; color: rgb(0, 0, 0); ">– </span><span style="color: rgb(0, 0, 0); font-family: Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif; font-size: 11pt; "> </span><span style="color: rgb(0, 0, 0); font-family: Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif; font-size: 11pt; ">“${SDKROOT}/usr/include/libxml2”</span>
@@ -157,18 +152,55 @@
 </span></font></p>
 <p><span style="font-size: 11pt; "></span><font color="#000000" face="Arial, Liberation Sans, DejaVu Sans, sans-serif" size="2"><span style="line-height: 20px;"><br />
 </span></font></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac/ioslibxmlhtmlparserh-file-not-found--ec-97-90-eb-9f-ac--ec-b2-98-eb-a6-ac.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

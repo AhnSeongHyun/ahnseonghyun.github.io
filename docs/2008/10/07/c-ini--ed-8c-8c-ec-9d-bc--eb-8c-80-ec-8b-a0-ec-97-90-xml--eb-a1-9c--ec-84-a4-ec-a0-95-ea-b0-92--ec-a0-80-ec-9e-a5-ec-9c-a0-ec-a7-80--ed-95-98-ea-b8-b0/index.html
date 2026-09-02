@@ -2,84 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기 - ASH84</title>
-    <meta name="description" content="INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2008/10/07/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기"/>
-    <meta property="og:description" content="INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가"/>
-    <meta property="og:url" content="https://ash84.io/2008/10/07/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="C#" />
-    
-    <meta property="article:tag" content="Hashtable" />
-    
-    <meta property="article:tag" content="INI" />
-    
-    <meta property="article:tag" content="System.Collections" />
-    
-    <meta property="article:tag" content="XML" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="healthcare" />
-    
-    <meta property="article:tag" content="programming" />
-    
-    <meta property="article:tag" content="안성현" />
-    
-    <meta property="article:tag" content="해쉬테이블" />
-    
-    <meta property="article:tag" content="환경설정" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기"/>
-    <meta name="twitter:description" content="INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가"/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기",
-        "description": "INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2008/10/07/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -88,58 +17,116 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기 - ASH84</title>
+    <meta name="description" content="INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2008/10/07/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기">
+    <meta property="og:description" content="INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가">
+    <meta property="og:url" content="https://ash84.io/2008/10/07/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2008-10-07">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="C#">
+
+    <meta property="article:tag" content="Hashtable">
+
+    <meta property="article:tag" content="INI">
+
+    <meta property="article:tag" content="System.Collections">
+
+    <meta property="article:tag" content="XML">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="healthcare">
+
+    <meta property="article:tag" content="programming">
+
+    <meta property="article:tag" content="안성현">
+
+    <meta property="article:tag" content="해쉬테이블">
+
+    <meta property="article:tag" content="환경설정">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기">
+    <meta name="twitter:description" content="INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[C#] INI \ud30c\uc77c \ub300\uc2e0\uc5d0 XML \ub85c \uc124\uc815\uac12 \uc800\uc7a5/\uc720\uc9c0 \ud558\uae30",
+        "description": "INI \ud30c\uc77c\uc774\ub098, \uc77c\ubc18\uc801\uc778 \ud30c\uc77c\ub85c \ud504\ub85c\uadf8\ub7a8\uc758 \uc124\uc815\uac12\uc744 \uc720\uc9c0\ubc0f \uad00\ub9ac \ud574 \uc624\ub294 \uc77c\uc740 \uc608\uc804\ubd80\ud130 \ub9ce\uc558\ub2e4. \ud558\uc9c0\ub9cc, \ud544\uc790\uac00 \ub290\ub07c\uae30\uc5d4 \uc5ec\uac04 \ubd88\ud3b8\ud55c\uc77c\uc774 \uc544\ub2c8\uc600\ub2e4. \uadf8\ub798\uc11c \uc5ec\ub7ec \uac80\uc0c9\ucc3d\uc744 \ub3cc\uc544\ub2e4\ub514\ub358\uc911 XML\uacfc Hashtable\uc744 \uac00\uc9c0\uace0 \uc124\uc815\uc744 \uad00\ub9ac\ud558\ub294 \ubc29\ubc95\uc744 \uc54c\uc544\ub0c8\ub2e4. \ud2b9\ud788, \ud544\uc790\uc758 \uacbd\uc6b0 \uc2dc\ub9ac\uc5bc \ud1b5\uc2e0\uc744 \ud1b5\ud574\uc11c \uc5ec\ud0c0\uc758 \uc758\ub8cc\uae30\uae30\uac04\uc758 \uc778\ud130\ud398\uc774\uc2a4 \uc5f0\uacb0\uc744 \ud574\uc57c\ud558\ub294 \uacbd\uc6b0\uac00",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2008-10-07",
+        "dateModified": "2008-10-07",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2008/10/07/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2008-10-07</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2008">2008</a><span>/</span><span>10</span><span>/</span><span>07</span><span>/</span><span class="cur">c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2008-10-07'</span>
+<span class="k">description</span>: <span class="v">'INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/C#/">'C#'</a>, <a class="v" href="/tags/Hashtable/">'Hashtable'</a>, <a class="v" href="/tags/INI/">'INI'</a>, <a class="v" href="/tags/System.Collections/">'System.Collections'</a>, <a class="v" href="/tags/XML/">'XML'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/healthcare/">'healthcare'</a>, <a class="v" href="/tags/programming/">'programming'</a>, <a class="v" href="/tags/안성현/">'안성현'</a>, <a class="v" href="/tags/해쉬테이블/">'해쉬테이블'</a>, <a class="v" href="/tags/환경설정/">'환경설정'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">[C#] INI 파일 대신에 XML 로 설정값 저장/유지 하기</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/C#/" class="tag">C#</a>
-                
-                <a href="/tags/Hashtable/" class="tag">Hashtable</a>
-                
-                <a href="/tags/INI/" class="tag">INI</a>
-                
-                <a href="/tags/System.Collections/" class="tag">System.Collections</a>
-                
-                <a href="/tags/XML/" class="tag">XML</a>
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/healthcare/" class="tag">healthcare</a>
-                
-                <a href="/tags/programming/" class="tag">programming</a>
-                
-                <a href="/tags/안성현/" class="tag">안성현</a>
-                
-                <a href="/tags/해쉬테이블/" class="tag">해쉬테이블</a>
-                
-                <a href="/tags/환경설정/" class="tag">환경설정</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <div style="line-height: 2; ">  
+            <div class="post-content" data-pagefind-body>
+<div style="line-height: 2; ">  
 <span style="font-size: 11pt; "><span style="font-family: Dotum; ">  
  INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가 많기 때문에, COM Port에 대한 설정값 저장이 늘 골치거리 였다. </span></span>  
 <span class="Apple-style-span" style="font-family: Dotum; font-size: 15px; line-height: 29px; ">  
@@ -147,18 +134,55 @@
 <div style="line-height: 2; "><span class="Apple-style-span" style="font-family: Dotum; font-size: 15px; line-height: 29px; ">XML과 Hashtable에 대한 함수.  <div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font></span></span></span></span></div></div></span></div>
 <div></div>
 <div><div>  </div><div></div><div class="txc-textbox" style="BORDER-RIGHT: rgb(121,165,228) 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: rgb(121,165,228) 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: rgb(121,165,228) 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: rgb(121,165,228) 1px solid; BACKGROUND-COLOR: rgb(219,232,251)"><div></div><div>         /// <summary></div><div>         ///해쉬테이블을 읽어서 xml파일에 저장한다.</div><div>         /// </summary></div><div>         /// <param name=”ht”></param></div><div>         /// <returns></returns></div><div></div><div>         public int WriteXml(Hashtable ht)</div><div>         {</div><div>             IDictionaryEnumerator htEnum = ht.GetEnumerator();</div><div></div><div>             XmlTextWriter tw = tw = new XmlTextWriter(Application.StartupPath + @”\ini.xml”, Encoding.UTF8);</div><div></div><div>             tw.Formatting = Formatting.Indented;</div><div></div><div>             tw.WriteStartDocument();</div><div></div><div>             tw.WriteStartElement(“Configuration”);</div><div></div><div>             while (htEnum.MoveNext())</div><div>             {</div><div>                 tw.WriteElementString(htEnum.Key.ToString(), htEnum.Value.ToString());</div><div>             }</div><div></div><div>             tw.WriteEndElement();</div><div>             tw.WriteEndDocument();</div><div></div><div>             tw.Flush();</div><div>             tw.Close();</div><div>             return 0;</div><div></div><div>         }</div></div><div></div><div></div><div></div><div></div><div></div><div class="txc-textbox" style="BORDER-RIGHT: rgb(121,165,228) 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: rgb(121,165,228) 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: rgb(121,165,228) 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: rgb(121,165,228) 1px solid; BACKGROUND-COLOR: rgb(219,232,251)"><div></div><div>         /// <summary></div><div>         /// xml파일을 읽어서 해쉬테이블에 저장한다.</div><div>         /// </summary></div><div>         /// <returns></returns></div><div></div><div>         public Hashtable ReadXml()</div><div>         {</div><div></div><div>             try</div><div>             {</div><div></div><div>                 string sKey, sValue;</div><div>                 Hashtable ht = new Hashtable();</div><div>                 XmlTextReader xtr = new XmlTextReader(Application.StartupPath + @”\ini.xml”);</div><div></div><div>                 while (xtr.Read())</div><div>                 {</div><div></div><div>                     if (xtr.NodeType == XmlNodeType.Element)</div><div>                     {</div><div></div><div>                         sKey = xtr.LocalName;</div><div></div><div>                         xtr.Read();</div><div></div><div>                         if (xtr.NodeType == XmlNodeType.Text)</div><div>                         {</div><div>                             sValue = xtr.Value;</div><div></div><div>                             ht.Add(sKey, sValue);</div><div>                         }</div><div></div><div>                         else</div><div>                             continue;</div><div></div><div>                     }</div><div></div><div>                 }//while</div><div></div><div>                 xtr.Close();</div><div>                 return ht;</div><div></div><div>             }</div><div>             catch (FileNotFoundException e)</div><div>             {</div><div></div><div>                 //xml파일을 찾지 못할경우 default값이 들어있는 해쉬테이블을 리턴한다.</div><div>                 Hashtable ht = new Hashtable();</div><div></div><div>                 ht.Add(“txtInputWidth”, “287”);</div><div>                 ht.Add(“formHeight”, “400”);</div><div>                 ht.Add(“txtContentHeight”, “296”);</div><div>                 ht.Add(“formWidth”, “363”);</div><div>                 ht.Add(“formTop”, “122”);</div><div>                 ht.Add(“formLeft”, “214”);</div><div>                 ht.Add(“txtInputTop”, “300”);</div><div></div><div>                 return ht;</div><div></div><div>             }</div><div></div><div>         }</div><div></div></div><div></div><div></div><div><span style="font-size: 11pt; "><span style="font-family: Dotum; ">**호출해서 사용하는 부분 **</span></span></div><div><div><div style="BORDER-LEFT: #000000 200px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #e8e8e8; PADDING-LEFT: 6px; WIDTH: 690px; PADDING-RIGHT: 6px; FONT: bold 1pt/1 나눔고딕, Sans-serif; MARGIN-BOTTOM: 10px; HEIGHT: 1px; COLOR: #fff; PADDING-TOP: 3px"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: Batang"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 1pt"></span></span></span></span></span></span></span></span></div><div style="LINE-HEIGHT: 1.7"><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿</font><span style="FONT-FAMILY: Dotum"><font color="#474747">﻿</font><span style="FONT-SIZE: 10pt"><font color="#474747">﻿ </font></span></span></span></span></div></div></div><div></div><div class="txc-textbox" style="BORDER-RIGHT: rgb(159,211,49) 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: rgb(159,211,49) 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: rgb(159,211,49) 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: rgb(159,211,49) 1px solid; BACKGROUND-COLOR: rgb(231,253,181)"><div>            <span class="Apple-style-span" style="COLOR: rgb(49,133,97)"><span class="Apple-style-span" style="FONT-WEIGHT: bold">Hashtable ht = new Hashtable();</span></span></div><div></div><div><div>             ht.Add(“portnum”, combo_portNum.Text);</div><div>             ht.Add(“bitpersec”, combo_bitpersec.Text);</div><div>             ht.Add(“databit”, combo_databit.Text);</div><div>             ht.Add(“paritybit”, combo_paritybit.Text);</div><div>             ht.Add(“stopbit”, combo_stopbit.Text);</div><div></div><div>             Making_ConfXmlFile xf = new Making_ConfXmlFile();</div><div></div><div></div><div>             if (xf.WriteXml(ht) == 0)</div><div>             {</div><div>                 MessageBox.Show(“저장되었습니다.”);</div><div>             }</div><div>             else</div><div>             {</div><div>                 MessageBox.Show(“저장하지 못했습니다.”);</div><div>              }</div><div></div></div></div><div><div></div></div><div></div><div></div><div>     </div></div>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0/c-ini--ed-8c-8c-ec-9d-bc--eb-8c-80-ec-8b-a0-ec-97-90-xml--eb-a1-9c--ec-84-a4-ec-a0-95-ea-b0-92--ec-a0-80-ec-9e-a5-ec-9c-a0-ec-a7-80--ed-95-98-ea-b8-b0.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

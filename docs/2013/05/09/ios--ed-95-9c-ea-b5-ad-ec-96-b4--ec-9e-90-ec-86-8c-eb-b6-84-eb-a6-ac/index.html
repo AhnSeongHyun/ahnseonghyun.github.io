@@ -2,82 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(iOS) 한국어 자소분리 - ASH84</title>
-    <meta name="description" content="자동완성 관련 작업을 하다가,(조만간에 간단한 형태의 오픈소스로 배포 예정) 한국어의 풀어쓰기 관련 이슈가 있어서 인터넷에서 있는 예전 소스를 Objective-C 기반으로 작업을 하였다. 한글 혹은 한영숫자가 섞인 입력 문자열에서 한글만 찾아서 자소 분리를 하는 소스코드이다. NSMutableString 을 이용해서 자소들을 이어붙이기를 하였다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2013/05/09/ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(iOS) 한국어 자소분리"/>
-    <meta property="og:description" content="자동완성 관련 작업을 하다가,(조만간에 간단한 형태의 오픈소스로 배포 예정) 한국어의 풀어쓰기 관련 이슈가 있어서 인터넷에서 있는 예전 소스를 Objective-C 기반으로 작업을 하였다. 한글 혹은 한영숫자가 섞인 입력 문자열에서 한글만 찾아서 자소 분리를 하는 소스코드이다. NSMutableString 을 이용해서 자소들을 이어붙이기를 하였다."/>
-    <meta property="og:url" content="https://ash84.io/2013/05/09/ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="Objective-C" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="iOS" />
-    
-    <meta property="article:tag" content="ios-development" />
-    
-    <meta property="article:tag" content="objective-c 한글 자소분리" />
-    
-    <meta property="article:tag" content="open-source" />
-    
-    <meta property="article:tag" content="자동완성" />
-    
-    <meta property="article:tag" content="자소분리" />
-    
-    <meta property="article:tag" content="자음과 모음" />
-    
-    <meta property="article:tag" content="한글어 자음 모음" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(iOS) 한국어 자소분리"/>
-    <meta name="twitter:description" content="자동완성 관련 작업을 하다가,(조만간에 간단한 형태의 오픈소스로 배포 예정) 한국어의 풀어쓰기 관련 이슈가 있어서 인터넷에서 있는 예전 소스를 Objective-C 기반으로 작업을 하였다. 한글 혹은 한영숫자가 섞인 입력 문자열에서 한글만 찾아서 자소 분리를 하는 소스코드이다. NSMutableString 을 이용해서 자소들을 이어붙이기를 하였다."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(iOS) 한국어 자소분리",
-        "description": "자동완성 관련 작업을 하다가,(조만간에 간단한 형태의 오픈소스로 배포 예정) 한국어의 풀어쓰기 관련 이슈가 있어서 인터넷에서 있는 예전 소스를 Objective-C 기반으로 작업을 하였다. 한글 혹은 한영숫자가 섞인 입력 문자열에서 한글만 찾아서 자소 분리를 하는 소스코드이다. NSMutableString 을 이용해서 자소들을 이어붙이기를 하였다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2013/05/09/ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -86,69 +17,164 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(iOS) 한국어 자소분리 - ASH84</title>
+    <meta name="description" content="자동완성 관련 작업을 하다가,(조만간에 간단한 형태의 오픈소스로 배포 예정) 한국어의 풀어쓰기 관련 이슈가 있어서 인터넷에서 있는 예전 소스를 Objective-C 기반으로 작업을 하였다. 한글 혹은 한영숫자가 섞인 입력 문자열에서 한글만 찾아서 자소 분리를 하는 소스코드이다. NSMutableString 을 이용해서 자소들을 이어붙이기를 하였다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2013/05/09/ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(iOS) 한국어 자소분리">
+    <meta property="og:description" content="자동완성 관련 작업을 하다가,(조만간에 간단한 형태의 오픈소스로 배포 예정) 한국어의 풀어쓰기 관련 이슈가 있어서 인터넷에서 있는 예전 소스를 Objective-C 기반으로 작업을 하였다. 한글 혹은 한영숫자가 섞인 입력 문자열에서 한글만 찾아서 자소 분리를 하는 소스코드이다. NSMutableString 을 이용해서 자소들을 이어붙이기를 하였다.">
+    <meta property="og:url" content="https://ash84.io/2013/05/09/ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-05-09">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="Objective-C">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="iOS">
+
+    <meta property="article:tag" content="ios-development">
+
+    <meta property="article:tag" content="objective-c 한글 자소분리">
+
+    <meta property="article:tag" content="open-source">
+
+    <meta property="article:tag" content="자동완성">
+
+    <meta property="article:tag" content="자소분리">
+
+    <meta property="article:tag" content="자음과 모음">
+
+    <meta property="article:tag" content="한글어 자음 모음">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(iOS) 한국어 자소분리">
+    <meta name="twitter:description" content="자동완성 관련 작업을 하다가,(조만간에 간단한 형태의 오픈소스로 배포 예정) 한국어의 풀어쓰기 관련 이슈가 있어서 인터넷에서 있는 예전 소스를 Objective-C 기반으로 작업을 하였다. 한글 혹은 한영숫자가 섞인 입력 문자열에서 한글만 찾아서 자소 분리를 하는 소스코드이다. NSMutableString 을 이용해서 자소들을 이어붙이기를 하였다.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(iOS) \ud55c\uad6d\uc5b4 \uc790\uc18c\ubd84\ub9ac",
+        "description": "\uc790\ub3d9\uc644\uc131 \uad00\ub828 \uc791\uc5c5\uc744 \ud558\ub2e4\uac00,(\uc870\ub9cc\uac04\uc5d0 \uac04\ub2e8\ud55c \ud615\ud0dc\uc758 \uc624\ud508\uc18c\uc2a4\ub85c \ubc30\ud3ec \uc608\uc815) \ud55c\uad6d\uc5b4\uc758 \ud480\uc5b4\uc4f0\uae30 \uad00\ub828 \uc774\uc288\uac00 \uc788\uc5b4\uc11c \uc778\ud130\ub137\uc5d0\uc11c \uc788\ub294 \uc608\uc804 \uc18c\uc2a4\ub97c Objective-C \uae30\ubc18\uc73c\ub85c \uc791\uc5c5\uc744 \ud558\uc600\ub2e4. \ud55c\uae00 \ud639\uc740 \ud55c\uc601\uc22b\uc790\uac00 \uc11e\uc778 \uc785\ub825 \ubb38\uc790\uc5f4\uc5d0\uc11c \ud55c\uae00\ub9cc \ucc3e\uc544\uc11c \uc790\uc18c \ubd84\ub9ac\ub97c \ud558\ub294 \uc18c\uc2a4\ucf54\ub4dc\uc774\ub2e4. NSMutableString \uc744 \uc774\uc6a9\ud574\uc11c \uc790\uc18c\ub4e4\uc744 \uc774\uc5b4\ubd99\uc774\uae30\ub97c \ud558\uc600\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2013-05-09",
+        "dateModified": "2013-05-09",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/05/09/ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2013-05-09</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2013">2013</a><span>/</span><span>05</span><span>/</span><span>09</span><span>/</span><span class="cur">ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(iOS) 한국어 자소분리'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2013-05-09'</span>
+<span class="k">description</span>: <span class="v">'자동완성 관련 작업을 하다가,(조만간에 간단한 형태의 오픈소스로 배포 예정) 한국어의 풀어쓰기 관련 이슈가 있어서 인터넷에서 있는 예전 소스를 Objective-C 기반으로 작업을 하였다. 한글 혹은 한영숫자가 섞인 입력 문자열에서 한글만 찾아서 자소 분리를 하는 소스코드이다. NSMutableString 을 이용해서 자소들을 이어붙이기를 하였다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/Objective-C/">'Objective-C'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/iOS/">'iOS'</a>, <a class="v" href="/tags/ios-development/">'ios-development'</a>, <a class="v" href="/tags/objective-c 한글 자소분리/">'objective-c 한글 자소분리'</a>, <a class="v" href="/tags/open-source/">'open-source'</a>, <a class="v" href="/tags/자동완성/">'자동완성'</a>, <a class="v" href="/tags/자소분리/">'자소분리'</a>, <a class="v" href="/tags/자음과 모음/">'자음과 모음'</a>, <a class="v" href="/tags/한글어 자음 모음/">'한글어 자음 모음'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(iOS) 한국어 자소분리</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/Objective-C/" class="tag">Objective-C</a>
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/iOS/" class="tag">iOS</a>
-                
-                <a href="/tags/ios-development/" class="tag">ios-development</a>
-                
-                <a href="/tags/objective-c 한글 자소분리/" class="tag">objective-c 한글 자소분리</a>
-                
-                <a href="/tags/open-source/" class="tag">open-source</a>
-                
-                <a href="/tags/자동완성/" class="tag">자동완성</a>
-                
-                <a href="/tags/자소분리/" class="tag">자소분리</a>
-                
-                <a href="/tags/자음과 모음/" class="tag">자음과 모음</a>
-                
-                <a href="/tags/한글어 자음 모음/" class="tag">한글어 자음 모음</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt;">자동완성 관련 작업을 하다가,(조만간에 간단한 형태의 오픈소스로 배포 예정) 한국어의 풀어쓰기 관련 이슈가 있어서 인터넷에서 있는 예전 소스를 Objective-C 기반으로 작업을 하였다. 한글 혹은 한영숫자가 섞인 입력 문자열에서 한글만 찾아서 자소 분리를 하는 소스코드이다. NSMutableString 을 이용해서 자소들을 이어붙이기를 하였다. </span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt;">자동완성 관련 작업을 하다가,(조만간에 간단한 형태의 오픈소스로 배포 예정) 한국어의 풀어쓰기 관련 이슈가 있어서 인터넷에서 있는 예전 소스를 Objective-C 기반으로 작업을 하였다. 한글 혹은 한영숫자가 섞인 입력 문자열에서 한글만 찾아서 자소 분리를 하는 소스코드이다. NSMutableString 을 이용해서 자소들을 이어붙이기를 하였다. </span></p>
 <script src="https://gist.github.com/AhnSeongHyun/5548751.js"></script>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac/ios--ed-95-9c-ea-b5-ad-ec-96-b4--ec-9e-90-ec-86-8c-eb-b6-84-eb-a6-ac.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

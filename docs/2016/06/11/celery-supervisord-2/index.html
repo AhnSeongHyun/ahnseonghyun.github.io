@@ -2,74 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>celery + supervisord - ASH84</title>
-    <meta name="description" content="celery 를 데몬방식으로 실행해야할 경우, [몇 가지 방법](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2016/06/11/celery-supervisord-2/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="celery + supervisord"/>
-    <meta property="og:description" content="celery 를 데몬방식으로 실행해야할 경우, [몇 가지 방법](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다."/>
-    <meta property="og:url" content="https://ash84.io/2016/06/11/celery-supervisord-2/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="Celery" />
-    
-    <meta property="article:tag" content="daemonize" />
-    
-    <meta property="article:tag" content="project-showcase" />
-    
-    <meta property="article:tag" content="python" />
-    
-    <meta property="article:tag" content="supervisord" />
-    
-    <meta property="article:tag" content="tutorial" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="celery + supervisord"/>
-    <meta name="twitter:description" content="celery 를 데몬방식으로 실행해야할 경우, [몇 가지 방법](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "celery + supervisord",
-        "description": "celery 를 데몬방식으로 실행해야할 경우, [몇 가지 방법](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2016/06/11/celery-supervisord-2"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -78,48 +17,106 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>celery + supervisord - ASH84</title>
+    <meta name="description" content="celery 를 데몬방식으로 실행해야할 경우, [몇 가지 방법](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2016/06/11/celery-supervisord-2/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="celery + supervisord">
+    <meta property="og:description" content="celery 를 데몬방식으로 실행해야할 경우, [몇 가지 방법](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다.">
+    <meta property="og:url" content="https://ash84.io/2016/06/11/celery-supervisord-2/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2016-06-11">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="Celery">
+
+    <meta property="article:tag" content="daemonize">
+
+    <meta property="article:tag" content="project-showcase">
+
+    <meta property="article:tag" content="Python">
+
+    <meta property="article:tag" content="supervisord">
+
+    <meta property="article:tag" content="tutorial">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="celery + supervisord">
+    <meta name="twitter:description" content="celery 를 데몬방식으로 실행해야할 경우, [몇 가지 방법](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "celery + supervisord",
+        "description": "celery \ub97c \ub370\ubaac\ubc29\uc2dd\uc73c\ub85c \uc2e4\ud589\ud574\uc57c\ud560 \uacbd\uc6b0, [\uba87 \uac00\uc9c0 \ubc29\ubc95](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)\uc774 \uc788\ub294\ub370 \uadf8 \uc911\uc5d0 \ud558\ub098\uac00 supervisor \ub97c \uc774\uc6a9\ud558\ub294 \uac83\uc774\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2016-06-11",
+        "dateModified": "2016-06-11",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2016/06/11/celery-supervisord-2/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2016-06-11</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2016">2016</a><span>/</span><span>06</span><span>/</span><span>11</span><span>/</span><span class="cur">celery-supervisord-2/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="celery-supervisord-2">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'celery + supervisord'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2016-06-11'</span>
+<span class="k">description</span>: <span class="v">'celery 를 데몬방식으로 실행해야할 경우, [몇 가지 방법](http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html)이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/Celery/">'Celery'</a>, <a class="v" href="/tags/daemonize/">'daemonize'</a>, <a class="v" href="/tags/project-showcase/">'project-showcase'</a>, <a class="v" href="/tags/Python/">'Python'</a>, <a class="v" href="/tags/supervisord/">'supervisord'</a>, <a class="v" href="/tags/tutorial/">'tutorial'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">celery + supervisord</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/Celery/" class="tag">Celery</a>
-                
-                <a href="/tags/daemonize/" class="tag">daemonize</a>
-                
-                <a href="/tags/project-showcase/" class="tag">project-showcase</a>
-                
-                <a href="/tags/python/" class="tag">python</a>
-                
-                <a href="/tags/supervisord/" class="tag">supervisord</a>
-                
-                <a href="/tags/tutorial/" class="tag">tutorial</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p>celery 를 데몬방식으로 실행해야할 경우, <a href="http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html">몇 가지 방법</a>이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다. </p>
+            <div class="post-content" data-pagefind-body>
+<p>celery 를 데몬방식으로 실행해야할 경우, <a href="http://docs.celeryproject.org/en/latest/tutorials/daemonizing.html">몇 가지 방법</a>이 있는데 그 중에 하나가 supervisor 를 이용하는 것이다. </p>
 <pre><code>pip install supervisor 
 </code></pre>
 <p>위와 같이 설치하고 나서 현재 celery task 가 있는 프로젝트에서 <strong>supervisord.conf 를 만들고, 마지막줄에 celeryd.conf 를 include 를 한다.</strong></p>
@@ -140,18 +137,55 @@ files = celeryd.conf
 <ul>
 <li><a href="https://thomassileo.name/blog/2012/08/20/how-to-keep-celery-running-with-supervisor/">How to keep Celery running with supervisor</a></li>
 </ul>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/celery-supervisord-2/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/celery-supervisord-2/celery-supervisord-2.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

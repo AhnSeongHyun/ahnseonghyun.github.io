@@ -2,74 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>euc-kr data in flask - ASH84</title>
-    <meta name="description" content="### **파이썬에서의 unicode와 str**" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2015/07/16/flask-euckr/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="euc-kr data in flask"/>
-    <meta property="og:description" content="### **파이썬에서의 unicode와 str**"/>
-    <meta property="og:url" content="https://ash84.io/2015/07/16/flask-euckr/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="euc-kr" />
-    
-    <meta property="article:tag" content="euckr" />
-    
-    <meta property="article:tag" content="Flask" />
-    
-    <meta property="article:tag" content="flask euc-kr" />
-    
-    <meta property="article:tag" content="Python" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="euc-kr data in flask"/>
-    <meta name="twitter:description" content="### **파이썬에서의 unicode와 str**"/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "euc-kr data in flask",
-        "description": "### **파이썬에서의 unicode와 str**",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2015/07/16/flask-euckr"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -78,48 +17,106 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>euc-kr data in flask - ASH84</title>
+    <meta name="description" content="### **파이썬에서의 unicode와 str**">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2015/07/16/flask-euckr/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="euc-kr data in flask">
+    <meta property="og:description" content="### **파이썬에서의 unicode와 str**">
+    <meta property="og:url" content="https://ash84.io/2015/07/16/flask-euckr/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2015-07-16">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="euc-kr">
+
+    <meta property="article:tag" content="euckr">
+
+    <meta property="article:tag" content="Flask">
+
+    <meta property="article:tag" content="flask euc-kr">
+
+    <meta property="article:tag" content="Python">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="euc-kr data in flask">
+    <meta name="twitter:description" content="### **파이썬에서의 unicode와 str**">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "euc-kr data in flask",
+        "description": "### **\ud30c\uc774\uc36c\uc5d0\uc11c\uc758 unicode\uc640 str**",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2015-07-16",
+        "dateModified": "2015-07-16",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2015/07/16/flask-euckr/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2015-07-16</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2015">2015</a><span>/</span><span>07</span><span>/</span><span>16</span><span>/</span><span class="cur">flask-euckr/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="flask-euckr">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'euc-kr data in flask'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2015-07-16'</span>
+<span class="k">description</span>: <span class="v">'### **파이썬에서의 unicode와 str**'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/euc-kr/">'euc-kr'</a>, <a class="v" href="/tags/euckr/">'euckr'</a>, <a class="v" href="/tags/Flask/">'Flask'</a>, <a class="v" href="/tags/flask euc-kr/">'flask euc-kr'</a>, <a class="v" href="/tags/Python/">'Python'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">euc-kr data in flask</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/euc-kr/" class="tag">euc-kr</a>
-                
-                <a href="/tags/euckr/" class="tag">euckr</a>
-                
-                <a href="/tags/Flask/" class="tag">Flask</a>
-                
-                <a href="/tags/flask euc-kr/" class="tag">flask euc-kr</a>
-                
-                <a href="/tags/Python/" class="tag">Python</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <h3><strong>파이썬에서의 unicode와 str</strong></h3>
+            <div class="post-content" data-pagefind-body>
+<h3><strong>파이썬에서의 unicode와 str</strong></h3>
 <ul>
 <li>유니코드는 평문이고, str은 암호화된 유니코드라고 생각하자.</li>
 <li>charset 은 str 을 만들기 위한 키이다. 즉, unicode 에서 str 을 만들려면 charset이 필요하고, str에서 unicode 를 만들려면 charset이 필요하다.</li>
@@ -167,18 +164,55 @@
 <p>위의 코드에서 보면 <code>request.get_data()</code> 를 사용하고 있다. 기존에는 GET 에는 <code>request.args</code> 를 POST에는 <code>request.form</code> 을 이용해서 데이터를 가져왔는데, args 와 form 은 클래스 내 charset 변수에 의해서 decode 되기 때문에 사용할 수가 없다.</p>
 <p>decode 전 데이터는 <code>request.get_data()</code> 를 통해서 가져올수 있는데, 대신에 파싱을 통해서 데이터를 추출 해야한다. decode_raw_data 함수는 query string 형식의 데이터를 dict 객체에 담고나서, urldecode 를 수행하고, 그 데이터를 다시 decode(charset) 하고 있는 코드이다. 즉, 기존의 flask 에서 해줬던 부분을 개발자가 코드에서 직접 해주어야 한다. 이렇게 되면 euc-kr 데이터를 받아서 decode 를 해서 unicode의 형태로 파이썬내에서 사용할 수가 있다. </p>
 <p>실제로 국내의 경우 아직도 euc-kr을 사용하는 경우가 많기 때문에 그런 사이트와의 연동 작업에서는 euc-kr을 default로 하는 것이 기본이다. 물론 utf-8을 사용하는 것이 좋다. 그렇지만 중요한 것은 content-type 같이 일반적으로 charset 정보를 전달하는 곳에 명시하는게 가장 베스트라는 생각이 들고 개인적으로 POST 나 GET 요청시에 파라미터로 charset 값을 전달하는 것은 비추해야 한다고 생각한다.</p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/flask-euckr/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/flask-euckr/flask-euckr.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

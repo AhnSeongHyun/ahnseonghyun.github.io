@@ -2,68 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>jmeter non GUI mode - ASH84</title>
-    <meta name="description" content="[apache jmeter](http://jmeter.apache.org/) 라고 서버 Load Testing 툴인데, [사용법](http://codeigniter-kr.org/lecture/view/289/page/1)은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2015/07/07/jmeter-non-gui-mode/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="jmeter non GUI mode"/>
-    <meta property="og:description" content="[apache jmeter](http://jmeter.apache.org/) 라고 서버 Load Testing 툴인데, [사용법](http://codeigniter-kr.org/lecture/view/289/page/1)은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이"/>
-    <meta property="og:url" content="https://ash84.io/2015/07/07/jmeter-non-gui-mode/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="jmeter" />
-    
-    <meta property="article:tag" content="jmeter non gui mode" />
-    
-    <meta property="article:tag" content="tutorial" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="jmeter non GUI mode"/>
-    <meta name="twitter:description" content="[apache jmeter](http://jmeter.apache.org/) 라고 서버 Load Testing 툴인데, [사용법](http://codeigniter-kr.org/lecture/view/289/page/1)은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이"/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "jmeter non GUI mode",
-        "description": "[apache jmeter](http://jmeter.apache.org/) 라고 서버 Load Testing 툴인데, [사용법](http://codeigniter-kr.org/lecture/view/289/page/1)은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2015/07/07/jmeter-non-gui-mode"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -72,42 +17,100 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>jmeter non GUI mode - ASH84</title>
+    <meta name="description" content="[apache jmeter](http://jmeter.apache.org/) 라고 서버 Load Testing 툴인데, [사용법](http://codeigniter-kr.org/lecture/view/289/page/1)은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2015/07/07/jmeter-non-gui-mode/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="jmeter non GUI mode">
+    <meta property="og:description" content="[apache jmeter](http://jmeter.apache.org/) 라고 서버 Load Testing 툴인데, [사용법](http://codeigniter-kr.org/lecture/view/289/page/1)은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이">
+    <meta property="og:url" content="https://ash84.io/2015/07/07/jmeter-non-gui-mode/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2015-07-07">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="jmeter">
+
+    <meta property="article:tag" content="jmeter non gui mode">
+
+    <meta property="article:tag" content="tutorial">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="jmeter non GUI mode">
+    <meta name="twitter:description" content="[apache jmeter](http://jmeter.apache.org/) 라고 서버 Load Testing 툴인데, [사용법](http://codeigniter-kr.org/lecture/view/289/page/1)은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "jmeter non GUI mode",
+        "description": "[apache jmeter](http://jmeter.apache.org/) \ub77c\uace0 \uc11c\ubc84 Load Testing \ud234\uc778\ub370, [\uc0ac\uc6a9\ubc95](http://codeigniter-kr.org/lecture/view/289/page/1)\uc740 \uc778\ud130\ub137 \ubcf4\uba74 \ub098\uc640\uc788\ub2e4. \ub300\ubd80\ubd84\uc774 \uc708\ub3c4\uc6b0 \uc0c1\uc5d0\uc11c \uc870\uac74\uc744 \uc785\ub825\ud558\uace0, \uc5b4\ub5a4 \uacb0\uacfc\ud654\uba74\uc744 \ubcfc\uac83\uc778\uc9c0\ub97c \uc124\uc815\ud558\ub294 \uc2dd\uc73c\ub85c \uc124\uba85\uc774 \ub418\uc5b4 \uc788\ub294\ub370, \uc708\ub3c4\uc6b0\uc5d0\uc11c \uc124\uba85\ud55c\ub2e4\ub294 \uc57d\uac04\uc758 \uc544\uc26c\uc6c0 \uc810\uc744 \uac00\uc9c0\uace0 \uc788\ub2e4. \uaf64 \ub9ce\uc740 \ud14c\uc2a4\ud2b8\ub97c \ud560 \uacbd\uc6b0, \ub0b4 \ucef4\ud4e8\ud130 \uc0c1\uc758 \uc708\ub3c4\uc6b0\uc5d0\uc11c \ud14c\uc2a4\ud2b8\ub97c \ub3cc\ub9ac\ub2e4\ubcf4\uba74, \uc11c\ubc84 \ubcf4\ub2e4 \ub0b4 \ucef4\ud4e8\ud130\uac00 \uba3c\uc800 \uc8fd\ub294 \uacbd\uc6b0\uac00 \uc788\ub2e4. \uc774",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2015-07-07",
+        "dateModified": "2015-07-07",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2015/07/07/jmeter-non-gui-mode/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2015-07-07</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2015">2015</a><span>/</span><span>07</span><span>/</span><span>07</span><span>/</span><span class="cur">jmeter-non-gui-mode/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="jmeter-non-gui-mode">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'jmeter non GUI mode'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2015-07-07'</span>
+<span class="k">description</span>: <span class="v">'[apache jmeter](http://jmeter.apache.org/) 라고 서버 Load Testing 툴인데, [사용법](http://codeigniter-kr.org/lecture/view/289/page/1)은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/jmeter/">'jmeter'</a>, <a class="v" href="/tags/jmeter non gui mode/">'jmeter non gui mode'</a>, <a class="v" href="/tags/tutorial/">'tutorial'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">jmeter non GUI mode</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/jmeter/" class="tag">jmeter</a>
-                
-                <a href="/tags/jmeter non gui mode/" class="tag">jmeter non gui mode</a>
-                
-                <a href="/tags/tutorial/" class="tag">tutorial</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><a href="http://jmeter.apache.org/">apache jmeter</a> 라고 서버 Load Testing 툴인데, <a href="http://codeigniter-kr.org/lecture/view/289/page/1">사용법</a>은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이건 jvm 메모리의 문제라기 보다는 컴퓨터의 메모리가 적어서 생기는 이슈이기도 하다.</p>
+            <div class="post-content" data-pagefind-body>
+<p><a href="http://jmeter.apache.org/">apache jmeter</a> 라고 서버 Load Testing 툴인데, <a href="http://codeigniter-kr.org/lecture/view/289/page/1">사용법</a>은 인터넷 보면 나와있다. 대부분이 윈도우 상에서 조건을 입력하고, 어떤 결과화면을 볼것인지를 설정하는 식으로 설명이 되어 있는데, 윈도우에서 설명한다는 약간의 아쉬움 점을 가지고 있다. 꽤 많은 테스트를 할 경우, 내 컴퓨터 상의 윈도우에서 테스트를 돌리다보면, 서버 보다 내 컴퓨터가 먼저 죽는 경우가 있다. 이건 jvm 메모리의 문제라기 보다는 컴퓨터의 메모리가 적어서 생기는 이슈이기도 하다.</p>
 <p>그래서 많은 사용자를 대상으로 할때에는 다른 테스트 서버에서 테스트를 하고 싶어지는데, 앞서 말한것 처럼 대부분의 설명이 윈도우 기반이다 보니 jmeter non GUI Mode에 대한 설명을 찾기가 쉽지 않았다. 일단 기존의 윈도우에서 사용하던 설정 중에서 결과를 보는 화면관련 된 부분을 삭제하고, ThreadGroup 과 HttpRequest 부분만 두고 저장한다. 저장하게 되면 name.jmx 파일의 형태로 저장이 되는데, 이 파일이 있어야 리눅스 상에서 커맨드 툴을 이용해서 테스트를 할 수 가 있다.</p>
 <script src="https://gist.github.com/AhnSeongHyun/ff7f2964af8c44f3a424.js"></script>
 
@@ -116,18 +119,55 @@
 
 <p>파라미터를 보면 <code>-n</code> 과 <code>-t</code> 는 무조건 지정해야 한다. <code>-n</code> 은 GUI 모드를 사용하지 않겠다는 것이고 <code>-t</code>는 test.jmx 에 대한 지정을 위한 파라미터이다. <code>-j</code> 는 로그파일을 남기는 것인데, 필요하면 남기는것이 좋을것 같다. <code>-H</code>와 <code>-P</code> 는 proxy 관련 부분이다. 테스트를 하다보면 너무 많은 테스트로 인해서 테스트 자체가 느리게 수행되는것을 느낄수가 있는데, jmeter 실행 스크립트 내 jvm 메모리 관련 부분을 올려주면 좀 더 빠르게 실행되는것을 알수 있다. 기본은 512로 설정되어서 나오는데, 1024나 메모리 여유가 된다면 그 이상도 필요하다고 생각한다. 그래프를 뽑을수 없는 단점도 있지만, 대규모의 테스트를 하고 싶을때거나 리눅스 환경에서 테스트 해야할 때에는 non-gui mode를 이용해야 할 것 같다.</p>
 <p><a href="https://blazemeter.com/blog/5-ways-launch-jmeter-test-without-using-jmeter-gui" title="5 Ways To Launch a JMeter Test without Using the JMeter GUI">5 Ways To Launch a JMeter Test without Using the JMeter GUI</a></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/jmeter-non-gui-mode/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/jmeter-non-gui-mode/jmeter-non-gui-mode.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

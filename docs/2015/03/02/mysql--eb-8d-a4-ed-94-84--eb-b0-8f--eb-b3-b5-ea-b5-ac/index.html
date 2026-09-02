@@ -2,72 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>[DB] mysql 덤프 및 복구 - ASH84</title>
-    <meta name="description" content="테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2015/03/02/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="[DB] mysql 덤프 및 복구"/>
-    <meta property="og:description" content="테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다."/>
-    <meta property="og:url" content="https://ash84.io/2015/03/02/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="MySQL" />
-    
-    <meta property="article:tag" content="mysqldump" />
-    
-    <meta property="article:tag" content="mysqldump option" />
-    
-    <meta property="article:tag" content="mysqldump query" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="[DB] mysql 덤프 및 복구"/>
-    <meta name="twitter:description" content="테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "[DB] mysql 덤프 및 복구",
-        "description": "테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2015/03/02/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -76,46 +17,104 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>[DB] mysql 덤프 및 복구 - ASH84</title>
+    <meta name="description" content="테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2015/03/02/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="[DB] mysql 덤프 및 복구">
+    <meta property="og:description" content="테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다.">
+    <meta property="og:url" content="https://ash84.io/2015/03/02/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2015-03-02">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="MySQL">
+
+    <meta property="article:tag" content="mysqldump">
+
+    <meta property="article:tag" content="mysqldump option">
+
+    <meta property="article:tag" content="mysqldump query">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="[DB] mysql 덤프 및 복구">
+    <meta name="twitter:description" content="테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[DB] mysql \ub364\ud504 \ubc0f \ubcf5\uad6c",
+        "description": "\ud14c\uc774\ube14\ub77d\uc774 \uac78\ub838\ub2e4. \uc65c \uac78\ub838\ub294\uc9c0 \uc0b4\ud3b4\ubcf4\ub2c8 \ub85c\uadf8 db \uac00 MYISAM \ubc29\uc2dd\uc73c\ub85c \ub418\uc5b4 \uc788\uc5b4\uc11c \uc0dd\uae34 \ubb38\uc81c\uc600\ub2e4. \uc774\ubbf8 \uc218\ub9ce\uc740 \ub85c\uadf8\ub97c \ub4a4\ub85c\ud558\uace0 \uc6b4\uc601\uc911\uc778 DB \ub97c \ubc31\uc5c5\ud574\uc11c INNODB\ub85c \ubcc0\uacbd\ud574\uc11c \ub2e4\uc2dc \ub9cc\ub4e4\uae4c\ub3c4 \uc0dd\uac01\ud574\ubd24\uc9c0\ub9cc, \uadf8\ub7f4\ubc14\uc5d4 \ucc28\ub77c\ub9ac mysqldump \ub97c \uc0ac\uc6a9\ud574\uc11c \uc6b4\uc601\uc11c\ubc84\uac00 \uc544\ub2cc \uac1c\ubc1c \uc11c\ubc84\ub85c \uc62e\uaca8\uc11c \ubd84\uc11d \uc791\uc5c5\uc744 \ud558\ub294\uac8c \ub098\uc744\uac83 \uac19\uc558\ub2e4. mysqldump\ub294 \uc11c\ube44\uc2a4\uc5d0 \uc0c1\uad00\uc5c6\uc774 \ub370\uc774\ud130 \ubc0f \uad6c\uc870\ub97c \uac00\uc838\uc62c\uc218\uac00 \uc788\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2015-03-02",
+        "dateModified": "2015-03-02",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2015/03/02/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2015-03-02</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2015">2015</a><span>/</span><span>03</span><span>/</span><span>02</span><span>/</span><span class="cur">mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'[DB] mysql 덤프 및 복구'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2015-03-02'</span>
+<span class="k">description</span>: <span class="v">'테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/MySQL/">'MySQL'</a>, <a class="v" href="/tags/mysqldump/">'mysqldump'</a>, <a class="v" href="/tags/mysqldump option/">'mysqldump option'</a>, <a class="v" href="/tags/mysqldump query/">'mysqldump query'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">[DB] mysql 덤프 및 복구</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/MySQL/" class="tag">MySQL</a>
-                
-                <a href="/tags/mysqldump/" class="tag">mysqldump</a>
-                
-                <a href="/tags/mysqldump option/" class="tag">mysqldump option</a>
-                
-                <a href="/tags/mysqldump query/" class="tag">mysqldump query</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p>테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다.  </p>
+            <div class="post-content" data-pagefind-body>
+<p>테이블락이 걸렸다. 왜 걸렸는지 살펴보니 로그 db 가 MYISAM 방식으로 되어 있어서 생긴 문제였다. 이미 수많은 로그를 뒤로하고 운영중인 DB 를 백업해서 INNODB로 변경해서 다시 만들까도 생각해봤지만, 그럴바엔 차라리 mysqldump 를 사용해서 운영서버가 아닌 개발 서버로 옮겨서 분석 작업을 하는게 나을것 같았다. mysqldump는 서비스에 상관없이 데이터 및 구조를 가져올수가 있다.  </p>
 <p>나 같은 경우는 매월 데이터를 가져와야 하기 때문에 dump시 쿼리 비슷하게 필요한 데이터만 가져올수 있었으면 했는데, 다행히 <code>-w 옵션</code>을 사용하면 다음과 같이 쿼리문의 where 절처럼 조건을 사용해서 가져올수가 있다. </p>
 <script src="https://gist.github.com/AhnSeongHyun/56f0954620e4033cdea4.js"></script>
 
@@ -131,18 +130,55 @@
 <ul>
 <li><a href="http://cloudjak.tistory.com/17">http://cloudjak.tistory.com/17</a></li>
 </ul>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac/mysql--eb-8d-a4-ed-94-84--eb-b0-8f--eb-b3-b5-ea-b5-ac.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

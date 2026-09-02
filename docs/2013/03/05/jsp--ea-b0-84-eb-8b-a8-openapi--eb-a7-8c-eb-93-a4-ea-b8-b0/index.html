@@ -2,72 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(JSP) 간단 OpenAPI 만들기 - ASH84</title>
-    <meta name="description" content="앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2013/03/05/jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(JSP) 간단 OpenAPI 만들기"/>
-    <meta property="og:description" content="앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다."/>
-    <meta property="og:url" content="https://ash84.io/2013/03/05/jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="API" />
-    
-    <meta property="article:tag" content="Java" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="jsp" />
-    
-    <meta property="article:tag" content="project-showcase" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(JSP) 간단 OpenAPI 만들기"/>
-    <meta name="twitter:description" content="앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(JSP) 간단 OpenAPI 만들기",
-        "description": "앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2013/03/05/jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -76,46 +17,104 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(JSP) 간단 OpenAPI 만들기 - ASH84</title>
+    <meta name="description" content="앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2013/03/05/jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(JSP) 간단 OpenAPI 만들기">
+    <meta property="og:description" content="앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다.">
+    <meta property="og:url" content="https://ash84.io/2013/03/05/jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-03-05">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="API">
+
+    <meta property="article:tag" content="Java">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="jsp">
+
+    <meta property="article:tag" content="project-showcase">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(JSP) 간단 OpenAPI 만들기">
+    <meta name="twitter:description" content="앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(JSP) \uac04\ub2e8 OpenAPI \ub9cc\ub4e4\uae30",
+        "description": "\uc571 \uc791\uc5c5\uc744 \ud558\ub2e4 \ubcf4\uba74 \uc11c\ubc84\uc5d0\uc11c \ud574\uc8fc\uc5c8\uc73c\uba74 \ud558\ub294 \uc791\uc5c5\ub4e4\uc774 \uc788\ub2e4. \ud2b9\ud788 \uc544\uc774\ud3f0 \uc571\uc758 \uacbd\uc6b0 \uc560\ud50c \uc2ec\uc0ac\uac00 \ucd5c\uc18c \uc77c\uc8fc\uc77c\uc758 \uacbd\uc6b0\uac00 \ub9ce\uae30 \ub54c\ubb38\uc5d0 \ud30c\uc2f1\ud558\ub294 \ubd80\ubd84\uc774\ub098 \uc5f0\ub3d9\ud558\ub294 \uc678\ubd80 API\uac00 \ubcc0\uacbd\ub418\ub294 \uacbd\uc6b0 \uc544\uc774\ud3f0 \uc571\ub0b4\uc5d0\uc11c \ud574\ub2f9 \ucf54\ub4dc\uac00 \uc788\uc73c\uba74 \ubcc0\uacbd\uc744 \ud558\ub354\ub77c\ub3c4 \uc0ac\uc6a9\uc790\uac00 \ub2e4\uc2dc \ubcf8\ub798\uc758 \uae30\ub2a5\uc744 \uc4f0\ub824\uba74 \uc2dc\uac04\uc774 \uc624\ub798 \uac78\ub9b0\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2013-03-05",
+        "dateModified": "2013-03-05",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/03/05/jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2013-03-05</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2013">2013</a><span>/</span><span>03</span><span>/</span><span>05</span><span>/</span><span class="cur">jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(JSP) 간단 OpenAPI 만들기'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2013-03-05'</span>
+<span class="k">description</span>: <span class="v">'앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/API/">'API'</a>, <a class="v" href="/tags/Java/">'Java'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/jsp/">'jsp'</a>, <a class="v" href="/tags/project-showcase/">'project-showcase'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(JSP) 간단 OpenAPI 만들기</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/API/" class="tag">API</a>
-                
-                <a href="/tags/Java/" class="tag">Java</a>
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/jsp/" class="tag">jsp</a>
-                
-                <a href="/tags/project-showcase/" class="tag">project-showcase</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt;">앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다. </span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt;">앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다. </span></p>
 <p><span style="font-size: 11pt;"><strong>내가 원하는건 단 한가지였다. HTTP GET 방식으로 어떤 데이터를 전달하면 그에 따른 응답을 JSON 형식으로 넘겨주는 작업.</strong> 그것만 되면 된다. CSS, 이미지 이런것들은 웹 사이트 만드는 개발자들에게 필요한거고 간단하게 데이터처리를 해줄 서버가 필요하고, 그것을 받을수 있는 OpenAPI를 만드는 것이 필요했다. </span></p>
 <p><span style="font-size: 11pt;">필자는 톰캣을 설치해본적도, JSP 문법을 알지도 못한다. 그냥 <strong>STEP BY STEP</strong> 으로 해보겠다. </span></p>
 <p><strong>1. 톰캣 설치</strong></p>
@@ -178,18 +177,55 @@
 <p><span style="font-size: 11pt;">원하는 수준의 작업은 여기까지 였다. 여기서는 사실 쉽게 설명을 했지만 찾고 다시 해보고 찾고 다시해보고 하는 식의 반복이었다. 단일 웹페이지 하나 띄우는 작업으로 해보면 별거 아니지만 웹 프로그래밍 자체는 처음이었기 때문에 재밌었지만 이해가 안되는 부분도 많았다. 간단한 것은 쉽지만 실제로 필자가 다음의 트위터 분석 페이지를 파싱해서 API화 할때에는 encoding 에 대한 부분 역시 하나의 걸림돌로 작용하기도 하였다. </span></p>
 <p><span style="font-size: 11pt;">배포를 설명하지 않았는데, 사실 그리 어렵지 않다. 이클립스에서 만든 프로젝트에 마우스를 우클릭하면 Export&gt;WAR 가 있는데 그것을 누르면 프로젝트이름.WAR 파일이 만들어 진다. 실제 배보할 서버의 톰캣/WebApps에 만들 파일을 둔채 다시 톰캣을 재기동 하면 WAR 가 풀리면서 프로젝트 이름의 디렉토리가 생기고 URL로 접근할 수 있다. </span></p>
 <p><span style="font-size: 11pt;">필자가 더 모르거나 잘못된 부분으로 전달하고 있는 부분도 있을것이라고 생각한다. 왜냐하면 거듭 말하지만 웹 작업을 처음해본것이기에. 잘못된것 혹은 추가적으로 알아야 하는 부분이 있다면 댓글을 통해서 반드시 알려주시길. </span></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0/jsp--ea-b0-84-eb-8b-a8-openapi--eb-a7-8c-eb-93-a4-ea-b8-b0.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

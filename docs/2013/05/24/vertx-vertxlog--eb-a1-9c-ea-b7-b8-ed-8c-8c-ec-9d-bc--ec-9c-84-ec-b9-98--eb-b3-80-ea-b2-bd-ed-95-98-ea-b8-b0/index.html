@@ -2,74 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(vert.x) vertx.log 로그파일 위치 변경하기 - ASH84</title>
-    <meta name="description" content="vert.x 로그에 대한 내용은 [여기](http://vertx.io/manual.html#logging)를 참고를 하면 된다. 요약하자면" />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2013/05/24/vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(vert.x) vertx.log 로그파일 위치 변경하기"/>
-    <meta property="og:description" content="vert.x 로그에 대한 내용은 [여기](http://vertx.io/manual.html#logging)를 참고를 하면 된다. 요약하자면"/>
-    <meta property="og:url" content="https://ash84.io/2013/05/24/vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="logging.properties" />
-    
-    <meta property="article:tag" content="set vert.x log" />
-    
-    <meta property="article:tag" content="vert.x" />
-    
-    <meta property="article:tag" content="vert.x 로그 설정" />
-    
-    <meta property="article:tag" content="vertx" />
-    
-    <meta property="article:tag" content="vertx.log" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(vert.x) vertx.log 로그파일 위치 변경하기"/>
-    <meta name="twitter:description" content="vert.x 로그에 대한 내용은 [여기](http://vertx.io/manual.html#logging)를 참고를 하면 된다. 요약하자면"/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(vert.x) vertx.log 로그파일 위치 변경하기",
-        "description": "vert.x 로그에 대한 내용은 [여기](http://vertx.io/manual.html#logging)를 참고를 하면 된다. 요약하자면",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2013/05/24/vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -78,48 +17,106 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(vert.x) vertx.log 로그파일 위치 변경하기 - ASH84</title>
+    <meta name="description" content="vert.x 로그에 대한 내용은 [여기](http://vertx.io/manual.html#logging)를 참고를 하면 된다. 요약하자면">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2013/05/24/vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(vert.x) vertx.log 로그파일 위치 변경하기">
+    <meta property="og:description" content="vert.x 로그에 대한 내용은 [여기](http://vertx.io/manual.html#logging)를 참고를 하면 된다. 요약하자면">
+    <meta property="og:url" content="https://ash84.io/2013/05/24/vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-05-24">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="logging.properties">
+
+    <meta property="article:tag" content="set vert.x log">
+
+    <meta property="article:tag" content="vert.x">
+
+    <meta property="article:tag" content="vert.x 로그 설정">
+
+    <meta property="article:tag" content="vertx">
+
+    <meta property="article:tag" content="vertx.log">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(vert.x) vertx.log 로그파일 위치 변경하기">
+    <meta name="twitter:description" content="vert.x 로그에 대한 내용은 [여기](http://vertx.io/manual.html#logging)를 참고를 하면 된다. 요약하자면">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(vert.x) vertx.log \ub85c\uadf8\ud30c\uc77c \uc704\uce58 \ubcc0\uacbd\ud558\uae30",
+        "description": "vert.x \ub85c\uadf8\uc5d0 \ub300\ud55c \ub0b4\uc6a9\uc740 [\uc5ec\uae30](http://vertx.io/manual.html#logging)\ub97c \ucc38\uace0\ub97c \ud558\uba74 \ub41c\ub2e4. \uc694\uc57d\ud558\uc790\uba74",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2013-05-24",
+        "dateModified": "2013-05-24",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/05/24/vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2013-05-24</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2013">2013</a><span>/</span><span>05</span><span>/</span><span>24</span><span>/</span><span class="cur">vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(vert.x) vertx.log 로그파일 위치 변경하기'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2013-05-24'</span>
+<span class="k">description</span>: <span class="v">'vert.x 로그에 대한 내용은 [여기](http://vertx.io/manual.html#logging)를 참고를 하면 된다. 요약하자면'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/logging.properties/">'logging.properties'</a>, <a class="v" href="/tags/set vert.x log/">'set vert.x log'</a>, <a class="v" href="/tags/vert.x/">'vert.x'</a>, <a class="v" href="/tags/vert.x 로그 설정/">'vert.x 로그 설정'</a>, <a class="v" href="/tags/vertx/">'vertx'</a>, <a class="v" href="/tags/vertx.log/">'vertx.log'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(vert.x) vertx.log 로그파일 위치 변경하기</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/logging.properties/" class="tag">logging.properties</a>
-                
-                <a href="/tags/set vert.x log/" class="tag">set vert.x log</a>
-                
-                <a href="/tags/vert.x/" class="tag">vert.x</a>
-                
-                <a href="/tags/vert.x 로그 설정/" class="tag">vert.x 로그 설정</a>
-                
-                <a href="/tags/vertx/" class="tag">vertx</a>
-                
-                <a href="/tags/vertx.log/" class="tag">vertx.log</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt;">vert.x 로그에 대한 내용은 <a href="http://vertx.io/manual.html#logging">여기</a>를 참고를 하면 된다. 요약하자면 </span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt;">vert.x 로그에 대한 내용은 <a href="http://vertx.io/manual.html#logging">여기</a>를 참고를 하면 된다. 요약하자면 </span></p>
 <blockquote>
 <p><span style="font-size: 9pt;">각각의 verticle 은 자신의 logger를 가지는데, verticle 내부에서 가져와서 사용할 수가 있다. </span><span style="font-size: 9pt;">로그 파일은 기본적으로 vertx.log 파일로 기록이 되고, system temp 디렉토리에<br />
  남겨지게 된다. </span></p>
@@ -180,18 +177,55 @@
 <figure class="wp-caption aligncenter" style="width: 640px">![](http://ash84.net/wp-content/uploads/1/cfile26.uf.034E4C3A519F1567196E10.png)<figcaption class="wp-caption-text">클릭해서 보기 </figcaption></figure>
 
 <p><span style="font-size: 11pt;">logging.properties 에 다른 부분들은 <a href="http://docs.xrath.com/java/se/6/docs/ko/api/java/util/logging/package-summary.html">JUI</a>에 대한 부분이기 때문에 자바 문서를 한번 보는 것이 필요하다고 생각한다. 다음 포스팅에서 <a href="http://ash84.tistory.com/978">logging.properties 내 다른 </a> <a href="http://ash84.tistory.com/978">JUI</a> <a href="http://ash84.tistory.com/978">다른 설정들이 의미하는 것</a>과 그리고 log4j, slf4j 등의 다른 로거들을 사용하려면 어떻게 해야하는지 알아보도록 하겠다. </span></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0/vertx-vertxlog--eb-a1-9c-ea-b7-b8-ed-8c-8c-ec-9d-bc--ec-9c-84-ec-b9-98--eb-b3-80-ea-b2-bd-ed-95-98-ea-b8-b0.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>

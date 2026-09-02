@@ -2,72 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>(flask) http get url 처리 - ASH84</title>
-    <meta name="description" content="당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. `@app.route()`함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 `request.args.get()` 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다." />
-    <meta name="author" content="ASH84" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ash84.io/2013/09/06/flask-http-get-url/" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="ASH84"/>
-    <meta property="og:title" content="(flask) http get url 처리"/>
-    <meta property="og:description" content="당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. `@app.route()`함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 `request.args.get()` 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다."/>
-    <meta property="og:url" content="https://ash84.io/2013/09/06/flask-http-get-url/"/>
-    <meta property="og:locale" content="ko_KR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="" />
-    <meta property="article:author" content="https://ash84.io/" />
-    
-    <meta property="article:tag" content="dev" />
-    
-    <meta property="article:tag" content="Flask" />
-    
-    <meta property="article:tag" content="flask get method" />
-    
-    <meta property="article:tag" content="flask get 처리" />
-    
-    <meta property="article:tag" content="Python" />
-    
-    
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@sh84ahn"/>
-    <meta name="twitter:creator" content="@sh84ahn"/>
-    <meta name="twitter:title" content="(flask) http get url 처리"/>
-    <meta name="twitter:description" content="당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. `@app.route()`함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 `request.args.get()` 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다."/>
-    
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "(flask) http get url 처리",
-        "description": "당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. `@app.route()`함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 `request.args.get()` 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다.",
-        "author": {
-            "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
-        },
-        "datePublished": "",
-        "dateModified": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ash84.io/2013/09/06/flask-http-get-url"
-        },
-        
-        "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
-        }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ASH84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
     <script>
@@ -76,46 +17,104 @@
         gtag('js', new Date());
         gtag('config', 'UA-71946262-1');
     </script>
+    <link rel="stylesheet" href="/assets/css/base.css">
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+
+
+    <title>(flask) http get url 처리 - ASH84</title>
+    <meta name="description" content="당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. `@app.route()`함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 `request.args.get()` 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ash84.io/2013/09/06/flask-http-get-url/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASH84">
+    <meta property="og:title" content="(flask) http get url 처리">
+    <meta property="og:description" content="당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. `@app.route()`함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 `request.args.get()` 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다.">
+    <meta property="og:url" content="https://ash84.io/2013/09/06/flask-http-get-url/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-09-06">
+    <meta property="article:author" content="https://ash84.io/">
+
+    <meta property="article:tag" content="dev">
+
+    <meta property="article:tag" content="Flask">
+
+    <meta property="article:tag" content="flask get method">
+
+    <meta property="article:tag" content="flask get 처리">
+
+    <meta property="article:tag" content="Python">
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sh84ahn">
+    <meta name="twitter:creator" content="@sh84ahn">
+    <meta name="twitter:title" content="(flask) http get url 처리">
+    <meta name="twitter:description" content="당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. `@app.route()`함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 `request.args.get()` 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다.">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(flask) http get url \ucc98\ub9ac",
+        "description": "\ub2f9\uc5f0\ud788 \ucd5c\uadfc\uc5d0\ub294 \uc624\ud508API\ub098 \ud639\uc740 \uac04\ub2e8\ud558\uac8c \uc6f9 \uc11c\ube44\uc2a4\ub97c \uad6c\uc131\ud55c\ub2e4\uace0 \ud558\uba74 Http Get \ubc29\uc2dd\uc73c\ub85c \ub370\uc774\ud130\ub97c \uc804\ub2ec\ud558\ub294\ub370 flask \uc5d0\uc11c\ub294 \ub2e4\uc74c\uacfc \uac19\uc774 \ucc98\ub9ac \ud560\uc218 \uc788\ub2e4. `@app.route()`\ud568\uc218\uc5d0\uc11c \uc5b4\ub5a4 \uba54\uc18c\ub4dc\ub97c \uc0ac\uc6a9\ud560 \uac83\uc778\uc9c0 \uc9c0\uc815\uc744 \ud574\uc8fc\uace0 \ub098\uba74 `request.args.get()` \ud568\uc218\ub97c \ud1b5\ud574\uc11c \ud574\ub2f9 url \ub85c \ub118\uc5b4\uc628 \ub370\uc774\ud130\ub97c \uac00\uc838\uc62c \uc218 \uc788\ub2e4.",
+        "author": {
+            "@type": "Person",
+            "name": "ash84",
+            "url": "https://ash84.io"
+        },
+        "datePublished": "2013-09-06",
+        "dateModified": "2013-09-06",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ash84.io/2013/09/06/flask-http-get-url/"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "ASH84"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/post.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
-    <header class="post-header">
-        <nav class="nav">
-            <a href="/" class="nav-home">← ASH84</a>
+
+<div class="wrap">
+    <header class="top">
+        <a class="site" href="/">ash84.io</a>
+        <nav class="flags" aria-label="주요 메뉴">
+            <a href="/" class="on">--writing</a>
+            <a href="/tags/">--tags</a>
+            <a href="https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105" rel="me">--about</a>
         </nav>
+        <button class="search-btn" type="button" data-action="search" aria-label="검색 열기"><span>/ search</span><kbd>⌘K</kbd></button>
     </header>
 
-    <article class="post">
-        <header class="post-meta">
-            <time class="post-date">2013-09-06</time>
+    <nav class="crumb" aria-label="경로">
+        <a href="/">ash84.io</a><span>/</span><a href="/#y2013">2013</a><span>/</span><span>09</span><span>/</span><span>06</span><span>/</span><span class="cur">flask-http-get-url/</span>
+    </nav>
+
+    <div class="post-grid">
+        <article data-slug="flask-http-get-url">
+            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
+<span class="k">title</span>: <span class="v">'(flask) http get url 처리'</span>
+<span class="k">author</span>: <span class="v">'ash84'</span>
+<span class="k">pub_date</span>: <span class="v">'2013-09-06'</span>
+<span class="k">description</span>: <span class="v">'당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. `@app.route()`함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 `request.args.get()` 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다.'</span>
+<span class="k">tags</span>: [<a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/Flask/">'Flask'</a>, <a class="v" href="/tags/flask get method/">'flask get method'</a>, <a class="v" href="/tags/flask get 처리/">'flask get 처리'</a>, <a class="v" href="/tags/Python/">'Python'</a>]
+<span class="d">---</span></pre>
+
             <h1 class="post-title">(flask) http get url 처리</h1>
-            
-            <div class="post-tags">
-                
-                <a href="/tags/dev/" class="tag">dev</a>
-                
-                <a href="/tags/Flask/" class="tag">Flask</a>
-                
-                <a href="/tags/flask get method/" class="tag">flask get method</a>
-                
-                <a href="/tags/flask get 처리/" class="tag">flask get 처리</a>
-                
-                <a href="/tags/Python/" class="tag">Python</a>
-                
-            </div>
-            
-        </header>
 
-        
-
-        <div class="post-content">
-            <p><span style="font-size: 11pt;">당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. <code>@app.route()</code>함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 <code>request.args.get()</code> 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다. </span></p>
+            <div class="post-content" data-pagefind-body>
+<p><span style="font-size: 11pt;">당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. <code>@app.route()</code>함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 <code>request.args.get()</code> 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다. </span></p>
 <p><span style="font-size: 11pt;"><br />
 </span></p>
 <p><span style="font-size: 11pt;">예를 들어, http://127.0.0.1:8000/article?keyword=google&amp;pageCount=1 이런식으로 url을 호출을 하면 해당 데이터를 가져와서 어떤 데이터 연산을 한뒤 페이지를 보여줄수 있는 것이다. </span></p>
@@ -123,18 +122,55 @@
 <script src="https://gist.github.com/AhnSeongHyun/6444186.js"></script>
 <p><span style="font-size: 11pt;"><br />
 </span></p>
-        </div>
-    </article>
+            </div>
 
-    <footer class="post-footer">
-        <div class="footer-content">
-            <p class="footer-author">Written by <a href="/">ASH84</a></p>
-            <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script></p>
-        </div>
-    </footer>
+            <section class="hist" data-history hidden>
+                <div class="cl">
+                    <div class="cl-h">history <span>git log -- contents/flask-http-get-url/</span></div>
+                    <div class="cl-rows"></div>
+                </div>
+            </section>
+            <nav class="pn" data-pn hidden aria-label="이전·다음 글">
+                <a class="pn-a" data-pn-prev hidden><span>← older</span><b></b></a>
+                <a class="pn-a pn-next" data-pn-next hidden><span>newer →</span><b></b></a>
+            </nav>
+    <nav class="links" aria-label="외부 링크">
+        <a href="https://github.com/AhnSeongHyun/" rel="me">↗ github</a>
+        <a href="https://x.com/sh84ahn" rel="me">↗ x</a>
+        <a href="https://www.instagram.com/ash84/" rel="me">↗ instagram</a>
+        <a href="https://www.linkedin.com/in/seonghyun-ahn-9098a640/" rel="me">↗ linkedin</a>
+        <a href="https://leica.ash84.io">↗ gallery</a>
+        <a href="https://music.apple.com/kr/playlist/ash84/pl.u-d2b05VluBE3PDA?l=en">↗ playlist</a>
+    </nav>
+        </article>
+        <aside class="toc" id="toc" hidden aria-label="목차">
+            <details>
+                <summary class="cl-h">toc</summary>
+                <ol></ol>
+            </details>
+        </aside>
+    </div>
+</div>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
-    <script>hljs.highlightAll();</script>
+<div class="status">
+    <span class="path">contents/flask-http-get-url/flask-http-get-url.md</span>
+    <span><span data-words>—</span> words · <span data-read>—</span> min read</span>
+    <span class="hide-m">ko · utf-8</span>
+    <span class="sp"></span>
+    <button type="button" data-action="search" class="hide-m"><kbd>/</kbd>search</button>
+    <button type="button" data-action="theme"><kbd>t</kbd>theme</button>
+</div>
+    <div class="sq" id="search" hidden role="dialog" aria-modal="true" aria-label="검색">
+        <div class="sq-box">
+            <div class="sq-input"><span>/</span><input type="search" placeholder="search posts…" autocomplete="off" spellcheck="false" aria-label="검색어"><button type="button" data-action="close" aria-label="닫기"><kbd>esc</kbd></button></div>
+            <div class="sq-empty" hidden></div>
+            <div class="sq-list" role="listbox"></div>
+            <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
+        </div>
+    </div>
+    <script src="/assets/js/ledger.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
 </html>
