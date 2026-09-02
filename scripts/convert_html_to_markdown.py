@@ -10,7 +10,6 @@ import os
 import re
 import shutil
 from pathlib import Path
-from typing import Tuple, Optional
 
 try:
     import html2text
@@ -33,7 +32,7 @@ class HTMLToMarkdownConverter:
         self.h2t.unicode_snob = True
         self.h2t.escape_snob = True
 
-    def parse_frontmatter(self, content: str) -> Tuple[Optional[str], str]:
+    def parse_frontmatter(self, content: str) -> tuple[str | None, str]:
         """
         Frontmatter와 본문 분리
 
@@ -97,7 +96,7 @@ class HTMLToMarkdownConverter:
         """
         try:
             # 파일 읽기
-            with open(filepath, "r", encoding="utf-8") as f:
+            with open(filepath, encoding="utf-8") as f:
                 content = f.read()
 
             # HTML 태그 개수 확인
@@ -151,7 +150,7 @@ class HTMLToMarkdownConverter:
             return False
 
     def convert_directory(
-        self, directory: Path, min_html_tags: int = 100, max_files: Optional[int] = None
+        self, directory: Path, min_html_tags: int = 100, max_files: int | None = None
     ):
         """
         디렉토리 내 모든 마크다운 파일 변환
@@ -182,7 +181,7 @@ class HTMLToMarkdownConverter:
         skipped = 0
         failed = 0
 
-        for i, filepath in enumerate(md_files, 1):
+        for _i, filepath in enumerate(md_files, 1):
             if max_files and converted >= max_files:
                 print(f"\n⏹️  최대 변환 파일 수({max_files})에 도달")
                 break

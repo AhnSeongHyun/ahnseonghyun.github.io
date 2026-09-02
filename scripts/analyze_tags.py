@@ -6,8 +6,8 @@ Analyzes all tags and suggests consolidation opportunities.
 """
 
 import re
+from collections import Counter, defaultdict
 from pathlib import Path
-from collections import defaultdict, Counter
 
 
 def extract_frontmatter(content):

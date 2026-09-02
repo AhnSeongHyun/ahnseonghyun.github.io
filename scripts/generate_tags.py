@@ -7,8 +7,9 @@ Each tag gets its own page listing all posts with that tag.
 """
 
 import re
-from pathlib import Path
 from collections import defaultdict
+from pathlib import Path
+
 from jinja2 import Environment, FileSystemLoader
 
 DEFAULT_THEME = "chronicle"

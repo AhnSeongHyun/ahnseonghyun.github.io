@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import generate_git_meta as git_meta
 
@@ -50,7 +50,7 @@ def test_group_by_slug_orders_newest_first_and_deduplicates_within_commit():
 
 
 def test_build_meta_changelog_is_top_three_and_schema_is_stable():
-    fixed_now = datetime(2026, 9, 2, 12, 0, tzinfo=timezone.utc)
+    fixed_now = datetime(2026, 9, 2, 12, 0, tzinfo=UTC)
     meta = git_meta.build_meta(git_meta.parse_log(SAMPLE_LOG), total_commits=98, now=fixed_now)
 
     assert set(meta) == {"generated_at", "total_commits", "changelog", "posts"}

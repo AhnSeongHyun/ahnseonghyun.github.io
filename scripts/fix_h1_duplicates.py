@@ -9,14 +9,13 @@ Always creates backup files (filename_bak.md) before modification.
 import re
 import shutil
 from pathlib import Path
-from typing import Tuple, Optional
 
 
 class H1DuplicateFixer:
     def __init__(self, dry_run=False):
         self.dry_run = dry_run
 
-    def parse_frontmatter(self, content: str) -> Tuple[Optional[str], str]:
+    def parse_frontmatter(self, content: str) -> tuple[str | None, str]:
         """
         Parse frontmatter and body
 
@@ -40,7 +39,7 @@ class H1DuplicateFixer:
         matches = re.findall(pattern, text, re.MULTILINE)
         return len(matches)
 
-    def fix_h1_duplicates(self, body: str) -> Tuple[str, int]:
+    def fix_h1_duplicates(self, body: str) -> tuple[str, int]:
         """
         Convert all H1 headings after the first one to H2
 
@@ -93,7 +92,7 @@ class H1DuplicateFixer:
             True if changes were made, False otherwise
         """
         try:
-            with open(filepath, "r", encoding="utf-8") as f:
+            with open(filepath, encoding="utf-8") as f:
                 content = f.read()
 
             frontmatter_section, body = self.parse_frontmatter(content)
@@ -120,10 +119,7 @@ class H1DuplicateFixer:
             self.backup_file(filepath)
 
             # Reconstruct file
-            if frontmatter_section:
-                new_content = frontmatter_section + fixed_body
-            else:
-                new_content = fixed_body
+            new_content = frontmatter_section + fixed_body if frontmatter_section else fixed_body
 
             # Save fixed version
             with open(filepath, "w", encoding="utf-8") as f:
@@ -136,9 +132,7 @@ class H1DuplicateFixer:
             print(f"  ❌ 오류: {str(e)}")
             return False
 
-    def fix_directory(
-        self, directory: Path, year_filter: int = 2020, max_files: Optional[int] = None
-    ):
+    def fix_directory(self, directory: Path, year_filter: int = 2020, max_files: int | None = None):
         """
         Fix H1 duplicates in all markdown files in directory
 
@@ -156,7 +150,7 @@ class H1DuplicateFixer:
         files_to_fix = []
         for filepath in md_files:
             try:
-                with open(filepath, "r", encoding="utf-8") as f:
+                with open(filepath, encoding="utf-8") as f:
                     content = f.read()
                 _, body = self.parse_frontmatter(content)
                 h1_count = self.count_h1_headings(body)
@@ -192,7 +186,7 @@ class H1DuplicateFixer:
         skipped = 0
         failed = 0
 
-        for filepath, h1_count in files_to_fix:
+        for filepath, _h1_count in files_to_fix:
             if max_files and fixed >= max_files:
                 print(f"\n⏹️  최대 처리 파일 수({max_files})에 도달")
                 break

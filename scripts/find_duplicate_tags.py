@@ -4,8 +4,8 @@ Find Korean-English duplicate tags and similar tags
 """
 
 import re
+from collections import Counter, defaultdict
 from pathlib import Path
-from collections import defaultdict, Counter
 
 
 def extract_frontmatter(content):
@@ -91,8 +91,8 @@ def find_korean_english_pairs(tags_counter):
 
     pairs = []
     for korean, english in known_pairs.items():
-        korean_variants = [k for k in tags_counter.keys() if korean in k]
-        english_variants = [e for e in tags_counter.keys() if english.lower() in e.lower()]
+        korean_variants = [k for k in tags_counter if korean in k]
+        english_variants = [e for e in tags_counter if english.lower() in e.lower()]
 
         if korean_variants or english_variants:
             korean_count = sum(tags_counter[k] for k in korean_variants)
@@ -118,7 +118,7 @@ def find_similar_tags(tags_counter):
     similar_groups = defaultdict(list)
 
     # Group by normalized form
-    for tag in tags_counter.keys():
+    for tag in tags_counter:
         # Normalize: lowercase, remove spaces/hyphens/underscores
         normalized = tag.lower().replace(" ", "").replace("-", "").replace("_", "")
         similar_groups[normalized].append(tag)
@@ -163,7 +163,7 @@ def main():
     print("-" * 80)
 
     similar = find_similar_tags(tags_counter)
-    for normalized, variants in sorted(
+    for _normalized, variants in sorted(
         similar.items(), key=lambda x: -sum(tags_counter[v] for v in x[1])
     )[:30]:
         total = sum(tags_counter[v] for v in variants)
@@ -177,13 +177,13 @@ def main():
     print("⚠️  Problematic Tags:")
     print("-" * 80)
 
-    empty_tags = [tag for tag in tags_counter.keys() if not tag.strip() or tag == " "]
+    empty_tags = [tag for tag in tags_counter if not tag.strip() or tag == " "]
     if empty_tags:
         print(f"\n  Empty/whitespace tags: {len(empty_tags)}")
         for tag in empty_tags:
             print(f"    '{tag}' ({tags_counter[tag]} posts)")
 
-    single_char_tags = [tag for tag in tags_counter.keys() if len(tag.strip()) <= 2]
+    single_char_tags = [tag for tag in tags_counter if len(tag.strip()) <= 2]
     if single_char_tags:
         print(f"\n  Very short tags (<=2 chars): {len(single_char_tags)}")
         for tag in sorted(single_char_tags, key=lambda x: -tags_counter[x])[:20]:

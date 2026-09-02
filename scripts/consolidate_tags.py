@@ -9,9 +9,8 @@ Consolidates duplicate tags across all markdown files.
 """
 
 import re
-from pathlib import Path
 from collections import defaultdict
-
+from pathlib import Path
 
 # Consolidation rules: target_tag ← [variants to replace]
 CONSOLIDATION_RULES = {

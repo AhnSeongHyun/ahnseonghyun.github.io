@@ -6,9 +6,9 @@ Generates sitemap.xml from built HTML files in the docs directory.
 """
 
 import os
+import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
-import xml.etree.ElementTree as ET
 
 
 def get_last_modified(file_path):
@@ -43,7 +43,7 @@ def generate_sitemap():
         return
 
     # Walk through all directories in docs
-    for root, dirs, files in os.walk(docs_path):
+    for root, _dirs, files in os.walk(docs_path):
         # Skip the root docs directory itself
         if root == "docs":
             continue

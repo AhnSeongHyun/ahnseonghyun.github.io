@@ -14,7 +14,7 @@ import os
 import re
 import shutil
 from pathlib import Path
-from typing import Tuple, Optional, Dict, List
+
 import yaml
 
 
@@ -24,7 +24,7 @@ class FrontmatterImprover:
         self.min_description_length = 50
         self.auto_description_length = 200
 
-    def parse_frontmatter(self, content: str) -> Tuple[Optional[Dict], str, Optional[str]]:
+    def parse_frontmatter(self, content: str) -> tuple[dict | None, str, str | None]:
         """
         Parse frontmatter and body
 
@@ -95,7 +95,7 @@ class FrontmatterImprover:
 
         return description
 
-    def extract_tags_from_content(self, title: str, body: str) -> List[str]:
+    def extract_tags_from_content(self, title: str, body: str) -> list[str]:
         """Extract potential tags from title and body"""
         tags = []
 
@@ -175,7 +175,7 @@ class FrontmatterImprover:
             True if changes were made, False otherwise
         """
         try:
-            with open(filepath, "r", encoding="utf-8") as f:
+            with open(filepath, encoding="utf-8") as f:
                 content = f.read()
 
             frontmatter, body, raw_frontmatter = self.parse_frontmatter(content)
@@ -251,7 +251,7 @@ class FrontmatterImprover:
             return False
 
     def improve_directory(
-        self, directory: Path, year_filter: int = 2020, max_files: Optional[int] = None
+        self, directory: Path, year_filter: int = 2020, max_files: int | None = None
     ):
         """
         Improve frontmatter in all markdown files in directory
@@ -271,7 +271,7 @@ class FrontmatterImprover:
             filtered_files = []
             for filepath in md_files:
                 try:
-                    with open(filepath, "r", encoding="utf-8") as f:
+                    with open(filepath, encoding="utf-8") as f:
                         content = f.read()
                     frontmatter, _, _ = self.parse_frontmatter(content)
                     if frontmatter and "pub_date" in frontmatter:
@@ -299,7 +299,7 @@ class FrontmatterImprover:
         skipped = 0
         failed = 0
 
-        for i, filepath in enumerate(md_files, 1):
+        for _i, filepath in enumerate(md_files, 1):
             if max_files and improved >= max_files:
                 print(f"\n⏹️  최대 처리 파일 수({max_files})에 도달")
                 break

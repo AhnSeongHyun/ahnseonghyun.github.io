@@ -20,7 +20,7 @@ import subprocess
 import sys
 from collections.abc import Callable
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 RECORD_SEPARATOR = "\x1e"
@@ -92,7 +92,7 @@ def group_by_slug(commits: list[Commit]) -> dict[str, list[dict[str, str]]]:
 
 
 def build_meta(commits: list[Commit], total_commits: int, now: datetime | None = None) -> dict:
-    now = now or datetime.now(timezone.utc)
+    now = now or datetime.now(UTC)
     return {
         "generated_at": now.isoformat(timespec="seconds"),
         "total_commits": total_commits,
