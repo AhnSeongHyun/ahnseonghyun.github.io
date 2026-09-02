@@ -191,6 +191,8 @@ kbd { font-size: 10.5px; border: 1px solid var(--line); border-radius: 3px; padd
 .status .sp { flex: 1; }
 .status button { color: var(--muted); display: inline-flex; align-items: center; gap: 5px; }
 .status button:hover { color: var(--ink); }
+.theme-btn svg { display: none; vertical-align: -2px; }
+.theme-btn[data-mode="light"] .ico-sun, .theme-btn[data-mode="dark"] .ico-moon { display: inline-block; }
 
 /* search overlay */
 .sq {

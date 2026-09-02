@@ -11,11 +11,21 @@
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
 
+  function syncThemeIcon() {
+    var mode = isDark() ? 'dark' : 'light';
+    document.querySelectorAll('.theme-btn').forEach(function (button) { button.setAttribute('data-mode', mode); });
+  }
+
   function toggleTheme() {
     var next = isDark() ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
     try { localStorage.setItem(STORAGE_KEY, next); } catch (error) { /* storage unavailable */ }
+    syncThemeIcon();
   }
+
+  syncThemeIcon();
+  var scheme = window.matchMedia('(prefers-color-scheme: dark)');
+  if (scheme.addEventListener) scheme.addEventListener('change', syncThemeIcon);
 
   function openSearch() {
     if (window.ledgerSearch) window.ledgerSearch.open();
