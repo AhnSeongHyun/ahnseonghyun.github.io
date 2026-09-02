@@ -65,6 +65,29 @@ In `index.html`: `post_list` items have `title`, `link`, `pub_date`, `descriptio
 
 Runtime (ledger.js): theme toggle (`t`, stored in localStorage as `theme`), search (`/`, ⌘K), TOC tree, reading stats, code block gutter/header, git meta and prev/next from `docs/meta/*.json`.
 
+### Template Rules (ledger)
+
+- Escape everything that comes from frontmatter with `| e` (title, description, tag names, image paths). Tag names once contained `&lt;b&gt;`; unescaped output turned the whole tags page bold.
+- Asset links carry `?v={% include 'build/asset-version.html' %}`. Keep it on any new CSS/JS link.
+- Shared markup lives in `themes/ledger/partials/` (head-common, header, links, search, theme-button). Include with the repo-root path, e.g. `{% include 'themes/ledger/partials/header.html' %}`. `{% set nav = 'writing' %}` before the header include marks the active `--flag`.
+- Anything derived from git or neighbouring posts is not available to zvc: generate JSON in `scripts/` and render at runtime in `assets/js/ledger.js`. Sections stay `hidden` until data arrives.
+- `generate_tags.py` renders tag templates with its own Jinja env: the `clean` filter is not there. Use Jinja builtins only.
+
+### Verification
+
+- `make lint && make test`, then `make build` and check `docs/` output with grep (year groups, `?v=`, `meta/*.json`, `pagefind/`).
+- Headless Chrome enforces a minimum window width, so a 390px `--window-size` screenshot is cropped, not reflowed. Serve `docs/` locally and load pages in a same-origin iframe harness (`<iframe width=390>`) to check mobile, dark mode (`iframe.contentDocument.documentElement.dataset.theme = 'dark'` after `load`), and search (`contentWindow.ledgerSearch.open()`).
+- Live check after push: `curl -sI https://ash84.io/assets/css/post.css` (`cache-control: max-age=600`), `gh run list` for Ruff Lint and pages build.
+
+### Known Pitfalls
+
+- `docs/` is build output and the Pages root. Plans go to `plans/`, never `docs/`.
+- zvc passes `post.created_at`, not `post.pub_date`. `post_list` has no tags.
+- YAML block-list tags are dropped by zvc. Keep `tags: ['a', 'b']`; `scripts/normalize_tags.py --apply` converts.
+- The default `grep` is aliased to ugrep; for counting frontmatter fields, parse with Python instead.
+- macOS filesystem is case-insensitive: `docs/tags/python` and `docs/tags/Python` collide locally only.
+- Old posts (2007-2013) reference `http://ash84.net/...` images that no longer resolve. Content issue, not theme.
+
 ## Configuration
 
 - `config.yaml` - Site settings (theme name, blog title/description/author, publication path)
