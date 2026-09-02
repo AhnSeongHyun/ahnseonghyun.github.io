@@ -101,15 +101,9 @@
 
     <div class="post-grid">
         <article data-slug="celery-states">
-            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
-<span class="k">title</span>: <span class="v">'celery states'</span>
-<span class="k">author</span>: <span class="v">'ash84'</span>
-<span class="k">pub_date</span>: <span class="v">'2016-01-11'</span>
-<span class="k">description</span>: <span class="v">'아래는 celery 의 state 인데, 보통 celery-flower 조합으로 많이 쓰기 때문에 [flower](https://github.com/mher/flower)를 쓰다보면 조회 조건중에 states 가 있어서 아래와 같이 정리해본다. ...'</span>
-<span class="k">tags</span>: [<a class="v" href="/tags/Celery/">'Celery'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/Python/">'Python'</a>, <a class="v" href="/tags/state/">'state'</a>]
-<span class="d">---</span></pre>
 
             <h1 class="post-title">celery states</h1>
+            <div class="post-meta"><time datetime="2016-01-11">2016-01-11</time><a href="/tags/Celery/">#Celery</a><a href="/tags/dev/">#dev</a><a href="/tags/Python/">#Python</a><a href="/tags/state/">#state</a></div>
 
             <div class="post-content" data-pagefind-body>
 <p>아래는 celery 의 state 인데, 보통 celery-flower 조합으로 많이 쓰기 때문에 <a href="https://github.com/mher/flower">flower</a>를 쓰다보면 조회 조건중에 states 가 있어서 아래와 같이 정리해본다. 즉시 실행하라고 명령하면 STARTED-SUCCESS 또는 FAILURE 로 표시되겠지만, <code>countdown</code>을 주어서 실행한 경우에는 즉, 어떤 예약을 거는 경우에는 해당 task가 RECEIVED 로 표시되게 된다. 그리고 <a href="https://github.com/mher/flower">flower</a>상에서 RECEIVED 인 task들은 아직 미 실행 상태이기 때문에 REVOKED(취소) 시킬 수 있다. 아직까지 PENDING 이나 RETRY는 보지는 못한듯, RETRY는 따로 task를 설정해야 하는것으로 알고 있다.</p>

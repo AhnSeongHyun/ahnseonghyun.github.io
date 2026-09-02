@@ -99,15 +99,9 @@
 
     <div class="post-grid">
         <article data-slug="python-3-ed-95-ad--ec-97-b0-ec-82-b0-ec-9e-90">
-            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
-<span class="k">title</span>: <span class="v">'python 3항 연산자'</span>
-<span class="k">author</span>: <span class="v">'ash84'</span>
-<span class="k">pub_date</span>: <span class="v">'2015-02-02'</span>
-<span class="k">description</span>: <span class="v">'이걸 언제 쓰냐라고 생각했지만, 내가 오늘 이 글을 적게 될줄은 ‘나’조차도 몰랐다. 3항 연산자, 일명 if 축약 이라고도 하는데 사실 그리 쓸일이 많지는 않은데 flask 에서 유독 짜증나는 부분이 있어서 쓰게 되었다. flask 에서 함수를...'</span>
-<span class="k">tags</span>: [<a class="v" href="/tags/3항연산자/">'3항연산자'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/Python/">'Python'</a>]
-<span class="d">---</span></pre>
 
             <h1 class="post-title">python 3항 연산자</h1>
+            <div class="post-meta"><time datetime="2015-02-02">2015-02-02</time><a href="/tags/3항연산자/">#3항연산자</a><a href="/tags/dev/">#dev</a><a href="/tags/Python/">#Python</a></div>
 
             <div class="post-content" data-pagefind-body>
 <p><span style="font-size: 11pt;">이걸 언제 쓰냐라고 생각했지만, 내가 오늘 이 글을 적게 될줄은 ‘나’조차도 몰랐다. 3항 연산자, 일명 if 축약 이라고도 하는데 사실 그리 쓸일이 많지는 않은데 flask 에서 유독 짜증나는 부분이 있어서 쓰게 되었다. flask 에서 함수를 구성하다 보면 초반에 하는 것중 하나가 request 객체에서 get 혹은 post 에 대한 데이터를 가져오는 작업이다. 일반적으로 get 의 경우 <code>request.args.get("id", None)</code> 이런식으로 가져오는데 get 의 경우에는 초기값을 줄수가 있다. 때</span><span style="font-size: 11pt;">문에 실제 쿼리스트링에 “id” 가 없더라도 문제가 되지 않는다. 그런데 post 에서 form 데이터를 가져오는 경우 <code>request.form['id']</code>이런식으로 가져오게 되는데 이 경우, id가 없으면 400을 뱉는다. 그게 싫은 경우는 id 가 request.form에 있는지 일일히 if문으로 검사를 해야한다. </span></p>

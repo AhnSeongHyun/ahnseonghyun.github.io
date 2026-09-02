@@ -103,15 +103,9 @@
 
     <div class="post-grid">
         <article data-slug="ios-nscopying--ed-94-84-eb-a1-9c-ed-86-a0-ec-bd-9c--ea-b5-ac-ed-98-84-ed-95-98-ea-b8-b0">
-            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
-<span class="k">title</span>: <span class="v">'(iOS) NSCopying 프로토콜 구현하기'</span>
-<span class="k">author</span>: <span class="v">'ash84'</span>
-<span class="k">pub_date</span>: <span class="v">'2013-11-21'</span>
-<span class="k">description</span>: <span class="v">'어떤 사용자 정의 클래스의 객체 자체를 copy 해야하는 경우가 있다. 그럴때 사용하는 것이 `NSCopying` 프로토콜이다. 객체를 복사할때는 `'</span>
-<span class="k">tags</span>: [<a class="v" href="/tags/deepcopy/">'deepcopy'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/iOS/">'iOS'</a>, <a class="v" href="/tags/NSCopying/">'NSCopying'</a>, <a class="v" href="/tags/NSZONE/">'NSZONE'</a>]
-<span class="d">---</span></pre>
 
             <h1 class="post-title">(iOS) NSCopying 프로토콜 구현하기</h1>
+            <div class="post-meta"><time datetime="2013-11-21">2013-11-21</time><a href="/tags/deepcopy/">#deepcopy</a><a href="/tags/dev/">#dev</a><a href="/tags/iOS/">#iOS</a><a href="/tags/NSCopying/">#NSCopying</a><a href="/tags/NSZONE/">#NSZONE</a></div>
 
             <div class="post-content" data-pagefind-body>
 <p><span style="font-size: 11pt;">어떤 사용자 정의 클래스의 객체 자체를 copy 해야하는 경우가 있다. 그럴때 사용하는 것이 </span><code>&lt;code style="font-size: 9pt; line-height: 1.5;"&gt;&lt;span style="font-size: 11pt;"&gt;NSCopying&lt;/span&gt;</code><span style="font-size: 11pt;"> 프로토콜이다. 객체를 복사할때는 </span><code>&lt;code style="font-size: 9pt; line-height: 1.5;"&gt;&lt;span style="font-size: 11pt;"&gt;copy&lt;/span&gt;</code><span style="font-size: 11pt;"> 메소드를 사용하면 되는데, 실제로 </span><code>&lt;code style="font-size: 9pt; line-height: 1.5;"&gt;&lt;span style="font-size: 11pt;"&gt;copy&lt;/span&gt;</code><span style="font-size: 11pt;"> 메소드가 복사를 수행하는 것이 아니라 </span><copy style="font-size: 9pt; line-height: 1.5;"><span style="font-size: 11pt;"><code>copywithzone:</code></span></copy><span style="font-size: 11pt;"> 메소드가 수행하는 것이다. </span></p>

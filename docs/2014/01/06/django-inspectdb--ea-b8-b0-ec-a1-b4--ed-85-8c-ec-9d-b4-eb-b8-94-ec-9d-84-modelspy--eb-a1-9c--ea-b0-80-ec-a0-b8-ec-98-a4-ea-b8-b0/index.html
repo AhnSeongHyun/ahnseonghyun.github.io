@@ -103,15 +103,9 @@
 
     <div class="post-grid">
         <article data-slug="django-inspectdb--ea-b8-b0-ec-a1-b4--ed-85-8c-ec-9d-b4-eb-b8-94-ec-9d-84-modelspy--eb-a1-9c--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0">
-            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
-<span class="k">title</span>: <span class="v">'(django) inspectdb, 기존 테이블을 models.py 로 가져오기'</span>
-<span class="k">author</span>: <span class="v">'ash84'</span>
-<span class="k">pub_date</span>: <span class="v">'2014-01-06'</span>
-<span class="k">description</span>: <span class="v">'많은 장고(Django) 예제에서 models.py 를 먼저 만들고 syncdb 를 통해서 실제 데이터베이스에 구조를 잡게 되는데 사실은 실제 데이터베이스에 이미 데이터나 구조가 있는 경우가 더 많은것같다. 그럴경우 일일히 models.py에서 ...'</span>
-<span class="k">tags</span>: [<a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/Django/">'Django'</a>, <a class="v" href="/tags/how to get db table to models.py/">'how to get db table to models.py'</a>, <a class="v" href="/tags/inspectdb/">'inspectdb'</a>, <a class="v" href="/tags/Python/">'Python'</a>]
-<span class="d">---</span></pre>
 
             <h1 class="post-title">(django) inspectdb, 기존 테이블을 models.py 로 가져오기</h1>
+            <div class="post-meta"><time datetime="2014-01-06">2014-01-06</time><a href="/tags/dev/">#dev</a><a href="/tags/Django/">#Django</a><a href="/tags/how to get db table to models.py/">#how to get db table to models.py</a><a href="/tags/inspectdb/">#inspectdb</a><a href="/tags/Python/">#Python</a></div>
 
             <div class="post-content" data-pagefind-body>
 <p><span style="font-size: 11pt;">많은 장고(Django) 예제에서 models.py 를 먼저 만들고 syncdb 를 통해서 실제 데이터베이스에 구조를 잡게 되는데 사실은 실제 데이터베이스에 이미 데이터나 구조가 있는 경우가 더 많은것같다. 그럴경우 일일히 models.py에서 데이터 모델들을 잡아주는것이 번거로운데(테이블이 많으니까) 장고에서는 inspectdb 라는 기능을 통해서 settings.py에 연결되어 있는 데이터베이스에 대한 models.py의 내용을 가져올 수 있도록 해준다. </span></p>

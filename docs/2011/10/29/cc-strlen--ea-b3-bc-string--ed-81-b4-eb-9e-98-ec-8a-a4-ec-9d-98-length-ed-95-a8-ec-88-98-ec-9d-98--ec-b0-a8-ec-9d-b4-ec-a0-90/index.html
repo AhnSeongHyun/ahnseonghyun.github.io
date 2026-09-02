@@ -107,15 +107,9 @@
 
     <div class="post-grid">
         <article data-slug="cc-strlen--ea-b3-bc-string--ed-81-b4-eb-9e-98-ec-8a-a4-ec-9d-98-length-ed-95-a8-ec-88-98-ec-9d-98--ec-b0-a8-ec-9d-b4-ec-a0-90">
-            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
-<span class="k">title</span>: <span class="v">'[C/C++] strlen() 과 String 클래스의 length()함수의 차이점.'</span>
-<span class="k">author</span>: <span class="v">'ash84'</span>
-<span class="k">pub_date</span>: <span class="v">'2011-10-29'</span>
-<span class="k">description</span>: <span class="v">'문자열의 갯수를 구하는 함수만큼 공통적으로 여러 언어에서 구현되어 있는 기능도 드문것 같습니다. 오늘 소개할 내용은 C++ 의  내에 있는 char * 형의 문자열의 갯수를 세어주는 `strlen()` 함수에 대해서 이야기 하려고 합니다. 제목처...'</span>
-<span class="k">tags</span>: [<a class="v" href="/tags/C#/">'C#'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/Java/">'Java'</a>, <a class="v" href="/tags/length()/">'length()'</a>, <a class="v" href="/tags/String class/">'String class'</a>, <a class="v" href="/tags/string.h/">'string.h'</a>, <a class="v" href="/tags/strlen/">'strlen'</a>]
-<span class="d">---</span></pre>
 
             <h1 class="post-title">[C/C++] strlen() 과 String 클래스의 length()함수의 차이점.</h1>
+            <div class="post-meta"><time datetime="2011-10-29">2011-10-29</time><a href="/tags/C#/">#C#</a><a href="/tags/dev/">#dev</a><a href="/tags/Java/">#Java</a><a href="/tags/length()/">#length()</a><a href="/tags/String class/">#String class</a><a href="/tags/string.h/">#string.h</a><a href="/tags/strlen/">#strlen</a></div>
 
             <div class="post-content" data-pagefind-body>
 <p>문자열의 갯수를 구하는 함수만큼 공통적으로 여러 언어에서 구현되어 있는 기능도 드문것 같습니다. 오늘 소개할 내용은 C++ 의 <string.h> 내에 있는 char * 형의 문자열의 갯수를 세어주는 <code>strlen()</code> 함수에 대해서 이야기 하려고 합니다. 제목처럼 일반적인 객체지향의 언어 자바나 C#의 String 클래스에서 사용하는 length() 함수와 어떻게 다른지 이야기 하려고 합니다. 물론 아시는 분들도 있겠지만.^^   </p>

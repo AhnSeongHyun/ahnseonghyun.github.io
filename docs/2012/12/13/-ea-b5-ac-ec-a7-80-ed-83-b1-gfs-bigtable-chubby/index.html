@@ -103,15 +103,9 @@
 
     <div class="post-grid">
         <article data-slug="-ea-b5-ac-ec-a7-80-ed-83-b1-gfs-bigtable-chubby">
-            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
-<span class="k">title</span>: <span class="v">'[구지탱] GFS, Bigtable, Chubby'</span>
-<span class="k">author</span>: <span class="v">'ash84'</span>
-<span class="k">pub_date</span>: <span class="v">'2012-12-13'</span>
-<span class="k">description</span>: <span class="v">'**GFS(Google File System)**–'</span>
-<span class="k">tags</span>: [<a class="v" href="/tags/bigtable/">'bigtable'</a>, <a class="v" href="/tags/Chubby/">'Chubby'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/GFS/">'GFS'</a>, <a class="v" href="/tags/구글을 지탱하는 기술/">'구글을 지탱하는 기술'</a>]
-<span class="d">---</span></pre>
 
             <h1 class="post-title">[구지탱] GFS, Bigtable, Chubby</h1>
+            <div class="post-meta"><time datetime="2012-12-13">2012-12-13</time><a href="/tags/bigtable/">#bigtable</a><a href="/tags/Chubby/">#Chubby</a><a href="/tags/dev/">#dev</a><a href="/tags/GFS/">#GFS</a><a href="/tags/구글을 지탱하는 기술/">#구글을 지탱하는 기술</a></div>
 
             <div class="post-content" data-pagefind-body>
 <div style="text-align: justify; line-height: 2;"><div style="color: rgb(0, 0, 0); font-family: 나눔고딕; line-height: 2; text-align: justify; font-size: 12pt;">**GFS(Google File System)**</div><div style="color: rgb(0, 0, 0); font-family: 나눔고딕; line-height: 2; text-align: justify; font-size: 12pt;">– 대용량 데이터에 적합한 분산 파일시스템</div><div style="color: rgb(0, 0, 0); font-family: 나눔고딕; line-height: 2; text-align: justify; font-size: 12pt;">– 1대의 머신에 다루기 힘든 데이터를 다루지만, 작은 데이터에는 비 적합</div><div style="color: rgb(0, 0, 0); font-family: 나눔고딕; line-height: 2; text-align: justify; font-size: 12pt;">– 하나의 파일 = N 청크(64MB)</div><div style="color: rgb(0, 0, 0); font-family: 나눔고딕; line-height: 2; text-align: justify; font-size: 12pt;">– 하나의 청크는 3개의 청크서버에 복제되어 저장. </div><div style="color: rgb(0, 0, 0); font-family: 나눔고딕; line-height: 2; text-align: justify; font-size: 12pt;">– 파일 접근 방식 </div><div style="color: rgb(0, 0, 0); font-family: 나눔고딕; line-height: 2; text-align: justify; font-size: 12pt;">– 대용량 데이터의 효율적 전송에 설계 초점. </div><div style="color: rgb(0, 0, 0); font-family: 나눔고딕; line-height: 2; text-align: justify; font-size: 12pt;">**  

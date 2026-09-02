@@ -109,15 +109,9 @@
 
     <div class="post-grid">
         <article data-slug="ios--ed-81-b4-eb-9e-98-ec-8a-a4-eb-a5-bc--ed-86-b5-ec-a7-b8-eb-a1-9c--ec-a0-80-ec-9e-a5-ed-95-98-ea-b8-b0-nscoding">
-            <pre class="fm" aria-label="frontmatter"><span class="d">---</span>
-<span class="k">title</span>: <span class="v">'(iOS) 클래스를 통째로 저장하기, NSCoding'</span>
-<span class="k">author</span>: <span class="v">'ash84'</span>
-<span class="k">pub_date</span>: <span class="v">'2013-05-03'</span>
-<span class="k">description</span>: <span class="v">'단순히 문자열을 저장하는 것만으로 앱내 데이터 저장에는 확실히 한계가 있다. 그리고 문자열을 저장하고 읽어올때 다시 파싱을해서 읽어오는 방식은 그리 달갑지도 않고 빠른 앱 개발 방식에도 한계가 있다. 그래서 Objective-c 에서는 [NSCo...'</span>
-<span class="k">tags</span>: [<a class="v" href="/tags/NSCoding/">'NSCoding'</a>, <a class="v" href="/tags/dev/">'dev'</a>, <a class="v" href="/tags/iOS/">'iOS'</a>, <a class="v" href="/tags/ios-development/">'ios-development'</a>, <a class="v" href="/tags/objective-c nscoding protocol/">'objective-c nscoding protocol'</a>, <a class="v" href="/tags/객체 저장/">'객체 저장'</a>, <a class="v" href="/tags/클래스 저장/">'클래스 저장'</a>, <a class="v" href="/tags/파일 저장/">'파일 저장'</a>]
-<span class="d">---</span></pre>
 
             <h1 class="post-title">(iOS) 클래스를 통째로 저장하기, NSCoding</h1>
+            <div class="post-meta"><time datetime="2013-05-03">2013-05-03</time><a href="/tags/NSCoding/">#NSCoding</a><a href="/tags/dev/">#dev</a><a href="/tags/iOS/">#iOS</a><a href="/tags/ios-development/">#ios-development</a><a href="/tags/objective-c nscoding protocol/">#objective-c nscoding protocol</a><a href="/tags/객체 저장/">#객체 저장</a><a href="/tags/클래스 저장/">#클래스 저장</a><a href="/tags/파일 저장/">#파일 저장</a></div>
 
             <div class="post-content" data-pagefind-body>
 <p><span style="font-size: 11pt;">단순히 문자열을 저장하는 것만으로 앱내 데이터 저장에는 확실히 한계가 있다. 그리고 문자열을 저장하고 읽어올때 다시 파싱을해서 읽어오는 방식은 그리 달갑지도 않고 빠른 앱 개발 방식에도 한계가 있다. 그래서 Objective-c 에서는 <a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSCoding_Protocol/Reference/Reference.html">NSCoding</a> 프로토콜을 준수하면 <a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSKeyedArchiver_Class/Reference/Reference.html">NSKeyedArchiver</a>를 이용해서 객체내 데이터를 쉽게 저장할수 있는 방법을 제시하고 있다. </span></p>
