@@ -146,6 +146,11 @@ window.ledgerSearch = (function () {
 
   input.addEventListener('input', onInput);
   overlay.addEventListener('keydown', onKey);
+  /* input[type=search]'s native Escape-to-clear can swallow the keydown before it bubbles
+     to the overlay in some browsers; a capture-phase fallback on document guarantees close(). */
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && !overlay.hidden) { event.preventDefault(); close(); }
+  }, true);
   overlay.addEventListener('click', function (event) { if (event.target === overlay) close(); });
   overlay.querySelectorAll('[data-action="close"]').forEach(function (button) {
     button.addEventListener('click', close);
