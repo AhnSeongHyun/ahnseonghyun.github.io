@@ -130,7 +130,10 @@ kbd { font-size: 10.5px; border: 1px solid var(--line); border-radius: 3px; padd
   font-size: 12.5px;
   color: var(--muted);
 }
+.links a { display: inline-flex; align-items: center; gap: 6px; }
+.links svg { flex: none; opacity: .75; }
 .links a:hover { color: var(--ink); box-shadow: inset 0 -6px 0 var(--hl); }
+.links a:hover svg { opacity: 1; }
 
 /* commit list (changelog / history) */
 .cl { font-family: var(--mono); font-size: 12.5px; }
