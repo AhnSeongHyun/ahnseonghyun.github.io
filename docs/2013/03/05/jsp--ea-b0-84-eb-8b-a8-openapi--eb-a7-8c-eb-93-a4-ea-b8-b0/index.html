@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="앱 작업을 하다 보면 서버에서 해주었으면 하는 작업들이 있다. 특히 아이폰 앱의 경우 애플 심사가 최소 일주일의 경우가 많기 때문에 파싱하는 부분이나 연동하는 외부 API가 변경되는 경우 아이폰 앱내에서 해당 코드가 있으면 변경을 하더라도 사용자가 다시 본래의 기능을 쓰려면 시간이 오래 걸린다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(JSP) \uac04\ub2e8 OpenAPI \ub9cc\ub4e4\uae30",
         "description": "\uc571 \uc791\uc5c5\uc744 \ud558\ub2e4 \ubcf4\uba74 \uc11c\ubc84\uc5d0\uc11c \ud574\uc8fc\uc5c8\uc73c\uba74 \ud558\ub294 \uc791\uc5c5\ub4e4\uc774 \uc788\ub2e4. \ud2b9\ud788 \uc544\uc774\ud3f0 \uc571\uc758 \uacbd\uc6b0 \uc560\ud50c \uc2ec\uc0ac\uac00 \ucd5c\uc18c \uc77c\uc8fc\uc77c\uc758 \uacbd\uc6b0\uac00 \ub9ce\uae30 \ub54c\ubb38\uc5d0 \ud30c\uc2f1\ud558\ub294 \ubd80\ubd84\uc774\ub098 \uc5f0\ub3d9\ud558\ub294 \uc678\ubd80 API\uac00 \ubcc0\uacbd\ub418\ub294 \uacbd\uc6b0 \uc544\uc774\ud3f0 \uc571\ub0b4\uc5d0\uc11c \ud574\ub2f9 \ucf54\ub4dc\uac00 \uc788\uc73c\uba74 \ubcc0\uacbd\uc744 \ud558\ub354\ub77c\ub3c4 \uc0ac\uc6a9\uc790\uac00 \ub2e4\uc2dc \ubcf8\ub798\uc758 \uae30\ub2a5\uc744 \uc4f0\ub824\uba74 \uc2dc\uac04\uc774 \uc624\ub798 \uac78\ub9b0\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "API, Java, dev, jsp, project-showcase",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-03-05",
         "dateModified": "2013-03-05",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -217,8 +232,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

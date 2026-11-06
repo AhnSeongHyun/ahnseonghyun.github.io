@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -54,17 +55,31 @@
     <meta name="twitter:description" content="한우찾기 라이브러리 개발을 시작했다. 창조적 열정이 사라져 가는 내 자신에 대해서 되돌아 보던중, 문듯 언제 가장 개발을 하면서 재밌었는가 하는 생각을 가지게 되었다. 길진 않은 소프트웨어 엔지니어로서의 생활을 이어오고 있지만, 그래두 단연 아이폰 앱을 만들었던 기억이 가장 재밌었던것 같다. 가족을 위해서 였고, 프로그래밍을 말할것도 없">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "\ub77c\uc774\ube0c\ub7ec\ub9ac \uac1c\ubc1c \uc2dc\uc774\uc791.",
         "description": "\ud55c\uc6b0\ucc3e\uae30 \ub77c\uc774\ube0c\ub7ec\ub9ac \uac1c\ubc1c\uc744 \uc2dc\uc791\ud588\ub2e4. \ucc3d\uc870\uc801 \uc5f4\uc815\uc774 \uc0ac\ub77c\uc838 \uac00\ub294 \ub0b4 \uc790\uc2e0\uc5d0 \ub300\ud574\uc11c \ub418\ub3cc\uc544 \ubcf4\ub358\uc911, \ubb38\ub4ef \uc5b8\uc81c \uac00\uc7a5 \uac1c\ubc1c\uc744 \ud558\uba74\uc11c \uc7ac\ubc0c\uc5c8\ub294\uac00 \ud558\ub294 \uc0dd\uac01\uc744 \uac00\uc9c0\uac8c \ub418\uc5c8\ub2e4. \uae38\uc9c4 \uc54a\uc740 \uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4\ub85c\uc11c\uc758 \uc0dd\ud65c\uc744 \uc774\uc5b4\uc624\uace0 \uc788\uc9c0\ub9cc, \uadf8\ub798\ub450 \ub2e8\uc5f0 \uc544\uc774\ud3f0 \uc571\uc744 \ub9cc\ub4e4\uc5c8\ub358 \uae30\uc5b5\uc774 \uac00\uc7a5 \uc7ac\ubc0c\uc5c8\ub358\uac83 \uac19\ub2e4. \uac00\uc871\uc744 \uc704\ud574\uc11c \uc600\uace0, \ud504\ub85c\uadf8\ub798\ubc0d\uc744 \ub9d0\ud560\uac83\ub3c4 \uc5c6",
+        "inLanguage": "ko",
+        "keywords": "SearchHanwoo, library, open-source, \ud55c\uc6b0\ucc3e\uae30",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-08-29",
         "dateModified": "2012-08-29",
@@ -74,12 +89,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -164,8 +179,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

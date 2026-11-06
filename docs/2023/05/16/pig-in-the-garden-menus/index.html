@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -52,17 +53,31 @@
     <meta name="twitter:description" content="개인적으로 샐러드를 좋아하는데, 회사 근처에 피그인더가든이라는 샐러드 맛집이 있어서 가봤다. 여러가지 메뉴가 있겠지만 그 전까지는 파워볼샐러드만 먹었는데 이제 한개씩 다 먹어보면서 취향을 찾아보려고 한다. 이 글에서는 먹어보는대로 덧붙이는 방식(append)으로 메뉴별로 붙여나갈 예정이다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "\ud53c\uadf8\uc778\ub354\uac00\ub4e0 \uba54\ub274 \ucde8\ud5a5\ucc3e\uae30(draft)",
         "description": "\uac1c\uc778\uc801\uc73c\ub85c \uc0d0\ub7ec\ub4dc\ub97c \uc88b\uc544\ud558\ub294\ub370, \ud68c\uc0ac \uadfc\ucc98\uc5d0 \ud53c\uadf8\uc778\ub354\uac00\ub4e0\uc774\ub77c\ub294 \uc0d0\ub7ec\ub4dc \ub9db\uc9d1\uc774 \uc788\uc5b4\uc11c \uac00\ubd24\ub2e4. \uc5ec\ub7ec\uac00\uc9c0 \uba54\ub274\uac00 \uc788\uaca0\uc9c0\ub9cc \uadf8 \uc804\uae4c\uc9c0\ub294 \ud30c\uc6cc\ubcfc\uc0d0\ub7ec\ub4dc\ub9cc \uba39\uc5c8\ub294\ub370 \uc774\uc81c \ud55c\uac1c\uc529 \ub2e4 \uba39\uc5b4\ubcf4\uba74\uc11c \ucde8\ud5a5\uc744 \ucc3e\uc544\ubcf4\ub824\uace0 \ud55c\ub2e4. \uc774 \uae00\uc5d0\uc11c\ub294 \uba39\uc5b4\ubcf4\ub294\ub300\ub85c \ub367\ubd99\uc774\ub294 \ubc29\uc2dd(append)\uc73c\ub85c \uba54\ub274\ubcc4\ub85c \ubd99\uc5ec\ub098\uac08 \uc608\uc815\uc774\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "pig-in-the-garden, \uc0d0\ub7ec\ub4dc, \ud53c\uadf8\uc778\ub354\uac00\ub4e0",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2023-05-16",
         "dateModified": "2023-05-16",
@@ -72,12 +87,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -157,8 +172,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

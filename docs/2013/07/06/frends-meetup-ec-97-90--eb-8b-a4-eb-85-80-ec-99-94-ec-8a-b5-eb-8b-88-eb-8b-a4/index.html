@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -64,17 +65,31 @@
     <meta name="twitter:description" content="평소에 트위터로 개발자분들을 모니터링(?) 하는 편인데 좋은 글을 많이 올리시는 분들이 FRENDS Meetup 을 여신다고 하길래 오늘 가보게 되었습니다. 지난주 정도 부터 온오프믹스를 통해서 참여여부를 받았는데 특이한 점은 보증금 제도다. 10000원을 입금을 하고 메일을 보내면 등록이 되는데 다시 오면 돌려주는 제도. 결과적으로 봤을때 참가를 적극적으로 유도할 수 있는 방식이 아니였을까 싶다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "FRENDS MeetUp\uc5d0 \ub2e4\ub140\uc654\uc2b5\ub2c8\ub2e4. ^^",
         "description": "\ud3c9\uc18c\uc5d0 \ud2b8\uc704\ud130\ub85c \uac1c\ubc1c\uc790\ubd84\ub4e4\uc744 \ubaa8\ub2c8\ud130\ub9c1(?) \ud558\ub294 \ud3b8\uc778\ub370 \uc88b\uc740 \uae00\uc744 \ub9ce\uc774 \uc62c\ub9ac\uc2dc\ub294 \ubd84\ub4e4\uc774 FRENDS Meetup \uc744 \uc5ec\uc2e0\ub2e4\uace0 \ud558\uae38\ub798 \uc624\ub298 \uac00\ubcf4\uac8c \ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc9c0\ub09c\uc8fc \uc815\ub3c4 \ubd80\ud130 \uc628\uc624\ud504\ubbf9\uc2a4\ub97c \ud1b5\ud574\uc11c \ucc38\uc5ec\uc5ec\ubd80\ub97c \ubc1b\uc558\ub294\ub370 \ud2b9\uc774\ud55c \uc810\uc740 \ubcf4\uc99d\uae08 \uc81c\ub3c4\ub2e4. 10000\uc6d0\uc744 \uc785\uae08\uc744 \ud558\uace0 \uba54\uc77c\uc744 \ubcf4\ub0b4\uba74 \ub4f1\ub85d\uc774 \ub418\ub294\ub370 \ub2e4\uc2dc \uc624\uba74 \ub3cc\ub824\uc8fc\ub294 \uc81c\ub3c4. \uacb0\uacfc\uc801\uc73c\ub85c \ubd24\uc744\ub54c \ucc38\uac00\ub97c \uc801\uadf9\uc801\uc73c\ub85c \uc720\ub3c4\ud560 \uc218 \uc788\ub294 \ubc29\uc2dd\uc774 \uc544\ub2c8\uc600\uc744\uae4c \uc2f6\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "FREDNS, angularJS, best-practices, conference, dev, developer, JavaScript, outsideris, \ud504\ub860\ud2b8\uc5d4\ub4dc",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-07-06",
         "dateModified": "2013-07-06",
@@ -84,12 +99,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -217,8 +232,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

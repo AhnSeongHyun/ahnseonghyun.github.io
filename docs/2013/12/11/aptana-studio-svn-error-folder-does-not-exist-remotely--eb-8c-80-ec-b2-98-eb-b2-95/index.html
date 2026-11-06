@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="몇개의 서버를 사용하고 있고 각각의 서버에 SVN이 설치되어 있는데 Aptana Studio 에서 SVN 플러그인을 다운받아서 설치해서 잘 쓰고 있었다. 그런데 새로운 서버의 SVN 에 연결하려고 하니 연결은 되는데 소스 디렉토리를 클릭하니까 아래와 같은 에러가 발생하는 것을 확인 하였다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "Aptana Studio SVN error folder \u0027\u0027 does not exist remotely \ub300\ucc98\ubc95",
         "description": "\uba87\uac1c\uc758 \uc11c\ubc84\ub97c \uc0ac\uc6a9\ud558\uace0 \uc788\uace0 \uac01\uac01\uc758 \uc11c\ubc84\uc5d0 SVN\uc774 \uc124\uce58\ub418\uc5b4 \uc788\ub294\ub370 Aptana Studio \uc5d0\uc11c SVN \ud50c\ub7ec\uadf8\uc778\uc744 \ub2e4\uc6b4\ubc1b\uc544\uc11c \uc124\uce58\ud574\uc11c \uc798 \uc4f0\uace0 \uc788\uc5c8\ub2e4. \uadf8\ub7f0\ub370 \uc0c8\ub85c\uc6b4 \uc11c\ubc84\uc758 SVN \uc5d0 \uc5f0\uacb0\ud558\ub824\uace0 \ud558\ub2c8 \uc5f0\uacb0\uc740 \ub418\ub294\ub370 \uc18c\uc2a4 \ub514\ub809\ud1a0\ub9ac\ub97c \ud074\ub9ad\ud558\ub2c8\uae4c \uc544\ub798\uc640 \uac19\uc740 \uc5d0\ub7ec\uac00 \ubc1c\uc0dd\ud558\ub294 \uac83\uc744 \ud655\uc778 \ud558\uc600\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "Aptana Studio, dev, SVN, SVN error folder \u0027\u0027 does not exist remotely, \uc774\ud074\ub9bd\uc2a4",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-12-11",
         "dateModified": "2013-12-11",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -167,8 +182,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

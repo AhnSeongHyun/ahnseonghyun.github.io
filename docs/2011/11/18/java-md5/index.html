@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -54,17 +55,31 @@
     <meta name="twitter:description" content="최근에 해쉬테이블의 키 값을 만들기 위해서 입력 문자열에 대한 MD5를 추출하는 자바 소스를 인터넷에서 구했는데, 입력 문자열에 따라서 MD5 로 추출되는 자릿수가 달라서 해쉬테이블의 키 값으로 쓰기에는 조금 불편한 점이">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[JAVA] MD5 + \uc790\ub9bf\uc218",
         "description": "\ucd5c\uadfc\uc5d0 \ud574\uc26c\ud14c\uc774\ube14\uc758 \ud0a4 \uac12\uc744 \ub9cc\ub4e4\uae30 \uc704\ud574\uc11c \uc785\ub825 \ubb38\uc790\uc5f4\uc5d0 \ub300\ud55c MD5\ub97c \ucd94\ucd9c\ud558\ub294 \uc790\ubc14 \uc18c\uc2a4\ub97c \uc778\ud130\ub137\uc5d0\uc11c \uad6c\ud588\ub294\ub370, \uc785\ub825 \ubb38\uc790\uc5f4\uc5d0 \ub530\ub77c\uc11c MD5 \ub85c \ucd94\ucd9c\ub418\ub294 \uc790\ub9bf\uc218\uac00 \ub2ec\ub77c\uc11c \ud574\uc26c\ud14c\uc774\ube14\uc758 \ud0a4 \uac12\uc73c\ub85c \uc4f0\uae30\uc5d0\ub294 \uc870\uae08 \ubd88\ud3b8\ud55c \uc810\uc774",
+        "inLanguage": "ko",
+        "keywords": "dev, Java, MD5, MD5 \uc790\ub9bf\uc218",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2011-11-18",
         "dateModified": "2011-11-18",
@@ -74,12 +89,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -157,8 +172,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

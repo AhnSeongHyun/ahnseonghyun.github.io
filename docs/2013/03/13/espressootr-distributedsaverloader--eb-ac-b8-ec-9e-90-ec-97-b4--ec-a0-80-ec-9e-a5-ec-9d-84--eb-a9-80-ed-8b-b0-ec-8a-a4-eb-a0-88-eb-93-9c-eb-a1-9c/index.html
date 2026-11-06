@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -62,17 +63,31 @@
     <meta name="twitter:description" content="검색 엔진관련 모듈에 있어서 사전은 필수적인 부분인데, 빅 데이터라는 말이 나오면서 사전의 사이즈가 굉장히 커지는것 같다. 원래 사용자가 제공하는 혹은 사용자 검색 로그에서 추출된 데이터로 사전을 만들어서 사용하는데 중간에 빠른 로딩을 위해서 사전을 정렬한 채로 저장하는 방식을 사용하기도 한다. 그런데 **중간에 정렬하는 방식은 사전의 크기에 영향을 많이 받는다. 즉, 크기가 커지면 정렬하는것도 정렬 사전을 만드는것도 다시 로드시 읽어오는 작업도 오래 걸린다. **">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(espressoOtr) DistributedSaver/Loader, \ubb38\uc790\uc5f4 \uc800\uc7a5\uc744 \uba40\ud2f0\uc2a4\ub808\ub4dc\ub85c.",
         "description": "\uac80\uc0c9 \uc5d4\uc9c4\uad00\ub828 \ubaa8\ub4c8\uc5d0 \uc788\uc5b4\uc11c \uc0ac\uc804\uc740 \ud544\uc218\uc801\uc778 \ubd80\ubd84\uc778\ub370, \ube45 \ub370\uc774\ud130\ub77c\ub294 \ub9d0\uc774 \ub098\uc624\uba74\uc11c \uc0ac\uc804\uc758 \uc0ac\uc774\uc988\uac00 \uad49\uc7a5\ud788 \ucee4\uc9c0\ub294\uac83 \uac19\ub2e4. \uc6d0\ub798 \uc0ac\uc6a9\uc790\uac00 \uc81c\uacf5\ud558\ub294 \ud639\uc740 \uc0ac\uc6a9\uc790 \uac80\uc0c9 \ub85c\uadf8\uc5d0\uc11c \ucd94\ucd9c\ub41c \ub370\uc774\ud130\ub85c \uc0ac\uc804\uc744 \ub9cc\ub4e4\uc5b4\uc11c \uc0ac\uc6a9\ud558\ub294\ub370 \uc911\uac04\uc5d0 \ube60\ub978 \ub85c\ub529\uc744 \uc704\ud574\uc11c \uc0ac\uc804\uc744 \uc815\ub82c\ud55c \ucc44\ub85c \uc800\uc7a5\ud558\ub294 \ubc29\uc2dd\uc744 \uc0ac\uc6a9\ud558\uae30\ub3c4 \ud55c\ub2e4. \uadf8\ub7f0\ub370 **\uc911\uac04\uc5d0 \uc815\ub82c\ud558\ub294 \ubc29\uc2dd\uc740 \uc0ac\uc804\uc758 \ud06c\uae30\uc5d0 \uc601\ud5a5\uc744 \ub9ce\uc774 \ubc1b\ub294\ub2e4. \uc989, \ud06c\uae30\uac00 \ucee4\uc9c0\uba74 \uc815\ub82c\ud558\ub294\uac83\ub3c4 \uc815\ub82c \uc0ac\uc804\uc744 \ub9cc\ub4dc\ub294\uac83\ub3c4 \ub2e4\uc2dc \ub85c\ub4dc\uc2dc \uc77d\uc5b4\uc624\ub294 \uc791\uc5c5\ub3c4 \uc624\ub798 \uac78\ub9b0\ub2e4.\u00a0**",
+        "inLanguage": "ko",
+        "keywords": "DistributedLoader, DistributedSaver, espressoOtr, GitHub, https://github.com/AhnSeongHyun/espressoOtr, search-engine, \ubb38\uc790\uc5f4 \uc800\uc7a5, \uc0ac\uc804 \ub9cc\ub4e4\uae30",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-03-13",
         "dateModified": "2013-03-13",
@@ -82,12 +97,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -176,8 +191,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

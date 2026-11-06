@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="당연히 최근에는 오픈API나 혹은 간단하게 웹 서비스를 구성한다고 하면 Http Get 방식으로 데이터를 전달하는데 flask 에서는 다음과 같이 처리 할수 있다. `@app.route()`함수에서 어떤 메소드를 사용할 것인지 지정을 해주고 나면 `request.args.get()` 함수를 통해서 해당 url 로 넘어온 데이터를 가져올 수 있다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(flask) http get url \ucc98\ub9ac",
         "description": "\ub2f9\uc5f0\ud788 \ucd5c\uadfc\uc5d0\ub294 \uc624\ud508API\ub098 \ud639\uc740 \uac04\ub2e8\ud558\uac8c \uc6f9 \uc11c\ube44\uc2a4\ub97c \uad6c\uc131\ud55c\ub2e4\uace0 \ud558\uba74 Http Get \ubc29\uc2dd\uc73c\ub85c \ub370\uc774\ud130\ub97c \uc804\ub2ec\ud558\ub294\ub370 flask \uc5d0\uc11c\ub294 \ub2e4\uc74c\uacfc \uac19\uc774 \ucc98\ub9ac \ud560\uc218 \uc788\ub2e4. `@app.route()`\ud568\uc218\uc5d0\uc11c \uc5b4\ub5a4 \uba54\uc18c\ub4dc\ub97c \uc0ac\uc6a9\ud560 \uac83\uc778\uc9c0 \uc9c0\uc815\uc744 \ud574\uc8fc\uace0 \ub098\uba74 `request.args.get()` \ud568\uc218\ub97c \ud1b5\ud574\uc11c \ud574\ub2f9 url \ub85c \ub118\uc5b4\uc628 \ub370\uc774\ud130\ub97c \uac00\uc838\uc62c \uc218 \uc788\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev, Flask, flask get method, flask get \ucc98\ub9ac, Python",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-09-06",
         "dateModified": "2013-09-06",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -162,8 +177,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

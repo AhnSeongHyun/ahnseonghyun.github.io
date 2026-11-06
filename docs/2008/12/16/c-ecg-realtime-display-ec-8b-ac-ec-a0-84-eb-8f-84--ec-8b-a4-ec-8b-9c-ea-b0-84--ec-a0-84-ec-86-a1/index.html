@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -68,17 +69,31 @@
     <meta name="twitter:description" content="ECG Realtime Display는 윈도우 폼과 그리고 웹에서 가능하다. 그러나 본 포스팅에서는 윈도우 폼에서 디스플레이 하는 부분에 대해서만 다루도록 하겠다. 왜냐하면, 디스플레이하는 방식은 똑같기 때문에 웹 상에 실시간 디스플레이 할수 있는 기술(실버라이트, 스마트 폼)을 이용해서 구성하면 웹 상에서도 디스플레이를 할 수가 있다. 본 포">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[C#] ECG  Realtime Display(\uc2ec\uc804\ub3c4 \uc2e4\uc2dc\uac04 \uc804\uc1a1)",
         "description": "ECG Realtime\u00a0Display\ub294 \uc708\ub3c4\uc6b0 \ud3fc\uacfc \uadf8\ub9ac\uace0 \uc6f9\uc5d0\uc11c \uac00\ub2a5\ud558\ub2e4. \uadf8\ub7ec\ub098 \ubcf8 \ud3ec\uc2a4\ud305\uc5d0\uc11c\ub294 \uc708\ub3c4\uc6b0 \ud3fc\uc5d0\uc11c \ub514\uc2a4\ud50c\ub808\uc774 \ud558\ub294 \ubd80\ubd84\uc5d0 \ub300\ud574\uc11c\ub9cc \ub2e4\ub8e8\ub3c4\ub85d \ud558\uaca0\ub2e4. \uc65c\ub0d0\ud558\uba74, \ub514\uc2a4\ud50c\ub808\uc774\ud558\ub294 \ubc29\uc2dd\uc740 \ub611\uac19\uae30 \ub54c\ubb38\uc5d0 \uc6f9 \uc0c1\uc5d0 \uc2e4\uc2dc\uac04 \ub514\uc2a4\ud50c\ub808\uc774 \ud560\uc218 \uc788\ub294 \uae30\uc220(\uc2e4\ubc84\ub77c\uc774\ud2b8, \uc2a4\ub9c8\ud2b8 \ud3fc)\uc744 \uc774\uc6a9\ud574\uc11c \uad6c\uc131\ud558\uba74 \uc6f9 \uc0c1\uc5d0\uc11c\ub3c4 \ub514\uc2a4\ud50c\ub808\uc774\ub97c \ud560 \uc218\uac00 \uc788\ub2e4. \ubcf8 \ud3ec",
+        "inLanguage": "ko",
+        "keywords": "C#, dev, ECG, ECG Display, ECG Graph, Realtime graph, \uc2e4\uc2dc\uac04 \uadf8\ub798\ud504, \uc2ec\uc804\ub3c4 \uadf8\ub798\ud504, \uc2ec\uc804\ub3c4 \uadf8\ub9ac\uae30, \uc2ec\uc804\ub3c4 \ub514\uc2a4\ud50c\ub808\uc774, programming",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2008-12-16",
         "dateModified": "2008-12-16",
@@ -88,12 +103,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -253,8 +268,8 @@ _M#]
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

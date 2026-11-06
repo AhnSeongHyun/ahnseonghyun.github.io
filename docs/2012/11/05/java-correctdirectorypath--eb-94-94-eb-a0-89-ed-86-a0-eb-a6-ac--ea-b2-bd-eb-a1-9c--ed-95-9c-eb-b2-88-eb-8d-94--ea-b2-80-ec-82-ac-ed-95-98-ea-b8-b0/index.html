@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -54,17 +55,31 @@
     <meta name="twitter:description" content="간혹 디렉토리 안에 여러가지 파일에 대해서 접근해야 할때, 디렉토리 경로를 받을때가 있다. 그런데 이 경로를 가지고 뭔가 작업을 할때 머리속에 늘 남는것 중 하나가 바로 사용자의 입력 행태이다. 즉, 사용자는 디렉토리 경로를 다음과 같이 입력할수 있다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[JAVA] correctDirectoryPath(), \ub514\ub809\ud1a0\ub9ac \uacbd\ub85c \ud55c\ubc88\ub354 \uac80\uc0ac\ud558\uae30.",
         "description": "\uac04\ud639 \ub514\ub809\ud1a0\ub9ac \uc548\uc5d0 \uc5ec\ub7ec\uac00\uc9c0 \ud30c\uc77c\uc5d0 \ub300\ud574\uc11c \uc811\uadfc\ud574\uc57c \ud560\ub54c, \ub514\ub809\ud1a0\ub9ac \uacbd\ub85c\ub97c \ubc1b\uc744\ub54c\uac00 \uc788\ub2e4. \uadf8\ub7f0\ub370 \uc774 \uacbd\ub85c\ub97c \uac00\uc9c0\uace0 \ubb54\uac00 \uc791\uc5c5\uc744 \ud560\ub54c \uba38\ub9ac\uc18d\uc5d0 \ub298 \ub0a8\ub294\uac83 \uc911 \ud558\ub098\uac00 \ubc14\ub85c \uc0ac\uc6a9\uc790\uc758 \uc785\ub825 \ud589\ud0dc\uc774\ub2e4. \uc989, \uc0ac\uc6a9\uc790\ub294 \ub514\ub809\ud1a0\ub9ac \uacbd\ub85c\ub97c \ub2e4\uc74c\uacfc \uac19\uc774 \uc785\ub825\ud560\uc218 \uc788\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev, File, Java, \ub514\ub809\ud1a0\ub9ac \uacbd\ub85c \uac80\uc0ac",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-11-05",
         "dateModified": "2012-11-05",
@@ -74,12 +89,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -164,8 +179,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="많은 장고(Django) 예제에서 models.py 를 먼저 만들고 syncdb 를 통해서 실제 데이터베이스에 구조를 잡게 되는데 사실은 실제 데이터베이스에 이미 데이터나 구조가 있는 경우가 더 많은것같다. 그럴경우 일일히 models.py에서 데이터 모델들을 잡아주는것이 번거로운데(테이블이 많으니까) 장고에서는 inspectdb 라는 기능을 통해서 settings.py에 연결되어 있는 데이터베이스에 대한 models.py의 내용을 가져올 수 있도록 해준다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(django) inspectdb, \uae30\uc874 \ud14c\uc774\ube14\uc744 models.py \ub85c \uac00\uc838\uc624\uae30",
         "description": "\ub9ce\uc740 \uc7a5\uace0(Django) \uc608\uc81c\uc5d0\uc11c models.py \ub97c \uba3c\uc800 \ub9cc\ub4e4\uace0 syncdb \ub97c \ud1b5\ud574\uc11c \uc2e4\uc81c \ub370\uc774\ud130\ubca0\uc774\uc2a4\uc5d0 \uad6c\uc870\ub97c \uc7a1\uac8c \ub418\ub294\ub370 \uc0ac\uc2e4\uc740 \uc2e4\uc81c \ub370\uc774\ud130\ubca0\uc774\uc2a4\uc5d0 \uc774\ubbf8 \ub370\uc774\ud130\ub098 \uad6c\uc870\uac00 \uc788\ub294 \uacbd\uc6b0\uac00 \ub354 \ub9ce\uc740\uac83\uac19\ub2e4. \uadf8\ub7f4\uacbd\uc6b0 \uc77c\uc77c\ud788 models.py\uc5d0\uc11c \ub370\uc774\ud130 \ubaa8\ub378\ub4e4\uc744 \uc7a1\uc544\uc8fc\ub294\uac83\uc774 \ubc88\uac70\ub85c\uc6b4\ub370(\ud14c\uc774\ube14\uc774 \ub9ce\uc73c\ub2c8\uae4c) \uc7a5\uace0\uc5d0\uc11c\ub294 inspectdb \ub77c\ub294 \uae30\ub2a5\uc744 \ud1b5\ud574\uc11c settings.py\uc5d0 \uc5f0\uacb0\ub418\uc5b4 \uc788\ub294 \ub370\uc774\ud130\ubca0\uc774\uc2a4\uc5d0 \ub300\ud55c models.py\uc758 \ub0b4\uc6a9\uc744 \uac00\uc838\uc62c \uc218 \uc788\ub3c4\ub85d \ud574\uc900\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev, Django, how to get db table to models.py, inspectdb, Python",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2014-01-06",
         "dateModified": "2014-01-06",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -164,8 +179,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

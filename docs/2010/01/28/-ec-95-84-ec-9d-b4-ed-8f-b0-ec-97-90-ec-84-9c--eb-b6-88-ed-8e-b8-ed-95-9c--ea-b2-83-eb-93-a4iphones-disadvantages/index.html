@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -54,17 +55,31 @@
     <meta name="twitter:description" content="아이폰을 구입한지도 어언 3주정도 됐네요. 순정상태에서 쓰다가 이제는 해킹을 해서 사용하고 있습니다. 아이폰은 기존의 폰 보다 분명히 혁신적이고 보다 유저에게 친숙하고 친절한 폰입니다(굳이 스마트 폰이라는 말은 붙이지 않겠습니다)![](http://ash84.net/wp-content/uploads/1/">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "\uc544\uc774\ud3f0\uc5d0\uc11c \ubd88\ud3b8\ud55c \uac83\ub4e4(iPhone\u0027s disadvantages)",
         "description": "\uc544\uc774\ud3f0\uc744 \uad6c\uc785\ud55c\uc9c0\ub3c4 \uc5b4\uc5b8 3\uc8fc\uc815\ub3c4 \ub410\ub124\uc694. \uc21c\uc815\uc0c1\ud0dc\uc5d0\uc11c \uc4f0\ub2e4\uac00 \uc774\uc81c\ub294 \ud574\ud0b9\uc744 \ud574\uc11c \uc0ac\uc6a9\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. \uc544\uc774\ud3f0\uc740 \uae30\uc874\uc758 \ud3f0 \ubcf4\ub2e4 \ubd84\uba85\ud788 \ud601\uc2e0\uc801\uc774\uace0 \ubcf4\ub2e4 \uc720\uc800\uc5d0\uac8c \uce5c\uc219\ud558\uace0 \uce5c\uc808\ud55c \ud3f0\uc785\ub2c8\ub2e4(\uad73\uc774 \uc2a4\ub9c8\ud2b8 \ud3f0\uc774\ub77c\ub294 \ub9d0\uc740 \ubd99\uc774\uc9c0 \uc54a\uaca0\uc2b5\ub2c8\ub2e4)![](http://ash84.net/wp-content/uploads/1/",
+        "inLanguage": "ko",
+        "keywords": "\uc548\uc131\ud604, dev, iOS, \ubd88\ud3b8\ud55c\uac83\ub4e4",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2010-01-28",
         "dateModified": "2010-01-28",
@@ -74,12 +89,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -195,8 +210,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

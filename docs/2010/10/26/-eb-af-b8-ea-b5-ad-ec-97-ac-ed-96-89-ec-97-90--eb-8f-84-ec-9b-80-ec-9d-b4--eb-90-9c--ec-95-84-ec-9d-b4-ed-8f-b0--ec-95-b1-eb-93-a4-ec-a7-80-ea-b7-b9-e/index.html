@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -48,17 +49,31 @@
     <meta name="twitter:description" content="샌프란시스코, 뉴욕, 라스베가스, LA 등 10일간의 미친 강행군 여행을 다니면서 도움이 되었던 아이폰 앱들이 있어서 소개 하고자 합니다. 다소 의혹이 있을 수 있으나, 사람마다 아이 폰을 쓰는 성향이나 또는 여행성향이 다르므로 이해해주시기 바랍니다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "\ubbf8\uad6d\uc5ec\ud589\uc5d0 \ub3c4\uc6c0\uc774 \ub41c \uc544\uc774\ud3f0 \uc571\ub4e4.(\uc9c0\uadf9\ud788 \uc8fc\uad00\uc801\uc784)",
         "description": "\uc0cc\ud504\ub780\uc2dc\uc2a4\ucf54, \ub274\uc695, \ub77c\uc2a4\ubca0\uac00\uc2a4, LA \ub4f1 10\uc77c\uac04\uc758 \ubbf8\uce5c \uac15\ud589\uad70 \uc5ec\ud589\uc744 \ub2e4\ub2c8\uba74\uc11c \ub3c4\uc6c0\uc774 \ub418\uc5c8\ub358 \uc544\uc774\ud3f0 \uc571\ub4e4\uc774 \uc788\uc5b4\uc11c \uc18c\uac1c \ud558\uace0\uc790 \ud569\ub2c8\ub2e4. \ub2e4\uc18c \uc758\ud639\uc774 \uc788\uc744 \uc218 \uc788\uc73c\ub098, \uc0ac\ub78c\ub9c8\ub2e4 \uc544\uc774 \ud3f0\uc744 \uc4f0\ub294 \uc131\ud5a5\uc774\ub098 \ub610\ub294 \uc5ec\ud589\uc131\ud5a5\uc774 \ub2e4\ub974\ubbc0\ub85c \uc774\ud574\ud574\uc8fc\uc2dc\uae30 \ubc14\ub78d\ub2c8\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2010-10-26",
         "dateModified": "2010-10-26",
@@ -68,12 +83,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -288,8 +303,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

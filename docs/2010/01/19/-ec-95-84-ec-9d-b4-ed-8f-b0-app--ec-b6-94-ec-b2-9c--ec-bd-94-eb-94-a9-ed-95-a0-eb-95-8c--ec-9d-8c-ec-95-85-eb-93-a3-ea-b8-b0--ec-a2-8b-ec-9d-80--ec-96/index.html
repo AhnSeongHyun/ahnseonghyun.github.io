@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -60,17 +61,31 @@
     <meta name="twitter:description" content="원래 다른 블로그들 보면서, 뭘 그리 어플들을 추천하나, 자기가 좋아서 쓰면 그만이지라는 주의 였는데, 저도 여러 어플을 쓰면서 다른 분들께 (혹시 모르는 분들이 있을까바서 ㅋㅋ) 추천해 주고 싶은 마음이 있어서 이렇게 적">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[\uc544\uc774\ud3f0 App \ucd94\ucc9c] \ucf54\ub529\ud560\ub54c, \uc74c\uc545\ub4e3\uae30 \uc88b\uc740 \uc5b4\ud50c. moodAgent",
         "description": "\uc6d0\ub798 \ub2e4\ub978 \ube14\ub85c\uadf8\ub4e4 \ubcf4\uba74\uc11c, \ubb58 \uadf8\ub9ac \uc5b4\ud50c\ub4e4\uc744 \ucd94\ucc9c\ud558\ub098, \uc790\uae30\uac00 \uc88b\uc544\uc11c \uc4f0\uba74 \uadf8\ub9cc\uc774\uc9c0\ub77c\ub294 \uc8fc\uc758 \uc600\ub294\ub370, \uc800\ub3c4 \uc5ec\ub7ec \uc5b4\ud50c\uc744 \uc4f0\uba74\uc11c \ub2e4\ub978 \ubd84\ub4e4\uaed8 (\ud639\uc2dc \ubaa8\ub974\ub294 \ubd84\ub4e4\uc774 \uc788\uc744\uae4c\ubc14\uc11c \u314b\u314b) \ucd94\ucc9c\ud574 \uc8fc\uace0 \uc2f6\uc740 \ub9c8\uc74c\uc774 \uc788\uc5b4\uc11c \uc774\ub807\uac8c \uc801",
+        "inLanguage": "ko",
+        "keywords": "\uc548\uc131\ud604, dev, iOS, moodagent, \ubb34\ub4dc\uc5d0\uc774\uc800\ud2b8, \ubb34\ub8cc\uc5b4\ud50c, \uc74c\uc545\uc120\uace1 \uc5b4\ud50c",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2010-01-19",
         "dateModified": "2010-01-19",
@@ -80,12 +95,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -180,8 +195,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

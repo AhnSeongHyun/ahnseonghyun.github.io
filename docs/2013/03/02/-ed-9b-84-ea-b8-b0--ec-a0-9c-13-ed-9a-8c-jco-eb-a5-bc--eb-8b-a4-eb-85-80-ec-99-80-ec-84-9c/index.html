@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -58,17 +59,31 @@
     <meta name="twitter:description" content="자바 개발자는 JCO를 다녀와야 하는가? 하는 물음을 가지고 있었다. 작년에 나는 전업 자바 개발자가 아니였기 때문에 JCO 를 가는 동료들을 바라보면서 굳이 갈 필요가 있을까 하는 생각을 가지고 있었다. Deview 와는 다르고 개인적으로 자바라는 언어는 어느정도 완성된 언어라는 느낌이 들었다. 더 새로울게 있을까 하는 느낌? 그렇지만 올해 내가 처음 참가한 JCO의 느낌과 내용을 쓰려고 한다. 지극히. 주관적인 자바 초보 개발자의 JCO 후기라는 점을 잊지마시길.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[\ud6c4\uae30] \uc81c 13\ud68c JCO\ub97c \ub2e4\ub140\uc640\uc11c",
         "description": "\uc790\ubc14 \uac1c\ubc1c\uc790\ub294 JCO\ub97c \ub2e4\ub140\uc640\uc57c \ud558\ub294\uac00? \ud558\ub294 \ubb3c\uc74c\uc744 \uac00\uc9c0\uace0 \uc788\uc5c8\ub2e4. \uc791\ub144\uc5d0 \ub098\ub294 \uc804\uc5c5 \uc790\ubc14 \uac1c\ubc1c\uc790\uac00 \uc544\ub2c8\uc600\uae30 \ub54c\ubb38\uc5d0 JCO \ub97c \uac00\ub294 \ub3d9\ub8cc\ub4e4\uc744 \ubc14\ub77c\ubcf4\uba74\uc11c \uad73\uc774 \uac08 \ud544\uc694\uac00 \uc788\uc744\uae4c \ud558\ub294 \uc0dd\uac01\uc744 \uac00\uc9c0\uace0 \uc788\uc5c8\ub2e4. Deview \uc640\ub294 \ub2e4\ub974\uace0 \uac1c\uc778\uc801\uc73c\ub85c \uc790\ubc14\ub77c\ub294 \uc5b8\uc5b4\ub294 \uc5b4\ub290\uc815\ub3c4 \uc644\uc131\ub41c \uc5b8\uc5b4\ub77c\ub294 \ub290\ub08c\uc774 \ub4e4\uc5c8\ub2e4. \ub354 \uc0c8\ub85c\uc6b8\uac8c \uc788\uc744\uae4c \ud558\ub294 \ub290\ub08c? \uadf8\ub807\uc9c0\ub9cc \uc62c\ud574 \ub0b4\uac00 \ucc98\uc74c \ucc38\uac00\ud55c JCO\uc758 \ub290\ub08c\uacfc \ub0b4\uc6a9\uc744 \uc4f0\ub824\uace0 \ud55c\ub2e4. \uc9c0\uadf9\ud788. \uc8fc\uad00\uc801\uc778 \uc790\ubc14 \ucd08\ubcf4 \uac1c\ubc1c\uc790\uc758 JCO \ud6c4\uae30\ub77c\ub294 \uc810\uc744 \uc78a\uc9c0\ub9c8\uc2dc\uae38.",
+        "inLanguage": "ko",
+        "keywords": "2013 JCO, JCO, JCO\ud6c4\uae30, Java, dev, open-source",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-03-02",
         "dateModified": "2013-03-02",
@@ -78,12 +93,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -225,8 +240,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

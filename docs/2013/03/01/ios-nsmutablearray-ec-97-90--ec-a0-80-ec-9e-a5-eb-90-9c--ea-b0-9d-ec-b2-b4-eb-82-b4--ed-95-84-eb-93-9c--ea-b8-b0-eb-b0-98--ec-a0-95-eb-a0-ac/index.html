@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -60,17 +61,31 @@
     <meta name="twitter:description" content="이전에 포스팅에서 NSArray에 대한 String 에 대한 정렬을 하는 것에 대한 포스팅을 했었다. 사실 그렇게도 많이 쓰이긴 하지만, 어떤  데이터 자체를 하나의 클래스화 시키고 그 클래스에 대한 객체를 만들어서 자료구조, Array, List 등에 저장한 후에 정렬해야 하는 경우도 많다. 예를 들어, 아래와 같은 형식의 어떤 소셜데이터를 담는 클래스가 있다고 가정하자.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(iOS) NSMutableArray\uc5d0 \uc800\uc7a5\ub41c \uac1d\uccb4\ub0b4 \ud544\ub4dc \uae30\ubc18 \uc815\ub82c",
         "description": "\uc774\uc804\uc5d0 \ud3ec\uc2a4\ud305\uc5d0\uc11c NSArray\uc5d0 \ub300\ud55c String \uc5d0 \ub300\ud55c \uc815\ub82c\uc744 \ud558\ub294 \uac83\uc5d0 \ub300\ud55c \ud3ec\uc2a4\ud305\uc744 \ud588\uc5c8\ub2e4. \uc0ac\uc2e4 \uadf8\ub807\uac8c\ub3c4 \ub9ce\uc774 \uc4f0\uc774\uae34 \ud558\uc9c0\ub9cc, \uc5b4\ub5a4 \u00a0\ub370\uc774\ud130 \uc790\uccb4\ub97c \ud558\ub098\uc758 \ud074\ub798\uc2a4\ud654 \uc2dc\ud0a4\uace0 \uadf8 \ud074\ub798\uc2a4\uc5d0 \ub300\ud55c \uac1d\uccb4\ub97c \ub9cc\ub4e4\uc5b4\uc11c \uc790\ub8cc\uad6c\uc870, Array, List \ub4f1\uc5d0 \uc800\uc7a5\ud55c \ud6c4\uc5d0 \uc815\ub82c\ud574\uc57c \ud558\ub294 \uacbd\uc6b0\ub3c4 \ub9ce\ub2e4. \uc608\ub97c \ub4e4\uc5b4, \uc544\ub798\uc640 \uac19\uc740 \ud615\uc2dd\uc758 \uc5b4\ub5a4 \uc18c\uc15c\ub370\uc774\ud130\ub97c \ub2f4\ub294 \ud074\ub798\uc2a4\uac00 \uc788\ub2e4\uace0 \uac00\uc815\ud558\uc790.",
+        "inLanguage": "ko",
+        "keywords": "NSArray, NSMutableArray, dev, ios-development, sortUsingDescriptors, \uc815\ub82c, \ud074\ub798\uc2a4 \uc815\ub82c",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-03-01",
         "dateModified": "2013-03-01",
@@ -80,12 +95,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -163,8 +178,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

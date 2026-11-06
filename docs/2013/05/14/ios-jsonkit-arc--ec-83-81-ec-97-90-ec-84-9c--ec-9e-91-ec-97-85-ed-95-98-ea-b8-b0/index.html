@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -62,17 +63,31 @@
     <meta name="twitter:description" content="다음 티스토리 API 연동중에 JSON 으로 연동하는 과정에서 JSONKit 라이브러리를 사용하고 있었는데 이 라이브러리는 아쉽게도 ARC로 작성되어 있지 않다. 하지만 JSONKit은 자기네들 말로는 Objective-C JSON 처리 라이브러리 중에서는 가장 빠르다고 하니 안 쓸수도 없는 노릇([성능평가자료](https://github.com/johnezang/JSONKit)).">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(iOS) JSONKit ARC \uc0c1\uc5d0\uc11c \uc791\uc5c5\ud558\uae30",
         "description": "\ub2e4\uc74c \ud2f0\uc2a4\ud1a0\ub9ac API \uc5f0\ub3d9\uc911\uc5d0 JSON \uc73c\ub85c \uc5f0\ub3d9\ud558\ub294 \uacfc\uc815\uc5d0\uc11c JSONKit \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc0ac\uc6a9\ud558\uace0 \uc788\uc5c8\ub294\ub370 \uc774 \ub77c\uc774\ube0c\ub7ec\ub9ac\ub294 \uc544\uc27d\uac8c\ub3c4 ARC\ub85c \uc791\uc131\ub418\uc5b4 \uc788\uc9c0 \uc54a\ub2e4. \ud558\uc9c0\ub9cc JSONKit\uc740 \uc790\uae30\ub124\ub4e4 \ub9d0\ub85c\ub294 Objective-C JSON \ucc98\ub9ac \ub77c\uc774\ube0c\ub7ec\ub9ac \uc911\uc5d0\uc11c\ub294 \uac00\uc7a5 \ube60\ub974\ub2e4\uace0 \ud558\ub2c8 \uc548 \uc4f8\uc218\ub3c4 \uc5c6\ub294 \ub178\ub987([\uc131\ub2a5\ud3c9\uac00\uc790\ub8cc](https://github.com/johnezang/JSONKit)).",
+        "inLanguage": "ko",
+        "keywords": "Arc, JSON, JSONKit, JSONKit ARC, dev, iOS, ios-development, objective-c jsonkit arc",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-05-14",
         "dateModified": "2013-05-14",
@@ -82,12 +97,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -188,8 +203,8 @@ There are many other compiler flags. They let you control the way the code is co
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -58,17 +59,31 @@
     <meta name="twitter:description" content="이번 프로젝트가 언어 및 문자에 관련된 것이라서 조합자 중에서 특히 우리나라 말의 경우 초성 중성 종성이 있는데 그것들이 실제로 프로그래밍의 어떤 컨트롤 상에서 제공이 제대로 되는 경우가 없습니다. 사용자의 키보드 입력은 제대로 처리 하지만, 마우스로 버튼을 눌러서 한글의 제대로된 입력을  하려고">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "# \ud55c\uae00 \uc624\ud1a0\ub9c8\ud0c0 \uad00\ub828 \uc790\ub8cc",
         "description": "\uc774\ubc88 \ud504\ub85c\uc81d\ud2b8\uac00 \uc5b8\uc5b4 \ubc0f \ubb38\uc790\uc5d0 \uad00\ub828\ub41c \uac83\uc774\ub77c\uc11c \uc870\ud569\uc790 \uc911\uc5d0\uc11c \ud2b9\ud788 \uc6b0\ub9ac\ub098\ub77c \ub9d0\uc758 \uacbd\uc6b0 \ucd08\uc131 \uc911\uc131 \uc885\uc131\uc774 \uc788\ub294\ub370 \uadf8\uac83\ub4e4\uc774 \uc2e4\uc81c\ub85c \ud504\ub85c\uadf8\ub798\ubc0d\uc758 \uc5b4\ub5a4 \ucee8\ud2b8\ub864 \uc0c1\uc5d0\uc11c \uc81c\uacf5\uc774 \uc81c\ub300\ub85c \ub418\ub294 \uacbd\uc6b0\uac00 \uc5c6\uc2b5\ub2c8\ub2e4. \uc0ac\uc6a9\uc790\uc758 \ud0a4\ubcf4\ub4dc \uc785\ub825\uc740 \uc81c\ub300\ub85c \ucc98\ub9ac \ud558\uc9c0\ub9cc, \ub9c8\uc6b0\uc2a4\ub85c \ubc84\ud2bc\uc744 \ub20c\ub7ec\uc11c \ud55c\uae00\uc758 \uc81c\ub300\ub85c\ub41c \uc785\ub825\uc744 \u00a0\ud558\ub824\uace0",
+        "inLanguage": "ko",
+        "keywords": "Automata, \uac00\uc0c1 \ud0a4\ubcf4\ub4dc, \uc624\ud1a0\ub9c8\ud0c0, \ucd08\uc131 \uc911\uc131 \uc885\uc131, \ud55c\uae00, \ud55c\uae00 \uc624\ud1a0\ub9c8\ud0c0",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2011-02-18",
         "dateModified": "2011-02-18",
@@ -78,12 +93,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -222,8 +237,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

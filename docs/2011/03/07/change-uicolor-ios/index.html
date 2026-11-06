@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -58,17 +59,31 @@
     <meta name="twitter:description" content="아이폰 개발 상에서 텍스트 글자색 바꾸는 코드. 일반적인 Color는 몇가지 지정할 수 있으나 RGB 로 지정할수도 있다. 대신에 주의 할 점은 원래 우리가 알고 있는 RGB를 255로 나누어서 입력 해 주어야 한다는 것. 주의하자.  이것 외에도, colorWithHue:saturation:brightness:alpha:, c">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[iOS] UIColor \uae00\uc790\uc0c9 \ubcc0\uacbd",
         "description": "\uc544\uc774\ud3f0 \uac1c\ubc1c \uc0c1\uc5d0\uc11c \ud14d\uc2a4\ud2b8 \uae00\uc790\uc0c9 \ubc14\uafb8\ub294 \ucf54\ub4dc. \uc77c\ubc18\uc801\uc778 Color\ub294 \uba87\uac00\uc9c0 \uc9c0\uc815\ud560 \uc218 \uc788\uc73c\ub098 RGB \ub85c \uc9c0\uc815\ud560\uc218\ub3c4 \uc788\ub2e4. \ub300\uc2e0\uc5d0 \uc8fc\uc758 \ud560 \uc810\uc740 \uc6d0\ub798 \uc6b0\ub9ac\uac00 \uc54c\uace0 \uc788\ub294 RGB\ub97c 255\ub85c \ub098\ub204\uc5b4\uc11c \uc785\ub825 \ud574 \uc8fc\uc5b4\uc57c \ud55c\ub2e4\ub294 \uac83. \uc8fc\uc758\ud558\uc790. \u00a0\uc774\uac83 \uc678\uc5d0\ub3c4, colorWithHue:saturation:brightness:alpha:, c",
+        "inLanguage": "ko",
+        "keywords": "Codes, dev, iOS, UIColor, \uae00\uc790\uc0c9 \ubcc0\uacbd, \ud14d\uc2a4\ud2b8 \uae00\uc790\uc0c9 \ubcc0\uacbd",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2011-03-07",
         "dateModified": "2011-03-07",
@@ -78,12 +93,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -160,8 +175,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

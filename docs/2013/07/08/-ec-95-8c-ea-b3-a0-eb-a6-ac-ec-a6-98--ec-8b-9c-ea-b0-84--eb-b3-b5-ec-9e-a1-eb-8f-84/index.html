@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="오랫동안 비 전공자인 나를 괴롭혔던 문제들인데 인제 좀 정리를 하려고 한다. **시간복잡도와 공간복잡도 문제는 알고리즘을 측정하는 계산법이다. **생활코딩도 있고 code academy 도 프로그래밍에 대해서 알려주지만 이건 어쩌면 기본적인 프로그래밍을 배우고 나서 언젠가 마주해야할 문제중 하나라는 생각이 든다. (잡설시작) 나 역시 프로그래밍을 사용법 위주로 해왔지만 어느 순간 데이터와 마주하게 되면서 더이상 for 문의 순차 비교만으로는 원하는 성능이 나오지 않는다. 나는">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(\uc54c\uace0\ub9ac\uc998) \uc2dc\uac04 \ubcf5\uc7a1\ub3c4",
         "description": "\uc624\ub7ab\ub3d9\uc548 \ube44 \uc804\uacf5\uc790\uc778 \ub098\ub97c \uad34\ub86d\ud614\ub358 \ubb38\uc81c\ub4e4\uc778\ub370 \uc778\uc81c \uc880 \uc815\ub9ac\ub97c \ud558\ub824\uace0 \ud55c\ub2e4. **\uc2dc\uac04\ubcf5\uc7a1\ub3c4\uc640 \uacf5\uac04\ubcf5\uc7a1\ub3c4 \ubb38\uc81c\ub294 \uc54c\uace0\ub9ac\uc998\uc744 \uce21\uc815\ud558\ub294 \uacc4\uc0b0\ubc95\uc774\ub2e4. **\uc0dd\ud65c\ucf54\ub529\ub3c4 \uc788\uace0 code academy \ub3c4 \ud504\ub85c\uadf8\ub798\ubc0d\uc5d0 \ub300\ud574\uc11c \uc54c\ub824\uc8fc\uc9c0\ub9cc \uc774\uac74 \uc5b4\uca4c\uba74 \uae30\ubcf8\uc801\uc778 \ud504\ub85c\uadf8\ub798\ubc0d\uc744 \ubc30\uc6b0\uace0 \ub098\uc11c \uc5b8\uc820\uac00 \ub9c8\uc8fc\ud574\uc57c\ud560 \ubb38\uc81c\uc911 \ud558\ub098\ub77c\ub294 \uc0dd\uac01\uc774 \ub4e0\ub2e4. (\uc7a1\uc124\uc2dc\uc791) \ub098 \uc5ed\uc2dc \ud504\ub85c\uadf8\ub798\ubc0d\uc744 \uc0ac\uc6a9\ubc95 \uc704\uc8fc\ub85c \ud574\uc654\uc9c0\ub9cc \uc5b4\ub290 \uc21c\uac04 \ub370\uc774\ud130\uc640 \ub9c8\uc8fc\ud558\uac8c \ub418\uba74\uc11c \ub354\uc774\uc0c1 for \ubb38\uc758 \uc21c\ucc28 \ube44\uad50\ub9cc\uc73c\ub85c\ub294 \uc6d0\ud558\ub294 \uc131\ub2a5\uc774 \ub098\uc624\uc9c0 \uc54a\ub294\ub2e4. \ub098\ub294",
+        "inLanguage": "ko",
+        "keywords": "algorithm, tutorial, \uacf5\uac04\ubcf5\uc7a1\ub3c4, \uc2dc\uac04\ubcf5\uc7a1\ub3c4, \ucd5c\uace0\ucc28\ud56d",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-07-08",
         "dateModified": "2013-07-08",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -306,8 +321,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

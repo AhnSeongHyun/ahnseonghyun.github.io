@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -60,17 +61,31 @@
     <meta name="twitter:description" content="Nginx 에 대해서 몇가지 관심을 갖다가 설정에 따른 성능향상, 영향에 대해서 쓴 글을 보게 되었는데 공부할겸 정리해 둔다. 거창하게 제목에 번역이라고 달았지만, 그냥 아는단어를 한글화 했다고 보면 된다. 아래의 링크는 원문링크이다. 오류가 있다면 댓글로!">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[\ubc88\uc5ed] How To Optimize Nginx Configuration(Nginx \uc758 \uc124\uc815 \ucd5c\uc801\ud654)",
         "description": "Nginx \uc5d0 \ub300\ud574\uc11c \uba87\uac00\uc9c0 \uad00\uc2ec\uc744 \uac16\ub2e4\uac00 \uc124\uc815\uc5d0 \ub530\ub978 \uc131\ub2a5\ud5a5\uc0c1, \uc601\ud5a5\uc5d0 \ub300\ud574\uc11c \uc4f4 \uae00\uc744 \ubcf4\uac8c \ub418\uc5c8\ub294\ub370 \uacf5\ubd80\ud560\uacb8 \uc815\ub9ac\ud574 \ub454\ub2e4. \uac70\ucc3d\ud558\uac8c \uc81c\ubaa9\uc5d0 \ubc88\uc5ed\uc774\ub77c\uace0 \ub2ec\uc558\uc9c0\ub9cc, \uadf8\ub0e5 \uc544\ub294\ub2e8\uc5b4\ub97c \ud55c\uae00\ud654 \ud588\ub2e4\uace0 \ubcf4\uba74 \ub41c\ub2e4. \uc544\ub798\uc758 \ub9c1\ud06c\ub294 \uc6d0\ubb38\ub9c1\ud06c\uc774\ub2e4. \uc624\ub958\uac00 \uc788\ub2e4\uba74 \ub313\uae00\ub85c!",
+        "inLanguage": "ko",
+        "keywords": "How To Optimize Nginx Configuration, dev, nginx, nginx optmize, nginx \uc124\uc815, nginx \uc124\uc815 \ucd5c\uc801\ud654, tutorial",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2015-03-19",
         "dateModified": "2015-03-19",
@@ -80,12 +95,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -220,8 +235,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

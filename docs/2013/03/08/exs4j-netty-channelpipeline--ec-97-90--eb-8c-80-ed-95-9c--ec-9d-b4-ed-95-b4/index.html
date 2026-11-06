@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -62,17 +63,31 @@
     <meta name="twitter:description" content="현재 개발하고 있는 [exs4j](https://github.com/AhnSeongHyun/exs4j) 에서는 네트워크 파트는 전적으로 [Netty](http://netty.io)가 담당하고 있다. 이유는 여러가지가 있겠지만 쉽게  서버를 구성할 수 있고 pipeline을 변경함에 따라 HTTP 통신 방식도 지원할 수 있기 때문이다.(v1.6 지원예정) [Netty ](http://netty.io)에서 여러가지 예제를 제공하고 있기 때문에 쉽게 따라 할수 있는데 필자 역시 따">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(exs4j) Netty ChannelPipeline \uc5d0 \ub300\ud55c \uc774\ud574.",
         "description": "\ud604\uc7ac \uac1c\ubc1c\ud558\uace0 \uc788\ub294 [exs4j](https://github.com/AhnSeongHyun/exs4j) \uc5d0\uc11c\ub294 \ub124\ud2b8\uc6cc\ud06c \ud30c\ud2b8\ub294 \uc804\uc801\uc73c\ub85c [Netty](http://netty.io)\uac00 \ub2f4\ub2f9\ud558\uace0 \uc788\ub2e4. \uc774\uc720\ub294 \uc5ec\ub7ec\uac00\uc9c0\uac00 \uc788\uaca0\uc9c0\ub9cc \uc27d\uac8c \u00a0\uc11c\ubc84\ub97c \uad6c\uc131\ud560 \uc218 \uc788\uace0 pipeline\uc744 \ubcc0\uacbd\ud568\uc5d0 \ub530\ub77c HTTP \ud1b5\uc2e0 \ubc29\uc2dd\ub3c4 \uc9c0\uc6d0\ud560 \uc218 \uc788\uae30 \ub54c\ubb38\uc774\ub2e4.(v1.6 \uc9c0\uc6d0\uc608\uc815) [Netty ](http://netty.io)\uc5d0\uc11c \uc5ec\ub7ec\uac00\uc9c0 \uc608\uc81c\ub97c \uc81c\uacf5\ud558\uace0 \uc788\uae30 \ub54c\ubb38\uc5d0 \uc27d\uac8c \ub530\ub77c \ud560\uc218 \uc788\ub294\ub370 \ud544\uc790 \uc5ed\uc2dc \ub530",
+        "inLanguage": "ko",
+        "keywords": "ChannelPipeline, ChannelPipelineFactory, GitHub, Netty, espressoOtr, exs4j, Python, tutorial",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-03-08",
         "dateModified": "2013-03-08",
@@ -82,12 +97,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -226,8 +241,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

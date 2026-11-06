@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="앞의 포스트에서는 [하나의 리스트에 대해서 n 개의 subList로 분배하는 distributeListToSubList()](http://ash84.tistory.com/874) 함수를 소개했는데, 이번에 소개할 함수는 하나의 리스트를 n개의 동일한 아이템 개수를 가지는 subList로 분배하는 함수이다. 차이점은 distributeListToSubList() 함수는 통제하는 부분이 subList 의 개수인 반면에,  distributeListToSameCapacity() 함">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[Java] List \ubd84\ubc30\ud558\uae30, distributeListToSameCapacity()",
         "description": "\uc55e\uc758 \ud3ec\uc2a4\ud2b8\uc5d0\uc11c\ub294 [\ud558\ub098\uc758 \ub9ac\uc2a4\ud2b8\uc5d0 \ub300\ud574\uc11c n \uac1c\uc758 subList\ub85c \ubd84\ubc30\ud558\ub294 distributeListToSubList()](http://ash84.tistory.com/874) \ud568\uc218\ub97c \uc18c\uac1c\ud588\ub294\ub370, \uc774\ubc88\uc5d0 \uc18c\uac1c\ud560 \ud568\uc218\ub294 \ud558\ub098\uc758 \ub9ac\uc2a4\ud2b8\ub97c n\uac1c\uc758 \ub3d9\uc77c\ud55c \uc544\uc774\ud15c \uac1c\uc218\ub97c \uac00\uc9c0\ub294 subList\ub85c \ubd84\ubc30\ud558\ub294 \ud568\uc218\uc774\ub2e4. \ucc28\uc774\uc810\uc740\u00a0distributeListToSubList() \ud568\uc218\ub294 \ud1b5\uc81c\ud558\ub294 \ubd80\ubd84\uc774 subList \uc758 \uac1c\uc218\uc778 \ubc18\uba74\uc5d0,\u00a0\u00a0distributeListToSameCapacity() \ud568",
+        "inLanguage": "ko",
+        "keywords": "dev, distributeListToSameCapacity, distributeListToSubList, Java, \ub9ac\uc2a4\ud2b8 \ubd84\ubc30",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-12-24",
         "dateModified": "2012-12-24",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -160,8 +175,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

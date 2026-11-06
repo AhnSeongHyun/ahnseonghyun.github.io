@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -60,17 +61,31 @@
     <meta name="twitter:description" content="개인적으로 github를 가장 좋아하는 서비스로 뽑고 있고, 필자 역시 github 에 무엇인가를 올리는 작업을 좋아한다. 여타의 코드 저장소 및 커뮤니티와 다른 점이라면 단연 소셜적인 기능을 통해서 다른 사람들과 좀더 친밀하게 뭔가를 할수 있다는 점이겠다. 이러한 이유로 인해서 github는 개발자들 외 여타의 다른 분들도 많이들 쓰신다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "github_reader, github \uc720\uc800\uc758 \ud65c\ub3d9\uc744 \ub0b4 \ube14\ub85c\uadf8\uc5d0 \ubcf4\uc5ec\uc8fc\uae30.",
         "description": "\uac1c\uc778\uc801\uc73c\ub85c github\ub97c \uac00\uc7a5 \uc88b\uc544\ud558\ub294 \uc11c\ube44\uc2a4\ub85c \ubf51\uace0 \uc788\uace0, \ud544\uc790 \uc5ed\uc2dc github \uc5d0 \ubb34\uc5c7\uc778\uac00\ub97c \uc62c\ub9ac\ub294 \uc791\uc5c5\uc744 \uc88b\uc544\ud55c\ub2e4. \uc5ec\ud0c0\uc758 \ucf54\ub4dc \uc800\uc7a5\uc18c \ubc0f \ucee4\ubba4\ub2c8\ud2f0\uc640 \ub2e4\ub978 \uc810\uc774\ub77c\uba74 \ub2e8\uc5f0 \uc18c\uc15c\uc801\uc778 \uae30\ub2a5\uc744 \ud1b5\ud574\uc11c \ub2e4\ub978 \uc0ac\ub78c\ub4e4\uacfc \uc880\ub354 \uce5c\ubc00\ud558\uac8c \ubb54\uac00\ub97c \ud560\uc218 \uc788\ub2e4\ub294 \uc810\uc774\uaca0\ub2e4. \uc774\ub7ec\ud55c \uc774\uc720\ub85c \uc778\ud574\uc11c github\ub294 \uac1c\ubc1c\uc790\ub4e4 \uc678 \uc5ec\ud0c0\uc758 \ub2e4\ub978 \ubd84\ub4e4\ub3c4 \ub9ce\uc774\ub4e4 \uc4f0\uc2e0\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "GitHub, github \ube14\ub85c\uadf8, github \uc5f0\ub3d9, github_reader, JavaScript, public activity, \ube14\ub85c\uadf8\uc640 \uc5f0\ub3d9",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-10-25",
         "dateModified": "2012-10-25",
@@ -80,12 +95,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -132,8 +147,7 @@
 <p><span style="font-size: 12pt;"> </span></p>
 <center>  
 <iframe allowfullscreen="allowfullscreen" frameborder="0" height="315" scrolling="no" src="http://embed.ted.com/talks/lang/ko/clay_shirky_how_the_internet_will_one_day_transform_government.html" width="560">  
- </center>
-<p></iframe></center>  </p>
+ </center></iframe></center>
             </div>
 
             <section class="hist" data-history hidden>
@@ -180,8 +194,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

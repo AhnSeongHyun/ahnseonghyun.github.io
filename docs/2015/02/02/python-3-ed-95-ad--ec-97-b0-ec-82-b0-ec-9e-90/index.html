@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -52,17 +53,31 @@
     <meta name="twitter:description" content="이걸 언제 쓰냐라고 생각했지만, 내가 오늘 이 글을 적게 될줄은 ‘나’조차도 몰랐다. 3항 연산자, 일명 if 축약 이라고도 하는데 사실 그리 쓸일이 많지는 않은데 flask 에서 유독 짜증나는 부분이 있어서 쓰게 되었다. flask 에서 함수를 구성하다 보면 초반에 하는 것중 하나가 request 객체에서 get 혹은 post 에 대한 데이터를 가져오는 작업이다. 일반적으로 get 의 경우 `request.args.get(&#34;id&#34;, None)` 이런식으로 가져오는데 get">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "python 3\ud56d \uc5f0\uc0b0\uc790",
         "description": "\uc774\uac78 \uc5b8\uc81c \uc4f0\ub0d0\ub77c\uace0 \uc0dd\uac01\ud588\uc9c0\ub9cc, \ub0b4\uac00 \uc624\ub298 \uc774 \uae00\uc744 \uc801\uac8c \ub420\uc904\uc740 \u2018\ub098\u2019\uc870\ucc28\ub3c4 \ubab0\ub790\ub2e4. 3\ud56d \uc5f0\uc0b0\uc790, \uc77c\uba85 if \ucd95\uc57d \uc774\ub77c\uace0\ub3c4 \ud558\ub294\ub370 \uc0ac\uc2e4 \uadf8\ub9ac \uc4f8\uc77c\uc774 \ub9ce\uc9c0\ub294 \uc54a\uc740\ub370 flask \uc5d0\uc11c \uc720\ub3c5 \uc9dc\uc99d\ub098\ub294 \ubd80\ubd84\uc774 \uc788\uc5b4\uc11c \uc4f0\uac8c \ub418\uc5c8\ub2e4. flask \uc5d0\uc11c \ud568\uc218\ub97c \uad6c\uc131\ud558\ub2e4 \ubcf4\uba74 \ucd08\ubc18\uc5d0 \ud558\ub294 \uac83\uc911 \ud558\ub098\uac00 request \uac1d\uccb4\uc5d0\uc11c get \ud639\uc740 post \uc5d0 \ub300\ud55c \ub370\uc774\ud130\ub97c \uac00\uc838\uc624\ub294 \uc791\uc5c5\uc774\ub2e4. \uc77c\ubc18\uc801\uc73c\ub85c get \uc758 \uacbd\uc6b0 `request.args.get(\"id\", None)` \uc774\ub7f0\uc2dd\uc73c\ub85c \uac00\uc838\uc624\ub294\ub370 get",
+        "inLanguage": "ko",
+        "keywords": "3\ud56d\uc5f0\uc0b0\uc790, dev, Python",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2015-02-02",
         "dateModified": "2015-02-02",
@@ -72,12 +87,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -153,8 +168,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

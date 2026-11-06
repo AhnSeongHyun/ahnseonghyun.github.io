@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -60,17 +61,31 @@
     <meta name="twitter:description" content="날짜처리는 어떤 언어에서든지 여간 귀찮은게아닌데 한번 만들어놓으면 편한 몇가지 함수들을 만들었다. 날짜를 넣으면  특정 형식으로 NSString형태로 변환해주는 함수. 이게 필요한 이유는 어떤 셀이나 레이블에 표시를 할때에는 NSString 형을 쓸수 밖에 없기 때문이다. 그리고 반대로 NSString 을 NSDate 형식으로 바꿔주는 함수. 또 하나는 D-Day를 구하는 함수등을 만들었다. 특별한 객체 생성 없이 사용하기 편하게 클래스 메소드로 만들었다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(iOS) NSDateUtil, \ub0a0\uc9dc\ucc98\ub9ac\ub97c \uac04\ud3b8\ud558\uac8c",
         "description": "\ub0a0\uc9dc\ucc98\ub9ac\ub294 \uc5b4\ub5a4 \uc5b8\uc5b4\uc5d0\uc11c\ub4e0\uc9c0 \uc5ec\uac04 \uadc0\ucc2e\uc740\uac8c\uc544\ub2cc\ub370 \ud55c\ubc88 \ub9cc\ub4e4\uc5b4\ub193\uc73c\uba74 \ud3b8\ud55c \uba87\uac00\uc9c0 \ud568\uc218\ub4e4\uc744 \ub9cc\ub4e4\uc5c8\ub2e4. \ub0a0\uc9dc\ub97c \ub123\uc73c\uba74 \u00a0\ud2b9\uc815 \ud615\uc2dd\uc73c\ub85c NSString\ud615\ud0dc\ub85c \ubcc0\ud658\ud574\uc8fc\ub294 \ud568\uc218. \uc774\uac8c \ud544\uc694\ud55c \uc774\uc720\ub294 \uc5b4\ub5a4 \uc140\uc774\ub098 \ub808\uc774\ube14\uc5d0 \ud45c\uc2dc\ub97c \ud560\ub54c\uc5d0\ub294 NSString \ud615\uc744 \uc4f8\uc218 \ubc16\uc5d0 \uc5c6\uae30 \ub54c\ubb38\uc774\ub2e4. \uadf8\ub9ac\uace0 \ubc18\ub300\ub85c NSString \uc744 NSDate \ud615\uc2dd\uc73c\ub85c \ubc14\uafd4\uc8fc\ub294 \ud568\uc218. \ub610 \ud558\ub098\ub294 D-Day\ub97c \uad6c\ud558\ub294 \ud568\uc218\ub4f1\uc744 \ub9cc\ub4e4\uc5c8\ub2e4. \ud2b9\ubcc4\ud55c \uac1d\uccb4 \uc0dd\uc131 \uc5c6\uc774 \uc0ac\uc6a9\ud558\uae30 \ud3b8\ud558\uac8c \ud074\ub798\uc2a4 \uba54\uc18c\ub4dc\ub85c \ub9cc\ub4e4\uc5c8\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev, iOS, NSDATE, NSDate \ubcc0\ud658, NSString to NSDate, \ub514\ub370\uc774, \ub514\ub370\uc774\uacc4\uc0b0",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-04-24",
         "dateModified": "2013-04-24",
@@ -80,12 +95,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -161,8 +176,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

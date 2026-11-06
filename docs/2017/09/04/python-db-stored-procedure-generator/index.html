@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="프로시저 호출은 몇 가지 제약을 가진다. 일단 프로시저명을 전달해야 하고 파라미터를 순서대로 전달해야 한다. 그리고 결과를 주는 방식이 하나의 결과를 줄 수도 있고 여러 결과를 줄 수도 있다. 프로시저당 하나의 호출 함수를 만들면 너무 많은 프로시저 호출 함수가 생기는 문제가 있다. 그래서 프로시저 이름을 받는 파라미터와 전달할 프로시저 파라미터, 그리고 insert, update, delete 의 경우 commit 을 해야하기 때문에 commit 여부를 위한 파라미터, 그리고 여러 결과를 반환하는 여부에 대한 파라미터를 추가한 호">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "python - db stored procedure \ud638\ucd9c\uc5d0 generator \ud65c\uc6a9\ud558\uae30",
         "description": "\ud504\ub85c\uc2dc\uc800 \ud638\ucd9c\uc740 \uba87 \uac00\uc9c0 \uc81c\uc57d\uc744 \uac00\uc9c4\ub2e4. \uc77c\ub2e8 \ud504\ub85c\uc2dc\uc800\uba85\uc744 \uc804\ub2ec\ud574\uc57c \ud558\uace0 \ud30c\ub77c\ubbf8\ud130\ub97c \uc21c\uc11c\ub300\ub85c \uc804\ub2ec\ud574\uc57c \ud55c\ub2e4. \uadf8\ub9ac\uace0 \uacb0\uacfc\ub97c \uc8fc\ub294 \ubc29\uc2dd\uc774 \ud558\ub098\uc758 \uacb0\uacfc\ub97c \uc904 \uc218\ub3c4 \uc788\uace0 \uc5ec\ub7ec \uacb0\uacfc\ub97c \uc904 \uc218\ub3c4 \uc788\ub2e4. \ud504\ub85c\uc2dc\uc800\ub2f9 \ud558\ub098\uc758 \ud638\ucd9c \ud568\uc218\ub97c \ub9cc\ub4e4\uba74 \ub108\ubb34 \ub9ce\uc740 \ud504\ub85c\uc2dc\uc800 \ud638\ucd9c \ud568\uc218\uac00 \uc0dd\uae30\ub294 \ubb38\uc81c\uac00 \uc788\ub2e4. \uadf8\ub798\uc11c \ud504\ub85c\uc2dc\uc800 \uc774\ub984\uc744 \ubc1b\ub294 \ud30c\ub77c\ubbf8\ud130\uc640 \uc804\ub2ec\ud560 \ud504\ub85c\uc2dc\uc800 \ud30c\ub77c\ubbf8\ud130, \uadf8\ub9ac\uace0 insert, update, delete \uc758 \uacbd\uc6b0 commit \uc744 \ud574\uc57c\ud558\uae30 \ub54c\ubb38\uc5d0 commit \uc5ec\ubd80\ub97c \uc704\ud55c \ud30c\ub77c\ubbf8\ud130, \uadf8\ub9ac\uace0 \uc5ec\ub7ec \uacb0\uacfc\ub97c \ubc18\ud658\ud558\ub294 \uc5ec\ubd80\uc5d0 \ub300\ud55c \ud30c\ub77c\ubbf8\ud130\ub97c \ucd94\uac00\ud55c \ud638",
+        "inLanguage": "ko",
+        "keywords": "dev, Python, generator, \uc81c\ub108\ub808\uc774\ud130, stored-procedure",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2017-09-04",
         "dateModified": "2017-09-04",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -218,8 +233,8 @@ generator.close()
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -58,17 +59,31 @@
     <meta name="twitter:description" content="페이징 기능은 사실 게시판에 있어서 필수적인 기능인데 구현하는데 있어서 겁을 먹게 되는것 같다. (나같은 초보 웹쟁이는 더 그렇지) django 에서 페이징 기능을 쉽게 추가할수 있는것이 있을까 싶어서 [djangopackages](https://www.djangopackages.com/) 에서 찾아 봤는데 pagination 이라는 단어로 검색했을때 search weight 가 78%인 [django-endless-pagination](http://django-endless-pagination.readthedocs.org/) 를">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "django-endless-pagination \uc744 \uc774\uc6a9\ud55c \ud398\uc774\uc9d5\uad6c\ud604",
         "description": "\ud398\uc774\uc9d5 \uae30\ub2a5\uc740 \uc0ac\uc2e4 \uac8c\uc2dc\ud310\uc5d0 \uc788\uc5b4\uc11c \ud544\uc218\uc801\uc778 \uae30\ub2a5\uc778\ub370 \uad6c\ud604\ud558\ub294\ub370 \uc788\uc5b4\uc11c \uac81\uc744 \uba39\uac8c \ub418\ub294\uac83 \uac19\ub2e4. (\ub098\uac19\uc740 \ucd08\ubcf4 \uc6f9\uc7c1\uc774\ub294 \ub354 \uadf8\ub807\uc9c0) django \uc5d0\uc11c \ud398\uc774\uc9d5 \uae30\ub2a5\uc744 \uc27d\uac8c \ucd94\uac00\ud560\uc218 \uc788\ub294\uac83\uc774 \uc788\uc744\uae4c \uc2f6\uc5b4\uc11c [djangopackages](https://www.djangopackages.com/) \uc5d0\uc11c \ucc3e\uc544 \ubd24\ub294\ub370 pagination \uc774\ub77c\ub294 \ub2e8\uc5b4\ub85c \uac80\uc0c9\ud588\uc744\ub54c search weight \uac00 78%\uc778 [django-endless-pagination](http://django-endless-pagination.readthedocs.org/) \ub97c",
+        "inLanguage": "ko",
+        "keywords": "dev, Django, django pagination, django-endless-pagination, \uc7a5\uace0 \ud398\uc774\uc9d5, Python",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2014-01-22",
         "dateModified": "2014-01-22",
@@ -78,12 +93,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -172,8 +187,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

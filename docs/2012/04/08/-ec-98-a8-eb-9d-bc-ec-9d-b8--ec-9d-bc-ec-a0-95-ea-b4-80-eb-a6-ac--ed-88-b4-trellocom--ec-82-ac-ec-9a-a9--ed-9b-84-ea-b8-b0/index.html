@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -50,17 +51,31 @@
     <meta name="twitter:description" content="이전 부터 알고 있는 서비스이긴 했지만, 같이 자바 스터디를 는 분 중에 상급 개발자분께서 추천해준 툴인 trello.com. 일단 구글 계정을 기반으로 로그인을 할수 있다는게 편하고, 만약 회사에서 사용한다면 따로 이메일을 넣어서 가입을 하던지 해서 사용해야 겠지만.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "\uc628\ub77c\uc778 \uc77c\uc815\uad00\ub9ac \ud234, trello.com \uc0ac\uc6a9 \ud6c4\uae30",
         "description": "\uc774\uc804 \ubd80\ud130 \uc54c\uace0 \uc788\ub294 \uc11c\ube44\uc2a4\uc774\uae34 \ud588\uc9c0\ub9cc, \uac19\uc774 \uc790\ubc14 \uc2a4\ud130\ub514\ub97c \ub294 \ubd84 \uc911\uc5d0 \uc0c1\uae09 \uac1c\ubc1c\uc790\ubd84\uaed8\uc11c \ucd94\ucc9c\ud574\uc900 \ud234\uc778 trello.com. \uc77c\ub2e8 \uad6c\uae00 \uacc4\uc815\uc744 \uae30\ubc18\uc73c\ub85c \ub85c\uadf8\uc778\uc744 \ud560\uc218 \uc788\ub2e4\ub294\uac8c \ud3b8\ud558\uace0, \ub9cc\uc57d \ud68c\uc0ac\uc5d0\uc11c \uc0ac\uc6a9\ud55c\ub2e4\uba74 \ub530\ub85c \uc774\uba54\uc77c\uc744 \ub123\uc5b4\uc11c \uac00\uc785\uc744 \ud558\ub358\uc9c0 \ud574\uc11c \uc0ac\uc6a9\ud574\uc57c \uaca0\uc9c0\ub9cc.",
+        "inLanguage": "ko",
+        "keywords": "dev, tutorial",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-04-08",
         "dateModified": "2012-04-08",
@@ -70,12 +85,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -168,8 +183,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

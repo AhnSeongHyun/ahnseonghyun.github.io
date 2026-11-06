@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -54,17 +55,31 @@
     <meta name="twitter:description" content="앱을 만들다 보면 주로 Naver, Daum Open API와 연동하는 경우가 많은데, 데이터를 가져오더라도 상세 데이터를 보려면 UIWebView를 쓸수 밖에 없다. BasicUIWebViewController 는 ViewController 에 웹 컨텐츠를 보여줄 수 있는 UIWebView 를 붙이고 해당 웹 컨텐츠가 로딩 될때의 진행상황을 표시해주기 위해서 UIProgressBar 를 붙였다. 또한 해당 웹 페이지의 타이틀(document.title)을 가져와서 제일 상단">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(\uc624\ud508\uc18c\uc2a4) BasicUIWebViewController",
         "description": "\uc571\uc744 \ub9cc\ub4e4\ub2e4 \ubcf4\uba74 \uc8fc\ub85c Naver, Daum\u00a0Open API\uc640 \uc5f0\ub3d9\ud558\ub294 \uacbd\uc6b0\uac00 \ub9ce\uc740\ub370, \ub370\uc774\ud130\ub97c \uac00\uc838\uc624\ub354\ub77c\ub3c4 \uc0c1\uc138 \ub370\uc774\ud130\ub97c \ubcf4\ub824\uba74 UIWebView\ub97c \uc4f8\uc218 \ubc16\uc5d0 \uc5c6\ub2e4. BasicUIWebViewController \ub294 ViewController \uc5d0 \uc6f9 \ucee8\ud150\uce20\ub97c \ubcf4\uc5ec\uc904 \uc218 \uc788\ub294 UIWebView \ub97c \ubd99\uc774\uace0 \ud574\ub2f9 \uc6f9 \ucee8\ud150\uce20\uac00 \ub85c\ub529 \ub420\ub54c\uc758 \uc9c4\ud589\uc0c1\ud669\uc744 \ud45c\uc2dc\ud574\uc8fc\uae30 \uc704\ud574\uc11c UIProgressBar \ub97c \ubd99\uc600\ub2e4. \ub610\ud55c \ud574\ub2f9 \uc6f9 \ud398\uc774\uc9c0\uc758 \ud0c0\uc774\ud2c0(document.title)\uc744 \uac00\uc838\uc640\uc11c \uc81c\uc77c \uc0c1\ub2e8",
+        "inLanguage": "ko",
+        "keywords": "BasicUIWebViewController, open-source, WebViewController, \uc624\ud508\uc18c\uc2a4",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-02-13",
         "dateModified": "2013-02-13",
@@ -74,12 +89,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -157,8 +172,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -50,7 +51,7 @@
 
 
 
-    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/2182898?v=3&s=200">
+    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/2182898?v=3&amp;s=200">
 
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -64,21 +65,35 @@
     <meta name="twitter:description" content="API에서 파라미터의 유효성 검사는 필수적인 요소이긴 하지만, 개발자로서 여간 귀찮은 일이 아닐 수 없다. API의 양이 많을수록 할 일은 많아진다. 세세하게 체크할 부분은 해야하지만 기본적으로 파라미터 유무, 파라미터의 데이터 형을 체크하는 부분이 필요했다. API는 기본적으로 JSON 을 `POST`로 받는 식으로 구성되어 있어서 JSON을 검증하는 부분이 필요했다.">
 
 
-    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/2182898?v=3&s=200">
+    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/2182898?v=3&amp;s=200">
 
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(flask) jsonschema \ub97c \uc774\uc6a9\ud574\uc11c request.json \uac80\uc0ac\ud558\uae30",
         "description": "API\uc5d0\uc11c \ud30c\ub77c\ubbf8\ud130\uc758 \uc720\ud6a8\uc131 \uac80\uc0ac\ub294 \ud544\uc218\uc801\uc778 \uc694\uc18c\uc774\uae34 \ud558\uc9c0\ub9cc, \uac1c\ubc1c\uc790\ub85c\uc11c \uc5ec\uac04 \uadc0\ucc2e\uc740 \uc77c\uc774 \uc544\ub2d0 \uc218 \uc5c6\ub2e4. API\uc758 \uc591\uc774 \ub9ce\uc744\uc218\ub85d \ud560 \uc77c\uc740 \ub9ce\uc544\uc9c4\ub2e4. \uc138\uc138\ud558\uac8c \uccb4\ud06c\ud560 \ubd80\ubd84\uc740 \ud574\uc57c\ud558\uc9c0\ub9cc \uae30\ubcf8\uc801\uc73c\ub85c \ud30c\ub77c\ubbf8\ud130 \uc720\ubb34, \ud30c\ub77c\ubbf8\ud130\uc758 \ub370\uc774\ud130 \ud615\uc744 \uccb4\ud06c\ud558\ub294 \ubd80\ubd84\uc774 \ud544\uc694\ud588\ub2e4. API\ub294 \uae30\ubcf8\uc801\uc73c\ub85c JSON \uc744 `POST`\ub85c \ubc1b\ub294 \uc2dd\uc73c\ub85c \uad6c\uc131\ub418\uc5b4 \uc788\uc5b4\uc11c JSON\uc744 \uac80\uc99d\ud558\ub294 \ubd80\ubd84\uc774 \ud544\uc694\ud588\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev, Flask, Python, JSON, jsonschema, Decorator",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2016-11-18",
         "dateModified": "2016-11-18",
@@ -88,16 +103,16 @@
         },
 
 
-        "image": "https://avatars0.githubusercontent.com/u/2182898?v=3&s=200",
+        "image": "https://avatars0.githubusercontent.com/u/2182898?v=3&amp;s=200",
 
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -299,8 +314,8 @@ def json_schema(schema_name):
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

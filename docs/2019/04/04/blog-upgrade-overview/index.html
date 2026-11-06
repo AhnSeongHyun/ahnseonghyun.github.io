@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -54,17 +55,31 @@
     <meta name="twitter:description" content="블로그에 대한 집착을 버릴려고 현재 운영 중인 블로그를 Flask 를 이용해서 개발을 했고 운영을 해오고 있다. 그렇지만 고도화를 하고 싶다는 생각을 떨쳐 버릴 수가 없었다. 개인적으로 불편한 부분도 있었고, 개인 프로젝트를 마땅히 찾지 못하다가 계속 마음에만 두는 블로그 고도화를 개인 프로젝트로 올해 한번 해보면 어떨까 하는 생각을 가지게 되었다. 원하는 기술 스택으로 다시 변경을 하고 그 과정들을 이 블로그에 쓰면 1석 2조가 되지 않을까? 하는 생각이 들었다.(사실 블로그 재료가 떨어진 것도 솔직한 마음)">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "\ube14\ub85c\uadf8 \uace0\ub3c4\ud654 Overview",
         "description": "\ube14\ub85c\uadf8\uc5d0 \ub300\ud55c \uc9d1\ucc29\uc744 \ubc84\ub9b4\ub824\uace0 \ud604\uc7ac \uc6b4\uc601 \uc911\uc778 \ube14\ub85c\uadf8\ub97c Flask \ub97c \uc774\uc6a9\ud574\uc11c \uac1c\ubc1c\uc744 \ud588\uace0 \uc6b4\uc601\uc744 \ud574\uc624\uace0 \uc788\ub2e4. \uadf8\ub807\uc9c0\ub9cc \uace0\ub3c4\ud654\ub97c \ud558\uace0 \uc2f6\ub2e4\ub294 \uc0dd\uac01\uc744 \ub5a8\uccd0 \ubc84\ub9b4 \uc218\uac00 \uc5c6\uc5c8\ub2e4. \uac1c\uc778\uc801\uc73c\ub85c \ubd88\ud3b8\ud55c \ubd80\ubd84\ub3c4 \uc788\uc5c8\uace0, \uac1c\uc778 \ud504\ub85c\uc81d\ud2b8\ub97c \ub9c8\ub545\ud788 \ucc3e\uc9c0 \ubabb\ud558\ub2e4\uac00 \uacc4\uc18d \ub9c8\uc74c\uc5d0\ub9cc \ub450\ub294 \ube14\ub85c\uadf8 \uace0\ub3c4\ud654\ub97c \uac1c\uc778 \ud504\ub85c\uc81d\ud2b8\ub85c \uc62c\ud574 \ud55c\ubc88 \ud574\ubcf4\uba74 \uc5b4\ub5a8\uae4c \ud558\ub294 \uc0dd\uac01\uc744 \uac00\uc9c0\uac8c \ub418\uc5c8\ub2e4. \uc6d0\ud558\ub294 \uae30\uc220 \uc2a4\ud0dd\uc73c\ub85c \ub2e4\uc2dc \ubcc0\uacbd\uc744 \ud558\uace0 \uadf8 \uacfc\uc815\ub4e4\uc744 \uc774 \ube14\ub85c\uadf8\uc5d0 \uc4f0\uba74 1\uc11d 2\uc870\uac00 \ub418\uc9c0 \uc54a\uc744\uae4c? \ud558\ub294 \uc0dd\uac01\uc774 \ub4e4\uc5c8\ub2e4.(\uc0ac\uc2e4 \ube14\ub85c\uadf8 \uc7ac\ub8cc\uac00 \ub5a8\uc5b4\uc9c4 \uac83\ub3c4 \uc194\uc9c1\ud55c \ub9c8\uc74c)",
+        "inLanguage": "ko",
+        "keywords": "blog, blog-upgrade, JavaScript, Python",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2019-04-04",
         "dateModified": "2019-04-04",
@@ -74,12 +89,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -179,8 +194,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

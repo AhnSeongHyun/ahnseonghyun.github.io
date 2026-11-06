@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="안티패턴임에도 불구하고, 자주 쓰게 되는 패턴중 하나가 싱글턴 패턴인데, 멀티스레드에 취약하다는 문제점을 가지고 있으면서도 선택된 데이터나 현재 데이터만을 표현할때 좋은것 같다. 이전 포스팅에서도 [H](http://ash84.tistory.com/762) [ashtable 을 이용한 로컬 캐쉬 소스](http://ash84.tistory.com/762)에서도 싱글턴을 썼는데 이번에 이펙티브 자바를 읽으면서 싱글톤에 대한 이야기가 나와서 정리하고자 한다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[JAVA] \uc790\ubc14\uc5d0\uc11c \uc2f1\uae00\ud134 \ud328\ud134\uc744 \uad6c\ud604\ud558\ub294 \uc138 \uac00\uc9c0 \ubc29\uc2dd\ub4e4.",
         "description": "\uc548\ud2f0\ud328\ud134\uc784\uc5d0\ub3c4 \ubd88\uad6c\ud558\uace0, \uc790\uc8fc \uc4f0\uac8c \ub418\ub294 \ud328\ud134\uc911 \ud558\ub098\uac00 \uc2f1\uae00\ud134 \ud328\ud134\uc778\ub370, \uba40\ud2f0\uc2a4\ub808\ub4dc\uc5d0 \ucde8\uc57d\ud558\ub2e4\ub294 \ubb38\uc81c\uc810\uc744 \uac00\uc9c0\uace0 \uc788\uc73c\uba74\uc11c\ub3c4 \uc120\ud0dd\ub41c \ub370\uc774\ud130\ub098 \ud604\uc7ac \ub370\uc774\ud130\ub9cc\uc744 \ud45c\ud604\ud560\ub54c \uc88b\uc740\uac83 \uac19\ub2e4. \uc774\uc804 \ud3ec\uc2a4\ud305\uc5d0\uc11c\ub3c4 [H](http://ash84.tistory.com/762) [ashtable \uc744 \uc774\uc6a9\ud55c \ub85c\uceec \uce90\uc26c \uc18c\uc2a4](http://ash84.tistory.com/762)\uc5d0\uc11c\ub3c4 \uc2f1\uae00\ud134\uc744 \uc37c\ub294\ub370 \uc774\ubc88\uc5d0 \uc774\ud399\ud2f0\ube0c \uc790\ubc14\ub97c \uc77d\uc73c\uba74\uc11c \uc2f1\uae00\ud1a4\uc5d0 \ub300\ud55c \uc774\uc57c\uae30\uac00 \ub098\uc640\uc11c \uc815\ub9ac\ud558\uace0\uc790 \ud55c\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev, Java, Single ton, design-pattern, \uc2f1\uae00\ud1a4\ud328\ud134",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-10-22",
         "dateModified": "2012-10-22",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -168,8 +183,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

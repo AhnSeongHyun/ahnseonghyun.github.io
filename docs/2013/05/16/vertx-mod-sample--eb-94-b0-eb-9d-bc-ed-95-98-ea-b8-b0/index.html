@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="아직까지 vert.x에 대한 자료가 많지는 않은데, 설치 이후에 실제 서버를 돌려보기 위해서는 mod 라는 것을 만들어야 하는데 gradle로 되어 있어서 개발 환경 꾸미기도 쉽지 않은것 같다. 그래도 [h](http://helloworld.naver.com) [elloworld.naver.com](http://helloworld.naver.com)에서 vert.x 에 대해서 보고 (최근에 다른 글이 하나 더 올라왔다.) 글 쓰신 분이 운영하시는 블로그에서 [mod-sampl">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(vert.x) mod-sample \ub530\ub77c\ud558\uae30",
         "description": "\uc544\uc9c1\uae4c\uc9c0 vert.x\uc5d0 \ub300\ud55c \uc790\ub8cc\uac00 \ub9ce\uc9c0\ub294 \uc54a\uc740\ub370, \uc124\uce58 \uc774\ud6c4\uc5d0 \uc2e4\uc81c \uc11c\ubc84\ub97c \ub3cc\ub824\ubcf4\uae30 \uc704\ud574\uc11c\ub294 mod \ub77c\ub294 \uac83\uc744 \ub9cc\ub4e4\uc5b4\uc57c \ud558\ub294\ub370 gradle\ub85c \ub418\uc5b4 \uc788\uc5b4\uc11c \uac1c\ubc1c \ud658\uacbd \uafb8\ubbf8\uae30\ub3c4 \uc27d\uc9c0 \uc54a\uc740\uac83 \uac19\ub2e4. \uadf8\ub798\ub3c4 [h](http://helloworld.naver.com) [elloworld.naver.com](http://helloworld.naver.com)\uc5d0\uc11c vert.x \uc5d0 \ub300\ud574\uc11c \ubcf4\uace0 (\ucd5c\uadfc\uc5d0 \ub2e4\ub978 \uae00\uc774 \ud558\ub098 \ub354 \uc62c\ub77c\uc654\ub2e4.) \uae00 \uc4f0\uc2e0 \ubd84\uc774 \uc6b4\uc601\ud558\uc2dc\ub294 \ube14\ub85c\uadf8\uc5d0\uc11c [mod-sampl",
+        "inLanguage": "ko",
+        "keywords": "Java, mod-sample, tutorial, vert.x, \ubaa8\ub4c8 \ub9cc\ub4e4\uae30",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-05-16",
         "dateModified": "2013-05-16",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -175,8 +190,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

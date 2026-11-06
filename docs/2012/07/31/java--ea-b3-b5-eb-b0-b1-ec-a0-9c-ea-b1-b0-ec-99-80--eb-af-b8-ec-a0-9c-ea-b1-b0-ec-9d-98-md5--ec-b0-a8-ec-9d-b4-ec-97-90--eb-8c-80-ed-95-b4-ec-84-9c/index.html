@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -48,17 +49,31 @@
     <meta name="twitter:description" content="기술적인 것은 아니기 때문에 너무 큰 기대를 하진 마시길 바라며 쓴다. 일단 md5 키를 추출하는 방법은 이전 포스팅에서도 언급했었다. (링크) 최근에 md5에 대한 또 다른 생각이 있어서 이글을 쓰게 된다. 이전에는 캐쉬를 하기위한 키 값 데이터 추출에 사용했었는데, 최근에 어떤 내용의 중복여부를 체크 하기 위한 도구로 사용하기도 했었다. 그런데 그 과정에서 문자열 데이터의 공백 여부에 대해서 전처리가 필요하다는 것을 알게 되었다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[JAVA] \uacf5\ubc31\uc81c\uac70\uc640 \ubbf8\uc81c\uac70\uc758 md5 \ucc28\uc774\uc5d0 \ub300\ud574\uc11c.",
         "description": "\uae30\uc220\uc801\uc778 \uac83\uc740 \uc544\ub2c8\uae30\u00a0\ub54c\ubb38\uc5d0 \ub108\ubb34 \ud070 \uae30\ub300\ub97c \ud558\uc9c4 \ub9c8\uc2dc\uae38 \ubc14\ub77c\uba70 \uc4f4\ub2e4. \uc77c\ub2e8 md5 \ud0a4\ub97c \ucd94\ucd9c\ud558\ub294 \ubc29\ubc95\uc740 \uc774\uc804 \ud3ec\uc2a4\ud305\uc5d0\uc11c\ub3c4 \uc5b8\uae09\ud588\uc5c8\ub2e4. (\ub9c1\ud06c) \ucd5c\uadfc\uc5d0 md5\uc5d0 \ub300\ud55c \ub610 \ub2e4\ub978 \uc0dd\uac01\uc774 \uc788\uc5b4\uc11c \uc774\uae00\uc744 \uc4f0\uac8c \ub41c\ub2e4. \uc774\uc804\uc5d0\ub294 \uce90\uc26c\ub97c \ud558\uae30\uc704\ud55c \ud0a4 \uac12 \ub370\uc774\ud130 \ucd94\ucd9c\uc5d0 \uc0ac\uc6a9\ud588\uc5c8\ub294\ub370, \ucd5c\uadfc\uc5d0 \uc5b4\ub5a4 \ub0b4\uc6a9\uc758 \uc911\ubcf5\uc5ec\ubd80\ub97c \uccb4\ud06c \ud558\uae30 \uc704\ud55c \ub3c4\uad6c\ub85c \uc0ac\uc6a9\ud558\uae30\ub3c4 \ud588\uc5c8\ub2e4. \uadf8\ub7f0\ub370 \uadf8 \uacfc\uc815\uc5d0\uc11c \ubb38\uc790\uc5f4 \ub370\uc774\ud130\uc758 \uacf5\ubc31 \uc5ec\ubd80\uc5d0 \ub300\ud574\uc11c \uc804\ucc98\ub9ac\uac00 \ud544\uc694\ud558\ub2e4\ub294 \uac83\uc744 \uc54c\uac8c \ub418\uc5c8\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-07-31",
         "dateModified": "2012-07-31",
@@ -68,12 +83,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -160,8 +175,8 @@ UML다이어그램
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

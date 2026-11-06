@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -52,17 +53,31 @@
     <meta name="twitter:description" content="wordcount 말 그래도 단어수를 세는 것으로 하둡의 기본적인 예제이다. 하둡의 hello world 라고 해도 좋을것 같다. 기본적으로 예제가 담긴 jar파일을 가지고 있어서 굳이 찾을 필요는 없고, 분석 대상 텍스트 파일을 input이라는 디렉토리에 넣어두자.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(Hadoop) standalone \ubaa8\ub4dc\uc5d0\uc11c wordcount \uc2e4\ud589\ud558\uae30.",
         "description": "wordcount \ub9d0 \uadf8\ub798\ub3c4 \ub2e8\uc5b4\uc218\ub97c \uc138\ub294 \uac83\uc73c\ub85c \ud558\ub461\uc758 \uae30\ubcf8\uc801\uc778 \uc608\uc81c\uc774\ub2e4. \ud558\ub461\uc758 hello world \ub77c\uace0 \ud574\ub3c4 \uc88b\uc744\uac83 \uac19\ub2e4. \uae30\ubcf8\uc801\uc73c\ub85c \uc608\uc81c\uac00 \ub2f4\uae34 jar\ud30c\uc77c\uc744 \uac00\uc9c0\uace0 \uc788\uc5b4\uc11c \uad73\uc774 \ucc3e\uc744 \ud544\uc694\ub294 \uc5c6\uace0, \ubd84\uc11d \ub300\uc0c1 \ud14d\uc2a4\ud2b8 \ud30c\uc77c\uc744 input\uc774\ub77c\ub294 \ub514\ub809\ud1a0\ub9ac\uc5d0 \ub123\uc5b4\ub450\uc790.",
+        "inLanguage": "ko",
+        "keywords": "Hadoop, wordcount, wordcount \uc608\uc81c",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-08-03",
         "dateModified": "2013-08-03",
@@ -72,12 +87,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -183,8 +198,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

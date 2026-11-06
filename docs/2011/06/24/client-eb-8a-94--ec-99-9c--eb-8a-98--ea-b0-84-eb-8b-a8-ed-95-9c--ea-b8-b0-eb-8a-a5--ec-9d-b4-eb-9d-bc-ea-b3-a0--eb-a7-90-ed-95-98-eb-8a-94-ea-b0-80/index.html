@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="자체 제작하는 프로그램 혹은 내부 하드웨어 제품을 개발하기 위한 프로그램이 아닌 이상에는 대부분 프로그램 개발에는 클라이언트라는 사람들이 존재한다. 속된말로 “갑” 혹은 물주, 발주처, 돈을 주는 사람 이런 사람들로 불리우는 사람들 말이다. 프로그램 외주 일을 몇번 하면서 몇명의 클라이언트들을 만나 보았다. 사장님도 있었고, 발명가도 있었고, 교수님도 있었는데, 그들의 공통점은 첫 마디가">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "Client\ub294 \uc65c \ub298 \"\uac04\ub2e8\ud55c \uae30\ub2a5\" \uc774\ub77c\uace0 \ub9d0\ud558\ub294\uac00?",
         "description": "\uc790\uccb4 \uc81c\uc791\ud558\ub294 \ud504\ub85c\uadf8\ub7a8 \ud639\uc740 \ub0b4\ubd80 \ud558\ub4dc\uc6e8\uc5b4 \uc81c\ud488\uc744 \uac1c\ubc1c\ud558\uae30 \uc704\ud55c \ud504\ub85c\uadf8\ub7a8\uc774 \uc544\ub2cc \uc774\uc0c1\uc5d0\ub294 \ub300\ubd80\ubd84 \ud504\ub85c\uadf8\ub7a8 \uac1c\ubc1c\uc5d0\ub294 \ud074\ub77c\uc774\uc5b8\ud2b8\ub77c\ub294 \uc0ac\ub78c\ub4e4\uc774 \uc874\uc7ac\ud55c\ub2e4. \uc18d\ub41c\ub9d0\ub85c \u201c\uac11\u201d \ud639\uc740 \ubb3c\uc8fc, \ubc1c\uc8fc\ucc98, \ub3c8\uc744 \uc8fc\ub294 \uc0ac\ub78c \uc774\ub7f0 \uc0ac\ub78c\ub4e4\ub85c \ubd88\ub9ac\uc6b0\ub294 \uc0ac\ub78c\ub4e4 \ub9d0\uc774\ub2e4. \ud504\ub85c\uadf8\ub7a8 \uc678\uc8fc \uc77c\uc744 \uba87\ubc88 \ud558\uba74\uc11c \uba87\uba85\uc758 \ud074\ub77c\uc774\uc5b8\ud2b8\ub4e4\uc744 \ub9cc\ub098 \ubcf4\uc558\ub2e4. \uc0ac\uc7a5\ub2d8\ub3c4 \uc788\uc5c8\uace0, \ubc1c\uba85\uac00\ub3c4 \uc788\uc5c8\uace0, \uad50\uc218\ub2d8\ub3c4 \uc788\uc5c8\ub294\ub370, \uadf8\ub4e4\uc758 \uacf5\ud1b5\uc810\uc740 \uccab \ub9c8\ub514\uac00",
+        "inLanguage": "ko",
+        "keywords": "\uac04\ub2e8\ud55c \uae30\ub2a5, \uc18c\ud504\ud2b8\uc6e8\uc5b4 \uacf5\ud559, \uc694\uad6c\uc0ac\ud56d, programmer, essay",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2011-06-24",
         "dateModified": "2011-06-24",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -166,8 +181,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

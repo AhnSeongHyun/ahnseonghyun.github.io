@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4. Universal Analytics(UA-71946262-1) stopped collecting in 2023-07. Replace G-XXXXXXXXXX with the GA4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=44310fd43">
 
 
 
@@ -60,17 +61,31 @@
     <meta name="twitter:description" content="국내 유명 업체의 문서추출기가 있겠지만, 굳이 hwp를 사용하지 않는다면 이용할 필요가 없다. 문서추출기(Document Extractor)에 대한 오픈소스가 많이 있지만 여기서 소개할 것은 Apache POI를 이용해서 좀더 쓰기 쉽게 만든 자바(java) 기반의 문서추출기인 [Document](https://github.com/AhnSeongHyun/DocumentExtractor)">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "DocumentExtractor \uc758 \uae30\ubcf8 \uad6c\uc870",
         "description": "\uad6d\ub0b4 \uc720\uba85 \uc5c5\uccb4\uc758 \ubb38\uc11c\ucd94\ucd9c\uae30\uac00 \uc788\uaca0\uc9c0\ub9cc, \uad73\uc774 hwp\ub97c \uc0ac\uc6a9\ud558\uc9c0 \uc54a\ub294\ub2e4\uba74 \uc774\uc6a9\ud560 \ud544\uc694\uac00 \uc5c6\ub2e4. \ubb38\uc11c\ucd94\ucd9c\uae30(Document Extractor)\uc5d0 \ub300\ud55c \uc624\ud508\uc18c\uc2a4\uac00 \ub9ce\uc774 \uc788\uc9c0\ub9cc \uc5ec\uae30\uc11c \uc18c\uac1c\ud560 \uac83\uc740 Apache POI\ub97c \uc774\uc6a9\ud574\uc11c \uc880\ub354 \uc4f0\uae30 \uc27d\uac8c \ub9cc\ub4e0 \uc790\ubc14(java) \uae30\ubc18\uc758 \ubb38\uc11c\ucd94\ucd9c\uae30\uc778\u00a0[Document](https://github.com/AhnSeongHyun/DocumentExtractor)",
+        "inLanguage": "ko",
+        "keywords": "Apache.poi, DocumentExtractor, GitHub, open-source, \ubb38\uc11c \ucd94\ucd9c\uae30, \uc624\ud508\uc18c\uc2a4, \uc6cc\ub4dc\uc5d0\uc11c \ubb38\uc11c \ub0b4\uc6a9 \ucd94\ucd9c",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-09-05",
         "dateModified": "2012-09-05",
@@ -80,12 +95,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=44310fd43">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -182,8 +197,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=44310fd43" defer></script>
+    <script src="/assets/js/search.js?v=44310fd43" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
