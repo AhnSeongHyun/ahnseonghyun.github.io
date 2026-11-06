@@ -3,18 +3,21 @@
 PORT ?= 8000
 PYTHON_TARGETS ?= scripts tests
 
-.PHONY: help build tags git-meta post-index search clean run new format lint test
+.PHONY: help build tags git-meta post-index sitemap rss llms search clean run new format lint test
 
 help: ## 사용 가능한 타겟
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-10s %s\n", $$1, $$2}'
 
-build: ## 전체 빌드: zvc + tags + git meta + post index + sitemap + robots + CNAME + ads.txt + pagefind
+build: ## 전체 빌드: modified + zvc + tags + git meta + post index + sitemap + rss + llms + robots + CNAME + ads.txt + pagefind
 	@mkdir -p build && printf '%s' "$$(git rev-parse --short HEAD 2>/dev/null || date +%s)" > build/asset-version.html
+	uv run python scripts/generate_modified.py
 	uv run zvc build
 	uv run python scripts/generate_tags.py
 	uv run python scripts/generate_git_meta.py
 	uv run python scripts/generate_post_index.py
 	uv run python scripts/generate_sitemap.py
+	uv run python scripts/generate_rss.py
+	uv run python scripts/generate_llms.py
 	uv run python scripts/generate_robots.py
 	echo "ash84.io" > ./docs/CNAME
 	echo "google.com, pub-8699046198561974, DIRECT, f08c47fec0942fa0" > ./docs/ads.txt
@@ -28,6 +31,15 @@ git-meta: ## docs/meta/git.json 생성
 
 post-index: ## docs/meta/posts.json 생성 (prev/next)
 	uv run python scripts/generate_post_index.py
+
+sitemap: ## docs/sitemap.xml 생성 (git 수정일 기반 lastmod)
+	uv run python scripts/generate_sitemap.py
+
+rss: ## docs/rss.xml 생성 (최신 30편 전문)
+	uv run python scripts/generate_rss.py
+
+llms: ## docs/llms.txt 생성
+	uv run python scripts/generate_llms.py
 
 search: ## pagefind 검색 인덱스만 생성
 	npx -y pagefind --site docs

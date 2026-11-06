@@ -18,6 +18,39 @@
     <meta name="twitter:title" content="ASH84 - Engineering, Leadership, Life">
     <meta name="twitter:description" content="{{ settings.blog_desc }}">
     <meta name="google-site-verification" content="i4L_oOQ7MwcZ9qx23WLpI0MqOuGOzm5mG5cP20fRrUQ">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://ash84.io/#website",
+                "url": "https://ash84.io/",
+                "name": "ASH84",
+                "description": {{ settings.blog_desc | tojson }},
+                "inLanguage": "ko",
+                "publisher": {"@id": "https://ash84.io/#person"}
+            },
+            {
+                "@type": "Person",
+                "@id": "https://ash84.io/#person",
+                "name": "안성현 (ash84)",
+                "alternateName": "ash84",
+                "url": "https://ash84.io/",
+                "jobTitle": "Head of Technology",
+                "worksFor": {"@type": "Organization", "name": "Payhere"},
+                "knowsAbout": ["Software Engineering", "Engineering Management", "Python", "Go", "iOS", "Fintech", "AI"],
+                "sameAs": [
+                    "https://github.com/AhnSeongHyun/",
+                    "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                    "https://x.com/sh84ahn",
+                    "https://www.instagram.com/ash84/",
+                    "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+                ]
+            }
+        ]
+    }
+    </script>
     <link rel="stylesheet" href="/assets/css/style.css?v={% include 'build/asset-version.html' %}">
 </head>
 <body>

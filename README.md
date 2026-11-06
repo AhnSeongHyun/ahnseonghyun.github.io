@@ -15,7 +15,7 @@
 
 ```bash
 make help        # 타겟 목록
-make build       # zvc + tags + git meta + post index + sitemap + robots + CNAME + ads.txt + pagefind
+make build       # modified + zvc + tags + git meta + post index + sitemap + rss + llms + robots + CNAME + ads.txt + pagefind
 make run         # 빌드 후 http://localhost:8000 (PORT=9000 make run)
 make clean       # docs/ 정리
 make new NAME=post-slug   # contents/post-slug/post-slug.md 생성
@@ -24,7 +24,7 @@ make lint        # ruff check
 make test        # pytest
 ```
 
-부분 빌드: `make tags`, `make git-meta`, `make post-index`, `make search`.
+부분 빌드: `make tags`, `make git-meta`, `make post-index`, `make sitemap`, `make rss`, `make llms`, `make search`.
 
 ## 글 작성
 
@@ -65,7 +65,10 @@ tags: ['dev', 'essay']         # 인라인 리스트만 인식 (YAML 블록 리�
 | `meta/git.json` | `generate_git_meta.py` | `{generated_at, total_commits, changelog[], posts{slug:[commits]}}` |
 | `meta/posts.json` | `generate_post_index.py` | `[[slug, title, link, pub_date], …]` 최신순 |
 | `pagefind/` | `npx pagefind --site docs` | 검색 인덱스 (약 6MB, 청크 지연 로드) |
-| `sitemap.xml`, `robots.txt`, `CNAME`, `ads.txt` | 스크립트·Makefile | SEO·Pages |
+| `sitemap.xml` | `generate_sitemap.py` | 글 전부 + 글 2편 이상 태그 페이지. `lastmod`는 git 수정일(없으면 pub_date) |
+| `rss.xml` | `generate_rss.py` | RSS 2.0, 최신 30편 전문 |
+| `llms.txt` | `generate_llms.py` | LLM용 사이트 요약·최근 글 목록 |
+| `robots.txt`, `CNAME`, `ads.txt` | 스크립트·Makefile | Pages |
 
 ## 트러블슈팅
 
