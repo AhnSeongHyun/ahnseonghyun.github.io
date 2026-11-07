@@ -107,7 +107,7 @@ Push to `main` branch triggers GitHub Pages deployment from `docs/` directory. D
 ### Current Status (2026-09-03)
 - **Total posts**: 970 published
 - **Implemented**: AdSense, meta/OG/Twitter tags, JSON-LD BlogPosting + Person/WebSite entity (`sameAs` to GitHub/LinkedIn/X/Instagram/Notion), git-based `dateModified` and sitemap `lastmod`, RSS (full text), llms.txt, noindex on single-post tag pages, responsive design, code highlighting, tag pages, light/dark theme, pagefind search, prev/next links, per-post git history
-- **Analytics**: `head-common.html` carries a GA4 snippet with the placeholder `G-XXXXXXXXXX`. The old UA-71946262-1 property stopped collecting in 2023-07. Replace the placeholder with the real measurement ID; until then nothing is measured
+- **Analytics**: GA4 `G-2L1F6GD28P` in `head-common.html` (replaced UA-71946262-1, which stopped collecting in 2023-07)
 - **Pending**: related posts, series feature
 
 ### Priority Tasks
