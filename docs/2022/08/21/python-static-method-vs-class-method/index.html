@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="사내에서 파이썬 코드를 짜다보면 static method와 class method를 혼용해서 사용하는 경우가 개인별로 있었는데 이 부분에 대해서 개인적으로 조사를 해서 전달할 기회가 있었다. 파이썬 책도 많이 봤고, 공식 레퍼런스도 봤지만 대부분 사용법에 대해서 애기가 대체로 있고, 언제 두개를 구분해서 사용해야하는 지에 대해서는 나와있지 않아서 몇개의 레퍼런스를 정리해봤다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "python static method vs. class method",
         "description": "\uc0ac\ub0b4\uc5d0\uc11c \ud30c\uc774\uc36c \ucf54\ub4dc\ub97c \uc9dc\ub2e4\ubcf4\uba74 static method\uc640 class method\ub97c \ud63c\uc6a9\ud574\uc11c \uc0ac\uc6a9\ud558\ub294 \uacbd\uc6b0\uac00 \uac1c\uc778\ubcc4\ub85c \uc788\uc5c8\ub294\ub370 \uc774 \ubd80\ubd84\uc5d0 \ub300\ud574\uc11c \uac1c\uc778\uc801\uc73c\ub85c \uc870\uc0ac\ub97c \ud574\uc11c \uc804\ub2ec\ud560 \uae30\ud68c\uac00 \uc788\uc5c8\ub2e4. \ud30c\uc774\uc36c \ucc45\ub3c4 \ub9ce\uc774 \ubd24\uace0, \uacf5\uc2dd \ub808\ud37c\ub7f0\uc2a4\ub3c4 \ubd24\uc9c0\ub9cc \ub300\ubd80\ubd84 \uc0ac\uc6a9\ubc95\uc5d0 \ub300\ud574\uc11c \uc560\uae30\uac00 \ub300\uccb4\ub85c \uc788\uace0, \uc5b8\uc81c \ub450\uac1c\ub97c \uad6c\ubd84\ud574\uc11c \uc0ac\uc6a9\ud574\uc57c\ud558\ub294 \uc9c0\uc5d0 \ub300\ud574\uc11c\ub294 \ub098\uc640\uc788\uc9c0 \uc54a\uc544\uc11c \uba87\uac1c\uc758 \ub808\ud37c\ub7f0\uc2a4\ub97c \uc815\ub9ac\ud574\ubd24\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "Python, dev, Class, static method, class method",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2022-08-21",
         "dateModified": "2022-08-21",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -189,8 +204,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

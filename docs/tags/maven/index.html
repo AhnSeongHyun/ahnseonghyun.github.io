@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
     <title>#maven - ASH84</title>
     <meta name="description" content="#maven 태그의 글 8편">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="/assets/css/style.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/style.css?v=be91a7b73">
 </head>
 <body>
 
@@ -64,14 +65,14 @@
                     <div><span class="t">maven Failed to load Main-Class manifest attribute from..에러발생시.</span><div class="d">java -jar lib.jar 이런식으로 jar를 직접실행하는 경우가 있다. 이런 경우 maven의 pom.xml에 main class를 지정해 주지 않으면 실행할 경우, 다음과 같은 에러가 발생 할 수 있다.</div></div>
                 </a>
 
-                <a class="row" href="/2012/12/28/maven-ec-97-90-ec-84-9c--eb-8b-a8-ec-9c-84-ed-85-8c-ec-8a-a4-ed-8a-b8-ea-b0-80--ec-95-88-eb-90-a0-eb-95-8c-junit4-eb-a5-bc--ec-b6-94-ea-b0-80-ed-95-98/">
-                    <time datetime="2012-12-28">2012-12-28</time>
-                    <div><span class="t">maven에서 단위테스트가 안될때, Junit4를 추가하자.</span><div class="d">maven 빌드 환경을 세팅하고 기존의 Junit 단위테스트 클래스를 maven 의 test (src/test/java)에 넣어서 빌드를 하니 빌드시(package), 이상하게 Junit 에서는 정상적으로 작동하는 maven 빌드에서만 이상하게 fail 이 발생하는 것을 볼수 있었다.</div></div>
-                </a>
-
                 <a class="row" href="/2012/12/28/maven-log4j-1216jar--ec-97-b0-eb-8f-99-ec-8b-9c-pomxml--ec-97-90-eb-9f-ac--ed-95-b4-ea-b2-b0/">
                     <time datetime="2012-12-28">2012-12-28</time>
                     <div><span class="t">maven log4j-1.2.16.jar 연동시 pom.xml 에러 해결.</span><div class="d">slf4j-log4j를 연계해서 쓰는데, [이전 포스팅](http://ash84.tistory.com/863)에서도 말했지만 slf4j와 lo44j의 버전을 제대로 맞추어야 별 탈없이 붙어서 돌아가게 되는데, 필자의 경우 아래의 버전 조합으로 현재 회사에서 사용하고 있다.</div></div>
+                </a>
+
+                <a class="row" href="/2012/12/28/maven-ec-97-90-ec-84-9c--eb-8b-a8-ec-9c-84-ed-85-8c-ec-8a-a4-ed-8a-b8-ea-b0-80--ec-95-88-eb-90-a0-eb-95-8c-junit4-eb-a5-bc--ec-b6-94-ea-b0-80-ed-95-98/">
+                    <time datetime="2012-12-28">2012-12-28</time>
+                    <div><span class="t">maven에서 단위테스트가 안될때, Junit4를 추가하자.</span><div class="d">maven 빌드 환경을 세팅하고 기존의 Junit 단위테스트 클래스를 maven 의 test (src/test/java)에 넣어서 빌드를 하니 빌드시(package), 이상하게 Junit 에서는 정상적으로 작동하는 maven 빌드에서만 이상하게 fail 이 발생하는 것을 볼수 있었다.</div></div>
                 </a>
 
                 <a class="row" href="/2012/12/28/maven-utf-8--ec-9d-b8-ec-bd-94-eb-94-a9--ec-86-8c-ec-8a-a4-ec-9d-bc-ea-b2-bd-ec-9a-b0--ea-b2-bd-ea-b3-a0--eb-ac-b8-ea-b5-ac--ed-95-b4-ea-b2-b0-eb-b2-9/">
@@ -108,7 +109,7 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 </body>
 </html>

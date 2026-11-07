@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -54,17 +55,31 @@
     <meta name="twitter:description" content="유니코드를 가져와야 하는 경우가 있다. 어떤 경우에는 문자 대신에 유니코드 자체값을 사전 같은 곳에 넣어 주는 곳이 있다. 사실은 그리 선호 하지 않는 경우인데 이유인즉, 해당 문자를 별도로 눈으로 확인해야 할 필요성이 있는경우, 불편하다. 대부분 이런 경우, unicodinator 를 이용한다. 자바에서 어떤 문자에 대한 유니코드 값을 가져오는 코드는 다음과 같다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[JAVA] getUnicodeFromString, \ubb38\uc790\uc5d0\uc11c \uc720\ub2c8\ucf54\ub4dc \uac12 \uac00\uc838\uc624\uae30",
         "description": "\uc720\ub2c8\ucf54\ub4dc\ub97c \uac00\uc838\uc640\uc57c \ud558\ub294 \uacbd\uc6b0\uac00 \uc788\ub2e4. \uc5b4\ub5a4 \uacbd\uc6b0\uc5d0\ub294 \ubb38\uc790 \ub300\uc2e0\uc5d0 \uc720\ub2c8\ucf54\ub4dc \uc790\uccb4\uac12\uc744 \uc0ac\uc804 \uac19\uc740 \uacf3\uc5d0 \ub123\uc5b4 \uc8fc\ub294 \uacf3\uc774 \uc788\ub2e4. \uc0ac\uc2e4\uc740 \uadf8\ub9ac \uc120\ud638 \ud558\uc9c0 \uc54a\ub294 \uacbd\uc6b0\uc778\ub370 \uc774\uc720\uc778\uc989, \ud574\ub2f9 \ubb38\uc790\ub97c \ubcc4\ub3c4\ub85c \ub208\uc73c\ub85c \ud655\uc778\ud574\uc57c \ud560 \ud544\uc694\uc131\uc774 \uc788\ub294\uacbd\uc6b0, \ubd88\ud3b8\ud558\ub2e4. \ub300\ubd80\ubd84 \uc774\ub7f0 \uacbd\uc6b0, unicodinator \ub97c \uc774\uc6a9\ud55c\ub2e4. \uc790\ubc14\uc5d0\uc11c \uc5b4\ub5a4 \ubb38\uc790\uc5d0 \ub300\ud55c \uc720\ub2c8\ucf54\ub4dc \uac12\uc744 \uac00\uc838\uc624\ub294 \ucf54\ub4dc\ub294 \ub2e4\uc74c\uacfc \uac19\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev, Java, Unicode, \uc720\ub2c8\ucf54\ub4dc \uac12 \ubc18\ud658",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-12-05",
         "dateModified": "2012-12-05",
@@ -74,12 +89,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -154,8 +169,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -66,17 +67,31 @@
 
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "PYCONKR2017 \uc744 \ub2e4\ub140\uc640\uc11c.",
         "description": "[\ud30c\uc774\ucf582017](https://www.pycon.kr/2017/) \uc5d0 \ub2e4\ub140\uc654\ub2e4. [\uc791\ub144\uc758 pyconApac \uc758 \ud654\ub824\ud568\uc744 \ub4a4\ub85c\ud558\uace0](https://ash84.net/2016/08/24/pyconapac-2016/) \uc62c\ud574\ub294 \ud45c\uc81c\ubd80\ud130 Back to the Basic \uc774\uc5c8\ub2e4. \uc5b8\uc81c\ub098 \ud30c\uc774\ucf58\uc758 \ud2f0\ucf13 \uc608\uc57d\uc740 \uc804\uc7c1\ud130\uc600\ub2e4. \ub098 \ube60\ub978 \uc810\uc2ec\uc744 \uba39\uace0 \ub4e4\uc5b4\uc640\uc11c \uc608\uc57d\uc744 \ud588\uace0, \uba87\ubd84\ud6c4 \uc608\uc57d\uc744 \ubabb\ud55c \uc0ac\ub78c\ub4e4\uc774 \uc18d\ucd9c\ud558\uae30 \uc2dc\uc791\ud588\ub2e4. \ubc1c\ud45c\uc790 \ubaa8\uc9d1\uc774 \uc2dc\uc791\uc774 \ub418\uc5c8\uace0, \ubc1c\ud45c\ub97c \ud558\uace0 \uc2f6\uc740 \ub9c8\uc74c\ub3c4 \uc788\uc5c8\uc9c0\ub9cc \uc62c\ud574\ub294 \ud55c\ubc1c\uc790\uad6d \uba40\ub9ac\uc11c \uc9c0\ucf1c\ubcf4\uac8c \ub418\uc5c8\ub2e4. 2-3\uc8fc \uc815\ub3c4 \ub0a8\uc558\uc744 \ubb34\ub835",
+        "inLanguage": "ko",
+        "keywords": "dev, Python, pyconkr, pyconkr2017, conference",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2017-08-29",
         "dateModified": "2017-08-29",
@@ -90,12 +105,12 @@
 
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -239,8 +254,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

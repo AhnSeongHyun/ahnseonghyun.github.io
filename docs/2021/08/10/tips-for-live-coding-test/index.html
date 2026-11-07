@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -50,17 +51,31 @@
     <meta name="twitter:description" content="주니어 서버 엔지니어 포지션을 오픈한 이후에 요즘 일주일에 최소 3번의 기술면접을 들어가고 있는데 예전에 비해서 다양한 분들이 면접을 보셔서 세상이 변했다는것을 많이 느끼고 있다. 1차 면접에서 30분 정도 라이브코딩 테스트를 진행하고 있는데 몇몇 안타까운 경우들이 많아서 몇가지 팁을 적는다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "\ub77c\uc774\ube0c \ucf54\ub529 \ud14c\uc2a4\ud2b8\ub97c \uc704\ud55c \uc870\uc5b8",
         "description": "\uc8fc\ub2c8\uc5b4 \uc11c\ubc84 \uc5d4\uc9c0\ub2c8\uc5b4 \ud3ec\uc9c0\uc158\uc744 \uc624\ud508\ud55c \uc774\ud6c4\uc5d0 \uc694\uc998 \uc77c\uc8fc\uc77c\uc5d0 \ucd5c\uc18c 3\ubc88\uc758 \uae30\uc220\uba74\uc811\uc744 \ub4e4\uc5b4\uac00\uace0 \uc788\ub294\ub370 \uc608\uc804\uc5d0 \ube44\ud574\uc11c \ub2e4\uc591\ud55c \ubd84\ub4e4\uc774 \uba74\uc811\uc744 \ubcf4\uc154\uc11c \uc138\uc0c1\uc774 \ubcc0\ud588\ub2e4\ub294\uac83\uc744 \ub9ce\uc774 \ub290\ub07c\uace0 \uc788\ub2e4. 1\ucc28 \uba74\uc811\uc5d0\uc11c 30\ubd84 \uc815\ub3c4 \ub77c\uc774\ube0c\ucf54\ub529 \ud14c\uc2a4\ud2b8\ub97c \uc9c4\ud589\ud558\uace0 \uc788\ub294\ub370 \uba87\uba87 \uc548\ud0c0\uae4c\uc6b4 \uacbd\uc6b0\ub4e4\uc774 \ub9ce\uc544\uc11c \uba87\uac00\uc9c0 \ud301\uc744 \uc801\ub294\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "coding test, coding interview",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2021-08-10",
         "dateModified": "2021-08-10",
@@ -70,12 +85,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -168,8 +183,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

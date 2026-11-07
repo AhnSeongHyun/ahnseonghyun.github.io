@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -54,17 +55,31 @@
     <meta name="twitter:description" content="자바에서 파일 읽고 쓰는 부분에 대한 정리차원에서 쓴다. 개인적으로 자주 쓰는 FileReaderManager, FileWriterManager 클래스를 올린다. 유틸리티 클래스(static  함수)로 중요한 부분은 현재 JVM 인코딩을 가져와서 읽고 쓰고 하는 부분이다. [이전 포스팅](http://ash84.tistory.com/783)에서도 언급했지만 findbug 플러그인을 통해서 걸러지는 부분이기도 하거니와 인코딩 문제는 미리 처리해주는게 문자열 관련 처리를 할때">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[JAVA] FileReaderManager, FileWriterManager \uc27d\uac8c \uc77d\uace0 \uc4f0\uc790.",
         "description": "\uc790\ubc14\uc5d0\uc11c \ud30c\uc77c \uc77d\uace0 \uc4f0\ub294 \ubd80\ubd84\uc5d0 \ub300\ud55c \uc815\ub9ac\ucc28\uc6d0\uc5d0\uc11c \uc4f4\ub2e4. \uac1c\uc778\uc801\uc73c\ub85c \uc790\uc8fc \uc4f0\ub294 FileReaderManager, FileWriterManager \ud074\ub798\uc2a4\ub97c \uc62c\ub9b0\ub2e4. \uc720\ud2f8\ub9ac\ud2f0 \ud074\ub798\uc2a4(static \u00a0\ud568\uc218)\ub85c \uc911\uc694\ud55c \ubd80\ubd84\uc740 \ud604\uc7ac JVM \uc778\ucf54\ub529\uc744 \uac00\uc838\uc640\uc11c \uc77d\uace0 \uc4f0\uace0 \ud558\ub294 \ubd80\ubd84\uc774\ub2e4. [\uc774\uc804 \ud3ec\uc2a4\ud305](http://ash84.tistory.com/783)\uc5d0\uc11c\ub3c4 \uc5b8\uae09\ud588\uc9c0\ub9cc findbug \ud50c\ub7ec\uadf8\uc778\uc744 \ud1b5\ud574\uc11c \uac78\ub7ec\uc9c0\ub294 \ubd80\ubd84\uc774\uae30\ub3c4 \ud558\uac70\ub2c8\uc640 \uc778\ucf54\ub529 \ubb38\uc81c\ub294 \ubbf8\ub9ac \ucc98\ub9ac\ud574\uc8fc\ub294\uac8c \ubb38\uc790\uc5f4 \uad00\ub828 \ucc98\ub9ac\ub97c \ud560\ub54c",
+        "inLanguage": "ko",
+        "keywords": "dev, Java, \ud30c\uc77c \uc4f0\uae30, \ud30c\uc77c\uc77d\uae30",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-11-05",
         "dateModified": "2012-11-05",
@@ -74,12 +89,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -168,8 +183,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

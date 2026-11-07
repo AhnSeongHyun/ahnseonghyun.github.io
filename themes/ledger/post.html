@@ -24,9 +24,9 @@
 {% endfor %}
 {% if post.featured_image %}
 {% if post.featured_image.startswith('http') %}
-    <meta property="og:image" content="{{ post.featured_image }}">
+    <meta property="og:image" content="{{ post.featured_image | e }}">
 {% else %}
-    <meta property="og:image" content="https://ash84.io/{{ url_path }}/{{ post.featured_image }}">
+    <meta property="og:image" content="https://ash84.io/{{ url_path }}/{{ post.featured_image | e }}">
 {% endif %}
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -40,40 +40,54 @@
     <meta name="twitter:description" content="{{ post.description | e }}">
 {% if post.featured_image %}
 {% if post.featured_image.startswith('http') %}
-    <meta name="twitter:image" content="{{ post.featured_image }}">
+    <meta name="twitter:image" content="{{ post.featured_image | e }}">
 {% else %}
-    <meta name="twitter:image" content="https://ash84.io/{{ url_path }}/{{ post.featured_image }}">
+    <meta name="twitter:image" content="https://ash84.io/{{ url_path }}/{{ post.featured_image | e }}">
 {% endif %}
 {% endif %}
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+{% set modified %}{% include 'build/modified/' ~ slug ~ '.html' ignore missing %}{% endset %}
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": {{ post.title | tojson }},
         "description": {{ post.description | tojson }},
+        "inLanguage": "ko",
+        "keywords": {{ tag_list | join(', ') | tojson }},
         "author": {
             "@type": "Person",
-            "name": {{ post.author | tojson }},
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": {{ post.author | tojson }},
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "{{ post.created_at }}",
-        "dateModified": "{{ post.created_at }}",
+        "dateModified": "{{ modified | trim or post.created_at }}",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://ash84.io/{{ url_path }}/"
         },
 {% if post.featured_image %}
 {% if post.featured_image.startswith('http') %}
-        "image": "{{ post.featured_image }}",
+        "image": "{{ post.featured_image | e }}",
 {% else %}
-        "image": "https://ash84.io/{{ url_path }}/{{ post.featured_image }}",
+        "image": "https://ash84.io/{{ url_path }}/{{ post.featured_image | e }}",
 {% endif %}
 {% endif %}
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>

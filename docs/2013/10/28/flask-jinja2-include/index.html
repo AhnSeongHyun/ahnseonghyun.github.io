@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -62,17 +63,31 @@
     <meta name="twitter:description" content="대단한건 아니고, flask 는 기본적으로 jinja2 를 템플릿 언어로 사용하는데 사용하다 보면 하나의 template에서 공통적으로 사용되어 지는 부분이 있다. 예를 들면, 같은 css 나, 자바스크립트를 가져오는 header의 부분이나 상단의 navigation 부분, 하단의 footer 부분이 그러한데 일일히 모든 템플릿에 넣어 주기는 귀찮다. 그래서 jinja2 에서는{%  include %} 를 통해서 하나의 html 에서 다른 html 을 가져올수 있도록 해준다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(flask) jinja2 {% include %} \ud65c\uc6a9",
         "description": "\ub300\ub2e8\ud55c\uac74 \uc544\ub2c8\uace0, flask \ub294 \uae30\ubcf8\uc801\uc73c\ub85c jinja2 \ub97c \ud15c\ud50c\ub9bf \uc5b8\uc5b4\ub85c \uc0ac\uc6a9\ud558\ub294\ub370 \uc0ac\uc6a9\ud558\ub2e4 \ubcf4\uba74 \ud558\ub098\uc758 template\uc5d0\uc11c \uacf5\ud1b5\uc801\uc73c\ub85c \uc0ac\uc6a9\ub418\uc5b4 \uc9c0\ub294 \ubd80\ubd84\uc774 \uc788\ub2e4. \uc608\ub97c \ub4e4\uba74, \uac19\uc740 css \ub098, \uc790\ubc14\uc2a4\ud06c\ub9bd\ud2b8\ub97c \uac00\uc838\uc624\ub294 header\uc758 \ubd80\ubd84\uc774\ub098 \uc0c1\ub2e8\uc758 navigation \ubd80\ubd84, \ud558\ub2e8\uc758 footer \ubd80\ubd84\uc774 \uadf8\ub7ec\ud55c\ub370 \uc77c\uc77c\ud788 \ubaa8\ub4e0 \ud15c\ud50c\ub9bf\uc5d0 \ub123\uc5b4 \uc8fc\uae30\ub294 \uadc0\ucc2e\ub2e4. \uadf8\ub798\uc11c jinja2 \uc5d0\uc11c\ub294{% \u00a0include %} \ub97c \ud1b5\ud574\uc11c \ud558\ub098\uc758 html \uc5d0\uc11c \ub2e4\ub978 html \uc744 \uac00\uc838\uc62c\uc218 \uc788\ub3c4\ub85d \ud574\uc900\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev, Flask, html include, ignore missing, include, jinja2, jinja2 template, Python",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-10-28",
         "dateModified": "2013-10-28",
@@ -82,12 +97,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -176,8 +191,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

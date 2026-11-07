@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="NSLog 의 지겨움을 느끼던 차에 로거가 필요하다는 생각은 늘 하고 있었지만 문제는 언제 도입하느냐였는데 만들고 있는 것이 블루투스 앱인지라, 로그를 세세하게 받아야 하는 급박한 상황이 생겨서 로거를 넣자는 생각을 하였다. stackoverflow, [OSXDEV](http://osxdev.org/forum/index.php?threads/logger-%EC%B6%94%EC%B2%9C%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94.279/) 등에 문의를 한">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(iOS) cocoalumberjack \ub97c \uc774\uc6a9\ud55c logger \ud0d1\uc7ac",
         "description": "NSLog \uc758 \uc9c0\uaca8\uc6c0\uc744 \ub290\ub07c\ub358 \ucc28\uc5d0 \ub85c\uac70\uac00 \ud544\uc694\ud558\ub2e4\ub294 \uc0dd\uac01\uc740 \ub298 \ud558\uace0 \uc788\uc5c8\uc9c0\ub9cc \ubb38\uc81c\ub294 \uc5b8\uc81c \ub3c4\uc785\ud558\ub290\ub0d0\uc600\ub294\ub370 \ub9cc\ub4e4\uace0 \uc788\ub294 \uac83\uc774 \ube14\ub8e8\ud22c\uc2a4 \uc571\uc778\uc9c0\ub77c, \ub85c\uadf8\ub97c \uc138\uc138\ud558\uac8c \ubc1b\uc544\uc57c \ud558\ub294 \uae09\ubc15\ud55c \uc0c1\ud669\uc774 \uc0dd\uaca8\uc11c \ub85c\uac70\ub97c \ub123\uc790\ub294 \uc0dd\uac01\uc744 \ud558\uc600\ub2e4. stackoverflow, [OSXDEV](http://osxdev.org/forum/index.php?threads/logger-%EC%B6%94%EC%B2%9C%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94.279/) \ub4f1\uc5d0 \ubb38\uc758\ub97c \ud55c",
+        "inLanguage": "ko",
+        "keywords": "cocoalumberjack, dev, iOS, Log4J, objective-c logger",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-10-18",
         "dateModified": "2013-10-18",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -338,8 +353,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

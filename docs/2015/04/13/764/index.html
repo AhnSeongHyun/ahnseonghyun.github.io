@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -48,7 +49,7 @@
 
 
 
-    <meta property="og:image" content="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c5008952226f48ed4bf5d3ea64ff545&auto=format&fit=crop&w=1350&q=80">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=7c5008952226f48ed4bf5d3ea64ff545&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
 
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -62,21 +63,35 @@
     <meta name="twitter:description" content="몇번 인스타그램이나 사진 찍기를 좋아해서 올린적이 있지만 글과 함께 써보긴 처음인것 같다. 더군다나 이 글은 이상한 모임에서 #weird-writing 의 주제이자 내가 처음으로 워드프레스 닷컴으로 이사와서 쓰는 글이다. (이전 글들은 옮겨온 것뿐)">
 
 
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c5008952226f48ed4bf5d3ea64ff545&auto=format&fit=crop&w=1350&q=80">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=7c5008952226f48ed4bf5d3ea64ff545&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
 
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "\uc791\uc5c5\ud658\uacbd",
         "description": "\uba87\ubc88 \uc778\uc2a4\ud0c0\uadf8\ub7a8\uc774\ub098 \uc0ac\uc9c4 \ucc0d\uae30\ub97c \uc88b\uc544\ud574\uc11c \uc62c\ub9b0\uc801\uc774 \uc788\uc9c0\ub9cc \uae00\uacfc \ud568\uaed8 \uc368\ubcf4\uae34 \ucc98\uc74c\uc778\uac83 \uac19\ub2e4. \ub354\uad70\ub2e4\ub098 \uc774 \uae00\uc740 \uc774\uc0c1\ud55c \ubaa8\uc784\uc5d0\uc11c #weird-writing \uc758 \uc8fc\uc81c\uc774\uc790 \ub0b4\uac00 \ucc98\uc74c\uc73c\ub85c \uc6cc\ub4dc\ud504\ub808\uc2a4 \ub2f7\ucef4\uc73c\ub85c \uc774\uc0ac\uc640\uc11c \uc4f0\ub294 \uae00\uc774\ub2e4. (\uc774\uc804 \uae00\ub4e4\uc740 \uc62e\uaca8\uc628 \uac83\ubfd0)",
+        "inLanguage": "ko",
+        "keywords": "conference, dev, ios-development, \uc791\uc5c5\uc2e4, \uc791\uc5c5\ud658\uacbd",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2015-04-13",
         "dateModified": "2015-04-13",
@@ -86,16 +101,16 @@
         },
 
 
-        "image": "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c5008952226f48ed4bf5d3ea64ff545&auto=format&fit=crop&w=1350&q=80",
+        "image": "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=7c5008952226f48ed4bf5d3ea64ff545&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80",
 
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -183,8 +198,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

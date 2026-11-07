@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -54,17 +55,31 @@
     <meta name="twitter:description" content="1년동안 한 일에 대한 [github contribution graph](https://github.com/jasonlong/isometric-contributions) 를 보고 있는데 구글을 검색하다 보니 3차원? 틱한 그래프를 발견, 링크를 들어가보니 isometric graph 라고 한다. 일종의 플러그인, 익스텐션 같은것인데 아래의 링크에서 설치하고 나면, github 내 본인의 contribution graph가 있는 아이콘이 생기고 해당 아이콘을 누르면 아래와 같은 그래프 형태가 나온다. 설정해놔도 재밌을듯.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "github isometric contribution graph",
         "description": "1\ub144\ub3d9\uc548 \ud55c \uc77c\uc5d0 \ub300\ud55c [github contribution graph](https://github.com/jasonlong/isometric-contributions) \ub97c \ubcf4\uace0 \uc788\ub294\ub370 \uad6c\uae00\uc744 \uac80\uc0c9\ud558\ub2e4 \ubcf4\ub2c8 3\ucc28\uc6d0? \ud2f1\ud55c \uadf8\ub798\ud504\ub97c \ubc1c\uacac, \ub9c1\ud06c\ub97c \ub4e4\uc5b4\uac00\ubcf4\ub2c8 isometric graph \ub77c\uace0 \ud55c\ub2e4. \uc77c\uc885\uc758 \ud50c\ub7ec\uadf8\uc778, \uc775\uc2a4\ud150\uc158 \uac19\uc740\uac83\uc778\ub370 \uc544\ub798\uc758 \ub9c1\ud06c\uc5d0\uc11c \uc124\uce58\ud558\uace0 \ub098\uba74, github \ub0b4 \ubcf8\uc778\uc758 contribution graph\uac00 \uc788\ub294 \uc544\uc774\ucf58\uc774 \uc0dd\uae30\uace0 \ud574\ub2f9 \uc544\uc774\ucf58\uc744 \ub204\ub974\uba74 \uc544\ub798\uc640 \uac19\uc740 \uadf8\ub798\ud504 \ud615\ud0dc\uac00 \ub098\uc628\ub2e4. \uc124\uc815\ud574\ub194\ub3c4 \uc7ac\ubc0c\uc744\ub4ef.",
+        "inLanguage": "ko",
+        "keywords": "GitHub, contribution, dev, open-source",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2015-12-29",
         "dateModified": "2015-12-29",
@@ -74,12 +89,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -154,8 +169,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

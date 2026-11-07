@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -52,17 +53,31 @@
     <meta name="twitter:description" content="서버가 들어왔을때 처음으로 해야하는 작업이 서버 정보를 가져와서 남겨두는 작업인데, 솔직히 리눅스 명령어로 하는게 더 편하긴 하지만, 내가 그런 명령어에 익숙하지 않고, 파이썬이 더 익숙한 지라 아래의 파이썬 코드를 돌려서 수행하면 된다. 기타 리눅스 하드웨어 관련 정보 파이썬으로 가져올 경우  [http://amitsaha.github.io/site/notes/articles/python_linux/article.html](http://amitsaha.github.io/site/notes/articles/python_linux/">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "python \ub9ac\ub205\uc2a4 \ud558\ub4dc\uc6e8\uc5b4 \uc815\ubcf4 \uac00\uc838\uc624\uae30",
         "description": "\uc11c\ubc84\uac00 \ub4e4\uc5b4\uc654\uc744\ub54c \ucc98\uc74c\uc73c\ub85c \ud574\uc57c\ud558\ub294 \uc791\uc5c5\uc774 \uc11c\ubc84 \uc815\ubcf4\ub97c \uac00\uc838\uc640\uc11c \ub0a8\uaca8\ub450\ub294 \uc791\uc5c5\uc778\ub370, \uc194\uc9c1\ud788 \ub9ac\ub205\uc2a4 \uba85\ub839\uc5b4\ub85c \ud558\ub294\uac8c \ub354 \ud3b8\ud558\uae34 \ud558\uc9c0\ub9cc, \ub0b4\uac00 \uadf8\ub7f0 \uba85\ub839\uc5b4\uc5d0 \uc775\uc219\ud558\uc9c0 \uc54a\uace0, \ud30c\uc774\uc36c\uc774 \ub354 \uc775\uc219\ud55c \uc9c0\ub77c \uc544\ub798\uc758 \ud30c\uc774\uc36c \ucf54\ub4dc\ub97c \ub3cc\ub824\uc11c \uc218\ud589\ud558\uba74 \ub41c\ub2e4. \uae30\ud0c0 \ub9ac\ub205\uc2a4 \ud558\ub4dc\uc6e8\uc5b4 \uad00\ub828 \uc815\ubcf4 \ud30c\uc774\uc36c\uc73c\ub85c \uac00\uc838\uc62c \uacbd\uc6b0\u00a0 [http://amitsaha.github.io/site/notes/articles/python_linux/article.html](http://amitsaha.github.io/site/notes/articles/python_linux/",
+        "inLanguage": "ko",
+        "keywords": "dev, server, Python",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2014-12-02",
         "dateModified": "2014-12-02",
@@ -72,12 +87,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -152,8 +167,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -54,17 +55,31 @@
     <meta name="twitter:description" content="파이썬(python)에서는 sqlite3 를 기본 라이브러리로 지원하고 있는 것은 누구나 다 아는 사실일텐데, 좀더 쓰기 편한 형태로 CRUD 에 대해서 클래스 랩핑을 해봤다. 함수에서 테이블 이름, Where 문, 혹은 컬럼이나 넣을 데이터 받으면 그에 따라서 쿼리 만들어서 쿼리 실행하도록 하였다. 별도의 예외처리는 안했기 떄문에 필요한 분들이 가져다가 커스텀해서 쓰시길 바란다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[Python] sqlite3 \ub97c \uc190\uc27d\uac8c \uc4f0\ub3c4\ub85d \ub9cc\ub4e0 \ud074\ub798\uc2a4",
         "description": "\ud30c\uc774\uc36c(python)\uc5d0\uc11c\ub294 sqlite3 \ub97c \uae30\ubcf8 \ub77c\uc774\ube0c\ub7ec\ub9ac\ub85c \uc9c0\uc6d0\ud558\uace0 \uc788\ub294 \uac83\uc740 \ub204\uad6c\ub098 \ub2e4 \uc544\ub294 \uc0ac\uc2e4\uc77c\ud150\ub370, \uc880\ub354 \uc4f0\uae30 \ud3b8\ud55c \ud615\ud0dc\ub85c CRUD \uc5d0 \ub300\ud574\uc11c \ud074\ub798\uc2a4 \ub7a9\ud551\uc744 \ud574\ubd24\ub2e4. \ud568\uc218\uc5d0\uc11c \ud14c\uc774\ube14 \uc774\ub984, Where \ubb38, \ud639\uc740 \uceec\ub7fc\uc774\ub098 \ub123\uc744 \ub370\uc774\ud130 \ubc1b\uc73c\uba74 \uadf8\uc5d0 \ub530\ub77c\uc11c \ucffc\ub9ac \ub9cc\ub4e4\uc5b4\uc11c \ucffc\ub9ac \uc2e4\ud589\ud558\ub3c4\ub85d \ud558\uc600\ub2e4. \ubcc4\ub3c4\uc758 \uc608\uc678\ucc98\ub9ac\ub294 \uc548\ud588\uae30 \ub584\ubb38\uc5d0 \ud544\uc694\ud55c \ubd84\ub4e4\uc774 \uac00\uc838\ub2e4\uac00 \ucee4\uc2a4\ud140\ud574\uc11c \uc4f0\uc2dc\uae38 \ubc14\ub780\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev, gist, Python, sqlite3",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-10-11",
         "dateModified": "2012-10-11",
@@ -74,12 +89,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -154,8 +169,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

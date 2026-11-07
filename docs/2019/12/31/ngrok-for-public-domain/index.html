@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -52,17 +53,31 @@
     <meta name="twitter:description" content="테스트를 하거나 아니면 인증 쪽 관련 작업들을 하려고 하면 localhost 에서 띄우면 되는데 도메인이 필요한 경우들이 있다. 예를 들면 github 에서 webhook  테스트를 한다고 할 때 도메인을 입력해야 github 상에서 이벤트가 발생했을 때 webhook 을 받을수 있다. (github 입장에서 localhost 는 자기자신이니..😅) 또는 모바일과 연동 테스트를 진행할 때도 도메인을 만들기 전이나 실서버 올리기 전에 임시로 테스트를 하기 위해서도 유용할 것 같다. 😙">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "ngrok \ub97c \uc774\uc6a9\ud55c localhost \ub97c public domain \uc5f0\uacb0\ud558\uae30",
         "description": "\ud14c\uc2a4\ud2b8\ub97c \ud558\uac70\ub098 \uc544\ub2c8\uba74 \uc778\uc99d \ucabd \uad00\ub828 \uc791\uc5c5\ub4e4\uc744 \ud558\ub824\uace0 \ud558\uba74 localhost \uc5d0\uc11c \ub744\uc6b0\uba74 \ub418\ub294\ub370 \ub3c4\uba54\uc778\uc774 \ud544\uc694\ud55c \uacbd\uc6b0\ub4e4\uc774 \uc788\ub2e4. \uc608\ub97c \ub4e4\uba74 github \uc5d0\uc11c webhook  \ud14c\uc2a4\ud2b8\ub97c \ud55c\ub2e4\uace0 \ud560 \ub54c \ub3c4\uba54\uc778\uc744 \uc785\ub825\ud574\uc57c github \uc0c1\uc5d0\uc11c \uc774\ubca4\ud2b8\uac00 \ubc1c\uc0dd\ud588\uc744 \ub54c webhook \uc744 \ubc1b\uc744\uc218 \uc788\ub2e4. (github \uc785\uc7a5\uc5d0\uc11c localhost \ub294 \uc790\uae30\uc790\uc2e0\uc774\ub2c8..\ud83d\ude05) \ub610\ub294 \ubaa8\ubc14\uc77c\uacfc \uc5f0\ub3d9 \ud14c\uc2a4\ud2b8\ub97c \uc9c4\ud589\ud560 \ub54c\ub3c4 \ub3c4\uba54\uc778\uc744 \ub9cc\ub4e4\uae30 \uc804\uc774\ub098 \uc2e4\uc11c\ubc84 \uc62c\ub9ac\uae30 \uc804\uc5d0 \uc784\uc2dc\ub85c \ud14c\uc2a4\ud2b8\ub97c \ud558\uae30 \uc704\ud574\uc11c\ub3c4 \uc720\uc6a9\ud560 \uac83 \uac19\ub2e4. \ud83d\ude19",
+        "inLanguage": "ko",
+        "keywords": "domain, ngrok, Python",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2019-12-31",
         "dateModified": "2019-12-31",
@@ -72,12 +87,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -190,8 +205,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

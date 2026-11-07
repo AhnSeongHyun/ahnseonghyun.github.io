@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -68,17 +69,31 @@
     <meta name="twitter:description" content="INI 파일이나, 일반적인 파일로 프로그램의 설정값을 유지및 관리 해 오는 일은 예전부터 많았다. 하지만, 필자가 느끼기엔 여간 불편한일이 아니였다. 그래서 여러 검색창을 돌아다디던중 XML과 Hashtable을 가지고 설정을 관리하는 방법을 알아냈다. 특히, 필자의 경우 시리얼 통신을 통해서 여타의 의료기기간의 인터페이스 연결을 해야하는 경우가">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[C#] INI \ud30c\uc77c \ub300\uc2e0\uc5d0 XML \ub85c \uc124\uc815\uac12 \uc800\uc7a5/\uc720\uc9c0 \ud558\uae30",
         "description": "INI \ud30c\uc77c\uc774\ub098, \uc77c\ubc18\uc801\uc778 \ud30c\uc77c\ub85c \ud504\ub85c\uadf8\ub7a8\uc758 \uc124\uc815\uac12\uc744 \uc720\uc9c0\ubc0f \uad00\ub9ac \ud574 \uc624\ub294 \uc77c\uc740 \uc608\uc804\ubd80\ud130 \ub9ce\uc558\ub2e4. \ud558\uc9c0\ub9cc, \ud544\uc790\uac00 \ub290\ub07c\uae30\uc5d4 \uc5ec\uac04 \ubd88\ud3b8\ud55c\uc77c\uc774 \uc544\ub2c8\uc600\ub2e4. \uadf8\ub798\uc11c \uc5ec\ub7ec \uac80\uc0c9\ucc3d\uc744 \ub3cc\uc544\ub2e4\ub514\ub358\uc911 XML\uacfc Hashtable\uc744 \uac00\uc9c0\uace0 \uc124\uc815\uc744 \uad00\ub9ac\ud558\ub294 \ubc29\ubc95\uc744 \uc54c\uc544\ub0c8\ub2e4. \ud2b9\ud788, \ud544\uc790\uc758 \uacbd\uc6b0 \uc2dc\ub9ac\uc5bc \ud1b5\uc2e0\uc744 \ud1b5\ud574\uc11c \uc5ec\ud0c0\uc758 \uc758\ub8cc\uae30\uae30\uac04\uc758 \uc778\ud130\ud398\uc774\uc2a4 \uc5f0\uacb0\uc744 \ud574\uc57c\ud558\ub294 \uacbd\uc6b0\uac00",
+        "inLanguage": "ko",
+        "keywords": "C#, Hashtable, INI, System.Collections, XML, dev, healthcare, programming, \uc548\uc131\ud604, \ud574\uc26c\ud14c\uc774\ube14, \ud658\uacbd\uc124\uc815",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2008-10-07",
         "dateModified": "2008-10-07",
@@ -88,12 +103,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -174,8 +189,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

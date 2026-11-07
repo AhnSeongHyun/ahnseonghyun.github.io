@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -48,7 +49,7 @@
 
 
 
-    <meta property="og:image" content="https://images.unsplash.com/photo-1414509902153-26bed16bc962?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=511fa809144285f1e89eda78d8068096&auto=format&fit=crop&w=1350&q=80">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1414509902153-26bed16bc962?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=511fa809144285f1e89eda78d8068096&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
 
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -62,21 +63,35 @@
     <meta name="twitter:description" content="#### 개요">
 
 
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1414509902153-26bed16bc962?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=511fa809144285f1e89eda78d8068096&auto=format&fit=crop&w=1350&q=80">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1414509902153-26bed16bc962?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=511fa809144285f1e89eda78d8068096&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
 
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "LocalStorage \u0026 SessionStorage",
         "description": "#### \uac1c\uc694",
+        "inLanguage": "ko",
+        "keywords": "dev, LocalStorage, SessionStorage, \ub85c\uceec\uc2a4\ud1a0\ub9ac\uc9c0, \uc138\uc158\uc2a4\ud1a0\ub9ac\uc9c0",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2015-05-27",
         "dateModified": "2015-05-27",
@@ -86,16 +101,16 @@
         },
 
 
-        "image": "https://images.unsplash.com/photo-1414509902153-26bed16bc962?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=511fa809144285f1e89eda78d8068096&auto=format&fit=crop&w=1350&q=80",
+        "image": "https://images.unsplash.com/photo-1414509902153-26bed16bc962?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=511fa809144285f1e89eda78d8068096&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80",
 
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -188,8 +203,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="이상하게 파이썬을 빨리 빨리 뚝딱 만드는 언어로 많이 쓰는데(사실 나도 그렇게 쓴다.) 그런데 간호 pypi 에 올려서 욕을 안먹으려면 예외 처리를 해야한다. 당연한 애긴데. ㅎㅎ 아무튼 위의 소스코드를 보면 try: ~ except: 문으로 묶는 것이 기본이다. catch 에 해당하는 것이 except 라고 보면 되는데, Java 처럼 자세히 나">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(python) try ~ except and trace",
         "description": "\uc774\uc0c1\ud558\uac8c \ud30c\uc774\uc36c\uc744 \ube68\ub9ac \ube68\ub9ac \ub69d\ub531 \ub9cc\ub4dc\ub294 \uc5b8\uc5b4\ub85c \ub9ce\uc774 \uc4f0\ub294\ub370(\uc0ac\uc2e4 \ub098\ub3c4 \uadf8\ub807\uac8c \uc4f4\ub2e4.) \uadf8\ub7f0\ub370 \uac04\ud638 pypi \uc5d0 \uc62c\ub824\uc11c \uc695\uc744 \uc548\uba39\uc73c\ub824\uba74 \uc608\uc678 \ucc98\ub9ac\ub97c \ud574\uc57c\ud55c\ub2e4. \ub2f9\uc5f0\ud55c \uc560\uae34\ub370. \u314e\u314e \uc544\ubb34\ud2bc \uc704\uc758 \uc18c\uc2a4\ucf54\ub4dc\ub97c \ubcf4\uba74 try: ~ except: \ubb38\uc73c\ub85c \ubb36\ub294 \uac83\uc774 \uae30\ubcf8\uc774\ub2e4. catch \uc5d0 \ud574\ub2f9\ud558\ub294 \uac83\uc774 except \ub77c\uace0 \ubcf4\uba74 \ub418\ub294\ub370, Java\u00a0\ucc98\ub7fc \uc790\uc138\ud788 \ub098",
+        "inLanguage": "ko",
+        "keywords": "dev, Python, traceback, try except, \uc608\uc678\ucc98\ub9ac",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-10-29",
         "dateModified": "2013-10-29",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -160,8 +175,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

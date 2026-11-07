@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -58,17 +59,31 @@
     <meta name="twitter:description" content="slf4j-log4j를 연계해서 쓰는데, [이전 포스팅](http://ash84.tistory.com/863)에서도 말했지만 slf4j와 lo44j의 버전을 제대로 맞추어야 별 탈없이 붙어서 돌아가게 되는데, 필자의 경우 아래의 버전 조합으로 현재 회사에서 사용하고 있다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "maven log4j-1.2.16.jar \uc5f0\ub3d9\uc2dc pom.xml \uc5d0\ub7ec \ud574\uacb0.",
         "description": "slf4j-log4j\ub97c \uc5f0\uacc4\ud574\uc11c \uc4f0\ub294\ub370, [\uc774\uc804 \ud3ec\uc2a4\ud305](http://ash84.tistory.com/863)\uc5d0\uc11c\ub3c4 \ub9d0\ud588\uc9c0\ub9cc slf4j\uc640 lo44j\uc758 \ubc84\uc804\uc744 \uc81c\ub300\ub85c \ub9de\ucd94\uc5b4\uc57c \ubcc4 \ud0c8\uc5c6\uc774 \ubd99\uc5b4\uc11c \ub3cc\uc544\uac00\uac8c \ub418\ub294\ub370, \ud544\uc790\uc758 \uacbd\uc6b0 \uc544\ub798\uc758 \ubc84\uc804 \uc870\ud569\uc73c\ub85c \ud604\uc7ac \ud68c\uc0ac\uc5d0\uc11c \uc0ac\uc6a9\ud558\uace0 \uc788\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "dev, Java, log4j-1.2.16.jar, logtj, maven, pom.xml \uc5d0\ub7ec",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2012-12-28",
         "dateModified": "2012-12-28",
@@ -78,12 +93,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -184,8 +199,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
     <title>#iOS - ASH84</title>
     <meta name="description" content="#iOS 태그의 글 97편">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="/assets/css/style.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/style.css?v=be91a7b73">
 </head>
 <body>
 
@@ -84,14 +85,14 @@
                     <div><span class="t">(iOS) SVProgressHUD + NSTimer</span><div class="d">[cocoapods](http://beta.cocoapods.org/?q=) 를 연동하면서 자주 사용하는 라이브러리에 대한 사용법을 정리해서 [github](https://github.com/AhnSeongHyun/Objective_Factory/tree/master/SVProgressHUDExample)에 올리고 있는데, 그 중에서도 단연 [SVProgressHUD](https://github.com/samvermette/SVProgressHUD) 는 네트워크 전송 혹은 앱</div></div>
                 </a>
 
-                <a class="row" href="/2013/12/19/ios-testflight--ec-82-ac-ec-9a-a9-ed-95-b4-ec-84-9c-ipa--eb-b0-b0-ed-8f-ac-ed-95-98-ea-b8-b0/">
-                    <time datetime="2013-12-19">2013-12-19</time>
-                    <div><span class="t">(iOS) TestFlight 사용해서 ipa 배포하기</span></div>
-                </a>
-
                 <a class="row" href="/2013/12/19/ios-localization--ec-9d-b4-ed-9b-84-could-not-load-xib--ec-98-a4-eb-a5-98/">
                     <time datetime="2013-12-19">2013-12-19</time>
                     <div><span class="t">(iOS) Localization 이후, could not load XIB 오류</span><div class="d">일단 이 문제의 전제는 처음에 언어가 en 으로 설정되어 있었다는 가정하에 출발을 한다. 필자가 겪은 상황은 이렇다. en으로 되어 있는 상황에서 한국어, 일본어 등이 추가된다. 그래서 나는 Localized.strings 파일을 만든다. 이 파일의 역할을 지역화를 하는데 있어서 키-값을 저장하는 역할을 한다. 즉, “NAME”=”NAME”; 이라고 저장을 하면 기존의 @”NAME” 을 그대로 넣었던 것에서 @”NAME”을 키로 해서 값을 가져와서 넣는방식으로 한다. 그리고</div></div>
+                </a>
+
+                <a class="row" href="/2013/12/19/ios-testflight--ec-82-ac-ec-9a-a9-ed-95-b4-ec-84-9c-ipa--eb-b0-b0-ed-8f-ac-ed-95-98-ea-b8-b0/">
+                    <time datetime="2013-12-19">2013-12-19</time>
+                    <div><span class="t">(iOS) TestFlight 사용해서 ipa 배포하기</span></div>
                 </a>
 
                 <a class="row" href="/2013/12/06/ios-nsmutablearray-delegate/">
@@ -149,14 +150,14 @@
                     <div><span class="t">(iOS) UIView border</span></div>
                 </a>
 
-                <a class="row" href="/2013/09/17/ios-avaudiosessioncategory--ec-a0-95-eb-a6-ac/">
-                    <time datetime="2013-09-17">2013-09-17</time>
-                    <div><span class="t">(iOS) AVAudioSessionCategory 정리</span><div class="d">다들 알다시피 AVAudioSession 이라는 것을 통해서 iOS 내에서 음악을 재생하는데 `AVAudioSessionCategory `라는 것에 대해서 알아둘 필요가있다. 이것이 왜 중요한지에 대해서 일단 일화를 설명하자면,</div></div>
-                </a>
-
                 <a class="row" href="/2013/09/17/ios--ea-b8-b0-eb-b3-b8--ec-88-ab-ec-9e-90-ed-98-95-nsdictionary-ec-97-90--eb-84-a3-ea-b8-b0/">
                     <time datetime="2013-09-17">2013-09-17</time>
                     <div><span class="t">(iOS) 기본 숫자형 NSDictionary에 넣기</span><div class="d">NSDictionary는 키-값 형태로 데이터를 집어넣는것인데, 객제형은 잘 들어가는 대신에 이상하게 int, double과 같은 경우에는 setValue 함수를 사용해도 XCode 에서 에러라고 표시를 한다. 그런 경우에는 아래와 같이 NSNumber 로 한번 감싸주면 된다. int, float, double 등에 맞게 사용하면 된다.</div></div>
+                </a>
+
+                <a class="row" href="/2013/09/17/ios-avaudiosessioncategory--ec-a0-95-eb-a6-ac/">
+                    <time datetime="2013-09-17">2013-09-17</time>
+                    <div><span class="t">(iOS) AVAudioSessionCategory 정리</span><div class="d">다들 알다시피 AVAudioSession 이라는 것을 통해서 iOS 내에서 음악을 재생하는데 `AVAudioSessionCategory `라는 것에 대해서 알아둘 필요가있다. 이것이 왜 중요한지에 대해서 일단 일화를 설명하자면,</div></div>
                 </a>
 
                 <a class="row" href="/2013/09/12/ios-iphone5-ec-9a-a9-zbar--eb-8b-a4-ec-9a-b4-eb-a1-9c-eb-93-9c/">
@@ -179,14 +180,14 @@
                     <div><span class="t">(iOS) AutoCompleteKor, 한국어 자음/모음 풀어쓰기 기반 자동완성 오픈소스</span><div class="d">간간히 자동완성이 필요한 경우가 있다. 어떤 정보를 검색할 때가 그러한 경우라고 볼수가 있는데, 사실 자동완성이라고 하는 범위는 너무 넓다보니 하나의 커다란 서버가 필요하기도 하는데, 여기서는 iOS 상에서 한국어 풀어쓰기 기반의 자동완성을 소개하려고 한다.</div></div>
                 </a>
 
-                <a class="row" href="/2013/05/20/ios--eb-82-a0-ec-a7-9c-ec-97-90-ec-84-9c--ec-9a-94-ec-9d-bc--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/">
-                    <time datetime="2013-05-20">2013-05-20</time>
-                    <div><span class="t">(iOS) 날짜에서 요일 가져오기</span></div>
-                </a>
-
                 <a class="row" href="/2013/05/20/ios--eb-ac-b8-ec-9e-90-ec-97-b4-ec-97-90-ec-84-9c-md5--ec-b6-94-ec-b6-9c-ed-95-98-ea-b8-b0/">
                     <time datetime="2013-05-20">2013-05-20</time>
                     <div><span class="t">(iOS) 문자열에서 md5 추출하기</span></div>
+                </a>
+
+                <a class="row" href="/2013/05/20/ios--eb-82-a0-ec-a7-9c-ec-97-90-ec-84-9c--ec-9a-94-ec-9d-bc--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/">
+                    <time datetime="2013-05-20">2013-05-20</time>
+                    <div><span class="t">(iOS) 날짜에서 요일 가져오기</span></div>
                 </a>
 
                 <a class="row" href="/2013/05/14/ios-jsonkit-arc--ec-83-81-ec-97-90-ec-84-9c--ec-9e-91-ec-97-85-ed-95-98-ea-b8-b0/">
@@ -229,14 +230,14 @@
                     <div><span class="t">(iOS) NSDateUtil, 날짜처리를 간편하게</span><div class="d">날짜처리는 어떤 언어에서든지 여간 귀찮은게아닌데 한번 만들어놓으면 편한 몇가지 함수들을 만들었다. 날짜를 넣으면  특정 형식으로 NSString형태로 변환해주는 함수. 이게 필요한 이유는 어떤 셀이나 레이블에 표시를 할때에는 NSString 형을 쓸수 밖에 없기 때문이다. 그리고 반대로 NSString 을 NSDate 형식으로 바꿔주는 함수. 또 하나는 D-Day를 구하는 함수등을 만들었다. 특별한 객체 생성 없이 사용하기 편하게 클래스 메소드로 만들었다.</div></div>
                 </a>
 
-                <a class="row" href="/2013/04/23/ios-nsnotification--ec-83-9d-ec-84-b1--eb-b0-8f--ec-82-ac-ec-9a-a9--ec-bd-94-eb-93-9c/">
-                    <time datetime="2013-04-23">2013-04-23</time>
-                    <div><span class="t">(iOS) NSNotification 생성 및 사용 코드</span><div class="d">NSNotification은 아이폰 프로그래밍에서 빠질수 없는 것인데, 굳이 함수 호출이 아니여도 메시지를 미리 등록하고 연결된 함수를 정의해두면 해당 메시지를 보냈을때 위치에 상관없이 연결된 함수가 호출되는 편리한 구조이다.</div></div>
-                </a>
-
                 <a class="row" href="/2013/04/23/ios-uiimageview--ea-b8-b0-eb-b3-b8--ec-bd-94-eb-93-9c/">
                     <time datetime="2013-04-23">2013-04-23</time>
                     <div><span class="t">(iOS) UIImageView 기본 코드</span><div class="d">기본 코드는 진짜 별거 없는데 빠른 개발을 위해서 적는다. UIImageView를 만드는 코드인데, xcode 내 이미지를 가지고 있을때 이미지 파일명을 통해서 UIImage 를 생성하고 그것을 UIImageView 에 넣는 식으로 구성되어 있다.</div></div>
+                </a>
+
+                <a class="row" href="/2013/04/23/ios-nsnotification--ec-83-9d-ec-84-b1--eb-b0-8f--ec-82-ac-ec-9a-a9--ec-bd-94-eb-93-9c/">
+                    <time datetime="2013-04-23">2013-04-23</time>
+                    <div><span class="t">(iOS) NSNotification 생성 및 사용 코드</span><div class="d">NSNotification은 아이폰 프로그래밍에서 빠질수 없는 것인데, 굳이 함수 호출이 아니여도 메시지를 미리 등록하고 연결된 함수를 정의해두면 해당 메시지를 보냈을때 위치에 상관없이 연결된 함수가 호출되는 편리한 구조이다.</div></div>
                 </a>
 
                 <a class="row" href="/2013/04/11/ios-uiviewcontroller--ec-97-90-navigationcontroller--ec-b6-94-ea-b0-80-ed-95-98-ea-b8-b0/">
@@ -249,14 +250,14 @@
                     <div><span class="t">#주간개발기, 3월 첫째주</span><div class="d">**exs4j**</div></div>
                 </a>
 
-                <a class="row" href="/2013/02/01/ios-nsuserdefaults--eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-b4-ec-84-9c--ec-84-a4-ec-a0-95-ec-a0-80-ec-9e-a5-ed-95-98-ea-b3-a0--ec-9d-bd-ea-b8-b0/">
-                    <time datetime="2013-02-01">2013-02-01</time>
-                    <div><span class="t">(iOS) NSUserDefaults 를 이용해서 설정저장하고 읽기.</span><div class="d">어떤 값들은 파일에 저장하는 것이 맞지만 때로는 앱내에 설정으로 저장하는 편이 훨씬 나을수가 있다. 간단한 설정같은 경우에는 파일에 저장하는 것이 더 불편하고 그러한 부분을 구현하는 것이 번거로울수 있다. 그래서 iOS 에서는 NSUserDefaults 라는 것을 통해서 저장할 수 있도록 한다. 저장은 Key, Value형태로 저장이 된다. 아래의 코드를 보면 쉽게 이해할수 있다. 단, 저장할 경우에는 synchronize 를 해주어야 한다. 저장된 데이터는 앱이 삭제되기전</div></div>
-                </a>
-
                 <a class="row" href="/2013/02/01/ios-uitextfield-ec-99-80--ed-82-a4-eb-b3-b4-eb-93-9c--ec-95-a1-ec-85-98/">
                     <time datetime="2013-02-01">2013-02-01</time>
                     <div><span class="t">(iOS) UITextField와 키보드 액션</span><div class="d">UITextField 를 누르게 되면 바로 키보드가 올라온다. 당연한 것인데 이유는 텍스트 입력을 위해서는 키보드가 필요하기 때문이다. 그런데 사용자가 입력하기 전에 뷰가 보여졌을때 바로 UITextField 에 커서가 옮겨지고 키보드가 올려지게 하려면 어떻게 해야할까? 아래의 코드처럼 FirstResponder 를 UITextField에 주면 된다.</div></div>
+                </a>
+
+                <a class="row" href="/2013/02/01/ios-nsuserdefaults--eb-a5-bc--ec-9d-b4-ec-9a-a9-ed-95-b4-ec-84-9c--ec-84-a4-ec-a0-95-ec-a0-80-ec-9e-a5-ed-95-98-ea-b3-a0--ec-9d-bd-ea-b8-b0/">
+                    <time datetime="2013-02-01">2013-02-01</time>
+                    <div><span class="t">(iOS) NSUserDefaults 를 이용해서 설정저장하고 읽기.</span><div class="d">어떤 값들은 파일에 저장하는 것이 맞지만 때로는 앱내에 설정으로 저장하는 편이 훨씬 나을수가 있다. 간단한 설정같은 경우에는 파일에 저장하는 것이 더 불편하고 그러한 부분을 구현하는 것이 번거로울수 있다. 그래서 iOS 에서는 NSUserDefaults 라는 것을 통해서 저장할 수 있도록 한다. 저장은 Key, Value형태로 저장이 된다. 아래의 코드를 보면 쉽게 이해할수 있다. 단, 저장할 경우에는 synchronize 를 해주어야 한다. 저장된 데이터는 앱이 삭제되기전</div></div>
                 </a>
 
                 <a class="row" href="/2013/01/30/ios-nsstring-to-nsdate/">
@@ -284,14 +285,14 @@
                     <div><span class="t">(iOS) UISwitch 기본 코드</span><div class="d">여러가지 기본코드들을 새로운 컨트롤을 쓸때마다 정리하고 있다. 참고하시길. 사실 기본코드는 iOS 개발 문서 혹은 웹 서핑 하는시간을 줄여줄뿐 대단한 기술이나 팁이 들어가 있는 것이 아니다. 아래의 코드는 UISwitch 컨트롤을 생성하고 switch 할 때의 반응을 받는 함수 하나를 정한 코드이다.</div></div>
                 </a>
 
-                <a class="row" href="/2013/01/18/ios-single-ton-datamanager/">
-                    <time datetime="2013-01-18">2013-01-18</time>
-                    <div><span class="t">(iOS) Single-ton DataManager</span><div class="d">자주 쓰는 프로그래밍 방식중 하나인데, 싱글턴으로 DataManager 라는 클래스를 만들어서 그곳에서 앱내에 모든 파일 관련 작업들을 다 해주는 것이다. 다른 각 클래스에서는 singleTon_GetInstance 를 이용해서 그냥 객체 생성하듯 생성하면 되지만 실제로는 하나만 생성이 된다. 아래의 코드는 그냥 간단하다. 저장하고자 하는 데</div></div>
-                </a>
-
                 <a class="row" href="/2013/01/18/ios-nsarray-key-ec-97-86-ec-9d-b4--ec-9d-bc-eb-b0-98--ec-a0-95-eb-a0-ac--ec-bd-94-eb-93-9c/">
                     <time datetime="2013-01-18">2013-01-18</time>
                     <div><span class="t">(iOS) NSArray, key없이 일반 정렬 코드</span><div class="d">파일명 가져와서 정렬할 일이 있었는데, 대부분의 웹 검색은 한 클래스 내에서 어떤 변수, key를 가지고 그것을 기준으로 정렬하는 코드가 많았다. 사실 필요하기도 한데, 그건 나중에 필요할때 정리할꺼고. 아래의 코드는 간단하게 그냥 NSArray 내에 있는 String을 정렬하는 코드이다. NSMutableArray 도 상관없다.</div></div>
+                </a>
+
+                <a class="row" href="/2013/01/18/ios-single-ton-datamanager/">
+                    <time datetime="2013-01-18">2013-01-18</time>
+                    <div><span class="t">(iOS) Single-ton DataManager</span><div class="d">자주 쓰는 프로그래밍 방식중 하나인데, 싱글턴으로 DataManager 라는 클래스를 만들어서 그곳에서 앱내에 모든 파일 관련 작업들을 다 해주는 것이다. 다른 각 클래스에서는 singleTon_GetInstance 를 이용해서 그냥 객체 생성하듯 생성하면 되지만 실제로는 하나만 생성이 된다. 아래의 코드는 그냥 간단하다. 저장하고자 하는 데</div></div>
                 </a>
 
                 <a class="row" href="/2013/01/14/ios-nsdate--ed-98-84-ec-9e-ac--eb-82-a0-ec-a7-9c--ec-8b-9c-ea-b0-84--ea-b0-80-ec-a0-b8-ec-98-a4-ea-b8-b0/">
@@ -379,14 +380,14 @@
                     <div><span class="t">[Cocoa Design pattern] 23. Decorator</span><div class="d">![](http://ash84.net/wp-content/uploads/1/cfile23.uf.205946374E1D407127DB25.jpg)</div></div>
                 </a>
 
-                <a class="row" href="/2011/07/12/cocoa-design-pattern-21-prototype/">
-                    <time datetime="2011-07-12">2011-07-12</time>
-                    <div><span class="t">[Cocoa Design Pattern] 21. Prototype</span><div class="d">![](http://ash84.net/wp-content/uploads/1/cfile21.uf.197E8A4E4E1BAD76357DCD.jpg)</div></div>
-                </a>
-
                 <a class="row" href="/2011/07/12/cocoa-design-pattern-22-flyweight-pattern/">
                     <time datetime="2011-07-12">2011-07-12</time>
                     <div><span class="t">[Cocoa Design Pattern] 22. Flyweight pattern</span><div class="d">![](http://ash84.net/wp-content/uploads/1/cfile24.uf.122D734C4E1C04261DF168.jpg)</div></div>
+                </a>
+
+                <a class="row" href="/2011/07/12/cocoa-design-pattern-21-prototype/">
+                    <time datetime="2011-07-12">2011-07-12</time>
+                    <div><span class="t">[Cocoa Design Pattern] 21. Prototype</span><div class="d">![](http://ash84.net/wp-content/uploads/1/cfile21.uf.197E8A4E4E1BAD76357DCD.jpg)</div></div>
                 </a>
 
                 <a class="row" href="/2011/07/11/ios-create-directory/">
@@ -553,7 +554,7 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 </body>
 </html>

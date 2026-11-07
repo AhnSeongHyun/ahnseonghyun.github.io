@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -56,17 +57,31 @@
     <meta name="twitter:description" content="한우찾기 앱을 만들때에도 이렇게 힘들지는 않았는데, 풍문검색은 좀 어렵네. 아무튼 업로드 및 빠른 심사를 부탁해 놓은 상황인데, 어제 crash가 났던 상황에 대해서 정리하고자 포스팅을 한다. 일단 상황을 설명하자면 단순하게 UITableView 의 한 셀을 선택하면 그 셀이 가지고 있는 링크주소를 내가 만든 BasicUIWebViewController 에서 보여주는 것이었는데, 보여주고나서 viewController를 내리면(dismiss) 문제가 생기는 것이었다.">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "(iOS) UIWebView objc_msg_send \ubb38\uc81c",
         "description": "\ud55c\uc6b0\ucc3e\uae30 \uc571\uc744 \ub9cc\ub4e4\ub54c\uc5d0\ub3c4 \uc774\ub807\uac8c \ud798\ub4e4\uc9c0\ub294 \uc54a\uc558\ub294\ub370, \ud48d\ubb38\uac80\uc0c9\uc740 \uc880 \uc5b4\ub835\ub124. \uc544\ubb34\ud2bc \uc5c5\ub85c\ub4dc \ubc0f \ube60\ub978 \uc2ec\uc0ac\ub97c \ubd80\ud0c1\ud574 \ub193\uc740 \uc0c1\ud669\uc778\ub370, \uc5b4\uc81c crash\uac00 \ub0ac\ub358 \uc0c1\ud669\uc5d0 \ub300\ud574\uc11c \uc815\ub9ac\ud558\uace0\uc790 \ud3ec\uc2a4\ud305\uc744 \ud55c\ub2e4. \uc77c\ub2e8 \uc0c1\ud669\uc744 \uc124\uba85\ud558\uc790\uba74 \ub2e8\uc21c\ud558\uac8c UITableView \uc758 \ud55c \uc140\uc744 \uc120\ud0dd\ud558\uba74 \uadf8 \uc140\uc774 \uac00\uc9c0\uace0 \uc788\ub294 \ub9c1\ud06c\uc8fc\uc18c\ub97c \ub0b4\uac00 \ub9cc\ub4e0 BasicUIWebViewController \uc5d0\uc11c \ubcf4\uc5ec\uc8fc\ub294 \uac83\uc774\uc5c8\ub294\ub370, \ubcf4\uc5ec\uc8fc\uace0\ub098\uc11c viewController\ub97c \ub0b4\ub9ac\uba74(dismiss) \ubb38\uc81c\uac00 \uc0dd\uae30\ub294 \uac83\uc774\uc5c8\ub2e4.",
+        "inLanguage": "ko",
+        "keywords": "UIWebView, UIWebViewDelegate crash, dev, ios-development, objc_msg_send",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-02-19",
         "dateModified": "2013-02-19",
@@ -76,12 +91,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -200,8 +215,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

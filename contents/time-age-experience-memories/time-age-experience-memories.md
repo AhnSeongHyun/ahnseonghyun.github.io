@@ -2,7 +2,7 @@
 title: '시간과 나이와 경험과 추억'
 author: 'ash84'
 pub_date: '2024-09-08'
-description: '시간의 흐름, 나이의 듦
+description: '시간의 흐름, 나이의 듦
 
 추억을 가져야 한다. 
 
@@ -14,7 +14,7 @@ description: '시간의 흐름, 나이의 듦
 featured_image: ''
 tags: ['essay']
 ---
-시간의 흐름, 나이의 듦
+시간의 흐름, 나이의 듦
 
 추억을 가져야 한다. 
 

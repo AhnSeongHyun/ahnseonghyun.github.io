@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -60,17 +61,31 @@
     <meta name="twitter:description" content="여러가지 라이브러리가 있겠지만 단연 json 라이브러리 중에 내가 가장 잘 쓰는 것은 [gson ](http://ash84.tistory.com/775)이다. 쓰기 편해서 일수도 있지만, 함수이름이나 그런것들이 잘 지어져있어서 직관적이다. wrapping 클래스를 만드는 이유는 여러 클래스에서 new 를 이용해서 Gson 객체를 생성하는데, 굳이 그럴 필요가 있을까 싶어서 만들게 되었다. wrapping 클래스에는 toJson()  함수 밖에 없는데 그 이유는 class to">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[Java] \uac04\ub2e8 gson wrapping \ud558\uae30",
         "description": "\uc5ec\ub7ec\uac00\uc9c0 \ub77c\uc774\ube0c\ub7ec\ub9ac\uac00 \uc788\uaca0\uc9c0\ub9cc \ub2e8\uc5f0 json \ub77c\uc774\ube0c\ub7ec\ub9ac \uc911\uc5d0 \ub0b4\uac00 \uac00\uc7a5 \uc798 \uc4f0\ub294 \uac83\uc740 [gson ](http://ash84.tistory.com/775)\uc774\ub2e4. \uc4f0\uae30 \ud3b8\ud574\uc11c \uc77c\uc218\ub3c4 \uc788\uc9c0\ub9cc, \ud568\uc218\uc774\ub984\uc774\ub098 \uadf8\ub7f0\uac83\ub4e4\uc774 \uc798 \uc9c0\uc5b4\uc838\uc788\uc5b4\uc11c \uc9c1\uad00\uc801\uc774\ub2e4. wrapping \ud074\ub798\uc2a4\ub97c \ub9cc\ub4dc\ub294 \uc774\uc720\ub294 \uc5ec\ub7ec \ud074\ub798\uc2a4\uc5d0\uc11c new \ub97c \uc774\uc6a9\ud574\uc11c Gson \uac1d\uccb4\ub97c \uc0dd\uc131\ud558\ub294\ub370, \uad73\uc774 \uadf8\ub7f4 \ud544\uc694\uac00 \uc788\uc744\uae4c \uc2f6\uc5b4\uc11c \ub9cc\ub4e4\uac8c \ub418\uc5c8\ub2e4. wrapping \ud074\ub798\uc2a4\uc5d0\ub294\u00a0toJson() \u00a0\ud568\uc218 \ubc16\uc5d0 \uc5c6\ub294\ub370 \uadf8\u00a0\uc774\uc720\ub294\u00a0class to",
+        "inLanguage": "ko",
+        "keywords": "GSON, JSON, clean-code, dev, open-source, tutorial, wrapping class",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2013-01-11",
         "dateModified": "2013-01-11",
@@ -80,12 +95,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -161,8 +176,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>

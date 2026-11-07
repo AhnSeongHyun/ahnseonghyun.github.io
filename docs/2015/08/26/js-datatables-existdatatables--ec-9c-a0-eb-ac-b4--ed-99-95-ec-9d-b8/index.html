@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▤</text></svg>">
     <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71946262-1"></script>
+    <link rel="alternate" type="application/rss+xml" title="ASH84" href="/rss.xml">
+    <!-- Analytics: GA4 G-2L1F6GD28P (stream 4389135233). Replaced UA-71946262-1, which stopped collecting in 2023-07. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L1F6GD28P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-71946262-1');
+        gtag('config', 'G-2L1F6GD28P');
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/base.css?v=be91a7b73">
 
 
 
@@ -50,17 +51,31 @@
     <meta name="twitter:description" content="datatables 라는 자바스크립트 라이브러리를 자주 사용하는데(좋아서가 아님.) 요상하게 .DataTable() 함수를 2번 호출하면 duplication init 관련 오류가 나고 데이터가 한번 그려지고 그 다음에 다시 새로운 데이터로 그릴려고 하면 갱신이 안되는 문제가 있었다. if 문 처럼 datatables 가 있는지 확인하고 있으면, 한번 그려진 이후이기 때문에 그냥">
 
 
-    <!-- Structured Data -->
+    <!-- Structured Data. dateModified: git edit date written by scripts/generate_modified.py (falls back to pub_date) -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[js] datatables exist?(datatables \uc720\ubb34 \ud655\uc778)",
         "description": "datatables \ub77c\ub294 \uc790\ubc14\uc2a4\ud06c\ub9bd\ud2b8 \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc790\uc8fc \uc0ac\uc6a9\ud558\ub294\ub370(\uc88b\uc544\uc11c\uac00 \uc544\ub2d8.) \uc694\uc0c1\ud558\uac8c .DataTable() \ud568\uc218\ub97c 2\ubc88 \ud638\ucd9c\ud558\uba74 duplication init \uad00\ub828 \uc624\ub958\uac00 \ub098\uace0 \ub370\uc774\ud130\uac00 \ud55c\ubc88 \uadf8\ub824\uc9c0\uace0 \uadf8 \ub2e4\uc74c\uc5d0 \ub2e4\uc2dc \uc0c8\ub85c\uc6b4 \ub370\uc774\ud130\ub85c \uadf8\ub9b4\ub824\uace0 \ud558\uba74 \uac31\uc2e0\uc774 \uc548\ub418\ub294 \ubb38\uc81c\uac00 \uc788\uc5c8\ub2e4. if \ubb38 \ucc98\ub7fc datatables \uac00 \uc788\ub294\uc9c0 \ud655\uc778\ud558\uace0 \uc788\uc73c\uba74, \ud55c\ubc88 \uadf8\ub824\uc9c4 \uc774\ud6c4\uc774\uae30 \ub54c\ubb38\uc5d0 \uadf8\ub0e5",
+        "inLanguage": "ko",
+        "keywords": "datatables, dev",
         "author": {
             "@type": "Person",
-            "name": "ash84",
-            "url": "https://ash84.io"
+            "@id": "https://ash84.io/#person",
+            "name": "안성현 (ash84)",
+            "alternateName": "ash84",
+            "url": "https://ash84.io/",
+            "jobTitle": "Head of Technology",
+            "worksFor": {"@type": "Organization", "name": "Payhere"},
+            "sameAs": [
+                "https://github.com/AhnSeongHyun/",
+                "https://www.linkedin.com/in/seonghyun-ahn-9098a640/",
+                "https://x.com/sh84ahn",
+                "https://www.instagram.com/ash84/",
+                "https://ash84.notion.site/Ahn-Seong-Hyun-28f5e7909eab80389bace8eddbfdd105"
+            ]
         },
         "datePublished": "2015-08-26",
         "dateModified": "2015-08-26",
@@ -70,12 +85,12 @@
         },
 
         "publisher": {
-            "@type": "Organization",
-            "name": "ASH84"
+            "@type": "Person",
+            "@id": "https://ash84.io/#person"
         }
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/post.css?v=ba5bcf461">
+    <link rel="stylesheet" href="/assets/css/post.css?v=be91a7b73">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 <body>
@@ -151,8 +166,8 @@
             <div class="sq-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 이동</span><span><kbd>↵</kbd> 열기</span><span><kbd>esc</kbd> 닫기</span><span class="sp"></span><span>pagefind</span></div>
         </div>
     </div>
-    <script src="/assets/js/ledger.js?v=ba5bcf461" defer></script>
-    <script src="/assets/js/search.js?v=ba5bcf461" defer></script>
+    <script src="/assets/js/ledger.js?v=be91a7b73" defer></script>
+    <script src="/assets/js/search.js?v=be91a7b73" defer></script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8699046198561974" crossorigin="anonymous"></script>
 </body>
