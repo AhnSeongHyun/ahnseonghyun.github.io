@@ -1,7 +1,12 @@
 {
-  "generated_at": "2026-11-06T21:19:34+00:00",
-  "total_commits": 50,
+  "generated_at": "2026-11-07T02:12:01+00:00",
+  "total_commits": 52,
   "changelog": [
+    {
+      "hash": "982d005c9",
+      "date": "2026-11-06",
+      "message": "✨ feat: SEO 최적화 — RSS, llms.txt, git 기반 lastmod/dateModified, Person 스키마, 태그 noindex"
+    },
     {
       "hash": "41c7be520",
       "date": "2026-09-03",
@@ -11,14 +16,50 @@
       "hash": "5e4899ea2",
       "date": "2026-09-03",
       "message": "♻️ refactor: 프론트매터 태그 정규화 (114편)"
-    },
-    {
-      "hash": "bbb4a2e50",
-      "date": "2026-08-08",
-      "message": "📝 docs: 오디세이 포스트 제목 수정 및 영어 태그 추가"
     }
   ],
   "posts": {
+    "divide-and-conquer-in-real-life": [
+      {
+        "hash": "982d005c9",
+        "date": "2026-11-06",
+        "message": "✨ feat: SEO 최적화 — RSS, llms.txt, git 기반 lastmod/dateModified, Person 스키마, 태그 noindex"
+      },
+      {
+        "hash": "5e4899ea2",
+        "date": "2026-09-03",
+        "message": "♻️ refactor: 프론트매터 태그 정규화 (114편)"
+      },
+      {
+        "hash": "516bc9d2e",
+        "date": "2026-03-10",
+        "message": "feat: AI 사용으로 변함 삶에 대한 이야기"
+      }
+    ],
+    "the-era-of-self-service-with-ai": [
+      {
+        "hash": "982d005c9",
+        "date": "2026-11-06",
+        "message": "✨ feat: SEO 최적화 — RSS, llms.txt, git 기반 lastmod/dateModified, Person 스키마, 태그 noindex"
+      },
+      {
+        "hash": "516bc9d2e",
+        "date": "2026-03-10",
+        "message": "feat: AI 사용으로 변함 삶에 대한 이야기"
+      }
+    ],
+    "time-age-experience-memories": [
+      {
+        "hash": "982d005c9",
+        "date": "2026-11-06",
+        "message": "✨ feat: SEO 최적화 — RSS, llms.txt, git 기반 lastmod/dateModified, Person 스키마, 태그 noindex"
+      },
+      {
+        "hash": "516bc9d2e",
+        "date": "2026-03-10",
+        "message": "feat: AI 사용으로 변함 삶에 대한 이야기"
+      }
+    ],
     "-ea-b0-80-eb-81-94--ea-b7-b8-eb-9f-b0--ea-bf-88-ec-9d-84--ea-be-bc-ec-a0-81-ec-9d-b4--ec-9e-88-eb-8b-a4": [
       {
         "hash": "41c7be520",
@@ -923,18 +964,6 @@
       }
     ],
     "dev-meetup-github-io-mauseu-obeo-gineung-cuga": [
-      {
-        "hash": "5e4899ea2",
-        "date": "2026-09-03",
-        "message": "♻️ refactor: 프론트매터 태그 정규화 (114편)"
-      },
-      {
-        "hash": "516bc9d2e",
-        "date": "2026-03-10",
-        "message": "feat: AI 사용으로 변함 삶에 대한 이야기"
-      }
-    ],
-    "divide-and-conquer-in-real-life": [
       {
         "hash": "5e4899ea2",
         "date": "2026-09-03",
@@ -7285,13 +7314,6 @@
         "message": "feat: AI 사용으로 변함 삶에 대한 이야기"
       }
     ],
-    "the-era-of-self-service-with-ai": [
-      {
-        "hash": "516bc9d2e",
-        "date": "2026-03-10",
-        "message": "feat: AI 사용으로 변함 삶에 대한 이야기"
-      }
-    ],
     "the-gift-of-integrity": [
       {
         "hash": "516bc9d2e",
@@ -7321,13 +7343,6 @@
       }
     ],
     "tidy-first-review": [
-      {
-        "hash": "516bc9d2e",
-        "date": "2026-03-10",
-        "message": "feat: AI 사용으로 변함 삶에 대한 이야기"
-      }
-    ],
-    "time-age-experience-memories": [
       {
         "hash": "516bc9d2e",
         "date": "2026-03-10",
